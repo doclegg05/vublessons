@@ -1,0 +1,86 @@
+[
+  {
+    "name": "workstation",
+    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-6ac6a053-55e6-4f43-bfa9-b9b8744094e2.png",
+    "path": "courses/digital-literacy-2/assets/illustrations/slide-workstation.webp",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 86884,
+    "sha256": "bbbf8fb7ff6828e7a248c4b98e05aeb32fd5572a4401859eca5927f4c94398eb",
+    "generator": "image_gen",
+    "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+  },
+  {
+    "name": "research",
+    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-44914ac0-bf79-4719-94a5-16a1dc5e6b1a.png",
+    "path": "courses/digital-literacy-2/assets/illustrations/slide-research.webp",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 101284,
+    "sha256": "cf856eafb9f5a45568027b44864730e80e0c936d03a750c76d9c5518a9618292",
+    "generator": "image_gen",
+    "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+  },
+  {
+    "name": "creation",
+    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-8cf644cf-c2e5-48dd-8041-c4df3856d44e.png",
+    "path": "courses/digital-literacy-2/assets/illustrations/slide-creation.webp",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 82588,
+    "sha256": "4a0fd9b6183eb2535825b0f0d146ff545e152e55a5887629ab45111e1a0432be",
+    "generator": "image_gen",
+    "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+  },
+  {
+    "name": "collaboration",
+    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-ee99c100-933e-4b74-98b9-24bfe8837305.png",
+    "path": "courses/digital-literacy-2/assets/illustrations/slide-collaboration.webp",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 61546,
+    "sha256": "54b54f2b3b9cda9808c1023dc8f8fb297d34f7afa5cfc3efd7a811a74c50fd0e",
+    "generator": "image_gen",
+    "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+  },
+  {
+    "name": "security",
+    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-19c3d3a6-a66b-447e-b3e9-11e6323ca867.png",
+    "path": "courses/digital-literacy-2/assets/illustrations/slide-security.webp",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 71014,
+    "sha256": "58f66e0140b25dcff1b3d922757ae38c07522e648df2c88107f35f6ec1bf7f65",
+    "generator": "image_gen",
+    "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+  },
+  {
+    "name": "building",
+    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-1e92ed0e-c8d1-42b8-94ae-e9b47020f969.png",
+    "path": "courses/digital-literacy-2/assets/illustrations/slide-building.webp",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 70914,
+    "sha256": "c2bf79de995d60b6722a74aae5cc6e0cb734bbdaa04e04bd118861db9c60179e",
+    "generator": "image_gen",
+    "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+  }
+]

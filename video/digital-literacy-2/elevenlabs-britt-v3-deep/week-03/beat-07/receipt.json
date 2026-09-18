@@ -1,0 +1,19 @@
+{
+  "provider": "ElevenLabs MCP",
+  "model": "eleven_v3",
+  "voice": "iKrofGyA12WC0e6AhZ8B",
+  "voiceName": "Britt - Mild Appalachian Male Voice",
+  "speed": 0.95,
+  "stability": 0.5,
+  "similarityBoost": 0.8,
+  "style": 0,
+  "useSpeakerBoost": false,
+  "language": "en",
+  "outputFormat": "mp3_44100_128",
+  "cleanup": "ElevenLabs Voice Isolator",
+  "originalSha256": "8b326bd6911a8258519875b7b0a6c511b126b083790d119895871cbe0181fb41",
+  "textSha256": "c5a96cf5fa441e947ea90e2ecb35753d78521d294c1ad2ea79da0703146113aa",
+  "promptSha256": "c1a664feabe03244edc19de93e5a85100014fbe414bba588428e0dd537f1f633",
+  "sourceSha256": "dbb50f53e40daf4a40101d77a11aeabb2cc260260ae9966833a100ef1ee7ebd5",
+  "sourceFile": "isolated.mp3"
+}

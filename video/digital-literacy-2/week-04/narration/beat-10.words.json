@@ -1,0 +1,553 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "84785be8d7ef0448eff4265d5bbc92fe935b26b6618565db953f3500ee97f11e",
+  "textSha256": "644a6a491394108eaf1fe315883197c0193469700f32b9c6c3b2ad718893f500",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Complete",
+      "start": 0.0,
+      "end": 0.36
+    },
+    {
+      "word": "the",
+      "start": 0.36,
+      "end": 0.56
+    },
+    {
+      "word": "fictional",
+      "start": 0.56,
+      "end": 0.94
+    },
+    {
+      "word": "coordination",
+      "start": 0.94,
+      "end": 1.34
+    },
+    {
+      "word": "task",
+      "start": 1.34,
+      "end": 1.92
+    },
+    {
+      "word": "with",
+      "start": 1.92,
+      "end": 2.2
+    },
+    {
+      "word": "a",
+      "start": 2.2,
+      "end": 2.28
+    },
+    {
+      "word": "partner.",
+      "start": 2.28,
+      "end": 2.64
+    },
+    {
+      "word": "Draft",
+      "start": 3.0,
+      "end": 3.66
+    },
+    {
+      "word": "the",
+      "start": 3.66,
+      "end": 3.9
+    },
+    {
+      "word": "request,",
+      "start": 3.9,
+      "end": 4.22
+    },
+    {
+      "word": "choose",
+      "start": 4.78,
+      "end": 5.04
+    },
+    {
+      "word": "the",
+      "start": 5.04,
+      "end": 5.26
+    },
+    {
+      "word": "recipients",
+      "start": 5.26,
+      "end": 5.74
+    },
+    {
+      "word": "and",
+      "start": 5.74,
+      "end": 5.98
+    },
+    {
+      "word": "access",
+      "start": 5.98,
+      "end": 6.24
+    },
+    {
+      "word": "role,",
+      "start": 6.24,
+      "end": 6.64
+    },
+    {
+      "word": "propose",
+      "start": 7.26,
+      "end": 7.48
+    },
+    {
+      "word": "a",
+      "start": 7.48,
+      "end": 7.76
+    },
+    {
+      "word": "useful",
+      "start": 7.76,
+      "end": 8.0
+    },
+    {
+      "word": "comment,",
+      "start": 8.0,
+      "end": 8.5
+    },
+    {
+      "word": "and",
+      "start": 9.06,
+      "end": 9.1
+    },
+    {
+      "word": "record",
+      "start": 9.1,
+      "end": 9.34
+    },
+    {
+      "word": "the",
+      "start": 9.34,
+      "end": 9.66
+    },
+    {
+      "word": "final",
+      "start": 9.66,
+      "end": 9.98
+    },
+    {
+      "word": "decision",
+      "start": 9.98,
+      "end": 10.32
+    },
+    {
+      "word": "in",
+      "start": 10.32,
+      "end": 10.72
+    },
+    {
+      "word": "one",
+      "start": 10.72,
+      "end": 10.96
+    },
+    {
+      "word": "shared",
+      "start": 10.96,
+      "end": 11.32
+    },
+    {
+      "word": "place.",
+      "start": 11.32,
+      "end": 11.94
+    },
+    {
+      "word": "Switch",
+      "start": 12.58,
+      "end": 12.8
+    },
+    {
+      "word": "roles",
+      "start": 12.8,
+      "end": 13.26
+    },
+    {
+      "word": "so",
+      "start": 13.26,
+      "end": 13.56
+    },
+    {
+      "word": "both",
+      "start": 13.56,
+      "end": 13.82
+    },
+    {
+      "word": "people",
+      "start": 13.82,
+      "end": 14.04
+    },
+    {
+      "word": "practice",
+      "start": 14.04,
+      "end": 14.56
+    },
+    {
+      "word": "explaining",
+      "start": 14.56,
+      "end": 15.1
+    },
+    {
+      "word": "and",
+      "start": 15.1,
+      "end": 15.58
+    },
+    {
+      "word": "checking.",
+      "start": 15.58,
+      "end": 15.94
+    },
+    {
+      "word": "Then",
+      "start": 17.66,
+      "end": 18.34
+    },
+    {
+      "word": "review",
+      "start": 18.64,
+      "end": 18.84
+    },
+    {
+      "word": "the",
+      "start": 18.84,
+      "end": 19.04
+    },
+    {
+      "word": "subscription",
+      "start": 19.04,
+      "end": 19.36
+    },
+    {
+      "word": "example",
+      "start": 19.36,
+      "end": 19.96
+    },
+    {
+      "word": "and",
+      "start": 19.96,
+      "end": 20.54
+    },
+    {
+      "word": "state",
+      "start": 20.54,
+      "end": 20.78
+    },
+    {
+      "word": "what",
+      "start": 20.78,
+      "end": 21.08
+    },
+    {
+      "word": "you",
+      "start": 21.08,
+      "end": 21.24
+    },
+    {
+      "word": "would",
+      "start": 21.24,
+      "end": 21.38
+    },
+    {
+      "word": "verify",
+      "start": 21.38,
+      "end": 21.6
+    },
+    {
+      "word": "before",
+      "start": 21.6,
+      "end": 22.26
+    },
+    {
+      "word": "committing",
+      "start": 22.26,
+      "end": 22.68
+    },
+    {
+      "word": "money.",
+      "start": 22.68,
+      "end": 23.04
+    },
+    {
+      "word": "Judge",
+      "start": 23.96,
+      "end": 23.96
+    },
+    {
+      "word": "success",
+      "start": 23.96,
+      "end": 24.38
+    },
+    {
+      "word": "by",
+      "start": 24.38,
+      "end": 24.82
+    },
+    {
+      "word": "observable",
+      "start": 24.82,
+      "end": 25.18
+    },
+    {
+      "word": "results:",
+      "start": 25.18,
+      "end": 25.78
+    },
+    {
+      "word": "the",
+      "start": 26.54,
+      "end": 26.62
+    },
+    {
+      "word": "partner",
+      "start": 26.62,
+      "end": 26.84
+    },
+    {
+      "word": "knows",
+      "start": 26.84,
+      "end": 27.18
+    },
+    {
+      "word": "what",
+      "start": 27.18,
+      "end": 27.42
+    },
+    {
+      "word": "to",
+      "start": 27.42,
+      "end": 27.56
+    },
+    {
+      "word": "do,",
+      "start": 27.56,
+      "end": 27.82
+    },
+    {
+      "word": "can",
+      "start": 28.2,
+      "end": 28.38
+    },
+    {
+      "word": "open",
+      "start": 28.38,
+      "end": 28.6
+    },
+    {
+      "word": "the",
+      "start": 28.6,
+      "end": 28.82
+    },
+    {
+      "word": "right",
+      "start": 28.82,
+      "end": 29.0
+    },
+    {
+      "word": "file,",
+      "start": 29.0,
+      "end": 29.36
+    },
+    {
+      "word": "and",
+      "start": 29.36,
+      "end": 29.98
+    },
+    {
+      "word": "understands",
+      "start": 29.98,
+      "end": 30.46
+    },
+    {
+      "word": "the",
+      "start": 30.46,
+      "end": 30.9
+    },
+    {
+      "word": "agreed",
+      "start": 30.9,
+      "end": 31.16
+    },
+    {
+      "word": "outcome.",
+      "start": 31.16,
+      "end": 31.7
+    },
+    {
+      "word": "For",
+      "start": 33.16,
+      "end": 33.34
+    },
+    {
+      "word": "a",
+      "start": 33.34,
+      "end": 33.48
+    },
+    {
+      "word": "group",
+      "start": 33.48,
+      "end": 33.66
+    },
+    {
+      "word": "task",
+      "start": 33.66,
+      "end": 33.96
+    },
+    {
+      "word": "from",
+      "start": 33.96,
+      "end": 34.24
+    },
+    {
+      "word": "your",
+      "start": 34.24,
+      "end": 34.4
+    },
+    {
+      "word": "own",
+      "start": 34.4,
+      "end": 34.62
+    },
+    {
+      "word": "life,",
+      "start": 34.62,
+      "end": 34.88
+    },
+    {
+      "word": "choose",
+      "start": 35.2,
+      "end": 35.5
+    },
+    {
+      "word": "one",
+      "start": 35.5,
+      "end": 35.8
+    },
+    {
+      "word": "habit",
+      "start": 35.8,
+      "end": 36.2
+    },
+    {
+      "word": "to",
+      "start": 36.2,
+      "end": 36.44
+    },
+    {
+      "word": "transfer.",
+      "start": 36.44,
+      "end": 36.7
+    },
+    {
+      "word": "It",
+      "start": 37.66,
+      "end": 37.74
+    },
+    {
+      "word": "might",
+      "start": 37.74,
+      "end": 37.9
+    },
+    {
+      "word": "be",
+      "start": 37.9,
+      "end": 38.12
+    },
+    {
+      "word": "a",
+      "start": 38.12,
+      "end": 38.22
+    },
+    {
+      "word": "clearer",
+      "start": 38.22,
+      "end": 38.48
+    },
+    {
+      "word": "subject,",
+      "start": 38.48,
+      "end": 39.04
+    },
+    {
+      "word": "fewer",
+      "start": 39.56,
+      "end": 39.7
+    },
+    {
+      "word": "recipients,",
+      "start": 39.7,
+      "end": 40.26
+    },
+    {
+      "word": "one",
+      "start": 41.1,
+      "end": 41.16
+    },
+    {
+      "word": "common",
+      "start": 41.16,
+      "end": 41.52
+    },
+    {
+      "word": "copy,",
+      "start": 41.52,
+      "end": 42.04
+    },
+    {
+      "word": "or",
+      "start": 42.48,
+      "end": 42.72
+    },
+    {
+      "word": "a",
+      "start": 42.72,
+      "end": 42.82
+    },
+    {
+      "word": "written",
+      "start": 42.82,
+      "end": 43.02
+    },
+    {
+      "word": "decision",
+      "start": 43.02,
+      "end": 43.54
+    },
+    {
+      "word": "that",
+      "start": 43.54,
+      "end": 43.82
+    },
+    {
+      "word": "prevents",
+      "start": 43.82,
+      "end": 44.08
+    },
+    {
+      "word": "the",
+      "start": 44.08,
+      "end": 44.38
+    },
+    {
+      "word": "next",
+      "start": 44.38,
+      "end": 44.6
+    },
+    {
+      "word": "round",
+      "start": 44.6,
+      "end": 44.88
+    },
+    {
+      "word": "of",
+      "start": 44.88,
+      "end": 45.1
+    },
+    {
+      "word": "confusion.",
+      "start": 45.1,
+      "end": 45.4
+    }
+  ]
+}

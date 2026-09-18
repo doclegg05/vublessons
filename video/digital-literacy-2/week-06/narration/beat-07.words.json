@@ -1,0 +1,558 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "f0098f98f7076a58580b089d38385e5fa09474693bfe4e337d3c8680c23f47a5",
+  "textSha256": "e9888d8b32bd0cf738cc2790015ff16fcc3f480af642675754e1d081fc79efe7",
+  "matchRatio": 0.9727272727272728,
+  "words": [
+    {
+      "word": "Type",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "library",
+      "start": 0.24,
+      "end": 0.52
+    },
+    {
+      "word": "into",
+      "start": 0.52,
+      "end": 1.06
+    },
+    {
+      "word": "the",
+      "start": 1.06,
+      "end": 1.22
+    },
+    {
+      "word": "search",
+      "start": 1.22,
+      "end": 1.38
+    },
+    {
+      "word": "field",
+      "start": 1.38,
+      "end": 1.8
+    },
+    {
+      "word": "and",
+      "start": 1.8,
+      "end": 2.08
+    },
+    {
+      "word": "compare",
+      "start": 2.08,
+      "end": 2.32
+    },
+    {
+      "word": "the",
+      "start": 2.32,
+      "end": 2.56
+    },
+    {
+      "word": "result",
+      "start": 2.56,
+      "end": 2.84
+    },
+    {
+      "word": "with",
+      "start": 2.84,
+      "end": 3.12
+    },
+    {
+      "word": "your",
+      "start": 3.12,
+      "end": 3.28
+    },
+    {
+      "word": "first",
+      "start": 3.28,
+      "end": 3.52
+    },
+    {
+      "word": "acceptance",
+      "start": 3.52,
+      "end": 3.88
+    },
+    {
+      "word": "check.",
+      "start": 3.88,
+      "end": 4.46
+    },
+    {
+      "word": "Then",
+      "start": 4.84,
+      "end": 5.34
+    },
+    {
+      "word": "enter",
+      "start": 5.34,
+      "end": 5.74
+    },
+    {
+      "word": "an",
+      "start": 5.74,
+      "end": 5.88
+    },
+    {
+      "word": "unmatched",
+      "start": 5.88,
+      "end": 6.14
+    },
+    {
+      "word": "term",
+      "start": 6.14,
+      "end": 6.74
+    },
+    {
+      "word": "such",
+      "start": 6.74,
+      "end": 7.1
+    },
+    {
+      "word": "as",
+      "start": 7.1,
+      "end": 7.42
+    },
+    {
+      "word": "zzz.",
+      "start": 7.42,
+      "end": 8.32
+    },
+    {
+      "word": "The",
+      "start": 8.76,
+      "end": 9.1
+    },
+    {
+      "word": "page",
+      "start": 9.1,
+      "end": 9.28
+    },
+    {
+      "word": "should",
+      "start": 9.28,
+      "end": 9.54
+    },
+    {
+      "word": "explain",
+      "start": 9.54,
+      "end": 9.88
+    },
+    {
+      "word": "that",
+      "start": 9.88,
+      "end": 10.12
+    },
+    {
+      "word": "there",
+      "start": 10.12,
+      "end": 10.26
+    },
+    {
+      "word": "are",
+      "start": 10.26,
+      "end": 10.38
+    },
+    {
+      "word": "no",
+      "start": 10.38,
+      "end": 10.56
+    },
+    {
+      "word": "matching",
+      "start": 10.56,
+      "end": 10.86
+    },
+    {
+      "word": "resources",
+      "start": 10.86,
+      "end": 11.4
+    },
+    {
+      "word": "rather",
+      "start": 11.4,
+      "end": 12.02
+    },
+    {
+      "word": "than",
+      "start": 12.02,
+      "end": 12.36
+    },
+    {
+      "word": "appearing",
+      "start": 12.36,
+      "end": 12.64
+    },
+    {
+      "word": "broken",
+      "start": 12.64,
+      "end": 13.04
+    },
+    {
+      "word": "or",
+      "start": 13.04,
+      "end": 13.46
+    },
+    {
+      "word": "showing",
+      "start": 13.46,
+      "end": 13.68
+    },
+    {
+      "word": "an",
+      "start": 13.68,
+      "end": 13.92
+    },
+    {
+      "word": "old",
+      "start": 13.92,
+      "end": 14.06
+    },
+    {
+      "word": "result.",
+      "start": 14.06,
+      "end": 14.38
+    },
+    {
+      "word": "Clear",
+      "start": 15.48,
+      "end": 15.48
+    },
+    {
+      "word": "the",
+      "start": 15.48,
+      "end": 15.66
+    },
+    {
+      "word": "field",
+      "start": 15.66,
+      "end": 15.94
+    },
+    {
+      "word": "and",
+      "start": 15.94,
+      "end": 16.16
+    },
+    {
+      "word": "try",
+      "start": 16.16,
+      "end": 16.36
+    },
+    {
+      "word": "LIBRARY",
+      "start": 16.36,
+      "end": 16.78
+    },
+    {
+      "word": "in",
+      "start": 16.78,
+      "end": 17.4
+    },
+    {
+      "word": "uppercase.",
+      "start": 17.4,
+      "end": 17.9
+    },
+    {
+      "word": "If",
+      "start": 19.12,
+      "end": 19.72
+    },
+    {
+      "word": "the",
+      "start": 19.72,
+      "end": 19.88
+    },
+    {
+      "word": "intended",
+      "start": 19.88,
+      "end": 20.18
+    },
+    {
+      "word": "behavior",
+      "start": 20.18,
+      "end": 20.54
+    },
+    {
+      "word": "is",
+      "start": 20.54,
+      "end": 20.98
+    },
+    {
+      "word": "a",
+      "start": 20.98,
+      "end": 21.08
+    },
+    {
+      "word": "case-insensitive",
+      "start": 21.08,
+      "end": 21.58
+    },
+    {
+      "word": "search,",
+      "start": 21.58,
+      "end": 22.34
+    },
+    {
+      "word": "it",
+      "start": 22.84,
+      "end": 22.92
+    },
+    {
+      "word": "should",
+      "start": 22.92,
+      "end": 23.06
+    },
+    {
+      "word": "find",
+      "start": 23.06,
+      "end": 23.28
+    },
+    {
+      "word": "the",
+      "start": 23.28,
+      "end": 23.46
+    },
+    {
+      "word": "same",
+      "start": 23.46,
+      "end": 23.64
+    },
+    {
+      "word": "record.",
+      "start": 23.64,
+      "end": 24.0
+    },
+    {
+      "word": "Next",
+      "start": 24.86,
+      "end": 25.32
+    },
+    {
+      "word": "combine",
+      "start": 25.32,
+      "end": 25.72
+    },
+    {
+      "word": "the",
+      "start": 25.72,
+      "end": 26.0
+    },
+    {
+      "word": "search",
+      "start": 26.0,
+      "end": 26.2
+    },
+    {
+      "word": "with",
+      "start": 26.2,
+      "end": 26.46
+    },
+    {
+      "word": "a",
+      "start": 26.46,
+      "end": 26.54
+    },
+    {
+      "word": "category",
+      "start": 26.54,
+      "end": 26.86
+    },
+    {
+      "word": "filter",
+      "start": 26.86,
+      "end": 27.3
+    },
+    {
+      "word": "and",
+      "start": 27.3,
+      "end": 27.74
+    },
+    {
+      "word": "inspect",
+      "start": 27.74,
+      "end": 28.02
+    },
+    {
+      "word": "whether",
+      "start": 28.02,
+      "end": 28.42
+    },
+    {
+      "word": "both",
+      "start": 28.42,
+      "end": 28.64
+    },
+    {
+      "word": "conditions",
+      "start": 28.64,
+      "end": 28.94
+    },
+    {
+      "word": "apply.",
+      "start": 28.94,
+      "end": 29.48
+    },
+    {
+      "word": "Record",
+      "start": 30.0,
+      "end": 30.5
+    },
+    {
+      "word": "expected",
+      "start": 30.5,
+      "end": 30.96
+    },
+    {
+      "word": "and",
+      "start": 30.96,
+      "end": 31.32
+    },
+    {
+      "word": "actual",
+      "start": 31.32,
+      "end": 31.58
+    },
+    {
+      "word": "results",
+      "start": 31.58,
+      "end": 32.12
+    },
+    {
+      "word": "separately.",
+      "start": 32.12,
+      "end": 32.8
+    },
+    {
+      "word": "A",
+      "start": 33.7,
+      "end": 33.7
+    },
+    {
+      "word": "confident",
+      "start": 33.7,
+      "end": 34.04
+    },
+    {
+      "word": "statement",
+      "start": 34.04,
+      "end": 34.46
+    },
+    {
+      "word": "from",
+      "start": 34.46,
+      "end": 34.74
+    },
+    {
+      "word": "the",
+      "start": 34.74,
+      "end": 34.86
+    },
+    {
+      "word": "AI",
+      "start": 34.86,
+      "end": 35.08
+    },
+    {
+      "word": "is",
+      "start": 35.08,
+      "end": 35.48
+    },
+    {
+      "word": "not",
+      "start": 35.48,
+      "end": 35.66
+    },
+    {
+      "word": "test",
+      "start": 35.66,
+      "end": 35.94
+    },
+    {
+      "word": "evidence.",
+      "start": 35.94,
+      "end": 36.3
+    },
+    {
+      "word": "The",
+      "start": 37.06,
+      "end": 37.12
+    },
+    {
+      "word": "evidence",
+      "start": 37.12,
+      "end": 37.32
+    },
+    {
+      "word": "is",
+      "start": 37.32,
+      "end": 37.66
+    },
+    {
+      "word": "what",
+      "start": 37.66,
+      "end": 37.8
+    },
+    {
+      "word": "happened",
+      "start": 37.8,
+      "end": 38.16
+    },
+    {
+      "word": "when",
+      "start": 38.16,
+      "end": 38.42
+    },
+    {
+      "word": "you",
+      "start": 38.42,
+      "end": 38.56
+    },
+    {
+      "word": "carried",
+      "start": 38.56,
+      "end": 38.78
+    },
+    {
+      "word": "out",
+      "start": 38.78,
+      "end": 39.06
+    },
+    {
+      "word": "a",
+      "start": 39.06,
+      "end": 39.2
+    },
+    {
+      "word": "named",
+      "start": 39.2,
+      "end": 39.38
+    },
+    {
+      "word": "check",
+      "start": 39.38,
+      "end": 39.66
+    },
+    {
+      "word": "on",
+      "start": 39.66,
+      "end": 39.94
+    },
+    {
+      "word": "the",
+      "start": 39.94,
+      "end": 40.06
+    },
+    {
+      "word": "saved",
+      "start": 40.06,
+      "end": 40.26
+    },
+    {
+      "word": "file.",
+      "start": 40.26,
+      "end": 40.64
+    }
+  ]
+}

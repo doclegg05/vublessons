@@ -1,0 +1,4 @@
+const {chromium}=require(process.cwd()+'/node_modules/@playwright/test');const fs=require('fs');
+(async()=>{const b=await chromium.launch();const out='docs/digital-literacy-2/review/learning-app';fs.mkdirSync(out,{recursive:true});
+for(const [device,width,height] of [['desktop',1440,1080],['mobile',390,844]]){const p=await b.newPage({viewport:{width,height},reducedMotion:'reduce'});for(const [name,path] of [['home','index.html'],['pre','assessments/pre-test.html'],['lesson','weeks/week-01/presentation.html'],['calendar','weeks/week-01/presentation.html#slide-15']]){await p.goto('http://localhost:3940/courses/digital-literacy-2/'+path);await p.evaluate(()=>document.fonts.ready);if(name==='pre')await p.waitForSelector('fieldset:not([hidden])');await p.screenshot({path:`${out}/${name}-${device}.png`,fullPage:name!=='home'});}await p.close();}
+await b.close();console.log(out)})();

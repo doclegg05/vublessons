@@ -1,0 +1,399 @@
+{
+  "generatedAt": "2026-09-18T18:20:28.443Z",
+  "results": [
+    {
+      "project": "week-01",
+      "dir": "/Users/brittlegg/MacDev/companies/education/vublessons/video/digital-literacy-2/week-01",
+      "findings": [
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-01",
+          "detail": "157 wpm outside house band 135–145",
+          "wpm": 157,
+          "words": 102
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-02",
+          "detail": "147 wpm outside house band 135–145",
+          "wpm": 147,
+          "words": 105
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-04",
+          "detail": "176 wpm outside house band 135–145",
+          "wpm": 176,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-05",
+          "detail": "150 wpm outside house band 135–145",
+          "wpm": 150,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-06",
+          "detail": "133 wpm outside house band 135–145",
+          "wpm": 133,
+          "words": 103
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-07",
+          "detail": "147 wpm outside house band 135–145",
+          "wpm": 147,
+          "words": 106
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-09",
+          "detail": "158 wpm outside house band 135–145",
+          "wpm": 158,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-10",
+          "detail": "160 wpm outside house band 135–145",
+          "wpm": 160,
+          "words": 111
+        }
+      ],
+      "takeCount": 10
+    },
+    {
+      "project": "week-02",
+      "dir": "/Users/brittlegg/MacDev/companies/education/vublessons/video/digital-literacy-2/week-02",
+      "findings": [
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-01",
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
+          "words": 105
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-03",
+          "detail": "159 wpm outside house band 135–145",
+          "wpm": 159,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-04",
+          "detail": "168 wpm outside house band 135–145",
+          "wpm": 168,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-05",
+          "detail": "156 wpm outside house band 135–145",
+          "wpm": 156,
+          "words": 105
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-06",
+          "detail": "150 wpm outside house band 135–145",
+          "wpm": 150,
+          "words": 105
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-09",
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
+          "words": 107
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-10",
+          "detail": "134 wpm outside house band 135–145",
+          "wpm": 134,
+          "words": 103
+        }
+      ],
+      "takeCount": 10
+    },
+    {
+      "project": "week-03",
+      "dir": "/Users/brittlegg/MacDev/companies/education/vublessons/video/digital-literacy-2/week-03",
+      "findings": [
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-01",
+          "detail": "148 wpm outside house band 135–145",
+          "wpm": 148,
+          "words": 103
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-02",
+          "detail": "151 wpm outside house band 135–145",
+          "wpm": 151,
+          "words": 107
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-03",
+          "detail": "153 wpm outside house band 135–145",
+          "wpm": 153,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-04",
+          "detail": "164 wpm outside house band 135–145",
+          "wpm": 164,
+          "words": 107
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-05",
+          "detail": "134 wpm outside house band 135–145",
+          "wpm": 134,
+          "words": 112
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-06",
+          "detail": "169 wpm outside house band 135–145",
+          "wpm": 169,
+          "words": 111
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-07",
+          "detail": "151 wpm outside house band 135–145",
+          "wpm": 151,
+          "words": 106
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-08",
+          "detail": "155 wpm outside house band 135–145",
+          "wpm": 155,
+          "words": 104
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-09",
+          "detail": "150 wpm outside house band 135–145",
+          "wpm": 150,
+          "words": 108
+        }
+      ],
+      "takeCount": 10
+    },
+    {
+      "project": "week-04",
+      "dir": "/Users/brittlegg/MacDev/companies/education/vublessons/video/digital-literacy-2/week-04",
+      "findings": [
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-01",
+          "detail": "150 wpm outside house band 135–145",
+          "wpm": 150,
+          "words": 107
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-03",
+          "detail": "152 wpm outside house band 135–145",
+          "wpm": 152,
+          "words": 113
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-06",
+          "detail": "160 wpm outside house band 135–145",
+          "wpm": 160,
+          "words": 108
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-07",
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
+          "words": 110
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-08",
+          "detail": "148 wpm outside house band 135–145",
+          "wpm": 148,
+          "words": 106
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-09",
+          "detail": "151 wpm outside house band 135–145",
+          "wpm": 151,
+          "words": 108
+        }
+      ],
+      "takeCount": 10
+    },
+    {
+      "project": "week-05",
+      "dir": "/Users/brittlegg/MacDev/companies/education/vublessons/video/digital-literacy-2/week-05",
+      "findings": [
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-02",
+          "detail": "153 wpm outside house band 135–145",
+          "wpm": 153,
+          "words": 111
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-03",
+          "detail": "161 wpm outside house band 135–145",
+          "wpm": 161,
+          "words": 108
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-06",
+          "detail": "160 wpm outside house band 135–145",
+          "wpm": 160,
+          "words": 112
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-07",
+          "detail": "161 wpm outside house band 135–145",
+          "wpm": 161,
+          "words": 111
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-08",
+          "detail": "151 wpm outside house band 135–145",
+          "wpm": 151,
+          "words": 110
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-09",
+          "detail": "148 wpm outside house band 135–145",
+          "wpm": 148,
+          "words": 108
+        }
+      ],
+      "takeCount": 10
+    },
+    {
+      "project": "week-06",
+      "dir": "/Users/brittlegg/MacDev/companies/education/vublessons/video/digital-literacy-2/week-06",
+      "findings": [
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-01",
+          "detail": "153 wpm outside house band 135–145",
+          "wpm": 153,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-03",
+          "detail": "157 wpm outside house band 135–145",
+          "wpm": 157,
+          "words": 106
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-04",
+          "detail": "155 wpm outside house band 135–145",
+          "wpm": 155,
+          "words": 111
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-05",
+          "detail": "147 wpm outside house band 135–145",
+          "wpm": 147,
+          "words": 113
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-06",
+          "detail": "154 wpm outside house band 135–145",
+          "wpm": 154,
+          "words": 111
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-07",
+          "detail": "162 wpm outside house band 135–145",
+          "wpm": 162,
+          "words": 111
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-08",
+          "detail": "154 wpm outside house band 135–145",
+          "wpm": 154,
+          "words": 109
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-09",
+          "detail": "152 wpm outside house band 135–145",
+          "wpm": 152,
+          "words": 109
+        }
+      ],
+      "takeCount": 10
+    }
+  ]
+}

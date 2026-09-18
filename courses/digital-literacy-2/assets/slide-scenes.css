@@ -1,0 +1,69 @@
+/* Extend the approved navy / teal / gold learning app into the teaching canvas. */
+.lesson .slide{background:#f5f7fa;box-shadow:none;border:1px solid #ccd8e2;padding:clamp(20px,3vw,44px)}
+.lesson .slide h2{max-width:24ch;font-size:clamp(36px,3.4vw,52px);line-height:1.18;margin-bottom:30px;text-wrap:balance}
+.topic-scene{margin:12px 0 28px;min-width:0}
+.topic-scene h3{font-size:max(32px,var(--fs-slide,32px));line-height:1.3;margin:0 0 22px;color:#0f655f}
+.scene-choices{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.slide .scene-choices button{background:white;color:#1b365d;border:1px solid #829bb0;border-radius:8px;padding:12px 18px;font-size:max(24px,var(--fs-body,18px));line-height:1.35;min-height:52px;transition:none}
+.slide .scene-choices button:hover{background:#e1efed;border-color:#0f655f}
+.slide .scene-choices button[aria-pressed=true]{background:#1b365d;color:white;border-color:#1b365d;box-shadow:inset 0 -4px #c9a227}
+.scene-body{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);background:white;border-radius:14px;overflow:hidden}
+.scene-illustration{width:100%;height:100%;min-height:300px;object-fit:cover;display:block}
+.scene-stage{min-width:0}
+.scene-state[hidden]{display:none}
+.scene-artifact{padding:28px;background:#1b365d;color:white;min-height:245px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start}
+.scene-icon{width:56px;height:56px;color:#e6c65c}
+.scene-artifact h4{font-size:max(32px,var(--fs-slide,32px));line-height:1.3;margin:0;color:white;text-wrap:balance}
+.artifact-content{grid-column:1/-1;font-size:max(32px,var(--fs-slide,32px));line-height:1.5;overflow-wrap:anywhere;white-space:pre-line}
+.scene-code .artifact-content,.scene-keyboard .artifact-content,.scene-files .artifact-content,.scene-cells .artifact-content{font-family:ui-monospace,monospace}
+.scene-consequence{padding:24px 28px;margin:0!important;color:#173657;background:#e1efed}
+.scene-label{display:block;color:#46566d;font-size:18px;margin-top:12px}
+.lesson .concept-note{border-top:1px solid #aebfcb;margin-top:24px;padding-top:18px}
+.lesson .concept-note summary{color:#1b365d;font-weight:600;cursor:pointer}
+.illustrated-copy{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;align-items:center}
+.slide-topic-art img{display:block;width:100%;height:auto;border-radius:14px;aspect-ratio:3/2;object-fit:cover}
+.illustrated-copy p{margin-top:0}
+.lesson .slide-kind-discussion{background:#e1efed}
+.lesson .slide-kind-summary,.lesson .slide-kind-complete{background:#1b365d;color:white}
+.lesson .slide-kind-summary h2,.lesson .slide-kind-complete h2{color:white}
+.lesson .slide-kind-lab{background:#e1efed}
+.slide .interactive-steps li{align-items:stretch;gap:18px;border:0;padding:0;margin:0 0 16px}
+.slide .interactive-steps li:before{background:#1b365d;color:#e6c65c;align-self:start;min-width:50px;min-height:50px;display:grid;place-content:center;border-radius:8px}
+.slide .interactive-steps button{display:block;text-align:left;width:100%;padding:20px;background:white;color:#1b365d;border:1px solid #aebfcb;font-size:max(32px,var(--fs-slide,32px));line-height:1.5}
+.slide .interactive-steps button[aria-pressed=true]{background:#e1efed;border-color:#0f655f}
+.step-state{display:block;font-size:20px;color:#0f655f;margin-top:12px}
+.lesson .flip-front{background:#1b365d;color:white;border:0;min-height:260px;justify-content:space-between}
+.lesson .flip-back{background:#e1efed;color:#173657;border:0}
+.lesson .check-options{counter-reset:answer;gap:16px}
+.lesson .check-options button{counter-increment:answer;background:white;border:1px solid #aebfcb;display:flex;gap:18px;align-items:start;padding:22px}
+.lesson .check-options button:before{content:counter(answer,upper-alpha);flex-shrink:0;font-weight:700;color:#0f655f}
+.lesson .check-options button[aria-pressed=true]{background:#e1efed}
+.chart-lab figure{margin:0;background:#1b365d;color:white;padding:28px;border-radius:14px}
+.chart-lab figcaption{font-size:max(32px,var(--fs-slide,32px));font-weight:700;margin-bottom:24px}
+.bar-chart{display:grid;gap:24px}
+.bar-row{display:grid;grid-template-columns:140px minmax(30px,1fr) 75px;gap:18px;align-items:center;font-size:max(32px,var(--fs-slide,32px));line-height:1.35}
+.bar-row strong{font-weight:400}.bar-track{height:48px;border-left:2px solid white}.bar-track span{display:block;height:100%;background:#e6c65c;border-radius:0 5px 5px 0;transition:none}.bar-row b{font-weight:600}
+.chart-data{background:white;width:100%;border-collapse:collapse}.chart-data caption{text-align:left;font-size:24px;padding:16px 0;color:#1b365d}.chart-data th,.chart-data td{font-size:max(32px,var(--fs-slide,32px));padding:14px;text-align:left}
+.image-edit-stage{min-height:340px;display:grid;place-items:center;background:#1b365d;padding:28px;border-radius:14px;overflow:hidden}
+.image-edit-frame{max-width:640px;width:100%;overflow:hidden;transition:none;line-height:0}
+.image-edit-frame img{width:100%;height:auto;display:block}
+.crop-lab[data-mode=crop] .image-edit-frame{clip-path:inset(15% 18%)}
+.crop-lab[data-mode=resize] .image-edit-frame{width:60%}
+.clip-track{display:flex;gap:6px;background:#1b365d;padding:28px;border-radius:14px;align-items:stretch;flex-wrap:wrap}
+.clip-track span{flex:1 1 100px;background:#e1efed;padding:22px 12px;color:#173657;font-size:max(32px,var(--fs-slide,32px));line-height:1.5;text-align:center;position:relative}
+.clip-track .clip-removed{background:#f5f7fa;color:#46566d;text-decoration:line-through;text-decoration-thickness:3px}
+.clip-track .clip-removed:after{content:'Removed';display:block;font-size:20px;text-decoration:none}
+.caption-strip{background:#1b365d;color:white;padding:20px;font-size:max(32px,var(--fs-slide,32px));border-radius:8px}
+.lesson .slide-kind-video{background:#1b365d;color:white}.lesson .slide-kind-video h2,.lesson .slide-kind-video a{color:white}
+@media(max-width:1100px){.scene-body{grid-template-columns:1fr}.scene-illustration{height:210px;min-height:0;object-position:50% 48%}.illustrated-copy{grid-template-columns:1fr}.slide-topic-art img{max-height:300px}.bar-row{grid-template-columns:120px minmax(20px,1fr) 75px;gap:12px}}
+@media(max-width:600px){.scene-artifact{padding:22px 18px;grid-template-columns:42px minmax(0,1fr);gap:14px}.scene-icon{width:42px;height:42px}.scene-consequence{padding:20px 18px}.lesson .slide{padding:20px 14px}.scene-illustration{height:180px}.scene-choices{gap:8px}.slide .scene-choices button{padding:10px 13px}.bar-row{grid-template-columns:minmax(0,1fr) 70px}.bar-row strong{grid-column:1/-1}.chart-lab figure{padding:20px}.chart-data th,.chart-data td{padding:10px 5px}.image-edit-stage{min-height:200px;padding:16px}.scene-artifact h4{grid-column:1/-1}.clip-track{padding:14px}.illustrated-copy{gap:20px}.slide .interactive-steps li{gap:10px}.slide .interactive-steps li:before{min-width:35px}.slide .interactive-steps button{padding:14px}}
+@media(prefers-reduced-motion:reduce){.bar-track span,.image-edit-frame,.scene-choices button{transition:none}}
+@media print{.lesson .slide{background:white!important;color:black!important;border:0}.lesson .slide h2{color:black!important}.scene-illustration,.slide-topic-art,.scene-choices,.scene-label,.step-state{display:none!important}.scene-body,.illustrated-copy{display:block}.scene-state[hidden]{display:block!important}.scene-artifact,.scene-consequence,.chart-lab figure,.caption-strip{background:white;color:black}.scene-artifact h4{color:black}.scene-icon{color:black}.scene-state{break-inside:avoid;margin-bottom:24px}.artifact-content,.scene-artifact h4,.chart-data td,.chart-data th,.bar-row,.clip-track span,.caption-strip{font-size:24pt}.scene-artifact{min-height:0;padding:12px}.scene-consequence{padding:12px}.bar-track span{background:#555}.bar-track{border-color:black}.lesson .slide-kind-video a{color:black}}
+/* Topic geometry carries relationships; the picture establishes the lesson's setting. */
+.flow-map{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.flow-node{padding:14px 18px;background:#e1efed;color:#173657;border-radius:8px;flex:1 1 130px}.flow-connector{color:#e6c65c;font-size:38px}
+.recipient-fields{margin:0;font-size:inherit}.recipient-fields>div{display:grid;grid-template-columns:80px 1fr;gap:14px;padding:10px 14px;border-bottom:1px solid #829bb0}.recipient-fields dt{font-weight:700}.recipient-fields dd{margin:0}.recipient-fields .field-selected{background:#e1efed;color:#173657;border-radius:8px}
+.cell-map{width:100%;border-collapse:collapse;font-size:max(32px,var(--fs-slide,32px));color:white;background:#1b365d}.cell-map caption{text-align:left;font-size:24px;padding-bottom:16px}.cell-map th,.cell-map td{padding:8px;text-align:left;border:1px solid #829bb0;font-size:inherit;background:transparent;color:inherit}.cell-map .cell-selected{background:#e6c65c;color:#173657;font-weight:700}.artifact-caption{margin-top:20px}
+.search-example{display:flex;gap:18px;align-items:center;padding:18px;background:white;color:#173657;border-radius:8px}.search-example .scene-icon{color:#0f655f;flex:0 0 40px;width:40px;height:40px}
+.scene-document .scene-artifact,.scene-revision .scene-artifact,.scene-receipt .scene-artifact{background:#fff;color:#173657;border-bottom:1px solid #aebfcb}.scene-document .scene-artifact h4,.scene-revision .scene-artifact h4,.scene-receipt .scene-artifact h4{color:#173657}.scene-document .scene-icon,.scene-revision .scene-icon,.scene-receipt .scene-icon{color:#0f655f}.scene-receipt .artifact-content{padding:20px 0;border-top:2px dashed #829bb0}.scene-keyboard .scene-artifact h4{display:inline-block;padding:14px;background:#f5f7fa;color:#173657;border-radius:8px}
+@media(max-width:600px){.cell-map th,.cell-map td{padding:6px 3px}.recipient-fields>div{grid-template-columns:65px 1fr;padding:10px}.flow-map{flex-direction:column;align-items:stretch}.flow-node{flex:auto}.flow-connector{transform:rotate(90deg);align-self:center}.search-example{padding:12px;flex-wrap:wrap}}
+@media print{.cell-map,.cell-map th,.cell-map td{color:black;background:white}.cell-map .cell-selected{border:3px solid black}.flow-node,.recipient-fields .field-selected{color:black;background:white;border:1px solid black}}

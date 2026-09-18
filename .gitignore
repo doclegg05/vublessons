@@ -65,3 +65,14 @@ playwright-report/
 /VUB-Financial-Readiness_*_files/
 # Student paperwork submissions — PII; must never reach a public repo
 /VUB Financial Readiness Paperwork Submission/
+
+# DL2 media working files; reviewed compact course videos are deployment assets.
+/video/digital-literacy-2/.venv/
+/video/digital-literacy-2/**/narration/*.wav
+/video/digital-literacy-2/**/renders/
+/video/digital-literacy-2/**/snapshots/
+/video/digital-literacy-2/**/.hyperframes/
+!/courses/digital-literacy-2/media/week-*.mp4
+
+# Python authoring cache
+/scripts/dl2/__pycache__/

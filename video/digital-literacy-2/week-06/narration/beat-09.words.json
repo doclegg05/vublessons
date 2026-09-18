@@ -1,0 +1,553 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "0689612751705a18edd7615c031df6731d84c6ced74689efea3c7d3ee429017e",
+  "textSha256": "34827cfbebc27829df7420c4676f74cdf09b49dccb561e524a35af71065c7561",
+  "matchRatio": 0.9724770642201835,
+  "words": [
+    {
+      "word": "Suppose",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "the",
+      "start": 0.32,
+      "end": 0.6
+    },
+    {
+      "word": "uppercase",
+      "start": 0.6,
+      "end": 1.12
+    },
+    {
+      "word": "search",
+      "start": 1.12,
+      "end": 1.36
+    },
+    {
+      "word": "failed.",
+      "start": 1.36,
+      "end": 1.72
+    },
+    {
+      "word": "A",
+      "start": 2.58,
+      "end": 2.6
+    },
+    {
+      "word": "useful",
+      "start": 2.6,
+      "end": 2.88
+    },
+    {
+      "word": "revision",
+      "start": 2.88,
+      "end": 3.3
+    },
+    {
+      "word": "request",
+      "start": 3.3,
+      "end": 3.78
+    },
+    {
+      "word": "names",
+      "start": 3.78,
+      "end": 4.2
+    },
+    {
+      "word": "the",
+      "start": 4.2,
+      "end": 4.48
+    },
+    {
+      "word": "observed",
+      "start": 4.48,
+      "end": 4.82
+    },
+    {
+      "word": "problem,",
+      "start": 4.82,
+      "end": 5.3
+    },
+    {
+      "word": "the",
+      "start": 5.82,
+      "end": 5.88
+    },
+    {
+      "word": "expected",
+      "start": 5.88,
+      "end": 6.24
+    },
+    {
+      "word": "behavior,",
+      "start": 6.24,
+      "end": 6.68
+    },
+    {
+      "word": "and",
+      "start": 7.28,
+      "end": 7.4
+    },
+    {
+      "word": "the",
+      "start": 7.4,
+      "end": 7.56
+    },
+    {
+      "word": "check:",
+      "start": 7.56,
+      "end": 7.76
+    },
+    {
+      "word": "LIBRARY",
+      "start": 8.42,
+      "end": 8.7
+    },
+    {
+      "word": "returns",
+      "start": 8.7,
+      "end": 9.26
+    },
+    {
+      "word": "no",
+      "start": 9.26,
+      "end": 9.66
+    },
+    {
+      "word": "result,",
+      "start": 9.66,
+      "end": 10.02
+    },
+    {
+      "word": "but",
+      "start": 10.38,
+      "end": 10.5
+    },
+    {
+      "word": "library",
+      "start": 10.5,
+      "end": 10.74
+    },
+    {
+      "word": "returns",
+      "start": 10.74,
+      "end": 11.42
+    },
+    {
+      "word": "Community",
+      "start": 11.42,
+      "end": 11.88
+    },
+    {
+      "word": "library;",
+      "start": 11.88,
+      "end": 12.36
+    },
+    {
+      "word": "make",
+      "start": 13.18,
+      "end": 13.24
+    },
+    {
+      "word": "both",
+      "start": 13.24,
+      "end": 13.5
+    },
+    {
+      "word": "searches",
+      "start": 13.5,
+      "end": 13.86
+    },
+    {
+      "word": "match",
+      "start": 13.86,
+      "end": 14.26
+    },
+    {
+      "word": "the",
+      "start": 14.26,
+      "end": 14.56
+    },
+    {
+      "word": "same",
+      "start": 14.56,
+      "end": 14.78
+    },
+    {
+      "word": "entry",
+      "start": 14.78,
+      "end": 15.18
+    },
+    {
+      "word": "and",
+      "start": 15.18,
+      "end": 15.5
+    },
+    {
+      "word": "preserve",
+      "start": 15.5,
+      "end": 15.74
+    },
+    {
+      "word": "the",
+      "start": 15.74,
+      "end": 16.1
+    },
+    {
+      "word": "category",
+      "start": 16.1,
+      "end": 16.42
+    },
+    {
+      "word": "filter.",
+      "start": 16.42,
+      "end": 16.88
+    },
+    {
+      "word": "Save",
+      "start": 17.9,
+      "end": 17.92
+    },
+    {
+      "word": "the",
+      "start": 17.92,
+      "end": 18.08
+    },
+    {
+      "word": "revised",
+      "start": 18.08,
+      "end": 18.34
+    },
+    {
+      "word": "version",
+      "start": 18.34,
+      "end": 18.8
+    },
+    {
+      "word": "under",
+      "start": 18.8,
+      "end": 19.14
+    },
+    {
+      "word": "a",
+      "start": 19.14,
+      "end": 19.3
+    },
+    {
+      "word": "distinct",
+      "start": 19.3,
+      "end": 19.6
+    },
+    {
+      "word": "name.",
+      "start": 19.6,
+      "end": 20.02
+    },
+    {
+      "word": "Repeat",
+      "start": 20.8,
+      "end": 20.8
+    },
+    {
+      "word": "the",
+      "start": 20.8,
+      "end": 21.06
+    },
+    {
+      "word": "failed",
+      "start": 21.06,
+      "end": 21.34
+    },
+    {
+      "word": "check,",
+      "start": 21.34,
+      "end": 21.6
+    },
+    {
+      "word": "then",
+      "start": 22.02,
+      "end": 22.2
+    },
+    {
+      "word": "repeat",
+      "start": 22.2,
+      "end": 22.5
+    },
+    {
+      "word": "a",
+      "start": 22.5,
+      "end": 22.68
+    },
+    {
+      "word": "check",
+      "start": 22.68,
+      "end": 22.92
+    },
+    {
+      "word": "that",
+      "start": 22.92,
+      "end": 23.16
+    },
+    {
+      "word": "previously",
+      "start": 23.16,
+      "end": 23.52
+    },
+    {
+      "word": "passed.",
+      "start": 23.52,
+      "end": 24.1
+    },
+    {
+      "word": "This",
+      "start": 25.86,
+      "end": 26.2
+    },
+    {
+      "word": "second",
+      "start": 26.2,
+      "end": 26.54
+    },
+    {
+      "word": "step",
+      "start": 26.54,
+      "end": 26.9
+    },
+    {
+      "word": "can",
+      "start": 26.9,
+      "end": 27.16
+    },
+    {
+      "word": "reveal",
+      "start": 27.16,
+      "end": 27.46
+    },
+    {
+      "word": "a",
+      "start": 27.46,
+      "end": 27.76
+    },
+    {
+      "word": "regression,",
+      "start": 27.76,
+      "end": 28.12
+    },
+    {
+      "word": "where",
+      "start": 28.12,
+      "end": 28.98
+    },
+    {
+      "word": "fixing",
+      "start": 28.98,
+      "end": 29.2
+    },
+    {
+      "word": "one",
+      "start": 29.2,
+      "end": 29.52
+    },
+    {
+      "word": "behavior",
+      "start": 29.52,
+      "end": 29.88
+    },
+    {
+      "word": "breaks",
+      "start": 29.88,
+      "end": 30.32
+    },
+    {
+      "word": "another.",
+      "start": 30.32,
+      "end": 30.76
+    },
+    {
+      "word": "If",
+      "start": 31.4,
+      "end": 31.54
+    },
+    {
+      "word": "the",
+      "start": 31.54,
+      "end": 31.68
+    },
+    {
+      "word": "new",
+      "start": 31.68,
+      "end": 31.78
+    },
+    {
+      "word": "version",
+      "start": 31.78,
+      "end": 32.02
+    },
+    {
+      "word": "is",
+      "start": 32.02,
+      "end": 32.26
+    },
+    {
+      "word": "worse,",
+      "start": 32.26,
+      "end": 32.52
+    },
+    {
+      "word": "return",
+      "start": 33.22,
+      "end": 33.22
+    },
+    {
+      "word": "to",
+      "start": 33.22,
+      "end": 33.46
+    },
+    {
+      "word": "the",
+      "start": 33.46,
+      "end": 33.54
+    },
+    {
+      "word": "saved",
+      "start": 33.54,
+      "end": 33.84
+    },
+    {
+      "word": "working",
+      "start": 33.84,
+      "end": 34.14
+    },
+    {
+      "word": "version.",
+      "start": 34.14,
+      "end": 34.68
+    },
+    {
+      "word": "Pause",
+      "start": 35.02,
+      "end": 35.32
+    },
+    {
+      "word": "and",
+      "start": 35.32,
+      "end": 35.66
+    },
+    {
+      "word": "make",
+      "start": 35.66,
+      "end": 35.82
+    },
+    {
+      "word": "one",
+      "start": 35.82,
+      "end": 36.08
+    },
+    {
+      "word": "small",
+      "start": 36.08,
+      "end": 36.36
+    },
+    {
+      "word": "improvement",
+      "start": 36.36,
+      "end": 37.02
+    },
+    {
+      "word": "or",
+      "start": 37.02,
+      "end": 37.28
+    },
+    {
+      "word": "repair.",
+      "start": 37.28,
+      "end": 37.64
+    },
+    {
+      "word": "Keep",
+      "start": 38.56,
+      "end": 38.6
+    },
+    {
+      "word": "a",
+      "start": 38.6,
+      "end": 38.74
+    },
+    {
+      "word": "brief",
+      "start": 38.74,
+      "end": 38.96
+    },
+    {
+      "word": "test",
+      "start": 38.96,
+      "end": 39.28
+    },
+    {
+      "word": "log",
+      "start": 39.28,
+      "end": 39.58
+    },
+    {
+      "word": "so",
+      "start": 39.58,
+      "end": 39.88
+    },
+    {
+      "word": "a",
+      "start": 39.88,
+      "end": 40.02
+    },
+    {
+      "word": "partner",
+      "start": 40.02,
+      "end": 40.24
+    },
+    {
+      "word": "can",
+      "start": 40.24,
+      "end": 40.54
+    },
+    {
+      "word": "follow",
+      "start": 40.54,
+      "end": 40.92
+    },
+    {
+      "word": "what",
+      "start": 40.92,
+      "end": 41.26
+    },
+    {
+      "word": "changed",
+      "start": 41.26,
+      "end": 41.54
+    },
+    {
+      "word": "and",
+      "start": 41.54,
+      "end": 42.08
+    },
+    {
+      "word": "why",
+      "start": 42.08,
+      "end": 42.32
+    },
+    {
+      "word": "you",
+      "start": 42.32,
+      "end": 42.54
+    },
+    {
+      "word": "trust",
+      "start": 42.54,
+      "end": 42.83
+    },
+    {
+      "word": "it.",
+      "start": 42.83,
+      "end": 43.119
+    }
+  ]
+}

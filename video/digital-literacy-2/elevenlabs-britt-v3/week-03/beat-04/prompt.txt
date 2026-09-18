@@ -1,0 +1,1 @@
+The right file format depends on the next person's task. An editable document supports revision. [short pause] A PDF often preserves a finished layout. A CSV carries plain table data but loses formatting and formulas. Choose deliberately, then reopen the exported file and check what survived.

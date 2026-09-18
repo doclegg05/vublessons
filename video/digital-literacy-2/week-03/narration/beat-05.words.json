@@ -1,0 +1,553 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "adb0684435073ab919b6d9ee343fae0093a60792b6aa95d34bed53910a678178",
+  "textSha256": "08f9872199fe0a7536d9b969885d201e068204cc812692e082d798e86197559a",
+  "matchRatio": 0.9357798165137615,
+  "words": [
+    {
+      "word": "Select",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "a",
+      "start": 0.3,
+      "end": 0.5
+    },
+    {
+      "word": "total",
+      "start": 0.5,
+      "end": 0.72
+    },
+    {
+      "word": "cell",
+      "start": 0.72,
+      "end": 1.14
+    },
+    {
+      "word": "outside",
+      "start": 1.14,
+      "end": 1.7
+    },
+    {
+      "word": "the",
+      "start": 1.7,
+      "end": 2.14
+    },
+    {
+      "word": "three",
+      "start": 2.14,
+      "end": 2.34
+    },
+    {
+      "word": "input",
+      "start": 2.34,
+      "end": 2.68
+    },
+    {
+      "word": "cells",
+      "start": 2.68,
+      "end": 3.12
+    },
+    {
+      "word": "and",
+      "start": 3.12,
+      "end": 3.62
+    },
+    {
+      "word": "enter",
+      "start": 3.62,
+      "end": 4.06
+    },
+    {
+      "word": "equals",
+      "start": 4.06,
+      "end": 4.74
+    },
+    {
+      "word": "SUM,",
+      "start": 4.74,
+      "end": 5.54
+    },
+    {
+      "word": "followed",
+      "start": 5.54,
+      "end": 6.46
+    },
+    {
+      "word": "by",
+      "start": 6.46,
+      "end": 6.78
+    },
+    {
+      "word": "the",
+      "start": 6.78,
+      "end": 6.9
+    },
+    {
+      "word": "range",
+      "start": 6.9,
+      "end": 7.16
+    },
+    {
+      "word": "B2",
+      "start": 7.16,
+      "end": 8.06
+    },
+    {
+      "word": "through",
+      "start": 8.06,
+      "end": 8.5
+    },
+    {
+      "word": "B4",
+      "start": 8.5,
+      "end": 9.16
+    },
+    {
+      "word": "in",
+      "start": 9.16,
+      "end": 9.56
+    },
+    {
+      "word": "parentheses.",
+      "start": 9.56,
+      "end": 10.04
+    },
+    {
+      "word": "The",
+      "start": 10.88,
+      "end": 11.32
+    },
+    {
+      "word": "colon",
+      "start": 11.32,
+      "end": 11.6
+    },
+    {
+      "word": "means",
+      "start": 11.6,
+      "end": 11.94
+    },
+    {
+      "word": "include",
+      "start": 11.94,
+      "end": 12.56
+    },
+    {
+      "word": "the",
+      "start": 12.56,
+      "end": 12.88
+    },
+    {
+      "word": "cells",
+      "start": 12.88,
+      "end": 13.14
+    },
+    {
+      "word": "from",
+      "start": 13.14,
+      "end": 13.48
+    },
+    {
+      "word": "the",
+      "start": 13.48,
+      "end": 13.6
+    },
+    {
+      "word": "first",
+      "start": 13.6,
+      "end": 13.88
+    },
+    {
+      "word": "address",
+      "start": 13.88,
+      "end": 14.26
+    },
+    {
+      "word": "through",
+      "start": 14.26,
+      "end": 14.8
+    },
+    {
+      "word": "the",
+      "start": 14.8,
+      "end": 14.98
+    },
+    {
+      "word": "last.",
+      "start": 14.98,
+      "end": 15.26
+    },
+    {
+      "word": "The",
+      "start": 16.16,
+      "end": 16.48
+    },
+    {
+      "word": "expected",
+      "start": 16.48,
+      "end": 16.8
+    },
+    {
+      "word": "total",
+      "start": 16.8,
+      "end": 17.24
+    },
+    {
+      "word": "is",
+      "start": 17.24,
+      "end": 17.76
+    },
+    {
+      "word": "twenty-five",
+      "start": 17.76,
+      "end": 18.47
+    },
+    {
+      "word": "dollars.",
+      "start": 18.47,
+      "end": 19.18
+    },
+    {
+      "word": "Now",
+      "start": 19.18,
+      "end": 20.0
+    },
+    {
+      "word": "change",
+      "start": 20.0,
+      "end": 20.34
+    },
+    {
+      "word": "paper",
+      "start": 20.34,
+      "end": 20.64
+    },
+    {
+      "word": "from",
+      "start": 20.64,
+      "end": 21.24
+    },
+    {
+      "word": "twelve",
+      "start": 21.24,
+      "end": 21.54
+    },
+    {
+      "word": "to",
+      "start": 21.54,
+      "end": 22.06
+    },
+    {
+      "word": "fifteen.",
+      "start": 22.06,
+      "end": 23.7
+    },
+    {
+      "word": "The",
+      "start": 23.7,
+      "end": 24.3
+    },
+    {
+      "word": "total",
+      "start": 24.3,
+      "end": 24.68
+    },
+    {
+      "word": "should",
+      "start": 24.68,
+      "end": 24.98
+    },
+    {
+      "word": "become",
+      "start": 24.98,
+      "end": 25.28
+    },
+    {
+      "word": "twenty-eight",
+      "start": 25.28,
+      "end": 25.78
+    },
+    {
+      "word": "because",
+      "start": 25.78,
+      "end": 26.5
+    },
+    {
+      "word": "the",
+      "start": 26.5,
+      "end": 26.74
+    },
+    {
+      "word": "formula",
+      "start": 26.74,
+      "end": 27.08
+    },
+    {
+      "word": "refers",
+      "start": 27.08,
+      "end": 27.54
+    },
+    {
+      "word": "to",
+      "start": 27.54,
+      "end": 27.88
+    },
+    {
+      "word": "the",
+      "start": 27.88,
+      "end": 27.96
+    },
+    {
+      "word": "cells,",
+      "start": 27.96,
+      "end": 28.32
+    },
+    {
+      "word": "not",
+      "start": 28.78,
+      "end": 29.02
+    },
+    {
+      "word": "to",
+      "start": 29.02,
+      "end": 29.24
+    },
+    {
+      "word": "a",
+      "start": 29.24,
+      "end": 29.36
+    },
+    {
+      "word": "permanently",
+      "start": 29.36,
+      "end": 29.72
+    },
+    {
+      "word": "typed",
+      "start": 29.72,
+      "end": 30.18
+    },
+    {
+      "word": "answer.",
+      "start": 30.18,
+      "end": 30.72
+    },
+    {
+      "word": "If",
+      "start": 31.7,
+      "end": 31.84
+    },
+    {
+      "word": "it",
+      "start": 31.84,
+      "end": 31.94
+    },
+    {
+      "word": "stays",
+      "start": 31.94,
+      "end": 32.18
+    },
+    {
+      "word": "at",
+      "start": 32.18,
+      "end": 32.42
+    },
+    {
+      "word": "twenty-five,",
+      "start": 32.42,
+      "end": 33.64
+    },
+    {
+      "word": "inspect",
+      "start": 33.64,
+      "end": 33.9
+    },
+    {
+      "word": "the",
+      "start": 33.9,
+      "end": 34.16
+    },
+    {
+      "word": "formula",
+      "start": 34.16,
+      "end": 34.52
+    },
+    {
+      "word": "and",
+      "start": 34.52,
+      "end": 34.84
+    },
+    {
+      "word": "range.",
+      "start": 34.84,
+      "end": 35.08
+    },
+    {
+      "word": "Did",
+      "start": 36.14,
+      "end": 36.3
+    },
+    {
+      "word": "you",
+      "start": 36.3,
+      "end": 36.42
+    },
+    {
+      "word": "type",
+      "start": 36.42,
+      "end": 36.68
+    },
+    {
+      "word": "the",
+      "start": 36.68,
+      "end": 36.84
+    },
+    {
+      "word": "total",
+      "start": 36.84,
+      "end": 37.04
+    },
+    {
+      "word": "manually?",
+      "start": 37.04,
+      "end": 37.46
+    },
+    {
+      "word": "Did",
+      "start": 38.54,
+      "end": 38.62
+    },
+    {
+      "word": "the",
+      "start": 38.62,
+      "end": 38.74
+    },
+    {
+      "word": "range",
+      "start": 38.74,
+      "end": 39.02
+    },
+    {
+      "word": "omit",
+      "start": 39.02,
+      "end": 39.36
+    },
+    {
+      "word": "a",
+      "start": 39.36,
+      "end": 39.36
+    },
+    {
+      "word": "cell?",
+      "start": 39.36,
+      "end": 39.86
+    },
+    {
+      "word": "Pause",
+      "start": 41.02,
+      "end": 41.22
+    },
+    {
+      "word": "and",
+      "start": 41.22,
+      "end": 41.48
+    },
+    {
+      "word": "predict",
+      "start": 41.48,
+      "end": 41.76
+    },
+    {
+      "word": "the",
+      "start": 41.76,
+      "end": 42.0
+    },
+    {
+      "word": "result",
+      "start": 42.0,
+      "end": 42.34
+    },
+    {
+      "word": "before",
+      "start": 42.34,
+      "end": 42.72
+    },
+    {
+      "word": "changing",
+      "start": 42.72,
+      "end": 43.34
+    },
+    {
+      "word": "a",
+      "start": 43.34,
+      "end": 43.56
+    },
+    {
+      "word": "value.",
+      "start": 43.56,
+      "end": 43.86
+    },
+    {
+      "word": "Then",
+      "start": 45.24,
+      "end": 45.76
+    },
+    {
+      "word": "compare",
+      "start": 45.76,
+      "end": 46.12
+    },
+    {
+      "word": "the",
+      "start": 46.12,
+      "end": 46.4
+    },
+    {
+      "word": "observed",
+      "start": 46.4,
+      "end": 46.6
+    },
+    {
+      "word": "total",
+      "start": 46.6,
+      "end": 47.1
+    },
+    {
+      "word": "with",
+      "start": 47.1,
+      "end": 47.56
+    },
+    {
+      "word": "your",
+      "start": 47.56,
+      "end": 47.72
+    },
+    {
+      "word": "prediction",
+      "start": 47.72,
+      "end": 48.08
+    },
+    {
+      "word": "and",
+      "start": 48.08,
+      "end": 48.82
+    },
+    {
+      "word": "correct",
+      "start": 48.82,
+      "end": 49.1
+    },
+    {
+      "word": "any",
+      "start": 49.1,
+      "end": 49.42
+    },
+    {
+      "word": "mismatch.",
+      "start": 49.42,
+      "end": 49.82
+    }
+  ]
+}

@@ -1,0 +1,548 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "d67996875eb1946ea603ef62cc5a8d805c9a798e35a82f7a41af3ea30b1b6e0b",
+  "textSha256": "e579fef497ccfbed83b70a3992d44c77c7fd0691c361249d31b516631f9740b1",
+  "matchRatio": 0.9814814814814815,
+  "words": [
+    {
+      "word": "Decide",
+      "start": 0.0,
+      "end": 0.42
+    },
+    {
+      "word": "what",
+      "start": 0.42,
+      "end": 0.68
+    },
+    {
+      "word": "the",
+      "start": 0.68,
+      "end": 0.88
+    },
+    {
+      "word": "next",
+      "start": 0.88,
+      "end": 1.0
+    },
+    {
+      "word": "person",
+      "start": 1.0,
+      "end": 1.46
+    },
+    {
+      "word": "needs",
+      "start": 1.46,
+      "end": 1.68
+    },
+    {
+      "word": "to",
+      "start": 1.68,
+      "end": 1.92
+    },
+    {
+      "word": "do.",
+      "start": 1.92,
+      "end": 2.12
+    },
+    {
+      "word": "An",
+      "start": 2.6,
+      "end": 2.6
+    },
+    {
+      "word": "editable",
+      "start": 2.6,
+      "end": 3.2
+    },
+    {
+      "word": "document",
+      "start": 3.2,
+      "end": 3.5
+    },
+    {
+      "word": "supports",
+      "start": 3.5,
+      "end": 4.24
+    },
+    {
+      "word": "revision.",
+      "start": 4.24,
+      "end": 4.62
+    },
+    {
+      "word": "A",
+      "start": 5.32,
+      "end": 5.36
+    },
+    {
+      "word": "PDF",
+      "start": 5.36,
+      "end": 5.52
+    },
+    {
+      "word": "often",
+      "start": 5.52,
+      "end": 5.98
+    },
+    {
+      "word": "preserves",
+      "start": 5.98,
+      "end": 6.48
+    },
+    {
+      "word": "a",
+      "start": 6.48,
+      "end": 6.76
+    },
+    {
+      "word": "finished",
+      "start": 6.76,
+      "end": 6.98
+    },
+    {
+      "word": "layout",
+      "start": 6.98,
+      "end": 7.26
+    },
+    {
+      "word": "for",
+      "start": 7.26,
+      "end": 7.58
+    },
+    {
+      "word": "viewing",
+      "start": 7.58,
+      "end": 7.84
+    },
+    {
+      "word": "or",
+      "start": 7.84,
+      "end": 8.2
+    },
+    {
+      "word": "printing.",
+      "start": 8.2,
+      "end": 8.48
+    },
+    {
+      "word": "A",
+      "start": 9.22,
+      "end": 9.24
+    },
+    {
+      "word": "CSV",
+      "start": 9.24,
+      "end": 9.48
+    },
+    {
+      "word": "carries",
+      "start": 9.48,
+      "end": 10.16
+    },
+    {
+      "word": "plain",
+      "start": 10.16,
+      "end": 10.48
+    },
+    {
+      "word": "table",
+      "start": 10.48,
+      "end": 10.98
+    },
+    {
+      "word": "data,",
+      "start": 10.98,
+      "end": 11.38
+    },
+    {
+      "word": "but",
+      "start": 11.86,
+      "end": 12.02
+    },
+    {
+      "word": "does",
+      "start": 12.02,
+      "end": 12.16
+    },
+    {
+      "word": "not",
+      "start": 12.16,
+      "end": 12.44
+    },
+    {
+      "word": "preserve",
+      "start": 12.44,
+      "end": 12.86
+    },
+    {
+      "word": "a",
+      "start": 12.86,
+      "end": 13.04
+    },
+    {
+      "word": "workbook's",
+      "start": 13.04,
+      "end": 13.66
+    },
+    {
+      "word": "full",
+      "start": 13.66,
+      "end": 13.9
+    },
+    {
+      "word": "formatting",
+      "start": 13.9,
+      "end": 14.38
+    },
+    {
+      "word": "and",
+      "start": 14.38,
+      "end": 14.68
+    },
+    {
+      "word": "formula",
+      "start": 14.68,
+      "end": 15.04
+    },
+    {
+      "word": "behavior.",
+      "start": 15.04,
+      "end": 15.5
+    },
+    {
+      "word": "Keep",
+      "start": 17.16,
+      "end": 17.76
+    },
+    {
+      "word": "the",
+      "start": 17.76,
+      "end": 17.96
+    },
+    {
+      "word": "editable",
+      "start": 17.96,
+      "end": 18.52
+    },
+    {
+      "word": "original",
+      "start": 18.52,
+      "end": 18.78
+    },
+    {
+      "word": "as",
+      "start": 18.78,
+      "end": 19.44
+    },
+    {
+      "word": "well",
+      "start": 19.44,
+      "end": 19.7
+    },
+    {
+      "word": "as",
+      "start": 19.7,
+      "end": 20.02
+    },
+    {
+      "word": "the",
+      "start": 20.02,
+      "end": 20.16
+    },
+    {
+      "word": "export.",
+      "start": 20.16,
+      "end": 20.44
+    },
+    {
+      "word": "Reopen",
+      "start": 21.36,
+      "end": 21.66
+    },
+    {
+      "word": "the",
+      "start": 21.66,
+      "end": 21.88
+    },
+    {
+      "word": "exported",
+      "start": 21.88,
+      "end": 22.2
+    },
+    {
+      "word": "file",
+      "start": 22.2,
+      "end": 22.64
+    },
+    {
+      "word": "and",
+      "start": 22.64,
+      "end": 22.94
+    },
+    {
+      "word": "inspect",
+      "start": 22.94,
+      "end": 23.28
+    },
+    {
+      "word": "the",
+      "start": 23.28,
+      "end": 23.56
+    },
+    {
+      "word": "page",
+      "start": 23.56,
+      "end": 23.8
+    },
+    {
+      "word": "breaks,",
+      "start": 23.8,
+      "end": 24.12
+    },
+    {
+      "word": "labels,",
+      "start": 24.42,
+      "end": 24.7
+    },
+    {
+      "word": "links,",
+      "start": 25.18,
+      "end": 25.3
+    },
+    {
+      "word": "and",
+      "start": 25.64,
+      "end": 25.72
+    },
+    {
+      "word": "important",
+      "start": 25.72,
+      "end": 25.96
+    },
+    {
+      "word": "values.",
+      "start": 25.96,
+      "end": 26.5
+    },
+    {
+      "word": "If",
+      "start": 27.32,
+      "end": 27.52
+    },
+    {
+      "word": "you",
+      "start": 27.52,
+      "end": 27.64
+    },
+    {
+      "word": "reused",
+      "start": 27.64,
+      "end": 27.94
+    },
+    {
+      "word": "someone",
+      "start": 27.94,
+      "end": 28.44
+    },
+    {
+      "word": "else's",
+      "start": 28.44,
+      "end": 28.86
+    },
+    {
+      "word": "image",
+      "start": 28.86,
+      "end": 29.16
+    },
+    {
+      "word": "or",
+      "start": 29.16,
+      "end": 29.38
+    },
+    {
+      "word": "wording,",
+      "start": 29.38,
+      "end": 29.68
+    },
+    {
+      "word": "check",
+      "start": 30.18,
+      "end": 30.42
+    },
+    {
+      "word": "the",
+      "start": 30.42,
+      "end": 30.62
+    },
+    {
+      "word": "permission",
+      "start": 30.62,
+      "end": 30.94
+    },
+    {
+      "word": "or",
+      "start": 30.94,
+      "end": 31.3
+    },
+    {
+      "word": "license",
+      "start": 31.3,
+      "end": 31.66
+    },
+    {
+      "word": "and",
+      "start": 31.66,
+      "end": 32.12
+    },
+    {
+      "word": "provide",
+      "start": 32.12,
+      "end": 32.42
+    },
+    {
+      "word": "the",
+      "start": 32.42,
+      "end": 32.68
+    },
+    {
+      "word": "required",
+      "start": 32.68,
+      "end": 33.02
+    },
+    {
+      "word": "credit.",
+      "start": 33.02,
+      "end": 33.46
+    },
+    {
+      "word": "Finding",
+      "start": 34.18,
+      "end": 34.4
+    },
+    {
+      "word": "an",
+      "start": 34.4,
+      "end": 34.6
+    },
+    {
+      "word": "image",
+      "start": 34.6,
+      "end": 34.8
+    },
+    {
+      "word": "in",
+      "start": 34.8,
+      "end": 35.04
+    },
+    {
+      "word": "a",
+      "start": 35.04,
+      "end": 35.12
+    },
+    {
+      "word": "search",
+      "start": 35.12,
+      "end": 35.26
+    },
+    {
+      "word": "result",
+      "start": 35.26,
+      "end": 35.7
+    },
+    {
+      "word": "does",
+      "start": 35.7,
+      "end": 35.94
+    },
+    {
+      "word": "not",
+      "start": 35.94,
+      "end": 36.24
+    },
+    {
+      "word": "automatically",
+      "start": 36.24,
+      "end": 36.74
+    },
+    {
+      "word": "give",
+      "start": 36.74,
+      "end": 37.16
+    },
+    {
+      "word": "you",
+      "start": 37.16,
+      "end": 37.28
+    },
+    {
+      "word": "permission",
+      "start": 37.28,
+      "end": 37.5
+    },
+    {
+      "word": "to",
+      "start": 37.5,
+      "end": 37.92
+    },
+    {
+      "word": "reuse",
+      "start": 37.92,
+      "end": 38.16
+    },
+    {
+      "word": "it.",
+      "start": 38.16,
+      "end": 38.5
+    },
+    {
+      "word": "Use",
+      "start": 39.02,
+      "end": 39.32
+    },
+    {
+      "word": "original",
+      "start": 39.32,
+      "end": 39.58
+    },
+    {
+      "word": "or",
+      "start": 39.58,
+      "end": 40.14
+    },
+    {
+      "word": "appropriately",
+      "start": 40.14,
+      "end": 40.56
+    },
+    {
+      "word": "licensed",
+      "start": 40.56,
+      "end": 41.18
+    },
+    {
+      "word": "material",
+      "start": 41.18,
+      "end": 41.7
+    },
+    {
+      "word": "for",
+      "start": 41.7,
+      "end": 42.12
+    },
+    {
+      "word": "the",
+      "start": 42.12,
+      "end": 42.28
+    },
+    {
+      "word": "practice",
+      "start": 42.28,
+      "end": 42.58
+    },
+    {
+      "word": "pack.",
+      "start": 42.58,
+      "end": 42.86
+    }
+  ]
+}

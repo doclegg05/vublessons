@@ -1,0 +1,846 @@
+{
+  "pre": [
+    {
+      "id": "pre-01",
+      "pair": 1,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.1",
+      "question": "A webpage is difficult to read, but other apps look fine. Which adjustment best fits?",
+      "options": [
+        "Increase browser zoom",
+        "Change the default printer",
+        "Rename the Downloads folder"
+      ],
+      "answer": 0,
+      "why": "Browser zoom changes webpage size. Choose the control that matches the problem."
+    },
+    {
+      "id": "pre-02",
+      "pair": 2,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.2",
+      "question": "A partner needs your availability, but not appointment details. Which calendar share fits?",
+      "options": [
+        "All private event notes",
+        "Your account password",
+        "Free/busy availability"
+      ],
+      "answer": 2,
+      "why": "Free/busy can support scheduling without disclosing event details. Verify the service\u2019s options."
+    },
+    {
+      "id": "pre-03",
+      "pair": 3,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.3",
+      "question": "Autocorrect changes a person\u2019s name in your message. What should you do?",
+      "options": [
+        "Disable every security setting",
+        "Review and correct the name before sending",
+        "Assume the suggestion is always correct"
+      ],
+      "answer": 1,
+      "why": "Automation can save time but needs review, especially for names, addresses and meaning."
+    },
+    {
+      "id": "pre-04",
+      "pair": 4,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.5",
+      "question": "Before printing 20 copies, what is the most useful check?",
+      "options": [
+        "Confirm the printer and preview one test page",
+        "Select every available printer",
+        "Change the computer\u2019s wallpaper"
+      ],
+      "answer": 0,
+      "why": "Verify the destination and output before sending a large print job."
+    },
+    {
+      "id": "pre-05",
+      "pair": 5,
+      "domain": "Digital Citizenship",
+      "week": 4,
+      "objective": "2.1",
+      "question": "You manage personal and volunteer accounts. What is a sensible practice?",
+      "options": [
+        "Reuse one password everywhere",
+        "Post every message from whichever account opens",
+        "Check the active account and use separate credentials"
+      ],
+      "answer": 2,
+      "why": "Check the identity and audience. Keep credentials distinct and use appropriate account protections."
+    },
+    {
+      "id": "pre-06",
+      "pair": 6,
+      "domain": "Digital Citizenship",
+      "week": 4,
+      "objective": "2.2",
+      "question": "A nonurgent work message is ready late at night. What should guide when you send it?",
+      "options": [
+        "The size of your monitor",
+        "Recipient expectations, urgency and working hours",
+        "How many emojis are in it"
+      ],
+      "answer": 1,
+      "why": "Timing and a clear response expectation help the recipient respond appropriately."
+    },
+    {
+      "id": "pre-07",
+      "pair": 7,
+      "domain": "Digital Citizenship",
+      "week": 4,
+      "objective": "2.2",
+      "question": "Which wording best respects different levels of experience?",
+      "options": [
+        "Here are the steps; tell me where more detail would help.",
+        "Everyone your age struggles with this.",
+        "This is obvious, so do not ask questions."
+      ],
+      "answer": 0,
+      "why": "Inclusive communication explains context and avoids assumptions about age, culture or ability."
+    },
+    {
+      "id": "pre-08",
+      "pair": 8,
+      "domain": "Digital Citizenship",
+      "week": 1,
+      "objective": "2.3",
+      "question": "An app feature has changed. What is a useful learning response?",
+      "options": [
+        "Assume all old instructions still apply",
+        "Give up without identifying the task",
+        "Check official help for your version and try the steps"
+      ],
+      "answer": 2,
+      "why": "Version-specific help and a precise question support independent learning."
+    },
+    {
+      "id": "pre-09",
+      "pair": 9,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.1",
+      "question": "You need a nearby library computer class. Which search is most useful?",
+      "options": [
+        "Every website",
+        "Library computer class plus your town",
+        "Interesting things"
+      ],
+      "answer": 1,
+      "why": "Search terms should identify the service and location needed for the task."
+    },
+    {
+      "id": "pre-10",
+      "pair": 10,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.2",
+      "question": "A post claims a community service is available everywhere. How should you check it?",
+      "options": [
+        "Verify with the responsible organization",
+        "Trust it because it is first in search",
+        "Count how many colors the page uses"
+      ],
+      "answer": 0,
+      "why": "Responsible sources and corroborating evidence matter more than ranking or appearance."
+    },
+    {
+      "id": "pre-11",
+      "pair": 11,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.2",
+      "question": "An accurate page describes a service in another state. Why might it be unsuitable?",
+      "options": [
+        "Accurate pages are never useful",
+        "Every government page applies everywhere",
+        "It may not be relevant to your local need"
+      ],
+      "answer": 2,
+      "why": "Accuracy, currency and relevance are separate questions."
+    },
+    {
+      "id": "pre-12",
+      "pair": 12,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.3",
+      "question": "Before submitting an online form, what should you check?",
+      "options": [
+        "Whether you can enter extra private details",
+        "Who collects the data, required fields and the confirmation",
+        "Only its background color"
+      ],
+      "answer": 1,
+      "why": "Understand the collection purpose, provide only needed information, and check the result."
+    },
+    {
+      "id": "pre-13",
+      "pair": 13,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.1",
+      "question": "Which feature creates a document structure useful to readers and assistive technology?",
+      "options": [
+        "Heading styles",
+        "Random blank lines",
+        "Making every line bold"
+      ],
+      "answer": 0,
+      "why": "Real heading styles provide structure; visual bolding alone does not."
+    },
+    {
+      "id": "pre-14",
+      "pair": 14,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.1",
+      "question": "B2, B3 and B4 contain costs. Which formula totals all three?",
+      "options": [
+        "=B2+B4",
+        "=SUM(A1:A2)",
+        "=SUM(B2:B4)"
+      ],
+      "answer": 2,
+      "why": "A colon marks an inclusive cell range. Verify the formula by changing one input."
+    },
+    {
+      "id": "pre-15",
+      "pair": 15,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.3",
+      "question": "You find an image online for a handout. What should you do before reusing it?",
+      "options": [
+        "Remove the creator\u2019s name",
+        "Check permission or license and provide required credit",
+        "Assume search results are free to reuse"
+      ],
+      "answer": 1,
+      "why": "Find the actual reuse permission and follow its conditions."
+    },
+    {
+      "id": "pre-16",
+      "pair": 16,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.4",
+      "question": "A partner needs to revise your paragraphs. Which format best fits?",
+      "options": [
+        "An editable document with appropriate access",
+        "Only a photograph of the page",
+        "An audio recording with no text"
+      ],
+      "answer": 0,
+      "why": "Choose the format and access that support the recipient\u2019s task. PDF is often useful for finished layout."
+    },
+    {
+      "id": "pre-17",
+      "pair": 17,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.1",
+      "question": "Which email subject best supports a clear request?",
+      "options": [
+        "Hi",
+        "Important stuff",
+        "Question about computer-help session location"
+      ],
+      "answer": 2,
+      "why": "A specific subject tells the recipient what the message concerns."
+    },
+    {
+      "id": "pre-18",
+      "pair": 18,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.1",
+      "question": "What does Bcc do in an email?",
+      "options": [
+        "Verifies every recipient\u2019s identity",
+        "Hides Bcc recipient addresses from other recipients",
+        "Encrypts all message content"
+      ],
+      "answer": 1,
+      "why": "Bcc hides recipient addresses; it does not encrypt content or prevent forwarding."
+    },
+    {
+      "id": "pre-19",
+      "pair": 19,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.2",
+      "question": "Before starting a free app trial, what should you inspect?",
+      "options": [
+        "Renewal price, timing and cancellation terms",
+        "Only the download button",
+        "Only how many icons appear"
+      ],
+      "answer": 0,
+      "why": "Free trials can become recurring subscriptions. Review the terms and total cost."
+    },
+    {
+      "id": "pre-20",
+      "pair": 20,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.2",
+      "question": "A free game offers an in-app upgrade. What should you remember?",
+      "options": [
+        "Everything inside a free app is always free",
+        "Payment screens never need review",
+        "The upgrade may charge money even though the app was free"
+      ],
+      "answer": 2,
+      "why": "In-app purchases are separate transactions; check terms, controls and receipts."
+    },
+    {
+      "id": "pre-21",
+      "pair": 21,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.1",
+      "question": "Two people edit a shared document together at the same time. What is this?",
+      "options": [
+        "Offline archiving",
+        "Synchronous collaboration",
+        "A private backup"
+      ],
+      "answer": 1,
+      "why": "Synchronous collaboration happens at the same time; asynchronous work happens at different times."
+    },
+    {
+      "id": "pre-22",
+      "pair": 22,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.1",
+      "question": "A reviewer should suggest wording but not directly rewrite the file. Which access fits when supported?",
+      "options": [
+        "Commenter",
+        "Public editor for everyone",
+        "No access at all"
+      ],
+      "answer": 0,
+      "why": "Commenter access fits feedback without granting direct editing rights."
+    },
+    {
+      "id": "pre-23",
+      "pair": 23,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.1",
+      "question": "Which feedback is most useful?",
+      "options": [
+        "Bad work.",
+        "Change everything somehow.",
+        "Add a contact number after the steps so readers can find help."
+      ],
+      "answer": 2,
+      "why": "Useful feedback names a specific change and explains the benefit."
+    },
+    {
+      "id": "pre-24",
+      "pair": 24,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.2",
+      "question": "Before recording a class video meeting, what should you do?",
+      "options": [
+        "Assume joining is always recording consent",
+        "Ask permission and follow the group\u2019s rules",
+        "Record secretly"
+      ],
+      "answer": 1,
+      "why": "Meeting etiquette includes checking recording permissions and respecting participants."
+    },
+    {
+      "id": "pre-25",
+      "pair": 25,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.1",
+      "question": "What is an example of universal design?",
+      "options": [
+        "Controls usable by keyboard as well as mouse",
+        "Instructions available only through color",
+        "Very small fixed-size text"
+      ],
+      "answer": 0,
+      "why": "Universal design increases usability across needs and situations."
+    },
+    {
+      "id": "pre-26",
+      "pair": 26,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.2",
+      "question": "An online contact uses a false identity to build trust. What is this commonly called?",
+      "options": [
+        "File versioning",
+        "Autocomplete",
+        "Catfishing"
+      ],
+      "answer": 2,
+      "why": "Catfishing uses a false identity to build trust or manipulate someone. Pause and verify independently."
+    },
+    {
+      "id": "pre-27",
+      "pair": 27,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.3",
+      "question": "You find an unknown USB drive in the lab. What should you do?",
+      "options": [
+        "Copy it to every computer",
+        "Give it to authorized staff without plugging it in",
+        "Open it to find the owner"
+      ],
+      "answer": 1,
+      "why": "Untrusted portable media can carry harmful software. Follow approved device procedures."
+    },
+    {
+      "id": "pre-28",
+      "pair": 28,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.3",
+      "question": "What is the purpose of encryption?",
+      "options": [
+        "Make data unreadable without the appropriate key",
+        "Make every website honest",
+        "Reduce all files to half their size"
+      ],
+      "answer": 0,
+      "why": "Encryption protects data readability. It does not replace other account, device or trust checks."
+    }
+  ],
+  "post": [
+    {
+      "id": "post-01",
+      "pair": 1,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.1",
+      "question": "The text on a service website is too small. What should you try first?",
+      "options": [
+        "Buy more online storage",
+        "Change the email signature",
+        "Use the browser\u2019s zoom control"
+      ],
+      "answer": 2,
+      "why": "Browser zoom changes webpage size. Choose the control that matches the problem."
+    },
+    {
+      "id": "post-02",
+      "pair": 2,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.2",
+      "question": "A volunteer scheduler only needs to know when you are unavailable. What should you share?",
+      "options": [
+        "Your recovery codes",
+        "Free/busy information",
+        "Every event description"
+      ],
+      "answer": 1,
+      "why": "Free/busy can support scheduling without disclosing event details. Verify the service\u2019s options."
+    },
+    {
+      "id": "post-03",
+      "pair": 3,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.3",
+      "question": "Autocomplete suggests the wrong email address. What is the best response?",
+      "options": [
+        "Check and choose the intended address",
+        "Send it because the app suggested it",
+        "Share your password with both people"
+      ],
+      "answer": 0,
+      "why": "Automation can save time but needs review, especially for names, addresses and meaning."
+    },
+    {
+      "id": "post-04",
+      "pair": 4,
+      "domain": "Technology Basics",
+      "week": 1,
+      "objective": "1.5",
+      "question": "A handout is going to a shared lab printer. What should you verify first?",
+      "options": [
+        "The number of browser bookmarks",
+        "Whether the email inbox is empty",
+        "Printer destination, preview and a test page"
+      ],
+      "answer": 2,
+      "why": "Verify the destination and output before sending a large print job."
+    },
+    {
+      "id": "post-05",
+      "pair": 5,
+      "domain": "Digital Citizenship",
+      "week": 4,
+      "objective": "2.1",
+      "question": "Before posting in a professional group, what should you check?",
+      "options": [
+        "Whether your personal posts are entertaining",
+        "The active identity, audience and account credentials",
+        "Only the screen brightness"
+      ],
+      "answer": 1,
+      "why": "Check the identity and audience. Keep credentials distinct and use appropriate account protections."
+    },
+    {
+      "id": "post-06",
+      "pair": 6,
+      "domain": "Digital Citizenship",
+      "week": 4,
+      "objective": "2.2",
+      "question": "You need feedback next week. What is a considerate communication choice?",
+      "options": [
+        "State the deadline and respect expected working hours",
+        "Demand an immediate reply at any hour",
+        "Send the same message every five minutes"
+      ],
+      "answer": 0,
+      "why": "Timing and a clear response expectation help the recipient respond appropriately."
+    },
+    {
+      "id": "post-07",
+      "pair": 7,
+      "domain": "Digital Citizenship",
+      "week": 4,
+      "objective": "2.2",
+      "question": "A new teammate does not know an abbreviation. What should you do?",
+      "options": [
+        "Assume their age explains the problem",
+        "Exclude them from the task",
+        "Explain it plainly without making assumptions"
+      ],
+      "answer": 2,
+      "why": "Inclusive communication explains context and avoids assumptions about age, culture or ability."
+    },
+    {
+      "id": "post-08",
+      "pair": 8,
+      "domain": "Digital Citizenship",
+      "week": 1,
+      "objective": "2.3",
+      "question": "You cannot find a command in an updated app. What is the best next step?",
+      "options": [
+        "Share your password in a public forum",
+        "Use current official help and describe the exact task",
+        "Download the first unfamiliar fix offered"
+      ],
+      "answer": 1,
+      "why": "Version-specific help and a precise question support independent learning."
+    },
+    {
+      "id": "post-09",
+      "pair": 9,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.1",
+      "question": "You need local public-library opening hours. Which query best fits?",
+      "options": [
+        "Library name, town and opening hours",
+        "Libraries everywhere",
+        "Good places"
+      ],
+      "answer": 0,
+      "why": "Search terms should identify the service and location needed for the task."
+    },
+    {
+      "id": "post-10",
+      "pair": 10,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.2",
+      "question": "A directory promises a local service without naming a source. What is the best check?",
+      "options": [
+        "Assume a polished design proves the claim",
+        "Share the claim before checking",
+        "Confirm availability through the provider\u2019s official contact"
+      ],
+      "answer": 2,
+      "why": "Responsible sources and corroborating evidence matter more than ranking or appearance."
+    },
+    {
+      "id": "post-11",
+      "pair": 11,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.2",
+      "question": "A reliable article explains an old program that no longer operates locally. What is the problem?",
+      "options": [
+        "A readable font guarantees relevance",
+        "It may be outdated or irrelevant to this task",
+        "Its accuracy proves current availability"
+      ],
+      "answer": 1,
+      "why": "Accuracy, currency and relevance are separate questions."
+    },
+    {
+      "id": "post-12",
+      "pair": 12,
+      "domain": "Information Management",
+      "week": 2,
+      "objective": "3.3",
+      "question": "A service-request form asks for information unrelated to the request. What should you do?",
+      "options": [
+        "Check the purpose and collector before providing it",
+        "Fill every field with real private information",
+        "Assume all forms have the same rules"
+      ],
+      "answer": 0,
+      "why": "Understand the collection purpose, provide only needed information, and check the result."
+    },
+    {
+      "id": "post-13",
+      "pair": 13,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.1",
+      "question": "How should you mark a document\u2019s main sections?",
+      "options": [
+        "Add only larger spaces",
+        "Turn the entire document into an image",
+        "Apply appropriate heading styles"
+      ],
+      "answer": 2,
+      "why": "Real heading styles provide structure; visual bolding alone does not."
+    },
+    {
+      "id": "post-14",
+      "pair": 14,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.1",
+      "question": "C2, C3 and C4 contain quantities. Which formula totals that range?",
+      "options": [
+        "=SUM(B1:B2)",
+        "=SUM(C2:C4)",
+        "=C2+C4"
+      ],
+      "answer": 1,
+      "why": "A colon marks an inclusive cell range. Verify the formula by changing one input."
+    },
+    {
+      "id": "post-15",
+      "pair": 15,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.3",
+      "question": "You want to adapt someone else\u2019s diagram. What is the right first step?",
+      "options": [
+        "Check allowed uses and attribution conditions",
+        "Use it without credit if it is small",
+        "Assume a screenshot avoids all restrictions"
+      ],
+      "answer": 0,
+      "why": "Find the actual reuse permission and follow its conditions."
+    },
+    {
+      "id": "post-16",
+      "pair": 16,
+      "domain": "Content Creation",
+      "week": 3,
+      "objective": "4.4",
+      "question": "A coauthor must change wording in your handout. What should you provide?",
+      "options": [
+        "Only a locked screenshot",
+        "A filename without the file",
+        "The editable file with suitable permissions"
+      ],
+      "answer": 2,
+      "why": "Choose the format and access that support the recipient\u2019s task. PDF is often useful for finished layout."
+    },
+    {
+      "id": "post-17",
+      "pair": 17,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.1",
+      "question": "Which subject best helps a recipient act on a schedule question?",
+      "options": [
+        "Read this now!!!",
+        "Please confirm the resource workshop start time",
+        "Message"
+      ],
+      "answer": 1,
+      "why": "A specific subject tells the recipient what the message concerns."
+    },
+    {
+      "id": "post-18",
+      "pair": 18,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.1",
+      "question": "You use Bcc for an announcement. What protection does it provide?",
+      "options": [
+        "Conceals that recipient list from other recipients",
+        "Guarantees the message cannot be forwarded",
+        "Makes an attachment malware-free"
+      ],
+      "answer": 0,
+      "why": "Bcc hides recipient addresses; it does not encrypt content or prevent forwarding."
+    },
+    {
+      "id": "post-19",
+      "pair": 19,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.2",
+      "question": "A streaming offer starts at no charge. What should you check before accepting?",
+      "options": [
+        "Whether its logo is familiar",
+        "Whether it plays an animation",
+        "Whether it renews, the price and how to cancel"
+      ],
+      "answer": 2,
+      "why": "Free trials can become recurring subscriptions. Review the terms and total cost."
+    },
+    {
+      "id": "post-20",
+      "pair": 20,
+      "domain": "Communication",
+      "week": 4,
+      "objective": "5.2",
+      "question": "A downloaded app offers extra features for purchase. What is a sensible step?",
+      "options": [
+        "Share a payment password with the group",
+        "Review the charge and purchase controls before authorizing",
+        "Approve automatically because downloading was free"
+      ],
+      "answer": 1,
+      "why": "In-app purchases are separate transactions; check terms, controls and receipts."
+    },
+    {
+      "id": "post-21",
+      "pair": 21,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.1",
+      "question": "A team coauthors a file during a live call. Which description fits?",
+      "options": [
+        "Synchronous collaboration",
+        "Asynchronous-only feedback",
+        "File compression"
+      ],
+      "answer": 0,
+      "why": "Synchronous collaboration happens at the same time; asynchronous work happens at different times."
+    },
+    {
+      "id": "post-22",
+      "pair": 22,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.1",
+      "question": "A partner only needs to leave feedback on your draft. Which permission is appropriate when available?",
+      "options": [
+        "Unrestricted editing by anyone with the link",
+        "Your account password",
+        "Commenter access"
+      ],
+      "answer": 2,
+      "why": "Commenter access fits feedback without granting direct editing rights."
+    },
+    {
+      "id": "post-23",
+      "pair": 23,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.1",
+      "question": "Which comment best helps improve a shared handout?",
+      "options": [
+        "You never do this right.",
+        "Define this abbreviation so a new reader can follow the instructions.",
+        "I do not like it."
+      ],
+      "answer": 1,
+      "why": "Useful feedback names a specific change and explains the benefit."
+    },
+    {
+      "id": "post-24",
+      "pair": 24,
+      "domain": "Collaboration",
+      "week": 4,
+      "objective": "6.2",
+      "question": "You want to save a webinar discussion that includes participants. What should guide your decision?",
+      "options": [
+        "Organizer rules and appropriate recording permission",
+        "Whether the record button is easy to find",
+        "Only how much storage you have"
+      ],
+      "answer": 0,
+      "why": "Meeting etiquette includes checking recording permissions and respecting participants."
+    },
+    {
+      "id": "post-25",
+      "pair": 25,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.1",
+      "question": "Which feature helps people use technology in different situations?",
+      "options": [
+        "A mouse-only form",
+        "Audio-only directions without text",
+        "Captions and flexible input methods"
+      ],
+      "answer": 2,
+      "why": "Universal design increases usability across needs and situations."
+    },
+    {
+      "id": "post-26",
+      "pair": 26,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.2",
+      "question": "Someone invents a personal profile to manipulate a relationship. Which term fits?",
+      "options": [
+        "Compression",
+        "Catfishing",
+        "Cloud syncing"
+      ],
+      "answer": 1,
+      "why": "Catfishing uses a false identity to build trust or manipulate someone. Pause and verify independently."
+    },
+    {
+      "id": "post-27",
+      "pair": 27,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.3",
+      "question": "A stranger offers a USB drive with a useful app. What is the safest class response?",
+      "options": [
+        "Do not connect it; consult authorized support",
+        "Run it immediately",
+        "Disable protections to open it"
+      ],
+      "answer": 0,
+      "why": "Untrusted portable media can carry harmful software. Follow approved device procedures."
+    },
+    {
+      "id": "post-28",
+      "pair": 28,
+      "domain": "Safety and Security",
+      "week": 5,
+      "objective": "7.3",
+      "question": "An encrypted device is lost while powered off. What does encryption help protect?",
+      "options": [
+        "The truth of all messages ever received",
+        "The ability to cancel every subscription",
+        "The readability of stored data without its key"
+      ],
+      "answer": 2,
+      "why": "Encryption protects data readability. It does not replace other account, device or trust checks."
+    }
+  ]
+}

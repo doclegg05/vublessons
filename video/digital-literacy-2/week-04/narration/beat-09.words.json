@@ -1,0 +1,538 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "07d9e6728ef8b08b269e6dd81e36a89ad0b23b4e005673eb999685eab9caea5b",
+  "textSha256": "12e3d48e46998dab5c2fea9e24a13ec931f2ccef0c030e1354daab70000a3788",
+  "matchRatio": 0.9622641509433962,
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.08
+    },
+    {
+      "word": "fictional",
+      "start": 0.08,
+      "end": 0.38
+    },
+    {
+      "word": "offer",
+      "start": 0.38,
+      "end": 0.8
+    },
+    {
+      "word": "says",
+      "start": 0.8,
+      "end": 1.18
+    },
+    {
+      "word": "free",
+      "start": 1.58,
+      "end": 1.66
+    },
+    {
+      "word": "trial",
+      "start": 1.66,
+      "end": 1.94
+    },
+    {
+      "word": "today,",
+      "start": 1.94,
+      "end": 2.28
+    },
+    {
+      "word": "then",
+      "start": 2.76,
+      "end": 2.94
+    },
+    {
+      "word": "twelve",
+      "start": 2.94,
+      "end": 3.12
+    },
+    {
+      "word": "dollars",
+      "start": 3.12,
+      "end": 3.3
+    },
+    {
+      "word": "each",
+      "start": 3.3,
+      "end": 3.72
+    },
+    {
+      "word": "month.",
+      "start": 3.72,
+      "end": 4.04
+    },
+    {
+      "word": "Before",
+      "start": 4.76,
+      "end": 4.92
+    },
+    {
+      "word": "accepting,",
+      "start": 4.92,
+      "end": 5.36
+    },
+    {
+      "word": "identify",
+      "start": 5.68,
+      "end": 5.88
+    },
+    {
+      "word": "what",
+      "start": 5.88,
+      "end": 6.48
+    },
+    {
+      "word": "is",
+      "start": 6.48,
+      "end": 6.7
+    },
+    {
+      "word": "being",
+      "start": 6.7,
+      "end": 6.88
+    },
+    {
+      "word": "purchased:",
+      "start": 6.88,
+      "end": 7.3
+    },
+    {
+      "word": "a",
+      "start": 7.92,
+      "end": 7.98
+    },
+    {
+      "word": "physical",
+      "start": 7.98,
+      "end": 8.28
+    },
+    {
+      "word": "good,",
+      "start": 8.28,
+      "end": 8.66
+    },
+    {
+      "word": "a",
+      "start": 8.96,
+      "end": 9.08
+    },
+    {
+      "word": "one-time",
+      "start": 9.08,
+      "end": 9.5
+    },
+    {
+      "word": "service,",
+      "start": 9.5,
+      "end": 9.88
+    },
+    {
+      "word": "or",
+      "start": 10.14,
+      "end": 10.22
+    },
+    {
+      "word": "a",
+      "start": 10.22,
+      "end": 10.3
+    },
+    {
+      "word": "continuing",
+      "start": 10.3,
+      "end": 10.72
+    },
+    {
+      "word": "subscription.",
+      "start": 10.72,
+      "end": 11.12
+    },
+    {
+      "word": "Check",
+      "start": 12.3,
+      "end": 12.56
+    },
+    {
+      "word": "the",
+      "start": 12.56,
+      "end": 12.76
+    },
+    {
+      "word": "amount",
+      "start": 12.76,
+      "end": 13.02
+    },
+    {
+      "word": "due",
+      "start": 13.02,
+      "end": 13.26
+    },
+    {
+      "word": "now,",
+      "start": 13.26,
+      "end": 13.64
+    },
+    {
+      "word": "future",
+      "start": 14.06,
+      "end": 14.24
+    },
+    {
+      "word": "charges,",
+      "start": 14.24,
+      "end": 14.78
+    },
+    {
+      "word": "renewal",
+      "start": 15.28,
+      "end": 15.46
+    },
+    {
+      "word": "timing,",
+      "start": 15.46,
+      "end": 15.92
+    },
+    {
+      "word": "cancellation",
+      "start": 16.62,
+      "end": 16.86
+    },
+    {
+      "word": "conditions,",
+      "start": 16.86,
+      "end": 17.48
+    },
+    {
+      "word": "and",
+      "start": 18.18,
+      "end": 18.3
+    },
+    {
+      "word": "the",
+      "start": 18.3,
+      "end": 18.4
+    },
+    {
+      "word": "seller's",
+      "start": 18.4,
+      "end": 18.84
+    },
+    {
+      "word": "identity.",
+      "start": 18.84,
+      "end": 19.08
+    },
+    {
+      "word": "A",
+      "start": 20.94,
+      "end": 21.54
+    },
+    {
+      "word": "small",
+      "start": 21.54,
+      "end": 21.84
+    },
+    {
+      "word": "in-app",
+      "start": 21.84,
+      "end": 22.24
+    },
+    {
+      "word": "purchase",
+      "start": 22.24,
+      "end": 22.56
+    },
+    {
+      "word": "can",
+      "start": 22.56,
+      "end": 22.82
+    },
+    {
+      "word": "still",
+      "start": 22.82,
+      "end": 23.12
+    },
+    {
+      "word": "cost",
+      "start": 23.12,
+      "end": 23.5
+    },
+    {
+      "word": "real",
+      "start": 23.5,
+      "end": 23.76
+    },
+    {
+      "word": "money,",
+      "start": 23.76,
+      "end": 24.08
+    },
+    {
+      "word": "and",
+      "start": 24.3,
+      "end": 24.46
+    },
+    {
+      "word": "several",
+      "start": 24.46,
+      "end": 24.7
+    },
+    {
+      "word": "small",
+      "start": 24.7,
+      "end": 25.1
+    },
+    {
+      "word": "purchases",
+      "start": 25.1,
+      "end": 25.58
+    },
+    {
+      "word": "can",
+      "start": 25.58,
+      "end": 25.94
+    },
+    {
+      "word": "add",
+      "start": 25.94,
+      "end": 26.08
+    },
+    {
+      "word": "up.",
+      "start": 26.3,
+      "end": 26.36
+    },
+    {
+      "word": "A",
+      "start": 26.98,
+      "end": 27.06
+    },
+    {
+      "word": "familiar",
+      "start": 27.06,
+      "end": 27.32
+    },
+    {
+      "word": "logo",
+      "start": 27.32,
+      "end": 27.72
+    },
+    {
+      "word": "or",
+      "start": 27.72,
+      "end": 28.08
+    },
+    {
+      "word": "a",
+      "start": 28.08,
+      "end": 28.18
+    },
+    {
+      "word": "professional",
+      "start": 28.18,
+      "end": 28.5
+    },
+    {
+      "word": "page",
+      "start": 28.5,
+      "end": 28.9
+    },
+    {
+      "word": "is",
+      "start": 28.9,
+      "end": 29.14
+    },
+    {
+      "word": "not",
+      "start": 29.14,
+      "end": 29.44
+    },
+    {
+      "word": "proof",
+      "start": 29.44,
+      "end": 29.82
+    },
+    {
+      "word": "that",
+      "start": 29.82,
+      "end": 30.1
+    },
+    {
+      "word": "every",
+      "start": 30.1,
+      "end": 30.34
+    },
+    {
+      "word": "offer",
+      "start": 30.34,
+      "end": 30.66
+    },
+    {
+      "word": "is",
+      "start": 30.66,
+      "end": 30.96
+    },
+    {
+      "word": "suitable.",
+      "start": 30.96,
+      "end": 31.28
+    },
+    {
+      "word": "Our",
+      "start": 32.12,
+      "end": 32.2
+    },
+    {
+      "word": "practice",
+      "start": 32.2,
+      "end": 32.56
+    },
+    {
+      "word": "ends",
+      "start": 32.56,
+      "end": 32.86
+    },
+    {
+      "word": "with",
+      "start": 32.86,
+      "end": 33.06
+    },
+    {
+      "word": "explaining",
+      "start": 33.06,
+      "end": 33.44
+    },
+    {
+      "word": "the",
+      "start": 33.44,
+      "end": 33.74
+    },
+    {
+      "word": "decision;",
+      "start": 33.74,
+      "end": 33.98
+    },
+    {
+      "word": "no",
+      "start": 34.66,
+      "end": 34.76
+    },
+    {
+      "word": "purchase",
+      "start": 34.76,
+      "end": 35.06
+    },
+    {
+      "word": "or",
+      "start": 35.06,
+      "end": 35.42
+    },
+    {
+      "word": "payment",
+      "start": 35.42,
+      "end": 35.66
+    },
+    {
+      "word": "details",
+      "start": 35.66,
+      "end": 36.16
+    },
+    {
+      "word": "are",
+      "start": 36.16,
+      "end": 36.48
+    },
+    {
+      "word": "required.",
+      "start": 36.48,
+      "end": 36.82
+    },
+    {
+      "word": "Pause",
+      "start": 37.88,
+      "end": 38.22
+    },
+    {
+      "word": "and",
+      "start": 38.22,
+      "end": 38.48
+    },
+    {
+      "word": "name",
+      "start": 38.48,
+      "end": 38.66
+    },
+    {
+      "word": "the",
+      "start": 38.66,
+      "end": 38.86
+    },
+    {
+      "word": "fact",
+      "start": 38.86,
+      "end": 39.06
+    },
+    {
+      "word": "you",
+      "start": 39.06,
+      "end": 39.48
+    },
+    {
+      "word": "would",
+      "start": 39.48,
+      "end": 39.62
+    },
+    {
+      "word": "need",
+      "start": 39.62,
+      "end": 39.8
+    },
+    {
+      "word": "if",
+      "start": 39.8,
+      "end": 40.06
+    },
+    {
+      "word": "the",
+      "start": 40.06,
+      "end": 40.24
+    },
+    {
+      "word": "future",
+      "start": 40.24,
+      "end": 40.46
+    },
+    {
+      "word": "price",
+      "start": 40.46,
+      "end": 40.82
+    },
+    {
+      "word": "or",
+      "start": 40.82,
+      "end": 41.12
+    },
+    {
+      "word": "cancellation",
+      "start": 41.12,
+      "end": 41.4
+    },
+    {
+      "word": "method",
+      "start": 41.4,
+      "end": 42.1
+    },
+    {
+      "word": "were",
+      "start": 42.1,
+      "end": 42.44
+    },
+    {
+      "word": "missing.",
+      "start": 42.44,
+      "end": 42.6
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "baf42afa25c02dc4ea56d3bb24d7b3bc49b2c034d707c0b69fe9deaa567bd014",
+  "textSha256": "2a8ce76e0afdaa5d8837f0f4c7e2e8030d74bcdab66f9e4963a9f253c54da914",
+  "matchRatio": 0.990990990990991,
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "USB",
+      "start": 0.12,
+      "end": 0.48
+    },
+    {
+      "word": "drive",
+      "start": 0.48,
+      "end": 0.84
+    },
+    {
+      "word": "found",
+      "start": 0.84,
+      "end": 1.28
+    },
+    {
+      "word": "in",
+      "start": 1.28,
+      "end": 1.5
+    },
+    {
+      "word": "a",
+      "start": 1.5,
+      "end": 1.56
+    },
+    {
+      "word": "parking",
+      "start": 1.56,
+      "end": 1.78
+    },
+    {
+      "word": "lot",
+      "start": 1.78,
+      "end": 2.08
+    },
+    {
+      "word": "might",
+      "start": 2.08,
+      "end": 2.46
+    },
+    {
+      "word": "look",
+      "start": 2.46,
+      "end": 2.8
+    },
+    {
+      "word": "like",
+      "start": 2.8,
+      "end": 2.98
+    },
+    {
+      "word": "an",
+      "start": 2.98,
+      "end": 3.12
+    },
+    {
+      "word": "ordinary",
+      "start": 3.12,
+      "end": 3.58
+    },
+    {
+      "word": "storage",
+      "start": 3.58,
+      "end": 3.86
+    },
+    {
+      "word": "device.",
+      "start": 3.86,
+      "end": 4.4
+    },
+    {
+      "word": "You",
+      "start": 4.88,
+      "end": 4.98
+    },
+    {
+      "word": "cannot",
+      "start": 4.98,
+      "end": 5.2
+    },
+    {
+      "word": "determine",
+      "start": 5.2,
+      "end": 5.66
+    },
+    {
+      "word": "that",
+      "start": 5.66,
+      "end": 5.96
+    },
+    {
+      "word": "it",
+      "start": 5.96,
+      "end": 6.06
+    },
+    {
+      "word": "is",
+      "start": 6.06,
+      "end": 6.16
+    },
+    {
+      "word": "safe",
+      "start": 6.16,
+      "end": 6.4
+    },
+    {
+      "word": "by",
+      "start": 6.4,
+      "end": 6.66
+    },
+    {
+      "word": "its",
+      "start": 6.66,
+      "end": 6.8
+    },
+    {
+      "word": "appearance",
+      "start": 6.8,
+      "end": 7.1
+    },
+    {
+      "word": "or",
+      "start": 7.66,
+      "end": 7.96
+    },
+    {
+      "word": "by",
+      "start": 7.96,
+      "end": 8.16
+    },
+    {
+      "word": "the",
+      "start": 8.16,
+      "end": 8.32
+    },
+    {
+      "word": "label",
+      "start": 8.32,
+      "end": 8.58
+    },
+    {
+      "word": "written",
+      "start": 8.58,
+      "end": 8.84
+    },
+    {
+      "word": "on",
+      "start": 8.84,
+      "end": 9.08
+    },
+    {
+      "word": "it.",
+      "start": 9.08,
+      "end": 9.24
+    },
+    {
+      "word": "Do",
+      "start": 9.68,
+      "end": 9.86
+    },
+    {
+      "word": "not",
+      "start": 9.86,
+      "end": 10.16
+    },
+    {
+      "word": "plug",
+      "start": 10.16,
+      "end": 10.46
+    },
+    {
+      "word": "it",
+      "start": 10.46,
+      "end": 10.6
+    },
+    {
+      "word": "into",
+      "start": 10.6,
+      "end": 10.8
+    },
+    {
+      "word": "your",
+      "start": 10.8,
+      "end": 10.92
+    },
+    {
+      "word": "computer",
+      "start": 10.92,
+      "end": 11.24
+    },
+    {
+      "word": "to",
+      "start": 11.24,
+      "end": 11.62
+    },
+    {
+      "word": "discover",
+      "start": 11.62,
+      "end": 11.86
+    },
+    {
+      "word": "its",
+      "start": 11.86,
+      "end": 12.22
+    },
+    {
+      "word": "owner.",
+      "start": 12.22,
+      "end": 12.46
+    },
+    {
+      "word": "Give",
+      "start": 13.18,
+      "end": 13.24
+    },
+    {
+      "word": "it",
+      "start": 13.24,
+      "end": 13.38
+    },
+    {
+      "word": "to",
+      "start": 13.38,
+      "end": 13.52
+    },
+    {
+      "word": "authorized",
+      "start": 13.52,
+      "end": 13.74
+    },
+    {
+      "word": "staff",
+      "start": 13.74,
+      "end": 14.24
+    },
+    {
+      "word": "and",
+      "start": 14.24,
+      "end": 14.56
+    },
+    {
+      "word": "follow",
+      "start": 14.56,
+      "end": 14.88
+    },
+    {
+      "word": "the",
+      "start": 14.88,
+      "end": 15.16
+    },
+    {
+      "word": "organization's",
+      "start": 15.16,
+      "end": 15.96
+    },
+    {
+      "word": "procedure.",
+      "start": 15.96,
+      "end": 16.24
+    },
+    {
+      "word": "The",
+      "start": 18.28,
+      "end": 18.58
+    },
+    {
+      "word": "same",
+      "start": 18.58,
+      "end": 18.82
+    },
+    {
+      "word": "general",
+      "start": 18.82,
+      "end": 19.14
+    },
+    {
+      "word": "habit",
+      "start": 19.14,
+      "end": 19.5
+    },
+    {
+      "word": "applies",
+      "start": 19.5,
+      "end": 19.9
+    },
+    {
+      "word": "to",
+      "start": 19.9,
+      "end": 20.16
+    },
+    {
+      "word": "unfamiliar",
+      "start": 20.16,
+      "end": 20.64
+    },
+    {
+      "word": "attachments",
+      "start": 20.64,
+      "end": 21.12
+    },
+    {
+      "word": "or",
+      "start": 21.12,
+      "end": 21.64
+    },
+    {
+      "word": "unexpected",
+      "start": 21.64,
+      "end": 22.0
+    },
+    {
+      "word": "software",
+      "start": 22.0,
+      "end": 22.8
+    },
+    {
+      "word": "prompts:",
+      "start": 22.8,
+      "end": 23.14
+    },
+    {
+      "word": "stop",
+      "start": 23.9,
+      "end": 24.1
+    },
+    {
+      "word": "and",
+      "start": 24.1,
+      "end": 24.38
+    },
+    {
+      "word": "verify",
+      "start": 24.38,
+      "end": 24.62
+    },
+    {
+      "word": "the",
+      "start": 24.62,
+      "end": 24.94
+    },
+    {
+      "word": "purpose",
+      "start": 24.94,
+      "end": 25.24
+    },
+    {
+      "word": "before",
+      "start": 25.24,
+      "end": 25.6
+    },
+    {
+      "word": "opening",
+      "start": 25.6,
+      "end": 26.2
+    },
+    {
+      "word": "or",
+      "start": 26.2,
+      "end": 26.5
+    },
+    {
+      "word": "installing.",
+      "start": 26.5,
+      "end": 26.86
+    },
+    {
+      "word": "This",
+      "start": 26.86,
+      "end": 27.82
+    },
+    {
+      "word": "is",
+      "start": 27.82,
+      "end": 28.0
+    },
+    {
+      "word": "not",
+      "start": 28.0,
+      "end": 28.28
+    },
+    {
+      "word": "about",
+      "start": 28.28,
+      "end": 28.64
+    },
+    {
+      "word": "avoiding",
+      "start": 28.64,
+      "end": 28.98
+    },
+    {
+      "word": "every",
+      "start": 28.98,
+      "end": 29.38
+    },
+    {
+      "word": "useful",
+      "start": 29.38,
+      "end": 29.72
+    },
+    {
+      "word": "tool.",
+      "start": 29.72,
+      "end": 30.14
+    },
+    {
+      "word": "It",
+      "start": 30.74,
+      "end": 30.78
+    },
+    {
+      "word": "is",
+      "start": 30.78,
+      "end": 30.88
+    },
+    {
+      "word": "about",
+      "start": 30.88,
+      "end": 31.02
+    },
+    {
+      "word": "making",
+      "start": 31.02,
+      "end": 31.4
+    },
+    {
+      "word": "the",
+      "start": 31.4,
+      "end": 31.62
+    },
+    {
+      "word": "source",
+      "start": 31.62,
+      "end": 31.9
+    },
+    {
+      "word": "and",
+      "start": 31.9,
+      "end": 32.24
+    },
+    {
+      "word": "task",
+      "start": 32.24,
+      "end": 32.5
+    },
+    {
+      "word": "clear",
+      "start": 32.5,
+      "end": 33.0
+    },
+    {
+      "word": "before",
+      "start": 33.0,
+      "end": 33.64
+    },
+    {
+      "word": "granting",
+      "start": 33.64,
+      "end": 34.1
+    },
+    {
+      "word": "a",
+      "start": 34.1,
+      "end": 34.36
+    },
+    {
+      "word": "device",
+      "start": 34.36,
+      "end": 34.64
+    },
+    {
+      "word": "or",
+      "start": 34.64,
+      "end": 34.94
+    },
+    {
+      "word": "file",
+      "start": 34.94,
+      "end": 35.3
+    },
+    {
+      "word": "a",
+      "start": 35.3,
+      "end": 35.58
+    },
+    {
+      "word": "path",
+      "start": 35.58,
+      "end": 35.88
+    },
+    {
+      "word": "into",
+      "start": 35.88,
+      "end": 36.26
+    },
+    {
+      "word": "your",
+      "start": 36.26,
+      "end": 36.5
+    },
+    {
+      "word": "system.",
+      "start": 36.5,
+      "end": 36.9
+    },
+    {
+      "word": "Use",
+      "start": 37.62,
+      "end": 37.94
+    },
+    {
+      "word": "only",
+      "start": 37.94,
+      "end": 38.38
+    },
+    {
+      "word": "the",
+      "start": 38.38,
+      "end": 38.6
+    },
+    {
+      "word": "instructor-approved",
+      "start": 38.6,
+      "end": 39.36
+    },
+    {
+      "word": "fictional",
+      "start": 39.36,
+      "end": 39.94
+    },
+    {
+      "word": "examples",
+      "start": 39.94,
+      "end": 40.44
+    },
+    {
+      "word": "for",
+      "start": 40.44,
+      "end": 41.02
+    },
+    {
+      "word": "this",
+      "start": 41.02,
+      "end": 41.2
+    },
+    {
+      "word": "exercise.",
+      "start": 41.2,
+      "end": 41.64
+    }
+  ]
+}

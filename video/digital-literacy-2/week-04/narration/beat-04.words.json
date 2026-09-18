@@ -1,0 +1,568 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "8194265e65e6eed51bf6eee4ef8e7c005e5494a393a9333f0491a27d8913b4ed",
+  "textSha256": "81d161e51902682c0333a324933c16d5ebd65c5ec149d36d594d39bfa922b0d0",
+  "matchRatio": 0.9910714285714286,
+  "words": [
+    {
+      "word": "Before",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "sending",
+      "start": 0.3,
+      "end": 0.66
+    },
+    {
+      "word": "a",
+      "start": 0.66,
+      "end": 0.84
+    },
+    {
+      "word": "real",
+      "start": 0.84,
+      "end": 1.08
+    },
+    {
+      "word": "email,",
+      "start": 1.08,
+      "end": 1.54
+    },
+    {
+      "word": "inspect",
+      "start": 1.84,
+      "end": 2.1
+    },
+    {
+      "word": "every",
+      "start": 2.1,
+      "end": 2.62
+    },
+    {
+      "word": "recipient",
+      "start": 2.62,
+      "end": 3.24
+    },
+    {
+      "word": "field.",
+      "start": 3.24,
+      "end": 3.66
+    },
+    {
+      "word": "To",
+      "start": 3.66,
+      "end": 4.44
+    },
+    {
+      "word": "usually",
+      "start": 4.44,
+      "end": 4.94
+    },
+    {
+      "word": "identifies",
+      "start": 4.94,
+      "end": 5.4
+    },
+    {
+      "word": "the",
+      "start": 5.4,
+      "end": 5.9
+    },
+    {
+      "word": "main",
+      "start": 5.9,
+      "end": 6.14
+    },
+    {
+      "word": "recipients.",
+      "start": 6.14,
+      "end": 6.5
+    },
+    {
+      "word": "Cc",
+      "start": 7.78,
+      "end": 7.78
+    },
+    {
+      "word": "sends",
+      "start": 7.78,
+      "end": 8.6
+    },
+    {
+      "word": "a",
+      "start": 8.6,
+      "end": 8.74
+    },
+    {
+      "word": "visible",
+      "start": 8.74,
+      "end": 9.02
+    },
+    {
+      "word": "copy",
+      "start": 9.02,
+      "end": 9.36
+    },
+    {
+      "word": "to",
+      "start": 9.36,
+      "end": 9.7
+    },
+    {
+      "word": "people",
+      "start": 9.7,
+      "end": 9.96
+    },
+    {
+      "word": "who",
+      "start": 9.96,
+      "end": 10.22
+    },
+    {
+      "word": "need",
+      "start": 10.22,
+      "end": 10.44
+    },
+    {
+      "word": "to",
+      "start": 10.44,
+      "end": 10.62
+    },
+    {
+      "word": "be",
+      "start": 10.62,
+      "end": 10.74
+    },
+    {
+      "word": "informed.",
+      "start": 10.74,
+      "end": 11.04
+    },
+    {
+      "word": "Bcc",
+      "start": 12.2,
+      "end": 12.3
+    },
+    {
+      "word": "hides",
+      "start": 12.3,
+      "end": 13.3
+    },
+    {
+      "word": "those",
+      "start": 13.3,
+      "end": 13.56
+    },
+    {
+      "word": "recipients'",
+      "start": 13.56,
+      "end": 14.04
+    },
+    {
+      "word": "addresses",
+      "start": 14.38,
+      "end": 14.58
+    },
+    {
+      "word": "from",
+      "start": 14.58,
+      "end": 15.0
+    },
+    {
+      "word": "the",
+      "start": 15.0,
+      "end": 15.12
+    },
+    {
+      "word": "other",
+      "start": 15.12,
+      "end": 15.36
+    },
+    {
+      "word": "recipients,",
+      "start": 15.36,
+      "end": 15.7
+    },
+    {
+      "word": "but",
+      "start": 16.48,
+      "end": 16.6
+    },
+    {
+      "word": "it",
+      "start": 16.6,
+      "end": 16.7
+    },
+    {
+      "word": "does",
+      "start": 16.7,
+      "end": 16.88
+    },
+    {
+      "word": "not",
+      "start": 16.88,
+      "end": 17.12
+    },
+    {
+      "word": "make",
+      "start": 17.12,
+      "end": 17.36
+    },
+    {
+      "word": "the",
+      "start": 17.36,
+      "end": 17.52
+    },
+    {
+      "word": "message",
+      "start": 17.52,
+      "end": 17.8
+    },
+    {
+      "word": "confidential",
+      "start": 17.8,
+      "end": 18.4
+    },
+    {
+      "word": "or",
+      "start": 18.74,
+      "end": 19.04
+    },
+    {
+      "word": "stop",
+      "start": 19.04,
+      "end": 19.26
+    },
+    {
+      "word": "someone",
+      "start": 19.26,
+      "end": 19.7
+    },
+    {
+      "word": "from",
+      "start": 19.7,
+      "end": 19.96
+    },
+    {
+      "word": "forwarding",
+      "start": 19.96,
+      "end": 20.34
+    },
+    {
+      "word": "it.",
+      "start": 20.34,
+      "end": 20.62
+    },
+    {
+      "word": "Reply",
+      "start": 21.62,
+      "end": 21.98
+    },
+    {
+      "word": "all",
+      "start": 21.98,
+      "end": 22.48
+    },
+    {
+      "word": "can",
+      "start": 22.48,
+      "end": 22.96
+    },
+    {
+      "word": "send",
+      "start": 22.96,
+      "end": 23.16
+    },
+    {
+      "word": "your",
+      "start": 23.16,
+      "end": 23.3
+    },
+    {
+      "word": "response",
+      "start": 23.3,
+      "end": 23.6
+    },
+    {
+      "word": "to",
+      "start": 23.6,
+      "end": 23.88
+    },
+    {
+      "word": "more",
+      "start": 23.88,
+      "end": 24.12
+    },
+    {
+      "word": "people",
+      "start": 24.12,
+      "end": 24.58
+    },
+    {
+      "word": "than",
+      "start": 24.58,
+      "end": 25.06
+    },
+    {
+      "word": "you",
+      "start": 25.06,
+      "end": 25.24
+    },
+    {
+      "word": "intended.",
+      "start": 25.24,
+      "end": 25.56
+    },
+    {
+      "word": "Check",
+      "start": 27.54,
+      "end": 27.92
+    },
+    {
+      "word": "whether",
+      "start": 27.92,
+      "end": 28.24
+    },
+    {
+      "word": "everyone",
+      "start": 28.24,
+      "end": 28.82
+    },
+    {
+      "word": "needs",
+      "start": 28.82,
+      "end": 29.08
+    },
+    {
+      "word": "that",
+      "start": 29.08,
+      "end": 29.34
+    },
+    {
+      "word": "response.",
+      "start": 29.34,
+      "end": 29.72
+    },
+    {
+      "word": "Timing",
+      "start": 30.46,
+      "end": 30.8
+    },
+    {
+      "word": "also",
+      "start": 30.8,
+      "end": 31.02
+    },
+    {
+      "word": "matters:",
+      "start": 31.02,
+      "end": 31.52
+    },
+    {
+      "word": "a",
+      "start": 32.26,
+      "end": 32.28
+    },
+    {
+      "word": "late",
+      "start": 32.28,
+      "end": 32.44
+    },
+    {
+      "word": "message",
+      "start": 32.44,
+      "end": 32.88
+    },
+    {
+      "word": "with",
+      "start": 32.88,
+      "end": 33.16
+    },
+    {
+      "word": "an",
+      "start": 33.16,
+      "end": 33.3
+    },
+    {
+      "word": "immediate",
+      "start": 33.3,
+      "end": 33.58
+    },
+    {
+      "word": "deadline",
+      "start": 33.58,
+      "end": 34.06
+    },
+    {
+      "word": "may",
+      "start": 34.06,
+      "end": 34.38
+    },
+    {
+      "word": "be",
+      "start": 34.38,
+      "end": 34.54
+    },
+    {
+      "word": "difficult",
+      "start": 34.54,
+      "end": 34.92
+    },
+    {
+      "word": "for",
+      "start": 34.92,
+      "end": 35.28
+    },
+    {
+      "word": "others",
+      "start": 35.28,
+      "end": 35.48
+    },
+    {
+      "word": "to",
+      "start": 35.48,
+      "end": 35.7
+    },
+    {
+      "word": "act",
+      "start": 35.7,
+      "end": 35.9
+    },
+    {
+      "word": "on.",
+      "start": 35.9,
+      "end": 36.16
+    },
+    {
+      "word": "Pause",
+      "start": 37.18,
+      "end": 37.54
+    },
+    {
+      "word": "and",
+      "start": 37.54,
+      "end": 37.76
+    },
+    {
+      "word": "review",
+      "start": 37.76,
+      "end": 37.96
+    },
+    {
+      "word": "your",
+      "start": 37.96,
+      "end": 38.3
+    },
+    {
+      "word": "fictional",
+      "start": 38.3,
+      "end": 38.7
+    },
+    {
+      "word": "draft.",
+      "start": 38.7,
+      "end": 39.04
+    },
+    {
+      "word": "Remove",
+      "start": 39.98,
+      "end": 39.98
+    },
+    {
+      "word": "unnecessary",
+      "start": 39.98,
+      "end": 40.64
+    },
+    {
+      "word": "recipients",
+      "start": 40.64,
+      "end": 41.24
+    },
+    {
+      "word": "and",
+      "start": 42.16,
+      "end": 42.18
+    },
+    {
+      "word": "give",
+      "start": 42.18,
+      "end": 42.38
+    },
+    {
+      "word": "the",
+      "start": 42.38,
+      "end": 42.56
+    },
+    {
+      "word": "partner",
+      "start": 42.56,
+      "end": 42.84
+    },
+    {
+      "word": "a",
+      "start": 42.84,
+      "end": 43.16
+    },
+    {
+      "word": "reasonable",
+      "start": 43.16,
+      "end": 43.58
+    },
+    {
+      "word": "response",
+      "start": 43.58,
+      "end": 44.08
+    },
+    {
+      "word": "window.",
+      "start": 44.08,
+      "end": 44.7
+    },
+    {
+      "word": "Clear",
+      "start": 45.42,
+      "end": 45.72
+    },
+    {
+      "word": "communication",
+      "start": 45.72,
+      "end": 46.16
+    },
+    {
+      "word": "includes",
+      "start": 46.16,
+      "end": 46.86
+    },
+    {
+      "word": "both",
+      "start": 46.86,
+      "end": 47.36
+    },
+    {
+      "word": "the",
+      "start": 47.36,
+      "end": 47.56
+    },
+    {
+      "word": "content",
+      "start": 47.56,
+      "end": 47.96
+    },
+    {
+      "word": "and",
+      "start": 47.96,
+      "end": 48.62
+    },
+    {
+      "word": "its",
+      "start": 48.62,
+      "end": 49.02
+    },
+    {
+      "word": "destination.",
+      "start": 49.02,
+      "end": 49.4
+    }
+  ]
+}

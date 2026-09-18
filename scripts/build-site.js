@@ -4,7 +4,7 @@
  * The consolidated tree is already deployment-shaped, so the build simply copies
  * the public top-level items into dist/site/ (excluding dev tooling, docs,
  * node_modules, and the archived legacy subrepos) and strips any large media as a
- * safety net (course videos are YouTube-hosted).
+ * safety net (except the explicit compact DL2 video manifest).
  * Output: dist/site/  (or the first CLI arg).
  */
 const fs = require("fs");
@@ -61,11 +61,26 @@ const REQUIRED_FILES = [
 const missingBuilt = REQUIRED_FILES.filter((f) => !fs.existsSync(path.join(SITE_ROOT, f)));
 if (missingBuilt.length) throw new Error(`Build incomplete. Missing in dist/site: ${missingBuilt.join(", ")}`);
 
-// Safety net: strip large media (videos/podcasts are externally hosted on YouTube).
+// DL2 ships six compact reviewed videos. Keep only this explicit media manifest;
+// all other course MP4/MP3/MOV working files retain the existing stripping policy.
+const dl2Media = JSON.parse(fs.readFileSync(path.join(ROOT, "courses/digital-literacy-2/media/manifest.json"), "utf8"));
+const crypto = require("crypto");
+if (dl2Media.videos.length !== 6) throw new Error("DL2 requires six reviewed videos");
+const allowedMedia = new Set();
+for (const video of dl2Media.videos) {
+  if (!/^courses\/digital-literacy-2\/media\/week-0[1-6]\.mp4$/.test(video.path)) throw new Error("Invalid DL2 video path");
+  const file = path.join(ROOT, video.path);
+  const hash = crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+  if (hash !== video.sha256) throw new Error("DL2 media hash mismatch: " + video.path);
+  if (fs.statSync(file).size > 20 * 1024 * 1024) throw new Error("DL2 video exceeds 20 MB deployment budget");
+  allowedMedia.add(video.path);
+}
+if (allowedMedia.size !== 6) throw new Error("DL2 video manifest contains duplicates");
+// Safety net for every other media file.
 let stripped = 0;
 for (const f of walk(SITE_ROOT)) {
   const l = f.toLowerCase();
-  if (l.endsWith(".mp4") || l.endsWith(".mp3") || l.endsWith(".mov")) { fs.rmSync(f, { force: true }); stripped += 1; }
+  if ((l.endsWith(".mp4") || l.endsWith(".mp3") || l.endsWith(".mov")) && !allowedMedia.has(path.relative(SITE_ROOT, f).split(path.sep).join("/"))) { fs.rmSync(f, { force: true }); stripped += 1; }
 }
 
 const pages = walk(SITE_ROOT).filter((f) => f.toLowerCase().endsWith(".html")).length;

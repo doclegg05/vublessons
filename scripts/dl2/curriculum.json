@@ -1,0 +1,1479 @@
+{
+  "title": "Digital Literacy \u2014 Level 2",
+  "weeks": [
+    {
+      "n": 1,
+      "title": "Make technology work for you",
+      "summary": "Set up a comfortable workspace, organize a calendar, and solve everyday device problems.",
+      "objectives": [
+        "Adjust device and browser settings for a task.",
+        "Create a practice appointment and choose what others can see.",
+        "Select a connection and a printer; verify the result."
+      ],
+      "refs": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "2.3"
+      ],
+      "agenda": [
+        [
+          10,
+          "Welcome and goals",
+          "Ask which everyday task each learner wants to do more independently. Demonstrate text size and lesson navigation."
+        ],
+        [
+          25,
+          "Pre-test",
+          "Open the pre-test before instruction. Allow quiet work; read directions aloud without suggesting answers. Save or print each result."
+        ],
+        [
+          20,
+          "Model the setup",
+          "Teach slides on display, sound, browser settings, processing, cables and printing. Think aloud through one change and its check."
+        ],
+        [
+          10,
+          "Break",
+          "Offer a screen-free pause."
+        ],
+        [
+          15,
+          "Calendar and automation",
+          "Model a fictional appointment, free/busy sharing and an automation check. Play the explainer and pause for a prediction."
+        ],
+        [
+          30,
+          "Guided lab",
+          "Pairs complete the workstation and calendar worksheet. Partners switch driver and coach roles halfway."
+        ],
+        [
+          10,
+          "Check and transfer",
+          "Use both knowledge checks. Each learner demonstrates one adjustment, explains why it helps and restores the lab setting."
+        ]
+      ],
+      "slides": [
+        {
+          "title": "Your starting point",
+          "body": "Name a digital task you already do well. Choose one task you want to make easier.",
+          "kind": "discussion"
+        },
+        {
+          "title": "Take the pre-test",
+          "body": "This is a starting snapshot. Answer independently, then save or print your results.",
+          "kind": "assessment",
+          "href": "pre"
+        },
+        {
+          "title": "Change one setting; check the result",
+          "body": "Decide what you need. Make one adjustment. Try the task again. Keep or undo the change.",
+          "kind": "steps",
+          "items": [
+            "Name the problem",
+            "Change one setting",
+            "Test and decide"
+          ]
+        },
+        {
+          "title": "Make text comfortable",
+          "body": "Browser zoom changes a webpage. Display scaling changes the wider desktop. Start with the control that matches your problem.",
+          "kind": "teach",
+          "refs": [
+            "1.1"
+          ]
+        },
+        {
+          "title": "Practice: zoom without losing your place",
+          "body": "Use Ctrl and + to enlarge a page; Ctrl and - to reduce it; Ctrl and 0 to reset. On a Mac, use Command. Try this page\u2019s text-size buttons too.",
+          "kind": "try"
+        },
+        {
+          "title": "Sound and screen checks",
+          "body": "Choose the correct speaker or headset before adjusting volume. Brightness changes light output; contrast changes separation between light and dark.",
+          "kind": "teach",
+          "refs": [
+            "1.4"
+          ]
+        },
+        {
+          "title": "Browser choices belong to you",
+          "body": "Review the home page, downloads location and site permissions in Settings. A helpful default should fit your task. Restore shared-lab settings before leaving.",
+          "kind": "teach",
+          "refs": [
+            "1.1"
+          ]
+        },
+        {
+          "title": "Processing, storage, and connections",
+          "body": "The processor carries out instructions. Memory holds current work. Storage keeps files. A matching connector shape alone does not guarantee every feature.",
+          "kind": "teach",
+          "refs": [
+            "1.6"
+          ]
+        },
+        {
+          "title": "Match a connection to its job",
+          "body": "Select each card to reveal a useful connection. Read the device label before buying or plugging in a cable.",
+          "kind": "flip",
+          "cards": [
+            [
+              "An external display",
+              "HDMI commonly carries video and sound. USB-C video support depends on the device and cable."
+            ],
+            [
+              "A wired network",
+              "Ethernet connects a device to a network."
+            ],
+            [
+              "A keyboard or flash drive",
+              "USB carries data; USB-C also has charging and optional display uses."
+            ]
+          ]
+        },
+        {
+          "title": "Printer choices",
+          "body": "Laser printers use toner; inkjet printers use liquid ink. Choose for the task and running cost. A default printer is the device an app initially selects.",
+          "kind": "teach",
+          "refs": [
+            "1.5"
+          ]
+        },
+        {
+          "title": "Print one page before twenty",
+          "body": "Check the printer name and connection. Open print preview. Select one page, orientation and copies. Send a test page and check the output.",
+          "kind": "steps",
+          "items": [
+            "Confirm destination",
+            "Inspect preview",
+            "Print one test"
+          ]
+        },
+        {
+          "title": "A calendar entry needs enough detail",
+          "body": "Create a fictional library visit: title, day, start and end, location and reminder. Check the time zone when an event involves another region.",
+          "kind": "teach",
+          "refs": [
+            "1.2"
+          ]
+        },
+        {
+          "title": "Share availability thoughtfully",
+          "body": "Free/busy can show when you are unavailable without the event\u2019s private details. Verify the actual sharing options before inviting someone.",
+          "kind": "teach",
+          "refs": [
+            "1.2"
+          ]
+        },
+        {
+          "title": "Switch the calendar view",
+          "body": "Use day view for detail, week view for conflicts and month view for the larger picture. A task can have a due date without reserving meeting time.",
+          "kind": "teach",
+          "refs": [
+            "1.2"
+          ]
+        },
+        {
+          "title": "Automation still needs a check",
+          "body": "A rule can sort mail or repeat a reminder. Autocorrect changes likely mistakes; autocomplete suggests the rest. Review names, addresses and meaning before accepting.",
+          "kind": "teach",
+          "refs": [
+            "1.3"
+          ]
+        },
+        {
+          "title": "Cloud services use another computer",
+          "body": "Online storage and web apps use a provider\u2019s computers over a network. Check account, connection and save status when you switch devices.",
+          "kind": "teach",
+          "refs": [
+            "1.3"
+          ]
+        },
+        {
+          "title": "Watch: choose settings and verify",
+          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "kind": "video"
+        },
+        {
+          "title": "Find help that fits your version",
+          "body": "Use the app\u2019s Help menu or official support. State the task, what you tried and the exact error. Ask a partner for one specific improvement.",
+          "kind": "teach",
+          "refs": [
+            "2.3"
+          ]
+        },
+        {
+          "title": "Knowledge check: the wrong speaker",
+          "body": "The video is playing silently. What should you check first?",
+          "kind": "check",
+          "options": [
+            "Buy a new monitor",
+            "Check output device and mute",
+            "Erase the browser history"
+          ],
+          "answer": 1,
+          "why": "The selected output device or mute setting may explain the silence. Change one thing and test."
+        },
+        {
+          "title": "Knowledge check: calendar privacy",
+          "body": "A partner only needs to know when you are free. Which sharing option best fits?",
+          "kind": "check",
+          "options": [
+            "Show all event descriptions",
+            "Publish your account password",
+            "Share free/busy availability"
+          ],
+          "answer": 2,
+          "why": "Availability answers the scheduling question while limiting event details."
+        },
+        {
+          "title": "Lab: your usable workstation",
+          "body": "Complete the worksheet. Show your partner the result of one setting change, a calendar entry and a print preview.",
+          "kind": "lab"
+        },
+        {
+          "title": "Keep the routine",
+          "body": "Choose a setting, test it and explain the result. Before leaving, save your practice work and restore shared settings.",
+          "kind": "summary"
+        }
+      ],
+      "lab": [
+        "Record one task you want to make easier and one skill you bring.",
+        "Increase webpage text. Record the control used and how to reset it.",
+        "Select the correct audio output; explain brightness versus contrast.",
+        "Match HDMI, Ethernet and USB to three tasks. Check one actual device port.",
+        "Create a fictional library appointment with a reminder. Record the fields you checked.",
+        "Choose a calendar view and a sharing level for a partner who only needs availability. Explain why.",
+        "Preview a one-page handout; record the printer, orientation and page range. Do not print unless the instructor directs it.",
+        "Type a sentence with a name that autocorrect changes. Correct it. Record a useful help search and one piece of partner feedback."
+      ],
+      "answers": [
+        "Accept a personally meaningful goal and existing skill.",
+        "Browser zoom or site text-size control; demonstrate reset.",
+        "Check output and mute; brightness is light output, contrast is light/dark separation.",
+        "HDMI: display; Ethernet: network; USB: suitable peripheral. USB-C capabilities require checking.",
+        "Title, day, start/end, location, reminder; time zone when relevant.",
+        "Week for conflicts; free/busy for limited detail. Verify service-specific options.",
+        "The selected printer matches the lab destination; one-page preview prevents waste.",
+        "Learner reviews the result rather than trusting suggestions; help search names the app and task."
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Find, judge, and organize information",
+      "summary": "Find a reliable community resource and manage a shared file with care.",
+      "objectives": [
+        "Refine a search and justify a source choice.",
+        "Complete a fictional online form and check its confirmation.",
+        "Organize files, set access and explain a recovery path."
+      ],
+      "refs": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "4.2",
+        "4.3.1",
+        "7.4"
+      ],
+      "agenda": [
+        [
+          10,
+          "Reconnect",
+          "Ask learners to demonstrate last week\u2019s check-one-change routine."
+        ],
+        [
+          20,
+          "Search demonstration",
+          "Teach keywords, filters and source evaluation with the supplied fictional source comparison."
+        ],
+        [
+          20,
+          "Research lab",
+          "Learners locate a public library service from an official source and record evidence. No account or application is needed."
+        ],
+        [
+          10,
+          "Break",
+          "Pause away from screens."
+        ],
+        [
+          20,
+          "Files demonstration",
+          "Teach forms, central storage, sync, access, compression and version history. Play the cloud-file explainer."
+        ],
+        [
+          30,
+          "Files lab",
+          "Use the practice form and sharing simulator, then organize a fictional folder. Complete the worksheet."
+        ],
+        [
+          10,
+          "Evidence check",
+          "Ask each learner to justify a source and a permission. Use the knowledge checks."
+        ]
+      ],
+      "slides": [
+        {
+          "title": "Start with a question",
+          "body": "You need a local library\u2019s computer-help service. What information would make the answer usable?",
+          "kind": "discussion"
+        },
+        {
+          "title": "Write a useful search",
+          "body": "Include the service, place and audience. Try: public library computer help near your town. Remove words that distract from the task.",
+          "kind": "teach",
+          "refs": [
+            "3.1"
+          ]
+        },
+        {
+          "title": "Refine without hiding useful results",
+          "body": "Use the search tool\u2019s date or content filters when they fit. Quotation marks can narrow an exact phrase. A site: filter narrows a domain, but does not prove accuracy.",
+          "kind": "teach",
+          "refs": [
+            "3.1"
+          ]
+        },
+        {
+          "title": "Five questions for a source",
+          "body": "Who made it? What evidence supports it? What perspective or interest shapes it? Is it current enough? Does it answer this task?",
+          "kind": "steps",
+          "items": [
+            "Check author and evidence",
+            "Check purpose and currency",
+            "Check fit and corroboration"
+          ],
+          "refs": [
+            "3.2"
+          ]
+        },
+        {
+          "title": "Compare two results",
+          "body": "These are fictional practice sources. Select a card, then justify which source you would verify first.",
+          "kind": "flip",
+          "cards": [
+            [
+              "Library service page",
+              "Named library, contact method, service hours and update note. Verify details through its official contact."
+            ],
+            [
+              "Unattributed social post",
+              "No author or date; promises every service is free everywhere. Treat the claim as unverified."
+            ]
+          ]
+        },
+        {
+          "title": "Accuracy and relevance differ",
+          "body": "A correct article about a library in another state may not answer a local question. A recent page can still be biased or wrong. Check more than one signal.",
+          "kind": "teach",
+          "refs": [
+            "3.2"
+          ]
+        },
+        {
+          "title": "Keep a source trail",
+          "body": "Record title, organization, URL, access date and the specific detail you used. Separate a direct quotation from your own summary.",
+          "kind": "teach",
+          "refs": [
+            "3.1",
+            "4.3.1"
+          ]
+        },
+        {
+          "title": "Collect only what the task needs",
+          "body": "Forms and surveys collect responses into a shared system. Identify who collects the data, why, and which fields are required before typing.",
+          "kind": "teach",
+          "refs": [
+            "3.3"
+          ]
+        },
+        {
+          "title": "Practice form: request computer help",
+          "body": "Use fictional details in this local practice form. Check required fields, review your choices and read the confirmation.",
+          "kind": "form",
+          "refs": [
+            "3.3"
+          ]
+        },
+        {
+          "title": "Name files so you can find them",
+          "body": "Use a clear subject and version: library-resource-v1.docx. Put related files in one folder. Avoid names such as final-final-new.",
+          "kind": "teach",
+          "refs": [
+            "4.2"
+          ]
+        },
+        {
+          "title": "Central storage needs clear access",
+          "body": "A shared drive keeps a common copy in one place. The service, account or organization controls access and retention. A shared link does not transfer ownership.",
+          "kind": "teach",
+          "refs": [
+            "3.3",
+            "4.2"
+          ]
+        },
+        {
+          "title": "Sync, backup, and recovery",
+          "body": "Sync carries changes, including some deletions, between locations. A separate backup provides another recovery path. Version history may recover earlier content.",
+          "kind": "teach",
+          "refs": [
+            "4.2"
+          ]
+        },
+        {
+          "title": "Watch: search, judge, share, recover",
+          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "kind": "video"
+        },
+        {
+          "title": "Choose who can change the file",
+          "body": "A viewer reads. A commenter suggests, where supported. An editor changes content. Limit access to the named people who need it.",
+          "kind": "permissions",
+          "refs": [
+            "4.2",
+            "7.4"
+          ]
+        },
+        {
+          "title": "Read-only is not encryption",
+          "body": "Read-only and editing restrictions limit changes. Encryption protects readable content with a key. Password-to-open and password-to-edit can protect different things.",
+          "kind": "teach",
+          "refs": [
+            "4.2",
+            "7.4"
+          ]
+        },
+        {
+          "title": "Compression packages files",
+          "body": "A ZIP archive can bundle files and sometimes reduce size. Extract it before editing. Images and video may already be compressed. A ZIP file is not automatically encrypted.",
+          "kind": "teach",
+          "refs": [
+            "4.2"
+          ]
+        },
+        {
+          "title": "Recover the right thing",
+          "body": "Deleted file? Check trash or recycle bin. Wrong content? Inspect version history. Preview first and coordinate with collaborators before restoring.",
+          "kind": "teach",
+          "refs": [
+            "4.2"
+          ]
+        },
+        {
+          "title": "Knowledge check: a credible page",
+          "body": "Which action best checks a surprising service claim?",
+          "kind": "check",
+          "options": [
+            "Trust the first result",
+            "Count the page\u2019s colors",
+            "Verify it with the responsible organization"
+          ],
+          "answer": 2,
+          "why": "A responsible primary source and corroborating evidence are stronger than ranking or appearance."
+        },
+        {
+          "title": "Knowledge check: read-only",
+          "body": "A file is read-only. What does that tell you?",
+          "kind": "check",
+          "options": [
+            "Editing is restricted",
+            "The content is encrypted",
+            "Nobody can copy the content"
+          ],
+          "answer": 0,
+          "why": "Read-only describes an editing restriction. It does not by itself prove confidentiality or prevent copying."
+        },
+        {
+          "title": "Lab: build a resource folder",
+          "body": "Find one useful source, record the evidence, organize a fictional file and demonstrate a limited share.",
+          "kind": "lab"
+        },
+        {
+          "title": "Your repeatable information routine",
+          "body": "Ask a clear question, check the source, save the evidence and limit access.",
+          "kind": "summary"
+        }
+      ],
+      "lab": [
+        "Write a focused question about a local public service.",
+        "Record an initial search and one refinement or filter. Explain its effect.",
+        "Record a source title, organization, URL, access date and useful detail.",
+        "Judge the source\u2019s accuracy, perspective, bias, credibility and relevance. Name one check still needed.",
+        "Complete the fictional practice form. Record a validation message and the confirmation.",
+        "Create a folder and clear filename. Describe who controls a cloud copy.",
+        "Choose permissions for a reader, a reviewer and a coauthor. Demonstrate one in the simulator.",
+        "Explain when to use version history, a recycle bin or a backup. Explain why ZIP and read-only do not prove encryption."
+      ],
+      "answers": [
+        "Question identifies a service and location.",
+        "Refinement narrows the actual need without treating ranking as proof.",
+        "All five source fields are recorded; details use no personal records.",
+        "Evidence-based judgments, including an uncertainty or direct verification step.",
+        "Missing required choice is corrected; confirmation does not claim a real request was sent.",
+        "Meaningful name and folder; account/service or organization controls access.",
+        "Viewer, commenter when available, editor; named recipients and least useful access.",
+        "History: earlier content; trash: deleted file; backup: separate recovery copy. ZIP bundles; read-only restricts editing."
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Create something people can use",
+      "summary": "Build a clear resource handout, a small workbook, and a short presentation.",
+      "objectives": [
+        "Structure a document for reading and revision.",
+        "Use a formula and format a small workbook.",
+        "Adapt a presentation and media for an audience and credit reused work."
+      ],
+      "refs": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4"
+      ],
+      "agenda": [
+        [
+          10,
+          "Retrieve",
+          "Review last week\u2019s source trail and folder choices."
+        ],
+        [
+          20,
+          "Document model",
+          "Demonstrate heading styles, lists, shortcuts, track changes and a reviewed export."
+        ],
+        [
+          20,
+          "Document lab",
+          "Learners create a one-page fictional community resource handout; partners suggest and review one edit."
+        ],
+        [
+          10,
+          "Break",
+          "Offer a posture and screen break."
+        ],
+        [
+          20,
+          "Workbook and media model",
+          "Demonstrate the supplied CSV, SUM, units, a simple chart, cropping, trimming and captions. Play the explainer."
+        ],
+        [
+          30,
+          "Creation lab",
+          "Learners finish the workbook and three-slide presentation using worksheet requirements."
+        ],
+        [
+          10,
+          "Show and explain",
+          "Peer review for readability, accuracy, credit and appropriate file format. Use knowledge checks."
+        ]
+      ],
+      "slides": [
+        {
+          "title": "Create for someone specific",
+          "body": "Your audience is a neighbor looking for computer help. What would they need first, and what can you leave out?",
+          "kind": "discussion"
+        },
+        {
+          "title": "A document needs structure",
+          "body": "Use a descriptive title, real heading styles, short sections and a list of steps. Bold alone does not create a heading for assistive technology.",
+          "kind": "teach",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Keyboard shortcuts with a purpose",
+          "body": "Ctrl+C copies; Ctrl+V pastes; Ctrl+Z undoes; Ctrl+S saves. On a Mac, use Command. Practice selecting only the text you want to change.",
+          "kind": "teach",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Make one clear paragraph",
+          "body": "State the service, who it helps and the next action. Read it aloud. Replace vague words with concrete instructions.",
+          "kind": "teach",
+          "refs": [
+            "4.1",
+            "4.4"
+          ]
+        },
+        {
+          "title": "Track a proposed change",
+          "body": "Turn on Track Changes or Suggesting in your editor. Make one edit. The reviewer accepts or rejects it; a comment can explain why.",
+          "kind": "teach",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Prepare a handout someone can read",
+          "body": "Use real headings, readable type and meaningful link text. Add useful alternative text to informative images. Do not rely on color alone.",
+          "kind": "teach",
+          "refs": [
+            "4.1",
+            "4.4"
+          ]
+        },
+        {
+          "title": "A workbook has rows, columns, and cells",
+          "body": "A row can represent one item; a column can represent a category. Label the units. Keep numbers as numbers so formulas can calculate.",
+          "kind": "teach",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Build a fictional supply budget",
+          "body": "Enter Paper: 12, Folders: 8, Pens: 5 in a cost column. In a total cell, use =SUM(B2:B4). The expected total is 25.",
+          "kind": "spreadsheet",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Check the formula, not just the appearance",
+          "body": "Change the paper cost to 15. The total should become 28. If it does not, check the cell range and whether values were entered as text.",
+          "kind": "try"
+        },
+        {
+          "title": "A chart answers a question",
+          "body": "A bar chart can compare costs. Use a title and labels with units. Keep a readable data table so the numbers are available without interpreting color.",
+          "kind": "teach",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Three slides; one useful message",
+          "body": "Slide 1: the need. Slide 2: the steps. Slide 3: where to get help. Use one consistent theme and enough contrast for the room.",
+          "kind": "teach",
+          "refs": [
+            "4.1",
+            "4.3",
+            "4.4"
+          ]
+        },
+        {
+          "title": "Crop, resize, and preserve the original",
+          "body": "Crop removes outer areas. Resize changes dimensions. Save a copy before editing. Do not stretch an image or remove a creator\u2019s credit.",
+          "kind": "teach",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Basic video editing",
+          "body": "Trim an unwanted start or end. Split to remove a middle section. Arrange clips, balance speech volume and add accurate captions. Check the exported result.",
+          "kind": "teach",
+          "refs": [
+            "4.1"
+          ]
+        },
+        {
+          "title": "Watch: create, check, and export",
+          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "kind": "video"
+        },
+        {
+          "title": "Reusing content requires permission",
+          "body": "Check the license and its conditions. Credit the creator, title, source and license when required. An image appearing in search does not mean you may reuse it.",
+          "kind": "teach",
+          "refs": [
+            "4.3"
+          ]
+        },
+        {
+          "title": "Choose a format for the next person",
+          "body": "An editable document supports revision. PDF preserves a finished layout. CSV carries simple table data but loses formatting and formulas.",
+          "kind": "flip",
+          "cards": [
+            [
+              "A neighbor needs a handout",
+              "PDF, then check reading order and legibility."
+            ],
+            [
+              "A partner must edit paragraphs",
+              "An editable document with appropriate access."
+            ],
+            [
+              "A tool needs plain rows and columns",
+              "CSV; verify dates, separators and lost formatting."
+            ]
+          ],
+          "refs": [
+            "4.4"
+          ]
+        },
+        {
+          "title": "Inspect the export",
+          "body": "Open the exported file. Check headings, page breaks, links and missing content. Verify the filename and folder. The export is a separate artifact to test.",
+          "kind": "teach",
+          "refs": [
+            "4.4"
+          ]
+        },
+        {
+          "title": "Knowledge check: a changing total",
+          "body": "Which formula adds values from B2 through B4?",
+          "kind": "check",
+          "options": [
+            "=SUM(B2:B4)",
+            "=B2+B4",
+            "=SUM(A1:A2)"
+          ],
+          "answer": 0,
+          "why": "B2:B4 includes B2, B3 and B4. Check by changing one input."
+        },
+        {
+          "title": "Knowledge check: a proposed edit",
+          "body": "You want the owner to decide whether to keep your wording. What should you use?",
+          "kind": "check",
+          "options": [
+            "Delete their document",
+            "Track Changes or Suggesting",
+            "Make a screenshot"
+          ],
+          "answer": 1,
+          "why": "Tracked or suggested edits preserve the review decision for the owner."
+        },
+        {
+          "title": "Lab: your resource pack",
+          "body": "Create a handout, a checked workbook and a three-slide explanation. Use the supplied original image or an appropriately licensed alternative.",
+          "kind": "lab"
+        },
+        {
+          "title": "Useful beats elaborate",
+          "body": "A clear structure, a correct calculation and a tested export serve your audience.",
+          "kind": "summary"
+        }
+      ],
+      "lab": [
+        "Identify the audience and action for a fictional computer-help handout.",
+        "Create a document with a title, two heading styles, a short paragraph, a numbered list and a meaningful link.",
+        "Use copy, paste and undo; record one place a shortcut helped.",
+        "Suggest or track one partner edit, then accept or reject it with a reason.",
+        "Open supplies.csv in a spreadsheet. Add =SUM(B2:B4); verify 25, then change paper to 15 and verify 28.",
+        "Build three slides: need, steps, help. Use one theme, readable type, useful image alt text and a data table or labeled chart.",
+        "Crop a copy of the supplied original image. Describe trimming, splitting and captions for a short video. Record any source and license.",
+        "Export the handout to PDF and reopen it. Record two checks, and explain when editable format or CSV would be better."
+      ],
+      "answers": [
+        "A specific neighbor/audience and a clear next action.",
+        "Semantic heading styles, concise task-focused copy and descriptive link.",
+        "Demonstrates selection and successful undo without losing work.",
+        "Revision remains reviewable; accepts/rejects deliberately.",
+        "Correct range, numeric cells and recalculated 28.",
+        "One message per slide, consistent theme, non-color cues and useful text alternatives.",
+        "Original preserved; crop differs from resize; trim removes edges, split isolates middle, captions convey speech.",
+        "Checks content/links/layout; editable supports revision, CSV carries plain data."
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Communicate and collaborate with care",
+      "summary": "Choose the right channel, give useful feedback, and make safe online choices.",
+      "objectives": [
+        "Choose a communication channel and write a clear email.",
+        "Collaborate using comments, coauthoring and version history.",
+        "Explain online purchases, subscriptions and digital identities."
+      ],
+      "refs": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "5.1",
+        "5.2",
+        "6.1",
+        "6.2"
+      ],
+      "agenda": [
+        [
+          10,
+          "Reconnect",
+          "Share one improvement from the resource-pack review."
+        ],
+        [
+          20,
+          "Communication model",
+          "Demonstrate audience, timing, identity, email fields and channel choice."
+        ],
+        [
+          20,
+          "Message lab",
+          "Pairs draft a fictional request and revise for clarity and inclusive language."
+        ],
+        [
+          10,
+          "Break",
+          "Pause away from screens."
+        ],
+        [
+          20,
+          "Collaboration and commerce",
+          "Demonstrate coauthoring, comments, meeting controls and purchase review; play the explainer."
+        ],
+        [
+          30,
+          "Team lab",
+          "Complete the shared-document role play and fictional subscription comparison. Switch roles."
+        ],
+        [
+          10,
+          "Check and reflect",
+          "Use knowledge checks and ask each learner to describe one helpful feedback habit."
+        ]
+      ],
+      "slides": [
+        {
+          "title": "Choose a channel for the task",
+          "body": "A quick status update, a detailed request and an urgent issue may need different channels. Consider the audience, sensitivity and response time.",
+          "kind": "discussion",
+          "refs": [
+            "5.1"
+          ]
+        },
+        {
+          "title": "Personal and professional identities",
+          "body": "Use the account and tone appropriate to the role. Check the active account before posting. Separate credentials; use a trusted password manager and multifactor authentication where available.",
+          "kind": "teach",
+          "refs": [
+            "2.1"
+          ]
+        },
+        {
+          "title": "Write an email someone can act on",
+          "body": "Use a specific subject, a greeting, one clear request, needed context and a courteous close. Check the recipient and attachment before sending.",
+          "kind": "teach",
+          "refs": [
+            "5.1"
+          ]
+        },
+        {
+          "title": "To, Cc, and Bcc",
+          "body": "To names the main recipient. Cc keeps others visibly informed. Bcc hides that recipient list from other recipients; it does not encrypt the message.",
+          "kind": "teach",
+          "refs": [
+            "5.1"
+          ]
+        },
+        {
+          "title": "Timing changes how a message lands",
+          "body": "Check urgency and working hours. State when a response is needed. Scheduled send can help, but verify its settings and your wording first.",
+          "kind": "teach",
+          "refs": [
+            "2.2"
+          ]
+        },
+        {
+          "title": "Inclusive language helps people respond",
+          "body": "Use the name and form of address people prefer. Explain unfamiliar abbreviations. Avoid assumptions about age, culture, abilities or technology experience.",
+          "kind": "teach",
+          "refs": [
+            "2.2",
+            "5.1"
+          ]
+        },
+        {
+          "title": "Participate in a community",
+          "body": "Read the group\u2019s guidelines, stay on topic and disagree with ideas respectfully. Ask permission before sharing someone else\u2019s story or image.",
+          "kind": "teach",
+          "refs": [
+            "5.1"
+          ]
+        },
+        {
+          "title": "Verify a community service",
+          "body": "Use an organization\u2019s official contact or website to confirm eligibility, availability and hours. A directory entry is a starting point; details can change.",
+          "kind": "teach",
+          "refs": [
+            "5.1"
+          ]
+        },
+        {
+          "title": "Collaborate on one shared copy",
+          "body": "Assign an owner, writer and reviewer. Agree on where the file lives and what finished means. Clear roles reduce conflicting edits.",
+          "kind": "teach",
+          "refs": [
+            "6.1"
+          ]
+        },
+        {
+          "title": "Live editing or later feedback?",
+          "body": "Synchronous work happens together. Asynchronous work happens at different times. Match the method to schedules and the decision needed.",
+          "kind": "flip",
+          "cards": [
+            [
+              "Write together during class",
+              "Synchronous coauthoring: coordinate who edits which section."
+            ],
+            [
+              "Review after class",
+              "Asynchronous comments: include enough context for the writer."
+            ]
+          ],
+          "refs": [
+            "6.1"
+          ]
+        },
+        {
+          "title": "Feedback names an improvement",
+          "body": "Try: \u201cThe contact method is hard to find. Could we put it after the steps?\u201d Be specific about the text, reason and possible change.",
+          "kind": "teach",
+          "refs": [
+            "6.1",
+            "2.3"
+          ]
+        },
+        {
+          "title": "Acknowledge and resolve",
+          "body": "Read a comment, ask if unclear, make or decline the change with a reason, then resolve it. Use version history if a useful edit is lost.",
+          "kind": "teach",
+          "refs": [
+            "6.1"
+          ]
+        },
+        {
+          "title": "Meetings and webinars",
+          "body": "Test sound. Mute when not speaking. Use raise-hand or chat as directed. Ask before recording. A webinar usually gives hosts more control than a small meeting.",
+          "kind": "teach",
+          "refs": [
+            "6.2"
+          ]
+        },
+        {
+          "title": "Watch: collaborate without confusion",
+          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "kind": "video"
+        },
+        {
+          "title": "Goods, services, and subscriptions",
+          "body": "Goods are products; services provide work or access. Streaming delivers media over a connection. A subscription can renew until canceled.",
+          "kind": "teach",
+          "refs": [
+            "5.2"
+          ]
+        },
+        {
+          "title": "Review a digital payment",
+          "body": "A payment service sends an authorized payment request. Check seller, total, recurring terms, delivery and refund information. A familiar logo alone does not verify a seller.",
+          "kind": "teach",
+          "refs": [
+            "5.2"
+          ]
+        },
+        {
+          "title": "Small in-app purchases add up",
+          "body": "A download may be free while features cost money. Review purchase controls and receipts. Do not authorize a real purchase during this activity.",
+          "kind": "teach",
+          "refs": [
+            "5.2"
+          ]
+        },
+        {
+          "title": "Knowledge check: useful feedback",
+          "body": "Which comment best supports revision?",
+          "kind": "check",
+          "options": [
+            "This is bad.",
+            "I dislike everything.",
+            "Add the contact number after the steps so readers can find help."
+          ],
+          "answer": 2,
+          "why": "It identifies a specific change and explains its value to readers."
+        },
+        {
+          "title": "Knowledge check: a trial offer",
+          "body": "Before starting a free trial, what should you check?",
+          "kind": "check",
+          "options": [
+            "Renewal price, renewal timing and cancellation terms",
+            "Only the button color",
+            "Whether the site has animations"
+          ],
+          "answer": 0,
+          "why": "The full terms determine whether the trial becomes a recurring charge."
+        },
+        {
+          "title": "Lab: coordinate a small team",
+          "body": "Draft a fictional message, review a partner\u2019s document and compare the supplied fictional offers.",
+          "kind": "lab"
+        },
+        {
+          "title": "Leave a clear next step",
+          "body": "A useful message says who needs to do what and when. A useful review helps the next person act.",
+          "kind": "summary"
+        }
+      ],
+      "lab": [
+        "Choose a channel for a detailed nonurgent request and for an urgent lab problem. Explain the difference.",
+        "Draft an email to a fictional library helper: subject, request, context and close. Do not send it.",
+        "Explain To, Cc and Bcc. Choose an appropriate time and account for your message.",
+        "Revise one sentence to remove an assumption or unexplained abbreviation.",
+        "Assign owner, writer and reviewer roles. Choose live coauthoring or later comments and justify access.",
+        "Write a specific comment on the resource handout. Respond, revise and record the decision.",
+        "List four meeting or webinar habits, including recording consent.",
+        "Compare fictional offer A: $5 monthly, cancel before renewal; offer B: $48 yearly, renews annually. Calculate one year of A ($60) and list questions before authorizing either."
+      ],
+      "answers": [
+        "Email for detailed nonurgent context; direct instructor conversation for urgent local issue.",
+        "Specific subject, clear request, sufficient context, correct recipient and courteous close.",
+        "To primary; Cc visible others; Bcc concealed recipient list, not encryption. Work hours/urgency and right identity.",
+        "Respectful specific language with no age/culture/ability assumptions.",
+        "Roles and permission fit; synchronous together or asynchronous across time.",
+        "Specific change plus reason; reviewer decision recorded.",
+        "Audio test, mute/raise hand, useful chat, consent before recording.",
+        "$60 versus $48 nominal year; also compare needs, features, refunds, renewal and cancellation. No real transaction."
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Protect your work and show your skills",
+      "summary": "Practice safe decisions, complete a skills challenge, and measure your growth.",
+      "objectives": [
+        "Explain device, file and account protections.",
+        "Recognize manipulation and choose a safe next step.",
+        "Demonstrate core tasks and complete the parallel post-test."
+      ],
+      "refs": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "2.1",
+        "4.2"
+      ],
+      "agenda": [
+        [
+          10,
+          "Retrieve and preview",
+          "Ask learners to name a source check, a file permission and a useful feedback habit."
+        ],
+        [
+          20,
+          "Safety model",
+          "Teach ergonomics, universal design, manipulation, encryption, unknown media and camera permissions."
+        ],
+        [
+          15,
+          "Scenario practice",
+          "Use the flip cards and explainer. Learners state the evidence and safest next step."
+        ],
+        [
+          10,
+          "Break",
+          "Take a screen-free break."
+        ],
+        [
+          25,
+          "Performance challenge",
+          "Learners demonstrate the core tasks on the worksheet. Instructor records independent, prompted or needs practice."
+        ],
+        [
+          25,
+          "Post-test",
+          "Complete the parallel assessment independently. Enter the saved pre-test score only if the learner wants a comparison. Print or save results."
+        ],
+        [
+          15,
+          "Review and next steps",
+          "Discuss explanations after submission. Choose a practice priority without treating the classroom score as certification."
+        ]
+      ],
+      "slides": [
+        {
+          "title": "Safety is a set of decisions",
+          "body": "Choose one habit that protects your work and one that helps you use technology comfortably.",
+          "kind": "discussion"
+        },
+        {
+          "title": "A comfortable workstation",
+          "body": "Place the screen where you can read without strain. Support your posture, take breaks and adjust input devices to your needs. Ask for help with persistent discomfort.",
+          "kind": "teach",
+          "refs": [
+            "7.1"
+          ]
+        },
+        {
+          "title": "Universal design helps more people",
+          "body": "Captions, readable controls and flexible input methods make tools usable in more situations. Keyboard access helps people who cannot use a mouse.",
+          "kind": "teach",
+          "refs": [
+            "7.1"
+          ]
+        },
+        {
+          "title": "Protect attention and wellbeing",
+          "body": "Frequent alerts and comparison can create pressure. FOMO means fear of missing out. Adjust notifications and choose a stopping point.",
+          "kind": "teach",
+          "refs": [
+            "7.2"
+          ]
+        },
+        {
+          "title": "An online identity can be invented",
+          "body": "Catfishing uses a false identity to build trust. Pressure for money, secrecy or personal information is a reason to pause and verify independently.",
+          "kind": "teach",
+          "refs": [
+            "7.2"
+          ]
+        },
+        {
+          "title": "Respond to harmful posts",
+          "body": "Avoid escalating. Preserve evidence when safe, use reporting or blocking tools and seek support. Negative posts can affect real relationships and future opportunities.",
+          "kind": "teach",
+          "refs": [
+            "7.2"
+          ]
+        },
+        {
+          "title": "An urgent message is not proof",
+          "body": "Unexpected threats or rewards may be phishing. Avoid the supplied link. Contact the organization through a known website or number.",
+          "kind": "teach",
+          "refs": [
+            "7.1"
+          ]
+        },
+        {
+          "title": "Choose a safer next step",
+          "body": "Select a scenario to reveal a response. Explain what evidence would change your decision.",
+          "kind": "flip",
+          "cards": [
+            [
+              "An unknown USB drive is on the desk",
+              "Do not connect it. Give it to the instructor or authorized support."
+            ],
+            [
+              "A calculator site asks for camera access",
+              "Deny it unless the task has a clear, trusted need."
+            ],
+            [
+              "A message demands payment to keep benefits",
+              "Pause. Verify through the organization\u2019s known contact; do not use the message\u2019s link."
+            ]
+          ]
+        },
+        {
+          "title": "Encryption protects readable data",
+          "body": "Encryption scrambles data so a key is needed to read it. Device encryption can protect a lost powered-off device; an unlocked signed-in session still needs protection.",
+          "kind": "teach",
+          "refs": [
+            "7.3"
+          ]
+        },
+        {
+          "title": "Passwords protect different actions",
+          "body": "Some file passwords control opening; others restrict editing. Check which protection is enabled and how recovery works. Avoid storing the password beside the protected file.",
+          "kind": "teach",
+          "refs": [
+            "7.4"
+          ]
+        },
+        {
+          "title": "Unknown devices can carry risk",
+          "body": "Portable storage may contain malicious software. Use approved devices and follow lab procedures. Do not plug in unknown media to find its owner.",
+          "kind": "teach",
+          "refs": [
+            "7.3"
+          ]
+        },
+        {
+          "title": "Control camera and microphone access",
+          "body": "Allow access only when the task needs it and you trust the app. Review permissions after a meeting. Block requests unrelated to what you are doing.",
+          "kind": "teach",
+          "refs": [
+            "7.3"
+          ]
+        },
+        {
+          "title": "Watch: pause, verify, protect",
+          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "kind": "video"
+        },
+        {
+          "title": "Practice the whole routine",
+          "body": "Find a source, create a useful file, limit access and explain a recovery choice. Use fictional information.",
+          "kind": "lab"
+        },
+        {
+          "title": "Knowledge check: encryption",
+          "body": "What is encryption designed to do?",
+          "kind": "check",
+          "options": [
+            "Make a file smaller",
+            "Require a key to read scrambled data",
+            "Make every message trustworthy"
+          ],
+          "answer": 1,
+          "why": "Encryption protects readability. It does not make the source trustworthy or replace access controls."
+        },
+        {
+          "title": "Knowledge check: camera access",
+          "body": "A simple text webpage asks to use your camera. What is a sensible response?",
+          "kind": "check",
+          "options": [
+            "Always allow every request",
+            "Share your password instead",
+            "Deny access when it is not needed for the task"
+          ],
+          "answer": 2,
+          "why": "Permission should fit a clear purpose. An unrelated request can be denied."
+        },
+        {
+          "title": "Take the post-test",
+          "body": "Complete the questions independently. Save or print the graded results, including explanations and your practice priorities.",
+          "kind": "assessment",
+          "href": "post"
+        },
+        {
+          "title": "Read your results as a learning plan",
+          "body": "Look at domain scores and missed questions. Choose one task to practice next. These classroom checks do not award IC3 certification.",
+          "kind": "summary"
+        }
+      ],
+      "lab": [
+        "Adjust one workstation feature and explain the need it addresses.",
+        "Define universal design and name two useful examples.",
+        "For an urgent suspicious message, write an independent verification plan.",
+        "Explain catfishing, FOMO and a constructive response to harmful posts.",
+        "Choose responses to unknown USB media and an unnecessary camera request.",
+        "Explain device encryption, a file password and editing restrictions without treating them as identical.",
+        "Performance challenge: refine a public-service search; justify a source; create a structured paragraph; calculate a three-item total; choose sharing access; give useful feedback; name a recovery method.",
+        "Save or print your post-test results. Identify one strength and one next practice task."
+      ],
+      "answers": [
+        "An appropriate comfort adjustment and observable benefit; avoid diagnostic claims.",
+        "Usability for diverse people/situations; captions and keyboard controls are examples.",
+        "Do not use supplied link; find official contact independently.",
+        "False identity; fear of missing out; document/report/block/seek support as appropriate.",
+        "Do not connect unknown media; deny permissions without a task-related need.",
+        "Encryption needs a key; passwords can protect opening or editing; read-only does not prove encryption.",
+        "Mark each of seven tasks Independent / With prompt / Needs practice; keep performance separate from quiz score.",
+        "Result preserved by learner; specific task linked to a domain that needs practice."
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Build a small web app with AI",
+      "summary": "Turn a clear need into a tested, accessible prototype using basic vibe coding.",
+      "objectives": [
+        "Describe a small app and write a bounded AI prompt.",
+        "Explain HTML, CSS, JavaScript and browser storage.",
+        "Test a prototype, revise one behavior and explain what a hosted service still needs."
+      ],
+      "refs": [
+        "Extension: basic web app and SaaS prototyping"
+      ],
+      "agenda": [
+        [
+          10,
+          "Choose the problem",
+          "Introduce a fictional community-resource finder and agree on three observable requirements."
+        ],
+        [
+          20,
+          "Model a first build",
+          "Explain website versus web app versus SaaS. Demonstrate the supplied starter and a bounded AI prompt; no paid account is required."
+        ],
+        [
+          20,
+          "Build round one",
+          "Learners use an approved AI tool or edit the supplied starter. Save a first version before changes."
+        ],
+        [
+          10,
+          "Break",
+          "Pause away from screens."
+        ],
+        [
+          15,
+          "Test demonstration",
+          "Play the explainer; show keyboard, empty-result, narrow-screen and privacy checks."
+        ],
+        [
+          30,
+          "Improve and retest",
+          "Pairs swap tester/builder roles, fix one observed defect and record evidence."
+        ],
+        [
+          15,
+          "Demo and reflection",
+          "Demonstrate three acceptance checks and complete the extension rubric. Discuss hosting requirements without deploying."
+        ]
+      ],
+      "slides": [
+        {
+          "title": "Solve one small problem",
+          "body": "Build a finder for fictional community resources. A visitor should be able to search, filter and understand the results.",
+          "kind": "discussion"
+        },
+        {
+          "title": "Website, web app, and SaaS",
+          "body": "A website presents pages. A web app adds interactive tasks. SaaS is software operated as an ongoing online service; it may need accounts, shared storage, support and maintenance.",
+          "kind": "teach"
+        },
+        {
+          "title": "Vibe coding starts with clear instructions",
+          "body": "Describe the result you want in ordinary language, ask AI to produce code, then inspect and test what it gives you. You are responsible for the result.",
+          "kind": "teach"
+        },
+        {
+          "title": "Three parts of a browser app",
+          "body": "HTML gives content structure. CSS controls appearance. JavaScript responds to input. A server can add shared data and protected operations.",
+          "kind": "flip",
+          "cards": [
+            [
+              "A labeled search field",
+              "HTML provides the input and its label."
+            ],
+            [
+              "A readable narrow-screen layout",
+              "CSS arranges content and styles focus."
+            ],
+            [
+              "Filtering the resource list",
+              "JavaScript updates results after user input."
+            ]
+          ]
+        },
+        {
+          "title": "Write acceptance checks first",
+          "body": "Search finds the named fictional service. The keyboard reaches every control. An unmatched search explains that no results were found.",
+          "kind": "steps",
+          "items": [
+            "Name one user task",
+            "Write three observable checks",
+            "Use fictional data"
+          ]
+        },
+        {
+          "title": "A prompt with useful boundaries",
+          "body": "Build one HTML file for a fictional resource finder. Include a labeled search field, category filter and readable results. Use semantic buttons, visible focus and no external dependencies. Do not collect personal data.",
+          "kind": "prompt"
+        },
+        {
+          "title": "Ask the AI to explain its work",
+          "body": "Ask where the data lives, what each file does, and how to test the three requirements. Treat the explanation as a claim to verify against behavior.",
+          "kind": "teach"
+        },
+        {
+          "title": "Start with a working reference",
+          "body": "Open the supplied starter app and complete all three checks. Download the editable HTML file and save a copy before making a change.",
+          "kind": "starter"
+        },
+        {
+          "title": "No AI account? You can still build",
+          "body": "Edit the supplied HTML in a plain-text editor. Change the heading and one fictional resource, save, then reopen the file. Use the worksheet\u2019s exact edit steps.",
+          "kind": "try"
+        },
+        {
+          "title": "Make one change at a time",
+          "body": "Save version 1. Ask for a small change. Review the difference. Test again. Restore version 1 if the change breaks a requirement.",
+          "kind": "teach"
+        },
+        {
+          "title": "A useful revision request",
+          "body": "The filter works with a mouse but the focus is hard to see. Add a clear focus outline to all controls. Keep existing search behavior and fictional data.",
+          "kind": "teach"
+        },
+        {
+          "title": "Where does the data live?",
+          "body": "A JavaScript array is bundled with the page. Browser storage belongs to that browser and can be cleared. A shared database supports cross-device data and requires access controls.",
+          "kind": "teach"
+        },
+        {
+          "title": "Keep secrets out of browser code",
+          "body": "Anything shipped to a browser can be inspected. Do not put API keys, passwords or private records in HTML or JavaScript. Use fictional records for this prototype.",
+          "kind": "teach"
+        },
+        {
+          "title": "A mock sign-in is not security",
+          "body": "A login-looking screen does not protect data by itself. Real accounts need server-side authorization, safe credential handling and tested access rules.",
+          "kind": "teach"
+        },
+        {
+          "title": "Watch: prompt, test, revise",
+          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "kind": "video"
+        },
+        {
+          "title": "Test more than the happy path",
+          "body": "Try blank search, no match, mixed-case search, category changes, narrow screen and keyboard-only use. Record expected and actual results.",
+          "kind": "steps",
+          "items": [
+            "Normal task",
+            "Empty and unexpected input",
+            "Keyboard and small screen"
+          ]
+        },
+        {
+          "title": "Fix what you can demonstrate",
+          "body": "Describe steps, expected result and actual result. Ask for a focused correction. Repeat the failed test and a previously passing test.",
+          "kind": "teach"
+        },
+        {
+          "title": "Hosting is a separate decision",
+          "body": "A local file is visible on your computer. Hosting makes it reachable online. Before a real launch, review content rights, access, data handling, costs, backups and who maintains it.",
+          "kind": "teach"
+        },
+        {
+          "title": "Knowledge check: AI confidence",
+          "body": "The AI says the app is fully tested. What should you do?",
+          "kind": "check",
+          "options": [
+            "Run the acceptance checks yourself",
+            "Skip testing",
+            "Add real personal records immediately"
+          ],
+          "answer": 0,
+          "why": "An AI statement does not replace observed behavior and recorded results."
+        },
+        {
+          "title": "Knowledge check: a secret key",
+          "body": "Where should a private API key go in a browser prototype?",
+          "kind": "check",
+          "options": [
+            "In a hidden HTML comment",
+            "In a public JavaScript variable",
+            "Nowhere in the browser code"
+          ],
+          "answer": 2,
+          "why": "Browser code is inspectable. Protected secrets belong in an appropriate server-side design."
+        },
+        {
+          "title": "Lab: build, test, explain",
+          "body": "Demonstrate your app, one revision and your test log. Explain one limitation before this could become a real service.",
+          "kind": "lab"
+        },
+        {
+          "title": "You can direct a build and judge it",
+          "body": "Keep the prompt, source file, test log and next step. Clear requirements and careful checks remain useful as tools change.",
+          "kind": "summary"
+        }
+      ],
+      "lab": [
+        "Name the app\u2019s user, problem and three acceptance checks. Keep the scope to one page.",
+        "Write a prompt naming content, behavior, accessibility and privacy boundaries.",
+        "Open the starter. Save a copy as resource-finder-v1.html using a plain-text editor. If working offline, no AI tool is required.",
+        "Find the <h1> heading in the source and replace only its text. In the resources array, change the fictional Library Skills Desk name to Community Skills Desk. Save as resource-finder-v2.html and reopen.",
+        "Ask an approved AI tool for one small improvement, or make the heading/data edit manually. Record exactly what changed.",
+        "Test blank input, matching and nonmatching search, mixed case, category filters, keyboard focus and narrow-screen layout. Record expected, actual and pass/fail.",
+        "Fix one defect or improve one requirement. Repeat its test and one previously passing test. Keep both versions.",
+        "Demonstrate the app. Explain HTML/CSS/JavaScript, where data lives, and why a public SaaS service needs additional design and maintenance."
+      ],
+      "answers": [
+        "One specific user task and three observable outcomes.",
+        "Bounded one-file app; no personal data, secrets, payments or external dependencies.",
+        "Both original and working copy retained; .html extension, not rich text or .txt.",
+        "Heading changes visibly; new fictional name appears and is searchable. Quotes, commas and tags stay intact.",
+        "Revision small enough to explain; no unsupported claims about AI correctness.",
+        "All seven paths tested; honest failures and expected/actual evidence recorded.",
+        "Failed path now works or limitation clearly documented; regression check still passes.",
+        "HTML structure, CSS appearance, JavaScript behavior; in-page sample data, no protected backend; launch needs further checks."
+      ]
+    }
+  ]
+}
