@@ -1,0 +1,238 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 0.9782608695652174,
+  "words": [
+    {
+      "word": "Do",
+      "start": 0.0,
+      "end": 0.14
+    },
+    {
+      "word": "not",
+      "start": 0.14,
+      "end": 0.34
+    },
+    {
+      "word": "plug",
+      "start": 0.34,
+      "end": 0.68
+    },
+    {
+      "word": "in",
+      "start": 0.68,
+      "end": 1.04
+    },
+    {
+      "word": "an",
+      "start": 1.04,
+      "end": 1.14
+    },
+    {
+      "word": "unknown",
+      "start": 1.14,
+      "end": 1.46
+    },
+    {
+      "word": "USB",
+      "start": 1.46,
+      "end": 2.04
+    },
+    {
+      "word": "drive",
+      "start": 2.04,
+      "end": 2.48
+    },
+    {
+      "word": "to",
+      "start": 2.48,
+      "end": 2.82
+    },
+    {
+      "word": "discover",
+      "start": 2.82,
+      "end": 3.12
+    },
+    {
+      "word": "who",
+      "start": 3.12,
+      "end": 3.48
+    },
+    {
+      "word": "owns",
+      "start": 3.48,
+      "end": 3.82
+    },
+    {
+      "word": "it.",
+      "start": 3.82,
+      "end": 4.0
+    },
+    {
+      "word": "Give",
+      "start": 4.72,
+      "end": 4.78
+    },
+    {
+      "word": "it",
+      "start": 4.78,
+      "end": 4.94
+    },
+    {
+      "word": "to",
+      "start": 4.94,
+      "end": 5.06
+    },
+    {
+      "word": "authorized",
+      "start": 5.06,
+      "end": 5.4
+    },
+    {
+      "word": "staff.",
+      "start": 5.4,
+      "end": 6.12
+    },
+    {
+      "word": "Encryption",
+      "start": 6.98,
+      "end": 7.26
+    },
+    {
+      "word": "makes",
+      "start": 7.26,
+      "end": 7.64
+    },
+    {
+      "word": "data",
+      "start": 7.64,
+      "end": 7.9
+    },
+    {
+      "word": "unreadable",
+      "start": 7.9,
+      "end": 8.66
+    },
+    {
+      "word": "without",
+      "start": 8.66,
+      "end": 9.1
+    },
+    {
+      "word": "a",
+      "start": 9.1,
+      "end": 9.2
+    },
+    {
+      "word": "key.",
+      "start": 9.2,
+      "end": 9.42
+    },
+    {
+      "word": "Read-only",
+      "start": 9.42,
+      "end": 10.76
+    },
+    {
+      "word": "settings",
+      "start": 10.76,
+      "end": 11.24
+    },
+    {
+      "word": "restrict",
+      "start": 11.24,
+      "end": 11.62
+    },
+    {
+      "word": "editing,",
+      "start": 11.62,
+      "end": 12.26
+    },
+    {
+      "word": "which",
+      "start": 12.76,
+      "end": 12.94
+    },
+    {
+      "word": "is",
+      "start": 12.94,
+      "end": 13.1
+    },
+    {
+      "word": "a",
+      "start": 13.1,
+      "end": 13.24
+    },
+    {
+      "word": "different",
+      "start": 13.24,
+      "end": 13.4
+    },
+    {
+      "word": "protection.",
+      "start": 13.4,
+      "end": 13.94
+    },
+    {
+      "word": "A",
+      "start": 14.96,
+      "end": 14.98
+    },
+    {
+      "word": "locked",
+      "start": 14.98,
+      "end": 15.34
+    },
+    {
+      "word": "or",
+      "start": 15.34,
+      "end": 15.76
+    },
+    {
+      "word": "encrypted",
+      "start": 15.76,
+      "end": 16.18
+    },
+    {
+      "word": "device",
+      "start": 16.18,
+      "end": 16.78
+    },
+    {
+      "word": "still",
+      "start": 16.78,
+      "end": 17.28
+    },
+    {
+      "word": "needs",
+      "start": 17.28,
+      "end": 17.64
+    },
+    {
+      "word": "careful",
+      "start": 17.64,
+      "end": 17.98
+    },
+    {
+      "word": "account",
+      "start": 17.98,
+      "end": 18.54
+    },
+    {
+      "word": "and",
+      "start": 18.54,
+      "end": 18.88
+    },
+    {
+      "word": "file",
+      "start": 18.88,
+      "end": 19.12
+    },
+    {
+      "word": "access.",
+      "start": 19.12,
+      "end": 19.56
+    }
+  ],
+  "wavSha256": "4059fe61ea19ddb46026d1220f4955017dcf8dd7486ec29b2723807df080b35e",
+  "textSha256": "dfd9f38e5ca6b4409d6c35d1307ad9ddc8bf71065575a4afd36db4ac71ca0683"
+}

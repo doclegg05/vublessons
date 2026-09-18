@@ -1,0 +1,1 @@
+Sync carries changes between a device and an online service. It may also carry a deletion. That is why sync alone is not a separate backup. A backup is another recovery copy, and version history may help you recover earlier content when the service supports it.

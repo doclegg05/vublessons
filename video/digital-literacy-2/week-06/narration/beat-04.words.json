@@ -1,0 +1,238 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 0.9782608695652174,
+  "words": [
+    {
+      "word": "Run",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "the",
+      "start": 0.26,
+      "end": 0.48
+    },
+    {
+      "word": "checks",
+      "start": 0.48,
+      "end": 0.66
+    },
+    {
+      "word": "yourself.",
+      "start": 0.66,
+      "end": 1.24
+    },
+    {
+      "word": "Try",
+      "start": 2.16,
+      "end": 2.22
+    },
+    {
+      "word": "a",
+      "start": 2.22,
+      "end": 2.4
+    },
+    {
+      "word": "matching",
+      "start": 2.4,
+      "end": 2.7
+    },
+    {
+      "word": "name,",
+      "start": 2.7,
+      "end": 3.12
+    },
+    {
+      "word": "a",
+      "start": 3.6,
+      "end": 3.66
+    },
+    {
+      "word": "search",
+      "start": 3.66,
+      "end": 3.92
+    },
+    {
+      "word": "with",
+      "start": 3.92,
+      "end": 4.24
+    },
+    {
+      "word": "no",
+      "start": 4.24,
+      "end": 4.48
+    },
+    {
+      "word": "results,",
+      "start": 4.48,
+      "end": 4.94
+    },
+    {
+      "word": "and",
+      "start": 4.94,
+      "end": 5.38
+    },
+    {
+      "word": "different",
+      "start": 5.38,
+      "end": 5.62
+    },
+    {
+      "word": "letter",
+      "start": 5.62,
+      "end": 5.9
+    },
+    {
+      "word": "cases.",
+      "start": 5.9,
+      "end": 6.36
+    },
+    {
+      "word": "Use",
+      "start": 7.36,
+      "end": 7.48
+    },
+    {
+      "word": "only",
+      "start": 7.48,
+      "end": 7.9
+    },
+    {
+      "word": "the",
+      "start": 7.9,
+      "end": 8.08
+    },
+    {
+      "word": "keyboard,",
+      "start": 8.08,
+      "end": 8.36
+    },
+    {
+      "word": "then",
+      "start": 9.04,
+      "end": 9.18
+    },
+    {
+      "word": "narrow",
+      "start": 9.18,
+      "end": 9.5
+    },
+    {
+      "word": "the",
+      "start": 9.5,
+      "end": 9.84
+    },
+    {
+      "word": "screen.",
+      "start": 9.84,
+      "end": 10.16
+    },
+    {
+      "word": "Record",
+      "start": 10.96,
+      "end": 11.18
+    },
+    {
+      "word": "what",
+      "start": 11.18,
+      "end": 11.56
+    },
+    {
+      "word": "you",
+      "start": 11.56,
+      "end": 11.74
+    },
+    {
+      "word": "expected",
+      "start": 11.74,
+      "end": 12.12
+    },
+    {
+      "word": "and",
+      "start": 12.12,
+      "end": 12.84
+    },
+    {
+      "word": "what",
+      "start": 12.84,
+      "end": 13.02
+    },
+    {
+      "word": "actually",
+      "start": 13.02,
+      "end": 13.44
+    },
+    {
+      "word": "happened.",
+      "start": 13.44,
+      "end": 13.9
+    },
+    {
+      "word": "A",
+      "start": 14.78,
+      "end": 14.86
+    },
+    {
+      "word": "confident",
+      "start": 14.86,
+      "end": 15.34
+    },
+    {
+      "word": "AI",
+      "start": 15.34,
+      "end": 15.82
+    },
+    {
+      "word": "statement",
+      "start": 15.82,
+      "end": 16.5
+    },
+    {
+      "word": "does",
+      "start": 16.5,
+      "end": 16.82
+    },
+    {
+      "word": "not",
+      "start": 16.82,
+      "end": 17.06
+    },
+    {
+      "word": "count",
+      "start": 17.06,
+      "end": 17.42
+    },
+    {
+      "word": "as",
+      "start": 17.42,
+      "end": 17.7
+    },
+    {
+      "word": "evidence",
+      "start": 17.7,
+      "end": 18.02
+    },
+    {
+      "word": "that",
+      "start": 18.02,
+      "end": 18.44
+    },
+    {
+      "word": "these",
+      "start": 18.44,
+      "end": 18.68
+    },
+    {
+      "word": "paths",
+      "start": 18.68,
+      "end": 18.98
+    },
+    {
+      "word": "work.",
+      "start": 18.98,
+      "end": 19.38
+    }
+  ],
+  "wavSha256": "9339171bb081fb1bfca4ba9c5fe5af41fc76dca5d12de2ea4ffc3b47be8d98b0",
+  "textSha256": "5ee76ef6133cd021b15afb782f26f4d74bd460cdb97306c26e6c237ecfbc2fd9"
+}

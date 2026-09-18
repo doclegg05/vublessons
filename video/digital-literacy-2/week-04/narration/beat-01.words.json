@@ -1,0 +1,223 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.08
+    },
+    {
+      "word": "shared",
+      "start": 0.08,
+      "end": 0.34
+    },
+    {
+      "word": "file",
+      "start": 0.34,
+      "end": 0.68
+    },
+    {
+      "word": "works",
+      "start": 0.68,
+      "end": 1.22
+    },
+    {
+      "word": "better",
+      "start": 1.22,
+      "end": 1.68
+    },
+    {
+      "word": "when",
+      "start": 1.68,
+      "end": 2.0
+    },
+    {
+      "word": "people",
+      "start": 2.0,
+      "end": 2.28
+    },
+    {
+      "word": "know",
+      "start": 2.28,
+      "end": 2.62
+    },
+    {
+      "word": "their",
+      "start": 2.62,
+      "end": 2.86
+    },
+    {
+      "word": "roles.",
+      "start": 2.86,
+      "end": 3.46
+    },
+    {
+      "word": "Choose",
+      "start": 4.2,
+      "end": 4.48
+    },
+    {
+      "word": "an",
+      "start": 4.48,
+      "end": 4.7
+    },
+    {
+      "word": "owner",
+      "start": 4.7,
+      "end": 4.92
+    },
+    {
+      "word": "who",
+      "start": 4.92,
+      "end": 5.32
+    },
+    {
+      "word": "makes",
+      "start": 5.32,
+      "end": 5.58
+    },
+    {
+      "word": "final",
+      "start": 5.58,
+      "end": 5.9
+    },
+    {
+      "word": "decisions,",
+      "start": 5.9,
+      "end": 6.6
+    },
+    {
+      "word": "a",
+      "start": 7.46,
+      "end": 7.48
+    },
+    {
+      "word": "writer",
+      "start": 7.48,
+      "end": 7.76
+    },
+    {
+      "word": "who",
+      "start": 7.76,
+      "end": 8.14
+    },
+    {
+      "word": "drafts,",
+      "start": 8.14,
+      "end": 8.36
+    },
+    {
+      "word": "and",
+      "start": 9.14,
+      "end": 9.34
+    },
+    {
+      "word": "a",
+      "start": 9.34,
+      "end": 9.44
+    },
+    {
+      "word": "reviewer",
+      "start": 9.44,
+      "end": 9.8
+    },
+    {
+      "word": "who",
+      "start": 9.8,
+      "end": 10.24
+    },
+    {
+      "word": "gives",
+      "start": 10.24,
+      "end": 10.42
+    },
+    {
+      "word": "feedback.",
+      "start": 10.42,
+      "end": 10.96
+    },
+    {
+      "word": "Agree",
+      "start": 11.98,
+      "end": 12.28
+    },
+    {
+      "word": "on",
+      "start": 12.28,
+      "end": 12.6
+    },
+    {
+      "word": "where",
+      "start": 12.6,
+      "end": 12.76
+    },
+    {
+      "word": "the",
+      "start": 12.76,
+      "end": 12.88
+    },
+    {
+      "word": "common",
+      "start": 12.88,
+      "end": 13.2
+    },
+    {
+      "word": "copy",
+      "start": 13.2,
+      "end": 13.56
+    },
+    {
+      "word": "lives",
+      "start": 13.56,
+      "end": 14.06
+    },
+    {
+      "word": "and",
+      "start": 14.44,
+      "end": 14.78
+    },
+    {
+      "word": "what",
+      "start": 14.78,
+      "end": 14.98
+    },
+    {
+      "word": "finished",
+      "start": 14.98,
+      "end": 15.32
+    },
+    {
+      "word": "means",
+      "start": 15.32,
+      "end": 15.72
+    },
+    {
+      "word": "before",
+      "start": 15.72,
+      "end": 16.26
+    },
+    {
+      "word": "several",
+      "start": 16.26,
+      "end": 16.72
+    },
+    {
+      "word": "people",
+      "start": 16.72,
+      "end": 17.2
+    },
+    {
+      "word": "begin",
+      "start": 17.2,
+      "end": 17.62
+    },
+    {
+      "word": "editing.",
+      "start": 17.62,
+      "end": 17.98
+    }
+  ],
+  "wavSha256": "ff22d52925df7914daae21f25d7677b83e2545718125bc73d5181929dce97ef8",
+  "textSha256": "ce034024ec00786ad774a268364d82f58cf5075026b17b0e593fb7baf34bccb5"
+}

@@ -1,0 +1,44 @@
+{
+  "beat-01": {
+    "engine": "kokoro-onnx 0.6.1",
+    "voice": "af_heart",
+    "speed": 0.88,
+    "draft": false,
+    "sha256": "1b178646196f0af0fa6621945d074f3ec7adb0ea06eb94261887760280ec6747",
+    "textSha256": "e2f4a9cfba16e97c349687c84eb690310f0351b862b965819c28f160fbb0b210"
+  },
+  "beat-02": {
+    "engine": "kokoro-onnx 0.6.1",
+    "voice": "af_heart",
+    "speed": 0.88,
+    "draft": false,
+    "sha256": "3dab129fe5070d1b05bb8d2b92d7305f9681976a7ffc7a62db62cc5b33f2f93b",
+    "paceAdjustment": "ffmpeg atempo, target 140 wpm",
+    "textSha256": "820caa1fcb292fb21b753eaf4dfcfced4d5bc42fb6654f3fa99530840a5ad25f"
+  },
+  "beat-03": {
+    "engine": "kokoro-onnx 0.6.1",
+    "voice": "af_heart",
+    "speed": 0.88,
+    "draft": false,
+    "sha256": "0a4bff856d2e34806fffc7d35155e97328f92095768d2120670b059d3cf22bac",
+    "textSha256": "dfd9f38e5ca6b4409d6c35d1307ad9ddc8bf71065575a4afd36db4ac71ca0683"
+  },
+  "beat-04": {
+    "engine": "kokoro-onnx 0.6.1",
+    "voice": "af_heart",
+    "speed": 0.88,
+    "draft": false,
+    "sha256": "fb1e66080f30fd729861629ffe2e551dd99e9ad20d660f8fc9d3e1b710257564",
+    "textSha256": "9737a8ef68ad7e38457e2c067eda143f0c55d1ed7b015b9ab37a85eb4c85129b"
+  },
+  "beat-05": {
+    "engine": "kokoro-onnx 0.6.1",
+    "voice": "af_heart",
+    "speed": 0.88,
+    "draft": false,
+    "sha256": "f8219e8ad49e1c70b2e7ddc039eb945e419a7f0ead891a3a0d7fbe250bec8146",
+    "paceAdjustment": "ffmpeg atempo, target 140 wpm",
+    "textSha256": "fceaf090f4dbb69d6f1861120fee1531f72dc0b5105c67d88d083471c3d1a307"
+  }
+}

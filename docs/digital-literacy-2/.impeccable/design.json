@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-18T13:37:54.720796+00:00",
+  "title": "Design System: VUB Digital Literacy Level 2",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Primary",
+        "tonalRamp": [
+          "oklch(0.1500 0.07674 257.71)",
+          "oklch(0.2643 0.07674 257.71)",
+          "oklch(0.3786 0.07674 257.71)",
+          "oklch(0.4929 0.07674 257.71)",
+          "oklch(0.6071 0.07674 257.71)",
+          "oklch(0.7214 0.07674 257.71)",
+          "oklch(0.8357 0.07674 257.71)",
+          "oklch(0.9500 0.07674 257.71)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Primary Hover",
+        "tonalRamp": [
+          "oklch(0.1500 0.09157 260.08)",
+          "oklch(0.2643 0.09157 260.08)",
+          "oklch(0.3786 0.09157 260.08)",
+          "oklch(0.4929 0.09157 260.08)",
+          "oklch(0.6071 0.09157 260.08)",
+          "oklch(0.7214 0.09157 260.08)",
+          "oklch(0.8357 0.09157 260.08)",
+          "oklch(0.9500 0.09157 260.08)"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Gold",
+        "tonalRamp": [
+          "oklch(0.1500 0.13798 89.73)",
+          "oklch(0.2643 0.13798 89.73)",
+          "oklch(0.3786 0.13798 89.73)",
+          "oklch(0.4929 0.13798 89.73)",
+          "oklch(0.6071 0.13798 89.73)",
+          "oklch(0.7214 0.13798 89.73)",
+          "oklch(0.8357 0.13798 89.73)",
+          "oklch(0.9500 0.13798 89.73)"
+        ]
+      },
+      "active-gold": {
+        "role": "secondary",
+        "displayName": "Active Gold",
+        "tonalRamp": [
+          "oklch(0.1500 0.11037 92.45)",
+          "oklch(0.2643 0.11037 92.45)",
+          "oklch(0.3786 0.11037 92.45)",
+          "oklch(0.4929 0.11037 92.45)",
+          "oklch(0.6071 0.11037 92.45)",
+          "oklch(0.7214 0.11037 92.45)",
+          "oklch(0.8357 0.11037 92.45)",
+          "oklch(0.9500 0.11037 92.45)"
+        ]
+      },
+      "practice-teal": {
+        "role": "secondary",
+        "displayName": "Practice Teal",
+        "tonalRamp": [
+          "oklch(0.1500 0.07571 187.47)",
+          "oklch(0.2643 0.07571 187.47)",
+          "oklch(0.3786 0.07571 187.47)",
+          "oklch(0.4929 0.07571 187.47)",
+          "oklch(0.6071 0.07571 187.47)",
+          "oklch(0.7214 0.07571 187.47)",
+          "oklch(0.8357 0.07571 187.47)",
+          "oklch(0.9500 0.07571 187.47)"
+        ]
+      },
+      "practice-surface": {
+        "role": "secondary",
+        "displayName": "Practice Surface",
+        "tonalRamp": [
+          "oklch(0.1500 0.01507 186.68)",
+          "oklch(0.2643 0.01507 186.68)",
+          "oklch(0.3786 0.01507 186.68)",
+          "oklch(0.4929 0.01507 186.68)",
+          "oklch(0.6071 0.01507 186.68)",
+          "oklch(0.7214 0.01507 186.68)",
+          "oklch(0.8357 0.01507 186.68)",
+          "oklch(0.9500 0.01507 186.68)"
+        ]
+      },
+      "selected-surface": {
+        "role": "secondary",
+        "displayName": "Selected Surface",
+        "tonalRamp": [
+          "oklch(0.1500 0.01743 183.52)",
+          "oklch(0.2643 0.01743 183.52)",
+          "oklch(0.3786 0.01743 183.52)",
+          "oklch(0.4929 0.01743 183.52)",
+          "oklch(0.6071 0.01743 183.52)",
+          "oklch(0.7214 0.01743 183.52)",
+          "oklch(0.8357 0.01743 183.52)",
+          "oklch(0.9500 0.01743 183.52)"
+        ]
+      },
+      "sidebar": {
+        "role": "neutral",
+        "displayName": "Sidebar",
+        "tonalRamp": [
+          "oklch(0.1500 0.06624 253.05)",
+          "oklch(0.2643 0.06624 253.05)",
+          "oklch(0.3786 0.06624 253.05)",
+          "oklch(0.4929 0.06624 253.05)",
+          "oklch(0.6071 0.06624 253.05)",
+          "oklch(0.7214 0.06624 253.05)",
+          "oklch(0.8357 0.06624 253.05)",
+          "oklch(0.9500 0.06624 253.05)"
+        ]
+      },
+      "sidebar-hover": {
+        "role": "neutral",
+        "displayName": "Sidebar Hover",
+        "tonalRamp": [
+          "oklch(0.1500 0.07335 251.42)",
+          "oklch(0.2643 0.07335 251.42)",
+          "oklch(0.3786 0.07335 251.42)",
+          "oklch(0.4929 0.07335 251.42)",
+          "oklch(0.6071 0.07335 251.42)",
+          "oklch(0.7214 0.07335 251.42)",
+          "oklch(0.8357 0.07335 251.42)",
+          "oklch(0.9500 0.07335 251.42)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Canvas",
+        "tonalRamp": [
+          "oklch(0.1500 0.00453 258.32)",
+          "oklch(0.2643 0.00453 258.32)",
+          "oklch(0.3786 0.00453 258.32)",
+          "oklch(0.4929 0.00453 258.32)",
+          "oklch(0.6071 0.00453 258.32)",
+          "oklch(0.7214 0.00453 258.32)",
+          "oklch(0.8357 0.00453 258.32)",
+          "oklch(0.9500 0.00453 258.32)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(0.1500 0.00000 89.88)",
+          "oklch(0.2643 0.00000 89.88)",
+          "oklch(0.3786 0.00000 89.88)",
+          "oklch(0.4929 0.00000 89.88)",
+          "oklch(0.6071 0.00000 89.88)",
+          "oklch(0.7214 0.00000 89.88)",
+          "oklch(0.8357 0.00000 89.88)",
+          "oklch(0.9500 0.00000 89.88)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(0.1500 0.04597 259.14)",
+          "oklch(0.2643 0.04597 259.14)",
+          "oklch(0.3786 0.04597 259.14)",
+          "oklch(0.4929 0.04597 259.14)",
+          "oklch(0.6071 0.04597 259.14)",
+          "oklch(0.7214 0.04597 259.14)",
+          "oklch(0.8357 0.04597 259.14)",
+          "oklch(0.9500 0.04597 259.14)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(0.1500 0.04291 257.42)",
+          "oklch(0.2643 0.04291 257.42)",
+          "oklch(0.3786 0.04291 257.42)",
+          "oklch(0.4929 0.04291 257.42)",
+          "oklch(0.6071 0.04291 257.42)",
+          "oklch(0.7214 0.04291 257.42)",
+          "oklch(0.8357 0.04291 257.42)",
+          "oklch(0.9500 0.04291 257.42)"
+        ]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Divider",
+        "tonalRamp": [
+          "oklch(0.1500 0.02329 248.12)",
+          "oklch(0.2643 0.02329 248.12)",
+          "oklch(0.3786 0.02329 248.12)",
+          "oklch(0.4929 0.02329 248.12)",
+          "oklch(0.6071 0.02329 248.12)",
+          "oklch(0.7214 0.02329 248.12)",
+          "oklch(0.8357 0.02329 248.12)",
+          "oklch(0.9500 0.02329 248.12)"
+        ]
+      },
+      "cool-surface": {
+        "role": "neutral",
+        "displayName": "Cool Surface",
+        "tonalRamp": [
+          "oklch(0.1500 0.01103 243.66)",
+          "oklch(0.2643 0.01103 243.66)",
+          "oklch(0.3786 0.01103 243.66)",
+          "oklch(0.4929 0.01103 243.66)",
+          "oklch(0.6071 0.01103 243.66)",
+          "oklch(0.7214 0.01103 243.66)",
+          "oklch(0.8357 0.01103 243.66)",
+          "oklch(0.9500 0.01103 243.66)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "slide-body": {
+        "displayName": "Classroom slide body",
+        "purpose": "Instructional text and knowledge choices with the shared enlargement control."
+      },
+      "slide-navigation": {
+        "displayName": "Slide navigation",
+        "purpose": "Compact location controls, never lesson explanations."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lesson-panel",
+        "value": "0 8px 28px #102c4b0e",
+        "purpose": "Restrained depth beneath the white slide."
+      }
+    ],
+    "motion": [
+      {
+        "name": "flip-reveal",
+        "value": "transform .45s ease-out",
+        "purpose": "Learner-triggered card reveal; removed under prefers-reduced-motion."
+      },
+      {
+        "name": "pressed-control",
+        "value": "translateY(1px)",
+        "purpose": "Subtle active feedback on buttons."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1000px"
+      },
+      {
+        "name": "single-column",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "description": "Explicit lesson or document action.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Start lesson</button>",
+      "css": ".ds-primary{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:18px;line-height:1.8;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.55em 1em;border:2px solid #1b365d;border-radius:8px;cursor:pointer;background:#1b365d;color:white}.ds-primary:hover{background:#2c4a7c}.ds-primary:focus-visible{outline:4px solid #a65a00;outline-offset:4px;}.ds-primary:active{transform:translateY(1px)}.ds-primary:disabled{opacity:.55;cursor:default}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "description": "Companion actions such as returning to the course.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Course home</button>",
+      "css": ".ds-secondary{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:18px;line-height:1.8;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.55em 1em;border:2px solid #1b365d;border-radius:8px;cursor:pointer;background:white;color:#1b365d}.ds-secondary:hover{background:#e8eff5}.ds-secondary:focus-visible{outline:4px solid #a65a00;outline-offset:4px;}.ds-secondary:active{transform:translateY(1px)}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Labeled field",
+      "kind": "input",
+      "description": "Readable native form field for a practice task.",
+      "html": "<label class=\"ds-label\" for=\"ds-topic\">Practice topic</label><input class=\"ds-field\" id=\"ds-topic\" type=\"text\">",
+      "css": ".ds-label{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;display:block;font-size:18px;line-height:1.8;color:#16243a}.ds-field{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:18px;line-height:1.8;max-width:100%;padding:.6em;border:2px solid #617488;border-radius:6px;background:white;color:#16243a}.ds-field:focus-visible{outline:4px solid #a65a00;outline-offset:4px;}"
+    },
+    {
+      "name": "Lesson navigation",
+      "kind": "nav",
+      "description": "Dark navigation with a distinct current slide.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Lesson slides\"><button type=\"button\" class=\"ds-link\" aria-current=\"true\">Make technology work for you</button><button type=\"button\" class=\"ds-link\">A useful first task</button></nav>",
+      "css": ".ds-nav{background:#102c4b;padding:1.3rem}.ds-link{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;display:block;width:100%;min-height:44px;border:0;border-radius:5px;background:transparent;color:#e8eff5;text-align:left;font-size:16px;line-height:1.35;font-weight:400;padding:.65rem;margin:.2rem 0;cursor:pointer}.ds-link:hover{background:#25476b}.ds-link[aria-current=true]{background:#e5ca74;color:#102c4b;font-weight:700}.ds-link:focus-visible{outline:4px solid #f3d66b;outline-offset:4px}.ds-link:active{transform:translateY(1px)}",
+      "refersTo": "slide-navigation-current"
+    },
+    {
+      "name": "Lesson panel",
+      "kind": "card",
+      "description": "White reading surface with large task-focused body text.",
+      "html": "<section class=\"ds-panel\"><h2 class=\"ds-title\">Solve one small problem</h2><p class=\"ds-body\">Build a finder for fictional community resources.</p></section>",
+      "css": ".ds-panel{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:white;color:#16243a;border-radius:12px;padding:clamp(1.3rem,3vw,3rem);box-shadow:0 8px 28px #102c4b0e;overflow-wrap:anywhere}.ds-title{font-size:clamp(2rem,3.2vw,3rem);line-height:1.2;color:#1b365d;margin-top:0;text-wrap:balance}.ds-body{font-size:max(32px,var(--fs-slide,32px));line-height:1.6;max-width:72ch}",
+      "refersTo": "lesson-panel"
+    },
+    {
+      "name": "Practice note",
+      "kind": "card",
+      "description": "Teal supporting surface for hands-on practice.",
+      "html": "<aside class=\"ds-note\">Use fictional information for this practice task.</aside>",
+      "css": ".ds-note{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#e1efed;color:#16243a;border-radius:8px;padding:1rem 1.4rem;font-size:18px;line-height:1.8}",
+      "refersTo": "practice-note"
+    },
+    {
+      "name": "Knowledge answer",
+      "kind": "button",
+      "description": "An instructional answer preserves the classroom body minimum.",
+      "html": "<button class=\"ds-answer\" type=\"button\" aria-pressed=\"true\">Run the acceptance checks yourself</button>",
+      "css": ".ds-answer{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:18px;line-height:1.8;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:48px;padding:.55em 1em;border:2px solid #1b365d;border-radius:8px;cursor:pointer;background:#f5f7fa;color:#1b365d;text-align:left;justify-content:flex-start;font-size:max(32px,var(--fs-slide,32px));line-height:1.6}.ds-answer[aria-pressed=true]{background:#dcece9;border-color:#0f655f}.ds-answer:hover{background:#f5f7fa}.ds-answer[aria-pressed=true]:hover{background:#dcece9}.ds-answer:focus-visible{outline:4px solid #a65a00;outline-offset:4px;}.ds-answer:active{transform:translateY(1px)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The VUB guided lab",
+    "overview": "This name describes the incumbent course extension rather than a newly approved visual identity. The surface serves learners reading and operating software in an instructor-led computer lab. A light lesson canvas carries substantial readable text; persistent dark navigation gives the lesson a stable location; teal surfaces identify practice and explanation.\n\nThe governing visual authority is the existing VUB brand and the implemented course CSS, not a separate approved comp. This record applies to Digital Literacy Level 2 only. It does not replace platform-wide design authority or impose this course's layout on other courses.",
+    "keyCharacteristics": [
+      "VUB navy with a narrow gold brand line and gold current-slide treatment.",
+      "White reading panels beside a dark, independently scrollable desktop sidebar.",
+      "Familiar Segoe UI typography with an enlarged classroom slide-body scale.",
+      "Teal practice surfaces, explicit feedback and learner-controlled interactions."
+    ],
+    "rules": [
+      {
+        "name": "The Visible State Rule",
+        "body": "Pair color with text, shape, weight or semantic state; answer feedback explicitly says “Correct” or “Try again.”",
+        "section": "colors"
+      },
+      {
+        "name": "The Classroom Body Rule",
+        "body": "Instructional slide body content and knowledge-check answer choices retain the 24pt/32px minimum as the shared text-size control enlarges them. Compact navigation, video captions and document metadata are distinct roles; their smaller values must not be reused for lesson explanations.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do keep this system scoped to the Level 2 course extension.",
+      "Do preserve the classroom body floor when adding new interactive content.",
+      "Do pair state color with words or semantic state.",
+      "Do maintain the same task and controls through desktop, mobile, reduced-motion and print modes.",
+      "Do retain VUB identity assets and the shared text-size control."
+    ],
+    "donts": [
+      "Don't add CDN dependencies or assume external fonts are available.",
+      "Don't turn compact navigation typography into lesson body typography.",
+      "Don't use animation as the only way to reveal an answer.",
+      "Don't infer a platform redesign or approved comp from this course-scoped record."
+    ]
+  }
+}

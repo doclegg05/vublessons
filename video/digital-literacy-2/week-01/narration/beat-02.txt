@@ -1,0 +1,1 @@
+Browser zoom makes a webpage larger or smaller. Display scaling affects the wider desktop. If only the webpage is difficult to read, try browser zoom first. Use the text size controls when they are available, and check that buttons and instructions remain usable.

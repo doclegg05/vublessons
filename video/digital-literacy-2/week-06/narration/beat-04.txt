@@ -1,0 +1,1 @@
+Run the checks yourself. Try a matching name, a search with no results, and different letter cases. Use only the keyboard, then narrow the screen. Record what you expected and what actually happened. A confident AI statement does not count as evidence that these paths work.

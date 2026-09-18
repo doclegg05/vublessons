@@ -1,0 +1,116 @@
+1
+00:00:00,010 --> 00:00:02,710
+A file on this computer may not be
+available on
+
+2
+00:00:02,710 --> 00:00:07,070
+another computer. A cloud service stores a
+copy under an
+
+3
+00:00:07,070 --> 00:00:11,630
+account. Before switching devices, check
+that the latest changes
+
+4
+00:00:11,630 --> 00:00:16,450
+have finished saving or syncing, and
+confirm which account owns
+
+5
+00:00:16,450 --> 00:00:18,030
+or controls the file.
+
+6
+00:00:19,672 --> 00:00:23,012
+Choose the smallest permission that lets
+the other person do
+
+7
+00:00:23,012 --> 00:00:27,652
+the task. A viewer reads. A commenter can
+suggest wording
+
+8
+00:00:27,652 --> 00:00:31,792
+when the service supports comments. An
+editor can change the
+
+9
+00:00:31,792 --> 00:00:36,492
+content. Check the recipient carefully,
+then ask them to verify
+
+10
+00:00:36,492 --> 00:00:38,072
+that the file opens.
+
+11
+00:00:39,769 --> 00:00:43,689
+Sync carries changes between a device and
+an online service.
+
+12
+00:00:44,649 --> 00:00:48,209
+It may also carry a deletion. That is why
+sync
+
+13
+00:00:48,209 --> 00:00:52,329
+alone is not a separate backup. A backup
+is another
+
+14
+00:00:52,329 --> 00:00:56,829
+recovery copy, and version history may
+help you recover earlier
+
+15
+00:00:56,829 --> 00:00:59,229
+content when the service supports it.
+
+16
+00:01:00,715 --> 00:01:04,175
+If the whole file was deleted, check the
+trash or
+
+17
+00:01:04,175 --> 00:01:07,795
+recycle bin. If the file is still there
+but its
+
+18
+00:01:07,795 --> 00:01:13,295
+content changed, inspect version history.
+Preview the earlier version
+
+19
+00:01:13,295 --> 00:01:17,555
+before restoring it, and coordinate with
+collaborators so you do
+
+20
+00:01:17,555 --> 00:01:19,235
+not overwrite work they need.
+
+21
+00:01:20,805 --> 00:01:23,825
+Your classmate should suggest clearer
+wording without rewriting
+
+22
+00:01:23,825 --> 00:01:28,505
+your handout directly. Which permission
+fits? Pause and decide.
+
+23
+00:01:29,545 --> 00:01:33,085
+Commenter access fits when it is
+available. Try that choice
+
+24
+00:01:33,085 --> 00:01:38,025
+in the course simulator, explain your
+reason, and keep all practice records
+fictional.

@@ -1,0 +1,248 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Tell",
+      "start": 0.0,
+      "end": 0.16
+    },
+    {
+      "word": "the",
+      "start": 0.16,
+      "end": 0.32
+    },
+    {
+      "word": "AI",
+      "start": 0.32,
+      "end": 0.58
+    },
+    {
+      "word": "what",
+      "start": 0.58,
+      "end": 1.08
+    },
+    {
+      "word": "the",
+      "start": 1.08,
+      "end": 1.2
+    },
+    {
+      "word": "user",
+      "start": 1.2,
+      "end": 1.42
+    },
+    {
+      "word": "should",
+      "start": 1.42,
+      "end": 1.78
+    },
+    {
+      "word": "do,",
+      "start": 1.78,
+      "end": 2.04
+    },
+    {
+      "word": "which",
+      "start": 2.44,
+      "end": 2.52
+    },
+    {
+      "word": "controls",
+      "start": 2.52,
+      "end": 2.98
+    },
+    {
+      "word": "are",
+      "start": 2.98,
+      "end": 3.38
+    },
+    {
+      "word": "needed,",
+      "start": 3.38,
+      "end": 3.68
+    },
+    {
+      "word": "and",
+      "start": 4.12,
+      "end": 4.32
+    },
+    {
+      "word": "how",
+      "start": 4.32,
+      "end": 4.54
+    },
+    {
+      "word": "to",
+      "start": 4.54,
+      "end": 4.76
+    },
+    {
+      "word": "test",
+      "start": 4.76,
+      "end": 4.98
+    },
+    {
+      "word": "them.",
+      "start": 4.98,
+      "end": 5.26
+    },
+    {
+      "word": "Ask",
+      "start": 6.06,
+      "end": 6.3
+    },
+    {
+      "word": "for",
+      "start": 6.3,
+      "end": 6.52
+    },
+    {
+      "word": "labeled",
+      "start": 6.52,
+      "end": 6.8
+    },
+    {
+      "word": "fields,",
+      "start": 6.8,
+      "end": 7.36
+    },
+    {
+      "word": "visible",
+      "start": 7.86,
+      "end": 8.12
+    },
+    {
+      "word": "keyboard",
+      "start": 8.12,
+      "end": 8.5
+    },
+    {
+      "word": "focus,",
+      "start": 8.5,
+      "end": 9.12
+    },
+    {
+      "word": "and",
+      "start": 9.5,
+      "end": 9.62
+    },
+    {
+      "word": "no",
+      "start": 9.62,
+      "end": 9.84
+    },
+    {
+      "word": "external",
+      "start": 9.84,
+      "end": 10.28
+    },
+    {
+      "word": "dependencies.",
+      "start": 10.28,
+      "end": 10.72
+    },
+    {
+      "word": "Use",
+      "start": 12.08,
+      "end": 12.3
+    },
+    {
+      "word": "fictional",
+      "start": 12.3,
+      "end": 12.54
+    },
+    {
+      "word": "data.",
+      "start": 12.54,
+      "end": 13.06
+    },
+    {
+      "word": "Do",
+      "start": 13.92,
+      "end": 13.92
+    },
+    {
+      "word": "not",
+      "start": 13.92,
+      "end": 14.1
+    },
+    {
+      "word": "place",
+      "start": 14.1,
+      "end": 14.38
+    },
+    {
+      "word": "passwords",
+      "start": 14.38,
+      "end": 14.94
+    },
+    {
+      "word": "or",
+      "start": 14.94,
+      "end": 15.42
+    },
+    {
+      "word": "private",
+      "start": 15.42,
+      "end": 15.8
+    },
+    {
+      "word": "API",
+      "start": 15.8,
+      "end": 16.16
+    },
+    {
+      "word": "keys",
+      "start": 16.16,
+      "end": 17.0
+    },
+    {
+      "word": "in",
+      "start": 17.0,
+      "end": 17.2
+    },
+    {
+      "word": "browser",
+      "start": 17.2,
+      "end": 17.38
+    },
+    {
+      "word": "code,",
+      "start": 17.38,
+      "end": 17.9
+    },
+    {
+      "word": "because",
+      "start": 18.3,
+      "end": 18.62
+    },
+    {
+      "word": "people",
+      "start": 18.62,
+      "end": 18.9
+    },
+    {
+      "word": "can",
+      "start": 18.9,
+      "end": 19.22
+    },
+    {
+      "word": "inspect",
+      "start": 19.22,
+      "end": 19.56
+    },
+    {
+      "word": "that",
+      "start": 19.56,
+      "end": 19.9
+    },
+    {
+      "word": "code.",
+      "start": 19.9,
+      "end": 20.2
+    }
+  ],
+  "wavSha256": "adef5e93aba0a6669c189fa816152c264a8d4542fa09c1b22971b69d9549ba9f",
+  "textSha256": "ee640e024ee3ca346fafcf46d825f23af3a3d11e6d2bee77200f7cbfe1730430"
+}

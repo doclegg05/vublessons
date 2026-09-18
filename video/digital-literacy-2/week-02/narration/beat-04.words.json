@@ -1,0 +1,228 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 0.9772727272727273,
+  "words": [
+    {
+      "word": "If",
+      "start": 0.0,
+      "end": 0.14
+    },
+    {
+      "word": "the",
+      "start": 0.14,
+      "end": 0.26
+    },
+    {
+      "word": "whole",
+      "start": 0.26,
+      "end": 0.44
+    },
+    {
+      "word": "file",
+      "start": 0.44,
+      "end": 0.8
+    },
+    {
+      "word": "was",
+      "start": 0.8,
+      "end": 1.16
+    },
+    {
+      "word": "deleted,",
+      "start": 1.16,
+      "end": 1.56
+    },
+    {
+      "word": "check",
+      "start": 2.28,
+      "end": 2.42
+    },
+    {
+      "word": "the",
+      "start": 2.42,
+      "end": 2.62
+    },
+    {
+      "word": "trash",
+      "start": 2.62,
+      "end": 2.88
+    },
+    {
+      "word": "or",
+      "start": 2.88,
+      "end": 3.46
+    },
+    {
+      "word": "recycle",
+      "start": 3.46,
+      "end": 3.94
+    },
+    {
+      "word": "bin.",
+      "start": 3.94,
+      "end": 4.32
+    },
+    {
+      "word": "If",
+      "start": 5.3,
+      "end": 5.34
+    },
+    {
+      "word": "the",
+      "start": 5.34,
+      "end": 5.52
+    },
+    {
+      "word": "file",
+      "start": 5.52,
+      "end": 5.8
+    },
+    {
+      "word": "is",
+      "start": 5.8,
+      "end": 6.1
+    },
+    {
+      "word": "still",
+      "start": 6.1,
+      "end": 6.36
+    },
+    {
+      "word": "there",
+      "start": 6.36,
+      "end": 6.64
+    },
+    {
+      "word": "but",
+      "start": 6.64,
+      "end": 6.94
+    },
+    {
+      "word": "its",
+      "start": 6.94,
+      "end": 7.08
+    },
+    {
+      "word": "content",
+      "start": 7.08,
+      "end": 7.34
+    },
+    {
+      "word": "changed,",
+      "start": 7.34,
+      "end": 8.22
+    },
+    {
+      "word": "inspect",
+      "start": 8.8,
+      "end": 9.12
+    },
+    {
+      "word": "version",
+      "start": 9.12,
+      "end": 9.64
+    },
+    {
+      "word": "history.",
+      "start": 9.64,
+      "end": 10.04
+    },
+    {
+      "word": "Preview",
+      "start": 11.32,
+      "end": 11.42
+    },
+    {
+      "word": "the",
+      "start": 11.42,
+      "end": 11.74
+    },
+    {
+      "word": "earlier",
+      "start": 11.74,
+      "end": 12.12
+    },
+    {
+      "word": "version",
+      "start": 12.12,
+      "end": 12.58
+    },
+    {
+      "word": "before",
+      "start": 12.58,
+      "end": 13.02
+    },
+    {
+      "word": "restoring",
+      "start": 13.02,
+      "end": 13.46
+    },
+    {
+      "word": "it,",
+      "start": 13.46,
+      "end": 13.9
+    },
+    {
+      "word": "and",
+      "start": 13.9,
+      "end": 14.42
+    },
+    {
+      "word": "coordinate",
+      "start": 14.42,
+      "end": 14.92
+    },
+    {
+      "word": "with",
+      "start": 14.92,
+      "end": 15.2
+    },
+    {
+      "word": "collaborators",
+      "start": 15.2,
+      "end": 15.56
+    },
+    {
+      "word": "so",
+      "start": 15.56,
+      "end": 16.54
+    },
+    {
+      "word": "you",
+      "start": 16.54,
+      "end": 16.7
+    },
+    {
+      "word": "do",
+      "start": 16.7,
+      "end": 16.84
+    },
+    {
+      "word": "not",
+      "start": 16.84,
+      "end": 17.06
+    },
+    {
+      "word": "overwrite",
+      "start": 17.06,
+      "end": 17.52
+    },
+    {
+      "word": "work",
+      "start": 17.52,
+      "end": 18.0
+    },
+    {
+      "word": "they",
+      "start": 18.0,
+      "end": 18.26
+    },
+    {
+      "word": "need.",
+      "start": 18.26,
+      "end": 18.52
+    }
+  ],
+  "wavSha256": "5d9edfcaa3c108339b1fdd5782acde70148cb565bd13c2cb894f7f07c7cb5b9b",
+  "textSha256": "813239427640a5dc9b3204ffeecaec577294ceedfe2e323e2fc58cf823d76f96"
+}

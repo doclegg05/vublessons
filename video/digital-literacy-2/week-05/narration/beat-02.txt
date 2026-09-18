@@ -1,0 +1,1 @@
+A video meeting may need camera access. A simple text page usually does not. Grant permissions only when they fit a clear task and you trust the app. You can deny an unrelated request and review camera or microphone permissions after you finish.

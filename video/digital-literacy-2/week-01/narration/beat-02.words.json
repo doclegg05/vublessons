@@ -1,0 +1,223 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Browser",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "zoom",
+      "start": 0.26,
+      "end": 0.62
+    },
+    {
+      "word": "makes",
+      "start": 0.62,
+      "end": 1.06
+    },
+    {
+      "word": "a",
+      "start": 1.06,
+      "end": 1.22
+    },
+    {
+      "word": "webpage",
+      "start": 1.22,
+      "end": 1.42
+    },
+    {
+      "word": "larger",
+      "start": 1.42,
+      "end": 2.08
+    },
+    {
+      "word": "or",
+      "start": 2.08,
+      "end": 2.58
+    },
+    {
+      "word": "smaller.",
+      "start": 2.58,
+      "end": 2.96
+    },
+    {
+      "word": "Display",
+      "start": 4.14,
+      "end": 4.14
+    },
+    {
+      "word": "scaling",
+      "start": 4.14,
+      "end": 4.66
+    },
+    {
+      "word": "affects",
+      "start": 4.66,
+      "end": 5.04
+    },
+    {
+      "word": "the",
+      "start": 5.04,
+      "end": 5.38
+    },
+    {
+      "word": "wider",
+      "start": 5.38,
+      "end": 5.58
+    },
+    {
+      "word": "desktop.",
+      "start": 5.58,
+      "end": 5.96
+    },
+    {
+      "word": "If",
+      "start": 7.0,
+      "end": 7.04
+    },
+    {
+      "word": "only",
+      "start": 7.04,
+      "end": 7.26
+    },
+    {
+      "word": "the",
+      "start": 7.26,
+      "end": 7.54
+    },
+    {
+      "word": "webpage",
+      "start": 7.54,
+      "end": 7.82
+    },
+    {
+      "word": "is",
+      "start": 7.82,
+      "end": 8.26
+    },
+    {
+      "word": "difficult",
+      "start": 8.26,
+      "end": 8.6
+    },
+    {
+      "word": "to",
+      "start": 8.6,
+      "end": 8.88
+    },
+    {
+      "word": "read,",
+      "start": 8.88,
+      "end": 9.1
+    },
+    {
+      "word": "try",
+      "start": 9.74,
+      "end": 9.84
+    },
+    {
+      "word": "browser",
+      "start": 9.84,
+      "end": 10.26
+    },
+    {
+      "word": "zoom",
+      "start": 10.26,
+      "end": 10.68
+    },
+    {
+      "word": "first.",
+      "start": 10.68,
+      "end": 11.16
+    },
+    {
+      "word": "Use",
+      "start": 12.26,
+      "end": 12.26
+    },
+    {
+      "word": "the",
+      "start": 12.26,
+      "end": 12.42
+    },
+    {
+      "word": "text",
+      "start": 12.42,
+      "end": 12.64
+    },
+    {
+      "word": "size",
+      "start": 12.64,
+      "end": 13.14
+    },
+    {
+      "word": "controls",
+      "start": 13.14,
+      "end": 13.52
+    },
+    {
+      "word": "when",
+      "start": 13.52,
+      "end": 14.1
+    },
+    {
+      "word": "they",
+      "start": 14.1,
+      "end": 14.24
+    },
+    {
+      "word": "are",
+      "start": 14.24,
+      "end": 14.4
+    },
+    {
+      "word": "available,",
+      "start": 14.4,
+      "end": 14.8
+    },
+    {
+      "word": "and",
+      "start": 15.34,
+      "end": 15.5
+    },
+    {
+      "word": "check",
+      "start": 15.5,
+      "end": 15.76
+    },
+    {
+      "word": "that",
+      "start": 15.76,
+      "end": 16.0
+    },
+    {
+      "word": "buttons",
+      "start": 16.0,
+      "end": 16.3
+    },
+    {
+      "word": "and",
+      "start": 16.3,
+      "end": 16.72
+    },
+    {
+      "word": "instructions",
+      "start": 16.72,
+      "end": 17.14
+    },
+    {
+      "word": "remain",
+      "start": 17.14,
+      "end": 17.8
+    },
+    {
+      "word": "usable.",
+      "start": 17.8,
+      "end": 18.14
+    }
+  ],
+  "wavSha256": "f5a17dd3fc86fc670293ced7d76ebed9935f3fa5a585e1159f703c2ee65793df",
+  "textSha256": "590641ea051fae16007aa362068ea3ee9912f3285e30e2944622a48e440817fa"
+}

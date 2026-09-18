@@ -1,0 +1,1 @@
+Do not plug in an unknown USB drive to discover who owns it. Give it to authorized staff. Encryption makes data unreadable without a key. Read-only settings restrict editing, which is a different protection. A locked or encrypted device still needs careful account and file access.

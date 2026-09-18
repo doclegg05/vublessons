@@ -1,0 +1,218 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "HTML",
+      "start": 0.0,
+      "end": 0.36
+    },
+    {
+      "word": "gives",
+      "start": 0.36,
+      "end": 0.92
+    },
+    {
+      "word": "the",
+      "start": 0.92,
+      "end": 1.1
+    },
+    {
+      "word": "page",
+      "start": 1.1,
+      "end": 1.32
+    },
+    {
+      "word": "its",
+      "start": 1.32,
+      "end": 1.58
+    },
+    {
+      "word": "content",
+      "start": 1.58,
+      "end": 1.98
+    },
+    {
+      "word": "and",
+      "start": 1.98,
+      "end": 2.22
+    },
+    {
+      "word": "structure.",
+      "start": 2.22,
+      "end": 2.58
+    },
+    {
+      "word": "CSS",
+      "start": 3.68,
+      "end": 3.68
+    },
+    {
+      "word": "controls",
+      "start": 3.68,
+      "end": 4.28
+    },
+    {
+      "word": "appearance",
+      "start": 4.28,
+      "end": 4.72
+    },
+    {
+      "word": "and",
+      "start": 4.72,
+      "end": 5.26
+    },
+    {
+      "word": "layout.",
+      "start": 5.26,
+      "end": 5.5
+    },
+    {
+      "word": "JavaScript",
+      "start": 6.64,
+      "end": 6.64
+    },
+    {
+      "word": "responds",
+      "start": 6.64,
+      "end": 7.24
+    },
+    {
+      "word": "to",
+      "start": 7.24,
+      "end": 7.66
+    },
+    {
+      "word": "input,",
+      "start": 7.66,
+      "end": 8.0
+    },
+    {
+      "word": "such",
+      "start": 8.3,
+      "end": 8.48
+    },
+    {
+      "word": "as",
+      "start": 8.48,
+      "end": 8.64
+    },
+    {
+      "word": "filtering",
+      "start": 8.64,
+      "end": 9.02
+    },
+    {
+      "word": "a",
+      "start": 9.02,
+      "end": 9.22
+    },
+    {
+      "word": "list.",
+      "start": 9.22,
+      "end": 9.42
+    },
+    {
+      "word": "The",
+      "start": 10.3,
+      "end": 10.3
+    },
+    {
+      "word": "supplied",
+      "start": 10.3,
+      "end": 10.56
+    },
+    {
+      "word": "starter",
+      "start": 10.56,
+      "end": 10.98
+    },
+    {
+      "word": "keeps",
+      "start": 10.98,
+      "end": 11.34
+    },
+    {
+      "word": "fictional",
+      "start": 11.34,
+      "end": 11.64
+    },
+    {
+      "word": "records",
+      "start": 11.64,
+      "end": 12.06
+    },
+    {
+      "word": "inside",
+      "start": 12.06,
+      "end": 12.42
+    },
+    {
+      "word": "the",
+      "start": 12.42,
+      "end": 12.78
+    },
+    {
+      "word": "file.",
+      "start": 12.78,
+      "end": 12.98
+    },
+    {
+      "word": "It",
+      "start": 13.66,
+      "end": 13.72
+    },
+    {
+      "word": "has",
+      "start": 13.72,
+      "end": 13.86
+    },
+    {
+      "word": "no",
+      "start": 13.86,
+      "end": 14.1
+    },
+    {
+      "word": "real",
+      "start": 14.1,
+      "end": 14.4
+    },
+    {
+      "word": "account",
+      "start": 14.4,
+      "end": 14.74
+    },
+    {
+      "word": "system,",
+      "start": 14.74,
+      "end": 15.24
+    },
+    {
+      "word": "private",
+      "start": 15.62,
+      "end": 15.84
+    },
+    {
+      "word": "database,",
+      "start": 15.84,
+      "end": 16.2
+    },
+    {
+      "word": "or",
+      "start": 16.8,
+      "end": 16.98
+    },
+    {
+      "word": "payment",
+      "start": 16.98,
+      "end": 17.22
+    },
+    {
+      "word": "service.",
+      "start": 17.22,
+      "end": 17.64
+    }
+  ],
+  "wavSha256": "fb801f155efa5d001293128c8f7184d66ce73779e27b01b4c7520b84cc3d84a6",
+  "textSha256": "5bcfd5c9803a220b49a29d1a42154bee5ddf538b6c3d55959d329cc17f586ae3"
+}

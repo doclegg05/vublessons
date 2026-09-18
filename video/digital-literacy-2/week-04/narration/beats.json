@@ -1,0 +1,66 @@
+[
+  {
+    "id": "beat-01",
+    "title": "Agree on the task",
+    "labels": [
+      "Owner",
+      "Writer",
+      "Reviewer"
+    ],
+    "text": "A shared file works better when people know their roles. Choose an owner who makes final decisions, a writer who drafts, and a reviewer who gives feedback. Agree on where the common copy lives and what finished means before several people begin editing.",
+    "window": 19.661,
+    "audioDuration": 18.411333333333335,
+    "start": 0.01
+  },
+  {
+    "id": "beat-02",
+    "title": "Choose when to work",
+    "labels": [
+      "Together: synchronous",
+      "Different times: asynchronous"
+    ],
+    "text": "Working on the same document during a live call is synchronous collaboration. Leaving comments for someone to read later is asynchronous collaboration. Choose based on schedules and the decision needed. For later feedback, include enough context that the writer can act without another meeting.",
+    "window": 20.621,
+    "audioDuration": 19.370666666666665,
+    "start": 19.671
+  },
+  {
+    "id": "beat-03",
+    "title": "Make feedback specific",
+    "labels": [
+      "Name the location",
+      "Suggest a change",
+      "Explain the reason"
+    ],
+    "text": "Helpful feedback names a change and its purpose. You might write: add the contact number after the steps so readers can find help. The writer can accept the idea, ask a question, or explain a different choice. A comment about the work is more useful than a judgment about the person.",
+    "window": 23.09,
+    "audioDuration": 21.8405,
+    "start": 40.292
+  },
+  {
+    "id": "beat-04",
+    "title": "Respect the meeting",
+    "labels": [
+      "Test sound",
+      "Mute when needed",
+      "Ask before recording"
+    ],
+    "text": "Before a meeting, test the sound and choose the correct microphone. Mute when appropriate, use the agreed chat or raise-hand tools, and ask before recording. In a webinar, the host may control who can speak. Follow the event's instructions and respect other participants.",
+    "window": 20.096,
+    "audioDuration": 18.84625,
+    "start": 63.382
+  },
+  {
+    "id": "beat-05",
+    "title": "Leave a clear next step",
+    "labels": [
+      "Who does what?",
+      "When is it needed?",
+      "How will we check?"
+    ],
+    "text": "Draft a fictional message asking a partner to review your handout. Use a specific subject, one clear request, and a reasonable response time. Choose feedback access when that fits. After the review, record the decision and verify the final file. No real message needs to be sent for this practice.",
+    "window": 22.666,
+    "audioDuration": 21.415583333333334,
+    "start": 83.478
+  }
+]

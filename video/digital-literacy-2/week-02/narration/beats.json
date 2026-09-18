@@ -1,0 +1,65 @@
+[
+  {
+    "id": "beat-01",
+    "title": "Know where the file lives",
+    "labels": [
+      "This device",
+      "Cloud account"
+    ],
+    "text": "A file on this computer may not be available on another computer. A cloud service stores a copy under an account. Before switching devices, check that the latest changes have finished saving or syncing, and confirm which account owns or controls the file.",
+    "window": 19.662,
+    "audioDuration": 18.412416666666665,
+    "start": 0.01
+  },
+  {
+    "id": "beat-02",
+    "title": "Permission follows the task",
+    "labels": [
+      "Viewer: read",
+      "Commenter: suggest",
+      "Editor: change"
+    ],
+    "text": "Choose the smallest permission that lets the other person do the task. A viewer reads. A commenter can suggest wording when the service supports comments. An editor can change the content. Check the recipient carefully, then ask them to verify that the file opens.",
+    "window": 20.097,
+    "audioDuration": 18.847333333333335,
+    "start": 19.672
+  },
+  {
+    "id": "beat-03",
+    "title": "Sync is not a separate backup",
+    "labels": [
+      "A change can sync",
+      "A deletion can sync",
+      "Keep a recovery plan"
+    ],
+    "text": "Sync carries changes between a device and an online service. It may also carry a deletion. That is why sync alone is not a separate backup. A backup is another recovery copy, and version history may help you recover earlier content when the service supports it.",
+    "window": 20.946,
+    "audioDuration": 19.695875,
+    "start": 39.769
+  },
+  {
+    "id": "beat-04",
+    "title": "Match the recovery tool",
+    "labels": [
+      "Deleted file: recycle bin",
+      "Changed content: version history"
+    ],
+    "text": "If the whole file was deleted, check the trash or recycle bin. If the file is still there but its content changed, inspect version history. Preview the earlier version before restoring it, and coordinate with collaborators so you do not overwrite work they need.",
+    "window": 20.09,
+    "audioDuration": 18.8395,
+    "start": 60.715
+  },
+  {
+    "id": "beat-05",
+    "title": "Make a careful practice share",
+    "labels": [
+      "Fictional file",
+      "Named recipient",
+      "Limited access"
+    ],
+    "text": "Your classmate should suggest clearer wording without rewriting your handout directly. Which permission fits? Pause and decide. Commenter access fits when it is available. Try that choice in the course simulator, explain your reason, and keep all practice records fictional.",
+    "window": 18.957,
+    "audioDuration": 17.706666666666667,
+    "start": 80.805
+  }
+]

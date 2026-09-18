@@ -1,0 +1,233 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Start",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "with",
+      "start": 0.32,
+      "end": 0.56
+    },
+    {
+      "word": "a",
+      "start": 0.56,
+      "end": 0.68
+    },
+    {
+      "word": "small",
+      "start": 0.68,
+      "end": 0.88
+    },
+    {
+      "word": "problem:",
+      "start": 0.88,
+      "end": 1.48
+    },
+    {
+      "word": "help",
+      "start": 2.3,
+      "end": 2.32
+    },
+    {
+      "word": "someone",
+      "start": 2.32,
+      "end": 2.7
+    },
+    {
+      "word": "find",
+      "start": 2.7,
+      "end": 3.06
+    },
+    {
+      "word": "a",
+      "start": 3.06,
+      "end": 3.3
+    },
+    {
+      "word": "fictional",
+      "start": 3.3,
+      "end": 3.58
+    },
+    {
+      "word": "community",
+      "start": 3.58,
+      "end": 4.02
+    },
+    {
+      "word": "resource.",
+      "start": 4.02,
+      "end": 4.7
+    },
+    {
+      "word": "Keep",
+      "start": 5.9,
+      "end": 5.94
+    },
+    {
+      "word": "the",
+      "start": 5.94,
+      "end": 6.12
+    },
+    {
+      "word": "first",
+      "start": 6.12,
+      "end": 6.34
+    },
+    {
+      "word": "app",
+      "start": 6.34,
+      "end": 6.66
+    },
+    {
+      "word": "to",
+      "start": 6.66,
+      "end": 6.88
+    },
+    {
+      "word": "one",
+      "start": 6.88,
+      "end": 7.08
+    },
+    {
+      "word": "page",
+      "start": 7.08,
+      "end": 7.44
+    },
+    {
+      "word": "with",
+      "start": 7.44,
+      "end": 7.78
+    },
+    {
+      "word": "search,",
+      "start": 7.78,
+      "end": 8.08
+    },
+    {
+      "word": "a",
+      "start": 8.68,
+      "end": 8.76
+    },
+    {
+      "word": "category",
+      "start": 8.76,
+      "end": 9.12
+    },
+    {
+      "word": "filter,",
+      "start": 9.12,
+      "end": 9.58
+    },
+    {
+      "word": "and",
+      "start": 10.14,
+      "end": 10.38
+    },
+    {
+      "word": "readable",
+      "start": 10.38,
+      "end": 10.64
+    },
+    {
+      "word": "results.",
+      "start": 10.64,
+      "end": 11.22
+    },
+    {
+      "word": "Write",
+      "start": 12.38,
+      "end": 12.48
+    },
+    {
+      "word": "three",
+      "start": 12.48,
+      "end": 12.8
+    },
+    {
+      "word": "checks",
+      "start": 12.8,
+      "end": 13.2
+    },
+    {
+      "word": "before",
+      "start": 13.2,
+      "end": 13.54
+    },
+    {
+      "word": "asking",
+      "start": 13.54,
+      "end": 14.12
+    },
+    {
+      "word": "AI",
+      "start": 14.12,
+      "end": 14.44
+    },
+    {
+      "word": "to",
+      "start": 14.44,
+      "end": 14.98
+    },
+    {
+      "word": "build",
+      "start": 14.98,
+      "end": 15.16
+    },
+    {
+      "word": "anything,",
+      "start": 15.16,
+      "end": 15.54
+    },
+    {
+      "word": "so",
+      "start": 16.08,
+      "end": 16.4
+    },
+    {
+      "word": "you",
+      "start": 16.4,
+      "end": 16.58
+    },
+    {
+      "word": "can",
+      "start": 16.58,
+      "end": 16.72
+    },
+    {
+      "word": "tell",
+      "start": 16.72,
+      "end": 17.02
+    },
+    {
+      "word": "whether",
+      "start": 17.02,
+      "end": 17.36
+    },
+    {
+      "word": "the",
+      "start": 17.36,
+      "end": 17.64
+    },
+    {
+      "word": "result",
+      "start": 17.64,
+      "end": 17.94
+    },
+    {
+      "word": "actually",
+      "start": 17.94,
+      "end": 18.44
+    },
+    {
+      "word": "works.",
+      "start": 18.44,
+      "end": 18.9
+    }
+  ],
+  "wavSha256": "ce22c7e04de0846e6f65983eb5b9f32d80bdd71d3eb1ee8e2b9ab69ddb099ecf",
+  "textSha256": "985bd5950ef384474aa5ce7ab3601d42b8bac2462c2f1e97dd64ceffa1e81195"
+}

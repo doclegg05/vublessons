@@ -1,0 +1,228 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 0.9772727272727273,
+  "words": [
+    {
+      "word": "Choose",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "one",
+      "start": 0.24,
+      "end": 0.56
+    },
+    {
+      "word": "practice",
+      "start": 0.56,
+      "end": 1.0
+    },
+    {
+      "word": "scenario",
+      "start": 1.0,
+      "end": 1.48
+    },
+    {
+      "word": "and",
+      "start": 1.48,
+      "end": 2.08
+    },
+    {
+      "word": "explain",
+      "start": 2.08,
+      "end": 2.46
+    },
+    {
+      "word": "your",
+      "start": 2.46,
+      "end": 2.78
+    },
+    {
+      "word": "next",
+      "start": 2.78,
+      "end": 2.96
+    },
+    {
+      "word": "step",
+      "start": 2.96,
+      "end": 3.38
+    },
+    {
+      "word": "to",
+      "start": 3.38,
+      "end": 3.62
+    },
+    {
+      "word": "a",
+      "start": 3.62,
+      "end": 3.72
+    },
+    {
+      "word": "partner.",
+      "start": 3.72,
+      "end": 4.12
+    },
+    {
+      "word": "Name",
+      "start": 5.3,
+      "end": 5.3
+    },
+    {
+      "word": "the",
+      "start": 5.3,
+      "end": 5.52
+    },
+    {
+      "word": "evidence,",
+      "start": 5.52,
+      "end": 5.92
+    },
+    {
+      "word": "the",
+      "start": 6.62,
+      "end": 6.74
+    },
+    {
+      "word": "independent",
+      "start": 6.74,
+      "end": 7.02
+    },
+    {
+      "word": "source",
+      "start": 7.02,
+      "end": 7.8
+    },
+    {
+      "word": "you",
+      "start": 7.8,
+      "end": 8.1
+    },
+    {
+      "word": "would",
+      "start": 8.1,
+      "end": 8.22
+    },
+    {
+      "word": "check,",
+      "start": 8.22,
+      "end": 8.48
+    },
+    {
+      "word": "and",
+      "start": 9.14,
+      "end": 9.22
+    },
+    {
+      "word": "the",
+      "start": 9.22,
+      "end": 9.34
+    },
+    {
+      "word": "action",
+      "start": 9.34,
+      "end": 9.82
+    },
+    {
+      "word": "that",
+      "start": 9.82,
+      "end": 10.1
+    },
+    {
+      "word": "limits",
+      "start": 10.1,
+      "end": 10.42
+    },
+    {
+      "word": "risk.",
+      "start": 10.42,
+      "end": 10.78
+    },
+    {
+      "word": "Then",
+      "start": 11.9,
+      "end": 12.04
+    },
+    {
+      "word": "complete",
+      "start": 12.04,
+      "end": 12.44
+    },
+    {
+      "word": "the",
+      "start": 12.44,
+      "end": 12.74
+    },
+    {
+      "word": "skills",
+      "start": 12.74,
+      "end": 12.98
+    },
+    {
+      "word": "challenge",
+      "start": 12.98,
+      "end": 13.56
+    },
+    {
+      "word": "and",
+      "start": 13.56,
+      "end": 14.24
+    },
+    {
+      "word": "post-test.",
+      "start": 14.24,
+      "end": 15.84
+    },
+    {
+      "word": "Use",
+      "start": 15.84,
+      "end": 16.02
+    },
+    {
+      "word": "the",
+      "start": 16.02,
+      "end": 16.22
+    },
+    {
+      "word": "results",
+      "start": 16.22,
+      "end": 16.5
+    },
+    {
+      "word": "to",
+      "start": 16.5,
+      "end": 16.88
+    },
+    {
+      "word": "choose",
+      "start": 16.88,
+      "end": 17.2
+    },
+    {
+      "word": "a",
+      "start": 17.2,
+      "end": 17.38
+    },
+    {
+      "word": "task",
+      "start": 17.38,
+      "end": 17.68
+    },
+    {
+      "word": "for",
+      "start": 17.68,
+      "end": 18.1
+    },
+    {
+      "word": "more",
+      "start": 18.1,
+      "end": 18.28
+    },
+    {
+      "word": "practice.",
+      "start": 18.28,
+      "end": 18.7
+    }
+  ],
+  "wavSha256": "8f40bb3190403b7d23f7e316d12caf3561ef0e11b2ac48a076fec745756f0263",
+  "textSha256": "fceaf090f4dbb69d6f1861120fee1531f72dc0b5105c67d88d083471c3d1a307"
+}

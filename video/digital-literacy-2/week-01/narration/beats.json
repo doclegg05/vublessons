@@ -1,0 +1,65 @@
+[
+  {
+    "id": "beat-01",
+    "title": "Start with the task",
+    "labels": [
+      "Read a page",
+      "Hear the sound",
+      "Keep the change"
+    ],
+    "text": "A useful computer setup begins with the task you want to do. Suppose the words on a webpage are hard to read. Decide which control affects that page, make one change, and check the result before changing anything else.",
+    "window": 17.945,
+    "audioDuration": 16.69483333333333,
+    "start": 0.01
+  },
+  {
+    "id": "beat-02",
+    "title": "Choose the right control",
+    "labels": [
+      "Webpage: browser zoom",
+      "Desktop: display scaling"
+    ],
+    "text": "Browser zoom makes a webpage larger or smaller. Display scaling affects the wider desktop. If only the webpage is difficult to read, try browser zoom first. Use the text size controls when they are available, and check that buttons and instructions remain usable.",
+    "window": 19.789,
+    "audioDuration": 18.538666666666668,
+    "start": 17.955
+  },
+  {
+    "id": "beat-03",
+    "title": "Check the actual output",
+    "labels": [
+      "Select the speaker",
+      "Check mute and volume",
+      "Play a short test"
+    ],
+    "text": "When sound is missing, first check the selected output device and mute setting. A connected headset may be receiving the sound. Adjust the volume, then play a short test. The same habit applies to printing: choose the printer and inspect a test page.",
+    "window": 19.662,
+    "audioDuration": 18.411666666666665,
+    "start": 37.744
+  },
+  {
+    "id": "beat-04",
+    "title": "Share only what is needed",
+    "labels": [
+      "Calendar: free or busy",
+      "Details: only when needed"
+    ],
+    "text": "A practice calendar entry needs a title, a start and end, a location, and a useful reminder. If a partner only needs your availability, look for free or busy sharing. Check the actual options instead of assuming every service shares the same details.",
+    "window": 19.405,
+    "audioDuration": 18.154666666666667,
+    "start": 57.406
+  },
+  {
+    "id": "beat-05",
+    "title": "Try and explain",
+    "labels": [
+      "Make one adjustment",
+      "Show the result",
+      "Restore shared settings"
+    ],
+    "text": "Pause here and make one helpful adjustment on your workstation. Show a partner what changed and explain how to undo it. Before leaving a shared computer, restore the lab settings and save your practice work. You now have a repeatable routine: choose, test, and explain.",
+    "window": 20.52,
+    "audioDuration": 19.269625,
+    "start": 76.811
+  }
+]

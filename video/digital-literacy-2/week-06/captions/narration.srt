@@ -1,0 +1,117 @@
+1
+00:00:00,010 --> 00:00:03,590
+Start with a small problem: help someone
+find a fictional
+
+2
+00:00:03,590 --> 00:00:07,790
+community resource. Keep the first app to
+one page with
+
+3
+00:00:07,790 --> 00:00:13,210
+search, a category filter, and readable
+results. Write three checks
+
+4
+00:00:13,210 --> 00:00:17,030
+before asking AI to build anything, so you
+can tell
+
+5
+00:00:17,030 --> 00:00:18,910
+whether the result actually works.
+
+6
+00:00:20,528 --> 00:00:24,808
+HTML gives the page its content and
+structure. CSS controls
+
+7
+00:00:24,808 --> 00:00:29,548
+appearance and layout. JavaScript responds
+to input, such as filtering
+
+8
+00:00:29,548 --> 00:00:33,308
+a list. The supplied starter keeps
+fictional records inside the
+
+9
+00:00:33,308 --> 00:00:38,168
+file. It has no real account system,
+private database, or payment service.
+
+10
+00:00:39,787 --> 00:00:42,767
+Tell the AI what the user should do, which
+controls
+
+11
+00:00:42,767 --> 00:00:46,587
+are needed, and how to test them. Ask for
+labeled
+
+12
+00:00:46,587 --> 00:00:52,087
+fields, visible keyboard focus, and no
+external dependencies. Use
+
+13
+00:00:52,087 --> 00:00:56,787
+fictional data. Do not place passwords or
+private API keys
+
+14
+00:00:56,787 --> 00:00:59,987
+in browser code, because people can
+inspect that code.
+
+15
+00:01:01,596 --> 00:01:05,516
+Run the checks yourself. Try a matching
+name, a search
+
+16
+00:01:05,516 --> 00:01:09,676
+with no results, and different letter
+cases. Use only the
+
+17
+00:01:09,676 --> 00:01:14,436
+keyboard, then narrow the screen. Record
+what you expected and
+
+18
+00:01:14,436 --> 00:01:19,016
+what actually happened. A confident AI
+statement does not count
+
+19
+00:01:19,016 --> 00:01:20,976
+as evidence that these paths work.
+
+20
+00:01:22,548 --> 00:01:26,508
+Save a first version, request or make one
+small improvement,
+
+21
+00:01:26,988 --> 00:01:31,428
+and repeat the affected test. Also repeat
+a test that
+
+22
+00:01:31,428 --> 00:01:35,108
+already passed to catch a new problem. If
+no AI
+
+23
+00:01:35,108 --> 00:01:39,088
+tool is available, edit the starter's
+heading and a fictional
+
+24
+00:01:39,088 --> 00:01:44,908
+resource in a plain-text editor. Keep both
+versions and your test log.

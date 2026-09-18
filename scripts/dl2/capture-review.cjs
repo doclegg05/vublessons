@@ -1,0 +1,11 @@
+const { chromium } = require('@playwright/test');
+const fs=require('fs');
+const origin=process.env.DL2_REVIEW_ORIGIN||'http://localhost:3939';
+(async()=>{const out='docs/digital-literacy-2/review';fs.mkdirSync(out,{recursive:true});const browser=await chromium.launch();const page=await browser.newPage({viewport:{width:1440,height:1000}});
+await page.goto(origin+'/courses/digital-literacy-2/index.html');await page.screenshot({path:out+'/home-desktop.png',fullPage:true});
+await page.goto(origin+'/courses/digital-literacy-2/weeks/week-02/presentation.html');await page.getByRole('button',{name:/Compare two results/}).click();await page.screenshot({path:out+'/lesson-desktop.png',fullPage:true});
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:out+'/lesson-mobile.png',fullPage:true});await page.goto(origin+'/courses/digital-literacy-2/index.html');await page.screenshot({path:out+'/home-mobile.png',fullPage:true});
+await page.setViewportSize({width:1440,height:1000});await page.goto(origin+'/courses/digital-literacy-2/syllabus.html');await page.pdf({path:out+'/syllabus-proof.pdf',format:'Letter',printBackground:true});
+await page.goto(origin+'/courses/digital-literacy-2/assessments/post-test.html');await page.waitForSelector('fieldset');const bank=JSON.parse(fs.readFileSync('courses/digital-literacy-2/assets/questions.json'));for(const q of bank.post)await page.locator(`input[name="${q.id}"][value="${q.answer}"]`).check();await page.getByRole('button',{name:'Grade my assessment'}).click();await page.screenshot({path:out+'/results-desktop.png'});await page.pdf({path:out+'/results-proof.pdf',format:'Letter',printBackground:true});
+await page.emulateMedia({media:'screen'});await page.setViewportSize({width:1440,height:1000});await page.goto(origin+'/courses/digital-literacy-2/weeks/week-03/presentation.html');await page.locator('[data-slide]').filter({hasText:/Knowledge check/}).first().click();await page.screenshot({path:out+'/knowledge-desktop.png',fullPage:true});await page.setViewportSize({width:390,height:844});await page.screenshot({path:out+'/knowledge-mobile.png',fullPage:true});await page.emulateMedia({media:'print'});await page.pdf({path:out+'/knowledge-print-proof.pdf',format:'Letter',printBackground:true});
+await browser.close();console.log(out);})();

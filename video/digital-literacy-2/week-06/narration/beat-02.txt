@@ -1,0 +1,1 @@
+HTML gives the page its content and structure. CSS controls appearance and layout. JavaScript responds to input, such as filtering a list. The supplied starter keeps fictional records inside the file. It has no real account system, private database, or payment service.

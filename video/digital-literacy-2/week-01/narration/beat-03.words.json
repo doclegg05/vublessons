@@ -1,0 +1,223 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "When",
+      "start": 0.0,
+      "end": 0.2
+    },
+    {
+      "word": "sound",
+      "start": 0.2,
+      "end": 0.46
+    },
+    {
+      "word": "is",
+      "start": 0.46,
+      "end": 0.86
+    },
+    {
+      "word": "missing,",
+      "start": 0.86,
+      "end": 1.2
+    },
+    {
+      "word": "first",
+      "start": 1.68,
+      "end": 1.96
+    },
+    {
+      "word": "check",
+      "start": 1.96,
+      "end": 2.28
+    },
+    {
+      "word": "the",
+      "start": 2.28,
+      "end": 2.52
+    },
+    {
+      "word": "selected",
+      "start": 2.52,
+      "end": 2.98
+    },
+    {
+      "word": "output",
+      "start": 2.98,
+      "end": 3.34
+    },
+    {
+      "word": "device",
+      "start": 3.34,
+      "end": 3.9
+    },
+    {
+      "word": "and",
+      "start": 3.9,
+      "end": 4.4
+    },
+    {
+      "word": "mute",
+      "start": 4.4,
+      "end": 4.6
+    },
+    {
+      "word": "setting.",
+      "start": 4.6,
+      "end": 4.94
+    },
+    {
+      "word": "A",
+      "start": 5.9,
+      "end": 5.96
+    },
+    {
+      "word": "connected",
+      "start": 5.96,
+      "end": 6.24
+    },
+    {
+      "word": "headset",
+      "start": 6.24,
+      "end": 6.72
+    },
+    {
+      "word": "may",
+      "start": 6.72,
+      "end": 7.2
+    },
+    {
+      "word": "be",
+      "start": 7.2,
+      "end": 7.34
+    },
+    {
+      "word": "receiving",
+      "start": 7.34,
+      "end": 7.7
+    },
+    {
+      "word": "the",
+      "start": 7.7,
+      "end": 8.04
+    },
+    {
+      "word": "sound.",
+      "start": 8.04,
+      "end": 8.44
+    },
+    {
+      "word": "Adjust",
+      "start": 9.34,
+      "end": 9.4
+    },
+    {
+      "word": "the",
+      "start": 9.4,
+      "end": 9.82
+    },
+    {
+      "word": "volume,",
+      "start": 9.82,
+      "end": 10.08
+    },
+    {
+      "word": "then",
+      "start": 10.72,
+      "end": 10.94
+    },
+    {
+      "word": "play",
+      "start": 10.94,
+      "end": 11.2
+    },
+    {
+      "word": "a",
+      "start": 11.2,
+      "end": 11.42
+    },
+    {
+      "word": "short",
+      "start": 11.42,
+      "end": 11.64
+    },
+    {
+      "word": "test.",
+      "start": 11.64,
+      "end": 12.1
+    },
+    {
+      "word": "The",
+      "start": 13.08,
+      "end": 13.18
+    },
+    {
+      "word": "same",
+      "start": 13.18,
+      "end": 13.36
+    },
+    {
+      "word": "habit",
+      "start": 13.36,
+      "end": 13.82
+    },
+    {
+      "word": "applies",
+      "start": 13.82,
+      "end": 14.26
+    },
+    {
+      "word": "to",
+      "start": 14.26,
+      "end": 14.62
+    },
+    {
+      "word": "printing:",
+      "start": 14.62,
+      "end": 14.86
+    },
+    {
+      "word": "choose",
+      "start": 15.86,
+      "end": 15.86
+    },
+    {
+      "word": "the",
+      "start": 15.86,
+      "end": 16.08
+    },
+    {
+      "word": "printer",
+      "start": 16.08,
+      "end": 16.3
+    },
+    {
+      "word": "and",
+      "start": 16.3,
+      "end": 16.84
+    },
+    {
+      "word": "inspect",
+      "start": 16.84,
+      "end": 17.18
+    },
+    {
+      "word": "a",
+      "start": 17.18,
+      "end": 17.44
+    },
+    {
+      "word": "test",
+      "start": 17.44,
+      "end": 17.58
+    },
+    {
+      "word": "page.",
+      "start": 17.58,
+      "end": 17.9
+    }
+  ],
+  "wavSha256": "9b9b1eb751e15c0f771c96e0b3fc7f29892280e0ad42a6fcb168de2e1bf935b1",
+  "textSha256": "7ba27256b0ae01b6c1043c1d0ad40a951db374990626dc714ad8a0879f61441b"
+}

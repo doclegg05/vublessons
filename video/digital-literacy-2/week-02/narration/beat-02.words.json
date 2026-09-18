@@ -1,0 +1,228 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Choose",
+      "start": 0.0,
+      "end": 0.2
+    },
+    {
+      "word": "the",
+      "start": 0.2,
+      "end": 0.48
+    },
+    {
+      "word": "smallest",
+      "start": 0.48,
+      "end": 0.98
+    },
+    {
+      "word": "permission",
+      "start": 0.98,
+      "end": 1.36
+    },
+    {
+      "word": "that",
+      "start": 1.36,
+      "end": 1.96
+    },
+    {
+      "word": "lets",
+      "start": 1.96,
+      "end": 2.18
+    },
+    {
+      "word": "the",
+      "start": 2.18,
+      "end": 2.42
+    },
+    {
+      "word": "other",
+      "start": 2.42,
+      "end": 2.64
+    },
+    {
+      "word": "person",
+      "start": 2.64,
+      "end": 3.12
+    },
+    {
+      "word": "do",
+      "start": 3.12,
+      "end": 3.34
+    },
+    {
+      "word": "the",
+      "start": 3.34,
+      "end": 3.46
+    },
+    {
+      "word": "task.",
+      "start": 3.46,
+      "end": 3.78
+    },
+    {
+      "word": "A",
+      "start": 4.68,
+      "end": 4.68
+    },
+    {
+      "word": "viewer",
+      "start": 4.68,
+      "end": 4.9
+    },
+    {
+      "word": "reads.",
+      "start": 4.9,
+      "end": 5.42
+    },
+    {
+      "word": "A",
+      "start": 6.32,
+      "end": 6.34
+    },
+    {
+      "word": "commenter",
+      "start": 6.34,
+      "end": 6.72
+    },
+    {
+      "word": "can",
+      "start": 6.72,
+      "end": 7.18
+    },
+    {
+      "word": "suggest",
+      "start": 7.18,
+      "end": 7.48
+    },
+    {
+      "word": "wording",
+      "start": 7.48,
+      "end": 7.98
+    },
+    {
+      "word": "when",
+      "start": 7.98,
+      "end": 8.38
+    },
+    {
+      "word": "the",
+      "start": 8.38,
+      "end": 8.48
+    },
+    {
+      "word": "service",
+      "start": 8.48,
+      "end": 8.84
+    },
+    {
+      "word": "supports",
+      "start": 8.84,
+      "end": 9.5
+    },
+    {
+      "word": "comments.",
+      "start": 9.5,
+      "end": 9.78
+    },
+    {
+      "word": "An",
+      "start": 10.8,
+      "end": 10.82
+    },
+    {
+      "word": "editor",
+      "start": 10.82,
+      "end": 11.16
+    },
+    {
+      "word": "can",
+      "start": 11.16,
+      "end": 11.54
+    },
+    {
+      "word": "change",
+      "start": 11.54,
+      "end": 11.8
+    },
+    {
+      "word": "the",
+      "start": 11.8,
+      "end": 12.12
+    },
+    {
+      "word": "content.",
+      "start": 12.12,
+      "end": 12.52
+    },
+    {
+      "word": "Check",
+      "start": 13.46,
+      "end": 13.68
+    },
+    {
+      "word": "the",
+      "start": 13.68,
+      "end": 13.9
+    },
+    {
+      "word": "recipient",
+      "start": 13.9,
+      "end": 14.22
+    },
+    {
+      "word": "carefully,",
+      "start": 14.22,
+      "end": 14.84
+    },
+    {
+      "word": "then",
+      "start": 15.6,
+      "end": 15.74
+    },
+    {
+      "word": "ask",
+      "start": 15.74,
+      "end": 16.04
+    },
+    {
+      "word": "them",
+      "start": 16.04,
+      "end": 16.4
+    },
+    {
+      "word": "to",
+      "start": 16.4,
+      "end": 16.58
+    },
+    {
+      "word": "verify",
+      "start": 16.58,
+      "end": 16.82
+    },
+    {
+      "word": "that",
+      "start": 16.82,
+      "end": 17.52
+    },
+    {
+      "word": "the",
+      "start": 17.52,
+      "end": 17.64
+    },
+    {
+      "word": "file",
+      "start": 17.64,
+      "end": 17.88
+    },
+    {
+      "word": "opens.",
+      "start": 17.88,
+      "end": 18.4
+    }
+  ],
+  "wavSha256": "fa539991dd8e63f66b374da69cab7a8b4538135857af3bb5c89b2a50c44d9d05",
+  "textSha256": "1053a3fae6e6d449110c24800ac1a4bc9f543c2ce1c20130dbbc0f4619a49083"
+}

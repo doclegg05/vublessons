@@ -1,0 +1,233 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 0.9777777777777777,
+  "words": [
+    {
+      "word": "Online",
+      "start": 0.0,
+      "end": 0.22
+    },
+    {
+      "word": "safety",
+      "start": 0.22,
+      "end": 0.8
+    },
+    {
+      "word": "also",
+      "start": 0.8,
+      "end": 1.26
+    },
+    {
+      "word": "includes",
+      "start": 1.26,
+      "end": 1.94
+    },
+    {
+      "word": "attention",
+      "start": 1.94,
+      "end": 2.24
+    },
+    {
+      "word": "and",
+      "start": 2.24,
+      "end": 2.9
+    },
+    {
+      "word": "wellbeing.",
+      "start": 2.9,
+      "end": 4.4
+    },
+    {
+      "word": "Catfishing",
+      "start": 4.4,
+      "end": 4.66
+    },
+    {
+      "word": "uses",
+      "start": 4.66,
+      "end": 5.08
+    },
+    {
+      "word": "a",
+      "start": 5.08,
+      "end": 5.3
+    },
+    {
+      "word": "false",
+      "start": 5.3,
+      "end": 5.56
+    },
+    {
+      "word": "identity",
+      "start": 5.56,
+      "end": 6.08
+    },
+    {
+      "word": "to",
+      "start": 6.08,
+      "end": 6.6
+    },
+    {
+      "word": "build",
+      "start": 6.6,
+      "end": 6.76
+    },
+    {
+      "word": "trust.",
+      "start": 6.76,
+      "end": 7.08
+    },
+    {
+      "word": "Fear",
+      "start": 8.22,
+      "end": 8.22
+    },
+    {
+      "word": "of",
+      "start": 8.22,
+      "end": 8.42
+    },
+    {
+      "word": "missing",
+      "start": 8.42,
+      "end": 8.58
+    },
+    {
+      "word": "out",
+      "start": 8.58,
+      "end": 8.94
+    },
+    {
+      "word": "can",
+      "start": 8.94,
+      "end": 9.26
+    },
+    {
+      "word": "make",
+      "start": 9.26,
+      "end": 9.44
+    },
+    {
+      "word": "it",
+      "start": 9.44,
+      "end": 9.56
+    },
+    {
+      "word": "hard",
+      "start": 9.56,
+      "end": 9.76
+    },
+    {
+      "word": "to",
+      "start": 9.76,
+      "end": 9.96
+    },
+    {
+      "word": "stop",
+      "start": 9.96,
+      "end": 10.26
+    },
+    {
+      "word": "checking",
+      "start": 10.26,
+      "end": 10.56
+    },
+    {
+      "word": "alerts.",
+      "start": 10.56,
+      "end": 11.0
+    },
+    {
+      "word": "Set",
+      "start": 12.04,
+      "end": 12.06
+    },
+    {
+      "word": "useful",
+      "start": 12.06,
+      "end": 12.36
+    },
+    {
+      "word": "notification",
+      "start": 12.36,
+      "end": 12.82
+    },
+    {
+      "word": "limits,",
+      "start": 12.82,
+      "end": 13.46
+    },
+    {
+      "word": "take",
+      "start": 14.06,
+      "end": 14.2
+    },
+    {
+      "word": "breaks,",
+      "start": 14.2,
+      "end": 14.5
+    },
+    {
+      "word": "and",
+      "start": 15.12,
+      "end": 15.26
+    },
+    {
+      "word": "seek",
+      "start": 15.26,
+      "end": 15.48
+    },
+    {
+      "word": "support",
+      "start": 15.48,
+      "end": 15.92
+    },
+    {
+      "word": "when",
+      "start": 15.92,
+      "end": 16.22
+    },
+    {
+      "word": "online",
+      "start": 16.22,
+      "end": 16.48
+    },
+    {
+      "word": "behavior",
+      "start": 16.48,
+      "end": 17.06
+    },
+    {
+      "word": "makes",
+      "start": 17.06,
+      "end": 17.54
+    },
+    {
+      "word": "you",
+      "start": 17.54,
+      "end": 17.76
+    },
+    {
+      "word": "feel",
+      "start": 17.76,
+      "end": 18.02
+    },
+    {
+      "word": "pressured",
+      "start": 18.02,
+      "end": 18.36
+    },
+    {
+      "word": "or",
+      "start": 18.36,
+      "end": 18.92
+    },
+    {
+      "word": "unsafe.",
+      "start": 18.92,
+      "end": 19.24
+    }
+  ],
+  "wavSha256": "f5d4c9f179a9feeb02619be2dfa1fbefc3a15c0ba2357fcc1e72df3fa24ccace",
+  "textSha256": "9737a8ef68ad7e38457e2c067eda143f0c55d1ed7b015b9ab37a85eb4c85129b"
+}

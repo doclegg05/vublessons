@@ -1,0 +1,67 @@
+[
+  {
+    "id": "beat-01",
+    "title": "Define one useful task",
+    "labels": [
+      "Find a fictional resource",
+      "Search and filter",
+      "Explain empty results"
+    ],
+    "text": "Start with a small problem: help someone find a fictional community resource. Keep the first app to one page with search, a category filter, and readable results. Write three checks before asking AI to build anything, so you can tell whether the result actually works.",
+    "window": 20.518,
+    "audioDuration": 19.267666666666667,
+    "start": 0.01
+  },
+  {
+    "id": "beat-02",
+    "title": "Understand the parts",
+    "labels": [
+      "HTML: structure",
+      "CSS: appearance",
+      "JavaScript: behavior"
+    ],
+    "text": "HTML gives the page its content and structure. CSS controls appearance and layout. JavaScript responds to input, such as filtering a list. The supplied starter keeps fictional records inside the file. It has no real account system, private database, or payment service.",
+    "window": 19.259,
+    "audioDuration": 18.008916666666668,
+    "start": 20.528
+  },
+  {
+    "id": "beat-03",
+    "title": "Give a bounded prompt",
+    "labels": [
+      "Describe the user task",
+      "Require keyboard access",
+      "Exclude private data"
+    ],
+    "text": "Tell the AI what the user should do, which controls are needed, and how to test them. Ask for labeled fields, visible keyboard focus, and no external dependencies. Use fictional data. Do not place passwords or private API keys in browser code, because people can inspect that code.",
+    "window": 21.809,
+    "audioDuration": 20.5595,
+    "start": 39.787
+  },
+  {
+    "id": "beat-04",
+    "title": "Test before you trust",
+    "labels": [
+      "Matching search",
+      "No matching result",
+      "Keyboard and small screen"
+    ],
+    "text": "Run the checks yourself. Try a matching name, a search with no results, and different letter cases. Use only the keyboard, then narrow the screen. Record what you expected and what actually happened. A confident AI statement does not count as evidence that these paths work.",
+    "window": 20.952,
+    "audioDuration": 19.70225,
+    "start": 61.596
+  },
+  {
+    "id": "beat-05",
+    "title": "Revise, then check again",
+    "labels": [
+      "Save version 1",
+      "Make one change",
+      "Repeat the tests"
+    ],
+    "text": "Save a first version, request or make one small improvement, and repeat the affected test. Also repeat a test that already passed to catch a new problem. If no AI tool is available, edit the starter's heading and a fictional resource in a plain-text editor. Keep both versions and your test log.",
+    "window": 23.953,
+    "audioDuration": 22.702791666666666,
+    "start": 82.548
+  }
+]

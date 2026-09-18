@@ -1,0 +1,1 @@
+Choose the smallest permission that lets the other person do the task. A viewer reads. A commenter can suggest wording when the service supports comments. An editor can change the content. Check the recipient carefully, then ask them to verify that the file opens.

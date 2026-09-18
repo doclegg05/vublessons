@@ -1,0 +1,142 @@
+==> 1/5 build:site
+
+> vublessons@1.0.0 build:site
+> node scripts/build-site.js
+
+check-courses: OK — 4 courses, 24 lessons, catalog and courses/ tree agree.
+Built site: /Users/brittlegg/MacDev/companies/education/vublessons/dist/site
+  193 HTML pages published.
+==> 2/5 link check
+checked 948 internal refs across roots ['courses', 'instructors', 'index.html']
+BROKEN: 0
+=== distinct broken refs per category ===
+==> 3/5 courses.json drift check
+check-courses: OK — 4 courses, 24 lessons, catalog and courses/ tree agree.
+==> 4/5 playwright
+
+Running 48 tests using 5 workers
+
+(node:18925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18927) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:18926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/48] tests/content/dl2-curriculum.spec.js:3:1 › DL2 six complete weeks have two-hour plans and aligned assessment pairs
+[2/48] tests/content/dl2-curriculum.spec.js:4:1 › DL2 cohort dates appear only in syllabus; pages include shared text sizing
+[3/48] tests/content/homepage-catalog.spec.js:27:1 › homepage has zero external CDN dependencies (offline-capable)
+[4/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-01: sidebar scrolls independently and lists handouts
+(node:18927) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[5/48] tests/content/homepage-catalog.spec.js:11:1 › homepage renders one card per course in courses.json
+[6/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-02: sidebar scrolls independently and lists handouts
+[7/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-03: sidebar scrolls independently and lists handouts
+[8/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-04: sidebar scrolls independently and lists handouts
+[9/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-05: sidebar scrolls independently and lists handouts
+[10/48] tests/functional/dl2.spec.js:6:31 › DL2 week 1: all slides, navigation, resources and reload
+[11/48] tests/functional/dl2.spec.js:6:31 › DL2 week 2: all slides, navigation, resources and reload
+[12/48] tests/functional/dl2.spec.js:6:31 › DL2 week 3: all slides, navigation, resources and reload
+[13/48] tests/functional/dl2.spec.js:6:31 › DL2 week 4: all slides, navigation, resources and reload
+[14/48] tests/functional/dl2.spec.js:6:31 › DL2 week 5: all slides, navigation, resources and reload
+[15/48] tests/functional/dl2.spec.js:6:31 › DL2 week 6: all slides, navigation, resources and reload
+[16/48] tests/functional/dl2.spec.js:14:1 › DL2 interactions use keyboard, score checks, and preserve input keys
+[17/48] tests/functional/dl2.spec.js:20:34 › DL2 pre: validation, perfect score, refresh, download and clear
+[18/48] tests/functional/dl2.spec.js:20:34 › DL2 post: validation, perfect score, refresh, download and clear
+[19/48] tests/functional/dl2.spec.js:28:1 › DL2 incorrect score and domain totals are calculated from choices
+[20/48] tests/functional/dl2.spec.js:32:1 › DL2 works with blocked storage and reduced motion
+[21/48] tests/functional/dl2.spec.js:35:1 › DL2 mobile menu, text enlargement and starter edge cases
+[22/48] tests/functional/dl2.spec.js:39:183 › DL2 accessibility /index.html
+[23/48] tests/functional/dl2.spec.js:39:183 › DL2 accessibility /syllabus.html
+[24/48] tests/functional/dl2.spec.js:39:183 › DL2 accessibility /weeks/week-01/presentation.html
+[25/48] tests/functional/dl2.spec.js:39:183 › DL2 accessibility /weeks/week-02/worksheet.html
+[26/48] tests/functional/dl2.spec.js:39:183 › DL2 accessibility /assessments/pre-test.html
+[27/48] tests/functional/dl2.spec.js:39:183 › DL2 accessibility /activities/resource-finder.html
+[28/48] tests/functional/dl2.spec.js:40:31 › DL2 week 1: video plays, seeks, and loads captions
+[29/48] tests/functional/dl2.spec.js:40:31 › DL2 week 2: video plays, seeks, and loads captions
+[30/48] tests/functional/dl2.spec.js:40:31 › DL2 week 3: video plays, seeks, and loads captions
+[31/48] tests/functional/dl2.spec.js:40:31 › DL2 week 4: video plays, seeks, and loads captions
+[32/48] tests/functional/dl2.spec.js:40:31 › DL2 week 5: video plays, seeks, and loads captions
+[33/48] tests/functional/dl2.spec.js:40:31 › DL2 week 6: video plays, seeks, and loads captions
+[34/48] tests/functional/dl2.spec.js:52:1 › DL2 enlarged text remains readable and every mobile lesson fits
+[35/48] tests/functional/dl2.spec.js:65:1 › DL2 assessment fetch failure gives a recovery message
+[36/48] tests/functional/dl2.spec.js:68:1 › DL2 worksheet typed answers appear in print
+[37/48] tests/functional/dl2.spec.js:71:1 › DL2 knowledge-check choices keep the classroom type floor at every text size
+[38/48] tests/functional/shell.spec.js:3:1 › app bar is injected with seal-home link and controls
+[39/48] tests/functional/shell.spec.js:11:1 › Text Size + persists across reload via data-text-size
+[40/48] tests/functional/shell.spec.js:24:1 › Text Size is available on standalone course pages and visibly scales text
+[41/48] tests/functional/shell.spec.js:37:1 › computer skills dashboard links resolve from no-slash route
+[42/48] tests/functional/shell.spec.js:45:1 › legacy computer-skills week route redirects to canonical presentation
+[43/48] tests/functional/shell.spec.js:51:1 › digital literacy retired form routes open browser assessments
+[44/48] tests/functional/shell.spec.js:61:1 › digital literacy practice quiz exposes printable PDF results
+[45/48] tests/functional/shell.spec.js:76:1 › Help opens the glossary modal and the duplicate FAB is hidden
+[46/48] tests/functional/shell.spec.js:83:1 › reduced-motion: flag carries the gate class
+[47/48] tests/functional/shell.spec.js:91:1 › skip-to-content link is present and targets main
+[48/48] tests/functional/shell.spec.js:98:1 › instructors landing loads (no dead /instructors/ link) with the shell
+  48 passed (21.7s)
+==> 5/5 a11y check (axe-core, ratchet vs committed baseline)
+  / [homepage] — clean
+  /courses/computer-skills/weeks/week-01/presentation.html [computer-skills (lesson 1: VA Online Services)] — clean
+  /courses/financial-readiness/financial-readiness.html [financial-readiness (lesson 1: Retirement Timelines & Preparation)] — color-contrast: 1
+  /courses/digital-literacy-1/weeks/week-01/presentation.html [digital-literacy-1 (lesson 1: Inside the Computer)] — clean
+  /courses/digital-literacy-2/weeks/week-01/presentation.html [digital-literacy-2 (lesson 1: Make technology work for you)] — clean
+a11y-check: PASS (no violations beyond the committed baseline)
+==> readability baseline (report-only)
+readability-gate — Flesch-Kincaid, ceiling grade 8 (BASELINE / report-only)
+allowlist: 6 term(s) from config/readability-allowlist.json
+
+grade  ease   words  sent   status  file
+  4.9   67.0   1089   282  ok      courses/computer-skills/weeks/week-01/presentation.html
+  3.3   77.4    831   261  ok      courses/computer-skills/weeks/week-02/presentation.html
+  4.8   69.4   2395   488  ok      courses/computer-skills/weeks/week-03/presentation.html
+  4.9   68.5   1965   424  ok      courses/computer-skills/weeks/week-04/presentation.html
+  3.6   75.4   1548   422  ok      courses/computer-skills/weeks/week-05/presentation.html
+  4.3   73.7   1668   317  ok      courses/computer-skills/weeks/week-06/presentation.html
+  4.0   74.8   1257   268  ok      courses/computer-skills/weeks/week-07/presentation.html
+  4.2   71.7    780   197  ok      courses/computer-skills/weeks/week-08/presentation.html
+  3.8   76.5   1662   332  ok      courses/digital-literacy-1/weeks/week-01/presentation.html
+  3.6   79.4   1804   317  ok      courses/digital-literacy-1/weeks/week-02/presentation.html
+  4.1   75.1   1573   309  ok      courses/digital-literacy-1/weeks/week-03/presentation.html
+  4.9   70.5   2052   338  ok      courses/digital-literacy-1/weeks/week-04/presentation.html
+  4.5   73.6   1502   247  ok      courses/digital-literacy-1/weeks/week-05/presentation.html
+  4.6   72.5    962   169  ok      courses/digital-literacy-2/weeks/week-01/presentation.html
+  5.6   64.4    952   179  ok      courses/digital-literacy-2/weeks/week-02/presentation.html
+  4.4   73.9    953   166  ok      courses/digital-literacy-2/weeks/week-03/presentation.html
+  6.3   60.4    891   151  ok      courses/digital-literacy-2/weeks/week-04/presentation.html
+  5.7   64.9    835   137  ok      courses/digital-literacy-2/weeks/week-05/presentation.html
+  4.4   74.8   1057   172  ok      courses/digital-literacy-2/weeks/week-06/presentation.html
+
+files: 19  scored: 19  over ceiling: 0  errors: 0  median grade: 4.4
+baseline mode — exit 0. Drop --baseline to fail on files over the ceiling.
+quality gate: PASS

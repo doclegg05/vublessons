@@ -1,0 +1,263 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Helpful",
+      "start": 0.0,
+      "end": 0.3
+    },
+    {
+      "word": "feedback",
+      "start": 0.3,
+      "end": 0.76
+    },
+    {
+      "word": "names",
+      "start": 0.76,
+      "end": 1.5
+    },
+    {
+      "word": "a",
+      "start": 1.5,
+      "end": 1.62
+    },
+    {
+      "word": "change",
+      "start": 1.62,
+      "end": 1.92
+    },
+    {
+      "word": "and",
+      "start": 1.92,
+      "end": 2.58
+    },
+    {
+      "word": "its",
+      "start": 2.58,
+      "end": 2.74
+    },
+    {
+      "word": "purpose.",
+      "start": 2.74,
+      "end": 3.2
+    },
+    {
+      "word": "You",
+      "start": 4.3,
+      "end": 4.3
+    },
+    {
+      "word": "might",
+      "start": 4.3,
+      "end": 4.5
+    },
+    {
+      "word": "write:",
+      "start": 4.5,
+      "end": 4.78
+    },
+    {
+      "word": "add",
+      "start": 5.48,
+      "end": 5.8
+    },
+    {
+      "word": "the",
+      "start": 5.8,
+      "end": 5.96
+    },
+    {
+      "word": "contact",
+      "start": 5.96,
+      "end": 6.28
+    },
+    {
+      "word": "number",
+      "start": 6.28,
+      "end": 6.96
+    },
+    {
+      "word": "after",
+      "start": 6.96,
+      "end": 7.2
+    },
+    {
+      "word": "the",
+      "start": 7.2,
+      "end": 7.54
+    },
+    {
+      "word": "steps",
+      "start": 7.54,
+      "end": 7.84
+    },
+    {
+      "word": "so",
+      "start": 7.84,
+      "end": 8.24
+    },
+    {
+      "word": "readers",
+      "start": 8.24,
+      "end": 8.56
+    },
+    {
+      "word": "can",
+      "start": 8.56,
+      "end": 8.98
+    },
+    {
+      "word": "find",
+      "start": 8.98,
+      "end": 9.34
+    },
+    {
+      "word": "help.",
+      "start": 9.34,
+      "end": 9.72
+    },
+    {
+      "word": "The",
+      "start": 10.52,
+      "end": 10.58
+    },
+    {
+      "word": "writer",
+      "start": 10.58,
+      "end": 10.84
+    },
+    {
+      "word": "can",
+      "start": 10.84,
+      "end": 11.18
+    },
+    {
+      "word": "accept",
+      "start": 11.18,
+      "end": 11.5
+    },
+    {
+      "word": "the",
+      "start": 11.5,
+      "end": 11.78
+    },
+    {
+      "word": "idea,",
+      "start": 11.78,
+      "end": 12.24
+    },
+    {
+      "word": "ask",
+      "start": 12.72,
+      "end": 13.08
+    },
+    {
+      "word": "a",
+      "start": 13.08,
+      "end": 13.24
+    },
+    {
+      "word": "question,",
+      "start": 13.24,
+      "end": 13.66
+    },
+    {
+      "word": "or",
+      "start": 14.34,
+      "end": 14.44
+    },
+    {
+      "word": "explain",
+      "start": 14.44,
+      "end": 14.92
+    },
+    {
+      "word": "a",
+      "start": 14.92,
+      "end": 15.24
+    },
+    {
+      "word": "different",
+      "start": 15.24,
+      "end": 15.5
+    },
+    {
+      "word": "choice.",
+      "start": 15.5,
+      "end": 15.94
+    },
+    {
+      "word": "A",
+      "start": 17.08,
+      "end": 17.16
+    },
+    {
+      "word": "comment",
+      "start": 17.16,
+      "end": 17.52
+    },
+    {
+      "word": "about",
+      "start": 17.52,
+      "end": 17.86
+    },
+    {
+      "word": "the",
+      "start": 17.86,
+      "end": 18.02
+    },
+    {
+      "word": "work",
+      "start": 18.02,
+      "end": 18.26
+    },
+    {
+      "word": "is",
+      "start": 18.26,
+      "end": 18.72
+    },
+    {
+      "word": "more",
+      "start": 18.72,
+      "end": 19.0
+    },
+    {
+      "word": "useful",
+      "start": 19.0,
+      "end": 19.44
+    },
+    {
+      "word": "than",
+      "start": 19.44,
+      "end": 19.88
+    },
+    {
+      "word": "a",
+      "start": 19.88,
+      "end": 19.98
+    },
+    {
+      "word": "judgment",
+      "start": 19.98,
+      "end": 20.32
+    },
+    {
+      "word": "about",
+      "start": 20.32,
+      "end": 20.92
+    },
+    {
+      "word": "the",
+      "start": 20.92,
+      "end": 21.1
+    },
+    {
+      "word": "person.",
+      "start": 21.1,
+      "end": 21.46
+    }
+  ],
+  "wavSha256": "547f08a4a1a6d57c0fee18ee426ffa83cf81d8e48638c14187dd6b2fa1b7416e",
+  "textSha256": "2cfe952b82c69152e4262355b4b36834d978b2b826e1bb68cfa985bfc80a9223"
+}

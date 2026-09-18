@@ -1,0 +1,1 @@
+If the whole file was deleted, check the trash or recycle bin. If the file is still there but its content changed, inspect version history. Preview the earlier version before restoring it, and coordinate with collaborators so you do not overwrite work they need.

@@ -1,0 +1,228 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "right",
+      "start": 0.12,
+      "end": 0.32
+    },
+    {
+      "word": "file",
+      "start": 0.32,
+      "end": 0.56
+    },
+    {
+      "word": "format",
+      "start": 0.56,
+      "end": 1.06
+    },
+    {
+      "word": "depends",
+      "start": 1.06,
+      "end": 1.38
+    },
+    {
+      "word": "on",
+      "start": 1.38,
+      "end": 1.8
+    },
+    {
+      "word": "the",
+      "start": 1.8,
+      "end": 1.9
+    },
+    {
+      "word": "next",
+      "start": 1.9,
+      "end": 2.06
+    },
+    {
+      "word": "person's",
+      "start": 2.06,
+      "end": 2.56
+    },
+    {
+      "word": "task.",
+      "start": 2.56,
+      "end": 2.78
+    },
+    {
+      "word": "An",
+      "start": 3.66,
+      "end": 3.66
+    },
+    {
+      "word": "editable",
+      "start": 3.66,
+      "end": 4.12
+    },
+    {
+      "word": "document",
+      "start": 4.12,
+      "end": 4.48
+    },
+    {
+      "word": "supports",
+      "start": 4.48,
+      "end": 5.0
+    },
+    {
+      "word": "revision.",
+      "start": 5.0,
+      "end": 5.36
+    },
+    {
+      "word": "A",
+      "start": 6.32,
+      "end": 6.36
+    },
+    {
+      "word": "PDF",
+      "start": 6.36,
+      "end": 6.66
+    },
+    {
+      "word": "often",
+      "start": 6.66,
+      "end": 7.38
+    },
+    {
+      "word": "preserves",
+      "start": 7.38,
+      "end": 7.7
+    },
+    {
+      "word": "a",
+      "start": 7.7,
+      "end": 8.08
+    },
+    {
+      "word": "finished",
+      "start": 8.08,
+      "end": 8.38
+    },
+    {
+      "word": "layout.",
+      "start": 8.38,
+      "end": 8.76
+    },
+    {
+      "word": "A",
+      "start": 9.6,
+      "end": 9.64
+    },
+    {
+      "word": "CSV",
+      "start": 9.64,
+      "end": 9.96
+    },
+    {
+      "word": "carries",
+      "start": 9.96,
+      "end": 10.56
+    },
+    {
+      "word": "plain",
+      "start": 10.56,
+      "end": 10.82
+    },
+    {
+      "word": "table",
+      "start": 10.82,
+      "end": 11.18
+    },
+    {
+      "word": "data",
+      "start": 11.18,
+      "end": 11.54
+    },
+    {
+      "word": "but",
+      "start": 11.9,
+      "end": 12.02
+    },
+    {
+      "word": "loses",
+      "start": 12.02,
+      "end": 12.34
+    },
+    {
+      "word": "formatting",
+      "start": 12.34,
+      "end": 12.82
+    },
+    {
+      "word": "and",
+      "start": 12.82,
+      "end": 13.18
+    },
+    {
+      "word": "formulas.",
+      "start": 13.18,
+      "end": 13.5
+    },
+    {
+      "word": "Choose",
+      "start": 14.66,
+      "end": 14.66
+    },
+    {
+      "word": "deliberately,",
+      "start": 14.66,
+      "end": 15.0
+    },
+    {
+      "word": "then",
+      "start": 15.74,
+      "end": 15.84
+    },
+    {
+      "word": "reopen",
+      "start": 15.84,
+      "end": 16.08
+    },
+    {
+      "word": "the",
+      "start": 16.08,
+      "end": 16.42
+    },
+    {
+      "word": "exported",
+      "start": 16.42,
+      "end": 16.6
+    },
+    {
+      "word": "file",
+      "start": 16.6,
+      "end": 17.1
+    },
+    {
+      "word": "and",
+      "start": 17.1,
+      "end": 17.66
+    },
+    {
+      "word": "check",
+      "start": 17.66,
+      "end": 17.86
+    },
+    {
+      "word": "what",
+      "start": 17.86,
+      "end": 18.1
+    },
+    {
+      "word": "survived.",
+      "start": 18.1,
+      "end": 18.36
+    }
+  ],
+  "wavSha256": "72c0fbc72bd71f7a9cf1fea96fb8aec8d4559fffbff01e0bdddc112b6f4bf34b",
+  "textSha256": "58db7e52b1d8a8fd9c848a66fb022ac876eae788b0ad29509cdff8c3d6872977"
+}

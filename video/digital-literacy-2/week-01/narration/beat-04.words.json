@@ -1,0 +1,223 @@
+{
+  "source": "faster-whisper base.en on final Kokoro wav",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "practice",
+      "start": 0.12,
+      "end": 0.46
+    },
+    {
+      "word": "calendar",
+      "start": 0.46,
+      "end": 0.84
+    },
+    {
+      "word": "entry",
+      "start": 0.84,
+      "end": 1.26
+    },
+    {
+      "word": "needs",
+      "start": 1.26,
+      "end": 1.76
+    },
+    {
+      "word": "a",
+      "start": 1.76,
+      "end": 1.86
+    },
+    {
+      "word": "title,",
+      "start": 1.86,
+      "end": 2.14
+    },
+    {
+      "word": "a",
+      "start": 2.78,
+      "end": 2.82
+    },
+    {
+      "word": "start",
+      "start": 2.82,
+      "end": 3.14
+    },
+    {
+      "word": "and",
+      "start": 3.14,
+      "end": 3.48
+    },
+    {
+      "word": "end,",
+      "start": 3.48,
+      "end": 3.76
+    },
+    {
+      "word": "a",
+      "start": 4.42,
+      "end": 4.44
+    },
+    {
+      "word": "location,",
+      "start": 4.44,
+      "end": 4.84
+    },
+    {
+      "word": "and",
+      "start": 5.48,
+      "end": 5.62
+    },
+    {
+      "word": "a",
+      "start": 5.62,
+      "end": 5.72
+    },
+    {
+      "word": "useful",
+      "start": 5.72,
+      "end": 6.06
+    },
+    {
+      "word": "reminder.",
+      "start": 6.06,
+      "end": 6.54
+    },
+    {
+      "word": "If",
+      "start": 7.66,
+      "end": 7.7
+    },
+    {
+      "word": "a",
+      "start": 7.7,
+      "end": 7.78
+    },
+    {
+      "word": "partner",
+      "start": 7.78,
+      "end": 8.08
+    },
+    {
+      "word": "only",
+      "start": 8.08,
+      "end": 8.44
+    },
+    {
+      "word": "needs",
+      "start": 8.44,
+      "end": 8.9
+    },
+    {
+      "word": "your",
+      "start": 8.9,
+      "end": 9.02
+    },
+    {
+      "word": "availability,",
+      "start": 9.02,
+      "end": 9.36
+    },
+    {
+      "word": "look",
+      "start": 10.1,
+      "end": 10.28
+    },
+    {
+      "word": "for",
+      "start": 10.28,
+      "end": 10.5
+    },
+    {
+      "word": "free",
+      "start": 10.5,
+      "end": 10.94
+    },
+    {
+      "word": "or",
+      "start": 10.94,
+      "end": 11.3
+    },
+    {
+      "word": "busy",
+      "start": 11.3,
+      "end": 11.52
+    },
+    {
+      "word": "sharing.",
+      "start": 11.52,
+      "end": 12.0
+    },
+    {
+      "word": "Check",
+      "start": 12.92,
+      "end": 13.12
+    },
+    {
+      "word": "the",
+      "start": 13.12,
+      "end": 13.34
+    },
+    {
+      "word": "actual",
+      "start": 13.34,
+      "end": 13.66
+    },
+    {
+      "word": "options",
+      "start": 13.66,
+      "end": 14.14
+    },
+    {
+      "word": "instead",
+      "start": 14.14,
+      "end": 14.68
+    },
+    {
+      "word": "of",
+      "start": 14.68,
+      "end": 15.02
+    },
+    {
+      "word": "assuming",
+      "start": 15.02,
+      "end": 15.26
+    },
+    {
+      "word": "every",
+      "start": 15.26,
+      "end": 15.64
+    },
+    {
+      "word": "service",
+      "start": 15.64,
+      "end": 16.3
+    },
+    {
+      "word": "shares",
+      "start": 16.3,
+      "end": 16.7
+    },
+    {
+      "word": "the",
+      "start": 16.7,
+      "end": 17.02
+    },
+    {
+      "word": "same",
+      "start": 17.02,
+      "end": 17.28
+    },
+    {
+      "word": "details.",
+      "start": 17.28,
+      "end": 17.64
+    }
+  ],
+  "wavSha256": "f1c9838a9e9d1fbdc546ee0b7ce6adc7b2554b6bfeb45547881f3716b8918b99",
+  "textSha256": "5bca34a5dedbec82a4efadd8a9839a8369d25f2d9dcc630959af6d3bd82ab796"
+}
