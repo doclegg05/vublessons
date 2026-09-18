@@ -1,223 +1,543 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "b7b097cb4b55c5933146e9085b07cca24637e36d6f75c61c32799be898494cf3",
-  "textSha256": "7ba27256b0ae01b6c1043c1d0ad40a951db374990626dc714ad8a0879f61441b",
-  "matchRatio": 1.0,
+  "wavSha256": "325801ab832d20f235443a5cfb5b750605d2920174f63883f86809d85f2892e5",
+  "textSha256": "be812ea43dfc65db12b83394e1b350512b775e3fa717b67b4908bfe4135481d1",
+  "matchRatio": 0.9719626168224299,
   "words": [
     {
-      "word": "When",
+      "word": "Now",
       "start": 0.0,
-      "end": 0.16
+      "end": 0.18
     },
     {
-      "word": "sound",
-      "start": 0.16,
-      "end": 0.38
+      "word": "suppose",
+      "start": 0.34,
+      "end": 0.64
     },
     {
-      "word": "is",
-      "start": 0.38,
-      "end": 0.6
+      "word": "the",
+      "start": 0.64,
+      "end": 0.9
     },
     {
-      "word": "missing,",
-      "start": 0.6,
-      "end": 0.92
+      "word": "browser",
+      "start": 0.9,
+      "end": 1.14
     },
     {
-      "word": "first",
-      "start": 1.3,
+      "word": "tabs",
+      "start": 1.14,
       "end": 1.5
     },
     {
-      "word": "check",
+      "word": "and",
       "start": 1.5,
-      "end": 1.76
+      "end": 1.88
     },
     {
       "word": "the",
-      "start": 1.76,
-      "end": 2.0
+      "start": 1.88,
+      "end": 1.96
     },
     {
-      "word": "selected",
-      "start": 2.0,
-      "end": 2.36
+      "word": "rest",
+      "start": 1.96,
+      "end": 2.12
     },
     {
-      "word": "output",
-      "start": 2.36,
+      "word": "of",
+      "start": 2.12,
+      "end": 2.32
+    },
+    {
+      "word": "the",
+      "start": 2.32,
+      "end": 2.4
+    },
+    {
+      "word": "desktop",
+      "start": 2.4,
       "end": 2.62
     },
     {
-      "word": "device",
+      "word": "are",
       "start": 2.62,
-      "end": 3.1
+      "end": 3.24
     },
     {
-      "word": "and",
-      "start": 3.1,
-      "end": 3.42
+      "word": "also",
+      "start": 3.24,
+      "end": 3.46
     },
     {
-      "word": "mute",
-      "start": 3.42,
-      "end": 3.6
-    },
-    {
-      "word": "setting.",
-      "start": 3.6,
-      "end": 3.92
-    },
-    {
-      "word": "A",
-      "start": 4.8,
-      "end": 4.84
-    },
-    {
-      "word": "connected",
-      "start": 4.84,
-      "end": 5.12
-    },
-    {
-      "word": "headset",
-      "start": 5.12,
-      "end": 5.5
-    },
-    {
-      "word": "may",
-      "start": 5.5,
-      "end": 5.9
-    },
-    {
-      "word": "be",
-      "start": 5.9,
-      "end": 6.08
-    },
-    {
-      "word": "receiving",
-      "start": 6.08,
-      "end": 6.44
-    },
-    {
-      "word": "the",
-      "start": 6.44,
-      "end": 6.68
-    },
-    {
-      "word": "sound.",
-      "start": 6.68,
-      "end": 7.02
-    },
-    {
-      "word": "Adjust",
-      "start": 8.18,
-      "end": 8.18
-    },
-    {
-      "word": "the",
-      "start": 8.18,
-      "end": 8.48
-    },
-    {
-      "word": "volume,",
-      "start": 8.48,
-      "end": 8.7
-    },
-    {
-      "word": "then",
-      "start": 9.12,
-      "end": 9.18
-    },
-    {
-      "word": "play",
-      "start": 9.18,
-      "end": 9.36
-    },
-    {
-      "word": "a",
-      "start": 9.36,
-      "end": 9.54
-    },
-    {
-      "word": "short",
-      "start": 9.54,
-      "end": 9.72
-    },
-    {
-      "word": "test.",
-      "start": 9.72,
-      "end": 10.06
-    },
-    {
-      "word": "The",
-      "start": 11.58,
-      "end": 12.16
-    },
-    {
-      "word": "same",
-      "start": 12.16,
-      "end": 12.34
-    },
-    {
-      "word": "habit",
-      "start": 12.34,
-      "end": 12.68
-    },
-    {
-      "word": "applies",
-      "start": 12.68,
-      "end": 13.04
+      "word": "hard",
+      "start": 3.46,
+      "end": 3.88
     },
     {
       "word": "to",
-      "start": 13.04,
-      "end": 13.28
+      "start": 3.88,
+      "end": 4.02
     },
     {
-      "word": "printing:",
-      "start": 13.28,
-      "end": 13.48
+      "word": "see.",
+      "start": 4.02,
+      "end": 4.34
     },
     {
-      "word": "choose",
-      "start": 14.4,
-      "end": 14.4
+      "word": "Page",
+      "start": 4.34,
+      "end": 5.19
+    },
+    {
+      "word": "zoom",
+      "start": 5.19,
+      "end": 6.04
+    },
+    {
+      "word": "will",
+      "start": 6.04,
+      "end": 6.2
+    },
+    {
+      "word": "not",
+      "start": 6.2,
+      "end": 6.4
+    },
+    {
+      "word": "solve",
+      "start": 6.4,
+      "end": 6.76
+    },
+    {
+      "word": "every",
+      "start": 6.76,
+      "end": 7.08
+    },
+    {
+      "word": "part",
+      "start": 7.08,
+      "end": 7.38
+    },
+    {
+      "word": "of",
+      "start": 7.38,
+      "end": 7.52
+    },
+    {
+      "word": "that",
+      "start": 7.52,
+      "end": 7.64
+    },
+    {
+      "word": "problem.",
+      "start": 7.64,
+      "end": 8.04
+    },
+    {
+      "word": "System",
+      "start": 8.98,
+      "end": 8.98
+    },
+    {
+      "word": "text",
+      "start": 8.98,
+      "end": 9.22
+    },
+    {
+      "word": "size",
+      "start": 9.22,
+      "end": 9.62
+    },
+    {
+      "word": "changes",
+      "start": 9.62,
+      "end": 10.0
+    },
+    {
+      "word": "text",
+      "start": 10.0,
+      "end": 10.44
+    },
+    {
+      "word": "in",
+      "start": 10.44,
+      "end": 10.7
+    },
+    {
+      "word": "supported",
+      "start": 10.7,
+      "end": 11.06
+    },
+    {
+      "word": "areas;",
+      "start": 11.06,
+      "end": 11.72
+    },
+    {
+      "word": "display",
+      "start": 12.9,
+      "end": 12.9
+    },
+    {
+      "word": "scaling",
+      "start": 12.9,
+      "end": 13.22
+    },
+    {
+      "word": "changes",
+      "start": 13.22,
+      "end": 13.76
     },
     {
       "word": "the",
-      "start": 14.4,
-      "end": 14.6
+      "start": 13.76,
+      "end": 14.04
     },
     {
-      "word": "printer",
-      "start": 14.6,
-      "end": 14.78
+      "word": "size",
+      "start": 14.04,
+      "end": 14.36
+    },
+    {
+      "word": "of",
+      "start": 14.36,
+      "end": 14.56
+    },
+    {
+      "word": "text,",
+      "start": 14.56,
+      "end": 14.8
+    },
+    {
+      "word": "apps,",
+      "start": 15.38,
+      "end": 15.52
     },
     {
       "word": "and",
-      "start": 14.78,
-      "end": 15.16
+      "start": 16.1,
+      "end": 16.24
     },
     {
-      "word": "inspect",
-      "start": 15.16,
-      "end": 15.5
+      "word": "other",
+      "start": 16.24,
+      "end": 16.44
+    },
+    {
+      "word": "interface",
+      "start": 16.44,
+      "end": 16.84
+    },
+    {
+      "word": "elements",
+      "start": 16.84,
+      "end": 17.26
+    },
+    {
+      "word": "more",
+      "start": 17.26,
+      "end": 17.62
+    },
+    {
+      "word": "broadly.",
+      "start": 17.62,
+      "end": 17.94
+    },
+    {
+      "word": "The",
+      "start": 21.86,
+      "end": 21.96
+    },
+    {
+      "word": "exact",
+      "start": 21.96,
+      "end": 22.2
+    },
+    {
+      "word": "controls",
+      "start": 22.2,
+      "end": 22.74
+    },
+    {
+      "word": "depend",
+      "start": 22.74,
+      "end": 23.1
+    },
+    {
+      "word": "on",
+      "start": 23.1,
+      "end": 23.54
+    },
+    {
+      "word": "your",
+      "start": 23.54,
+      "end": 23.66
+    },
+    {
+      "word": "computer.",
+      "start": 23.66,
+      "end": 24.16
+    },
+    {
+      "word": "Ask",
+      "start": 24.16,
+      "end": 25.34
+    },
+    {
+      "word": "the",
+      "start": 25.34,
+      "end": 25.46
+    },
+    {
+      "word": "instructor",
+      "start": 25.46,
+      "end": 25.7
+    },
+    {
+      "word": "before",
+      "start": 25.7,
+      "end": 26.18
+    },
+    {
+      "word": "changing",
+      "start": 26.18,
+      "end": 26.8
     },
     {
       "word": "a",
-      "start": 15.5,
-      "end": 15.74
+      "start": 26.8,
+      "end": 26.94
     },
     {
-      "word": "test",
-      "start": 15.74,
-      "end": 15.86
+      "word": "shared",
+      "start": 26.94,
+      "end": 27.24
     },
     {
-      "word": "page.",
-      "start": 15.86,
-      "end": 16.18
+      "word": "workstation's",
+      "start": 27.24,
+      "end": 28.1
+    },
+    {
+      "word": "system",
+      "start": 28.1,
+      "end": 28.42
+    },
+    {
+      "word": "settings.",
+      "start": 28.42,
+      "end": 28.84
+    },
+    {
+      "word": "This",
+      "start": 30.18,
+      "end": 30.5
+    },
+    {
+      "word": "is",
+      "start": 30.5,
+      "end": 30.62
+    },
+    {
+      "word": "like",
+      "start": 30.62,
+      "end": 30.82
+    },
+    {
+      "word": "choosing",
+      "start": 30.82,
+      "end": 31.08
+    },
+    {
+      "word": "between",
+      "start": 31.08,
+      "end": 31.48
+    },
+    {
+      "word": "a",
+      "start": 31.48,
+      "end": 31.68
+    },
+    {
+      "word": "magnifying",
+      "start": 31.68,
+      "end": 32.24
+    },
+    {
+      "word": "glass",
+      "start": 32.24,
+      "end": 32.54
+    },
+    {
+      "word": "for",
+      "start": 32.54,
+      "end": 32.82
+    },
+    {
+      "word": "one",
+      "start": 32.82,
+      "end": 33.04
+    },
+    {
+      "word": "page",
+      "start": 33.04,
+      "end": 33.38
+    },
+    {
+      "word": "and",
+      "start": 33.38,
+      "end": 34.0
+    },
+    {
+      "word": "a",
+      "start": 34.0,
+      "end": 34.08
+    },
+    {
+      "word": "more",
+      "start": 34.08,
+      "end": 34.24
+    },
+    {
+      "word": "comfortable",
+      "start": 34.24,
+      "end": 34.68
+    },
+    {
+      "word": "arrangement",
+      "start": 34.68,
+      "end": 35.2
+    },
+    {
+      "word": "for",
+      "start": 35.2,
+      "end": 35.56
+    },
+    {
+      "word": "the",
+      "start": 35.56,
+      "end": 35.66
+    },
+    {
+      "word": "whole",
+      "start": 35.66,
+      "end": 35.86
+    },
+    {
+      "word": "desk.",
+      "start": 35.86,
+      "end": 36.28
+    },
+    {
+      "word": "Which",
+      "start": 37.52,
+      "end": 37.74
+    },
+    {
+      "word": "would",
+      "start": 37.74,
+      "end": 37.92
+    },
+    {
+      "word": "you",
+      "start": 37.92,
+      "end": 38.1
+    },
+    {
+      "word": "try",
+      "start": 38.1,
+      "end": 38.32
+    },
+    {
+      "word": "first",
+      "start": 38.32,
+      "end": 38.68
+    },
+    {
+      "word": "if",
+      "start": 38.68,
+      "end": 39.14
+    },
+    {
+      "word": "only",
+      "start": 39.14,
+      "end": 39.26
+    },
+    {
+      "word": "one",
+      "start": 39.26,
+      "end": 39.64
+    },
+    {
+      "word": "website",
+      "start": 39.64,
+      "end": 40.04
+    },
+    {
+      "word": "is",
+      "start": 40.04,
+      "end": 40.34
+    },
+    {
+      "word": "too",
+      "start": 40.34,
+      "end": 40.52
+    },
+    {
+      "word": "small?",
+      "start": 40.52,
+      "end": 40.9
+    },
+    {
+      "word": "Browser",
+      "start": 41.94,
+      "end": 42.46
+    },
+    {
+      "word": "zoom,",
+      "start": 42.46,
+      "end": 42.64
+    },
+    {
+      "word": "because",
+      "start": 42.64,
+      "end": 43.38
+    },
+    {
+      "word": "it",
+      "start": 43.38,
+      "end": 43.52
+    },
+    {
+      "word": "matches",
+      "start": 43.52,
+      "end": 43.82
+    },
+    {
+      "word": "the",
+      "start": 43.82,
+      "end": 44.16
+    },
+    {
+      "word": "scope",
+      "start": 44.16,
+      "end": 44.42
+    },
+    {
+      "word": "of",
+      "start": 44.42,
+      "end": 44.66
+    },
+    {
+      "word": "the",
+      "start": 44.66,
+      "end": 44.76
+    },
+    {
+      "word": "problem.",
+      "start": 44.76,
+      "end": 45.1
     }
   ]
 }

@@ -38,8 +38,9 @@ for week in sorted(root.glob(sys.argv[1] if len(sys.argv)>1 else 'week-*')):
  (week/'index.html').write_text(f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1280,height=720"><title>{esc(title)}</title><script src="assets/gsap.min.js"></script><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}*{{box-sizing:border-box}}body{{margin:0;font-family:VUB,'Segoe UI',sans-serif}}#root{{position:relative;width:1280px;height:720px;overflow:hidden}}</style></head><body><div id="root" data-composition-id="main" data-start="0" data-duration="{start:.3f}" data-width="1280" data-height="720">{''.join(clips)}{''.join(audio)}</div><script>window.__timelines=window.__timelines||{{}};window.__timelines.main=gsap.timeline({{paused:true}});</script></body></html>''')
  (week/'hyperframes.json').write_text((root/'production/hyperframes.json').read_text())
  (week/'STORYBOARD.md').write_text(f'---\nformat: 1280x720\nmode: autonomous\nduration: {start:.3f}s\nmessage: {title}\naudience: adult veteran learners\n---\n\n'+''.join(story))
+ (public/f'week-{n:02}-chapters.json').write_text(json.dumps([dict(title=b['title'],startSeconds=b['start']) for b in beats],indent=2)+'\n')
  (week/'SCRIPT.md').write_text('\n\n'.join(f'## {b["title"]}\n{b["text"]}' for b in beats))
- srt='\n\n'.join(f'{i+1}\n{stamp(a,",")} --> {stamp(b,",")}\n'+textwrap.fill(t,width=42) for i,(a,b,t) in enumerate(cues))+'\n'
- vtt='WEBVTT\n\n'+'\n\n'.join(f'{stamp(a)} --> {stamp(b)}\n'+textwrap.fill(t,width=42) for a,b,t in cues)+'\n'
+ srt='\n\n'.join(f'{i+1}\n{stamp(a,",")} --> {stamp(b,",")}\n'+textwrap.fill(t,width=42,break_long_words=False,break_on_hyphens=False) for i,(a,b,t) in enumerate(cues))+'\n'
+ vtt='WEBVTT\n\n'+'\n\n'.join(f'{stamp(a)} --> {stamp(b)}\n'+textwrap.fill(t,width=42,break_long_words=False,break_on_hyphens=False) for a,b,t in cues)+'\n'
  (week/'captions/narration.srt').write_text(srt);(public/f'week-{n:02}.vtt').write_text(vtt)
  print(week.name,round(start,2),'seconds',len(cues),'aligned captions')

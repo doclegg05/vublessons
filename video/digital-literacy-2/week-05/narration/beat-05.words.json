@@ -1,228 +1,543 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "30c645c83cf3014c368bb59c2e0da12ec2415dcce414e4c9130bf87e4134423b",
-  "textSha256": "fceaf090f4dbb69d6f1861120fee1531f72dc0b5105c67d88d083471c3d1a307",
-  "matchRatio": 0.9772727272727273,
+  "wavSha256": "2748dec9dce7dcee46be3f196e6f0fb90d7aac4c6facbee6b9e4d6fececde3e7",
+  "textSha256": "f9971e81481eff5dceabb688e8f11c5fcf8eb1e928c67c1a9e00003749064982",
+  "matchRatio": 0.9906542056074766,
   "words": [
     {
-      "word": "Choose",
+      "word": "Imagine",
       "start": 0.0,
-      "end": 0.24
+      "end": 0.4
     },
     {
-      "word": "one",
-      "start": 0.24,
-      "end": 0.56
+      "word": "a",
+      "start": 0.4,
+      "end": 0.54
     },
     {
-      "word": "practice",
-      "start": 0.56,
+      "word": "document",
+      "start": 0.54,
       "end": 0.9
     },
     {
-      "word": "scenario",
+      "word": "labeled",
       "start": 0.9,
-      "end": 1.46
+      "end": 1.36
     },
     {
-      "word": "and",
-      "start": 1.46,
-      "end": 1.94
+      "word": "read-only.",
+      "start": 1.36,
+      "end": 3.08
     },
     {
-      "word": "explain",
-      "start": 1.94,
-      "end": 2.3
+      "word": "That",
+      "start": 3.08,
+      "end": 3.28
     },
     {
-      "word": "your",
-      "start": 2.3,
-      "end": 2.58
+      "word": "may",
+      "start": 3.28,
+      "end": 3.44
     },
     {
-      "word": "next",
-      "start": 2.58,
-      "end": 2.78
+      "word": "prevent",
+      "start": 3.44,
+      "end": 3.7
     },
     {
-      "word": "step",
-      "start": 2.78,
-      "end": 3.16
+      "word": "ordinary",
+      "start": 3.7,
+      "end": 4.06
     },
     {
-      "word": "to",
-      "start": 3.16,
-      "end": 3.42
+      "word": "editing,",
+      "start": 4.06,
+      "end": 4.72
+    },
+    {
+      "word": "but",
+      "start": 5.16,
+      "end": 5.28
+    },
+    {
+      "word": "the",
+      "start": 5.28,
+      "end": 5.38
+    },
+    {
+      "word": "content",
+      "start": 5.38,
+      "end": 5.76
+    },
+    {
+      "word": "can",
+      "start": 5.76,
+      "end": 6.04
+    },
+    {
+      "word": "still",
+      "start": 6.04,
+      "end": 6.28
+    },
+    {
+      "word": "be",
+      "start": 6.28,
+      "end": 6.46
+    },
+    {
+      "word": "readable.",
+      "start": 6.46,
+      "end": 6.66
+    },
+    {
+      "word": "Encryption",
+      "start": 7.52,
+      "end": 7.9
+    },
+    {
+      "word": "addresses",
+      "start": 7.9,
+      "end": 8.2
     },
     {
       "word": "a",
-      "start": 3.42,
-      "end": 3.52
+      "start": 8.2,
+      "end": 8.54
     },
     {
-      "word": "partner.",
-      "start": 3.52,
-      "end": 3.84
+      "word": "different",
+      "start": 8.54,
+      "end": 8.74
     },
     {
-      "word": "Name",
-      "start": 4.88,
-      "end": 4.88
+      "word": "question:",
+      "start": 8.74,
+      "end": 9.16
     },
     {
-      "word": "the",
-      "start": 4.88,
-      "end": 5.04
+      "word": "can",
+      "start": 9.96,
+      "end": 10.04
     },
     {
-      "word": "evidence,",
-      "start": 5.04,
-      "end": 5.32
+      "word": "someone",
+      "start": 10.04,
+      "end": 10.32
     },
     {
-      "word": "the",
-      "start": 5.9,
-      "end": 6.0
-    },
-    {
-      "word": "independent",
-      "start": 6.0,
-      "end": 6.16
-    },
-    {
-      "word": "source",
-      "start": 6.16,
-      "end": 6.7
-    },
-    {
-      "word": "you",
-      "start": 6.7,
-      "end": 6.94
-    },
-    {
-      "word": "would",
-      "start": 6.94,
-      "end": 7.04
-    },
-    {
-      "word": "check,",
-      "start": 7.04,
-      "end": 7.24
-    },
-    {
-      "word": "and",
-      "start": 7.84,
-      "end": 7.98
+      "word": "understand",
+      "start": 10.32,
+      "end": 10.7
     },
     {
       "word": "the",
-      "start": 7.98,
-      "end": 8.12
+      "start": 10.7,
+      "end": 11.1
     },
     {
-      "word": "action",
-      "start": 8.12,
-      "end": 8.46
+      "word": "data",
+      "start": 11.1,
+      "end": 11.36
     },
     {
-      "word": "that",
-      "start": 8.46,
-      "end": 8.68
-    },
-    {
-      "word": "limits",
-      "start": 8.68,
-      "end": 8.92
-    },
-    {
-      "word": "risk.",
-      "start": 8.92,
-      "end": 9.26
-    },
-    {
-      "word": "Then",
-      "start": 12.78,
-      "end": 13.34
-    },
-    {
-      "word": "complete",
-      "start": 13.34,
-      "end": 13.8
+      "word": "without",
+      "start": 11.36,
+      "end": 11.62
     },
     {
       "word": "the",
-      "start": 13.8,
-      "end": 14.04
+      "start": 11.62,
+      "end": 11.92
     },
     {
-      "word": "skills",
-      "start": 14.04,
-      "end": 14.22
+      "word": "required",
+      "start": 11.92,
+      "end": 12.26
     },
     {
-      "word": "challenge",
-      "start": 14.22,
-      "end": 14.72
+      "word": "key",
+      "start": 12.26,
+      "end": 12.68
     },
     {
-      "word": "and",
-      "start": 14.72,
-      "end": 15.04
+      "word": "or",
+      "start": 12.68,
+      "end": 13.12
     },
     {
-      "word": "post-test.",
-      "start": 15.04,
-      "end": 16.5
+      "word": "authorized",
+      "start": 13.12,
+      "end": 13.42
     },
     {
-      "word": "Use",
-      "start": 16.5,
-      "end": 16.56
+      "word": "access?",
+      "start": 13.42,
+      "end": 14.02
     },
     {
-      "word": "the",
-      "start": 16.56,
+      "word": "A",
+      "start": 14.78,
+      "end": 14.98
+    },
+    {
+      "word": "password",
+      "start": 14.98,
+      "end": 15.32
+    },
+    {
+      "word": "can",
+      "start": 15.32,
+      "end": 15.68
+    },
+    {
+      "word": "protect",
+      "start": 15.68,
+      "end": 15.96
+    },
+    {
+      "word": "different",
+      "start": 15.96,
+      "end": 16.36
+    },
+    {
+      "word": "actions",
+      "start": 16.36,
       "end": 16.74
     },
     {
-      "word": "results",
+      "word": "depending",
       "start": 16.74,
-      "end": 17.0
+      "end": 17.1
     },
     {
-      "word": "to",
-      "start": 17.0,
-      "end": 17.38
+      "word": "on",
+      "start": 17.1,
+      "end": 17.46
     },
     {
-      "word": "choose",
-      "start": 17.38,
-      "end": 17.66
+      "word": "the",
+      "start": 17.46,
+      "end": 17.56
+    },
+    {
+      "word": "application,",
+      "start": 17.56,
+      "end": 18.0
+    },
+    {
+      "word": "so",
+      "start": 18.66,
+      "end": 18.84
+    },
+    {
+      "word": "do",
+      "start": 18.84,
+      "end": 18.98
+    },
+    {
+      "word": "not",
+      "start": 18.98,
+      "end": 19.2
+    },
+    {
+      "word": "assume",
+      "start": 19.2,
+      "end": 19.5
+    },
+    {
+      "word": "every",
+      "start": 19.5,
+      "end": 19.92
+    },
+    {
+      "word": "password",
+      "start": 19.92,
+      "end": 20.36
+    },
+    {
+      "word": "prompt",
+      "start": 20.36,
+      "end": 20.88
+    },
+    {
+      "word": "means",
+      "start": 20.88,
+      "end": 21.24
+    },
+    {
+      "word": "the",
+      "start": 21.24,
+      "end": 21.48
+    },
+    {
+      "word": "file",
+      "start": 21.48,
+      "end": 21.74
+    },
+    {
+      "word": "is",
+      "start": 21.74,
+      "end": 21.94
+    },
+    {
+      "word": "encrypted.",
+      "start": 21.94,
+      "end": 22.18
+    },
+    {
+      "word": "Inspect",
+      "start": 24.44,
+      "end": 25.16
+    },
+    {
+      "word": "what",
+      "start": 25.16,
+      "end": 25.54
+    },
+    {
+      "word": "the",
+      "start": 25.54,
+      "end": 25.68
+    },
+    {
+      "word": "feature",
+      "start": 25.68,
+      "end": 25.98
+    },
+    {
+      "word": "actually",
+      "start": 25.98,
+      "end": 26.5
+    },
+    {
+      "word": "promises.",
+      "start": 26.5,
+      "end": 26.92
+    },
+    {
+      "word": "In",
+      "start": 26.92,
+      "end": 27.94
+    },
+    {
+      "word": "our",
+      "start": 27.94,
+      "end": 28.08
+    },
+    {
+      "word": "diagram,",
+      "start": 28.08,
+      "end": 28.46
     },
     {
       "word": "a",
-      "start": 17.66,
-      "end": 17.8
+      "start": 28.84,
+      "end": 28.94
     },
     {
-      "word": "task",
-      "start": 17.8,
-      "end": 18.02
+      "word": "readable",
+      "start": 28.94,
+      "end": 29.2
     },
     {
-      "word": "for",
-      "start": 18.02,
-      "end": 18.4
+      "word": "file",
+      "start": 29.2,
+      "end": 29.7
     },
     {
-      "word": "more",
-      "start": 18.4,
-      "end": 18.62
+      "word": "becomes",
+      "start": 29.7,
+      "end": 30.12
     },
     {
-      "word": "practice.",
-      "start": 18.62,
-      "end": 19.12
+      "word": "protected",
+      "start": 30.12,
+      "end": 30.52
+    },
+    {
+      "word": "data",
+      "start": 30.52,
+      "end": 30.94
+    },
+    {
+      "word": "that",
+      "start": 30.94,
+      "end": 31.26
+    },
+    {
+      "word": "requires",
+      "start": 31.26,
+      "end": 31.64
+    },
+    {
+      "word": "a",
+      "start": 31.64,
+      "end": 31.94
+    },
+    {
+      "word": "key.",
+      "start": 31.94,
+      "end": 32.14
+    },
+    {
+      "word": "That",
+      "start": 32.88,
+      "end": 32.94
+    },
+    {
+      "word": "does",
+      "start": 32.94,
+      "end": 33.08
+    },
+    {
+      "word": "not",
+      "start": 33.08,
+      "end": 33.28
+    },
+    {
+      "word": "remove",
+      "start": 33.28,
+      "end": 33.6
+    },
+    {
+      "word": "the",
+      "start": 33.6,
+      "end": 33.86
+    },
+    {
+      "word": "need",
+      "start": 33.86,
+      "end": 34.06
+    },
+    {
+      "word": "to",
+      "start": 34.06,
+      "end": 34.26
+    },
+    {
+      "word": "manage",
+      "start": 34.26,
+      "end": 34.56
+    },
+    {
+      "word": "who",
+      "start": 34.56,
+      "end": 34.92
+    },
+    {
+      "word": "can",
+      "start": 34.92,
+      "end": 35.06
+    },
+    {
+      "word": "access",
+      "start": 35.06,
+      "end": 35.46
+    },
+    {
+      "word": "an",
+      "start": 35.46,
+      "end": 35.76
+    },
+    {
+      "word": "unlocked",
+      "start": 35.76,
+      "end": 35.98
+    },
+    {
+      "word": "device",
+      "start": 35.98,
+      "end": 36.6
+    },
+    {
+      "word": "or",
+      "start": 36.6,
+      "end": 37.0
+    },
+    {
+      "word": "account.",
+      "start": 37.0,
+      "end": 37.32
+    },
+    {
+      "word": "Pause",
+      "start": 38.04,
+      "end": 38.38
+    },
+    {
+      "word": "and",
+      "start": 38.38,
+      "end": 38.6
+    },
+    {
+      "word": "explain",
+      "start": 38.6,
+      "end": 38.92
+    },
+    {
+      "word": "which",
+      "start": 38.92,
+      "end": 39.3
+    },
+    {
+      "word": "protection",
+      "start": 39.3,
+      "end": 39.76
+    },
+    {
+      "word": "fits",
+      "start": 39.76,
+      "end": 40.22
+    },
+    {
+      "word": "preventing",
+      "start": 40.22,
+      "end": 40.6
+    },
+    {
+      "word": "accidental",
+      "start": 40.6,
+      "end": 41.2
+    },
+    {
+      "word": "edits,",
+      "start": 41.2,
+      "end": 41.7
+    },
+    {
+      "word": "and",
+      "start": 41.7,
+      "end": 42.42
+    },
+    {
+      "word": "which",
+      "start": 42.42,
+      "end": 42.6
+    },
+    {
+      "word": "addresses",
+      "start": 42.6,
+      "end": 43.04
+    },
+    {
+      "word": "readable",
+      "start": 43.04,
+      "end": 43.34
+    },
+    {
+      "word": "data",
+      "start": 43.34,
+      "end": 43.82
+    },
+    {
+      "word": "being",
+      "start": 43.82,
+      "end": 44.16
+    },
+    {
+      "word": "exposed.",
+      "start": 44.16,
+      "end": 44.52
     }
   ]
 }

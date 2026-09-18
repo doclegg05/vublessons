@@ -1,243 +1,553 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "f74ba1cc583da04ef9e0854a93b63d6f505a52b310c66f2943061453655f8063",
-  "textSha256": "ad003fa9308e875d10f3365316587a494389fb13023dbfa389382d202dada035",
-  "matchRatio": 0.9574468085106383,
+  "wavSha256": "3f95c084a2e33ae486ab208f7c38b7a1ca1de20fe87fa7ae1820e08604179ba3",
+  "textSha256": "f2899488a250faac655891e46829c837e88e3089600e94b85a2fb3a0c045b826",
+  "matchRatio": 0.963302752293578,
   "words": [
     {
-      "word": "In",
+      "word": "Select",
       "start": 0.0,
-      "end": 0.12
+      "end": 0.32
     },
     {
       "word": "a",
-      "start": 0.12,
-      "end": 0.2
-    },
-    {
-      "word": "practice",
-      "start": 0.2,
+      "start": 0.32,
       "end": 0.52
     },
     {
-      "word": "workbook,",
+      "word": "short",
       "start": 0.52,
-      "end": 1.08
+      "end": 0.68
     },
     {
-      "word": "enter",
-      "start": 1.4,
-      "end": 1.52
+      "word": "piece",
+      "start": 0.68,
+      "end": 0.98
     },
     {
-      "word": "paper",
-      "start": 1.52,
+      "word": "of",
+      "start": 0.98,
+      "end": 1.2
+    },
+    {
+      "word": "text",
+      "start": 1.2,
+      "end": 1.46
+    },
+    {
+      "word": "before",
+      "start": 1.46,
       "end": 1.72
     },
     {
-      "word": "at",
+      "word": "changing",
       "start": 1.72,
-      "end": 2.0
+      "end": 2.28
     },
     {
-      "word": "twelve",
-      "start": 2.0,
-      "end": 2.2
-    },
-    {
-      "word": "dollars,",
-      "start": 2.2,
-      "end": 2.62
-    },
-    {
-      "word": "folders",
-      "start": 3.08,
-      "end": 3.18
-    },
-    {
-      "word": "at",
-      "start": 3.18,
-      "end": 3.52
-    },
-    {
-      "word": "eight,",
-      "start": 3.52,
-      "end": 3.66
+      "word": "it,",
+      "start": 2.28,
+      "end": 2.5
     },
     {
       "word": "and",
-      "start": 4.08,
-      "end": 4.12
-    },
-    {
-      "word": "pens",
-      "start": 4.12,
-      "end": 4.32
-    },
-    {
-      "word": "at",
-      "start": 4.32,
-      "end": 4.54
-    },
-    {
-      "word": "five.",
-      "start": 4.54,
-      "end": 4.74
-    },
-    {
-      "word": "The",
-      "start": 5.26,
-      "end": 5.28
-    },
-    {
-      "word": "total",
-      "start": 5.28,
-      "end": 5.48
-    },
-    {
-      "word": "is",
-      "start": 5.48,
-      "end": 5.9
-    },
-    {
-      "word": "twenty-five.",
-      "start": 5.9,
-      "end": 8.14
-    },
-    {
-      "word": "Use",
-      "start": 8.14,
-      "end": 8.6
-    },
-    {
-      "word": "a",
-      "start": 8.6,
-      "end": 8.78
-    },
-    {
-      "word": "sum",
-      "start": 8.78,
-      "end": 8.94
-    },
-    {
-      "word": "formula",
-      "start": 8.94,
-      "end": 9.28
-    },
-    {
-      "word": "over",
-      "start": 9.28,
-      "end": 9.74
-    },
-    {
-      "word": "all",
-      "start": 9.74,
-      "end": 10.04
-    },
-    {
-      "word": "three",
-      "start": 10.04,
-      "end": 10.34
-    },
-    {
-      "word": "cells.",
-      "start": 10.34,
-      "end": 10.68
-    },
-    {
-      "word": "Change",
-      "start": 11.46,
-      "end": 11.6
-    },
-    {
-      "word": "paper",
-      "start": 11.6,
-      "end": 11.86
-    },
-    {
-      "word": "to",
-      "start": 11.86,
-      "end": 12.14
-    },
-    {
-      "word": "fifteen",
-      "start": 12.14,
-      "end": 12.42
-    },
-    {
-      "word": "and",
-      "start": 12.42,
-      "end": 13.34
+      "start": 2.5,
+      "end": 2.76
     },
     {
       "word": "check",
-      "start": 13.34,
-      "end": 13.5
+      "start": 2.76,
+      "end": 2.96
     },
     {
-      "word": "that",
-      "start": 13.5,
-      "end": 13.7
+      "word": "what",
+      "start": 2.96,
+      "end": 3.2
     },
     {
       "word": "the",
-      "start": 13.7,
-      "end": 13.82
+      "start": 3.2,
+      "end": 3.34
     },
     {
-      "word": "total",
-      "start": 13.82,
+      "word": "selection",
+      "start": 3.34,
+      "end": 3.62
+    },
+    {
+      "word": "includes.",
+      "start": 3.62,
+      "end": 4.14
+    },
+    {
+      "word": "Common",
+      "start": 5.02,
+      "end": 5.3
+    },
+    {
+      "word": "shortcuts",
+      "start": 5.3,
+      "end": 5.62
+    },
+    {
+      "word": "such",
+      "start": 5.62,
+      "end": 6.14
+    },
+    {
+      "word": "as",
+      "start": 6.14,
+      "end": 6.36
+    },
+    {
+      "word": "copy,",
+      "start": 6.36,
+      "end": 6.66
+    },
+    {
+      "word": "paste,",
+      "start": 7.1,
+      "end": 7.34
+    },
+    {
+      "word": "save,",
+      "start": 7.82,
+      "end": 8.12
+    },
+    {
+      "word": "and",
+      "start": 8.58,
+      "end": 8.6
+    },
+    {
+      "word": "undo",
+      "start": 8.6,
+      "end": 9.0
+    },
+    {
+      "word": "can",
+      "start": 9.0,
+      "end": 9.4
+    },
+    {
+      "word": "reduce",
+      "start": 9.4,
+      "end": 9.74
+    },
+    {
+      "word": "repeated",
+      "start": 9.74,
+      "end": 10.26
+    },
+    {
+      "word": "mouse",
+      "start": 10.26,
+      "end": 10.64
+    },
+    {
+      "word": "work;",
+      "start": 10.64,
+      "end": 10.94
+    },
+    {
+      "word": "your",
+      "start": 11.62,
+      "end": 11.86
+    },
+    {
+      "word": "instructor",
+      "start": 11.86,
+      "end": 12.18
+    },
+    {
+      "word": "can",
+      "start": 12.18,
+      "end": 12.6
+    },
+    {
+      "word": "show",
+      "start": 12.6,
+      "end": 12.8
+    },
+    {
+      "word": "the",
+      "start": 12.8,
+      "end": 12.94
+    },
+    {
+      "word": "keys",
+      "start": 12.94,
+      "end": 13.18
+    },
+    {
+      "word": "for",
+      "start": 13.18,
+      "end": 13.46
+    },
+    {
+      "word": "your",
+      "start": 13.46,
+      "end": 13.66
+    },
+    {
+      "word": "computer.",
+      "start": 13.66,
       "end": 14.04
     },
     {
-      "word": "becomes",
-      "start": 14.04,
-      "end": 14.42
+      "word": "Practice",
+      "start": 14.98,
+      "end": 15.24
     },
     {
-      "word": "twenty-eight.",
-      "start": 14.42,
-      "end": 16.08
+      "word": "on",
+      "start": 15.24,
+      "end": 15.54
     },
     {
-      "word": "This",
-      "start": 16.08,
-      "end": 16.18
+      "word": "a",
+      "start": 15.54,
+      "end": 15.62
     },
     {
-      "word": "tests",
-      "start": 16.18,
-      "end": 16.42
+      "word": "copy",
+      "start": 15.62,
+      "end": 15.86
     },
     {
-      "word": "the",
-      "start": 16.42,
+      "word": "so",
+      "start": 15.86,
+      "end": 16.22
+    },
+    {
+      "word": "a",
+      "start": 16.22,
+      "end": 16.38
+    },
+    {
+      "word": "mistake",
+      "start": 16.38,
       "end": 16.64
     },
     {
-      "word": "formula",
+      "word": "is",
       "start": 16.64,
-      "end": 17.02
+      "end": 16.96
     },
     {
-      "word": "rather",
-      "start": 17.02,
-      "end": 17.54
+      "word": "easy",
+      "start": 16.96,
+      "end": 17.26
     },
     {
-      "word": "than",
-      "start": 17.54,
-      "end": 17.9
+      "word": "to",
+      "start": 17.26,
+      "end": 17.5
     },
     {
-      "word": "its",
-      "start": 17.9,
-      "end": 18.0
+      "word": "reverse.",
+      "start": 17.5,
+      "end": 17.74
     },
     {
-      "word": "appearance.",
-      "start": 18.0,
-      "end": 18.28
+      "word": "When",
+      "start": 18.76,
+      "end": 18.96
+    },
+    {
+      "word": "reviewing",
+      "start": 18.96,
+      "end": 19.24
+    },
+    {
+      "word": "someone",
+      "start": 19.24,
+      "end": 19.62
+    },
+    {
+      "word": "else's",
+      "start": 19.62,
+      "end": 20.04
+    },
+    {
+      "word": "document,",
+      "start": 20.04,
+      "end": 20.42
+    },
+    {
+      "word": "a",
+      "start": 20.78,
+      "end": 20.86
+    },
+    {
+      "word": "comment",
+      "start": 20.86,
+      "end": 21.16
+    },
+    {
+      "word": "asks",
+      "start": 21.16,
+      "end": 21.54
+    },
+    {
+      "word": "a",
+      "start": 21.54,
+      "end": 21.8
+    },
+    {
+      "word": "question",
+      "start": 21.8,
+      "end": 22.12
+    },
+    {
+      "word": "or",
+      "start": 22.12,
+      "end": 22.52
+    },
+    {
+      "word": "suggests",
+      "start": 22.52,
+      "end": 22.82
+    },
+    {
+      "word": "an",
+      "start": 22.82,
+      "end": 23.18
+    },
+    {
+      "word": "improvement.",
+      "start": 23.18,
+      "end": 23.5
+    },
+    {
+      "word": "Tracked",
+      "start": 23.5,
+      "end": 26.1
+    },
+    {
+      "word": "changes",
+      "start": 26.1,
+      "end": 26.38
+    },
+    {
+      "word": "record",
+      "start": 26.38,
+      "end": 27.02
+    },
+    {
+      "word": "proposed",
+      "start": 27.02,
+      "end": 27.62
+    },
+    {
+      "word": "edits",
+      "start": 27.62,
+      "end": 28.093
+    },
+    {
+      "word": "for",
+      "start": 28.093,
+      "end": 28.567
+    },
+    {
+      "word": "review,",
+      "start": 28.567,
+      "end": 29.04
+    },
+    {
+      "word": "where",
+      "start": 29.04,
+      "end": 29.14
+    },
+    {
+      "word": "the",
+      "start": 29.14,
+      "end": 29.28
+    },
+    {
+      "word": "application",
+      "start": 29.28,
+      "end": 29.68
+    },
+    {
+      "word": "supports",
+      "start": 29.68,
+      "end": 30.24
+    },
+    {
+      "word": "them.",
+      "start": 30.24,
+      "end": 30.6
+    },
+    {
+      "word": "They",
+      "start": 31.44,
+      "end": 31.54
+    },
+    {
+      "word": "are",
+      "start": 31.54,
+      "end": 31.64
+    },
+    {
+      "word": "not",
+      "start": 31.64,
+      "end": 31.82
+    },
+    {
+      "word": "the",
+      "start": 31.82,
+      "end": 32.0
+    },
+    {
+      "word": "same",
+      "start": 32.0,
+      "end": 32.22
+    },
+    {
+      "word": "as",
+      "start": 32.22,
+      "end": 32.42
+    },
+    {
+      "word": "silently",
+      "start": 32.42,
+      "end": 32.74
+    },
+    {
+      "word": "replacing",
+      "start": 32.74,
+      "end": 33.32
+    },
+    {
+      "word": "the",
+      "start": 33.32,
+      "end": 33.6
+    },
+    {
+      "word": "text.",
+      "start": 33.6,
+      "end": 33.86
+    },
+    {
+      "word": "Pause",
+      "start": 34.82,
+      "end": 35.18
+    },
+    {
+      "word": "and",
+      "start": 35.18,
+      "end": 35.36
+    },
+    {
+      "word": "propose",
+      "start": 35.36,
+      "end": 35.58
+    },
+    {
+      "word": "one",
+      "start": 35.58,
+      "end": 36.02
+    },
+    {
+      "word": "specific",
+      "start": 36.02,
+      "end": 36.5
+    },
+    {
+      "word": "improvement",
+      "start": 36.5,
+      "end": 37.02
+    },
+    {
+      "word": "to",
+      "start": 37.02,
+      "end": 37.36
+    },
+    {
+      "word": "the",
+      "start": 37.36,
+      "end": 37.46
+    },
+    {
+      "word": "handout.",
+      "start": 37.46,
+      "end": 37.88
+    },
+    {
+      "word": "Explain",
+      "start": 38.5,
+      "end": 38.7
+    },
+    {
+      "word": "the",
+      "start": 38.7,
+      "end": 39.0
+    },
+    {
+      "word": "reader's",
+      "start": 39.0,
+      "end": 39.36
+    },
+    {
+      "word": "problem",
+      "start": 39.36,
+      "end": 39.66
+    },
+    {
+      "word": "it",
+      "start": 39.66,
+      "end": 39.86
+    },
+    {
+      "word": "solves,",
+      "start": 39.86,
+      "end": 40.08
+    },
+    {
+      "word": "then",
+      "start": 40.66,
+      "end": 40.72
+    },
+    {
+      "word": "let",
+      "start": 40.72,
+      "end": 40.94
+    },
+    {
+      "word": "the",
+      "start": 40.94,
+      "end": 41.1
+    },
+    {
+      "word": "author",
+      "start": 41.1,
+      "end": 41.32
+    },
+    {
+      "word": "decide",
+      "start": 41.32,
+      "end": 41.68
+    },
+    {
+      "word": "whether",
+      "start": 41.68,
+      "end": 42.04
+    },
+    {
+      "word": "to",
+      "start": 42.04,
+      "end": 42.24
+    },
+    {
+      "word": "accept",
+      "start": 42.24,
+      "end": 42.52
+    },
+    {
+      "word": "it.",
+      "start": 42.52,
+      "end": 42.76
     }
   ]
 }

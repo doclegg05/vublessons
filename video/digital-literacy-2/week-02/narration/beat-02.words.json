@@ -1,228 +1,548 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "131a91ee4fadbd6949167588859d533eea6d5cd44aefaee176f93ee60b42052d",
-  "textSha256": "1053a3fae6e6d449110c24800ac1a4bc9f543c2ce1c20130dbbc0f4619a49083",
-  "matchRatio": 1.0,
+  "wavSha256": "a8be18a87c46529027aacab2e9fbd977a2a9196bab5c92f8c5e2b3e7a9fbc068",
+  "textSha256": "bb678240c2f90b2157110edf6aa1d73b1321e8a46ee79b8c98893624c74eb50f",
+  "matchRatio": 0.8888888888888888,
   "words": [
     {
-      "word": "Choose",
+      "word": "Start",
       "start": 0.0,
       "end": 0.24
     },
     {
-      "word": "the",
+      "word": "with",
       "start": 0.24,
-      "end": 0.56
+      "end": 0.46
     },
     {
-      "word": "smallest",
-      "start": 0.56,
-      "end": 1.0
+      "word": "the",
+      "start": 0.46,
+      "end": 0.6
     },
     {
-      "word": "permission",
-      "start": 1.0,
+      "word": "words",
+      "start": 0.6,
+      "end": 0.84
+    },
+    {
+      "word": "that",
+      "start": 0.84,
+      "end": 1.18
+    },
+    {
+      "word": "describe",
+      "start": 1.18,
       "end": 1.44
     },
     {
-      "word": "that",
+      "word": "your",
       "start": 1.44,
-      "end": 2.0
+      "end": 1.84
     },
     {
-      "word": "lets",
-      "start": 2.0,
-      "end": 2.18
-    },
-    {
-      "word": "the",
-      "start": 2.18,
-      "end": 2.42
-    },
-    {
-      "word": "other",
-      "start": 2.42,
-      "end": 2.72
-    },
-    {
-      "word": "person",
-      "start": 2.72,
-      "end": 3.22
-    },
-    {
-      "word": "do",
-      "start": 3.22,
-      "end": 3.7
+      "word": "task,",
+      "start": 1.84,
+      "end": 2.22
     },
     {
       "word": "the",
-      "start": 3.7,
-      "end": 3.86
+      "start": 2.9,
+      "end": 2.92
     },
     {
-      "word": "task.",
-      "start": 3.86,
+      "word": "kind",
+      "start": 2.92,
+      "end": 3.16
+    },
+    {
+      "word": "of",
+      "start": 3.16,
+      "end": 3.3
+    },
+    {
+      "word": "service,",
+      "start": 3.3,
+      "end": 3.68
+    },
+    {
+      "word": "and",
+      "start": 4.18,
       "end": 4.22
     },
     {
-      "word": "A",
-      "start": 4.84,
-      "end": 4.86
+      "word": "the",
+      "start": 4.22,
+      "end": 4.34
     },
     {
-      "word": "viewer",
-      "start": 4.86,
-      "end": 5.04
+      "word": "location.",
+      "start": 4.34,
+      "end": 4.7
     },
     {
-      "word": "reads.",
-      "start": 5.04,
-      "end": 5.6
+      "word": "Computer",
+      "start": 5.94,
+      "end": 6.62
     },
     {
-      "word": "A",
-      "start": 7.24,
-      "end": 7.88
+      "word": "help",
+      "start": 6.62,
+      "end": 6.86
     },
     {
-      "word": "commenter",
-      "start": 7.88,
-      "end": 8.2
+      "word": "library",
+      "start": 6.86,
+      "end": 7.32
     },
     {
-      "word": "can",
-      "start": 8.2,
-      "end": 8.72
+      "word": "plus",
+      "start": 7.32,
+      "end": 8.0
     },
     {
-      "word": "suggest",
-      "start": 8.72,
-      "end": 9.06
+      "word": "your",
+      "start": 8.0,
+      "end": 8.28
     },
     {
-      "word": "wording",
-      "start": 9.06,
-      "end": 9.48
+      "word": "town",
+      "start": 8.28,
+      "end": 8.68
     },
     {
-      "word": "when",
-      "start": 9.48,
-      "end": 9.8
+      "word": "is",
+      "start": 8.68,
+      "end": 9.3
+    },
+    {
+      "word": "more",
+      "start": 9.3,
+      "end": 9.5
+    },
+    {
+      "word": "useful",
+      "start": 9.5,
+      "end": 9.86
+    },
+    {
+      "word": "than",
+      "start": 9.86,
+      "end": 10.2
+    },
+    {
+      "word": "typing",
+      "start": 10.2,
+      "end": 10.44
+    },
+    {
+      "word": "help",
+      "start": 10.44,
+      "end": 10.92
+    },
+    {
+      "word": "by",
+      "start": 10.92,
+      "end": 11.4
+    },
+    {
+      "word": "itself.",
+      "start": 11.4,
+      "end": 11.68
+    },
+    {
+      "word": "Inspect",
+      "start": 13.08,
+      "end": 13.54
     },
     {
       "word": "the",
-      "start": 9.8,
-      "end": 9.92
+      "start": 13.54,
+      "end": 13.86
+    },
+    {
+      "word": "result",
+      "start": 13.86,
+      "end": 14.12
+    },
+    {
+      "word": "title",
+      "start": 14.12,
+      "end": 14.52
+    },
+    {
+      "word": "and",
+      "start": 14.52,
+      "end": 15.04
+    },
+    {
+      "word": "the",
+      "start": 15.04,
+      "end": 15.2
+    },
+    {
+      "word": "website",
+      "start": 15.2,
+      "end": 15.44
+    },
+    {
+      "word": "address",
+      "start": 15.44,
+      "end": 16.06
+    },
+    {
+      "word": "before",
+      "start": 16.06,
+      "end": 16.38
+    },
+    {
+      "word": "opening",
+      "start": 16.38,
+      "end": 16.98
+    },
+    {
+      "word": "it.",
+      "start": 16.98,
+      "end": 17.24
+    },
+    {
+      "word": "If",
+      "start": 17.84,
+      "end": 18.2
+    },
+    {
+      "word": "the",
+      "start": 18.2,
+      "end": 18.32
+    },
+    {
+      "word": "results",
+      "start": 18.32,
+      "end": 18.56
+    },
+    {
+      "word": "are",
+      "start": 18.56,
+      "end": 18.84
+    },
+    {
+      "word": "too",
+      "start": 18.84,
+      "end": 19.06
+    },
+    {
+      "word": "broad,",
+      "start": 19.06,
+      "end": 19.5
+    },
+    {
+      "word": "add",
+      "start": 19.96,
+      "end": 20.12
+    },
+    {
+      "word": "a",
+      "start": 20.12,
+      "end": 20.28
+    },
+    {
+      "word": "specific",
+      "start": 20.28,
+      "end": 20.62
     },
     {
       "word": "service",
-      "start": 9.92,
-      "end": 10.24
+      "start": 20.62,
+      "end": 21.28
     },
     {
-      "word": "supports",
-      "start": 10.24,
-      "end": 10.82
+      "word": "or",
+      "start": 21.28,
+      "end": 21.72
     },
     {
-      "word": "comments.",
-      "start": 10.82,
-      "end": 11.06
+      "word": "location.",
+      "start": 21.72,
+      "end": 22.08
     },
     {
-      "word": "An",
-      "start": 11.94,
-      "end": 11.96
+      "word": "If",
+      "start": 23.86,
+      "end": 24.54
     },
     {
-      "word": "editor",
-      "start": 11.96,
-      "end": 12.26
+      "word": "there",
+      "start": 24.54,
+      "end": 24.68
+    },
+    {
+      "word": "are",
+      "start": 24.68,
+      "end": 24.84
+    },
+    {
+      "word": "no",
+      "start": 24.84,
+      "end": 25.12
+    },
+    {
+      "word": "useful",
+      "start": 25.12,
+      "end": 25.42
+    },
+    {
+      "word": "results,",
+      "start": 25.42,
+      "end": 26.14
+    },
+    {
+      "word": "remove",
+      "start": 26.46,
+      "end": 26.68
+    },
+    {
+      "word": "one",
+      "start": 26.68,
+      "end": 27.16
+    },
+    {
+      "word": "restriction",
+      "start": 27.16,
+      "end": 27.62
+    },
+    {
+      "word": "rather",
+      "start": 27.62,
+      "end": 28.24
+    },
+    {
+      "word": "than",
+      "start": 28.24,
+      "end": 28.56
+    },
+    {
+      "word": "assuming",
+      "start": 28.56,
+      "end": 28.82
+    },
+    {
+      "word": "the",
+      "start": 28.82,
+      "end": 29.12
+    },
+    {
+      "word": "service",
+      "start": 29.12,
+      "end": 29.46
+    },
+    {
+      "word": "does",
+      "start": 29.46,
+      "end": 29.68
+    },
+    {
+      "word": "not",
+      "start": 29.68,
+      "end": 29.86
+    },
+    {
+      "word": "exist.",
+      "start": 29.86,
+      "end": 30.34
+    },
+    {
+      "word": "Filters",
+      "start": 31.32,
+      "end": 31.72
     },
     {
       "word": "can",
-      "start": 12.26,
-      "end": 12.74
+      "start": 31.72,
+      "end": 31.96
+    },
+    {
+      "word": "help,",
+      "start": 31.96,
+      "end": 32.32
+    },
+    {
+      "word": "but",
+      "start": 32.6,
+      "end": 32.7
+    },
+    {
+      "word": "they",
+      "start": 32.7,
+      "end": 32.82
+    },
+    {
+      "word": "can",
+      "start": 32.82,
+      "end": 32.94
+    },
+    {
+      "word": "also",
+      "start": 32.94,
+      "end": 33.16
+    },
+    {
+      "word": "hide",
+      "start": 33.16,
+      "end": 33.66
+    },
+    {
+      "word": "a",
+      "start": 33.66,
+      "end": 33.78
+    },
+    {
+      "word": "relevant",
+      "start": 33.78,
+      "end": 34.04
+    },
+    {
+      "word": "page.",
+      "start": 34.04,
+      "end": 34.56
+    },
+    {
+      "word": "Pause",
+      "start": 35.68,
+      "end": 36.0
+    },
+    {
+      "word": "and",
+      "start": 36.0,
+      "end": 36.48
+    },
+    {
+      "word": "write",
+      "start": 36.48,
+      "end": 36.66
+    },
+    {
+      "word": "a",
+      "start": 36.66,
+      "end": 36.8
+    },
+    {
+      "word": "search",
+      "start": 36.8,
+      "end": 37.04
+    },
+    {
+      "word": "for",
+      "start": 37.04,
+      "end": 37.42
+    },
+    {
+      "word": "your",
+      "start": 37.42,
+      "end": 37.56
+    },
+    {
+      "word": "chosen",
+      "start": 37.56,
+      "end": 38.04
+    },
+    {
+      "word": "community",
+      "start": 38.04,
+      "end": 38.38
+    },
+    {
+      "word": "task.",
+      "start": 38.38,
+      "end": 39.1
+    },
+    {
+      "word": "Explain",
+      "start": 40.24,
+      "end": 40.5
+    },
+    {
+      "word": "what",
+      "start": 40.5,
+      "end": 40.96
+    },
+    {
+      "word": "each",
+      "start": 40.96,
+      "end": 41.18
+    },
+    {
+      "word": "word",
+      "start": 41.18,
+      "end": 41.5
+    },
+    {
+      "word": "contributes.",
+      "start": 41.5,
+      "end": 42.04
+    },
+    {
+      "word": "Then",
+      "start": 48.04,
+      "end": 48.04
     },
     {
       "word": "change",
-      "start": 12.74,
-      "end": 12.96
+      "start": 48.04,
+      "end": 48.042
+    },
+    {
+      "word": "one",
+      "start": 48.042,
+      "end": 48.044
+    },
+    {
+      "word": "term",
+      "start": 48.044,
+      "end": 48.047
+    },
+    {
+      "word": "and",
+      "start": 48.047,
+      "end": 48.049
+    },
+    {
+      "word": "compare",
+      "start": 48.049,
+      "end": 48.051
     },
     {
       "word": "the",
-      "start": 12.96,
-      "end": 13.2
+      "start": 48.051,
+      "end": 48.053
     },
     {
-      "word": "content.",
-      "start": 13.2,
-      "end": 13.56
+      "word": "results",
+      "start": 48.053,
+      "end": 48.055
     },
     {
-      "word": "Check",
-      "start": 14.3,
-      "end": 14.42
+      "word": "instead",
+      "start": 48.055,
+      "end": 48.058
     },
     {
-      "word": "the",
-      "start": 14.42,
-      "end": 14.64
+      "word": "of",
+      "start": 48.058,
+      "end": 48.06
     },
     {
-      "word": "recipient",
-      "start": 14.64,
-      "end": 14.94
+      "word": "opening",
+      "start": 48.06,
+      "end": 48.062
     },
     {
-      "word": "carefully,",
-      "start": 14.94,
-      "end": 15.66
+      "word": "every",
+      "start": 48.062,
+      "end": 48.064
     },
     {
-      "word": "then",
-      "start": 16.22,
-      "end": 16.22
-    },
-    {
-      "word": "ask",
-      "start": 16.22,
-      "end": 16.5
-    },
-    {
-      "word": "them",
-      "start": 16.5,
-      "end": 16.74
-    },
-    {
-      "word": "to",
-      "start": 16.74,
-      "end": 16.9
-    },
-    {
-      "word": "verify",
-      "start": 16.9,
-      "end": 17.12
-    },
-    {
-      "word": "that",
-      "start": 17.12,
-      "end": 17.58
-    },
-    {
-      "word": "the",
-      "start": 17.58,
-      "end": 17.68
-    },
-    {
-      "word": "file",
-      "start": 17.68,
-      "end": 17.9
-    },
-    {
-      "word": "opens.",
-      "start": 17.9,
-      "end": 18.38
+      "word": "link.",
+      "start": 48.064,
+      "end": 48.066
     }
   ]
 }

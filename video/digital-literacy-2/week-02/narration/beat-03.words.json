@@ -1,238 +1,548 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "90bcf3dd1acac8fb996c98e58ee259f0df6338736e69ebcf2aa28cd55d571c81",
-  "textSha256": "e4935e53069b0064d5dee7a97f8e318871ae5bc9521d01cdaaa1ec2570ef41f1",
-  "matchRatio": 1.0,
+  "wavSha256": "52faff4f5f147695dc81d28c0f4227d46ef3d646bc64923280b40613c77c8278",
+  "textSha256": "86670b88656435f9b3f0997e0a125828341d8061914819f8121ddf1e7f9c0e05",
+  "matchRatio": 0.9907407407407407,
   "words": [
     {
-      "word": "Sync",
+      "word": "A",
       "start": 0.0,
-      "end": 0.22
+      "end": 0.12
     },
     {
-      "word": "carries",
-      "start": 0.22,
-      "end": 0.64
+      "word": "page",
+      "start": 0.12,
+      "end": 0.42
     },
     {
-      "word": "changes",
-      "start": 0.64,
-      "end": 1.18
+      "word": "can",
+      "start": 0.42,
+      "end": 0.58
     },
     {
-      "word": "between",
-      "start": 1.18,
-      "end": 1.66
+      "word": "be",
+      "start": 0.58,
+      "end": 0.7
     },
     {
-      "word": "a",
-      "start": 1.66,
+      "word": "accurate",
+      "start": 0.7,
+      "end": 1.14
+    },
+    {
+      "word": "and",
+      "start": 1.14,
+      "end": 1.36
+    },
+    {
+      "word": "still",
+      "start": 1.36,
+      "end": 1.6
+    },
+    {
+      "word": "be",
+      "start": 1.6,
       "end": 1.82
     },
     {
-      "word": "device",
+      "word": "wrong",
       "start": 1.82,
-      "end": 2.2
+      "end": 2.08
     },
     {
-      "word": "and",
-      "start": 2.2,
-      "end": 2.66
+      "word": "for",
+      "start": 2.08,
+      "end": 2.36
     },
     {
-      "word": "an",
-      "start": 2.66,
-      "end": 2.74
+      "word": "your",
+      "start": 2.36,
+      "end": 2.5
     },
     {
-      "word": "online",
-      "start": 2.74,
-      "end": 2.92
+      "word": "decision.",
+      "start": 2.5,
+      "end": 2.84
     },
     {
-      "word": "service.",
-      "start": 2.92,
-      "end": 3.52
+      "word": "An",
+      "start": 3.52,
+      "end": 3.56
     },
     {
-      "word": "It",
-      "start": 4.42,
-      "end": 4.46
+      "word": "official",
+      "start": 3.56,
+      "end": 3.78
     },
     {
-      "word": "may",
-      "start": 4.46,
-      "end": 4.6
+      "word": "library",
+      "start": 3.78,
+      "end": 4.18
     },
     {
-      "word": "also",
-      "start": 4.6,
-      "end": 4.9
+      "word": "page",
+      "start": 4.18,
+      "end": 4.58
     },
     {
-      "word": "carry",
-      "start": 4.9,
-      "end": 5.34
-    },
-    {
-      "word": "a",
-      "start": 5.34,
-      "end": 5.52
-    },
-    {
-      "word": "deletion.",
-      "start": 5.52,
-      "end": 5.98
-    },
-    {
-      "word": "That",
-      "start": 8.82,
-      "end": 9.12
-    },
-    {
-      "word": "is",
-      "start": 9.12,
-      "end": 9.26
-    },
-    {
-      "word": "why",
-      "start": 9.26,
-      "end": 9.44
-    },
-    {
-      "word": "sync",
-      "start": 9.44,
-      "end": 9.74
-    },
-    {
-      "word": "alone",
-      "start": 9.74,
-      "end": 10.0
-    },
-    {
-      "word": "is",
-      "start": 10.0,
-      "end": 10.38
-    },
-    {
-      "word": "not",
-      "start": 10.38,
-      "end": 10.66
-    },
-    {
-      "word": "a",
-      "start": 10.66,
-      "end": 10.84
-    },
-    {
-      "word": "separate",
-      "start": 10.84,
-      "end": 11.16
-    },
-    {
-      "word": "backup.",
-      "start": 11.16,
-      "end": 11.48
-    },
-    {
-      "word": "A",
-      "start": 12.12,
-      "end": 12.12
-    },
-    {
-      "word": "backup",
-      "start": 12.12,
-      "end": 12.34
-    },
-    {
-      "word": "is",
-      "start": 12.34,
-      "end": 12.68
+      "word": "from",
+      "start": 4.58,
+      "end": 4.82
     },
     {
       "word": "another",
-      "start": 12.68,
-      "end": 12.92
+      "start": 4.82,
+      "end": 5.06
     },
     {
-      "word": "recovery",
-      "start": 12.92,
-      "end": 13.18
-    },
-    {
-      "word": "copy,",
-      "start": 13.18,
-      "end": 13.96
-    },
-    {
-      "word": "and",
-      "start": 14.3,
-      "end": 14.34
-    },
-    {
-      "word": "version",
-      "start": 14.34,
-      "end": 14.58
-    },
-    {
-      "word": "history",
-      "start": 14.58,
-      "end": 14.94
+      "word": "town",
+      "start": 5.06,
+      "end": 5.44
     },
     {
       "word": "may",
-      "start": 14.94,
-      "end": 15.32
+      "start": 5.44,
+      "end": 5.64
     },
     {
-      "word": "help",
-      "start": 15.32,
-      "end": 15.56
+      "word": "describe",
+      "start": 5.64,
+      "end": 5.96
     },
     {
-      "word": "you",
-      "start": 15.56,
-      "end": 15.72
+      "word": "a",
+      "start": 5.96,
+      "end": 6.18
     },
     {
-      "word": "recover",
-      "start": 15.72,
-      "end": 15.96
+      "word": "real",
+      "start": 6.18,
+      "end": 6.36
     },
     {
-      "word": "earlier",
-      "start": 15.96,
-      "end": 16.46
+      "word": "service,",
+      "start": 6.36,
+      "end": 6.8
     },
     {
-      "word": "content",
-      "start": 16.46,
-      "end": 17.16
+      "word": "but",
+      "start": 7.22,
+      "end": 7.26
     },
     {
-      "word": "when",
-      "start": 17.16,
-      "end": 17.62
+      "word": "not",
+      "start": 7.26,
+      "end": 7.46
     },
     {
       "word": "the",
-      "start": 17.62,
-      "end": 17.74
+      "start": 7.46,
+      "end": 7.7
     },
     {
-      "word": "service",
-      "start": 17.74,
-      "end": 18.02
+      "word": "one",
+      "start": 7.7,
+      "end": 7.84
+    },
+    {
+      "word": "available",
+      "start": 7.84,
+      "end": 8.1
+    },
+    {
+      "word": "to",
+      "start": 8.1,
+      "end": 8.48
+    },
+    {
+      "word": "your",
+      "start": 8.48,
+      "end": 8.58
+    },
+    {
+      "word": "neighbor.",
+      "start": 8.58,
+      "end": 8.92
+    },
+    {
+      "word": "Ask",
+      "start": 9.46,
+      "end": 9.76
+    },
+    {
+      "word": "who",
+      "start": 9.76,
+      "end": 10.08
+    },
+    {
+      "word": "published",
+      "start": 10.08,
+      "end": 10.36
+    },
+    {
+      "word": "the",
+      "start": 10.36,
+      "end": 10.6
+    },
+    {
+      "word": "information,",
+      "start": 10.6,
+      "end": 10.9
+    },
+    {
+      "word": "what",
+      "start": 11.64,
+      "end": 11.72
+    },
+    {
+      "word": "evidence",
+      "start": 11.72,
+      "end": 12.06
     },
     {
       "word": "supports",
-      "start": 18.02,
-      "end": 18.46
+      "start": 12.06,
+      "end": 12.56
     },
     {
-      "word": "it.",
-      "start": 18.46,
-      "end": 18.76
+      "word": "it,",
+      "start": 12.56,
+      "end": 12.9
+    },
+    {
+      "word": "when",
+      "start": 13.42,
+      "end": 13.54
+    },
+    {
+      "word": "it",
+      "start": 13.54,
+      "end": 13.68
+    },
+    {
+      "word": "was",
+      "start": 13.68,
+      "end": 13.8
+    },
+    {
+      "word": "updated,",
+      "start": 13.8,
+      "end": 14.14
+    },
+    {
+      "word": "why",
+      "start": 14.68,
+      "end": 14.9
+    },
+    {
+      "word": "it",
+      "start": 14.9,
+      "end": 15.1
+    },
+    {
+      "word": "was",
+      "start": 15.1,
+      "end": 15.22
+    },
+    {
+      "word": "written,",
+      "start": 15.22,
+      "end": 15.48
+    },
+    {
+      "word": "and",
+      "start": 16.12,
+      "end": 16.24
+    },
+    {
+      "word": "whether",
+      "start": 16.24,
+      "end": 16.48
+    },
+    {
+      "word": "it",
+      "start": 16.48,
+      "end": 16.72
+    },
+    {
+      "word": "answers",
+      "start": 16.72,
+      "end": 17.02
+    },
+    {
+      "word": "your",
+      "start": 17.02,
+      "end": 17.3
+    },
+    {
+      "word": "question.",
+      "start": 17.3,
+      "end": 17.6
+    },
+    {
+      "word": "For",
+      "start": 19.2,
+      "end": 19.76
+    },
+    {
+      "word": "opening",
+      "start": 19.76,
+      "end": 20.08
+    },
+    {
+      "word": "hours",
+      "start": 20.08,
+      "end": 20.4
+    },
+    {
+      "word": "or",
+      "start": 20.4,
+      "end": 20.72
+    },
+    {
+      "word": "eligibility,",
+      "start": 20.72,
+      "end": 21.08
+    },
+    {
+      "word": "go",
+      "start": 21.62,
+      "end": 21.9
+    },
+    {
+      "word": "to",
+      "start": 21.9,
+      "end": 22.02
+    },
+    {
+      "word": "the",
+      "start": 22.02,
+      "end": 22.12
+    },
+    {
+      "word": "organization",
+      "start": 22.12,
+      "end": 22.44
+    },
+    {
+      "word": "responsible",
+      "start": 22.44,
+      "end": 23.04
+    },
+    {
+      "word": "for",
+      "start": 23.04,
+      "end": 23.68
+    },
+    {
+      "word": "that",
+      "start": 23.68,
+      "end": 23.8
+    },
+    {
+      "word": "service",
+      "start": 23.8,
+      "end": 24.12
+    },
+    {
+      "word": "and",
+      "start": 24.12,
+      "end": 24.4
+    },
+    {
+      "word": "check",
+      "start": 24.4,
+      "end": 24.58
+    },
+    {
+      "word": "the",
+      "start": 24.58,
+      "end": 24.8
+    },
+    {
+      "word": "details",
+      "start": 24.8,
+      "end": 25.0
+    },
+    {
+      "word": "there.",
+      "start": 25.0,
+      "end": 25.5
+    },
+    {
+      "word": "Search-result",
+      "start": 25.5,
+      "end": 26.66
+    },
+    {
+      "word": "snippets",
+      "start": 26.66,
+      "end": 27.02
+    },
+    {
+      "word": "may",
+      "start": 27.02,
+      "end": 27.5
+    },
+    {
+      "word": "be",
+      "start": 27.5,
+      "end": 27.7
+    },
+    {
+      "word": "incomplete.",
+      "start": 27.7,
+      "end": 28.1
+    },
+    {
+      "word": "Compare",
+      "start": 28.88,
+      "end": 29.22
+    },
+    {
+      "word": "two",
+      "start": 29.22,
+      "end": 29.5
+    },
+    {
+      "word": "pages",
+      "start": 29.5,
+      "end": 29.9
+    },
+    {
+      "word": "that",
+      "start": 29.9,
+      "end": 30.18
+    },
+    {
+      "word": "disagree.",
+      "start": 30.18,
+      "end": 30.48
+    },
+    {
+      "word": "Do",
+      "start": 31.22,
+      "end": 31.34
+    },
+    {
+      "word": "not",
+      "start": 31.34,
+      "end": 31.62
+    },
+    {
+      "word": "count",
+      "start": 31.62,
+      "end": 32.0
+    },
+    {
+      "word": "votes",
+      "start": 32.0,
+      "end": 32.34
+    },
+    {
+      "word": "between",
+      "start": 32.34,
+      "end": 32.84
+    },
+    {
+      "word": "websites;",
+      "start": 32.84,
+      "end": 33.24
+    },
+    {
+      "word": "identify",
+      "start": 34.04,
+      "end": 34.52
+    },
+    {
+      "word": "which",
+      "start": 34.52,
+      "end": 34.8
+    },
+    {
+      "word": "source",
+      "start": 34.8,
+      "end": 35.18
+    },
+    {
+      "word": "is",
+      "start": 35.18,
+      "end": 35.52
+    },
+    {
+      "word": "in",
+      "start": 35.52,
+      "end": 35.66
+    },
+    {
+      "word": "a",
+      "start": 35.66,
+      "end": 35.74
+    },
+    {
+      "word": "position",
+      "start": 35.74,
+      "end": 36.0
+    },
+    {
+      "word": "to",
+      "start": 36.0,
+      "end": 36.36
+    },
+    {
+      "word": "know,",
+      "start": 36.36,
+      "end": 36.56
+    },
+    {
+      "word": "and",
+      "start": 36.56,
+      "end": 36.96
+    },
+    {
+      "word": "confirm",
+      "start": 36.96,
+      "end": 37.32
+    },
+    {
+      "word": "uncertain",
+      "start": 37.32,
+      "end": 37.76
+    },
+    {
+      "word": "details",
+      "start": 37.76,
+      "end": 38.38
+    },
+    {
+      "word": "through",
+      "start": 38.38,
+      "end": 38.78
+    },
+    {
+      "word": "an",
+      "start": 38.78,
+      "end": 38.88
+    },
+    {
+      "word": "independently",
+      "start": 38.88,
+      "end": 39.22
+    },
+    {
+      "word": "found",
+      "start": 39.22,
+      "end": 39.8
+    },
+    {
+      "word": "contact",
+      "start": 39.8,
+      "end": 40.4
+    },
+    {
+      "word": "method.",
+      "start": 40.4,
+      "end": 40.8
     }
   ]
 }

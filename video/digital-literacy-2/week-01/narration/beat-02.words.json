@@ -1,223 +1,533 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "6ccd55afee4047ea5388ab7aee1781f4fe0e47597c2f90aeb74ca4d2421e5ff3",
-  "textSha256": "590641ea051fae16007aa362068ea3ee9912f3285e30e2944622a48e440817fa",
-  "matchRatio": 0.9302325581395349,
+  "wavSha256": "e5510012ad12a14113e525508e888b3c3220a97cf42a3c714db62752aca7a80d",
+  "textSha256": "b9083a71df71fbf220d1c5a575b51a0ebb537759a603e3bf0584f5fd5550396d",
+  "matchRatio": 1.0,
   "words": [
     {
-      "word": "Browser",
+      "word": "Imagine",
       "start": 0.0,
-      "end": 0.36
-    },
-    {
-      "word": "zoom",
-      "start": 0.36,
-      "end": 0.5
-    },
-    {
-      "word": "makes",
-      "start": 0.5,
-      "end": 0.82
-    },
-    {
-      "word": "a",
-      "start": 0.82,
-      "end": 0.98
-    },
-    {
-      "word": "webpage",
-      "start": 0.98,
-      "end": 1.36
-    },
-    {
-      "word": "larger",
-      "start": 1.36,
-      "end": 1.72
-    },
-    {
-      "word": "or",
-      "start": 1.72,
-      "end": 2.1
-    },
-    {
-      "word": "smaller.",
-      "start": 2.1,
-      "end": 2.48
-    },
-    {
-      "word": "Display",
-      "start": 3.52,
-      "end": 3.52
-    },
-    {
-      "word": "scaling",
-      "start": 3.52,
-      "end": 3.84
-    },
-    {
-      "word": "affects",
-      "start": 3.84,
-      "end": 4.44
+      "end": 0.48
     },
     {
       "word": "the",
-      "start": 4.44,
-      "end": 4.68
+      "start": 0.48,
+      "end": 0.7
     },
     {
-      "word": "wider",
-      "start": 4.68,
-      "end": 4.94
+      "word": "library",
+      "start": 0.7,
+      "end": 0.96
     },
     {
-      "word": "desktop.",
-      "start": 4.94,
-      "end": 5.32
-    },
-    {
-      "word": "If",
-      "start": 7.72,
-      "end": 7.86
-    },
-    {
-      "word": "only",
-      "start": 7.86,
-      "end": 8.08
-    },
-    {
-      "word": "the",
-      "start": 8.08,
-      "end": 8.36
-    },
-    {
-      "word": "webpage",
-      "start": 8.36,
-      "end": 8.82
+      "word": "page",
+      "start": 0.96,
+      "end": 1.4
     },
     {
       "word": "is",
-      "start": 8.82,
-      "end": 9.02
+      "start": 1.4,
+      "end": 1.66
     },
     {
       "word": "difficult",
-      "start": 9.02,
-      "end": 9.4
+      "start": 1.66,
+      "end": 2.04
     },
     {
       "word": "to",
-      "start": 9.4,
-      "end": 9.66
+      "start": 2.04,
+      "end": 2.28
     },
     {
       "word": "read,",
-      "start": 9.66,
-      "end": 9.88
+      "start": 2.28,
+      "end": 2.48
     },
     {
-      "word": "try",
-      "start": 10.34,
-      "end": 10.44
-    },
-    {
-      "word": "browser",
-      "start": 10.44,
-      "end": 10.96
-    },
-    {
-      "word": "zoom",
-      "start": 10.96,
-      "end": 11.16
-    },
-    {
-      "word": "first.",
-      "start": 11.16,
-      "end": 11.52
-    },
-    {
-      "word": "Use",
-      "start": 12.4,
-      "end": 12.4
+      "word": "but",
+      "start": 2.94,
+      "end": 3.04
     },
     {
       "word": "the",
-      "start": 12.4,
-      "end": 12.56
+      "start": 3.04,
+      "end": 3.16
     },
     {
-      "word": "text",
-      "start": 12.56,
-      "end": 12.76
+      "word": "computer's",
+      "start": 3.16,
+      "end": 3.66
     },
     {
-      "word": "size",
-      "start": 12.76,
-      "end": 13.14
+      "word": "other",
+      "start": 3.66,
+      "end": 3.88
     },
     {
-      "word": "controls",
-      "start": 13.14,
-      "end": 13.42
+      "word": "menus",
+      "start": 3.88,
+      "end": 4.12
     },
     {
-      "word": "when",
-      "start": 13.42,
-      "end": 13.88
+      "word": "look",
+      "start": 4.12,
+      "end": 4.7
     },
     {
-      "word": "they",
-      "start": 13.88,
-      "end": 14.0
+      "word": "comfortable.",
+      "start": 4.7,
+      "end": 5.12
     },
     {
-      "word": "are",
-      "start": 14.0,
-      "end": 14.14
+      "word": "Start",
+      "start": 6.02,
+      "end": 6.24
     },
     {
-      "word": "available,",
-      "start": 14.14,
-      "end": 14.52
+      "word": "with",
+      "start": 6.24,
+      "end": 6.44
     },
     {
-      "word": "and",
-      "start": 14.52,
-      "end": 15.2
+      "word": "the",
+      "start": 6.44,
+      "end": 6.56
     },
     {
-      "word": "check",
-      "start": 15.2,
-      "end": 15.4
+      "word": "browser's",
+      "start": 6.56,
+      "end": 7.04
+    },
+    {
+      "word": "zoom",
+      "start": 7.04,
+      "end": 7.24
+    },
+    {
+      "word": "control",
+      "start": 7.24,
+      "end": 7.62
+    },
+    {
+      "word": "because",
+      "start": 7.62,
+      "end": 8.18
+    },
+    {
+      "word": "the",
+      "start": 8.18,
+      "end": 8.4
+    },
+    {
+      "word": "problem",
+      "start": 8.4,
+      "end": 8.76
+    },
+    {
+      "word": "is",
+      "start": 8.76,
+      "end": 9.06
+    },
+    {
+      "word": "inside",
+      "start": 9.06,
+      "end": 9.44
     },
     {
       "word": "that",
-      "start": 15.4,
-      "end": 15.64
+      "start": 9.44,
+      "end": 9.8
     },
     {
-      "word": "buttons",
-      "start": 15.64,
-      "end": 15.94
+      "word": "page.",
+      "start": 9.8,
+      "end": 10.1
+    },
+    {
+      "word": "Open",
+      "start": 10.88,
+      "end": 11.22
+    },
+    {
+      "word": "the",
+      "start": 11.22,
+      "end": 11.42
+    },
+    {
+      "word": "browser",
+      "start": 11.42,
+      "end": 11.6
+    },
+    {
+      "word": "menu,",
+      "start": 11.6,
+      "end": 12.1
+    },
+    {
+      "word": "find",
+      "start": 12.44,
+      "end": 12.78
+    },
+    {
+      "word": "Zoom,",
+      "start": 12.78,
+      "end": 13.06
     },
     {
       "word": "and",
-      "start": 15.94,
-      "end": 16.26
+      "start": 13.58,
+      "end": 13.8
     },
     {
-      "word": "instructions",
-      "start": 16.26,
-      "end": 16.66
+      "word": "increase",
+      "start": 13.8,
+      "end": 14.16
     },
     {
-      "word": "remain",
-      "start": 16.66,
-      "end": 17.24
+      "word": "it",
+      "start": 14.16,
+      "end": 14.4
     },
     {
-      "word": "usable.",
-      "start": 17.24,
-      "end": 17.66
+      "word": "one",
+      "start": 14.4,
+      "end": 14.62
+    },
+    {
+      "word": "step.",
+      "start": 14.62,
+      "end": 15.02
+    },
+    {
+      "word": "On",
+      "start": 16.88,
+      "end": 17.16
+    },
+    {
+      "word": "many",
+      "start": 17.16,
+      "end": 17.34
+    },
+    {
+      "word": "Windows",
+      "start": 17.34,
+      "end": 17.74
+    },
+    {
+      "word": "browsers,",
+      "start": 17.74,
+      "end": 18.24
+    },
+    {
+      "word": "Control",
+      "start": 18.54,
+      "end": 18.62
+    },
+    {
+      "word": "and",
+      "start": 18.62,
+      "end": 19.2
+    },
+    {
+      "word": "plus",
+      "start": 19.2,
+      "end": 19.46
+    },
+    {
+      "word": "also",
+      "start": 19.46,
+      "end": 20.1
+    },
+    {
+      "word": "zooms",
+      "start": 20.1,
+      "end": 20.44
+    },
+    {
+      "word": "in;",
+      "start": 20.44,
+      "end": 20.64
+    },
+    {
+      "word": "Control",
+      "start": 21.22,
+      "end": 21.56
+    },
+    {
+      "word": "and",
+      "start": 21.56,
+      "end": 21.88
+    },
+    {
+      "word": "zero",
+      "start": 21.88,
+      "end": 22.24
+    },
+    {
+      "word": "returns",
+      "start": 22.24,
+      "end": 22.88
+    },
+    {
+      "word": "to",
+      "start": 22.88,
+      "end": 23.24
+    },
+    {
+      "word": "the",
+      "start": 23.24,
+      "end": 23.34
+    },
+    {
+      "word": "default.",
+      "start": 23.34,
+      "end": 23.58
+    },
+    {
+      "word": "Watch",
+      "start": 24.64,
+      "end": 24.86
+    },
+    {
+      "word": "the",
+      "start": 24.86,
+      "end": 25.12
+    },
+    {
+      "word": "page",
+      "start": 25.12,
+      "end": 25.34
+    },
+    {
+      "word": "get",
+      "start": 25.34,
+      "end": 25.62
+    },
+    {
+      "word": "larger.",
+      "start": 25.62,
+      "end": 25.82
+    },
+    {
+      "word": "Then",
+      "start": 25.82,
+      "end": 26.66
+    },
+    {
+      "word": "check",
+      "start": 26.66,
+      "end": 26.92
+    },
+    {
+      "word": "the",
+      "start": 26.92,
+      "end": 27.12
+    },
+    {
+      "word": "important",
+      "start": 27.12,
+      "end": 27.26
+    },
+    {
+      "word": "part:",
+      "start": 27.26,
+      "end": 27.8
+    },
+    {
+      "word": "can",
+      "start": 28.5,
+      "end": 28.52
+    },
+    {
+      "word": "you",
+      "start": 28.52,
+      "end": 28.68
+    },
+    {
+      "word": "still",
+      "start": 28.68,
+      "end": 28.9
+    },
+    {
+      "word": "find",
+      "start": 28.9,
+      "end": 29.22
+    },
+    {
+      "word": "the",
+      "start": 29.22,
+      "end": 29.38
+    },
+    {
+      "word": "search",
+      "start": 29.38,
+      "end": 29.54
+    },
+    {
+      "word": "field,",
+      "start": 29.54,
+      "end": 29.86
+    },
+    {
+      "word": "read",
+      "start": 30.24,
+      "end": 30.48
+    },
+    {
+      "word": "the",
+      "start": 30.48,
+      "end": 30.64
+    },
+    {
+      "word": "instructions,",
+      "start": 30.64,
+      "end": 30.98
+    },
+    {
+      "word": "and",
+      "start": 31.64,
+      "end": 31.68
+    },
+    {
+      "word": "reach",
+      "start": 31.68,
+      "end": 31.86
+    },
+    {
+      "word": "the",
+      "start": 31.86,
+      "end": 32.12
+    },
+    {
+      "word": "button?",
+      "start": 32.12,
+      "end": 32.42
+    },
+    {
+      "word": "Larger",
+      "start": 33.46,
+      "end": 33.76
+    },
+    {
+      "word": "is",
+      "start": 33.76,
+      "end": 34.06
+    },
+    {
+      "word": "useful",
+      "start": 34.06,
+      "end": 34.28
+    },
+    {
+      "word": "only",
+      "start": 34.28,
+      "end": 34.86
+    },
+    {
+      "word": "if",
+      "start": 34.86,
+      "end": 35.1
+    },
+    {
+      "word": "the",
+      "start": 35.1,
+      "end": 35.24
+    },
+    {
+      "word": "task",
+      "start": 35.24,
+      "end": 35.42
+    },
+    {
+      "word": "still",
+      "start": 35.42,
+      "end": 35.92
+    },
+    {
+      "word": "works.",
+      "start": 35.92,
+      "end": 36.28
+    },
+    {
+      "word": "Pause",
+      "start": 37.36,
+      "end": 37.68
+    },
+    {
+      "word": "the",
+      "start": 37.68,
+      "end": 37.84
+    },
+    {
+      "word": "video,",
+      "start": 37.84,
+      "end": 38.1
+    },
+    {
+      "word": "try",
+      "start": 38.62,
+      "end": 38.76
+    },
+    {
+      "word": "one",
+      "start": 38.76,
+      "end": 39.1
+    },
+    {
+      "word": "zoom",
+      "start": 39.1,
+      "end": 39.38
+    },
+    {
+      "word": "step",
+      "start": 39.38,
+      "end": 39.68
+    },
+    {
+      "word": "on",
+      "start": 39.68,
+      "end": 39.9
+    },
+    {
+      "word": "a",
+      "start": 39.9,
+      "end": 39.98
+    },
+    {
+      "word": "practice",
+      "start": 39.98,
+      "end": 40.26
+    },
+    {
+      "word": "page,",
+      "start": 40.26,
+      "end": 40.66
+    },
+    {
+      "word": "and",
+      "start": 41.2,
+      "end": 41.32
+    },
+    {
+      "word": "restore",
+      "start": 41.32,
+      "end": 41.54
+    },
+    {
+      "word": "it",
+      "start": 41.54,
+      "end": 41.84
+    },
+    {
+      "word": "before",
+      "start": 41.84,
+      "end": 41.98
+    },
+    {
+      "word": "continuing.",
+      "start": 41.98,
+      "end": 42.68
     }
   ]
 }

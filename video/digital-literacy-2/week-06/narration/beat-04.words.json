@@ -1,238 +1,558 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "b1c147cba4a93de3ac7a9667f10c469bef127b50ca9de2de53605fb4c8fb3c6e",
-  "textSha256": "5ee76ef6133cd021b15afb782f26f4d74bd460cdb97306c26e6c237ecfbc2fd9",
-  "matchRatio": 1.0,
+  "wavSha256": "86f6a1de6896eced215211e9f370050380573fd6f64c10de929cd743c786f17f",
+  "textSha256": "d538fd82bb7a8b566c2a9efd03854274803049cd556ced4efcf9ada89b1b4d6f",
+  "matchRatio": 0.990909090909091,
   "words": [
     {
-      "word": "Run",
+      "word": "Define",
       "start": 0.0,
-      "end": 0.26
+      "end": 0.38
     },
     {
-      "word": "the",
-      "start": 0.26,
-      "end": 0.42
+      "word": "success",
+      "start": 0.38,
+      "end": 0.62
     },
     {
-      "word": "checks",
-      "start": 0.42,
-      "end": 0.58
+      "word": "in",
+      "start": 0.62,
+      "end": 1.18
     },
     {
-      "word": "yourself.",
-      "start": 0.58,
-      "end": 1.12
+      "word": "terms",
+      "start": 1.18,
+      "end": 1.38
     },
     {
-      "word": "Try",
-      "start": 2.02,
-      "end": 2.12
-    },
-    {
-      "word": "a",
-      "start": 2.12,
+      "word": "someone",
+      "start": 1.38,
       "end": 2.28
     },
     {
-      "word": "matching",
+      "word": "else",
       "start": 2.28,
-      "end": 2.58
+      "end": 2.68
     },
     {
-      "word": "name,",
-      "start": 2.58,
-      "end": 2.96
+      "word": "can",
+      "start": 2.68,
+      "end": 3.12
     },
     {
-      "word": "a",
-      "start": 3.48,
-      "end": 3.54
+      "word": "observe.",
+      "start": 3.12,
+      "end": 3.48
     },
     {
-      "word": "search",
-      "start": 3.54,
-      "end": 3.76
+      "word": "First,",
+      "start": 4.14,
+      "end": 4.4
     },
     {
-      "word": "with",
-      "start": 3.76,
-      "end": 4.0
+      "word": "searching",
+      "start": 4.66,
+      "end": 5.06
     },
     {
-      "word": "no",
-      "start": 4.0,
-      "end": 4.2
+      "word": "for",
+      "start": 5.06,
+      "end": 5.44
     },
     {
-      "word": "results,",
-      "start": 4.2,
-      "end": 4.58
+      "word": "library",
+      "start": 5.44,
+      "end": 5.66
     },
     {
-      "word": "and",
-      "start": 5.18,
-      "end": 5.3
+      "word": "should",
+      "start": 5.66,
+      "end": 6.36
     },
     {
-      "word": "different",
-      "start": 5.3,
-      "end": 5.52
-    },
-    {
-      "word": "letter",
-      "start": 5.52,
-      "end": 5.84
-    },
-    {
-      "word": "cases.",
-      "start": 5.84,
-      "end": 6.26
-    },
-    {
-      "word": "Use",
-      "start": 8.3,
-      "end": 8.54
-    },
-    {
-      "word": "only",
-      "start": 8.54,
-      "end": 8.88
+      "word": "show",
+      "start": 6.36,
+      "end": 6.64
     },
     {
       "word": "the",
-      "start": 8.88,
-      "end": 9.06
+      "start": 6.64,
+      "end": 6.88
     },
     {
-      "word": "keyboard,",
-      "start": 9.06,
-      "end": 9.4
+      "word": "fictional",
+      "start": 6.88,
+      "end": 7.26
     },
     {
-      "word": "then",
-      "start": 9.92,
-      "end": 10.02
+      "word": "Community",
+      "start": 7.26,
+      "end": 7.68
     },
     {
-      "word": "narrow",
-      "start": 10.02,
-      "end": 10.28
+      "word": "library",
+      "start": 7.68,
+      "end": 8.12
     },
     {
-      "word": "the",
-      "start": 10.28,
-      "end": 10.5
+      "word": "entry.",
+      "start": 8.12,
+      "end": 8.72
     },
     {
-      "word": "screen.",
-      "start": 10.5,
-      "end": 10.84
+      "word": "Second,",
+      "start": 9.74,
+      "end": 9.74
     },
     {
-      "word": "Record",
-      "start": 11.76,
-      "end": 11.88
+      "word": "searching",
+      "start": 10.04,
+      "end": 10.38
     },
     {
-      "word": "what",
-      "start": 11.88,
-      "end": 12.26
+      "word": "for",
+      "start": 10.38,
+      "end": 10.78
     },
     {
-      "word": "you",
-      "start": 12.26,
-      "end": 12.44
+      "word": "an",
+      "start": 10.78,
+      "end": 10.9
     },
     {
-      "word": "expected",
-      "start": 12.44,
+      "word": "unmatched",
+      "start": 10.9,
+      "end": 11.3
+    },
+    {
+      "word": "term",
+      "start": 11.3,
+      "end": 12.0
+    },
+    {
+      "word": "should",
+      "start": 12.0,
+      "end": 12.54
+    },
+    {
+      "word": "show",
+      "start": 12.54,
       "end": 12.8
     },
     {
-      "word": "and",
+      "word": "a",
       "start": 12.8,
-      "end": 13.2
+      "end": 12.94
     },
     {
-      "word": "what",
-      "start": 13.2,
-      "end": 13.38
+      "word": "clear",
+      "start": 12.94,
+      "end": 13.24
     },
     {
-      "word": "actually",
-      "start": 13.38,
-      "end": 13.66
+      "word": "no-results",
+      "start": 13.24,
+      "end": 14.08
     },
     {
-      "word": "happened.",
-      "start": 13.66,
-      "end": 14.14
+      "word": "message.",
+      "start": 14.08,
+      "end": 14.64
     },
     {
-      "word": "A",
-      "start": 15.06,
-      "end": 15.12
+      "word": "Third,",
+      "start": 15.7,
+      "end": 15.7
     },
     {
-      "word": "confident",
-      "start": 15.12,
-      "end": 15.48
+      "word": "the",
+      "start": 16.1,
+      "end": 16.22
     },
     {
-      "word": "AI",
-      "start": 15.48,
-      "end": 15.78
+      "word": "controls",
+      "start": 16.22,
+      "end": 16.54
     },
     {
-      "word": "statement",
-      "start": 15.78,
-      "end": 16.28
+      "word": "should",
+      "start": 16.54,
+      "end": 16.88
     },
     {
-      "word": "does",
-      "start": 16.28,
-      "end": 16.58
+      "word": "work",
+      "start": 16.88,
+      "end": 17.12
     },
     {
-      "word": "not",
-      "start": 16.58,
-      "end": 16.82
-    },
-    {
-      "word": "count",
-      "start": 16.82,
-      "end": 17.1
-    },
-    {
-      "word": "as",
-      "start": 17.1,
+      "word": "with",
+      "start": 17.12,
       "end": 17.32
     },
     {
-      "word": "evidence",
+      "word": "the",
       "start": 17.32,
-      "end": 17.52
+      "end": 17.42
+    },
+    {
+      "word": "keyboard.",
+      "start": 17.42,
+      "end": 17.72
+    },
+    {
+      "word": "Add",
+      "start": 18.4,
+      "end": 18.5
+    },
+    {
+      "word": "a",
+      "start": 18.5,
+      "end": 18.66
+    },
+    {
+      "word": "check",
+      "start": 18.66,
+      "end": 18.86
+    },
+    {
+      "word": "for",
+      "start": 18.86,
+      "end": 19.18
+    },
+    {
+      "word": "different",
+      "start": 19.18,
+      "end": 19.4
+    },
+    {
+      "word": "letter",
+      "start": 19.4,
+      "end": 19.72
+    },
+    {
+      "word": "cases",
+      "start": 19.72,
+      "end": 20.24
+    },
+    {
+      "word": "and",
+      "start": 20.24,
+      "end": 20.82
+    },
+    {
+      "word": "a",
+      "start": 20.82,
+      "end": 20.94
+    },
+    {
+      "word": "narrow",
+      "start": 20.94,
+      "end": 21.1
+    },
+    {
+      "word": "screen.",
+      "start": 21.1,
+      "end": 21.6
+    },
+    {
+      "word": "These",
+      "start": 22.16,
+      "end": 22.28
+    },
+    {
+      "word": "are",
+      "start": 22.28,
+      "end": 22.44
+    },
+    {
+      "word": "acceptance",
+      "start": 22.44,
+      "end": 22.8
+    },
+    {
+      "word": "checks:",
+      "start": 22.8,
+      "end": 23.36
+    },
+    {
+      "word": "statements",
+      "start": 23.78,
+      "end": 24.22
+    },
+    {
+      "word": "about",
+      "start": 24.22,
+      "end": 24.68
+    },
+    {
+      "word": "behavior",
+      "start": 24.68,
+      "end": 25.0
     },
     {
       "word": "that",
-      "start": 17.52,
-      "end": 17.88
+      "start": 25.24,
+      "end": 25.6
     },
     {
-      "word": "these",
-      "start": 17.88,
-      "end": 18.02
+      "word": "help",
+      "start": 25.6,
+      "end": 25.76
     },
     {
-      "word": "paths",
-      "start": 18.02,
-      "end": 18.32
+      "word": "you",
+      "start": 25.76,
+      "end": 25.92
     },
     {
-      "word": "work.",
-      "start": 18.32,
-      "end": 18.68
+      "word": "decide",
+      "start": 25.92,
+      "end": 26.22
+    },
+    {
+      "word": "whether",
+      "start": 26.22,
+      "end": 26.58
+    },
+    {
+      "word": "the",
+      "start": 26.58,
+      "end": 26.86
+    },
+    {
+      "word": "result",
+      "start": 26.86,
+      "end": 27.14
+    },
+    {
+      "word": "is",
+      "start": 27.14,
+      "end": 27.52
+    },
+    {
+      "word": "usable.",
+      "start": 27.52,
+      "end": 27.88
+    },
+    {
+      "word": "Avoid",
+      "start": 27.88,
+      "end": 28.44
+    },
+    {
+      "word": "a",
+      "start": 28.44,
+      "end": 28.44
+    },
+    {
+      "word": "requirement",
+      "start": 28.44,
+      "end": 29.24
+    },
+    {
+      "word": "such",
+      "start": 29.24,
+      "end": 29.66
+    },
+    {
+      "word": "as",
+      "start": 29.66,
+      "end": 29.96
+    },
+    {
+      "word": "make",
+      "start": 29.96,
+      "end": 30.44
+    },
+    {
+      "word": "it",
+      "start": 30.44,
+      "end": 30.62
+    },
+    {
+      "word": "amazing,",
+      "start": 30.62,
+      "end": 30.86
+    },
+    {
+      "word": "because",
+      "start": 30.86,
+      "end": 31.6
+    },
+    {
+      "word": "it",
+      "start": 31.6,
+      "end": 31.8
+    },
+    {
+      "word": "does",
+      "start": 31.8,
+      "end": 31.92
+    },
+    {
+      "word": "not",
+      "start": 31.92,
+      "end": 32.14
+    },
+    {
+      "word": "explain",
+      "start": 32.14,
+      "end": 32.58
+    },
+    {
+      "word": "what",
+      "start": 32.58,
+      "end": 32.94
+    },
+    {
+      "word": "to",
+      "start": 32.94,
+      "end": 33.12
+    },
+    {
+      "word": "test.",
+      "start": 33.12,
+      "end": 33.4
+    },
+    {
+      "word": "Pause",
+      "start": 34.1,
+      "end": 34.32
+    },
+    {
+      "word": "and",
+      "start": 34.32,
+      "end": 34.7
+    },
+    {
+      "word": "write",
+      "start": 34.7,
+      "end": 34.9
+    },
+    {
+      "word": "three",
+      "start": 34.9,
+      "end": 35.3
+    },
+    {
+      "word": "checks",
+      "start": 35.3,
+      "end": 35.7
+    },
+    {
+      "word": "for",
+      "start": 35.7,
+      "end": 36.04
+    },
+    {
+      "word": "a",
+      "start": 36.04,
+      "end": 36.14
+    },
+    {
+      "word": "small",
+      "start": 36.14,
+      "end": 36.42
+    },
+    {
+      "word": "app",
+      "start": 36.42,
+      "end": 36.76
+    },
+    {
+      "word": "idea",
+      "start": 36.76,
+      "end": 37.16
+    },
+    {
+      "word": "of",
+      "start": 37.16,
+      "end": 37.56
+    },
+    {
+      "word": "your",
+      "start": 37.56,
+      "end": 37.7
+    },
+    {
+      "word": "own.",
+      "start": 37.7,
+      "end": 37.98
+    },
+    {
+      "word": "Ask",
+      "start": 38.48,
+      "end": 38.58
+    },
+    {
+      "word": "a",
+      "start": 38.58,
+      "end": 38.76
+    },
+    {
+      "word": "partner",
+      "start": 38.76,
+      "end": 39.08
+    },
+    {
+      "word": "whether",
+      "start": 39.08,
+      "end": 39.5
+    },
+    {
+      "word": "they",
+      "start": 39.5,
+      "end": 39.78
+    },
+    {
+      "word": "could",
+      "start": 39.78,
+      "end": 39.92
+    },
+    {
+      "word": "carry",
+      "start": 39.92,
+      "end": 40.18
+    },
+    {
+      "word": "out",
+      "start": 40.18,
+      "end": 40.48
+    },
+    {
+      "word": "each",
+      "start": 40.48,
+      "end": 40.72
+    },
+    {
+      "word": "check",
+      "start": 40.72,
+      "end": 41.14
+    },
+    {
+      "word": "without",
+      "start": 41.14,
+      "end": 41.52
+    },
+    {
+      "word": "guessing",
+      "start": 41.52,
+      "end": 42.04
+    },
+    {
+      "word": "what",
+      "start": 42.04,
+      "end": 42.4
+    },
+    {
+      "word": "you",
+      "start": 42.4,
+      "end": 42.52
+    },
+    {
+      "word": "meant.",
+      "start": 42.52,
+      "end": 42.72
     }
   ]
 }

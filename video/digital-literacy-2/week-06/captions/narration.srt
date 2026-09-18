@@ -1,117 +1,559 @@
 1
-00:00:00,450 --> 00:00:03,950
-Start with a small problem: help someone
-find a fictional
+00:00:00,450 --> 00:00:03,870
+Think about a list you already use:
+contacts, places to
 
 2
-00:00:03,950 --> 00:00:08,410
-community resource. Keep the first app to
-one page with
+00:00:03,870 --> 00:00:07,810
+visit, or resources for a community
+activity. We will turn
 
 3
-00:00:08,410 --> 00:00:15,390
-search, a category filter, and readable
-results. Write three checks
+00:00:07,810 --> 00:00:10,930
+a fictional resource list into a small
+browser app that
 
 4
-00:00:15,390 --> 00:00:18,650
-before asking AI to build anything, so you
-can tell
+00:00:10,930 --> 00:00:15,390
+helps someone find an entry. Your
+experience with lists gives
 
 5
-00:00:18,650 --> 00:00:20,350
-whether the result actually works.
+00:00:15,390 --> 00:00:18,230
+you a useful starting point for deciding
+whether the result
 
 6
-00:00:22,320 --> 00:00:26,780
-HTML gives the page its content and
-structure. CSS controls
+00:00:18,230 --> 00:00:22,390
+makes sense. You do not need to become a
+professional
 
 7
-00:00:26,780 --> 00:00:33,380
-appearance and layout. JavaScript responds
-to input, such as filtering
+00:00:22,390 --> 00:00:26,490
+programmer today. You will practice
+directing a build, checking
 
 8
-00:00:33,380 --> 00:00:37,680
-a list. The supplied starter keeps
-fictional records inside the
+00:00:26,490 --> 00:00:30,710
+what it does, and making one controlled
+improvement. The first
 
 9
-00:00:37,680 --> 00:00:42,400
-file. It has no real account system,
-private database, or payment service.
+00:00:30,710 --> 00:00:34,510
+version has one page, a search field, a
+category filter,
 
 10
-00:00:44,510 --> 00:00:47,630
-Tell the AI what the user should do, which
-controls
+00:00:35,070 --> 00:00:39,110
+and readable results. Keep the records
+fictional so the work
 
 11
-00:00:47,630 --> 00:00:51,050
-are needed, and how to test them. Ask for
-labeled
+00:00:39,110 --> 00:00:42,490
+can be shared and tested without exposing
+anyone's private information.
 
 12
-00:00:51,050 --> 00:00:57,650
-fields, visible keyboard focus, and no
-external dependencies. Use
+00:00:44,633 --> 00:00:48,193
+A website can present information for
+people to read. A
 
 13
-00:00:57,650 --> 00:01:01,990
-fictional data. Do not place passwords or
-private API keys
+00:00:48,193 --> 00:00:51,753
+web app responds to input, such as
+filtering our resource
 
 14
-00:01:01,990 --> 00:01:05,110
-in browser code, because people can
-inspect that code.
+00:00:51,753 --> 00:00:56,333
+list. Software as a service usually
+provides an ongoing hosted
 
 15
-00:01:07,020 --> 00:01:10,780
-Run the checks yourself. Try a matching
-name, a search
+00:00:56,333 --> 00:01:00,993
+service and may include accounts, stored
+data, subscriptions, and
 
 16
-00:01:10,780 --> 00:01:16,080
-with no results, and different letter
-cases. Use only the
+00:01:00,993 --> 00:01:05,493
+operational support. Our one-file practice
+app is not all of
 
 17
-00:01:16,080 --> 00:01:20,220
-keyboard, then narrow the screen. Record
-what you expected and
+00:01:05,493 --> 00:01:09,573
+that. It has no real account system,
+private database, or
 
 18
-00:01:20,220 --> 00:01:24,120
-what actually happened. A confident AI
-statement does not count
+00:01:09,573 --> 00:01:13,353
+payment service. This distinction helps
+you ask for an achievable
 
 19
-00:01:24,120 --> 00:01:25,700
-as evidence that these paths work.
+00:01:13,353 --> 00:01:18,073
+first version. A convincing sign-in screen
+does not prove secure
 
 20
-00:01:27,450 --> 00:01:30,670
-Save a first version, request or make one
-small improvement,
+00:01:18,073 --> 00:01:22,273
+authentication exists behind it. Start by
+describing the useful
 
 21
-00:01:31,330 --> 00:01:34,690
-and repeat the affected test. Also repeat
-a test that
+00:01:22,273 --> 00:01:26,153
+behavior you can actually test in the
+browser, then treat
 
 22
-00:01:34,690 --> 00:01:39,030
-already passed to catch a new problem. If
-no AI
+00:01:26,153 --> 00:01:30,313
+hosting, security, and service operations
+as separate decisions
 
 23
-00:01:39,030 --> 00:01:42,430
-tool is available, edit the starter's
-heading and a fictional
+00:01:30,313 --> 00:01:31,893
+that require more work.
 
 24
-00:01:42,430 --> 00:01:47,550
-resource in a plain-text editor. Keep both
-versions and your test log.
+00:01:33,761 --> 00:01:37,921
+HTML describes the content and structure:
+a heading, a labeled
+
+25
+00:01:37,921 --> 00:01:42,461
+search field, and a list of resources. CSS
+controls how
+
+26
+00:01:42,461 --> 00:01:46,761
+those parts are arranged and displayed.
+JavaScript responds to input,
+
+27
+00:01:47,001 --> 00:01:51,741
+such as deciding which records match a
+search. Think of
+
+28
+00:01:51,741 --> 00:01:55,021
+a familiar form: the questions and fields
+are its structure,
+
+29
+00:01:55,861 --> 00:01:58,761
+their presentation helps you read them,
+and the rules determine
+
+30
+00:01:58,761 --> 00:02:02,041
+what happens when you use it. The analogy
+is a
+
+31
+00:02:02,041 --> 00:02:05,761
+starting point, not a complete description
+of software. Open the
+
+32
+00:02:05,761 --> 00:02:08,841
+supplied starter in the browser and
+identify a visible example
+
+33
+00:02:08,841 --> 00:02:12,321
+of each part. Changing a heading is
+different from changing
+
+34
+00:02:12,321 --> 00:02:13,881
+the rule that filters the list.
+
+35
+00:02:15,783 --> 00:02:20,843
+Define success in terms someone else can
+observe. First, searching
+
+36
+00:02:20,843 --> 00:02:25,523
+for library should show the fictional
+Community library entry. Second,
+
+37
+00:02:25,823 --> 00:02:29,863
+searching for an unmatched term should
+show a clear no-results
+
+38
+00:02:29,863 --> 00:02:34,283
+message. Third, the controls should work
+with the keyboard. Add
+
+39
+00:02:34,283 --> 00:02:37,383
+a check for different letter cases and a
+narrow screen.
+
+40
+00:02:37,943 --> 00:02:41,543
+These are acceptance checks: statements
+about behavior that help
+
+41
+00:02:41,543 --> 00:02:45,023
+you decide whether the result is usable.
+Avoid a requirement
+
+42
+00:02:45,023 --> 00:02:48,363
+such as make it amazing, because it does
+not explain
+
+43
+00:02:48,363 --> 00:02:51,923
+what to test. Pause and write three checks
+for a
+
+44
+00:02:51,923 --> 00:02:55,283
+small app idea of your own. Ask a partner
+whether
+
+45
+00:02:55,283 --> 00:02:58,503
+they could carry out each check without
+guessing what you meant.
+
+46
+00:03:00,290 --> 00:03:04,150
+A useful prompt describes the user, the
+task, the controls,
+
+47
+00:03:04,790 --> 00:03:09,010
+the data boundaries, and the checks. For
+example: build one
+
+48
+00:03:09,010 --> 00:03:13,090
+local HTML page that searches fictional
+community resources by name
+
+49
+00:03:13,090 --> 00:03:18,110
+and category. Include labeled fields,
+visible keyboard focus, a
+
+50
+00:03:18,110 --> 00:03:22,910
+no-results message, and no external
+dependencies. Keep all example
+
+51
+00:03:22,910 --> 00:03:27,730
+records fictional and explain how to run
+the file. Ask
+
+52
+00:03:27,730 --> 00:03:30,450
+the AI to describe the important parts so
+you can
+
+53
+00:03:30,450 --> 00:03:33,810
+inspect its work. Do not put passwords or
+private API
+
+54
+00:03:33,810 --> 00:03:37,270
+keys into the prompt or the browser code.
+People can
+
+55
+00:03:37,270 --> 00:03:40,750
+inspect code delivered to their browser. A
+longer prompt is
+
+56
+00:03:40,750 --> 00:03:44,290
+not automatically better; each instruction
+should clarify behavior
+
+57
+00:03:44,290 --> 00:03:45,950
+or a boundary you can verify.
+
+58
+00:03:47,978 --> 00:03:51,438
+Use the instructor-approved tool if one is
+available, or begin
+
+59
+00:03:51,438 --> 00:03:55,238
+with the supplied starter. Save the file
+with its HTML
+
+60
+00:03:55,238 --> 00:03:59,018
+extension and open it in the browser.
+Confirm that the
+
+61
+00:03:59,018 --> 00:04:04,938
+heading, search field, filter, and results
+appear. Keep this first
+
+62
+00:04:04,938 --> 00:04:09,138
+working version before asking for changes.
+If no AI account
+
+63
+00:04:09,138 --> 00:04:12,418
+is available, you can still complete the
+exercise with a
+
+64
+00:04:12,418 --> 00:04:16,418
+plain-text editor: change the heading and
+one fictional resource,
+
+65
+00:04:17,138 --> 00:04:20,838
+save the file, and refresh the browser. Be
+careful that
+
+66
+00:04:20,838 --> 00:04:24,818
+the editor has not silently added a
+text-file extension. The
+
+67
+00:04:24,818 --> 00:04:27,818
+goal is a working result you can explain,
+not evidence
+
+68
+00:04:27,818 --> 00:04:30,678
+that you used a particular paid service or
+model.
+
+69
+00:04:32,647 --> 00:04:35,487
+Type library into the search field and
+compare the result
+
+70
+00:04:35,487 --> 00:04:39,387
+with your first acceptance check. Then
+enter an unmatched term
+
+71
+00:04:39,387 --> 00:04:43,027
+such as zzz. The page should explain that
+there are
+
+72
+00:04:43,027 --> 00:04:46,567
+no matching resources rather than
+appearing broken or showing an
+
+73
+00:04:46,567 --> 00:04:50,547
+old result. Clear the field and try
+LIBRARY in uppercase.
+
+74
+00:04:51,767 --> 00:04:55,707
+If the intended behavior is a
+case-insensitive search, it should
+
+75
+00:04:55,707 --> 00:04:59,187
+find the same record. Next combine the
+search with a
+
+76
+00:04:59,187 --> 00:05:03,147
+category filter and inspect whether both
+conditions apply. Record
+
+77
+00:05:03,147 --> 00:05:07,387
+expected and actual results separately. A
+confident statement from
+
+78
+00:05:07,387 --> 00:05:10,447
+the AI is not test evidence. The evidence
+is what
+
+79
+00:05:10,447 --> 00:05:13,287
+happened when you carried out a named
+check on the saved file.
+
+80
+00:05:15,227 --> 00:05:17,887
+Set the mouse aside and move through the
+controls with
+
+81
+00:05:17,887 --> 00:05:22,167
+the keyboard. Can you see which control
+has focus? Can
+
+82
+00:05:22,167 --> 00:05:26,187
+you enter a search and operate the filter?
+Narrow the
+
+83
+00:05:26,187 --> 00:05:30,067
+browser window and check that labels,
+results, and buttons remain
+
+84
+00:05:30,067 --> 00:05:34,147
+readable without important content being
+cut off. Then ask where
+
+85
+00:05:34,147 --> 00:05:38,687
+the data lives. In our starter, fictional
+records are inside
+
+86
+00:05:38,687 --> 00:05:43,147
+the file. Browser storage, if added later,
+may remain only
+
+87
+00:05:43,147 --> 00:05:45,987
+in that browser and may be cleared; it is
+not
+
+88
+00:05:45,987 --> 00:05:49,927
+automatically a shared database or a
+backup. Test persistence rather
+
+89
+00:05:49,927 --> 00:05:54,507
+than assuming it. Use the course's
+existing text-size and accessibility
+
+90
+00:05:54,507 --> 00:05:57,547
+habits as standards for the app you build.
+
+91
+00:05:59,316 --> 00:06:03,516
+Suppose the uppercase search failed. A
+useful revision request names
+
+92
+00:06:03,516 --> 00:06:08,016
+the observed problem, the expected
+behavior, and the check: LIBRARY
+
+93
+00:06:08,016 --> 00:06:12,816
+returns no result, but library returns
+Community library; make both
+
+94
+00:06:12,816 --> 00:06:16,196
+searches match the same entry and preserve
+the category filter.
+
+95
+00:06:17,216 --> 00:06:20,376
+Save the revised version under a distinct
+name. Repeat the
+
+96
+00:06:20,376 --> 00:06:25,516
+failed check, then repeat a check that
+previously passed. This
+
+97
+00:06:25,516 --> 00:06:29,196
+second step can reveal a regression, where
+fixing one behavior
+
+98
+00:06:29,196 --> 00:06:32,776
+breaks another. If the new version is
+worse, return to
+
+99
+00:06:32,776 --> 00:06:36,336
+the saved working version. Pause and make
+one small improvement
+
+100
+00:06:36,336 --> 00:06:39,556
+or repair. Keep a brief test log so a
+partner
+
+101
+00:06:39,556 --> 00:06:42,435
+can follow what changed and why you trust
+it.
+
+102
+00:06:43,985 --> 00:06:46,185
+Show a partner the saved app and carry out
+your
+
+103
+00:06:46,185 --> 00:06:50,445
+three acceptance checks. Explain one part
+of the page, one
+
+104
+00:06:50,445 --> 00:06:55,565
+change you made, and one limitation that
+remains. A local
+
+105
+00:06:55,565 --> 00:06:58,625
+fictional prototype can be a successful
+learning result without
+
+106
+00:06:58,625 --> 00:07:03,365
+being ready to operate a public service.
+Hosting is a
+
+107
+00:07:03,365 --> 00:07:07,305
+separate choice. A real service handling
+accounts, private data,
+
+108
+00:07:07,305 --> 00:07:11,845
+or payments needs appropriate security,
+access controls, support,
+
+109
+00:07:12,445 --> 00:07:16,305
+and testing beyond this exercise. Do not
+treat a decorative
+
+110
+00:07:16,305 --> 00:07:20,685
+sign-in form as protection. Carry forward
+the method you practiced:
+
+111
+00:07:20,685 --> 00:07:25,285
+define a small task, give clear
+instructions, inspect the result,
+
+112
+00:07:26,145 --> 00:07:28,925
+test more than the easiest path, and keep
+a way
+
+113
+00:07:28,925 --> 00:07:30,165
+back when you revise it.

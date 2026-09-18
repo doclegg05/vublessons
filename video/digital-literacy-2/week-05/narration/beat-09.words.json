@@ -1,0 +1,548 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "cb2ffb4f499fca19a48d5597b7f01db4b77fd75034e4abbc9d9fd616729002f2",
+  "textSha256": "6343627ba202a17446ae4eab9966a0c36aaf26a5d0e1c809e361b822958b94ca",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Here",
+      "start": 0.0,
+      "end": 0.22
+    },
+    {
+      "word": "is",
+      "start": 0.22,
+      "end": 0.4
+    },
+    {
+      "word": "a",
+      "start": 0.4,
+      "end": 0.54
+    },
+    {
+      "word": "new",
+      "start": 0.54,
+      "end": 0.7
+    },
+    {
+      "word": "fictional",
+      "start": 0.7,
+      "end": 1.02
+    },
+    {
+      "word": "scenario.",
+      "start": 1.02,
+      "end": 1.74
+    },
+    {
+      "word": "A",
+      "start": 2.4,
+      "end": 2.42
+    },
+    {
+      "word": "message",
+      "start": 2.42,
+      "end": 2.7
+    },
+    {
+      "word": "claiming",
+      "start": 2.7,
+      "end": 3.06
+    },
+    {
+      "word": "to",
+      "start": 3.06,
+      "end": 3.38
+    },
+    {
+      "word": "represent",
+      "start": 3.38,
+      "end": 3.68
+    },
+    {
+      "word": "a",
+      "start": 3.68,
+      "end": 3.98
+    },
+    {
+      "word": "community",
+      "start": 3.98,
+      "end": 4.22
+    },
+    {
+      "word": "service",
+      "start": 4.22,
+      "end": 4.72
+    },
+    {
+      "word": "asks",
+      "start": 5.24,
+      "end": 5.52
+    },
+    {
+      "word": "for",
+      "start": 5.52,
+      "end": 5.8
+    },
+    {
+      "word": "a",
+      "start": 5.8,
+      "end": 5.88
+    },
+    {
+      "word": "private",
+      "start": 5.88,
+      "end": 6.16
+    },
+    {
+      "word": "code",
+      "start": 6.16,
+      "end": 6.54
+    },
+    {
+      "word": "before",
+      "start": 6.54,
+      "end": 7.14
+    },
+    {
+      "word": "it",
+      "start": 7.14,
+      "end": 7.36
+    },
+    {
+      "word": "will",
+      "start": 7.36,
+      "end": 7.44
+    },
+    {
+      "word": "confirm",
+      "start": 7.44,
+      "end": 7.88
+    },
+    {
+      "word": "an",
+      "start": 7.88,
+      "end": 8.18
+    },
+    {
+      "word": "appointment.",
+      "start": 8.18,
+      "end": 8.56
+    },
+    {
+      "word": "Pause",
+      "start": 9.42,
+      "end": 9.7
+    },
+    {
+      "word": "the",
+      "start": 9.7,
+      "end": 9.84
+    },
+    {
+      "word": "video",
+      "start": 9.84,
+      "end": 10.08
+    },
+    {
+      "word": "and",
+      "start": 10.08,
+      "end": 10.38
+    },
+    {
+      "word": "state",
+      "start": 10.38,
+      "end": 10.58
+    },
+    {
+      "word": "three",
+      "start": 10.58,
+      "end": 10.9
+    },
+    {
+      "word": "things:",
+      "start": 10.9,
+      "end": 11.3
+    },
+    {
+      "word": "what",
+      "start": 11.8,
+      "end": 11.9
+    },
+    {
+      "word": "evidence",
+      "start": 11.9,
+      "end": 12.16
+    },
+    {
+      "word": "you",
+      "start": 12.16,
+      "end": 12.42
+    },
+    {
+      "word": "have,",
+      "start": 12.42,
+      "end": 12.64
+    },
+    {
+      "word": "what",
+      "start": 13.24,
+      "end": 13.38
+    },
+    {
+      "word": "remains",
+      "start": 13.38,
+      "end": 13.66
+    },
+    {
+      "word": "unverified,",
+      "start": 13.66,
+      "end": 14.22
+    },
+    {
+      "word": "and",
+      "start": 15.18,
+      "end": 15.2
+    },
+    {
+      "word": "what",
+      "start": 15.2,
+      "end": 15.44
+    },
+    {
+      "word": "you",
+      "start": 15.44,
+      "end": 15.66
+    },
+    {
+      "word": "would",
+      "start": 15.66,
+      "end": 15.8
+    },
+    {
+      "word": "do",
+      "start": 15.8,
+      "end": 15.96
+    },
+    {
+      "word": "next.",
+      "start": 15.96,
+      "end": 16.18
+    },
+    {
+      "word": "A",
+      "start": 17.66,
+      "end": 18.22
+    },
+    {
+      "word": "strong",
+      "start": 18.22,
+      "end": 18.48
+    },
+    {
+      "word": "response",
+      "start": 18.48,
+      "end": 18.86
+    },
+    {
+      "word": "identifies",
+      "start": 18.86,
+      "end": 19.36
+    },
+    {
+      "word": "the",
+      "start": 19.36,
+      "end": 19.8
+    },
+    {
+      "word": "unusual",
+      "start": 19.8,
+      "end": 20.02
+    },
+    {
+      "word": "request,",
+      "start": 20.02,
+      "end": 20.66
+    },
+    {
+      "word": "avoids",
+      "start": 21.2,
+      "end": 21.44
+    },
+    {
+      "word": "sharing",
+      "start": 21.44,
+      "end": 21.84
+    },
+    {
+      "word": "the",
+      "start": 21.84,
+      "end": 22.06
+    },
+    {
+      "word": "code,",
+      "start": 22.06,
+      "end": 22.3
+    },
+    {
+      "word": "and",
+      "start": 22.92,
+      "end": 22.94
+    },
+    {
+      "word": "checks",
+      "start": 22.94,
+      "end": 23.12
+    },
+    {
+      "word": "the",
+      "start": 23.12,
+      "end": 23.38
+    },
+    {
+      "word": "appointment",
+      "start": 23.38,
+      "end": 23.7
+    },
+    {
+      "word": "through",
+      "start": 23.7,
+      "end": 24.08
+    },
+    {
+      "word": "a",
+      "start": 24.08,
+      "end": 24.2
+    },
+    {
+      "word": "known",
+      "start": 24.2,
+      "end": 24.42
+    },
+    {
+      "word": "contact",
+      "start": 24.42,
+      "end": 25.04
+    },
+    {
+      "word": "method.",
+      "start": 25.04,
+      "end": 25.66
+    },
+    {
+      "word": "It",
+      "start": 26.36,
+      "end": 26.52
+    },
+    {
+      "word": "does",
+      "start": 26.52,
+      "end": 26.64
+    },
+    {
+      "word": "not",
+      "start": 26.64,
+      "end": 26.9
+    },
+    {
+      "word": "rely",
+      "start": 26.9,
+      "end": 27.2
+    },
+    {
+      "word": "only",
+      "start": 27.2,
+      "end": 27.54
+    },
+    {
+      "word": "on",
+      "start": 27.54,
+      "end": 27.78
+    },
+    {
+      "word": "spelling",
+      "start": 27.78,
+      "end": 28.04
+    },
+    {
+      "word": "mistakes",
+      "start": 28.04,
+      "end": 28.44
+    },
+    {
+      "word": "or",
+      "start": 28.44,
+      "end": 28.9
+    },
+    {
+      "word": "how",
+      "start": 28.9,
+      "end": 29.06
+    },
+    {
+      "word": "professional",
+      "start": 29.06,
+      "end": 29.48
+    },
+    {
+      "word": "the",
+      "start": 29.48,
+      "end": 30.06
+    },
+    {
+      "word": "message",
+      "start": 30.06,
+      "end": 30.34
+    },
+    {
+      "word": "looks.",
+      "start": 30.34,
+      "end": 30.92
+    },
+    {
+      "word": "Ask",
+      "start": 31.92,
+      "end": 32.32
+    },
+    {
+      "word": "a",
+      "start": 32.32,
+      "end": 32.44
+    },
+    {
+      "word": "partner",
+      "start": 32.44,
+      "end": 32.64
+    },
+    {
+      "word": "to",
+      "start": 32.64,
+      "end": 32.9
+    },
+    {
+      "word": "explain",
+      "start": 32.9,
+      "end": 33.22
+    },
+    {
+      "word": "a",
+      "start": 33.22,
+      "end": 33.4
+    },
+    {
+      "word": "different",
+      "start": 33.4,
+      "end": 33.66
+    },
+    {
+      "word": "scenario",
+      "start": 33.66,
+      "end": 34.16
+    },
+    {
+      "word": "using",
+      "start": 34.16,
+      "end": 34.72
+    },
+    {
+      "word": "the",
+      "start": 34.72,
+      "end": 35.0
+    },
+    {
+      "word": "same",
+      "start": 35.0,
+      "end": 35.24
+    },
+    {
+      "word": "process.",
+      "start": 35.24,
+      "end": 35.94
+    },
+    {
+      "word": "If",
+      "start": 36.76,
+      "end": 36.88
+    },
+    {
+      "word": "you",
+      "start": 36.88,
+      "end": 37.0
+    },
+    {
+      "word": "disagree,",
+      "start": 37.0,
+      "end": 37.42
+    },
+    {
+      "word": "discuss",
+      "start": 37.96,
+      "end": 38.3
+    },
+    {
+      "word": "the",
+      "start": 38.3,
+      "end": 38.56
+    },
+    {
+      "word": "evidence",
+      "start": 38.56,
+      "end": 38.82
+    },
+    {
+      "word": "behind",
+      "start": 38.82,
+      "end": 39.18
+    },
+    {
+      "word": "each",
+      "start": 39.18,
+      "end": 39.58
+    },
+    {
+      "word": "choice",
+      "start": 39.58,
+      "end": 40.04
+    },
+    {
+      "word": "rather",
+      "start": 40.06,
+      "end": 40.82
+    },
+    {
+      "word": "than",
+      "start": 40.82,
+      "end": 41.12
+    },
+    {
+      "word": "guessing",
+      "start": 41.12,
+      "end": 41.38
+    },
+    {
+      "word": "what",
+      "start": 41.38,
+      "end": 41.88
+    },
+    {
+      "word": "answer",
+      "start": 41.88,
+      "end": 42.24
+    },
+    {
+      "word": "the",
+      "start": 42.24,
+      "end": 42.6
+    },
+    {
+      "word": "instructor",
+      "start": 42.6,
+      "end": 42.78
+    },
+    {
+      "word": "wants.",
+      "start": 42.78,
+      "end": 43.38
+    }
+  ]
+}

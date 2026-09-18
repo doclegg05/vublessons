@@ -12,3 +12,17 @@
   }
  }
 })();
+
+// Chapter controls seek within the learner-controlled video without autoplay.
+(() => {
+ document.querySelectorAll('[data-video-chapters]').forEach(nav=>{
+  const video=document.getElementById(nav.dataset.videoChapters);
+  if(!video)return;
+  nav.querySelectorAll('[data-video-seek]').forEach(button=>button.addEventListener('click',()=>{
+   const seek=()=>{video.currentTime=Number(button.dataset.videoSeek);video.pause();video.focus();};
+   if(video.readyState>=1)seek();else{video.addEventListener('loadedmetadata',seek,{once:true});video.load();}
+   nav.querySelectorAll('button').forEach(b=>b.removeAttribute('aria-current'));
+   button.setAttribute('aria-current','true');
+  }));
+ });
+})();

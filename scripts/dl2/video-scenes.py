@@ -5,6 +5,7 @@ KINDS={1:['zoom','zoom','sound','privacy','routine'],2:['sync','permission','syn
 TITLES={1:['Start with one task','Zoom into the task','Follow the sound','Share availability','Choose. Test. Explain.'],2:['Follow your file','Match access to the task','Deletion can travel too','Bring back the right copy','Suggest without rewriting'],3:['Make the next step visible','Structure guides the reader','Make the numbers prove it','Choose what travels','Show your resource pack'],4:['One file. Clear roles.','Together or later?','Show the useful change','Make room for others','Make the next action clear'],5:['Pause the pressure','Match access to purpose','Protect what can be read','Make room for a break','Show your safer next step'],6:['Build one useful thing','Three layers. One app.','Give the build boundaries','Test what actually happens','Keep a way back']}
 ART={1:'workstation',2:'research',3:'creation',4:'collaboration',5:'security',6:'building'}
 PATHS={
+'usb':'<rect x=17 y=22 width=30 height=37 rx=6/><path d="M22 22V5h20v17M28 9v7M36 9v7"/>',
 'computer':'<rect x="5" y="7" width="54" height="36" rx="3"/><path d="M32 43v13M18 57h28"/>',
 'file':'<path d="M14 5h25l12 12v42H14zM39 5v14h12M23 30h19M23 40h19M23 50h12"/>',
 'cloud':'<path d="M15 47a13 13 0 0 1-1-26 18 18 0 0 1 35-2 14 14 0 0 1 1 28z"/>',
@@ -78,8 +79,9 @@ def diagram(kind,i):
    v+=f'<g id="doc-step-{j}">'+rect(105,117+j*77,50,50,'#0f655f')+text(str(j+1),130,152+j*77,28,anchor='middle')+text(s,181,152+j*77,31,'#1b365d')+'</g>'
   note='A clear heading. A useful sequence.'
  elif kind=='sheet':
-  v=rect(20,30,440,330,'#e1efed')+text('Item',50,78,29,'#1b365d')+text('Cost ($)',295,78,29,'#1b365d')
-  for j,(name,value) in enumerate([('Paper','12'),('Folders','8'),('Pens','5')]):v+=text(name,50,140+j*63,31,'#1b365d')+text(value,342,140+j*63,34,'#1b365d','paper-cost' if j==0 else '')
+  v=rect(20,20,440,340,'#e1efed')+text('A',168,62,27,'#1b365d')+text('B',370,62,27,'#1b365d')
+  v+=text('1',43,118,27,'#1b365d')+text('Item',89,118,29,'#1b365d')+text('Cost ($)',290,118,29,'#1b365d')
+  for j,(name,value) in enumerate([('Paper','12'),('Folders','8'),('Pens','5')]):v+=text(str(j+2),43,181+j*63,27,'#1b365d')+text(name,89,181+j*63,31,'#1b365d')+text(value,370,181+j*63,34,'#1b365d','paper-cost' if j==0 else '')
   v+=rect(490,30,250,330,'#0f655f')+text('Total',615,92,34,anchor='middle')+text('25',615,234,104,'#E6C65C','total',anchor='middle')+text('=SUM(B2:B4)',380,419,38,anchor='middle');note='Change a value. Watch the formula.'
  elif kind=='export':
   for j,(kind2,title) in enumerate([('edit','DOCX'),('file','PDF'),('grid','CSV')]):v+=tile(kind2,title,18+j*253,66,217,248,f'format-{j}')
@@ -137,11 +139,63 @@ def diagram(kind,i):
  elif kind=='versions':
   v=tile('file','Version 1',15,42,265,234,'version-1')+arrow(293,159,455,159)+tile('edit','Version 2',477,42,265,234,'version-2')
   v+=icon('undo',335,287,89,id='restore')+text('Retest the change',194,406,30,anchor='middle')+text('Retest what worked',574,406,30,anchor='middle');note='Keep both versions and your test log.'
+ elif kind=='connections':
+  for j,(k,t) in enumerate([('computer','Processing'),('grid','Working memory'),('file','Saved storage')]):v+=tile(k,t,15+j*253,40,222,197,f'concept-{j}')
+  v+=icon('computer',40,290,78)+arrow(135,330,288,330)+icon('grid',307,290,78)+arrow(400,330,554,330)+icon('cloud',580,290,78);note='Identify the job before changing a connection.'
+ elif kind=='print':
+  v=rect(20,26,287,373,'#e1efed')+text('Preview',163,82,31,'#1b365d',anchor='middle')+''.join(rect(45,124+j*49,234-(j%2)*28,8,'#72978f',radius=2) for j in range(5))
+  for j,t in enumerate(['1  Destination','2  Page range','3  Test one page']):v+=f'<g id="concept-{j}">'+rect(354,46+j*116,387,95)+text(t,380,104+j*116,30)+'</g>'
+  note='Preview → test → print more'
+ elif kind=='calendar':
+  v=rect(15,20,728,397,'#e1efed')+text('Library practice',48,74,35,'#1b365d')
+  for j,t in enumerate(['Day','Week','Month']):v+=f'<g id="concept-{j}">'+rect(45+j*235,109,206,48,'#234b6a')+text(t,148+j*235,143,28,anchor='middle')+'</g>'
+  for col in range(7):
+   for row in range(3):v+=rect(45+col*94,178+row*65,87,58,'#c4d8de',radius=5)
+  v+=rect(233,243,181,58,'#0f655f')+text('2–3 · Room A',324,281,25,anchor='middle');note='Check the day, time, place and reminder.'
+ elif kind=='search':
+  v=rect(22,27,716,67,'#e1efed')+icon('search',41,40,43,'#0f655f')+text('computer help + library + town',105,72,29,'#1b365d')
+  for j,(t,sub) in enumerate([('Official service page','Responsible organization'),('Check the details','Location · date · purpose'),('Record the source','Address · fact · date checked')]):
+   v+=f'<g id="concept-{j}">'+rect(22,122+j*101,716,88)+text(t,49,158+j*101,29)+text(sub,49,189+j*101,24,'#E6C65C')+'</g>'
+  note='Useful results need evidence and relevance.'
+ elif kind=='form':
+  v=rect(55,20,649,398,'#e1efed')+text('Practice request',88,74,35,'#1b365d')
+  for j,t in enumerate(['Help topic: finding a file','Contact: ask at the desk','Review before submitting']):v+=f'<g id="concept-{j}">'+rect(88,112+j*91,581,70,'#c4d8de')+text(t,109,157+j*91,28,'#1b365d')+'</g>'
+  note='Fictional information. No real request is sent.'
+ elif kind=='chart':
+  v=text('Supply costs ($)',30,45,34)+f'<path d="M173 73v306h540" fill="none" stroke="#b7d1ce" stroke-width="3"/>'
+  for j,(t,value,width) in enumerate([('Paper','15',450),('Folders','8',240),('Pens','5',150)]):
+   v+=text(t,151,135+j*101,28,anchor='end')+f'<g id="concept-{j}">'+rect(181,89+j*101,width,65,'#0f655f',radius=5)+text(value,202,133+j*101,32,'#E6C65C')+'</g>'
+  note='Match the chart to the checked table.'
+ elif kind=='media-edit':
+  v=text('Keep the useful explanation',380,54,34,anchor='middle')
+  for j,(t,w,c) in enumerate([('Start',116,'#234b6a'),('Explain',221,'#0f655f'),('Pause',116,'#234b6a'),('Result',221,'#0f655f')]):
+   x=[20,143,371,494][j];v+=rect(x,118,w,126,c)+text(t,x+w/2,192,28,anchor='middle')
+  for j,(k,t) in enumerate([('undo','Preserve original'),('edit','Check the edit'),('chat','Retest captions')]):v+=f'<g id="concept-{j}">'+icon(k,75+j*247,291,61)+text(t,133+j*247,397,26,anchor='middle')+'</g>'
+  note='Trim ends. Split sections. Check speech and captions.'
+ elif kind=='email-fields':
+  v=rect(30,29,700,363,'#e1efed')
+  for j,(t,sub) in enumerate([('To','Main recipients'),('Cc','Visible copy'),('Bcc','Other recipients cannot see addresses')]):
+   v+=f'<g id="concept-{j}">'+text(t,60,92+j*113,35,'#1b365d')+rect(149,51+j*113,550,76,'#c4d8de')+text(sub,171,99+j*113,25,'#1b365d')+'</g>'
+  note='Inspect every recipient. Check Reply all.'
+ elif kind=='commerce':
+  v=tile('clock','Trial today',20,41,300,192,'concept-0')+arrow(336,143,415,143)+tile('file','$12 each month',436,41,304,192,'concept-1')
+  v+=f'<g id="concept-2">'+rect(20,283,720,109,'#0f655f')+text('Seller · renewal · cancellation',380,348,34,anchor='middle')+'</g>';note='Fictional offer. No payment is required.'
+ elif kind=='source-trail':
+  v=rect(30,28,700,374,'#e1efed')+text('My source record',65,82,34,'#1b365d')
+  for j,(label,value) in enumerate([('Address','Official service page'),('Verified fact','Room and opening hours'),('Date checked','Check again before acting')]):
+   v+=f'<g id="concept-{j}">'+text(label,65,145+j*94,25,'#0f655f')+text(value,65,181+j*94,31,'#1b365d')+'</g>'
+  note='Record evidence you can return to.'
+ elif kind=='usb':
+  v=tile('usb','Unknown drive',20,64,214,228,'concept-0')+tile('hand','Do not connect',273,64,214,228,'concept-1')+tile('person','Authorized staff',526,64,214,228,'concept-2')
+  v+=arrow(240,180,267,180)+arrow(493,180,520,180);note='Appearance does not prove safety.'
+ elif kind=='keyboard':
+  v=rect(25,22,710,320,'#e1efed')+rect(53,56,469,65,'#c4d8de','concept-0')+text('Search resources',80,99,30,'#1b365d')+rect(548,56,158,65,'#c9a227','concept-1')+text('All',627,99,29,'#1b365d',anchor='middle')
+  v+=rect(53,155,653,95,'#c4d8de','concept-2')+text('Community library',85,214,32,'#1b365d')+rect(200,373,165,57)+text('Tab →',282,412,30,anchor='middle')+text('Visible focus',545,412,30,anchor='middle');v+='<rect id=focus-ring x=50 y=53 width=475 height=71 rx=8 fill=none stroke=#1b365d stroke-width=4 />';note='Keyboard · narrow screen · data location'
  return '<svg class="diagram" viewBox="0 0 760 460" role="img" aria-label="'+E(note)+'">'+v+'</svg>',note
 
 CSS='''*{box-sizing:border-box}.canvas-ground{position:absolute;inset:0;background:#102c4b}.photo-window{position:absolute;left:0;top:0;width:400px;height:720px;overflow:hidden}.topic-photo{width:100%;height:100%;object-fit:cover;object-position:48% center}.photo-shade{position:absolute;left:0;bottom:0;width:400px;height:130px;background:#102c4b}.gold-divider{position:absolute;left:395px;top:0;width:5px;height:720px;background:#c9a227}.video-title{position:absolute;left:440px;top:55px;max-width:755px;margin:0;font-size:46px;line-height:1.14;color:white;letter-spacing:-.5px}.graphic-stage{position:absolute;left:440px;top:153px;width:784px;height:460px}.diagram{width:100%;height:100%;overflow:visible}.video-note{position:absolute;left:445px;bottom:53px;font-size:29px;color:#e6c65c;margin:0;max-width:755px;line-height:1.3}.video-brand{position:absolute;left:31px;bottom:37px;display:flex;align-items:center;gap:12px;color:white;font-size:24px;font-weight:700}.video-brand img{width:49px;height:49px}.graphic-stage text{font-family:VUB}.layout-wide .photo-window{width:270px}.layout-wide .gold-divider{left:265px}.layout-wide .photo-shade{width:270px}.layout-wide .video-title{left:312px;max-width:880px}.layout-wide .graphic-stage{left:312px;width:910px;height:466px;top:153px}.layout-wide .video-note{left:320px;max-width:870px}.layout-finale .photo-window{left:850px;width:430px}.layout-finale .gold-divider{left:845px}.layout-finale .photo-shade{left:850px;width:430px}.layout-finale .video-title{left:55px;max-width:740px}.layout-finale .graphic-stage{left:40px;width:780px}.layout-finale .video-note{left:55px;max-width:750px}.layout-finale .video-brand{left:885px}'''
 def scene(n,i,b,words):
- kind=KINDS[n][i];cid=f'w{n}-scene-{i+1}';content,note=diagram(kind,i)
+ index=i;kind=b.get('visual',KINDS[n][i%5]);i=b.get('variant',i);cid=f'w{n}-scene-{index+1}';content,note=diagram(kind,i)
  # Scope ids and every animation to the owning frame.
  for old in re.findall(r'id=([a-zA-Z0-9-]+)',content):content=content.replace(f'id={old}',f'id="{cid}-{old}"')
  for old in re.findall(r'id="([^\"]+)"',content):
@@ -205,8 +259,12 @@ def scene(n,i,b,words):
  elif kind=='prompt':
   for j,p in enumerate(['user should do','controls','test','fictional data']):move(f'#prompt-{j} rect',{'fill':'#0f655f'},p,.1+j*.2)
  elif kind=='versions':light('#version-1','first version',.1);light('#version-2','improvement',.28);move('#restore',{'rotation':-20,'transformOrigin':'50% 50%'},'keep both versions',.8)
- layout='layout-finale' if i==4 else 'layout-wide' if i in [1,2,3] else 'layout-split'
+ if kind=='keyboard':move('#focus-ring',{'attr':{'x':545,'width':166}},'operate the filter',.4)
+ if kind in ['connections','print','calendar','search','form','chart','media-edit','email-fields','commerce','keyboard','usb','source-trail']:
+  for j in range(3):
+   move(f'#concept-{j}',{'scale':1.025,'transformOrigin':'50% 50%'},'',.18+j*.24)
+ layout='layout-finale' if index==9 else 'layout-wide' if index%3 else 'layout-split'
  css=CSS
  for variant in ["layout-wide","layout-finale"]:
   css=re.sub(r"\."+variant+r" ([^{}]+)\{([^{}]+)\}", lambda m: m[1]+"{"+m[2]+"}" if variant==layout else "", css)
- return f'''<template><div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{b['window']}" data-width="1280" data-height="720" style="position:relative;width:100%;height:100%;overflow:hidden"><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}#{cid}{{font-family:VUB}}{css}</style><div class="canvas-ground"></div><div class="photo-window"><img class="topic-photo" src="assets/topic.webp" alt=""></div><div class="photo-shade"></div><div class="gold-divider"></div><h1 class="video-title">{E(TITLES[n][i])}</h1><div class="graphic-stage">{content}</div><p class="video-note">{E(note)}</p><div class="video-brand"><img src="assets/vub-seal.png" alt="">VUB Learning</div><script>const tl=gsap.timeline({{paused:true}});tl.fromTo("#{cid} .topic-photo",{{scale:1}},{{scale:1.07,duration:{b['window']},ease:"none"}},0);tl.fromTo("#{cid} .graphic-stage",{{opacity:1,y:10}},{{opacity:1,y:0,duration:.7,ease:"power2.out"}},0);{''.join(events)}window.__timelines["{cid}"]=tl;</script></div></template>'''
+ return f'''<template><div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{b['window']}" data-width="1280" data-height="720" style="position:relative;width:100%;height:100%;overflow:hidden"><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}#{cid}{{font-family:VUB}}{css}</style><div class="canvas-ground"></div><div class="photo-window"><img class="topic-photo" src="assets/topic.webp" alt=""></div><div class="photo-shade"></div><div class="gold-divider"></div><h1 class="video-title">{E(b["title"])}</h1><div class="graphic-stage">{content}</div><p class="video-note">{E(note)}</p><div class="video-brand"><img src="assets/vub-seal.png" alt="">VUB Learning</div><script>const tl=gsap.timeline({{paused:true}});tl.fromTo("#{cid} .graphic-stage",{{opacity:1,y:10}},{{opacity:1,y:0,duration:.7,ease:"power2.out"}},0);{''.join(events)}window.__timelines["{cid}"]=tl;</script></div></template>'''

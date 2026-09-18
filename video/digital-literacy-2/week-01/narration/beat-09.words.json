@@ -1,0 +1,553 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "b2587ffa4a44b00e65518e1fbd97dfcae7a76560e50bfa8a007eee5c23a9d2f9",
+  "textSha256": "f9c190126cf037333eb01ce1d0df9f7098fe78aeff285b87f73e7e688ec91366",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "Reminders,",
+      "start": 0.0,
+      "end": 0.44
+    },
+    {
+      "word": "saved",
+      "start": 0.92,
+      "end": 1.22
+    },
+    {
+      "word": "browser",
+      "start": 1.22,
+      "end": 1.52
+    },
+    {
+      "word": "preferences,",
+      "start": 1.52,
+      "end": 2.12
+    },
+    {
+      "word": "and",
+      "start": 2.66,
+      "end": 2.7
+    },
+    {
+      "word": "cloud",
+      "start": 2.7,
+      "end": 2.88
+    },
+    {
+      "word": "services",
+      "start": 2.88,
+      "end": 3.4
+    },
+    {
+      "word": "can",
+      "start": 3.4,
+      "end": 3.78
+    },
+    {
+      "word": "save",
+      "start": 3.78,
+      "end": 4.06
+    },
+    {
+      "word": "effort,",
+      "start": 4.06,
+      "end": 4.32
+    },
+    {
+      "word": "but",
+      "start": 4.94,
+      "end": 5.12
+    },
+    {
+      "word": "automation",
+      "start": 5.12,
+      "end": 5.46
+    },
+    {
+      "word": "still",
+      "start": 5.46,
+      "end": 6.12
+    },
+    {
+      "word": "needs",
+      "start": 6.12,
+      "end": 6.4
+    },
+    {
+      "word": "a",
+      "start": 6.4,
+      "end": 6.56
+    },
+    {
+      "word": "check.",
+      "start": 6.56,
+      "end": 6.74
+    },
+    {
+      "word": "A",
+      "start": 7.56,
+      "end": 7.56
+    },
+    {
+      "word": "cloud",
+      "start": 7.56,
+      "end": 7.76
+    },
+    {
+      "word": "service",
+      "start": 7.76,
+      "end": 8.18
+    },
+    {
+      "word": "runs",
+      "start": 8.18,
+      "end": 8.48
+    },
+    {
+      "word": "on",
+      "start": 8.48,
+      "end": 8.74
+    },
+    {
+      "word": "another",
+      "start": 8.74,
+      "end": 8.96
+    },
+    {
+      "word": "computer",
+      "start": 8.96,
+      "end": 9.38
+    },
+    {
+      "word": "and",
+      "start": 9.38,
+      "end": 9.88
+    },
+    {
+      "word": "often",
+      "start": 9.88,
+      "end": 10.2
+    },
+    {
+      "word": "connects",
+      "start": 10.2,
+      "end": 10.62
+    },
+    {
+      "word": "your",
+      "start": 10.62,
+      "end": 10.92
+    },
+    {
+      "word": "work",
+      "start": 10.92,
+      "end": 11.24
+    },
+    {
+      "word": "to",
+      "start": 11.24,
+      "end": 11.5
+    },
+    {
+      "word": "an",
+      "start": 11.5,
+      "end": 11.62
+    },
+    {
+      "word": "account.",
+      "start": 11.62,
+      "end": 11.92
+    },
+    {
+      "word": "Confirm",
+      "start": 12.84,
+      "end": 13.18
+    },
+    {
+      "word": "which",
+      "start": 13.18,
+      "end": 13.42
+    },
+    {
+      "word": "account",
+      "start": 13.42,
+      "end": 13.74
+    },
+    {
+      "word": "is",
+      "start": 13.74,
+      "end": 13.94
+    },
+    {
+      "word": "active",
+      "start": 13.94,
+      "end": 14.3
+    },
+    {
+      "word": "before",
+      "start": 14.3,
+      "end": 14.7
+    },
+    {
+      "word": "saving",
+      "start": 14.7,
+      "end": 15.14
+    },
+    {
+      "word": "or",
+      "start": 15.14,
+      "end": 15.36
+    },
+    {
+      "word": "sharing.",
+      "start": 15.36,
+      "end": 15.62
+    },
+    {
+      "word": "After",
+      "start": 16.32,
+      "end": 16.44
+    },
+    {
+      "word": "setting",
+      "start": 16.44,
+      "end": 16.76
+    },
+    {
+      "word": "a",
+      "start": 16.76,
+      "end": 16.96
+    },
+    {
+      "word": "reminder,",
+      "start": 16.96,
+      "end": 17.24
+    },
+    {
+      "word": "check",
+      "start": 17.72,
+      "end": 17.88
+    },
+    {
+      "word": "that",
+      "start": 17.88,
+      "end": 18.06
+    },
+    {
+      "word": "notifications",
+      "start": 18.06,
+      "end": 18.56
+    },
+    {
+      "word": "are",
+      "start": 18.56,
+      "end": 19.0
+    },
+    {
+      "word": "allowed",
+      "start": 19.0,
+      "end": 19.24
+    },
+    {
+      "word": "and",
+      "start": 19.24,
+      "end": 19.78
+    },
+    {
+      "word": "that",
+      "start": 19.78,
+      "end": 19.92
+    },
+    {
+      "word": "the",
+      "start": 19.92,
+      "end": 20.0
+    },
+    {
+      "word": "reminder",
+      "start": 20.0,
+      "end": 20.24
+    },
+    {
+      "word": "time",
+      "start": 20.24,
+      "end": 20.72
+    },
+    {
+      "word": "is",
+      "start": 20.72,
+      "end": 20.98
+    },
+    {
+      "word": "sensible.",
+      "start": 20.98,
+      "end": 21.2
+    },
+    {
+      "word": "If",
+      "start": 23.38,
+      "end": 23.98
+    },
+    {
+      "word": "you",
+      "start": 23.98,
+      "end": 24.12
+    },
+    {
+      "word": "need",
+      "start": 24.12,
+      "end": 24.28
+    },
+    {
+      "word": "help,",
+      "start": 24.28,
+      "end": 24.6
+    },
+    {
+      "word": "use",
+      "start": 24.9,
+      "end": 25.12
+    },
+    {
+      "word": "instructions",
+      "start": 25.12,
+      "end": 25.34
+    },
+    {
+      "word": "from",
+      "start": 25.66,
+      "end": 25.96
+    },
+    {
+      "word": "the",
+      "start": 25.96,
+      "end": 26.08
+    },
+    {
+      "word": "software's",
+      "start": 26.08,
+      "end": 26.6
+    },
+    {
+      "word": "official",
+      "start": 26.6,
+      "end": 26.92
+    },
+    {
+      "word": "support",
+      "start": 26.92,
+      "end": 27.18
+    },
+    {
+      "word": "site",
+      "start": 27.18,
+      "end": 27.72
+    },
+    {
+      "word": "and",
+      "start": 27.72,
+      "end": 28.14
+    },
+    {
+      "word": "match",
+      "start": 28.14,
+      "end": 28.38
+    },
+    {
+      "word": "them",
+      "start": 28.38,
+      "end": 28.68
+    },
+    {
+      "word": "to",
+      "start": 28.68,
+      "end": 28.86
+    },
+    {
+      "word": "your",
+      "start": 28.86,
+      "end": 29.04
+    },
+    {
+      "word": "version.",
+      "start": 29.04,
+      "end": 29.4
+    },
+    {
+      "word": "A",
+      "start": 30.2,
+      "end": 30.22
+    },
+    {
+      "word": "menu",
+      "start": 30.22,
+      "end": 30.46
+    },
+    {
+      "word": "from",
+      "start": 30.46,
+      "end": 30.72
+    },
+    {
+      "word": "an",
+      "start": 30.72,
+      "end": 30.86
+    },
+    {
+      "word": "older",
+      "start": 30.86,
+      "end": 31.04
+    },
+    {
+      "word": "version",
+      "start": 31.04,
+      "end": 31.48
+    },
+    {
+      "word": "may",
+      "start": 31.48,
+      "end": 31.78
+    },
+    {
+      "word": "look",
+      "start": 31.78,
+      "end": 32.08
+    },
+    {
+      "word": "different.",
+      "start": 32.08,
+      "end": 32.46
+    },
+    {
+      "word": "Describe",
+      "start": 33.02,
+      "end": 33.38
+    },
+    {
+      "word": "the",
+      "start": 33.38,
+      "end": 33.54
+    },
+    {
+      "word": "task",
+      "start": 33.54,
+      "end": 33.74
+    },
+    {
+      "word": "and",
+      "start": 33.74,
+      "end": 34.1
+    },
+    {
+      "word": "what",
+      "start": 34.1,
+      "end": 34.28
+    },
+    {
+      "word": "happened:",
+      "start": 34.28,
+      "end": 34.68
+    },
+    {
+      "word": "I",
+      "start": 35.28,
+      "end": 35.4
+    },
+    {
+      "word": "selected",
+      "start": 35.4,
+      "end": 35.68
+    },
+    {
+      "word": "the",
+      "start": 35.68,
+      "end": 35.96
+    },
+    {
+      "word": "headset,",
+      "start": 35.96,
+      "end": 36.16
+    },
+    {
+      "word": "but",
+      "start": 36.16,
+      "end": 36.7
+    },
+    {
+      "word": "the",
+      "start": 36.7,
+      "end": 36.82
+    },
+    {
+      "word": "test",
+      "start": 36.82,
+      "end": 37.0
+    },
+    {
+      "word": "sound",
+      "start": 37.0,
+      "end": 37.4
+    },
+    {
+      "word": "still",
+      "start": 37.4,
+      "end": 37.74
+    },
+    {
+      "word": "plays",
+      "start": 37.74,
+      "end": 38.04
+    },
+    {
+      "word": "through",
+      "start": 38.04,
+      "end": 38.3
+    },
+    {
+      "word": "the",
+      "start": 38.3,
+      "end": 38.4
+    },
+    {
+      "word": "monitor.",
+      "start": 38.4,
+      "end": 38.68
+    },
+    {
+      "word": "That",
+      "start": 39.38,
+      "end": 39.54
+    },
+    {
+      "word": "is",
+      "start": 39.54,
+      "end": 39.68
+    },
+    {
+      "word": "useful",
+      "start": 39.68,
+      "end": 39.92
+    },
+    {
+      "word": "evidence",
+      "start": 39.92,
+      "end": 40.28
+    },
+    {
+      "word": "for",
+      "start": 40.28,
+      "end": 40.74
+    },
+    {
+      "word": "a",
+      "start": 40.74,
+      "end": 40.84
+    },
+    {
+      "word": "helper.",
+      "start": 40.84,
+      "end": 41.02
+    }
+  ]
+}

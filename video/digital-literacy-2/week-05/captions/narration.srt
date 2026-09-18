@@ -1,114 +1,557 @@
 1
-00:00:00,450 --> 00:00:03,990
-An unexpected message says you must act
-immediately to keep
+00:00:00,450 --> 00:00:04,070
+Think about how you handle an unexpected
+request in everyday
 
 2
-00:00:03,990 --> 00:00:08,950
-a service. Urgency can push you to skip
-checks. Pause
+00:00:04,070 --> 00:00:08,630
+life. You might ask who is asking, why
+they need
 
 3
-00:00:08,950 --> 00:00:12,550
-before opening the link or providing
-information. Find the organization
+00:00:08,630 --> 00:00:12,750
+something, and how you can check the
+story. Those habits
 
 4
-00:00:12,550 --> 00:00:16,870
-through a known website or contact method,
-then verify the claim independently.
+00:00:12,750 --> 00:00:16,910
+are valuable online too. In this lesson,
+we will examine
 
 5
-00:00:18,960 --> 00:00:22,480
-A video meeting may need camera access. A
-simple text
+00:00:16,910 --> 00:00:20,970
+a fictional urgent message, compare
+different protections for a
 
 6
-00:00:22,480 --> 00:00:27,300
-page usually does not. Grant permissions
-only when they fit
+00:00:20,970 --> 00:00:25,970
+file, and choose permissions that fit a
+task. You do
 
 7
-00:00:27,300 --> 00:00:30,640
-a clear task and you trust the app. You
-can
+00:00:25,970 --> 00:00:29,010
+not need to identify every kind of attack
+by name.
 
 8
-00:00:30,640 --> 00:00:35,820
-deny an unrelated request and review
-camera or microphone permissions after you
-finish.
+00:00:29,010 --> 00:00:34,630
+You need a repeatable decision process:
+pause, inspect the evidence,
 
 9
-00:00:37,790 --> 00:00:40,510
-Do not plug in an unknown USB drive to
-discover
+00:00:35,170 --> 00:00:39,990
+verify independently, and choose an action
+that limits risk. Use
 
 10
-00:00:40,510 --> 00:00:45,490
-who owns it. Give it to authorized staff.
-Encryption makes
+00:00:39,990 --> 00:00:44,450
+fictional examples throughout. There is no
+reason to open a
 
 11
-00:00:45,490 --> 00:00:49,830
-data unreadable without a key. Read-only
-settings restrict editing,
+00:00:44,450 --> 00:00:48,530
+suspicious link or expose a private
+account to complete the practice.
 
 12
-00:00:50,310 --> 00:00:53,710
-which is a different protection. A locked
-or encrypted device
+00:00:50,390 --> 00:00:54,630
+A workable setup supports attention as
+well as visibility. Adjust
 
 13
-00:00:53,710 --> 00:00:56,170
-still needs careful account and file
-access.
+00:00:54,630 --> 00:00:58,490
+the chair, screen position, text size, and
+sound to suit
 
 14
-00:00:58,140 --> 00:01:01,920
-Online safety also includes attention and
-wellbeing. Catfishing
+00:00:58,490 --> 00:01:02,890
+the task and your comfort, following the
+lab's arrangements. Take
 
 15
-00:01:01,920 --> 00:01:06,940
-uses a false identity to build trust. Fear
-of missing
+00:01:02,890 --> 00:01:06,370
+a screen-free break when needed. People
+differ in what they
 
 16
-00:01:06,940 --> 00:01:10,320
-out can make it hard to stop checking
-alerts. Set
+00:01:06,370 --> 00:01:09,970
+find helpful; do not assume one text size
+or pace
 
 17
-00:01:10,320 --> 00:01:14,700
-useful notification limits, take breaks,
-and seek support when online
+00:01:09,970 --> 00:01:15,590
+suits everyone. Captions, clear labels,
+keyboard access, and instructions
 
 18
-00:01:14,700 --> 00:01:17,200
-behavior makes you feel pressured or
-unsafe.
+00:01:15,590 --> 00:01:18,530
+that do not rely on color can help many
+learners.
 
 19
-00:01:19,130 --> 00:01:22,550
-Choose one practice scenario and explain
-your next step to
+00:01:18,530 --> 00:01:21,950
+These are examples of designing for a
+wider range of
 
 20
-00:01:22,550 --> 00:01:26,170
-a partner. Name the evidence, the
-independent source you would
+00:01:21,950 --> 00:01:26,930
+users rather than treating access as an
+afterthought. Pause and
 
 21
-00:01:26,170 --> 00:01:33,170
-check, and the action that limits risk.
-Then complete the
+00:01:26,930 --> 00:01:29,550
+choose one control in this course that
+makes the work
 
 22
-00:01:33,170 --> 00:01:36,930
-skills challenge and post-test. Use the
-results to choose a
+00:01:29,550 --> 00:01:33,570
+easier for you. Explain the benefit in
+terms of your task.
 
 23
-00:01:36,930 --> 00:01:38,250
-task for more practice.
+00:01:35,524 --> 00:01:39,104
+Our fictional message says your service
+will stop unless you
+
+24
+00:01:39,104 --> 00:01:43,224
+act immediately through a link. The
+urgency is a reason
+
+25
+00:01:43,224 --> 00:01:46,704
+to slow down, not proof that the request
+is genuine.
+
+26
+00:01:47,224 --> 00:01:49,484
+Look at what the sender wants you to do:
+reveal
+
+27
+00:01:49,484 --> 00:01:53,964
+a password, provide a payment, open an
+attachment, or follow
+
+28
+00:01:53,964 --> 00:01:57,404
+an unfamiliar link. A convincing name or
+logo can be
+
+29
+00:01:57,404 --> 00:02:01,484
+copied. Even a message from a familiar
+account deserves a
+
+30
+00:02:01,484 --> 00:02:04,584
+check when the request is unusual. Avoid
+trying to prove
+
+31
+00:02:04,584 --> 00:02:08,484
+safety by clicking the link. Instead,
+describe the claim in
+
+32
+00:02:08,484 --> 00:02:12,184
+plain language. Someone says I must
+provide information immediately.
+
+33
+00:02:12,884 --> 00:02:15,144
+That helps you separate the pressure from
+the evidence.
+
+34
+00:02:17,221 --> 00:02:21,621
+Open the organization's known website
+yourself, use a saved bookmark
+
+35
+00:02:21,621 --> 00:02:26,721
+you trust, or find its contact details
+independently. Do not
+
+36
+00:02:26,721 --> 00:02:30,541
+use the suspicious message's phone number
+as your independent check.
+
+37
+00:02:31,481 --> 00:02:35,541
+Ask whether the claimed issue exists and
+what action, if
+
+38
+00:02:35,541 --> 00:02:41,221
+any, is needed. If you already acted, stop
+further interaction
+
+39
+00:02:41,681 --> 00:02:46,381
+and contact the appropriate official
+support channel promptly; in
+
+40
+00:02:46,381 --> 00:02:50,241
+the lab, tell the instructor what
+happened. The exact recovery
+
+41
+00:02:50,241 --> 00:02:54,861
+steps depend on what was shared. Pause and
+choose between
+
+42
+00:02:54,861 --> 00:02:58,541
+replying to the message for reassurance
+and checking through a
+
+43
+00:02:58,541 --> 00:03:02,381
+known route. The known route is stronger
+because it does
+
+44
+00:03:02,381 --> 00:03:06,081
+not let the original sender supply all the
+evidence for its own claim.
+
+45
+00:03:07,951 --> 00:03:12,011
+Imagine a document labeled read-only. That
+may prevent ordinary
+
+46
+00:03:12,011 --> 00:03:16,151
+editing, but the content can still be
+readable. Encryption addresses
+
+47
+00:03:16,151 --> 00:03:19,871
+a different question: can someone
+understand the data without the
+
+48
+00:03:19,871 --> 00:03:24,311
+required key or authorized access? A
+password can protect different
+
+49
+00:03:24,311 --> 00:03:27,871
+actions depending on the application, so
+do not assume every
+
+50
+00:03:27,871 --> 00:03:33,631
+password prompt means the file is
+encrypted. Inspect what the
+
+51
+00:03:33,631 --> 00:03:38,071
+feature actually promises. In our diagram,
+a readable file becomes
+
+52
+00:03:38,071 --> 00:03:41,551
+protected data that requires a key. That
+does not remove
+
+53
+00:03:41,551 --> 00:03:44,551
+the need to manage who can access an
+unlocked device
+
+54
+00:03:44,551 --> 00:03:49,151
+or account. Pause and explain which
+protection fits preventing accidental
+
+55
+00:03:49,151 --> 00:03:52,471
+edits, and which addresses readable data
+being exposed.
+
+56
+00:03:54,525 --> 00:03:57,325
+A USB drive found in a parking lot might
+look
+
+57
+00:03:57,325 --> 00:04:00,585
+like an ordinary storage device. You
+cannot determine that it
+
+58
+00:04:00,585 --> 00:04:03,365
+is safe by its appearance or by the label
+written
+
+59
+00:04:03,365 --> 00:04:06,145
+on it. Do not plug it into your computer
+to
+
+60
+00:04:06,145 --> 00:04:09,405
+discover its owner. Give it to authorized
+staff and follow
+
+61
+00:04:09,405 --> 00:04:14,685
+the organization's procedure. The same
+general habit applies to
+
+62
+00:04:14,685 --> 00:04:18,905
+unfamiliar attachments or unexpected
+software prompts: stop and
+
+63
+00:04:18,905 --> 00:04:22,805
+verify the purpose before opening or
+installing. This is not
+
+64
+00:04:22,805 --> 00:04:26,145
+about avoiding every useful tool. It is
+about making the
+
+65
+00:04:26,145 --> 00:04:29,825
+source and task clear before granting a
+device or file
+
+66
+00:04:29,825 --> 00:04:34,465
+a path into your system. Use only the
+instructor-approved fictional
+
+67
+00:04:34,465 --> 00:04:36,165
+examples for this exercise.
+
+68
+00:04:38,150 --> 00:04:41,110
+A video meeting may need a camera and
+microphone, but
+
+69
+00:04:41,110 --> 00:04:43,870
+a simple text page normally has no reason
+to use
+
+70
+00:04:43,870 --> 00:04:47,810
+them. When a permission prompt appears,
+identify which app is
+
+71
+00:04:47,810 --> 00:04:51,190
+asking and what task you are trying to
+complete. Grant
+
+72
+00:04:51,190 --> 00:04:54,230
+access only when the request fits that
+task and you
+
+73
+00:04:54,230 --> 00:04:59,310
+trust the application. Deny an unrelated
+request, then review the
+
+74
+00:04:59,310 --> 00:05:02,190
+setting later if a legitimate feature
+needs it. After a
+
+75
+00:05:02,190 --> 00:05:07,250
+meeting, check the app's state and review
+permissions when appropriate.
+
+76
+00:05:08,190 --> 00:05:11,370
+A permission decision is not permanent
+approval of everything an
+
+77
+00:05:11,370 --> 00:05:15,710
+app might do. Pause and compare our two
+examples. Explain
+
+78
+00:05:15,710 --> 00:05:18,930
+why a meeting and a text page lead to
+different choices.
+
+79
+00:05:20,962 --> 00:05:24,342
+Safety also includes the way an online
+interaction affects your
+
+80
+00:05:24,342 --> 00:05:28,962
+attention and wellbeing. Catfishing uses a
+false identity to build
+
+81
+00:05:28,962 --> 00:05:33,242
+trust. A friendly conversation does not by
+itself verify the
+
+82
+00:05:33,242 --> 00:05:37,402
+person's story. Fear of missing out can
+encourage repeated checking
+
+83
+00:05:37,402 --> 00:05:40,322
+of alerts even when you intended to do
+something else.
+
+84
+00:05:42,242 --> 00:05:45,922
+Choose notification settings and breaks
+that support your own goals.
+
+85
+00:05:46,642 --> 00:05:50,182
+If a post or interaction becomes harmful,
+avoid escalating it.
+
+86
+00:05:50,182 --> 00:05:53,882
+Use the service's reporting or blocking
+tools when appropriate,
+
+87
+00:05:53,882 --> 00:05:56,822
+and seek help from a trusted person or the
+relevant
+
+88
+00:05:56,822 --> 00:06:00,182
+support channel. You do not have to solve
+every problem
+
+89
+00:06:00,182 --> 00:06:04,282
+alone or continue a conversation because
+someone pressures you to respond.
+
+90
+00:06:06,190 --> 00:06:09,570
+Here is a new fictional scenario. A
+message claiming to
+
+91
+00:06:09,570 --> 00:06:13,330
+represent a community service asks for a
+private code before
+
+92
+00:06:13,330 --> 00:06:16,770
+it will confirm an appointment. Pause the
+video and state
+
+93
+00:06:16,770 --> 00:06:21,390
+three things: what evidence you have, what
+remains unverified, and
+
+94
+00:06:21,390 --> 00:06:25,990
+what you would do next. A strong response
+identifies the
+
+95
+00:06:25,990 --> 00:06:29,890
+unusual request, avoids sharing the code,
+and checks the appointment
+
+96
+00:06:29,890 --> 00:06:33,730
+through a known contact method. It does
+not rely only
+
+97
+00:06:33,730 --> 00:06:38,510
+on spelling mistakes or how professional
+the message looks. Ask
+
+98
+00:06:38,510 --> 00:06:41,430
+a partner to explain a different scenario
+using the same
+
+99
+00:06:41,430 --> 00:06:46,230
+process. If you disagree, discuss the
+evidence behind each choice
+
+100
+00:06:46,250 --> 00:06:49,570
+rather than guessing what answer the
+instructor wants.
+
+101
+00:06:51,486 --> 00:06:55,566
+Before the post-test, review the skills
+you can demonstrate: adjust
+
+102
+00:06:55,566 --> 00:06:59,806
+a setting and check it, justify a source,
+choose file
+
+103
+00:06:59,806 --> 00:07:04,946
+access, test a calculation, and
+communicate a clear next step.
+
+104
+00:07:05,686 --> 00:07:09,186
+Complete the assessment independently,
+then use its explanations
+
+105
+00:07:09,186 --> 00:07:13,726
+to identify a useful practice task. A
+classroom score is
+
+106
+00:07:13,726 --> 00:07:16,766
+one piece of evidence, not a judgment
+about your ability
+
+107
+00:07:16,766 --> 00:07:23,466
+to learn and not a certification result.
+Keep the saved
+
+108
+00:07:23,466 --> 00:07:26,526
+report if it helps you plan. Choose one
+skill to
+
+109
+00:07:26,526 --> 00:07:29,826
+repeat with less help and one situation
+from your own
+
+110
+00:07:29,826 --> 00:07:33,286
+routine where it would be useful.
+Confidence grows from being
+
+111
+00:07:33,286 --> 00:07:37,586
+able to explain and repeat a successful
+process, including knowing
+
+112
+00:07:37,586 --> 00:07:38,926
+when to ask for support.

@@ -256,7 +256,7 @@ Choice controls use immediate state changes to preserve contrast. The chart's va
 
 Pre/post grading uses a shared branded report theme in `assets/results-report.css`. The page builder embeds its CSS and the official white seal in assessment pages; downloads reuse both without external resources. Results include learner metadata, the actual score, domain bars with numeric equivalents, up to two lowest-scoring practice domains and all answer explanations. Perfect scores receive an application task instead of invented weak areas. Existing comparison wording, grading, clearing and optional learner information are preserved.
 
-The print layout isolates report colors/type from the shared handout and text-size overrides, reserves the first page for the summary, and avoids splitting answer sections. Samples with fictional learner data, screen captures and PDFs live in `review/results-report/`; reproduce them with `node scripts/dl2/capture-results.cjs`. The report test file covers offline branding, accessibility, scoring edge cases and mobile/print behavior. Current full suite: 73 tests.
+The print layout isolates report colors/type from the shared handout and text-size overrides, reserves the first page for the summary, and avoids splitting answer sections. Samples with fictional learner data, screen captures and PDFs live in `review/results-report/`; reproduce them with `node scripts/dl2/capture-results.cjs`. The report test file covers offline branding, accessibility, scoring edge cases and mobile/print behavior. The results-report revision brought the suite to 73 tests.
 
 
 ## Picture-led lesson videos and natural V3 delivery
@@ -264,3 +264,12 @@ The print layout isolates report colors/type from the shared handout and text-si
 The six videos use full-frame VUB navy, a gold divider, large original topic illustrations, and task-specific animated diagrams. The diagram carries the explanation: zoom changes a page, deletion travels between device and cloud, a formula recalculates, feedback becomes a document change, permissions follow purpose, and an app moves between matching and empty results. On-screen text is limited to a short scene title, object labels and a takeaway. Split, wide and reversed closing layouts vary the composition while retaining a predictable reading order.
 
 Britt's existing cloned voice is generated with ElevenLabs `eleven_v3`. Standard punctuation and a single short internal pause per take guide delivery. Preserve the generated speech speed; do not force a house WPM by time stretching. Each scene opens 0.45 seconds before narration and holds for 1.1 seconds after it (2 seconds on the closing practice scene). Captions and visual state changes follow word alignment from the final WAV. Keep captions optional and preserve browser playback controls.
+
+
+## Chaptered instruction and cleaned narration
+
+Each weekly video now follows ten teachable chapters: connect to prior experience, explain a decision, model an action, show a mistake or check, then invite practice and transfer. The longer narration is supported by the approved illustrations and additional task diagrams for components, printing, calendars, searching, forms, charts, editing, email fields, subscriptions and keyboard operation. Short labels remain on screen; the fuller explanation lives in narration, optional captions and the transcript.
+
+Voice Isolator processes each newly generated Britt V3 take. Both original and cleaned audio hashes are retained. Defect detection, alignment and rendering checks are distinct from the learner's subjective judgment of the voice. The saved clone is unchanged.
+
+Native chapter buttons on the lesson and transcript pages seek and pause, then focus the video. Learners control when playback resumes. The responsive chapter list respects text enlargement and is omitted from print; the complete transcript remains printable. Viewing and paused practice fit inside existing demonstration and lab blocks.

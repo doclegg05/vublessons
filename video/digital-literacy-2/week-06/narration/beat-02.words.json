@@ -1,218 +1,558 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "3c61e89efcc606adc77d73c3263cc3294d745b5525da98509cfdf6c358221997",
-  "textSha256": "5bcfd5c9803a220b49a29d1a42154bee5ddf538b6c3d55959d329cc17f586ae3",
-  "matchRatio": 1.0,
+  "wavSha256": "230bd2e92cd06cd4a90d163706888a6d1f7e7076c3f04cc8db32443d83b7830e",
+  "textSha256": "bc98d5ee613bad462a9e723a4d5f809b97c7bea91df1eee24d7eb63a8bcc7902",
+  "matchRatio": 0.9818181818181818,
   "words": [
     {
-      "word": "HTML",
+      "word": "A",
       "start": 0.0,
-      "end": 0.38
+      "end": 0.18
     },
     {
-      "word": "gives",
-      "start": 0.38,
-      "end": 0.82
+      "word": "website",
+      "start": 0.18,
+      "end": 0.46
     },
     {
-      "word": "the",
-      "start": 0.82,
-      "end": 1.02
+      "word": "can",
+      "start": 0.46,
+      "end": 0.76
     },
     {
-      "word": "page",
-      "start": 1.02,
-      "end": 1.22
+      "word": "present",
+      "start": 0.76,
+      "end": 1.04
     },
     {
-      "word": "its",
-      "start": 1.22,
-      "end": 1.42
+      "word": "information",
+      "start": 1.04,
+      "end": 1.72
     },
     {
-      "word": "content",
-      "start": 1.42,
-      "end": 1.86
+      "word": "for",
+      "start": 1.72,
+      "end": 2.14
     },
     {
-      "word": "and",
-      "start": 1.86,
-      "end": 2.18
-    },
-    {
-      "word": "structure.",
-      "start": 2.18,
-      "end": 2.6
-    },
-    {
-      "word": "CSS",
-      "start": 3.64,
-      "end": 3.64
-    },
-    {
-      "word": "controls",
-      "start": 3.64,
-      "end": 4.46
-    },
-    {
-      "word": "appearance",
-      "start": 4.46,
-      "end": 4.86
-    },
-    {
-      "word": "and",
-      "start": 4.86,
-      "end": 5.4
-    },
-    {
-      "word": "layout.",
-      "start": 5.4,
-      "end": 5.64
-    },
-    {
-      "word": "JavaScript",
-      "start": 7.78,
-      "end": 8.24
-    },
-    {
-      "word": "responds",
-      "start": 8.24,
-      "end": 9.06
+      "word": "people",
+      "start": 2.14,
+      "end": 2.4
     },
     {
       "word": "to",
-      "start": 9.06,
-      "end": 9.5
+      "start": 2.4,
+      "end": 2.56
+    },
+    {
+      "word": "read.",
+      "start": 2.56,
+      "end": 2.78
+    },
+    {
+      "word": "A",
+      "start": 3.54,
+      "end": 3.56
+    },
+    {
+      "word": "web",
+      "start": 3.56,
+      "end": 3.74
+    },
+    {
+      "word": "app",
+      "start": 3.74,
+      "end": 4.14
+    },
+    {
+      "word": "responds",
+      "start": 4.14,
+      "end": 4.64
+    },
+    {
+      "word": "to",
+      "start": 4.64,
+      "end": 5.02
     },
     {
       "word": "input,",
-      "start": 9.5,
-      "end": 9.78
+      "start": 5.02,
+      "end": 5.36
     },
     {
       "word": "such",
-      "start": 10.16,
-      "end": 10.32
+      "start": 5.68,
+      "end": 5.84
     },
     {
       "word": "as",
-      "start": 10.32,
-      "end": 10.58
+      "start": 5.84,
+      "end": 6.02
     },
     {
       "word": "filtering",
-      "start": 10.58,
-      "end": 11.06
+      "start": 6.02,
+      "end": 6.38
     },
     {
-      "word": "a",
-      "start": 11.06,
-      "end": 11.26
+      "word": "our",
+      "start": 6.38,
+      "end": 6.78
+    },
+    {
+      "word": "resource",
+      "start": 6.78,
+      "end": 7.12
     },
     {
       "word": "list.",
-      "start": 11.26,
-      "end": 11.46
+      "start": 7.12,
+      "end": 7.5
     },
     {
-      "word": "The",
-      "start": 12.46,
-      "end": 12.48
+      "word": "Software",
+      "start": 8.24,
+      "end": 8.86
     },
     {
-      "word": "supplied",
-      "start": 12.48,
-      "end": 12.76
+      "word": "as",
+      "start": 8.86,
+      "end": 9.08
     },
     {
-      "word": "starter",
-      "start": 12.76,
-      "end": 13.28
+      "word": "a",
+      "start": 9.08,
+      "end": 9.16
     },
     {
-      "word": "keeps",
-      "start": 13.28,
-      "end": 13.66
+      "word": "service",
+      "start": 9.16,
+      "end": 9.52
     },
     {
-      "word": "fictional",
-      "start": 13.66,
-      "end": 14.16
+      "word": "usually",
+      "start": 9.52,
+      "end": 9.96
     },
     {
-      "word": "records",
-      "start": 14.16,
-      "end": 14.6
+      "word": "provides",
+      "start": 9.96,
+      "end": 10.56
     },
     {
-      "word": "inside",
-      "start": 14.6,
-      "end": 15.06
+      "word": "an",
+      "start": 10.56,
+      "end": 10.78
     },
     {
-      "word": "the",
-      "start": 15.06,
-      "end": 15.36
+      "word": "ongoing",
+      "start": 10.78,
+      "end": 11.14
     },
     {
-      "word": "file.",
-      "start": 15.36,
-      "end": 15.6
+      "word": "hosted",
+      "start": 11.14,
+      "end": 11.7
     },
     {
-      "word": "It",
-      "start": 16.24,
-      "end": 16.3
+      "word": "service",
+      "start": 11.7,
+      "end": 12.18
     },
     {
-      "word": "has",
-      "start": 16.3,
-      "end": 16.46
+      "word": "and",
+      "start": 12.18,
+      "end": 12.64
     },
     {
-      "word": "no",
-      "start": 16.46,
-      "end": 16.72
+      "word": "may",
+      "start": 12.64,
+      "end": 12.82
     },
     {
-      "word": "real",
-      "start": 16.72,
-      "end": 16.96
+      "word": "include",
+      "start": 12.82,
+      "end": 13.2
     },
     {
-      "word": "account",
-      "start": 16.96,
-      "end": 17.3
+      "word": "accounts,",
+      "start": 13.2,
+      "end": 13.76
     },
     {
-      "word": "system,",
-      "start": 17.3,
-      "end": 17.82
+      "word": "stored",
+      "start": 14.54,
+      "end": 14.58
     },
     {
-      "word": "private",
-      "start": 18.16,
-      "end": 18.36
+      "word": "data,",
+      "start": 14.58,
+      "end": 15.02
     },
     {
-      "word": "database,",
-      "start": 18.36,
-      "end": 18.8
+      "word": "subscriptions,",
+      "start": 15.42,
+      "end": 15.68
     },
     {
-      "word": "or",
-      "start": 19.36,
+      "word": "and",
+      "start": 16.26,
+      "end": 16.36
+    },
+    {
+      "word": "operational",
+      "start": 16.36,
+      "end": 16.66
+    },
+    {
+      "word": "support.",
+      "start": 16.66,
+      "end": 17.26
+    },
+    {
+      "word": "Our",
+      "start": 18.18,
+      "end": 18.3
+    },
+    {
+      "word": "one-file",
+      "start": 18.3,
+      "end": 18.9
+    },
+    {
+      "word": "practice",
+      "start": 18.9,
       "end": 19.4
     },
     {
-      "word": "payment",
+      "word": "app",
       "start": 19.4,
-      "end": 19.62
+      "end": 19.66
+    },
+    {
+      "word": "is",
+      "start": 19.66,
+      "end": 19.96
+    },
+    {
+      "word": "not",
+      "start": 19.96,
+      "end": 20.28
+    },
+    {
+      "word": "all",
+      "start": 20.28,
+      "end": 20.72
+    },
+    {
+      "word": "of",
+      "start": 20.72,
+      "end": 20.86
+    },
+    {
+      "word": "that.",
+      "start": 20.86,
+      "end": 21.04
+    },
+    {
+      "word": "It",
+      "start": 21.68,
+      "end": 21.9
+    },
+    {
+      "word": "has",
+      "start": 21.9,
+      "end": 22.08
+    },
+    {
+      "word": "no",
+      "start": 22.08,
+      "end": 22.4
+    },
+    {
+      "word": "real",
+      "start": 22.4,
+      "end": 22.64
+    },
+    {
+      "word": "account",
+      "start": 22.64,
+      "end": 22.94
+    },
+    {
+      "word": "system,",
+      "start": 22.94,
+      "end": 23.34
+    },
+    {
+      "word": "private",
+      "start": 23.8,
+      "end": 23.92
+    },
+    {
+      "word": "database,",
+      "start": 23.92,
+      "end": 24.3
+    },
+    {
+      "word": "or",
+      "start": 24.8,
+      "end": 24.94
+    },
+    {
+      "word": "payment",
+      "start": 24.94,
+      "end": 25.24
     },
     {
       "word": "service.",
-      "start": 19.62,
-      "end": 20.08
+      "start": 25.24,
+      "end": 25.68
+    },
+    {
+      "word": "This",
+      "start": 25.68,
+      "end": 26.68
+    },
+    {
+      "word": "distinction",
+      "start": 26.68,
+      "end": 27.1
+    },
+    {
+      "word": "helps",
+      "start": 27.1,
+      "end": 27.5
+    },
+    {
+      "word": "you",
+      "start": 27.5,
+      "end": 27.74
+    },
+    {
+      "word": "ask",
+      "start": 27.74,
+      "end": 28.02
+    },
+    {
+      "word": "for",
+      "start": 28.02,
+      "end": 28.22
+    },
+    {
+      "word": "an",
+      "start": 28.22,
+      "end": 28.3
+    },
+    {
+      "word": "achievable",
+      "start": 28.3,
+      "end": 28.72
+    },
+    {
+      "word": "first",
+      "start": 28.72,
+      "end": 29.36
+    },
+    {
+      "word": "version.",
+      "start": 29.36,
+      "end": 29.84
+    },
+    {
+      "word": "A",
+      "start": 30.68,
+      "end": 30.78
+    },
+    {
+      "word": "convincing",
+      "start": 30.78,
+      "end": 31.02
+    },
+    {
+      "word": "sign-in",
+      "start": 31.02,
+      "end": 31.9
+    },
+    {
+      "word": "screen",
+      "start": 31.9,
+      "end": 32.14
+    },
+    {
+      "word": "does",
+      "start": 32.14,
+      "end": 32.42
+    },
+    {
+      "word": "not",
+      "start": 32.42,
+      "end": 32.68
+    },
+    {
+      "word": "prove",
+      "start": 32.68,
+      "end": 33.04
+    },
+    {
+      "word": "secure",
+      "start": 33.04,
+      "end": 33.44
+    },
+    {
+      "word": "authentication",
+      "start": 33.44,
+      "end": 33.82
+    },
+    {
+      "word": "exists",
+      "start": 33.82,
+      "end": 34.58
+    },
+    {
+      "word": "behind",
+      "start": 34.58,
+      "end": 35.14
+    },
+    {
+      "word": "it.",
+      "start": 35.14,
+      "end": 35.46
+    },
+    {
+      "word": "Start",
+      "start": 36.14,
+      "end": 36.46
+    },
+    {
+      "word": "by",
+      "start": 36.46,
+      "end": 36.7
+    },
+    {
+      "word": "describing",
+      "start": 36.7,
+      "end": 37.06
+    },
+    {
+      "word": "the",
+      "start": 37.06,
+      "end": 37.36
+    },
+    {
+      "word": "useful",
+      "start": 37.36,
+      "end": 37.64
+    },
+    {
+      "word": "behavior",
+      "start": 37.64,
+      "end": 38.18
+    },
+    {
+      "word": "you",
+      "start": 38.18,
+      "end": 38.72
+    },
+    {
+      "word": "can",
+      "start": 38.72,
+      "end": 38.88
+    },
+    {
+      "word": "actually",
+      "start": 38.88,
+      "end": 39.36
+    },
+    {
+      "word": "test",
+      "start": 39.36,
+      "end": 39.64
+    },
+    {
+      "word": "in",
+      "start": 39.64,
+      "end": 39.98
+    },
+    {
+      "word": "the",
+      "start": 39.98,
+      "end": 40.08
+    },
+    {
+      "word": "browser,",
+      "start": 40.08,
+      "end": 40.3
+    },
+    {
+      "word": "then",
+      "start": 41.26,
+      "end": 41.26
+    },
+    {
+      "word": "treat",
+      "start": 41.26,
+      "end": 41.52
+    },
+    {
+      "word": "hosting,",
+      "start": 41.52,
+      "end": 41.84
+    },
+    {
+      "word": "security,",
+      "start": 41.84,
+      "end": 42.74
+    },
+    {
+      "word": "and",
+      "start": 43.16,
+      "end": 43.2
+    },
+    {
+      "word": "service",
+      "start": 43.2,
+      "end": 43.56
+    },
+    {
+      "word": "operations",
+      "start": 43.56,
+      "end": 44.12
+    },
+    {
+      "word": "as",
+      "start": 44.12,
+      "end": 44.84
+    },
+    {
+      "word": "separate",
+      "start": 44.84,
+      "end": 45.2
+    },
+    {
+      "word": "decisions",
+      "start": 45.2,
+      "end": 45.68
+    },
+    {
+      "word": "that",
+      "start": 45.68,
+      "end": 45.96
+    },
+    {
+      "word": "require",
+      "start": 45.96,
+      "end": 46.18
+    },
+    {
+      "word": "more",
+      "start": 46.18,
+      "end": 46.9
+    },
+    {
+      "word": "work.",
+      "start": 46.9,
+      "end": 47.26
     }
   ]
 }

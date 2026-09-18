@@ -1,10 +1,11 @@
+import sys
 """Align original captions to recognized words in final audio, with a match gate."""
 import json,re,difflib,hashlib
 from pathlib import Path
 from faster_whisper import WhisperModel
 model=WhisperModel('base.en',device='cpu',compute_type='int8',cpu_threads=4)
 def norm(s):return re.sub(r'[^a-z0-9]','',s.lower())
-for folder in sorted(Path('video/digital-literacy-2').glob('week-*/narration')):
+for folder in sorted(Path('video/digital-literacy-2').glob((sys.argv[1] if len(sys.argv)>1 else 'week-*')+'/narration')):
  beats=json.loads((folder/'beats.json').read_text())
  for beat in beats:
   out=folder/(beat['id']+'.words.json')

@@ -11,8 +11,12 @@ for n in range(1,7):
  v=next(s for s in probe['streams'] if s['codec_type']=='video');a=next(s for s in probe['streams'] if s['codec_type']=='audio');duration=float(probe['format']['duration'])
  assert (v['codec_name'],v['width'],v['height'],v['r_frame_rate'])==('h264',1280,720,'24/1');assert a['codec_name']=='aac'
  states=json.loads((source/'narration/take-state.json').read_text())
- assert len(states)==5 and all(t['engine']=='ElevenLabs' and t['model']=='eleven_v3' and t['voice']=='iKrofGyA12WC0e6AhZ8B' and not t['draft'] for t in states.values())
- beats=json.loads((source/'narration/beats.json').read_text());expected=sum(b['window'] for b in beats);assert abs(duration-expected)<.1
+ assert len(states)==10 and all(t['engine']=='ElevenLabs' and t['model']=='eleven_v3' and t['voice']=='iKrofGyA12WC0e6AhZ8B' and t.get('cleanup')=='ElevenLabs Voice Isolator' and not t['draft'] for t in states.values())
+ beats=json.loads((source/'narration/beats.json').read_text())
+ chapters=json.loads((public/f'week-{n:02}-chapters.json').read_text())
+ assert len(chapters)==len(beats)==10
+ assert all(c['title']==b['title'] and abs(c['startSeconds']-b['start'])<.001 for c,b in zip(chapters,beats))
+ expected=sum(b['window'] for b in beats);assert abs(duration-expected)<.1
  for beat in beats:
   alignment=json.loads((source/f"narration/{beat['id']}.words.json").read_text())
   assert alignment['textSha256']==hashlib.sha256(beat['text'].encode()).hexdigest()
@@ -26,7 +30,8 @@ for n in range(1,7):
  audio=run(['ffmpeg','-hide_banner','-i',str(p),'-af','volumedetect','-vn','-f','null','-']).stderr
  mean=float(re.search(r'mean_volume: ([-\d.]+)',audio)[1]);peak=float(re.search(r'max_volume: ([-\d.]+)',audio)[1]);assert -30<mean<-10 and -6<peak<0
  black=run(['ffmpeg','-hide_banner','-i',str(p),'-vf','blackdetect=d=0.1:pix_th=0.05','-an','-f','null','-']).stderr;assert 'black_start:' not in black
- raw=p.read_bytes();assert raw.index(b'moov')<raw.index(b'mdat'),'Use faststart for browser delivery'
+ raw=p.read_bytes();assert len(raw)<=20*1024*1024, 'Video exceeds deployment budget'
+ assert raw.index(b'moov')<raw.index(b'mdat'),'Use faststart for browser delivery'
  captions=(public/f'week-{n:02}.vtt').read_text();ranges=re.findall(r'(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})',captions);assert len(ranges)>=20
  prior=0
  for start,end in ranges:
@@ -38,5 +43,5 @@ for n in range(1,7):
  videos.append(dict(path=str(p),sha256=hashlib.sha256(raw).hexdigest(),durationSeconds=duration,bytes=len(raw),captions=f'courses/digital-literacy-2/media/week-{n:02}.vtt'))
  reports.append(dict(week=n,durationSeconds=duration,fullDecode='pass',blackFrames='none',meanVolumeDb=mean,peakVolumeDb=peak,captionCues=len(ranges),fastStart=True,hyperframesStrict='pass'))
  print(f'Week {n}: delivery decode, picture, audio, captions and strict source checks PASS',flush=True)
-manifest=dict(formatVersion=1,voiceEngine='ElevenLabs eleven_v3, Britt (iKrofGyA12WC0e6AhZ8B); natural delivery, no time stretch; timed visual holds',renderer='HyperFrames 0.8.48, local GSAP 3.14.2',videos=videos)
+manifest=dict(formatVersion=1,voiceEngine='ElevenLabs eleven_v3, Britt (iKrofGyA12WC0e6AhZ8B); Voice Isolator cleanup; natural delivery, no time stretch; chaptered teaching',renderer='HyperFrames 0.8.48, local GSAP 3.14.2',videos=videos)
 (public/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');Path('docs/digital-literacy-2/media-verification.json').write_text(json.dumps(reports,indent=2)+'\n')
