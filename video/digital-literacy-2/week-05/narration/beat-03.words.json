@@ -1,238 +1,238 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "53c27c1651473a86cc8e150a9eb47c81b27857fe0e8057a8ace0f322169b431e",
+  "wavSha256": "d50d883795d4f95bb68d3fc872e99641efbc349fdba6df2e3018fd356aca772d",
   "textSha256": "dfd9f38e5ca6b4409d6c35d1307ad9ddc8bf71065575a4afd36db4ac71ca0683",
   "matchRatio": 0.9782608695652174,
   "words": [
     {
       "word": "Do",
       "start": 0.0,
-      "end": 0.12
+      "end": 0.16
     },
     {
       "word": "not",
-      "start": 0.12,
+      "start": 0.16,
       "end": 0.34
     },
     {
       "word": "plug",
       "start": 0.34,
-      "end": 0.68
+      "end": 0.66
     },
     {
       "word": "in",
-      "start": 0.68,
-      "end": 1.0
+      "start": 0.66,
+      "end": 0.96
     },
     {
       "word": "an",
-      "start": 1.0,
+      "start": 0.96,
       "end": 1.12
     },
     {
       "word": "unknown",
       "start": 1.12,
-      "end": 1.5
+      "end": 1.44
     },
     {
       "word": "USB",
-      "start": 1.5,
-      "end": 2.14
+      "start": 1.44,
+      "end": 1.96
     },
     {
       "word": "drive",
-      "start": 2.14,
-      "end": 2.54
+      "start": 1.96,
+      "end": 2.48
     },
     {
       "word": "to",
-      "start": 2.54,
-      "end": 2.88
+      "start": 2.48,
+      "end": 2.78
     },
     {
       "word": "discover",
-      "start": 2.88,
-      "end": 3.2
+      "start": 2.78,
+      "end": 3.22
     },
     {
       "word": "who",
-      "start": 3.2,
-      "end": 3.58
+      "start": 3.22,
+      "end": 3.68
     },
     {
       "word": "owns",
-      "start": 3.58,
-      "end": 4.02
+      "start": 3.68,
+      "end": 4.08
     },
     {
       "word": "it.",
-      "start": 4.02,
-      "end": 4.22
+      "start": 4.08,
+      "end": 4.26
     },
     {
       "word": "Give",
-      "start": 4.94,
-      "end": 4.98
+      "start": 4.48,
+      "end": 4.52
     },
     {
       "word": "it",
-      "start": 4.98,
-      "end": 5.14
+      "start": 4.52,
+      "end": 4.7
     },
     {
       "word": "to",
-      "start": 5.14,
-      "end": 5.28
+      "start": 4.7,
+      "end": 4.84
     },
     {
       "word": "authorized",
-      "start": 5.28,
-      "end": 5.56
+      "start": 4.84,
+      "end": 5.18
     },
     {
       "word": "staff.",
-      "start": 5.56,
-      "end": 6.38
+      "start": 5.18,
+      "end": 6.0
     },
     {
       "word": "Encryption",
-      "start": 7.08,
-      "end": 7.36
+      "start": 6.34,
+      "end": 6.7
     },
     {
       "word": "makes",
-      "start": 7.36,
-      "end": 7.76
+      "start": 6.7,
+      "end": 7.2
     },
     {
       "word": "data",
-      "start": 7.76,
-      "end": 8.06
+      "start": 7.2,
+      "end": 7.5
     },
     {
       "word": "unreadable",
-      "start": 8.06,
-      "end": 8.76
+      "start": 7.5,
+      "end": 8.24
     },
     {
       "word": "without",
-      "start": 8.76,
-      "end": 9.24
+      "start": 8.24,
+      "end": 8.8
     },
     {
       "word": "a",
-      "start": 9.24,
-      "end": 9.4
+      "start": 8.8,
+      "end": 9.02
     },
     {
       "word": "key.",
-      "start": 9.4,
-      "end": 9.62
+      "start": 9.02,
+      "end": 9.24
     },
     {
       "word": "Read-only",
-      "start": 9.62,
-      "end": 10.76
+      "start": 9.24,
+      "end": 10.42
     },
     {
       "word": "settings",
-      "start": 10.76,
-      "end": 11.24
+      "start": 10.42,
+      "end": 10.9
     },
     {
       "word": "restrict",
-      "start": 11.24,
-      "end": 11.78
+      "start": 10.9,
+      "end": 11.38
     },
     {
       "word": "editing,",
-      "start": 11.78,
-      "end": 12.34
+      "start": 11.38,
+      "end": 12.1
     },
     {
       "word": "which",
-      "start": 12.8,
-      "end": 12.84
+      "start": 12.58,
+      "end": 12.62
     },
     {
       "word": "is",
-      "start": 12.84,
-      "end": 12.98
+      "start": 12.62,
+      "end": 12.82
     },
     {
       "word": "a",
-      "start": 12.98,
-      "end": 13.08
+      "start": 12.82,
+      "end": 13.0
     },
     {
       "word": "different",
-      "start": 13.08,
-      "end": 13.24
+      "start": 13.0,
+      "end": 13.22
     },
     {
       "word": "protection.",
-      "start": 13.24,
-      "end": 13.84
+      "start": 13.22,
+      "end": 13.98
     },
     {
       "word": "A",
-      "start": 14.68,
-      "end": 14.7
+      "start": 14.84,
+      "end": 14.86
     },
     {
       "word": "locked",
-      "start": 14.7,
-      "end": 15.0
+      "start": 14.86,
+      "end": 15.16
     },
     {
       "word": "or",
-      "start": 15.0,
-      "end": 15.32
+      "start": 15.16,
+      "end": 15.48
     },
     {
       "word": "encrypted",
-      "start": 15.32,
-      "end": 15.64
+      "start": 15.48,
+      "end": 15.84
     },
     {
       "word": "device",
-      "start": 15.64,
-      "end": 16.2
-    },
-    {
-      "word": "still",
-      "start": 16.2,
+      "start": 15.84,
       "end": 16.52
     },
     {
-      "word": "needs",
+      "word": "still",
       "start": 16.52,
-      "end": 16.86
+      "end": 16.94
+    },
+    {
+      "word": "needs",
+      "start": 16.94,
+      "end": 17.32
     },
     {
       "word": "careful",
-      "start": 16.86,
-      "end": 17.18
+      "start": 17.32,
+      "end": 17.7
     },
     {
       "word": "account",
-      "start": 17.18,
-      "end": 17.76
+      "start": 17.7,
+      "end": 18.24
     },
     {
       "word": "and",
-      "start": 17.76,
-      "end": 17.96
+      "start": 18.24,
+      "end": 18.44
     },
     {
       "word": "file",
-      "start": 17.96,
-      "end": 18.22
+      "start": 18.44,
+      "end": 18.72
     },
     {
       "word": "access.",
-      "start": 18.22,
-      "end": 18.78
+      "start": 18.72,
+      "end": 19.3
     }
   ]
 }

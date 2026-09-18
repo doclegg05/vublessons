@@ -35,7 +35,7 @@
       if(dest!==undefined){e.preventDefault();show(dest,true);}
     });
     let touch=null;
-    document.querySelector('.deck-main').addEventListener('touchstart',e=>{if(!e.target.closest('input,button,a,select,video'))touch=[e.changedTouches[0].clientX,e.changedTouches[0].clientY];},{passive:true});
+    document.querySelector('.deck-main').addEventListener('touchstart',e=>{if(!e.target.closest('input,button,a,select,video,.calendar-surface'))touch=[e.changedTouches[0].clientX,e.changedTouches[0].clientY];},{passive:true});
     document.querySelector('.deck-main').addEventListener('touchend',e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch[0],dy=e.changedTouches[0].clientY-touch[1];if(Math.abs(dx)>90&&Math.abs(dy)<50)show(index+(dx<0?1:-1),true);touch=null;},{passive:true});
     document.querySelector('.menu-toggle').addEventListener('click',e=>{const open=document.querySelector('.sidebar').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open));});
   }

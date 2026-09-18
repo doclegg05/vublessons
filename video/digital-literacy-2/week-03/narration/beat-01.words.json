@@ -1,6 +1,6 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "34d7a5ec2fb3936d54f42569cb30bb567cc631fa8bec40aebd71b69cb0db58f7",
+  "wavSha256": "c7c04d6e3fa9835c24d7a68816c5bed40e8441bc888237a44ae604cb1ef3e20d",
   "textSha256": "a4aad04239604b30e16b5e7df6d22c90ece18f639dd27d165d725cfd8f5cd36a",
   "matchRatio": 1.0,
   "words": [
@@ -12,151 +12,151 @@
     {
       "word": "useful",
       "start": 0.1,
-      "end": 0.48
+      "end": 0.42
     },
     {
       "word": "handout",
-      "start": 0.48,
-      "end": 1.22
+      "start": 0.42,
+      "end": 1.12
     },
     {
       "word": "begins",
-      "start": 1.22,
-      "end": 1.58
+      "start": 1.12,
+      "end": 1.5
     },
     {
       "word": "with",
-      "start": 1.58,
-      "end": 2.02
+      "start": 1.5,
+      "end": 1.88
     },
     {
       "word": "a",
-      "start": 2.02,
-      "end": 2.14
+      "start": 1.88,
+      "end": 2.0
     },
     {
       "word": "reader",
-      "start": 2.14,
-      "end": 2.4
+      "start": 2.0,
+      "end": 2.28
     },
     {
       "word": "and",
-      "start": 2.4,
+      "start": 2.28,
+      "end": 2.72
+    },
+    {
+      "word": "a",
+      "start": 2.72,
       "end": 2.84
     },
     {
-      "word": "a",
-      "start": 2.84,
-      "end": 2.96
-    },
-    {
       "word": "task.",
-      "start": 2.96,
-      "end": 3.3
+      "start": 2.84,
+      "end": 3.26
     },
     {
       "word": "Imagine",
-      "start": 4.48,
-      "end": 4.48
+      "start": 3.8,
+      "end": 4.02
     },
     {
       "word": "a",
-      "start": 4.48,
-      "end": 4.78
+      "start": 4.02,
+      "end": 4.6
     },
     {
       "word": "neighbor",
-      "start": 4.78,
-      "end": 5.12
+      "start": 4.6,
+      "end": 5.02
     },
     {
       "word": "who",
-      "start": 5.12,
-      "end": 5.42
+      "start": 5.02,
+      "end": 5.32
     },
     {
       "word": "wants",
-      "start": 5.42,
-      "end": 5.66
+      "start": 5.32,
+      "end": 5.62
     },
     {
       "word": "computer",
-      "start": 5.66,
-      "end": 6.22
+      "start": 5.62,
+      "end": 6.16
     },
     {
       "word": "help.",
-      "start": 6.22,
-      "end": 6.7
+      "start": 6.16,
+      "end": 6.62
     },
     {
       "word": "Put",
-      "start": 7.62,
-      "end": 7.62
+      "start": 7.34,
+      "end": 7.34
     },
     {
       "word": "the",
-      "start": 7.62,
-      "end": 7.8
+      "start": 7.34,
+      "end": 7.54
     },
     {
       "word": "service",
-      "start": 7.8,
-      "end": 8.2
+      "start": 7.54,
+      "end": 8.04
     },
     {
       "word": "and",
-      "start": 8.2,
-      "end": 8.5
+      "start": 8.04,
+      "end": 8.46
     },
     {
       "word": "next",
-      "start": 8.5,
-      "end": 8.68
+      "start": 8.46,
+      "end": 8.72
     },
     {
       "word": "action",
-      "start": 8.68,
-      "end": 9.38
+      "start": 8.72,
+      "end": 9.46
     },
     {
       "word": "near",
-      "start": 9.38,
-      "end": 9.62
+      "start": 9.46,
+      "end": 9.74
     },
     {
       "word": "the",
-      "start": 9.62,
-      "end": 9.8
+      "start": 9.74,
+      "end": 9.92
     },
     {
       "word": "beginning.",
-      "start": 9.8,
-      "end": 10.18
+      "start": 9.92,
+      "end": 10.36
     },
     {
       "word": "Leave",
-      "start": 11.08,
+      "start": 11.14,
       "end": 11.2
     },
     {
       "word": "out",
       "start": 11.2,
-      "end": 11.42
+      "end": 11.44
     },
     {
       "word": "details",
-      "start": 11.42,
-      "end": 11.84
+      "start": 11.44,
+      "end": 11.88
     },
     {
       "word": "that",
-      "start": 11.84,
-      "end": 12.36
+      "start": 11.88,
+      "end": 12.32
     },
     {
       "word": "do",
-      "start": 12.36,
+      "start": 12.32,
       "end": 12.52
     },
     {
@@ -172,52 +172,52 @@
     {
       "word": "the",
       "start": 13.08,
-      "end": 13.26
+      "end": 13.34
     },
     {
       "word": "person",
-      "start": 13.26,
-      "end": 13.66
+      "start": 13.34,
+      "end": 13.8
     },
     {
       "word": "decide",
-      "start": 13.66,
-      "end": 13.88
+      "start": 13.8,
+      "end": 14.1
     },
     {
       "word": "what",
-      "start": 13.88,
-      "end": 14.4
+      "start": 14.1,
+      "end": 14.72
     },
     {
       "word": "to",
-      "start": 14.4,
-      "end": 14.58
+      "start": 14.72,
+      "end": 14.94
     },
     {
       "word": "do,",
-      "start": 14.58,
-      "end": 14.9
+      "start": 14.94,
+      "end": 15.22
     },
     {
       "word": "and",
-      "start": 15.18,
-      "end": 15.52
+      "start": 15.22,
+      "end": 15.56
     },
     {
       "word": "explain",
-      "start": 15.52,
+      "start": 15.56,
       "end": 16.02
     },
     {
       "word": "unfamiliar",
       "start": 16.02,
-      "end": 16.88
+      "end": 16.94
     },
     {
       "word": "terms.",
-      "start": 16.88,
-      "end": 17.74
+      "start": 16.94,
+      "end": 17.64
     }
   ]
 }

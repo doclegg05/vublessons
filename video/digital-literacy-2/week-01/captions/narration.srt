@@ -1,105 +1,105 @@
 1
-00:00:00,010 --> 00:00:03,410
+00:00:00,010 --> 00:00:03,890
 A useful computer setup begins with the
 task you want
 
 2
-00:00:03,410 --> 00:00:06,910
+00:00:03,890 --> 00:00:07,450
 to do. Suppose the words on a webpage are
 hard
 
 3
-00:00:06,910 --> 00:00:11,770
+00:00:07,450 --> 00:00:11,990
 to read. Decide which control affects that
 page, make one
 
 4
-00:00:11,770 --> 00:00:16,050
+00:00:11,990 --> 00:00:15,970
 change, and check the result before
 changing anything else.
 
 5
-00:00:17,964 --> 00:00:22,624
+00:00:17,950 --> 00:00:22,290
 Browser zoom makes a webpage larger or
 smaller. Display scaling
 
 6
-00:00:22,624 --> 00:00:26,684
+00:00:22,290 --> 00:00:26,330
 affects the wider desktop. If only the
 webpage is difficult
 
 7
-00:00:26,684 --> 00:00:30,924
+00:00:26,330 --> 00:00:30,730
 to read, try browser zoom first. Use the
 text size
 
 8
-00:00:30,924 --> 00:00:35,824
+00:00:30,730 --> 00:00:35,630
 controls when they are available, and
 check that buttons and instructions remain
 usable.
 
 9
-00:00:37,744 --> 00:00:41,464
+00:00:37,611 --> 00:00:41,671
 When sound is missing, first check the
 selected output device
 
 10
-00:00:41,464 --> 00:00:45,724
+00:00:41,671 --> 00:00:45,651
 and mute setting. A connected headset may
 be receiving the
 
 11
-00:00:45,724 --> 00:00:50,624
+00:00:45,651 --> 00:00:50,291
 sound. Adjust the volume, then play a
 short test. The
 
 12
-00:00:50,624 --> 00:00:55,484
+00:00:50,291 --> 00:00:55,251
 same habit applies to printing: choose the
 printer and inspect a test page.
 
 13
-00:00:57,416 --> 00:01:01,056
+00:00:57,264 --> 00:01:00,784
 A practice calendar entry needs a title, a
 start and
 
 14
-00:01:01,056 --> 00:01:05,716
+00:01:00,784 --> 00:01:05,144
 end, a location, and a useful reminder. If
 a partner
 
 15
-00:01:05,716 --> 00:01:10,176
+00:01:05,144 --> 00:01:09,484
 only needs your availability, look for
 free or busy sharing.
 
 16
-00:01:10,856 --> 00:01:15,436
+00:01:10,004 --> 00:01:14,824
 Check the actual options instead of
 assuming every service shares the same
 details.
 
 17
-00:01:17,521 --> 00:01:21,281
+00:01:16,926 --> 00:01:20,326
 Pause here and make one helpful adjustment
 on your workstation.
 
 18
-00:01:22,161 --> 00:01:25,261
+00:01:20,926 --> 00:01:24,046
 Show a partner what changed and explain
 how to undo
 
 19
-00:01:25,261 --> 00:01:29,581
+00:01:24,046 --> 00:01:28,526
 it. Before leaving a shared computer,
 restore the lab settings
 
 20
-00:01:29,581 --> 00:01:33,281
+00:01:28,526 --> 00:01:32,446
 and save your practice work. You now have
 a repeatable
 
 21
-00:01:33,281 --> 00:01:36,281
+00:01:32,446 --> 00:01:35,486
 routine: choose, test, and explain.

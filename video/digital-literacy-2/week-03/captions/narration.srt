@@ -1,116 +1,116 @@
 1
-00:00:00,010 --> 00:00:03,310
+00:00:00,010 --> 00:00:03,270
 A useful handout begins with a reader and
 a task.
 
 2
-00:00:04,490 --> 00:00:08,210
+00:00:03,810 --> 00:00:08,050
 Imagine a neighbor who wants computer
 help. Put the service
 
 3
-00:00:08,210 --> 00:00:12,370
+00:00:08,050 --> 00:00:12,330
 and next action near the beginning. Leave
 out details that
 
 4
-00:00:12,370 --> 00:00:17,750
+00:00:12,330 --> 00:00:17,650
 do not help the person decide what to do,
 and explain unfamiliar terms.
 
 5
-00:00:19,683 --> 00:00:23,903
+00:00:19,667 --> 00:00:23,747
 Use real heading styles for sections, a
 short numbered list
 
 6
-00:00:23,903 --> 00:00:29,263
+00:00:23,747 --> 00:00:29,027
 for steps, and link text that explains the
 destination. Making
 
 7
-00:00:29,263 --> 00:00:33,023
+00:00:29,027 --> 00:00:33,007
 a line bold can change its appearance
 without creating a
 
 8
-00:00:33,023 --> 00:00:36,503
+00:00:33,007 --> 00:00:36,627
 heading. Check that the structure still
 makes sense when you
 
 9
-00:00:36,503 --> 00:00:37,843
+00:00:36,627 --> 00:00:38,347
 read the document in order.
 
 10
-00:00:39,695 --> 00:00:43,655
+00:00:40,176 --> 00:00:44,456
 In a practice workbook, enter paper at
 twelve dollars, folders
 
 11
-00:00:43,655 --> 00:00:48,915
+00:00:44,456 --> 00:00:49,136
 at eight, and pens at five. The total is
 twenty-five.
 
 12
-00:00:48,915 --> 00:00:53,015
+00:00:49,136 --> 00:00:52,956
 Use a sum formula over all three cells.
 Change paper
 
 13
-00:00:53,015 --> 00:00:57,535
+00:00:52,956 --> 00:00:57,656
 to fifteen and check that the total
 becomes twenty-eight. This
 
 14
-00:00:57,535 --> 00:00:59,955
+00:00:57,656 --> 00:01:00,276
 tests the formula rather than its
 appearance.
 
 15
-00:01:01,939 --> 00:01:04,759
+00:01:02,427 --> 00:01:05,067
 The right file format depends on the next
 person's task.
 
 16
-00:01:05,479 --> 00:01:09,759
+00:01:05,867 --> 00:01:10,327
 An editable document supports revision. A
 PDF often preserves a
 
 17
-00:01:09,759 --> 00:01:13,819
+00:01:10,327 --> 00:01:14,407
 finished layout. A CSV carries plain table
 data but loses
 
 18
-00:01:13,819 --> 00:01:18,339
+00:01:14,407 --> 00:01:18,847
 formatting and formulas. Choose
 deliberately, then reopen the exported
 
 19
-00:01:18,339 --> 00:01:20,059
+00:01:18,847 --> 00:01:20,567
 file and check what survived.
 
 20
-00:01:22,051 --> 00:01:25,871
+00:01:22,527 --> 00:01:26,327
 Create a small resource pack: a structured
 handout, a checked
 
 21
-00:01:25,871 --> 00:01:31,271
+00:01:26,327 --> 00:01:31,247
 workbook, and three clear slides. Credit
 any reused material according
 
 22
-00:01:31,271 --> 00:01:35,131
+00:01:31,247 --> 00:01:35,167
 to its license. Show a partner the
 calculation and the
 
 23
-00:01:35,131 --> 00:01:38,551
+00:01:35,167 --> 00:01:38,747
 exported handout. Ask them to find the
 next action without
 
 24
-00:01:38,551 --> 00:01:41,031
+00:01:38,747 --> 00:01:41,387
 your help, then improve anything unclear.

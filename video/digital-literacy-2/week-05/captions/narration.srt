@@ -1,114 +1,114 @@
 1
-00:00:00,010 --> 00:00:03,310
+00:00:00,010 --> 00:00:03,430
 An unexpected message says you must act
 immediately to keep
 
 2
-00:00:03,310 --> 00:00:07,550
+00:00:03,430 --> 00:00:07,550
 a service. Urgency can push you to skip
 checks. Pause
 
 3
-00:00:07,550 --> 00:00:11,870
+00:00:07,550 --> 00:00:11,890
 before opening the link or providing
 information. Find the organization
 
 4
-00:00:11,870 --> 00:00:16,910
+00:00:11,890 --> 00:00:16,910
 through a known website or contact method,
 then verify the claim independently.
 
 5
-00:00:19,253 --> 00:00:23,153
+00:00:19,229 --> 00:00:22,949
 A video meeting may need camera access. A
 simple text
 
 6
-00:00:23,153 --> 00:00:27,493
+00:00:22,949 --> 00:00:27,409
 page usually does not. Grant permissions
 only when they fit
 
 7
-00:00:27,493 --> 00:00:30,913
+00:00:27,409 --> 00:00:30,509
 a clear task and you trust the app. You
 can
 
 8
-00:00:30,913 --> 00:00:36,973
+00:00:30,509 --> 00:00:36,929
 deny an unrelated request and review
 camera or microphone permissions after you
 finish.
 
 9
-00:00:38,909 --> 00:00:42,109
+00:00:38,888 --> 00:00:42,108
 Do not plug in an unknown USB drive to
 discover
 
 10
-00:00:42,109 --> 00:00:46,669
+00:00:42,108 --> 00:00:46,088
 who owns it. Give it to authorized staff.
 Encryption makes
 
 11
-00:00:46,669 --> 00:00:51,249
+00:00:46,088 --> 00:00:50,988
 data unreadable without a key. Read-only
 settings restrict editing,
 
 12
-00:00:51,709 --> 00:00:55,109
+00:00:51,468 --> 00:00:55,408
 which is a different protection. A locked
 or encrypted device
 
 13
-00:00:55,109 --> 00:00:57,689
+00:00:55,408 --> 00:00:58,188
 still needs careful account and file
 access.
 
 14
-00:00:59,617 --> 00:01:04,437
+00:01:00,266 --> 00:01:04,026
 Online safety also includes attention and
 wellbeing. Catfishing
 
 15
-00:01:04,437 --> 00:01:07,897
+00:01:04,026 --> 00:01:07,706
 uses a false identity to build trust. Fear
 of missing
 
 16
-00:01:07,897 --> 00:01:11,197
+00:01:07,706 --> 00:01:11,106
 out can make it hard to stop checking
 alerts. Set
 
 17
-00:01:11,197 --> 00:01:15,957
+00:01:11,106 --> 00:01:16,026
 useful notification limits, take breaks,
 and seek support when online
 
 18
-00:01:15,957 --> 00:01:18,497
+00:01:16,026 --> 00:01:18,786
 behavior makes you feel pressured or
 unsafe.
 
 19
-00:01:20,418 --> 00:01:24,518
+00:01:20,793 --> 00:01:25,213
 Choose one practice scenario and explain
 your next step to
 
 20
-00:01:24,518 --> 00:01:28,918
+00:01:25,213 --> 00:01:29,433
 a partner. Name the evidence, the
 independent source you would
 
 21
-00:01:28,918 --> 00:01:33,158
+00:01:29,433 --> 00:01:33,233
 check, and the action that limits risk.
 Then complete the
 
 22
-00:01:33,158 --> 00:01:37,518
+00:01:33,233 --> 00:01:37,793
 skills challenge and post-test. Use the
 results to choose a
 
 23
-00:01:37,518 --> 00:01:38,998
+00:01:37,793 --> 00:01:39,313
 task for more practice.

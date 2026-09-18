@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T13:55:14.777Z",
+  "generatedAt": "2026-09-18T14:35:55.242Z",
   "project": "week-05",
   "summary": {
     "passed": 5,
@@ -10,12 +10,12 @@
       "id": "beat-01",
       "pass": true,
       "metrics": {
-        "seconds": 18.02,
-        "window": 19.243,
+        "seconds": 18,
+        "window": 19.219,
         "words": 42,
-        "wpm": 142,
+        "wpm": 144,
         "leadingSilence": 0,
-        "trailingSilence": 0.22,
+        "trailingSilence": 0.46,
         "requestedBreaks": []
       },
       "failures": [],
@@ -26,11 +26,11 @@
       "pass": true,
       "metrics": {
         "seconds": 18.44,
-        "window": 19.656,
+        "window": 19.659,
         "words": 43,
-        "wpm": 142,
+        "wpm": 143,
         "leadingSilence": 0,
-        "trailingSilence": 0.26,
+        "trailingSilence": 0.36,
         "requestedBreaks": []
       },
       "failures": [],
@@ -40,12 +40,12 @@
       "id": "beat-03",
       "pass": true,
       "metrics": {
-        "seconds": 19.49,
-        "window": 20.708,
+        "seconds": 20.17,
+        "window": 21.378,
         "words": 46,
-        "wpm": 142,
+        "wpm": 139,
         "leadingSilence": 0,
-        "trailingSilence": 0,
+        "trailingSilence": 0.32,
         "requestedBreaks": []
       },
       "failures": [],
@@ -55,12 +55,12 @@
       "id": "beat-04",
       "pass": true,
       "metrics": {
-        "seconds": 19.59,
-        "window": 20.801,
+        "seconds": 19.3,
+        "window": 20.527,
         "words": 45,
-        "wpm": 139,
-        "leadingSilence": 0.17,
-        "trailingSilence": 0,
+        "wpm": 144,
+        "leadingSilence": 0,
+        "trailingSilence": 0.5,
         "requestedBreaks": []
       },
       "failures": [],
@@ -70,12 +70,12 @@
       "id": "beat-05",
       "pass": true,
       "metrics": {
-        "seconds": 19.33,
-        "window": 20.537,
+        "seconds": 19.3,
+        "window": 20.516,
         "words": 44,
-        "wpm": 138,
+        "wpm": 139,
         "leadingSilence": 0,
-        "trailingSilence": 0.26,
+        "trailingSilence": 0.36,
         "requestedBreaks": []
       },
       "failures": [],

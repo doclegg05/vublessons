@@ -1,6 +1,6 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "bbf5a1d5052d9cc72542e4bcce5d0ffef96d920b851174a00a654e6304eb2ff1",
+  "wavSha256": "f6c0d04e46d8a0e227dce79418784890e0c7e6303674de903d8529f13dd8ac0e",
   "textSha256": "fceaf090f4dbb69d6f1861120fee1531f72dc0b5105c67d88d083471c3d1a307",
   "matchRatio": 0.9772727272727273,
   "words": [
@@ -12,217 +12,217 @@
     {
       "word": "one",
       "start": 0.28,
-      "end": 0.66
+      "end": 0.6
     },
     {
       "word": "practice",
-      "start": 0.66,
+      "start": 0.6,
       "end": 1.16
     },
     {
       "word": "scenario",
       "start": 1.16,
-      "end": 1.74
+      "end": 1.8
     },
     {
       "word": "and",
-      "start": 1.74,
-      "end": 2.42
+      "start": 1.8,
+      "end": 2.52
     },
     {
       "word": "explain",
-      "start": 2.42,
-      "end": 2.8
+      "start": 2.52,
+      "end": 3.08
     },
     {
       "word": "your",
-      "start": 2.8,
-      "end": 3.12
+      "start": 3.08,
+      "end": 3.5
     },
     {
       "word": "next",
-      "start": 3.12,
-      "end": 3.38
+      "start": 3.5,
+      "end": 3.74
     },
     {
       "word": "step",
-      "start": 3.38,
-      "end": 3.84
+      "start": 3.74,
+      "end": 4.18
     },
     {
       "word": "to",
-      "start": 3.84,
-      "end": 4.1
+      "start": 4.18,
+      "end": 4.42
     },
     {
       "word": "a",
-      "start": 4.1,
-      "end": 4.22
+      "start": 4.42,
+      "end": 4.56
     },
     {
       "word": "partner.",
-      "start": 4.22,
-      "end": 4.68
+      "start": 4.56,
+      "end": 5.0
     },
     {
       "word": "Name",
-      "start": 5.34,
-      "end": 5.68
+      "start": 5.66,
+      "end": 6.0
     },
     {
       "word": "the",
-      "start": 5.68,
-      "end": 5.88
+      "start": 6.0,
+      "end": 6.24
     },
     {
       "word": "evidence,",
-      "start": 5.88,
-      "end": 6.28
+      "start": 6.24,
+      "end": 6.72
     },
     {
       "word": "the",
-      "start": 6.94,
-      "end": 7.0
+      "start": 6.72,
+      "end": 7.12
     },
     {
       "word": "independent",
-      "start": 7.0,
-      "end": 7.28
+      "start": 7.12,
+      "end": 7.42
     },
     {
       "word": "source",
-      "start": 7.28,
-      "end": 8.1
+      "start": 7.42,
+      "end": 8.16
     },
     {
       "word": "you",
-      "start": 8.1,
-      "end": 8.38
+      "start": 8.16,
+      "end": 8.48
     },
     {
       "word": "would",
-      "start": 8.38,
-      "end": 8.5
+      "start": 8.48,
+      "end": 8.64
     },
     {
       "word": "check,",
-      "start": 8.5,
-      "end": 8.76
+      "start": 8.64,
+      "end": 8.92
     },
     {
       "word": "and",
-      "start": 9.34,
-      "end": 9.44
+      "start": 8.92,
+      "end": 9.34
     },
     {
       "word": "the",
-      "start": 9.44,
-      "end": 9.56
+      "start": 9.34,
+      "end": 9.48
     },
     {
       "word": "action",
-      "start": 9.56,
-      "end": 10.0
+      "start": 9.48,
+      "end": 9.88
     },
     {
       "word": "that",
-      "start": 10.0,
-      "end": 10.28
+      "start": 9.88,
+      "end": 10.16
     },
     {
       "word": "limits",
-      "start": 10.28,
-      "end": 10.62
+      "start": 10.16,
+      "end": 10.54
     },
     {
       "word": "risk.",
-      "start": 10.62,
-      "end": 11.04
+      "start": 10.54,
+      "end": 10.98
     },
     {
       "word": "Then",
-      "start": 11.84,
-      "end": 12.02
+      "start": 11.46,
+      "end": 11.64
     },
     {
       "word": "complete",
-      "start": 12.02,
-      "end": 12.42
+      "start": 11.64,
+      "end": 12.08
     },
     {
       "word": "the",
-      "start": 12.42,
-      "end": 12.74
+      "start": 12.08,
+      "end": 12.44
     },
     {
       "word": "skills",
-      "start": 12.74,
-      "end": 12.94
+      "start": 12.44,
+      "end": 12.72
     },
     {
       "word": "challenge",
-      "start": 12.94,
-      "end": 13.36
+      "start": 12.72,
+      "end": 13.22
     },
     {
       "word": "and",
-      "start": 13.36,
-      "end": 13.92
+      "start": 13.64,
+      "end": 14.02
     },
     {
       "word": "post-test.",
-      "start": 13.92,
-      "end": 15.42
+      "start": 14.02,
+      "end": 15.12
     },
     {
       "word": "Use",
-      "start": 15.42,
-      "end": 15.72
+      "start": 15.12,
+      "end": 15.38
     },
     {
       "word": "the",
-      "start": 15.72,
-      "end": 15.94
+      "start": 15.38,
+      "end": 15.66
     },
     {
       "word": "results",
-      "start": 15.94,
-      "end": 16.24
+      "start": 15.66,
+      "end": 16.04
     },
     {
       "word": "to",
-      "start": 16.24,
-      "end": 16.68
+      "start": 16.04,
+      "end": 16.48
     },
     {
       "word": "choose",
-      "start": 16.68,
-      "end": 16.94
+      "start": 16.48,
+      "end": 16.86
     },
     {
       "word": "a",
-      "start": 16.94,
-      "end": 17.1
+      "start": 16.86,
+      "end": 17.0
     },
     {
       "word": "task",
-      "start": 17.1,
-      "end": 17.38
+      "start": 17.0,
+      "end": 17.34
     },
     {
       "word": "for",
-      "start": 17.38,
-      "end": 17.84
+      "start": 17.34,
+      "end": 17.66
     },
     {
       "word": "more",
-      "start": 17.84,
-      "end": 18.04
+      "start": 17.66,
+      "end": 17.88
     },
     {
       "word": "practice.",
-      "start": 18.04,
-      "end": 18.58
+      "start": 17.88,
+      "end": 18.52
     }
   ]
 }

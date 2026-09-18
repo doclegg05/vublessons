@@ -9,7 +9,7 @@
     ],
     "text": "A shared file works better when people know their roles. Choose an owner who makes final decisions, a writer who drafts, and a reviewer who gives feedback. Agree on where the common copy lives and what finished means before several people begin editing.",
     "window": 19.662,
-    "audioDuration": 18.412471655328797,
+    "audioDuration": 18.411950113378683,
     "start": 0.01
   },
   {
@@ -20,8 +20,8 @@
       "Different times: asynchronous"
     ],
     "text": "Working on the same document during a live call is synchronous collaboration. Leaving comments for someone to read later is asynchronous collaboration. Choose based on schedules and the decision needed. For later feedback, include enough context that the writer can act without another meeting.",
-    "window": 20.105,
-    "audioDuration": 18.854603174603174,
+    "window": 20.094,
+    "audioDuration": 18.84378684807256,
     "start": 19.672
   },
   {
@@ -33,9 +33,9 @@
       "Explain the reason"
     ],
     "text": "Helpful feedback names a change and its purpose. You might write: add the contact number after the steps so readers can find help. The writer can accept the idea, ask a question, or explain a different choice. A comment about the work is more useful than a judgment about the person.",
-    "window": 23.086,
-    "audioDuration": 21.835895691609977,
-    "start": 39.777
+    "window": 23.072,
+    "audioDuration": 21.82204081632653,
+    "start": 39.766
   },
   {
     "id": "beat-04",
@@ -46,9 +46,9 @@
       "Ask before recording"
     ],
     "text": "Before a meeting, test the sound and choose the correct microphone. Mute when appropriate, use the agreed chat or raise-hand tools, and ask before recording. In a webinar, the host may control who can speak. Follow the event's instructions and respect other participants.",
-    "window": 20.569,
-    "audioDuration": 19.319002267573698,
-    "start": 62.863
+    "window": 20.092,
+    "audioDuration": 18.8418820861678,
+    "start": 62.838
   },
   {
     "id": "beat-05",
@@ -60,7 +60,7 @@
     ],
     "text": "Draft a fictional message asking a partner to review your handout. Use a specific subject, one clear request, and a reasonable response time. Choose feedback access when that fits. After the review, record the decision and verify the final file. No real message needs to be sent for this practice.",
     "window": 22.667,
-    "audioDuration": 21.417052154195012,
-    "start": 83.432
+    "audioDuration": 21.41657596371882,
+    "start": 82.93
   }
 ]

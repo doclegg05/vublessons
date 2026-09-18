@@ -1,238 +1,238 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "37a3c94539e3e81803ef61faaffb93eef45075d8a2c6a91cbbbf41b707898e37",
+  "wavSha256": "6c990a54acb642799f8c3d3126eed8f3dcce6807ee3fa09320468a2e35510846",
   "textSha256": "e4935e53069b0064d5dee7a97f8e318871ae5bc9521d01cdaaa1ec2570ef41f1",
-  "matchRatio": 1.0,
+  "matchRatio": 0.9782608695652174,
   "words": [
     {
       "word": "Sync",
       "start": 0.0,
-      "end": 0.44
+      "end": 0.24
     },
     {
       "word": "carries",
-      "start": 0.44,
-      "end": 0.92
+      "start": 0.24,
+      "end": 0.72
     },
     {
       "word": "changes",
-      "start": 0.92,
-      "end": 1.24
+      "start": 0.72,
+      "end": 1.34
     },
     {
       "word": "between",
-      "start": 1.24,
-      "end": 1.84
+      "start": 1.34,
+      "end": 1.94
     },
     {
       "word": "a",
-      "start": 1.84,
-      "end": 2.02
+      "start": 1.94,
+      "end": 2.18
     },
     {
       "word": "device",
-      "start": 2.02,
-      "end": 2.38
+      "start": 2.18,
+      "end": 2.6
     },
     {
       "word": "and",
-      "start": 2.38,
-      "end": 2.78
+      "start": 2.6,
+      "end": 3.0
     },
     {
       "word": "an",
-      "start": 2.78,
-      "end": 2.92
+      "start": 3.0,
+      "end": 3.14
     },
     {
       "word": "online",
-      "start": 2.92,
-      "end": 3.16
+      "start": 3.14,
+      "end": 3.38
     },
     {
       "word": "service.",
-      "start": 3.16,
-      "end": 3.88
+      "start": 3.38,
+      "end": 4.3
     },
     {
       "word": "It",
-      "start": 4.78,
-      "end": 4.9
+      "start": 4.3,
+      "end": 4.64
     },
     {
       "word": "may",
-      "start": 4.9,
-      "end": 5.04
+      "start": 4.64,
+      "end": 4.82
     },
     {
       "word": "also",
-      "start": 5.04,
-      "end": 5.36
+      "start": 4.82,
+      "end": 5.12
     },
     {
       "word": "carry",
-      "start": 5.36,
-      "end": 5.74
+      "start": 5.12,
+      "end": 5.5
     },
     {
       "word": "a",
-      "start": 5.74,
-      "end": 5.98
+      "start": 5.5,
+      "end": 5.66
     },
     {
       "word": "deletion.",
-      "start": 5.98,
-      "end": 6.3
+      "start": 5.66,
+      "end": 6.16
     },
     {
       "word": "That",
-      "start": 7.28,
-      "end": 7.34
+      "start": 6.72,
+      "end": 6.76
     },
     {
       "word": "is",
-      "start": 7.34,
-      "end": 7.46
+      "start": 6.76,
+      "end": 6.92
     },
     {
       "word": "why",
-      "start": 7.46,
-      "end": 7.66
+      "start": 6.92,
+      "end": 7.16
     },
     {
       "word": "sync",
-      "start": 7.66,
-      "end": 8.06
+      "start": 7.16,
+      "end": 7.54
     },
     {
       "word": "alone",
-      "start": 8.06,
-      "end": 8.42
+      "start": 7.54,
+      "end": 7.92
     },
     {
       "word": "is",
-      "start": 8.42,
-      "end": 8.96
+      "start": 7.92,
+      "end": 8.24
     },
     {
       "word": "not",
-      "start": 8.96,
-      "end": 9.2
+      "start": 8.24,
+      "end": 8.5
     },
     {
       "word": "a",
-      "start": 9.2,
-      "end": 9.4
+      "start": 8.5,
+      "end": 8.68
     },
     {
       "word": "separate",
-      "start": 9.4,
-      "end": 9.74
+      "start": 8.68,
+      "end": 9.1
     },
     {
       "word": "backup.",
-      "start": 9.74,
-      "end": 10.06
+      "start": 9.1,
+      "end": 9.52
     },
     {
       "word": "A",
-      "start": 11.0,
-      "end": 11.08
+      "start": 10.38,
+      "end": 10.42
     },
     {
       "word": "backup",
-      "start": 11.08,
-      "end": 11.34
+      "start": 10.42,
+      "end": 10.78
     },
     {
       "word": "is",
-      "start": 11.34,
-      "end": 11.78
+      "start": 10.78,
+      "end": 11.18
     },
     {
       "word": "another",
-      "start": 11.78,
-      "end": 12.08
+      "start": 11.18,
+      "end": 11.54
     },
     {
       "word": "recovery",
-      "start": 12.08,
-      "end": 12.46
+      "start": 11.54,
+      "end": 12.08
     },
     {
       "word": "copy,",
-      "start": 12.46,
-      "end": 13.14
+      "start": 12.08,
+      "end": 12.88
     },
     {
       "word": "and",
-      "start": 13.62,
-      "end": 13.84
+      "start": 12.88,
+      "end": 13.1
     },
     {
       "word": "version",
-      "start": 13.84,
-      "end": 14.08
+      "start": 13.1,
+      "end": 13.38
     },
     {
       "word": "history",
-      "start": 14.08,
-      "end": 14.52
+      "start": 13.38,
+      "end": 14.34
     },
     {
       "word": "may",
-      "start": 14.52,
-      "end": 14.94
+      "start": 14.58,
+      "end": 14.96
     },
     {
       "word": "help",
-      "start": 14.94,
-      "end": 15.24
+      "start": 14.96,
+      "end": 15.26
     },
     {
       "word": "you",
-      "start": 15.24,
-      "end": 15.44
+      "start": 15.26,
+      "end": 15.48
     },
     {
       "word": "recover",
-      "start": 15.44,
-      "end": 15.7
+      "start": 15.48,
+      "end": 15.8
     },
     {
       "word": "earlier",
-      "start": 15.7,
-      "end": 16.22
+      "start": 15.8,
+      "end": 16.56
     },
     {
       "word": "content",
-      "start": 16.22,
-      "end": 16.98
+      "start": 16.56,
+      "end": 17.16
     },
     {
       "word": "when",
-      "start": 16.98,
-      "end": 17.66
+      "start": 17.16,
+      "end": 17.6
     },
     {
       "word": "the",
-      "start": 17.66,
+      "start": 17.6,
       "end": 17.8
     },
     {
       "word": "service",
       "start": 17.8,
-      "end": 18.1
+      "end": 18.24
     },
     {
       "word": "supports",
-      "start": 18.1,
-      "end": 18.46
+      "start": 18.24,
+      "end": 18.74
     },
     {
       "word": "it.",
-      "start": 18.46,
-      "end": 18.88
+      "start": 18.74,
+      "end": 19.18
     }
   ]
 }

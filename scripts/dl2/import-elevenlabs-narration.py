@@ -1,6 +1,6 @@
 """Import locally saved ElevenLabs MCP takes; never request or read API credentials.
 
-Generate one MP3 per elevenlabs-source/week-NN/beat-NN directory using the
+Generate one MP3 per elevenlabs-britt/week-NN/beat-NN directory using the
 parameters below and the matching beats.json text. Existing receipt hashes bind
 those local source files to the script and prevent accidental stale reuse.
 """
@@ -13,9 +13,9 @@ from pathlib import Path
 import soundfile as sf
 
 ROOT = Path('video/digital-literacy-2')
-PARAMETERS = dict(model='eleven_multilingual_v2', voice='EXAVITQu4vr4xnSDxMaL',
-                  voiceName='Sarah - Mature, Reassuring, Confident', speed=0.9,
-                  stability=0.65, similarityBoost=0.75, style=0,
+PARAMETERS = dict(model='eleven_multilingual_v2', voice='iKrofGyA12WC0e6AhZ8B',
+                  voiceName='Britt - Mild Appalachian Male Voice', speed=0.95,
+                  stability=0.5, similarityBoost=0.8, style=0.1,
                   useSpeakerBoost=True, language='en', outputFormat='mp3_44100_128')
 
 
@@ -28,7 +28,7 @@ jobs = []
 for folder in sorted(ROOT.glob('week-*/narration')):
   beats = json.loads((folder / 'beats.json').read_text())
   for beat in beats:
-    source_dir = ROOT / 'elevenlabs-source' / folder.parent.name / beat['id']
+    source_dir = ROOT / 'elevenlabs-britt' / folder.parent.name / beat['id']
     files = list(source_dir.glob('*.mp3'))
     if len(files) != 1:
       raise RuntimeError(f'{source_dir}: expected exactly one generated source MP3')

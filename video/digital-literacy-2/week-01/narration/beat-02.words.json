@@ -1,223 +1,223 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "b8ed090d2135611c9c95a9d8426cf0ce6347d44e8df1c53f37c056d9eb033b04",
+  "wavSha256": "9e9ae99e303f86f45c1f2384e288a8b5a1c394f9029beff6bb7793ee495ef106",
   "textSha256": "590641ea051fae16007aa362068ea3ee9912f3285e30e2944622a48e440817fa",
   "matchRatio": 0.9534883720930233,
   "words": [
     {
       "word": "Browser",
       "start": 0.0,
-      "end": 0.2
+      "end": 0.24
     },
     {
       "word": "zoom",
-      "start": 0.2,
-      "end": 0.66
+      "start": 0.24,
+      "end": 0.76
     },
     {
       "word": "makes",
-      "start": 0.66,
-      "end": 1.02
+      "start": 0.76,
+      "end": 1.18
     },
     {
       "word": "a",
-      "start": 1.02,
-      "end": 1.16
+      "start": 1.18,
+      "end": 1.38
     },
     {
       "word": "webpage",
-      "start": 1.16,
-      "end": 1.66
+      "start": 1.38,
+      "end": 1.96
     },
     {
       "word": "larger",
-      "start": 1.66,
-      "end": 2.08
+      "start": 1.96,
+      "end": 2.44
     },
     {
       "word": "or",
-      "start": 2.08,
-      "end": 2.62
+      "start": 2.44,
+      "end": 2.84
     },
     {
       "word": "smaller.",
-      "start": 2.62,
-      "end": 3.04
+      "start": 2.84,
+      "end": 3.28
     },
     {
       "word": "Display",
-      "start": 4.32,
-      "end": 4.32
+      "start": 3.74,
+      "end": 3.98
     },
     {
       "word": "scaling",
-      "start": 4.32,
-      "end": 4.66
+      "start": 3.98,
+      "end": 4.34
     },
     {
       "word": "affects",
-      "start": 4.66,
-      "end": 5.18
+      "start": 4.34,
+      "end": 4.94
     },
     {
       "word": "the",
-      "start": 5.18,
-      "end": 5.52
+      "start": 4.94,
+      "end": 5.24
     },
     {
       "word": "wider",
-      "start": 5.52,
-      "end": 5.76
+      "start": 5.24,
+      "end": 5.48
     },
     {
       "word": "desktop.",
-      "start": 5.76,
-      "end": 6.14
+      "start": 5.48,
+      "end": 5.98
     },
     {
       "word": "If",
-      "start": 7.22,
-      "end": 7.24
+      "start": 6.6,
+      "end": 6.62
     },
     {
       "word": "only",
-      "start": 7.24,
-      "end": 7.44
+      "start": 6.62,
+      "end": 6.84
     },
     {
       "word": "the",
-      "start": 7.44,
-      "end": 7.66
+      "start": 6.84,
+      "end": 7.12
     },
     {
       "word": "webpage",
-      "start": 7.66,
-      "end": 8.16
+      "start": 7.12,
+      "end": 7.7
     },
     {
       "word": "is",
-      "start": 8.16,
-      "end": 8.34
+      "start": 7.7,
+      "end": 7.92
     },
     {
       "word": "difficult",
-      "start": 8.34,
-      "end": 8.72
+      "start": 7.92,
+      "end": 8.38
     },
     {
       "word": "to",
-      "start": 8.72,
-      "end": 8.94
+      "start": 8.38,
+      "end": 8.76
     },
     {
       "word": "read,",
-      "start": 8.94,
-      "end": 9.16
+      "start": 8.76,
+      "end": 9.04
     },
     {
       "word": "try",
-      "start": 9.68,
-      "end": 9.82
+      "start": 9.34,
+      "end": 9.46
     },
     {
       "word": "browser",
-      "start": 9.82,
-      "end": 10.14
+      "start": 9.46,
+      "end": 9.8
     },
     {
       "word": "zoom",
-      "start": 10.14,
-      "end": 10.66
+      "start": 9.8,
+      "end": 10.4
     },
     {
       "word": "first.",
-      "start": 10.66,
-      "end": 11.04
+      "start": 10.4,
+      "end": 10.88
     },
     {
       "word": "Use",
-      "start": 12.14,
-      "end": 12.14
+      "start": 11.92,
+      "end": 11.92
     },
     {
       "word": "the",
-      "start": 12.14,
-      "end": 12.28
+      "start": 11.92,
+      "end": 12.14
     },
     {
       "word": "text",
-      "start": 12.28,
-      "end": 12.5
+      "start": 12.14,
+      "end": 12.36
     },
     {
       "word": "size",
-      "start": 12.5,
-      "end": 12.96
+      "start": 12.36,
+      "end": 12.78
     },
     {
       "word": "controls",
-      "start": 12.96,
-      "end": 13.32
+      "start": 12.78,
+      "end": 13.1
     },
     {
       "word": "when",
-      "start": 13.32,
-      "end": 13.88
+      "start": 13.1,
+      "end": 13.66
     },
     {
       "word": "they",
-      "start": 13.88,
-      "end": 14.02
+      "start": 13.66,
+      "end": 13.86
     },
     {
       "word": "are",
-      "start": 14.02,
-      "end": 14.14
+      "start": 13.86,
+      "end": 14.04
     },
     {
       "word": "available,",
-      "start": 14.14,
-      "end": 14.56
+      "start": 14.04,
+      "end": 14.48
     },
     {
       "word": "and",
-      "start": 15.28,
-      "end": 15.38
+      "start": 14.48,
+      "end": 14.88
     },
     {
       "word": "check",
-      "start": 15.38,
-      "end": 15.58
+      "start": 14.88,
+      "end": 15.12
     },
     {
       "word": "that",
-      "start": 15.58,
-      "end": 15.82
+      "start": 15.12,
+      "end": 15.36
     },
     {
       "word": "buttons",
-      "start": 15.82,
-      "end": 16.06
+      "start": 15.36,
+      "end": 15.64
     },
     {
       "word": "and",
-      "start": 16.06,
-      "end": 16.5
+      "start": 15.64,
+      "end": 16.06
     },
     {
       "word": "instructions",
-      "start": 16.5,
-      "end": 16.86
+      "start": 16.06,
+      "end": 16.52
     },
     {
       "word": "remain",
-      "start": 16.86,
-      "end": 17.48
+      "start": 16.52,
+      "end": 17.22
     },
     {
       "word": "usable.",
-      "start": 17.48,
-      "end": 17.86
+      "start": 17.22,
+      "end": 17.68
     }
   ]
 }

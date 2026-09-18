@@ -1,7 +1,7 @@
 ---
 format: 1280x720
 mode: autonomous
-duration: 106.089s
+duration: 105.587s
 message: Collaborate without confusion
 audience: adult veteran learners
 ---
@@ -12,52 +12,52 @@ audience: adult veteran learners
 - duration: 19.662s
 - status: animated
 - transition_in: cut
-- scene: Show the decision labels in their narrated order.
+- scene: Demonstrate the task with a topic-specific software model and word-timed state changes.
 - voiceover: "A shared file works better when people know their roles. Choose an owner who makes final decisions, a writer who drafts, and a reviewer who gives feedback. Agree on where the common copy lives and what finished means before several people begin editing."
 - blueprint: compose
 
-Scene 1 (0–19.662s): VUB title panel and ordered labels; each label receives emphasis as the explanation develops. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
+Scene 1 (0–19.662s): Original software demonstration; state changes follow the recognized narration anchors. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
 ## Frame 2 — Choose when to work
 
 - src: compositions/frames/scene-2.html
-- duration: 20.105s
+- duration: 20.094s
 - status: animated
 - transition_in: cut
-- scene: Show the decision labels in their narrated order.
+- scene: Demonstrate the task with a topic-specific software model and word-timed state changes.
 - voiceover: "Working on the same document during a live call is synchronous collaboration. Leaving comments for someone to read later is asynchronous collaboration. Choose based on schedules and the decision needed. For later feedback, include enough context that the writer can act without another meeting."
 - blueprint: compose
 
-Scene 1 (0–20.105s): VUB title panel and ordered labels; each label receives emphasis as the explanation develops. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
+Scene 1 (0–20.094s): Original software demonstration; state changes follow the recognized narration anchors. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
 ## Frame 3 — Make feedback specific
 
 - src: compositions/frames/scene-3.html
-- duration: 23.086s
+- duration: 23.072s
 - status: animated
 - transition_in: cut
-- scene: Show the decision labels in their narrated order.
+- scene: Demonstrate the task with a topic-specific software model and word-timed state changes.
 - voiceover: "Helpful feedback names a change and its purpose. You might write: add the contact number after the steps so readers can find help. The writer can accept the idea, ask a question, or explain a different choice. A comment about the work is more useful than a judgment about the person."
 - blueprint: compose
 
-Scene 1 (0–23.086s): VUB title panel and ordered labels; each label receives emphasis as the explanation develops. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
+Scene 1 (0–23.072s): Original software demonstration; state changes follow the recognized narration anchors. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
 ## Frame 4 — Respect the meeting
 
 - src: compositions/frames/scene-4.html
-- duration: 20.569s
+- duration: 20.092s
 - status: animated
 - transition_in: cut
-- scene: Show the decision labels in their narrated order.
+- scene: Demonstrate the task with a topic-specific software model and word-timed state changes.
 - voiceover: "Before a meeting, test the sound and choose the correct microphone. Mute when appropriate, use the agreed chat or raise-hand tools, and ask before recording. In a webinar, the host may control who can speak. Follow the event's instructions and respect other participants."
 - blueprint: compose
 
-Scene 1 (0–20.569s): VUB title panel and ordered labels; each label receives emphasis as the explanation develops. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
+Scene 1 (0–20.092s): Original software demonstration; state changes follow the recognized narration anchors. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
 ## Frame 5 — Leave a clear next step
 
 - src: compositions/frames/scene-5.html
 - duration: 22.667s
 - status: animated
 - transition_in: cut
-- scene: Show the decision labels in their narrated order.
+- scene: Demonstrate the task with a topic-specific software model and word-timed state changes.
 - voiceover: "Draft a fictional message asking a partner to review your handout. Use a specific subject, one clear request, and a reasonable response time. Choose feedback access when that fits. After the review, record the decision and verify the final file. No real message needs to be sent for this practice."
 - blueprint: compose
 
-Scene 1 (0–22.667s): VUB title panel and ordered labels; each label receives emphasis as the explanation develops. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.
+Scene 1 (0–22.667s): Original software demonstration; state changes follow the recognized narration anchors. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.

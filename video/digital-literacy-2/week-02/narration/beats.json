@@ -7,8 +7,8 @@
       "Cloud account"
     ],
     "text": "A file on this computer may not be available on another computer. A cloud service stores a copy under an account. Before switching devices, check that the latest changes have finished saving or syncing, and confirm which account owns or controls the file.",
-    "window": 19.671,
-    "audioDuration": 18.421337868480727,
+    "window": 19.654,
+    "audioDuration": 18.40358276643991,
     "start": 0.01
   },
   {
@@ -20,9 +20,9 @@
       "Editor: change"
     ],
     "text": "Choose the smallest permission that lets the other person do the task. A viewer reads. A commenter can suggest wording when the service supports comments. An editor can change the content. Check the recipient carefully, then ask them to verify that the file opens.",
-    "window": 20.099,
-    "audioDuration": 18.84875283446712,
-    "start": 19.681
+    "window": 20.077,
+    "audioDuration": 18.82655328798186,
+    "start": 19.664
   },
   {
     "id": "beat-03",
@@ -33,9 +33,9 @@
       "Keep a recovery plan"
     ],
     "text": "Sync carries changes between a device and an online service. It may also carry a deletion. That is why sync alone is not a separate backup. A backup is another recovery copy, and version history may help you recover earlier content when the service supports it.",
-    "window": 20.476,
-    "audioDuration": 19.22612244897959,
-    "start": 39.78
+    "window": 20.957,
+    "audioDuration": 19.707097505668933,
+    "start": 39.741
   },
   {
     "id": "beat-04",
@@ -45,9 +45,9 @@
       "Changed content: version history"
     ],
     "text": "If the whole file was deleted, check the trash or recycle bin. If the file is still there but its content changed, inspect version history. Preview the earlier version before restoring it, and coordinate with collaborators so you do not overwrite work they need.",
-    "window": 20.091,
-    "audioDuration": 18.840612244897958,
-    "start": 60.256
+    "window": 20.075,
+    "audioDuration": 18.82455782312925,
+    "start": 60.698
   },
   {
     "id": "beat-05",
@@ -58,8 +58,8 @@
       "Limited access"
     ],
     "text": "Your classmate should suggest clearer wording without rewriting your handout directly. Which permission fits? Pause and decide. Commenter access fits when it is available. Try that choice in the course simulator, explain your reason, and keep all practice records fictional.",
-    "window": 18.4,
-    "audioDuration": 17.149886621315193,
-    "start": 80.347
+    "window": 18.379,
+    "audioDuration": 17.128775510204083,
+    "start": 80.773
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T13:55:15.041Z",
+  "generatedAt": "2026-09-18T14:35:55.450Z",
   "project": "week-06",
   "summary": {
     "passed": 5,
@@ -10,12 +10,12 @@
       "id": "beat-01",
       "pass": true,
       "metrics": {
-        "seconds": 18.94,
-        "window": 20.151,
+        "seconds": 19.3,
+        "window": 20.516,
         "words": 45,
-        "wpm": 146,
-        "leadingSilence": 0.17,
-        "trailingSilence": 0.25,
+        "wpm": 142,
+        "leadingSilence": 0,
+        "trailingSilence": 0.26,
         "requestedBreaks": []
       },
       "failures": [],
@@ -25,12 +25,12 @@
       "id": "beat-02",
       "pass": true,
       "metrics": {
-        "seconds": 18.05,
-        "window": 19.266,
+        "seconds": 18.02,
+        "window": 19.237,
         "words": 42,
-        "wpm": 143,
-        "leadingSilence": 0.16,
-        "trailingSilence": 0.21,
+        "wpm": 142,
+        "leadingSilence": 0,
+        "trailingSilence": 0.31,
         "requestedBreaks": []
       },
       "failures": [],
@@ -40,12 +40,12 @@
       "id": "beat-03",
       "pass": true,
       "metrics": {
-        "seconds": 20.74,
-        "window": 21.962,
+        "seconds": 20.58,
+        "window": 21.808,
         "words": 48,
-        "wpm": 141,
+        "wpm": 143,
         "leadingSilence": 0,
-        "trailingSilence": 0.26,
+        "trailingSilence": 0.47,
         "requestedBreaks": []
       },
       "failures": [],
@@ -55,12 +55,12 @@
       "id": "beat-04",
       "pass": true,
       "metrics": {
-        "seconds": 19.12,
-        "window": 20.337,
+        "seconds": 19.72,
+        "window": 20.938,
         "words": 46,
-        "wpm": 146,
-        "leadingSilence": 0.17,
-        "trailingSilence": 0,
+        "wpm": 144,
+        "leadingSilence": 0,
+        "trailingSilence": 0.61,
         "requestedBreaks": []
       },
       "failures": [],
@@ -70,12 +70,12 @@
       "id": "beat-05",
       "pass": true,
       "metrics": {
-        "seconds": 22.33,
-        "window": 23.541,
+        "seconds": 22.73,
+        "window": 23.947,
         "words": 52,
         "wpm": 140,
         "leadingSilence": 0,
-        "trailingSilence": 0,
+        "trailingSilence": 0.5,
         "requestedBreaks": []
       },
       "failures": [],

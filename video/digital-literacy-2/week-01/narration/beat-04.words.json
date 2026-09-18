@@ -1,17 +1,17 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "8c3e7647a4d20db80fe9cd8d7e6d7d837f75a83f0603c531bb23f76b810e5138",
+  "wavSha256": "d839ae692663a34695d97aabc1fa4447660bf0d2056b9f949b335dabb3a594b4",
   "textSha256": "5bca34a5dedbec82a4efadd8a9839a8369d25f2d9dcc630959af6d3bd82ab796",
-  "matchRatio": 1.0,
+  "matchRatio": 0.9767441860465116,
   "words": [
     {
       "word": "A",
       "start": 0.0,
-      "end": 0.08
+      "end": 0.1
     },
     {
       "word": "practice",
-      "start": 0.08,
+      "start": 0.1,
       "end": 0.44
     },
     {
@@ -22,202 +22,202 @@
     {
       "word": "entry",
       "start": 0.84,
-      "end": 1.3
+      "end": 1.18
     },
     {
       "word": "needs",
-      "start": 1.3,
-      "end": 1.82
+      "start": 1.18,
+      "end": 1.76
     },
     {
       "word": "a",
-      "start": 1.82,
-      "end": 1.96
+      "start": 1.76,
+      "end": 1.88
     },
     {
       "word": "title,",
-      "start": 1.96,
-      "end": 2.3
+      "start": 1.88,
+      "end": 2.22
     },
     {
       "word": "a",
-      "start": 2.96,
-      "end": 2.98
+      "start": 2.64,
+      "end": 2.66
     },
     {
       "word": "start",
-      "start": 2.98,
-      "end": 3.26
+      "start": 2.66,
+      "end": 3.0
     },
     {
       "word": "and",
-      "start": 3.26,
-      "end": 3.64
+      "start": 3.0,
+      "end": 3.52
     },
     {
       "word": "end,",
-      "start": 3.64,
+      "start": 3.52,
       "end": 3.9
     },
     {
       "word": "a",
-      "start": 4.58,
-      "end": 4.62
+      "start": 4.44,
+      "end": 4.46
     },
     {
       "word": "location,",
-      "start": 4.62,
-      "end": 5.02
+      "start": 4.46,
+      "end": 4.88
     },
     {
       "word": "and",
-      "start": 5.76,
-      "end": 5.96
+      "start": 5.5,
+      "end": 5.54
     },
     {
       "word": "a",
-      "start": 5.96,
-      "end": 6.06
+      "start": 5.54,
+      "end": 5.68
     },
     {
       "word": "useful",
-      "start": 6.06,
-      "end": 6.38
+      "start": 5.68,
+      "end": 5.94
     },
     {
       "word": "reminder.",
-      "start": 6.38,
-      "end": 6.88
+      "start": 5.94,
+      "end": 6.6
     },
     {
       "word": "If",
-      "start": 7.88,
-      "end": 7.9
+      "start": 7.44,
+      "end": 7.46
     },
     {
       "word": "a",
-      "start": 7.9,
-      "end": 8.02
+      "start": 7.46,
+      "end": 7.58
     },
     {
       "word": "partner",
-      "start": 8.02,
-      "end": 8.3
+      "start": 7.58,
+      "end": 7.88
     },
     {
       "word": "only",
-      "start": 8.3,
-      "end": 8.74
+      "start": 7.88,
+      "end": 8.3
     },
     {
       "word": "needs",
-      "start": 8.74,
-      "end": 9.28
+      "start": 8.3,
+      "end": 8.82
     },
     {
       "word": "your",
-      "start": 9.28,
-      "end": 9.42
+      "start": 8.82,
+      "end": 8.96
     },
     {
       "word": "availability,",
-      "start": 9.42,
-      "end": 9.86
+      "start": 8.96,
+      "end": 9.48
     },
     {
       "word": "look",
-      "start": 10.76,
-      "end": 10.94
+      "start": 10.38,
+      "end": 10.54
     },
     {
       "word": "for",
-      "start": 10.94,
-      "end": 11.22
+      "start": 10.54,
+      "end": 10.84
     },
     {
       "word": "free",
-      "start": 11.22,
-      "end": 11.62
+      "start": 10.84,
+      "end": 11.22
     },
     {
       "word": "or",
-      "start": 11.62,
-      "end": 11.92
+      "start": 11.22,
+      "end": 11.36
     },
     {
       "word": "busy",
-      "start": 11.92,
-      "end": 12.2
+      "start": 11.36,
+      "end": 11.64
     },
     {
       "word": "sharing.",
-      "start": 12.2,
-      "end": 12.76
+      "start": 11.64,
+      "end": 12.22
     },
     {
       "word": "Check",
-      "start": 13.44,
-      "end": 13.62
+      "start": 12.74,
+      "end": 12.84
     },
     {
       "word": "the",
-      "start": 13.62,
-      "end": 13.84
+      "start": 12.84,
+      "end": 13.08
     },
     {
       "word": "actual",
-      "start": 13.84,
-      "end": 14.24
+      "start": 13.08,
+      "end": 13.42
     },
     {
       "word": "options",
-      "start": 14.24,
-      "end": 14.72
+      "start": 13.42,
+      "end": 14.02
     },
     {
       "word": "instead",
-      "start": 14.72,
-      "end": 15.2
+      "start": 14.02,
+      "end": 14.64
     },
     {
       "word": "of",
-      "start": 15.2,
-      "end": 15.54
+      "start": 14.64,
+      "end": 14.92
     },
     {
       "word": "assuming",
-      "start": 15.54,
-      "end": 15.82
+      "start": 14.92,
+      "end": 15.34
     },
     {
       "word": "every",
-      "start": 15.82,
-      "end": 16.24
+      "start": 15.34,
+      "end": 15.76
     },
     {
       "word": "service",
-      "start": 16.24,
-      "end": 16.74
+      "start": 15.76,
+      "end": 16.28
     },
     {
       "word": "shares",
-      "start": 16.74,
-      "end": 17.08
+      "start": 16.28,
+      "end": 16.62
     },
     {
       "word": "the",
-      "start": 17.08,
-      "end": 17.38
+      "start": 16.62,
+      "end": 16.88
     },
     {
       "word": "same",
-      "start": 17.38,
-      "end": 17.6
+      "start": 16.88,
+      "end": 17.16
     },
     {
       "word": "details.",
-      "start": 17.6,
-      "end": 18.02
+      "start": 17.16,
+      "end": 17.56
     }
   ]
 }

@@ -1,48 +1,48 @@
 {
   "formatVersion": 1,
-  "voiceEngine": "ElevenLabs eleven_multilingual_v2, Sarah (EXAVITQu4vr4xnSDxMaL); pace adjusted to 135\u2013145 wpm",
+  "voiceEngine": "ElevenLabs eleven_multilingual_v2, Britt (iKrofGyA12WC0e6AhZ8B); pace adjusted to 135\u2013145 wpm",
   "renderer": "HyperFrames 0.8.47, local GSAP 3.14.2",
   "videos": [
     {
       "path": "courses/digital-literacy-2/media/week-01.mp4",
-      "sha256": "c48a893181901a03516dbfd3839fc5da37584b806532e129ed39956e00bf039e",
-      "durationSeconds": 98.25,
-      "bytes": 2875248,
+      "sha256": "02908de6dc55ba156771ab5740c03a4c708cdba0461357498c481c7b57a58232",
+      "durationSeconds": 97.459,
+      "bytes": 2890155,
       "captions": "courses/digital-literacy-2/media/week-01.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-02.mp4",
-      "sha256": "2542fcd8fc9e573c78572443f0154b84b4880b1bdc7f59291d60ed1b5fe69b18",
-      "durationSeconds": 98.75,
-      "bytes": 2893484,
+      "sha256": "d19776b1afe5cfb52b1533bfd26fea2f64000fece0e19f72b0091befb4131ed4",
+      "durationSeconds": 99.167,
+      "bytes": 2904236,
       "captions": "courses/digital-literacy-2/media/week-02.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-03.mp4",
-      "sha256": "9e06365b63f76a9b2be5181fadc518136157d973a5d99b9e895a4a2a2a88cc79",
-      "durationSeconds": 103.042,
-      "bytes": 2990011,
+      "sha256": "27fba31f6598bbb8788c53aaceba2ec2714d4165f6045bd72a7ea8e3e91bc1ea",
+      "durationSeconds": 103.5,
+      "bytes": 3078117,
       "captions": "courses/digital-literacy-2/media/week-03.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-04.mp4",
-      "sha256": "96766b095ab3a45c0d57389019685b56a89f0cac4a20f77d46982d980a26e046",
-      "durationSeconds": 106.125,
-      "bytes": 3105312,
+      "sha256": "366e20ad12a5af935f445aa052c78a5b291b37cee39619def92979dda36902ce",
+      "durationSeconds": 105.625,
+      "bytes": 3175826,
       "captions": "courses/digital-literacy-2/media/week-04.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-05.mp4",
-      "sha256": "997cd0dc277df6f315985cb02e4fb03f09cc23d648dbd09e38d4bade6b8b41d7",
-      "durationSeconds": 100.959,
-      "bytes": 3024110,
+      "sha256": "203e19d14ef6def43780c5eac84070cb2a8e4c61ef5c3f5a491201a9294a9f3c",
+      "durationSeconds": 101.334,
+      "bytes": 3029607,
       "captions": "courses/digital-literacy-2/media/week-05.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-06.mp4",
-      "sha256": "f0eb0710eeea3b10a29424aba63ef17516deb2d63e66c46c9eafe8bfde8e98e2",
-      "durationSeconds": 105.292,
-      "bytes": 3121316,
+      "sha256": "6318238fcfdadd9f4f777d16516471c40ee55d1bae50438ed24c6dba372b68f4",
+      "durationSeconds": 106.459,
+      "bytes": 3148924,
       "captions": "courses/digital-literacy-2/media/week-06.vtt"
     }
   ]

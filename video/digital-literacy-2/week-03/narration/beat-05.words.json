@@ -1,6 +1,6 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "c1c5f86bdb301441e8ff6e91786dc1b2099533b41687f7c00f9f49a3d6c0d011",
+  "wavSha256": "bcb57be0b93c6e9b22eade6a4675b7ae53a9d2024807ea127029add42e0721e5",
   "textSha256": "ed8d79fe5c90510df64178f303777075d43a46220046b7a4b153c7f47acce620",
   "matchRatio": 1.0,
   "words": [
@@ -12,227 +12,227 @@
     {
       "word": "a",
       "start": 0.28,
-      "end": 0.46
+      "end": 0.42
     },
     {
       "word": "small",
-      "start": 0.46,
-      "end": 0.72
+      "start": 0.42,
+      "end": 0.7
     },
     {
       "word": "resource",
-      "start": 0.72,
-      "end": 1.08
+      "start": 0.7,
+      "end": 1.16
     },
     {
       "word": "pack:",
-      "start": 1.08,
-      "end": 1.58
+      "start": 1.16,
+      "end": 1.76
     },
     {
       "word": "a",
-      "start": 2.2,
-      "end": 2.22
+      "start": 2.06,
+      "end": 2.12
     },
     {
       "word": "structured",
-      "start": 2.22,
+      "start": 2.12,
       "end": 2.48
     },
     {
       "word": "handout,",
       "start": 2.48,
-      "end": 3.1
+      "end": 3.24
     },
     {
       "word": "a",
-      "start": 3.48,
-      "end": 3.68
+      "start": 3.5,
+      "end": 3.56
     },
     {
       "word": "checked",
-      "start": 3.68,
-      "end": 3.82
+      "start": 3.56,
+      "end": 3.8
     },
     {
       "word": "workbook,",
-      "start": 3.82,
-      "end": 4.4
+      "start": 3.8,
+      "end": 4.48
     },
     {
       "word": "and",
-      "start": 4.78,
-      "end": 5.02
+      "start": 4.72,
+      "end": 4.76
     },
     {
       "word": "three",
-      "start": 5.02,
-      "end": 5.32
+      "start": 4.76,
+      "end": 5.06
     },
     {
       "word": "clear",
-      "start": 5.32,
-      "end": 5.7
+      "start": 5.06,
+      "end": 5.42
     },
     {
       "word": "slides.",
-      "start": 5.7,
-      "end": 6.32
+      "start": 5.42,
+      "end": 5.96
     },
     {
       "word": "Credit",
-      "start": 7.12,
-      "end": 7.26
+      "start": 6.8,
+      "end": 6.8
     },
     {
       "word": "any",
-      "start": 7.26,
-      "end": 7.62
+      "start": 6.8,
+      "end": 7.16
     },
     {
       "word": "reused",
-      "start": 7.62,
-      "end": 8.06
+      "start": 7.16,
+      "end": 7.58
     },
     {
       "word": "material",
-      "start": 8.06,
-      "end": 8.66
+      "start": 7.58,
+      "end": 8.24
     },
     {
       "word": "according",
-      "start": 8.66,
-      "end": 9.22
+      "start": 8.24,
+      "end": 8.72
     },
     {
       "word": "to",
-      "start": 9.22,
-      "end": 9.56
+      "start": 8.72,
+      "end": 9.14
     },
     {
       "word": "its",
-      "start": 9.56,
-      "end": 9.7
+      "start": 9.14,
+      "end": 9.32
     },
     {
       "word": "license.",
-      "start": 9.7,
-      "end": 10.06
+      "start": 9.32,
+      "end": 9.74
     },
     {
       "word": "Show",
-      "start": 10.94,
-      "end": 11.0
+      "start": 10.52,
+      "end": 10.6
     },
     {
       "word": "a",
-      "start": 11.0,
-      "end": 11.1
+      "start": 10.6,
+      "end": 10.72
     },
     {
       "word": "partner",
-      "start": 11.1,
-      "end": 11.36
+      "start": 10.72,
+      "end": 11.1
     },
     {
       "word": "the",
-      "start": 11.36,
-      "end": 11.58
+      "start": 11.1,
+      "end": 11.32
     },
     {
       "word": "calculation",
-      "start": 11.58,
-      "end": 12.04
+      "start": 11.32,
+      "end": 11.82
     },
     {
       "word": "and",
-      "start": 12.04,
-      "end": 12.92
+      "start": 11.82,
+      "end": 12.46
     },
     {
       "word": "the",
-      "start": 12.92,
-      "end": 13.08
+      "start": 12.46,
+      "end": 12.64
     },
     {
       "word": "exported",
-      "start": 13.08,
-      "end": 13.34
+      "start": 12.64,
+      "end": 12.9
     },
     {
       "word": "handout.",
-      "start": 13.34,
-      "end": 14.14
+      "start": 12.9,
+      "end": 13.78
     },
     {
       "word": "Ask",
-      "start": 14.72,
-      "end": 14.92
+      "start": 14.1,
+      "end": 14.18
     },
     {
       "word": "them",
-      "start": 14.92,
-      "end": 15.16
+      "start": 14.18,
+      "end": 14.52
     },
     {
       "word": "to",
-      "start": 15.16,
-      "end": 15.32
+      "start": 14.52,
+      "end": 14.66
     },
     {
       "word": "find",
-      "start": 15.32,
-      "end": 15.54
+      "start": 14.66,
+      "end": 14.94
     },
     {
       "word": "the",
-      "start": 15.54,
-      "end": 15.68
+      "start": 14.94,
+      "end": 15.14
     },
     {
       "word": "next",
-      "start": 15.68,
-      "end": 15.9
+      "start": 15.14,
+      "end": 15.38
     },
     {
       "word": "action",
-      "start": 15.9,
-      "end": 16.34
+      "start": 15.38,
+      "end": 16.02
     },
     {
       "word": "without",
-      "start": 16.34,
-      "end": 16.5
+      "start": 16.02,
+      "end": 16.22
     },
     {
       "word": "your",
-      "start": 16.5,
-      "end": 16.84
+      "start": 16.22,
+      "end": 16.64
     },
     {
       "word": "help,",
-      "start": 16.84,
-      "end": 17.12
+      "start": 16.64,
+      "end": 16.98
     },
     {
       "word": "then",
-      "start": 17.64,
-      "end": 17.72
+      "start": 17.24,
+      "end": 17.36
     },
     {
       "word": "improve",
-      "start": 17.72,
-      "end": 18.02
+      "start": 17.36,
+      "end": 17.72
     },
     {
       "word": "anything",
-      "start": 18.02,
-      "end": 18.46
+      "start": 17.72,
+      "end": 18.3
     },
     {
       "word": "unclear.",
-      "start": 18.46,
-      "end": 18.98
+      "start": 18.58,
+      "end": 18.86
     }
   ]
 }

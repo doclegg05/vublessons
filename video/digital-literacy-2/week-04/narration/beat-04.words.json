@@ -1,223 +1,223 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "884e0bff24eb5da6e2385dd1d91dc57d2f72b459d78ea4857c14dbd5976bcaa7",
+  "wavSha256": "4e28ae3bbc6d74071cc52ba3cf07af3db92c58ed18cc00271fcedb5b3554261f",
   "textSha256": "450ac9ccf289cd61be61b2fc44455cff3eedf83f5ff1a7e8920961e0389e055e",
   "matchRatio": 0.9767441860465116,
   "words": [
     {
       "word": "Before",
       "start": 0.0,
-      "end": 0.3
+      "end": 0.32
     },
     {
       "word": "a",
-      "start": 0.3,
-      "end": 0.46
+      "start": 0.32,
+      "end": 0.48
     },
     {
       "word": "meeting,",
-      "start": 0.46,
-      "end": 0.76
+      "start": 0.48,
+      "end": 0.74
     },
     {
       "word": "test",
-      "start": 1.18,
-      "end": 1.42
+      "start": 0.74,
+      "end": 1.22
     },
     {
       "word": "the",
-      "start": 1.42,
-      "end": 1.7
+      "start": 1.22,
+      "end": 1.48
     },
     {
       "word": "sound",
-      "start": 1.7,
-      "end": 2.1
+      "start": 1.48,
+      "end": 1.82
     },
     {
       "word": "and",
-      "start": 2.1,
-      "end": 2.5
+      "start": 1.82,
+      "end": 2.14
     },
     {
       "word": "choose",
-      "start": 2.5,
-      "end": 2.84
+      "start": 2.14,
+      "end": 2.44
     },
     {
       "word": "the",
-      "start": 2.84,
-      "end": 3.12
+      "start": 2.44,
+      "end": 2.68
     },
     {
       "word": "correct",
-      "start": 3.12,
-      "end": 3.38
+      "start": 2.68,
+      "end": 2.92
     },
     {
       "word": "microphone.",
-      "start": 3.38,
-      "end": 4.1
+      "start": 2.92,
+      "end": 3.68
     },
     {
       "word": "Mute",
-      "start": 4.98,
-      "end": 5.22
+      "start": 4.42,
+      "end": 4.56
     },
     {
       "word": "when",
-      "start": 5.22,
-      "end": 5.4
+      "start": 4.56,
+      "end": 4.74
     },
     {
       "word": "appropriate,",
-      "start": 5.4,
-      "end": 5.78
+      "start": 4.74,
+      "end": 5.26
     },
     {
       "word": "use",
-      "start": 6.56,
-      "end": 6.66
+      "start": 5.9,
+      "end": 5.96
     },
     {
       "word": "the",
-      "start": 6.66,
-      "end": 6.86
+      "start": 5.96,
+      "end": 6.24
     },
     {
       "word": "agreed",
-      "start": 6.86,
-      "end": 7.14
+      "start": 6.24,
+      "end": 6.52
     },
     {
       "word": "chat",
-      "start": 7.14,
-      "end": 7.52
+      "start": 6.52,
+      "end": 6.94
     },
     {
       "word": "or",
-      "start": 7.52,
-      "end": 7.92
+      "start": 6.94,
+      "end": 7.42
     },
     {
       "word": "raise-hand",
-      "start": 7.92,
-      "end": 8.54
+      "start": 7.42,
+      "end": 8.06
     },
     {
       "word": "tools,",
-      "start": 8.54,
-      "end": 8.88
+      "start": 8.06,
+      "end": 8.4
     },
     {
       "word": "and",
-      "start": 8.88,
-      "end": 9.54
+      "start": 8.4,
+      "end": 8.94
     },
     {
       "word": "ask",
-      "start": 9.54,
-      "end": 9.84
+      "start": 8.94,
+      "end": 9.24
     },
     {
       "word": "before",
-      "start": 9.84,
-      "end": 10.18
+      "start": 9.24,
+      "end": 9.58
     },
     {
       "word": "recording.",
-      "start": 10.18,
-      "end": 10.86
+      "start": 9.58,
+      "end": 10.32
     },
     {
       "word": "In",
-      "start": 11.66,
-      "end": 11.7
+      "start": 11.02,
+      "end": 11.04
     },
     {
       "word": "a",
-      "start": 11.7,
-      "end": 11.78
+      "start": 11.04,
+      "end": 11.16
     },
     {
       "word": "webinar,",
-      "start": 11.78,
-      "end": 12.22
+      "start": 11.16,
+      "end": 11.74
     },
     {
       "word": "the",
-      "start": 12.66,
-      "end": 12.76
+      "start": 12.02,
+      "end": 12.1
     },
     {
       "word": "host",
-      "start": 12.76,
-      "end": 12.98
+      "start": 12.1,
+      "end": 12.34
     },
     {
       "word": "may",
-      "start": 12.98,
-      "end": 13.28
+      "start": 12.34,
+      "end": 12.64
     },
     {
       "word": "control",
-      "start": 13.28,
-      "end": 13.64
+      "start": 12.64,
+      "end": 13.04
     },
     {
       "word": "who",
-      "start": 13.64,
-      "end": 14.06
+      "start": 13.04,
+      "end": 13.4
     },
     {
       "word": "can",
-      "start": 14.06,
-      "end": 14.24
+      "start": 13.4,
+      "end": 13.62
     },
     {
       "word": "speak.",
-      "start": 14.24,
-      "end": 14.56
+      "start": 13.62,
+      "end": 14.0
     },
     {
       "word": "Follow",
-      "start": 15.66,
-      "end": 15.66
+      "start": 14.58,
+      "end": 14.58
     },
     {
       "word": "the",
-      "start": 15.66,
-      "end": 15.84
+      "start": 14.58,
+      "end": 14.86
     },
     {
       "word": "event's",
-      "start": 15.84,
-      "end": 16.04
+      "start": 14.86,
+      "end": 15.1
     },
     {
       "word": "instructions",
-      "start": 16.04,
-      "end": 16.56
+      "start": 15.38,
+      "end": 15.72
     },
     {
       "word": "and",
-      "start": 16.56,
-      "end": 17.22
+      "start": 16.38,
+      "end": 16.4
     },
     {
       "word": "respect",
-      "start": 17.22,
-      "end": 17.52
+      "start": 16.4,
+      "end": 16.8
     },
     {
       "word": "other",
-      "start": 17.52,
-      "end": 18.04
+      "start": 16.8,
+      "end": 17.2
     },
     {
       "word": "participants.",
-      "start": 18.04,
-      "end": 18.44
+      "start": 17.2,
+      "end": 17.96
     }
   ]
 }

@@ -1,223 +1,223 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "b494b60d204c580528eaf565a3a29347aeb2433591c7c705001adb2be33979d1",
+  "wavSha256": "c18bf18374ad18e1e72e56faacf133dd72cc3b4ed7641b15e929ec4fe396e6f8",
   "textSha256": "09e5ff8276471b9134b7d2cbe59520e1aecc344fa317d81f4865216b491ea3c1",
-  "matchRatio": 0.9767441860465116,
+  "matchRatio": 1.0,
   "words": [
     {
       "word": "A",
       "start": 0.0,
-      "end": 0.08
+      "end": 0.1
     },
     {
       "word": "file",
-      "start": 0.08,
-      "end": 0.42
+      "start": 0.1,
+      "end": 0.44
     },
     {
       "word": "on",
-      "start": 0.42,
+      "start": 0.44,
       "end": 0.7
     },
     {
       "word": "this",
       "start": 0.7,
-      "end": 0.84
+      "end": 0.86
     },
     {
       "word": "computer",
-      "start": 0.84,
-      "end": 1.36
+      "start": 0.86,
+      "end": 1.42
     },
     {
       "word": "may",
-      "start": 1.36,
-      "end": 1.92
+      "start": 1.42,
+      "end": 1.96
     },
     {
       "word": "not",
-      "start": 1.92,
-      "end": 2.16
+      "start": 1.96,
+      "end": 2.24
     },
     {
       "word": "be",
-      "start": 2.16,
-      "end": 2.36
+      "start": 2.24,
+      "end": 2.48
     },
     {
       "word": "available",
-      "start": 2.36,
-      "end": 2.72
+      "start": 2.48,
+      "end": 2.86
     },
     {
       "word": "on",
-      "start": 2.72,
-      "end": 3.28
+      "start": 2.86,
+      "end": 3.36
     },
     {
       "word": "another",
-      "start": 3.28,
-      "end": 3.58
+      "start": 3.36,
+      "end": 3.72
     },
     {
       "word": "computer.",
-      "start": 3.58,
-      "end": 4.02
+      "start": 3.72,
+      "end": 4.3
     },
     {
       "word": "A",
-      "start": 4.9,
-      "end": 4.98
+      "start": 4.7,
+      "end": 4.72
     },
     {
       "word": "cloud",
-      "start": 4.98,
-      "end": 5.16
+      "start": 4.72,
+      "end": 4.96
     },
     {
       "word": "service",
-      "start": 5.16,
-      "end": 5.7
+      "start": 4.96,
+      "end": 5.6
     },
     {
       "word": "stores",
-      "start": 5.7,
-      "end": 6.06
+      "start": 5.6,
+      "end": 5.94
     },
     {
       "word": "a",
-      "start": 6.06,
-      "end": 6.32
+      "start": 5.94,
+      "end": 6.28
     },
     {
       "word": "copy",
-      "start": 6.32,
-      "end": 6.66
+      "start": 6.28,
+      "end": 6.54
     },
     {
       "word": "under",
-      "start": 6.66,
-      "end": 7.02
+      "start": 6.54,
+      "end": 7.08
     },
     {
       "word": "an",
-      "start": 7.02,
-      "end": 7.16
+      "start": 7.08,
+      "end": 7.26
     },
     {
       "word": "account.",
-      "start": 7.16,
-      "end": 7.46
+      "start": 7.26,
+      "end": 7.56
     },
     {
       "word": "Before",
-      "start": 8.4,
-      "end": 8.56
+      "start": 8.32,
+      "end": 8.32
     },
     {
       "word": "switching",
-      "start": 8.56,
-      "end": 9.04
+      "start": 8.32,
+      "end": 8.94
     },
     {
       "word": "devices,",
-      "start": 9.04,
-      "end": 9.56
+      "start": 8.94,
+      "end": 9.6
     },
     {
       "word": "check",
-      "start": 10.26,
-      "end": 10.48
+      "start": 9.66,
+      "end": 10.16
     },
     {
       "word": "that",
-      "start": 10.48,
-      "end": 10.76
+      "start": 10.16,
+      "end": 10.48
     },
     {
       "word": "the",
-      "start": 10.76,
-      "end": 10.88
+      "start": 10.48,
+      "end": 10.64
     },
     {
       "word": "latest",
-      "start": 10.88,
-      "end": 11.22
+      "start": 10.64,
+      "end": 10.98
     },
     {
       "word": "changes",
-      "start": 11.22,
-      "end": 11.58
+      "start": 10.98,
+      "end": 11.42
     },
     {
       "word": "have",
-      "start": 11.58,
-      "end": 12.06
+      "start": 11.42,
+      "end": 11.88
     },
     {
       "word": "finished",
-      "start": 12.06,
-      "end": 12.4
+      "start": 11.88,
+      "end": 12.34
     },
     {
       "word": "saving",
-      "start": 12.4,
-      "end": 12.92
+      "start": 12.34,
+      "end": 12.86
     },
     {
       "word": "or",
-      "start": 12.92,
-      "end": 13.26
+      "start": 12.86,
+      "end": 13.24
     },
     {
       "word": "syncing,",
-      "start": 13.26,
-      "end": 14.32
+      "start": 13.24,
+      "end": 13.78
     },
     {
       "word": "and",
-      "start": 14.32,
-      "end": 14.54
+      "start": 13.78,
+      "end": 14.18
     },
     {
       "word": "confirm",
-      "start": 14.54,
-      "end": 14.94
+      "start": 14.18,
+      "end": 14.66
     },
     {
       "word": "which",
-      "start": 14.94,
-      "end": 15.34
+      "start": 14.66,
+      "end": 15.1
     },
     {
       "word": "account",
-      "start": 15.34,
-      "end": 15.64
+      "start": 15.1,
+      "end": 15.54
     },
     {
       "word": "owns",
-      "start": 15.64,
-      "end": 16.16
+      "start": 15.54,
+      "end": 16.06
     },
     {
       "word": "or",
-      "start": 16.16,
-      "end": 16.62
+      "start": 16.06,
+      "end": 16.64
     },
     {
       "word": "controls",
-      "start": 16.62,
-      "end": 16.92
+      "start": 16.64,
+      "end": 17.02
     },
     {
       "word": "the",
-      "start": 16.92,
-      "end": 17.44
+      "start": 17.02,
+      "end": 17.52
     },
     {
       "word": "file.",
-      "start": 17.44,
-      "end": 17.8
+      "start": 17.52,
+      "end": 17.88
     }
   ]
 }

@@ -1,5 +1,7 @@
 """Build reusable HyperFrames sources, matched caption tracks and media provenance."""
-import json,html,shutil,textwrap,sys
+import json,html,shutil,textwrap,sys,importlib.util
+from pathlib import Path
+spec=importlib.util.spec_from_file_location("video_scenes",Path(__file__).with_name("video-scenes.py"));visuals=importlib.util.module_from_spec(spec);spec.loader.exec_module(visuals)
 from pathlib import Path
 root=Path('video/digital-literacy-2');public=Path('courses/digital-literacy-2/media');public.mkdir(exist_ok=True)
 esc=lambda s:html.escape(str(s),quote=True)
@@ -16,17 +18,8 @@ for week in sorted(root.glob(sys.argv[1] if len(sys.argv)>1 else 'week-*')):
  for i,b in enumerate(beats):
   if 'audioDuration' not in b:raise RuntimeError('Wait for final audio generation')
   duration=b['window'];b['start']=round(start+0.01,3);cid=f'w{n}-scene-{i+1}';labels=b['labels'];labelhtml=''.join(f'<div class="point" id="{cid}-point-{j}"><span class="point-number">{j+1}</span><span>{esc(t)}</span></div>' for j,t in enumerate(labels))
-  # Intent: timed emphasis on a compact set of choices, with persistent scene progress.
-  tweens=''.join(f'tl.fromTo("#{cid}-point-{j}",{{opacity:1,x:12}},{{opacity:1,x:0,duration:0.8,ease:"power2.out"}},{round(1+j*(duration-3)/max(1,len(labels)),3)});' for j in range(len(labels)))
-  sub=f'''<template>
-<div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{duration}" data-width="1280" data-height="720" style="position:relative;width:1280px;height:720px;overflow:hidden">
-<style>
-#{cid} *{{box-sizing:border-box}}#{cid} .ground{{position:absolute;inset:0;background:#f5f7fa}}#{cid} .left{{position:absolute;left:0;top:0;width:520px;height:720px;background:#1b365d;color:white;padding:56px 44px}}#{cid} .seal{{width:64px;height:64px;object-fit:contain}}#{cid} .brand{{font-size:24px;font-weight:700;margin:18px 0 42px}}#{cid} h1{{font-size:50px;line-height:1.16;margin:0;font-weight:700;max-width:425px}}#{cid} .right{{position:absolute;left:555px;top:120px;width:665px;display:flex;flex-direction:column;gap:22px}}#{cid} .point{{display:flex;gap:20px;align-items:center;font-size:37px;line-height:1.35;color:#16243a;padding:18px 12px;border-bottom:2px solid #b5c9c5;min-height:100px}}#{cid} .point-number{{display:flex;flex:none;align-items:center;justify-content:center;width:52px;height:52px;background:#0f655f;color:white;border-radius:50%;font-size:28px;font-weight:700}}#{cid} .rail{{position:absolute;left:565px;right:70px;bottom:60px;height:7px;background:#cad8d6}}#{cid} .fill{{width:100%;height:7px;background:#0f655f;transform-origin:left center}}#{cid} .footer{{position:absolute;left:44px;bottom:44px;color:#f0d57c;font-size:22px}}#{cid} .scene-count{{position:absolute;right:70px;top:52px;color:#46566d;font-size:22px}}
-</style>
-<div class="ground"></div><div class="left"><img class="seal" src="assets/vub-seal.png" alt=""><div class="brand">VUB Learning · Level 2</div><h1>{esc(b['title'])}</h1><div class="footer">Week {n} · Try it. Check it. Explain it.</div></div><div class="scene-count">{i+1} / {len(beats)}</div><div class="right">{labelhtml}</div><div class="rail"><div class="fill" id="{cid}-fill"></div></div>
-<script>
-window.__timelines=window.__timelines||{{}};const tl=gsap.timeline({{paused:true}});{tweens}tl.fromTo("#{cid}-fill",{{scaleX:0}},{{scaleX:1,duration:{duration},ease:"none"}},0);window.__timelines["{cid}"]=tl;
-</script></div></template>'''
+  word_times=json.loads((week/f'narration/{b["id"]}.words.json').read_text())['words']
+  sub=visuals.scene(n,i,b,word_times)
   (week/f'compositions/frames/scene-{i+1}.html').write_text(sub)
   clips.append(f'<div class="clip" id="host-{cid}" data-composition-id="{cid}" data-composition-src="compositions/frames/scene-{i+1}.html" data-start="{start:.3f}" data-duration="{duration}" data-track-index="0" style="position:absolute;inset:0"></div>')
   audio.append(f'<audio class="clip" id="aud-{b["id"]}" src="narration/{b["id"]}.wav" data-start="{start+0.01:.3f}" data-duration="{b["audioDuration"]:.5f}" data-track-index="1"></audio>')
@@ -37,7 +30,7 @@ window.__timelines=window.__timelines||{{}};const tl=gsap.timeline({{paused:true
    length=len(' '.join(x['word'] for x in group))
    if ((len(group)>=10 or length>=63) and len(aligned)-j-1>=4) or j==len(aligned)-1:
     text=' '.join(x['word'] for x in group);cs=start+0.01+group[0]['start'];ce=min(start+0.01+b['audioDuration'],start+0.01+max(group[-1]['end'],group[0]['start']+.3));cues.append((cs,ce,text));group=[]
-  story.append(f'## Frame {i+1} — {b["title"]}\n\n- src: compositions/frames/scene-{i+1}.html\n- duration: {duration}s\n- status: animated\n- transition_in: cut\n- scene: Show the decision labels in their narrated order.\n- voiceover: "{b["text"]}"\n- blueprint: compose\n\nScene 1 (0–{duration}s): VUB title panel and ordered labels; each label receives emphasis as the explanation develops. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.\n')
+  story.append(f'## Frame {i+1} — {b["title"]}\n\n- src: compositions/frames/scene-{i+1}.html\n- duration: {duration}s\n- status: animated\n- transition_in: cut\n- scene: Demonstrate the task with a topic-specific software model and word-timed state changes.\n- voiceover: "{b["text"]}"\n- blueprint: compose\n\nScene 1 (0–{duration}s): Original software demonstration; state changes follow the recognized narration anchors. The bottom rail shows the scene’s playback progress. Keep the bottom band available for optional player captions.\n')
   start+=duration
  (week/'narration/beats.json').write_text(json.dumps(beats,indent=2)+'\n')
  title=json.loads((root/'videos.json').read_text())[n-1]['title']

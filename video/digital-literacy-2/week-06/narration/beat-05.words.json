@@ -1,268 +1,268 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "7a7f94dc9ce2063383917fdadbd81008e99b7eb72c397d046131cf4bcf507b13",
+  "wavSha256": "8ec2be306b641e49449fc142081173642e02d9b1ec882bc92f9d4989139cdcb3",
   "textSha256": "13aefd8f3c2eacb48593f2b836cbc37f8579499618d2eacd80e2faad56c668be",
   "matchRatio": 0.9807692307692307,
   "words": [
     {
       "word": "Save",
       "start": 0.0,
-      "end": 0.44
+      "end": 0.24
     },
     {
       "word": "a",
-      "start": 0.44,
-      "end": 0.58
+      "start": 0.24,
+      "end": 0.42
     },
     {
       "word": "first",
-      "start": 0.58,
-      "end": 0.8
+      "start": 0.42,
+      "end": 0.68
     },
     {
       "word": "version,",
-      "start": 0.8,
-      "end": 1.14
+      "start": 0.68,
+      "end": 1.18
     },
     {
       "word": "request",
-      "start": 1.72,
-      "end": 2.02
+      "start": 2.12,
+      "end": 2.12
     },
     {
       "word": "or",
-      "start": 2.02,
-      "end": 2.46
+      "start": 2.12,
+      "end": 2.6
     },
     {
       "word": "make",
-      "start": 2.46,
-      "end": 2.74
+      "start": 2.6,
+      "end": 2.88
     },
     {
       "word": "one",
-      "start": 2.74,
-      "end": 3.04
+      "start": 2.88,
+      "end": 3.2
     },
     {
       "word": "small",
-      "start": 3.04,
-      "end": 3.38
+      "start": 3.2,
+      "end": 3.52
     },
     {
       "word": "improvement,",
-      "start": 3.38,
-      "end": 4.04
+      "start": 3.52,
+      "end": 4.22
     },
     {
       "word": "and",
-      "start": 4.54,
-      "end": 4.84
+      "start": 4.78,
+      "end": 4.8
     },
     {
       "word": "repeat",
-      "start": 4.84,
-      "end": 5.16
+      "start": 4.8,
+      "end": 5.18
     },
     {
       "word": "the",
-      "start": 5.16,
-      "end": 5.52
+      "start": 5.18,
+      "end": 5.58
     },
     {
       "word": "affected",
-      "start": 5.52,
-      "end": 5.8
+      "start": 5.58,
+      "end": 5.98
     },
     {
       "word": "test.",
-      "start": 5.8,
-      "end": 6.2
+      "start": 5.98,
+      "end": 6.46
     },
     {
       "word": "Also",
-      "start": 7.2,
-      "end": 7.5
+      "start": 7.14,
+      "end": 7.58
     },
     {
       "word": "repeat",
-      "start": 7.5,
-      "end": 7.82
+      "start": 7.58,
+      "end": 7.98
     },
     {
       "word": "a",
-      "start": 7.82,
-      "end": 8.04
+      "start": 7.98,
+      "end": 8.16
     },
     {
       "word": "test",
-      "start": 8.04,
-      "end": 8.36
+      "start": 8.16,
+      "end": 8.46
     },
     {
       "word": "that",
-      "start": 8.36,
-      "end": 8.68
+      "start": 8.46,
+      "end": 8.74
     },
     {
       "word": "already",
-      "start": 8.68,
-      "end": 9.08
+      "start": 8.74,
+      "end": 9.0
     },
     {
       "word": "passed",
-      "start": 9.08,
-      "end": 9.58
+      "start": 9.0,
+      "end": 9.42
     },
     {
       "word": "to",
-      "start": 9.58,
-      "end": 10.12
+      "start": 9.42,
+      "end": 9.76
     },
     {
       "word": "catch",
-      "start": 10.12,
-      "end": 10.34
+      "start": 9.76,
+      "end": 9.96
     },
     {
       "word": "a",
-      "start": 10.34,
-      "end": 10.56
+      "start": 9.96,
+      "end": 10.18
     },
     {
       "word": "new",
-      "start": 10.56,
-      "end": 10.68
+      "start": 10.18,
+      "end": 10.32
     },
     {
       "word": "problem.",
-      "start": 10.68,
-      "end": 11.1
+      "start": 10.32,
+      "end": 10.78
     },
     {
       "word": "If",
-      "start": 11.9,
-      "end": 12.06
+      "start": 11.48,
+      "end": 11.64
     },
     {
       "word": "no",
-      "start": 12.06,
-      "end": 12.24
+      "start": 11.64,
+      "end": 11.86
     },
     {
       "word": "AI",
-      "start": 12.24,
-      "end": 12.64
+      "start": 11.86,
+      "end": 12.2
     },
     {
       "word": "tool",
-      "start": 12.64,
-      "end": 13.04
+      "start": 12.2,
+      "end": 12.66
     },
     {
       "word": "is",
-      "start": 13.04,
-      "end": 13.32
+      "start": 12.66,
+      "end": 12.94
     },
     {
       "word": "available,",
-      "start": 13.32,
-      "end": 13.88
+      "start": 12.94,
+      "end": 13.4
     },
     {
       "word": "edit",
-      "start": 14.44,
-      "end": 14.6
+      "start": 14.18,
+      "end": 14.4
     },
     {
       "word": "the",
-      "start": 14.6,
-      "end": 14.82
+      "start": 14.4,
+      "end": 14.62
     },
     {
       "word": "starter's",
-      "start": 14.82,
-      "end": 15.3
+      "start": 14.62,
+      "end": 14.96
     },
     {
       "word": "heading",
-      "start": 15.3,
-      "end": 15.52
+      "start": 14.96,
+      "end": 15.42
     },
     {
       "word": "and",
-      "start": 15.52,
-      "end": 16.02
+      "start": 15.42,
+      "end": 15.76
     },
     {
       "word": "a",
-      "start": 16.02,
-      "end": 16.1
+      "start": 15.76,
+      "end": 15.88
     },
     {
       "word": "fictional",
-      "start": 16.1,
-      "end": 16.44
+      "start": 15.88,
+      "end": 16.28
     },
     {
       "word": "resource",
-      "start": 16.44,
-      "end": 17.1
+      "start": 16.28,
+      "end": 17.04
     },
     {
       "word": "in",
-      "start": 17.1,
-      "end": 17.4
+      "start": 17.32,
+      "end": 17.66
     },
     {
       "word": "a",
-      "start": 17.4,
-      "end": 17.48
+      "start": 17.66,
+      "end": 17.76
     },
     {
       "word": "plain-text",
-      "start": 17.48,
-      "end": 18.08
+      "start": 17.76,
+      "end": 18.38
     },
     {
       "word": "editor.",
-      "start": 18.08,
-      "end": 18.66
+      "start": 18.38,
+      "end": 19.02
     },
     {
       "word": "Keep",
-      "start": 19.54,
-      "end": 19.6
+      "start": 19.92,
+      "end": 19.94
     },
     {
       "word": "both",
-      "start": 19.6,
-      "end": 19.9
+      "start": 19.94,
+      "end": 20.26
     },
     {
       "word": "versions",
-      "start": 19.9,
-      "end": 20.32
+      "start": 20.26,
+      "end": 20.74
     },
     {
       "word": "and",
-      "start": 20.32,
-      "end": 20.9
+      "start": 20.74,
+      "end": 21.28
     },
     {
       "word": "your",
-      "start": 20.9,
-      "end": 21.1
+      "start": 21.28,
+      "end": 21.44
     },
     {
       "word": "test",
-      "start": 21.1,
-      "end": 21.34
+      "start": 21.44,
+      "end": 21.7
     },
     {
       "word": "log.",
-      "start": 21.34,
-      "end": 21.74
+      "start": 21.7,
+      "end": 22.1
     }
   ]
 }

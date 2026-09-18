@@ -22,17 +22,17 @@
     "warningCount": 0,
     "infoCount": 0,
     "findings": [],
-    "duration": 98.737,
+    "duration": 99.142,
     "samples": [
-      5.485,
-      16.456,
-      27.427,
-      38.398,
-      49.369,
-      60.339,
-      71.31,
-      82.281,
-      93.252
+      5.508,
+      16.524,
+      27.539,
+      38.555,
+      49.571,
+      60.587,
+      71.603,
+      82.618,
+      93.634
     ],
     "transitionSamples": [],
     "transitionSamplesDropped": 0,
@@ -57,14 +57,14 @@
     "findings": [],
     "enabled": true,
     "samples": [
-      5.485,
-      27.427,
-      49.369,
-      71.31,
-      93.252
+      5.508,
+      27.539,
+      49.571,
+      71.603,
+      93.634
     ],
-    "checked": 46,
-    "passed": 46
+    "checked": 53,
+    "passed": 53
   },
   "hdr": {
     "autoPromotion": null,

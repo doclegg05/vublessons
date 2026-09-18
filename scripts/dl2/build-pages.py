@@ -1,5 +1,6 @@
 """Render the reusable course and its print materials from one curriculum source."""
 import json,html
+from workshops import for_slide,workshop
 from pathlib import Path
 ROOT=Path('courses/digital-literacy-2'); BASE='/courses/digital-literacy-2'
 C=json.loads(Path('scripts/dl2/curriculum.json').read_text()); W=C['weeks']; Q=json.loads((ROOT/'assets/questions.json').read_text())
@@ -8,13 +9,13 @@ def link(path,label,cls=''):return f'<a class="{cls}" href="{BASE}/{path}">{e(la
 def ul(items):return '<ul>'+''.join('<li>'+e(x)+'</li>' for x in items)+'</ul>'
 def page(title,body,cls='doc',week=None,script='lesson.js'):
  return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"></head>
 <body class="{cls}" {f'data-week="{week}"' if week else ''}>
 <!-- VUB Level 2 extends the established course system: navy, gold, readable slides and a persistent lesson sidebar. Teal identifies hands-on practice. Every interaction has a keyboard equivalent; dates belong only to the syllabus. -->
 <a class="skip" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/"><img src="/assets/vub-seal-white.png" alt=""><span>VUB Learning</span></a><span class="course-name">Digital Literacy · Level 2</span>{link('index.html','Course home')}</header><div class="brand-line"></div>
 {body}
 <footer class="footer">WV Veterans Upward Bound · Build technology confidence through practice.</footer>
-<script src="/shared/progress.js"></script><script src="/shared/text-size.js"></script><script src="{BASE}/assets/{script}"></script></body></html>'''
+<script src="/shared/progress.js"></script><script src="/shared/text-size.js"></script><script src="{BASE}/assets/{script}"></script><script src="{BASE}/assets/workshop.js"></script></body></html>'''
 def write(path,text):p=ROOT/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
 def doc(title,body):return page(title,f'<main class="page doc" id="main"><h1>{e(title)}</h1><div class="actions"><button type="button" data-print>Print / Save as PDF</button>{link("index.html","Course home","button secondary")}</div>{body}</main>')
 def resources(n):
@@ -41,7 +42,16 @@ for w in W:
  for i,s in enumerate(slides):
   more=ul(w['objectives']) if s['kind']=='objectives' else exercise(s,n,i)
   if s['kind']=='complete':more='<div class="actions">'+link(f'weeks/week-{n+1:02}/presentation.html','Continue to next week','button')+'</div>' if n<6 else link('index.html','Return to your course','button')
-  sections+=f'<section class="slide {"summary" if s["kind"] in ["summary","complete"] else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2><p>{e(s["body"])}</p>{more}</section>'
+  demo=for_slide(n,i+1)
+  if s['kind']=='objectives':
+   demo=workshop({1:'zoom',2:'source',3:'sheet',4:'feedback',5:'phishing',6:'app'}[n])
+   more='<details class="concept-note"><summary>What you will learn</summary>'+more+'</details>'
+  if demo:
+   content=demo+f'<details class="concept-note"><summary>Read the explanation</summary><p>{e(s["body"])}</p></details>'+more
+  else:
+   content=f'<p>{e(s["body"])}</p>'+more
+  sections+=f'<section class="slide slide-kind-{s["kind"]} {"has-workshop" if demo else ""} {"summary" if s["kind"] in ["summary","complete"] else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2>{content}</section>'
+
  body=f'<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="lesson-sidebar">Show lesson navigation</button><div class="deck-layout"><aside class="sidebar" id="lesson-sidebar" aria-label="Lesson navigation"><h2>Week {n} · Lesson contents</h2><nav aria-label="Slides">{nav}</nav><nav class="resources" aria-label="Week resources">{resources(n)}</nav></aside><main class="deck-main" id="main"><div class="deck-toolbar"><p>Week {n} · {e(w["title"])}</p><button type="button" class="secondary" id="restart">Start from first slide</button></div><progress id="lesson-progress" value="1" max="{len(slides)}" aria-label="Lesson progress"></progress>{sections}<div class="bottom-nav"><button type="button" id="previous">Previous slide</button><span id="slide-counter" role="status"></span><button type="button" id="next">Next slide</button></div><p class="muted small">Use arrow keys, Page Up / Page Down, Home / End outside a control. Swipe horizontally on touch screens. Your slide position is saved in this browser.</p></main></div>'
  write(folder+'/presentation.html',page(w['title'],body,'lesson',n))
  worksheet='<p>'+e(w['summary'])+'</p><p>Name or learner code: ____________________</p><p>Use fictional information. Work with a partner, take turns, and record what you actually observed. Type below or print a blank copy. Typed worksheet responses stay on this page only; print before closing.</p>'

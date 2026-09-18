@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T13:55:14.327Z",
+  "generatedAt": "2026-09-18T14:35:54.749Z",
   "project": "week-03",
   "summary": {
     "passed": 5,
@@ -10,12 +10,12 @@
       "id": "beat-01",
       "pass": true,
       "metrics": {
-        "seconds": 18.47,
-        "window": 19.673,
+        "seconds": 18.44,
+        "window": 19.657,
         "words": 43,
         "wpm": 142,
         "leadingSilence": 0,
-        "trailingSilence": 0.27,
+        "trailingSilence": 0.33,
         "requestedBreaks": []
       },
       "failures": [],
@@ -25,12 +25,12 @@
       "id": "beat-02",
       "pass": true,
       "metrics": {
-        "seconds": 18.81,
-        "window": 20.012,
+        "seconds": 19.3,
+        "window": 20.509,
         "words": 45,
-        "wpm": 146,
+        "wpm": 142,
         "leadingSilence": 0,
-        "trailingSilence": 0.28,
+        "trailingSilence": 0.33,
         "requestedBreaks": []
       },
       "failures": [],
@@ -41,11 +41,11 @@
       "pass": true,
       "metrics": {
         "seconds": 21.03,
-        "window": 22.244,
+        "window": 22.251,
         "words": 47,
         "wpm": 136,
         "leadingSilence": 0,
-        "trailingSilence": 0.24,
+        "trailingSilence": 0.35,
         "requestedBreaks": []
       },
       "failures": [],
@@ -55,12 +55,12 @@
       "id": "beat-04",
       "pass": true,
       "metrics": {
-        "seconds": 18.91,
-        "window": 20.112,
+        "seconds": 18.89,
+        "window": 20.1,
         "words": 44,
-        "wpm": 140,
+        "wpm": 143,
         "leadingSilence": 0,
-        "trailingSilence": 0,
+        "trailingSilence": 0.44,
         "requestedBreaks": []
       },
       "failures": [],
@@ -70,12 +70,12 @@
       "id": "beat-05",
       "pass": true,
       "metrics": {
-        "seconds": 19.75,
-        "window": 20.968,
+        "seconds": 19.72,
+        "window": 20.944,
         "words": 46,
-        "wpm": 141,
+        "wpm": 143,
         "leadingSilence": 0,
-        "trailingSilence": 0.24,
+        "trailingSilence": 0.44,
         "requestedBreaks": []
       },
       "failures": [],

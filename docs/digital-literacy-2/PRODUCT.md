@@ -44,9 +44,9 @@ Retain VUB Learning's name, existing seal, navy-and-gold identity and establishe
 
 `scripts/dl2/curriculum.json` records the six-week sequence, objectives, agendas, tasks and answers. The course's `instructor-guide.html`, weekly plans and `sources.html` provide teaching and source context. `assets/questions.json` and `assets/assessment.js` define the actual question bank and result behavior. The course has a working fictional resource-finder app, local media, WebVTT captions and transcripts.
 
-`HANDOFF.md` records media provenance: Explain Video Generator was trialled separately; the initial ElevenLabs authorization error was repaired; the six delivered videos now use ElevenLabs Sarah narration and HyperFrames production. The trial is not a required learner dependency. `review/` contains captured views and print proofs; verification reports record their own scope. These artifacts do not establish live deployment or certify accessibility by themselves.
+`HANDOFF.md` records media provenance: Explain Video Generator was trialled separately; the initial ElevenLabs authorization error was repaired; the earlier delivery used Sarah narration and HyperFrames production. The current redesign uses the user-selected Britt — Mild Appalachian Male Voice (`iKrofGyA12WC0e6AhZ8B`); Sandra names the external audio/video checking toolkit, not the narrator. The trial is not a required learner dependency. `review/` contains captured views and print proofs; verification reports record their own scope. These artifacts do not establish live deployment or certify accessibility by themselves.
 
-No approved design comp applies to this brand extension. No testimonials, certification claims or production-service capabilities should be invented.
+`REDESIGN.md` records the user-authorized visual-workshop direction and task-first composition. `review/redesign/` contains captured desktop/mobile examples; these captures alone do not establish that finish review, CI or accessibility checks passed. No separate approved design comp applies to this brand extension. No testimonials, certification claims or production-service capabilities should be invented.
 
 ## Product Principles
 
