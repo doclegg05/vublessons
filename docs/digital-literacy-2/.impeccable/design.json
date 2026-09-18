@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-18T14:31:28.175102+00:00",
+  "generatedAt": "2026-09-18T15:47:27.090640+00:00",
   "title": "Design System: VUB Digital Literacy Level 2",
   "extensions": {
     "colorMeta": {
@@ -92,42 +92,42 @@
         "role": "neutral",
         "displayName": "Sidebar",
         "tonalRamp": [
-          "oklch(0.1500 0.00341 247.86)",
-          "oklch(0.2643 0.00341 247.86)",
-          "oklch(0.3786 0.00341 247.86)",
-          "oklch(0.4929 0.00341 247.86)",
-          "oklch(0.6071 0.00341 247.86)",
-          "oklch(0.7214 0.00341 247.86)",
-          "oklch(0.8357 0.00341 247.86)",
-          "oklch(0.9500 0.00341 247.86)"
+          "oklch(0.1500 0.06624 253.05)",
+          "oklch(0.2643 0.06624 253.05)",
+          "oklch(0.3786 0.06624 253.05)",
+          "oklch(0.4929 0.06624 253.05)",
+          "oklch(0.6071 0.06624 253.05)",
+          "oklch(0.7214 0.06624 253.05)",
+          "oklch(0.8357 0.06624 253.05)",
+          "oklch(0.9500 0.06624 253.05)"
         ]
       },
       "sidebar-hover": {
         "role": "neutral",
         "displayName": "Sidebar Hover",
         "tonalRamp": [
-          "oklch(0.1500 0.01262 236.63)",
-          "oklch(0.2643 0.01262 236.63)",
-          "oklch(0.3786 0.01262 236.63)",
-          "oklch(0.4929 0.01262 236.63)",
-          "oklch(0.6071 0.01262 236.63)",
-          "oklch(0.7214 0.01262 236.63)",
-          "oklch(0.8357 0.01262 236.63)",
-          "oklch(0.9500 0.01262 236.63)"
+          "oklch(0.1500 0.07374 250.81)",
+          "oklch(0.2643 0.07374 250.81)",
+          "oklch(0.3786 0.07374 250.81)",
+          "oklch(0.4929 0.07374 250.81)",
+          "oklch(0.6071 0.07374 250.81)",
+          "oklch(0.7214 0.07374 250.81)",
+          "oklch(0.8357 0.07374 250.81)",
+          "oklch(0.9500 0.07374 250.81)"
         ]
       },
       "canvas": {
         "role": "neutral",
         "displayName": "Canvas",
         "tonalRamp": [
-          "oklch(0.1500 0.00453 258.32)",
-          "oklch(0.2643 0.00453 258.32)",
-          "oklch(0.3786 0.00453 258.32)",
-          "oklch(0.4929 0.00453 258.32)",
-          "oklch(0.6071 0.00453 258.32)",
-          "oklch(0.7214 0.00453 258.32)",
-          "oklch(0.8357 0.00453 258.32)",
-          "oklch(0.9500 0.00453 258.32)"
+          "oklch(0.1500 0.00623 255.47)",
+          "oklch(0.2643 0.00623 255.47)",
+          "oklch(0.3786 0.00623 255.47)",
+          "oklch(0.4929 0.00623 255.47)",
+          "oklch(0.6071 0.00623 255.47)",
+          "oklch(0.7214 0.00623 255.47)",
+          "oklch(0.8357 0.00623 255.47)",
+          "oklch(0.9500 0.00623 255.47)"
         ]
       },
       "paper": {
@@ -246,14 +246,14 @@
         "role": "neutral",
         "displayName": "Discussion Surface",
         "tonalRamp": [
-          "oklch(0.1500 0.03098 86.46)",
-          "oklch(0.2643 0.03098 86.46)",
-          "oklch(0.3786 0.03098 86.46)",
-          "oklch(0.4929 0.03098 86.46)",
-          "oklch(0.6071 0.03098 86.46)",
-          "oklch(0.7214 0.03098 86.46)",
-          "oklch(0.8357 0.03098 86.46)",
-          "oklch(0.9500 0.03098 86.46)"
+          "oklch(0.1500 0.01427 238.01)",
+          "oklch(0.2643 0.01427 238.01)",
+          "oklch(0.3786 0.01427 238.01)",
+          "oklch(0.4929 0.01427 238.01)",
+          "oklch(0.6071 0.01427 238.01)",
+          "oklch(0.7214 0.01427 238.01)",
+          "oklch(0.8357 0.01427 238.01)",
+          "oklch(0.9500 0.01427 238.01)"
         ]
       },
       "check-surface": {
@@ -288,14 +288,98 @@
         "role": "neutral",
         "displayName": "Completion Surface",
         "tonalRamp": [
-          "oklch(0.1500 0.01327 159.91)",
-          "oklch(0.2643 0.01327 159.91)",
-          "oklch(0.3786 0.01327 159.91)",
-          "oklch(0.4929 0.01327 159.91)",
-          "oklch(0.6071 0.01327 159.91)",
-          "oklch(0.7214 0.01327 159.91)",
-          "oklch(0.8357 0.01327 159.91)",
-          "oklch(0.9500 0.01327 159.91)"
+          "oklch(0.1500 0.01283 172.36)",
+          "oklch(0.2643 0.01283 172.36)",
+          "oklch(0.3786 0.01283 172.36)",
+          "oklch(0.4929 0.01283 172.36)",
+          "oklch(0.6071 0.01283 172.36)",
+          "oklch(0.7214 0.01283 172.36)",
+          "oklch(0.8357 0.01283 172.36)",
+          "oklch(0.9500 0.01283 172.36)"
+        ]
+      },
+      "navigation-current": {
+        "role": "neutral",
+        "displayName": "Navigation Current",
+        "tonalRamp": [
+          "oklch(0.1500 0.07667 248.36)",
+          "oklch(0.2643 0.07667 248.36)",
+          "oklch(0.3786 0.07667 248.36)",
+          "oklch(0.4929 0.07667 248.36)",
+          "oklch(0.6071 0.07667 248.36)",
+          "oklch(0.7214 0.07667 248.36)",
+          "oklch(0.8357 0.07667 248.36)",
+          "oklch(0.9500 0.07667 248.36)"
+        ]
+      },
+      "app-gold": {
+        "role": "neutral",
+        "displayName": "App Gold",
+        "tonalRamp": [
+          "oklch(0.1500 0.15056 88.50)",
+          "oklch(0.2643 0.15056 88.50)",
+          "oklch(0.3786 0.15056 88.50)",
+          "oklch(0.4929 0.15056 88.50)",
+          "oklch(0.6071 0.15056 88.50)",
+          "oklch(0.7214 0.15056 88.50)",
+          "oklch(0.8357 0.15056 88.50)",
+          "oklch(0.9500 0.15056 88.50)"
+        ]
+      },
+      "app-ink": {
+        "role": "neutral",
+        "displayName": "App Ink",
+        "tonalRamp": [
+          "oklch(0.1500 0.06946 251.98)",
+          "oklch(0.2643 0.06946 251.98)",
+          "oklch(0.3786 0.06946 251.98)",
+          "oklch(0.4929 0.06946 251.98)",
+          "oklch(0.6071 0.06946 251.98)",
+          "oklch(0.7214 0.06946 251.98)",
+          "oklch(0.8357 0.06946 251.98)",
+          "oklch(0.9500 0.06946 251.98)"
+        ]
+      },
+      "app-line": {
+        "role": "neutral",
+        "displayName": "App Line",
+        "tonalRamp": [
+          "oklch(0.1500 0.02002 245.67)",
+          "oklch(0.2643 0.02002 245.67)",
+          "oklch(0.3786 0.02002 245.67)",
+          "oklch(0.4929 0.02002 245.67)",
+          "oklch(0.6071 0.02002 245.67)",
+          "oklch(0.7214 0.02002 245.67)",
+          "oklch(0.8357 0.02002 245.67)",
+          "oklch(0.9500 0.02002 245.67)"
+        ]
+      },
+      "answer-selected": {
+        "role": "neutral",
+        "displayName": "Answer Selected",
+        "tonalRamp": [
+          "oklch(0.1500 0.07733 251.01)",
+          "oklch(0.2643 0.07733 251.01)",
+          "oklch(0.3786 0.07733 251.01)",
+          "oklch(0.4929 0.07733 251.01)",
+          "oklch(0.6071 0.07733 251.01)",
+          "oklch(0.7214 0.07733 251.01)",
+          "oklch(0.8357 0.07733 251.01)",
+          "oklch(0.9500 0.07733 251.01)"
+        ]
+      },
+      "topic-surface": {
+        "role": "neutral",
+        "displayName": "Topic Surface",
+        "tonalRamp": [
+          "oklch(0.1500 0.01102 243.65)",
+          "oklch(0.2643 0.01102 243.65)",
+          "oklch(0.3786 0.01102 243.65)",
+          "oklch(0.4929 0.01102 243.65)",
+          "oklch(0.6071 0.01102 243.65)",
+          "oklch(0.7214 0.01102 243.65)",
+          "oklch(0.8357 0.01102 243.65)",
+          "oklch(0.9500 0.01102 243.65)"
         ]
       }
     },
@@ -311,14 +395,14 @@
     },
     "shadows": [
       {
-        "name": "lesson-panel",
-        "value": "0 12px 32px #16334b0c",
-        "purpose": "Ambient depth beneath the task panel."
+        "name": "week-row",
+        "value": "0 8px 22px #102c4b08",
+        "purpose": "Restrained depth beneath course week rows."
       },
       {
-        "name": "current-slide",
-        "value": "0 5px 12px #102c4b20",
-        "purpose": "Current navy navigation item on a light sidebar."
+        "name": "current-navigation",
+        "value": "inset 0 -3px #e4b62e",
+        "purpose": "Gold current-location underline on navy navigation."
       }
     ],
     "motion": [
@@ -331,16 +415,37 @@
         "name": "pressed-control",
         "value": "translateY(1px)",
         "purpose": "Subtle active feedback on buttons."
+      },
+      {
+        "name": "question-arrive",
+        "value": "transform translateY(7px) to translateY(0), .22s ease-out",
+        "purpose": "Focused question arrival only when reduced motion is not requested."
       }
     ],
     "breakpoints": [
       {
-        "name": "compact-desktop",
+        "name": "wide-desktop",
+        "value": "1500px"
+      },
+      {
+        "name": "compact-app",
+        "value": "1200px"
+      },
+      {
+        "name": "compact-lesson",
         "value": "1100px"
       },
       {
-        "name": "single-column",
+        "name": "app-menu",
+        "value": "900px"
+      },
+      {
+        "name": "lesson-single-column",
         "value": "760px"
+      },
+      {
+        "name": "app-single-column",
+        "value": "650px"
       }
     ]
   },
@@ -371,9 +476,9 @@
     {
       "name": "Lesson navigation",
       "kind": "nav",
-      "description": "Light navigation with a navy current slide.",
+      "description": "Dark navigation with a lighter navy current slide and gold underline.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Lesson slides\"><button type=\"button\" class=\"ds-link\" aria-current=\"true\">Make technology work for you</button><button type=\"button\" class=\"ds-link\">A useful first task</button></nav>",
-      "css": ".ds-nav{background:#f8fafc;padding:1.3rem}.ds-link{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;display:block;width:100%;min-height:44px;border:0;border-radius:8px;background:transparent;color:#324d68;text-align:left;font-size:16px;line-height:1.35;font-weight:500;padding:12px;margin:.2rem 0;cursor:pointer}.ds-link:hover{background:#e2ebf1}.ds-link[aria-current=true]{background:#1b365d;color:#fff;box-shadow:0 5px 12px #102c4b20;font-weight:700}.ds-link:focus-visible{outline:4px solid #925400;outline-offset:4px}.ds-link:active{transform:translateY(1px)}",
+      "css": ".ds-nav{background:#102c4b;padding:1.3rem}.ds-link{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;display:block;width:100%;min-height:44px;border:0;border-radius:8px;background:transparent;color:#e1edf6;text-align:left;font-size:16px;line-height:1.35;font-weight:500;padding:12px;margin:.2rem 0;cursor:pointer}.ds-link:hover{background:#244b70}.ds-link[aria-current=true]{background:#2a5277;color:#fff;box-shadow:inset 0 -3px #e4b62e;font-weight:700}.ds-link:focus-visible{outline:4px solid #f3d66b;outline-offset:4px}.ds-link:active{transform:translateY(1px)}",
       "refersTo": "slide-navigation-current"
     },
     {
@@ -381,16 +486,16 @@
       "kind": "card",
       "description": "White reading surface with large task-focused body text.",
       "html": "<section class=\"ds-panel\"><h2 class=\"ds-title\">Solve one small problem</h2><p class=\"ds-body\">Build a finder for fictional community resources.</p></section>",
-      "css": ".ds-panel{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:white;color:#16243a;border-radius:16px;padding:clamp(24px,3vw,48px);box-shadow:0 12px 32px #16334b0c;overflow-wrap:anywhere}.ds-title{font-size:clamp(36px,3.7vw,58px);line-height:1.12;color:#1b365d;margin-top:0;text-wrap:balance}.ds-body{font-size:max(32px,var(--fs-slide,32px));line-height:1.6;max-width:72ch}",
+      "css": ".ds-panel{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:white;color:#16243a;border-radius:12px;padding:clamp(24px,3vw,48px);box-shadow:none;overflow-wrap:anywhere}.ds-title{font-size:clamp(36px,3.7vw,58px);line-height:1.12;color:#1b365d;margin-top:0;text-wrap:balance}.ds-body{font-size:max(32px,var(--fs-slide,32px));line-height:1.6;max-width:72ch}",
       "refersTo": "lesson-panel"
     },
     {
-      "name": "Practice note",
-      "kind": "card",
-      "description": "Teal supporting surface for hands-on practice.",
-      "html": "<aside class=\"ds-note\">Use fictional information for this practice task.</aside>",
-      "css": ".ds-note{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#e1efed;color:#16243a;border-radius:8px;padding:1rem 1.4rem;font-size:max(32px,var(--fs-slide,32px));line-height:1.8}",
-      "refersTo": "practice-note"
+      "name": "Gold learning action",
+      "kind": "button",
+      "description": "Prominent begin/continue action on illustrated welcome and practice surfaces.",
+      "html": "<button class=\"ds-gold\" type=\"button\">Begin week 1</button>",
+      "css": ".ds-gold{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:20px;line-height:1.8;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:58px;padding:12px 24px;border:2px solid #e4b62e;border-radius:8px;cursor:pointer;background:#e4b62e;color:#102c4b}.ds-gold:hover{background:#f2ce61;border-color:#f2ce61}.ds-gold:focus-visible{outline:4px solid #a65a00;outline-offset:4px;}.ds-gold:active{transform:translateY(1px)}.ds-gold:disabled{opacity:.55;cursor:default}",
+      "refersTo": "button-gold"
     },
     {
       "name": "Knowledge answer",
@@ -412,14 +517,23 @@
       "description": "Large local-model action with an explicit selected state.",
       "html": "<button class=\"ds-practice\" type=\"button\" aria-pressed=\"true\">Week</button>",
       "css": ".ds-practice{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;font-size:max(32px,var(--fs-slide,32px));line-height:1.3;min-height:54px;padding:12px 18px;border:1px solid #7c99b1;border-radius:8px;background:white;color:#1b365d;cursor:pointer}.ds-practice:hover{background:#e3edf5;box-shadow:0 4px 12px #1b365d18}.ds-practice[aria-pressed=true]{background:#1b365d;color:white;border-color:#1b365d}.ds-practice:focus-visible{outline:4px solid #a65a00;outline-offset:4px}.ds-practice:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Assessment answer",
+      "kind": "input",
+      "description": "Native radio answer with selected and keyboard-focus treatment in focused or review-all mode.",
+      "html": "<label class=\"ds-assessment-answer\"><input type=\"radio\" name=\"ds-question\" checked>Increase browser zoom</label>",
+      "css": ".ds-assessment-answer{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid #b8c9da;border-radius:8px;font-size:max(19px,var(--fs-body,18px));line-height:1.5;min-height:72px;cursor:pointer;background:white;color:#173657}.ds-assessment-answer:hover{background:#edf4fa;border-color:#1b365d}.ds-assessment-answer:has(input:checked){background:#173c61;color:white;border-color:#173c61}.ds-assessment-answer input{width:24px;height:24px;margin:0;accent-color:#d7b849}.ds-assessment-answer:has(input:focus-visible){outline:3px solid #a65a00;outline-offset:3px}"
     }
   ],
   "narrative": {
     "northStar": "The VUB guided lab",
-    "overview": "This name describes the existing VUB world, now expressed as the user-authorized visual workshop in `REDESIGN.md`. Put a useful working task in front of the learner, then explain why it works. Original fictional software models make cause and effect visible in an instructor-led computer lab. A light sidebar keeps the lesson location stable while the central composition follows the task.\n\nThe governing visual authority is the existing VUB brand, the direction contract in `REDESIGN.md`, and the implemented `course.css` plus `workshop.css` cascade. This record applies to Digital Literacy Level 2 only. It does not replace platform-wide design authority or impose this course's layout on other courses.",
+    "overview": "The VUB guided lab now uses the user-approved modern learning-app composition: substantial object illustration, confident humanist type, persistent navy course navigation and visible progress. Put a useful working task in front of the learner, then explain why it works. Original fictional software models make cause and effect visible in an instructor-led computer lab.\n\nThe governing visual authority is the existing VUB brand, the approved combination of assessment A, B and C in `.impeccable/mocks/README.md`, the direction contract in `REDESIGN.md`, and the implemented `course.css`, `workshop.css` and final `learning-app.css` cascade. This record applies to Digital Literacy Level 2 only. It does not replace platform-wide design authority or impose this course's layout on other courses.",
     "keyCharacteristics": [
-      "VUB navy with a narrow gold brand line and navy current-slide treatment.",
-      "Task-first white panels beside a light, independently scrollable desktop sidebar.",
+      "VUB navy navigation with a narrow gold brand line and gold-underlined current location.",
+      "Task-first white panels beside dark, independently scrollable desktop navigation.",
+      "Rich original laptop, computer, book and notebook illustrations with semantic HTML copy.",
+      "Focused assessment questions, seven-topic answer counts and real browser-saved continuation.",
       "Familiar Segoe UI typography with an enlarged classroom slide-body scale.",
       "Original software models, progressively disclosed explanations and explicit outcomes.",
       "Lesson-kind surfaces distinguish discussion, checks, video and completion."
@@ -449,7 +563,7 @@
       "Don't add CDN dependencies or assume external fonts are available.",
       "Don't turn compact navigation typography into lesson body typography.",
       "Don't use animation as the only way to reveal an answer.",
-      "Don't infer a platform redesign or approved comp from this course-scoped record.",
+      "Don't expand the approved Level 2 composition into a platform redesign without authorization.",
       "Don't substitute repeated title-and-list panels for the approved task-first composition."
     ]
   }

@@ -1,6 +1,7 @@
 """Render the reusable course and its print materials from one curriculum source."""
 import json,html
 from workshops import for_slide,workshop
+import learning
 from pathlib import Path
 ROOT=Path('courses/digital-literacy-2'); BASE='/courses/digital-literacy-2'
 C=json.loads(Path('scripts/dl2/curriculum.json').read_text()); W=C['weeks']; Q=json.loads((ROOT/'assets/questions.json').read_text())
@@ -8,14 +9,15 @@ def e(t): return html.escape(str(t),quote=True)
 def link(path,label,cls=''):return f'<a class="{cls}" href="{BASE}/{path}">{e(label)}</a>'
 def ul(items):return '<ul>'+''.join('<li>'+e(x)+'</li>' for x in items)+'</ul>'
 def page(title,body,cls='doc',week=None,script='lesson.js'):
+ if cls!='lesson':body=learning.frame(body)
  return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/learning-app.css"></head>
 <body class="{cls}" {f'data-week="{week}"' if week else ''}>
-<!-- VUB Level 2 extends the established course system: navy, gold, readable slides and a persistent lesson sidebar. Teal identifies hands-on practice. Every interaction has a keyboard equivalent; dates belong only to the syllabus. -->
+{learning.CONTRACT}
 <a class="skip" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/"><img src="/assets/vub-seal-white.png" alt=""><span>VUB Learning</span></a><span class="course-name">Digital Literacy · Level 2</span>{link('index.html','Course home')}</header><div class="brand-line"></div>
 {body}
 <footer class="footer">WV Veterans Upward Bound · Build technology confidence through practice.</footer>
-<script src="/shared/progress.js"></script><script src="/shared/text-size.js"></script><script src="{BASE}/assets/{script}"></script><script src="{BASE}/assets/workshop.js"></script></body></html>'''
+<script src="/shared/progress.js"></script><script src="/shared/text-size.js"></script><script src="{BASE}/assets/{script}"></script><script src="{BASE}/assets/workshop.js"></script><script src="{BASE}/assets/learning-app.js"></script></body></html>'''
 def write(path,text):p=ROOT/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
 def doc(title,body):return page(title,f'<main class="page doc" id="main"><h1>{e(title)}</h1><div class="actions"><button type="button" data-print>Print / Save as PDF</button>{link("index.html","Course home","button secondary")}</div>{body}</main>')
 def resources(n):
@@ -47,7 +49,7 @@ for w in W:
    demo=workshop({1:'zoom',2:'source',3:'sheet',4:'feedback',5:'phishing',6:'app'}[n])
    more='<details class="concept-note"><summary>What you will learn</summary>'+more+'</details>'
   if demo:
-   content=demo+f'<details class="concept-note"><summary>Read the explanation</summary><p>{e(s["body"])}</p></details>'+more
+   content=(f'<div class="lesson-welcome-art" aria-hidden="true"></div>' if s['kind']=='objectives' else '')+demo+f'<details class="concept-note"><summary>Read the explanation</summary><p>{e(s["body"])}</p></details>'+more
   else:
    content=f'<p>{e(s["body"])}</p>'+more
   sections+=f'<section class="slide slide-kind-{s["kind"]} {"has-workshop" if demo else ""} {"summary" if s["kind"] in ["summary","complete"] else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2>{content}</section>'
@@ -75,9 +77,7 @@ for w in W:
   for b in json.loads(beats.read_text()):transcript+=f'<section><h2>{e(b["title"])}</h2><p>{e(b["text"])}</p></section>'
  transcript+='</div><div class="actions">'+link(folder+'/presentation.html','Return to lesson','button')+'</div>'
  write(folder+'/video-transcript.html',doc(f'Week {n} explainer and transcript',transcript))
-rows=''.join(f'<section class="week-row"><div class="week-number">{w["n"]:02}</div><div><h2>{e(w["title"])}</h2><p>{e(w["summary"])}</p><p class="course-status" data-week-status="{w["n"]}">Ready to begin</p><div class="actions">'+link(f'weeks/week-{w["n"]:02}/presentation.html','Open week '+str(w['n']),'button')+link(f'weeks/week-{w["n"]:02}/worksheet.html','Worksheet','button secondary')+'</div></div></section>' for w in W)
-body='<main class="page" id="main"><section class="intro"><div><h1>Digital Literacy<br>Level 2</h1><p>Use technology with confidence.<br>Then build something of your own.</p><p class="muted">Six practical weeks for veterans. Five weeks grounded in IC3 GS6 Level 2, followed by a web app building lab.</p><div class="actions">'+link('weeks/week-01/presentation.html','Begin week 1','button')+link('syllabus.html','View syllabus','button secondary')+'</div></div><div class="route-map"><h2>Your six-week path</h2><ol>'+''.join('<li>'+e(w['title'])+'</li>' for w in W)+'</ol></div></section><section><h2>Your course workspace</h2><p>Each week includes a navigable lesson, captioned explainer, hands-on work and a printable worksheet. Your lesson position stays in this browser. Assessment answers are not sent to a server.</p><div class="actions">'+link('assessments/pre-test.html','Take the pre-test','button secondary')+link('assessments/post-test.html','Take the post-test','button secondary')+link('instructor-guide.html','Instructor materials','button secondary')+'</div></section>'+rows+'<section><h2>Learn at your pace</h2><p>Use the site text-size buttons, captions and transcripts. Every flip card and activity works by keyboard. Printing any worksheet or results page opens your browser’s print dialog; choose Save as PDF for a digital copy.</p><p>This course provides classroom learning checks. It does not administer or award IC3 certification.</p>'+link('sources.html','Sources and course alignment')+'</section></main>'
-write('index.html',page(C['title'],body,'course-home'))
+write('index.html',page(C['title'],learning.home(W,link),'course-home'))
 dates=['September 28','October 5','October 12','October 19','October 26','November 2']
 syll='<p><strong>WV Veterans Upward Bound · IC3 Digital Literacy GS6 Level 2 + Web App Building</strong></p><p><strong>Mondays, September 28–November 2, 2026 · 4:30–6:30 p.m. Eastern Time</strong><br>Six meetings · 12 contact hours · Computer lab instruction</p><p>For veterans who can use a mouse and keyboard, open a browser and manage basic files. Level 1 or equivalent experience is recommended. Ask the instructor for a refresher when needed.</p><h2>What you will be able to do</h2>'+ul([x for w in W for x in w['objectives']])+'<h2>Cohort schedule</h2><table><thead><tr><th>Meeting</th><th>Focus</th><th>Evidence of learning</th></tr></thead><tbody>'
 for w,date in zip(W,dates):syll+=f'<tr><td>Week {w["n"]}<br>{date}, 2026<br>4:30–6:30 p.m.</td><td>{e(w["title"])}</td><td>{e(w["summary"])}'+(' Pre-test.' if w['n']==1 else ' Post-test and skills challenge.' if w['n']==5 else ' Prototype and test log.' if w['n']==6 else '')+'</td></tr>'
@@ -89,10 +89,7 @@ sources='<p>This is original VUB teaching material informed by the GS6 Level 2 f
 write('sources.html',doc('Sources and curriculum alignment',sources))
 for kind,questions in Q.items():
  title=kind.title()+'-test'
- intro=f'<main class="page" id="main"><h1>Digital Literacy Level 2 {title.lower()}</h1><section class="assessment-intro"><p>28 questions · 4 per GS6 domain · one answer per question. Take about 25 minutes; there is no countdown. This is a classroom learning check, not an IC3 certification exam.</p><p>Topics: technology basics; digital citizenship; information management; content creation; communication; collaboration; safety and security.</p><p>Answers remain in this browser tab’s session. They are not submitted to a server. Print or download results, then clear them on a shared computer.</p></section><div id="assessment-error" role="alert"></div><form id="assessment-form" class="assessment-form questionnaire" data-kind="{kind}" novalidate><label for="learner-name">Learner name or code (optional)</label><input id="learner-name" name="learner" maxlength="80" autocomplete="off">'
- if kind=='post':intro+='<label for="pre-score">Your saved pre-test score out of 28 (optional)</label><input id="pre-score" name="preScore" type="number" min="0" max="28" step="1"><p>Enter your own saved result to compare. Leave blank if unavailable; do not enter a percentage.</p>'
- intro+='<div id="questions"><p>Loading questions…</p></div><p id="answer-count" role="status"></p><div class="actions"><button type="submit" id="grade" disabled>Grade my assessment</button><button type="button" class="secondary" id="clear-assessment">Clear my assessment</button></div></form><section id="results" class="results" hidden aria-labelledby="results-title"></section><noscript><p>JavaScript is needed for automatic grading. Use the printable assessment and answer key with your instructor.</p></noscript><p class="no-print">'+link(f'assessments/{kind}-test-printable.html','Printable paper assessment')+'</p></main>'
- write(f'assessments/{kind}-test.html',page(title,intro,'assessment',script='assessment.js'))
+ write(f'assessments/{kind}-test.html',page(title,learning.assessment(kind,link),'assessment',script='assessment.js'))
  paper='<p>Name or learner code: ____________________</p><p>Choose one answer per question. Each correct answer earns one point. Total: 28. This is a classroom assessment, not a certification exam.</p>'
  key='<p>One point per correct answer. Domain totals: four points each. Total: 28. Accept only the keyed choice for the knowledge score; use worksheet rubrics for demonstrated skills.</p>'
  for i,q in enumerate(questions):

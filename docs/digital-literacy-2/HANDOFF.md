@@ -82,3 +82,11 @@ node ../toolkit/tools/audit-av-sync.mjs video/digital-literacy-2/week-* --json d
 ```
 
 No live deployment, merge to main, account creation, purchase or learner record collection is part of this delivery.
+
+## Illustrated learning-app design
+
+The approved A+B+C compositions are combined across the DL2 course: a navy course rail, original illustrations, six-week overview with saved continuation, topic navigation and a focused assessment workspace. `scripts/dl2/learning.py` authors the shared course frame, home and assessments; `learning-app.css` and `learning-app.js` provide responsive styling and truthful browser-local course progress. Regenerate pages with `python3 scripts/dl2/build-pages.py`.
+
+Assessments show one question at a time, preserve position and answers, offer Review all, and retain existing grading, printable/downloadable results and clearing controls. Topic counts are actual answers, not estimated completion. Illustrations and provenance live under the course assets and `.impeccable/asset-manifest.json`; approved comps are in `.impeccable/mocks/`. The user's default preference is this illustrated, modern learning-app direction.
+
+The repository quality gate now covers 60 browser tests, including three dedicated learning-app state/mobile tests. Final evidence is in VALIDATION.md and `review/learning-app/`. All six Britt voice videos remain unchanged by this visual pass.

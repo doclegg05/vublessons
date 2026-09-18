@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-18",
+  "producer": "Impeccable asset producer via native image_gen.imagegen",
+  "approval": "User explicitly approved a combination of assessment-a, assessment-b and assessment-c: Build a combination of all of those.",
+  "approvedComps": [
+    "docs/digital-literacy-2/.impeccable/mocks/assessment-a.png",
+    "docs/digital-literacy-2/.impeccable/mocks/assessment-b.png",
+    "docs/digital-literacy-2/.impeccable/mocks/assessment-c.png"
+  ],
+  "policy": {
+    "authoredUI": "All headings, progress, questions, answers, controls and course claims remain semantic HTML/CSS/SVG.",
+    "imageRole": "Decorative generated illustration; does not depict an actual VUB classroom or equipment.",
+    "conversion": "Original native PNG converted to WebP quality 88, method 6 using bundled Pillow. No cropping, resizing, compositing, or content editing.",
+    "sourceRetention": "Original PNGs retained in native generation folder with embedded impeccable:prompt metadata.",
+    "inspection": "Producer visually inspected each generated PNG and final WebP. Blank screens and notebook pages; no instructional text, branded logo, or assessment answer clue."
+  },
+  "assets": [
+    {
+      "id": "learning-hero",
+      "path": "courses/digital-literacy-2/assets/illustrations/learning-hero.webp",
+      "width": 1896,
+      "height": 830,
+      "bytes": 71228,
+      "format": "image/webp",
+      "status": "produced",
+      "sourcePng": "/Users/brittlegg/.codex/generated_images/01a0b52a-0b10-7020-91b8-b2c4ea8bfe2b/exec-8dc2cce0-ecbf-4ec5-8b2b-3e7f1cb1a08e.png",
+      "promptFile": "courses/digital-literacy-2/assets/illustrations/learning-hero.prompt.txt",
+      "promptSidecar": "courses/digital-literacy-2/assets/illustrations/learning-hero.webp.json",
+      "prompt": "Generate a standalone premium editorial 3D illustration asset for an adult learning website. Landscape 1600x700. A realistic beautifully lit teal laptop with a blank dark teal screen and unlettered keyboard, closed textured navy books, a gold notebook and gold pen on a navy desk, small navy sphere and block, understated green plant at far right. Objects occupy the RIGHT 50 percent of the whole image, clearly grouped and naturally composed with material depth, tactile paper and metal, soft natural side lighting. LEFT 50 percent is uncluttered uniformly dark navy #102c4b negative space for HTML white headline; no object, plant, bright light or horizon crossing this copy space. Background is a dark navy studio wall. Modern premium learning app art, sophisticated adult-friendly warmth and realistic 3D product illustration, matching navy #1B365D, teal #0F655F and gold #C9A227. Absolutely NO text, letters, numbers, words, slogans, labels, logos, watermarks or UI anywhere. Blank screen, blank book spines, blank notebook. This is an image asset, not a website mockup.",
+      "usage": "Wide welcome hero; preserve full width. Left ~42% is clear for HTML copy. Keep title short enough to avoid crossing laptop at right."
+    },
+    {
+      "id": "learning-focus",
+      "path": "courses/digital-literacy-2/assets/illustrations/learning-focus.webp",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 78516,
+      "format": "image/webp",
+      "status": "produced",
+      "sourcePng": "/Users/brittlegg/.codex/generated_images/01a0b52a-0b10-7020-91b8-b2c4ea8bfe2b/exec-759fc806-8e77-4704-b060-473f17fa2825.png",
+      "promptFile": "courses/digital-literacy-2/assets/illustrations/learning-focus.prompt.txt",
+      "promptSidecar": "courses/digital-literacy-2/assets/illustrations/learning-focus.webp.json",
+      "prompt": "Generate a standalone portrait illustration asset 800x1000 for a premium adult learning assessment app. Editorial realistic 3D product illustration with tactile materials and beautiful soft natural lighting. Dark navy #102c4b studio backdrop, navy desk. Matching teal #0F655F desktop computer with BLANK dark teal screen and no screen graphics, gold #C9A227 spiral notebook with blank cover, stack of closed navy books with blank spines, gold pen in simple navy holder, small real green plant in off-white ceramic pot. Objects grouped in LOWER 70 percent of image with computer as focal point; TOP 30 percent remains empty dark navy space for semantic HTML heading. Angled gentle front-on perspective, restrained realistic depth, sophisticated inviting modern adult education art, not toy-like. All edges comfortably within canvas. Absolutely NO text, letters, numbers, logos, watermarks, slogans, labels or answer clues anywhere. Blank book spines, blank notebook, blank computer screen. No website UI, no people, no trophies. This is a reusable image asset, not a website mockup.",
+      "usage": "Portrait assessment supporting scene. Upper ~28% is clear for HTML copy; preserve computer and notebook in lower area. Decorative only, empty alt."
+    },
+    {
+      "id": "learning-practice",
+      "path": "courses/digital-literacy-2/assets/illustrations/learning-practice.webp",
+      "width": 1643,
+      "height": 957,
+      "bytes": 81226,
+      "format": "image/webp",
+      "status": "produced",
+      "sourcePng": "/Users/brittlegg/.codex/generated_images/01a0b52a-0b10-7020-91b8-b2c4ea8bfe2b/exec-8b3ec219-c115-4337-832b-49f0ef77d6ea.png",
+      "promptFile": "courses/digital-literacy-2/assets/illustrations/learning-practice.prompt.txt",
+      "promptSidecar": "courses/digital-literacy-2/assets/illustrations/learning-practice.webp.json",
+      "prompt": "Generate a standalone landscape 1200x700 premium editorial 3D illustration asset for an adult learning website. Teal #0F655F studio wall and teal desk. On the RIGHT and LOWER part, an elegant blank open cream paper notebook propped gently upright, navy cloth covered closed books with blank spines, a gold #C9A227 and navy fountain pen on desk, small navy pen holder with gold pencils, one solid navy cube and one gold semicircle bookend. Sophisticated carefully composed realistic materials: tactile paper grain, matte navy cloth, brushed gold metal, beautiful soft natural light and subtle physical shadows. The upper LEFT remains uncluttered teal breathing room; no bright white object on left half. Adult-friendly premium modern learning app imagery, matching navy #1B365D and dark #102c4b. No text, letters, numbers, marks, handwriting, labels, logos, watermarks, slogans or UI ANYWHERE. Pages entirely blank, book spines blank, no charts. Objects comfortably fit canvas. No humans or trophies. This is an illustration asset not a webpage screenshot.",
+      "usage": "Teal practice companion. Use as full image or bottom-right background; left portion is clear. Keep notebook visible and semantic text outside image."
+    }
+  ],
+  "unproduced": []
+}

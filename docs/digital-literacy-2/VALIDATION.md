@@ -6,8 +6,8 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | --- | --- |
 | Repository quality gate | PASS, including build, links, catalog, Playwright, accessibility ratchet and readability report |
 | Site build | 193 HTML pages; four courses and 24 catalog lessons |
-| Internal links | 1,028 references checked; zero broken |
-| Browser tests | 57 passed in Chromium on the rebuilt Britt delivery |
+| Internal links | 1,311 references checked; zero broken |
+| Browser tests | 60 passed in Chromium on the illustrated learning-app delivery |
 | New course accessibility scans | Zero axe WCAG 2.1 A/AA violations on the six tested DL2 routes |
 | Workshop state accessibility | Zero axe WCAG A/AA violations across 12 initial/changed states on six representative models |
 | Existing platform accessibility ratchet | No violations beyond the committed baseline; the baseline was not expanded |
@@ -34,7 +34,7 @@ Both assessments are tested for required answers, 100% scoring, partial scoring 
 
 Desktop/mobile course, lesson, knowledge-check and results captures are under `review/`. Printed syllabus and results were rendered to images and inspected for legibility and page breaks; the generated syllabus has three pages and the representative full graded results have eight. The week 3 print proof includes 24pt knowledge-check answers. Video delivery contact sheets show the midpoint of all five scenes in each final MP4, refreshed after the ElevenLabs rebuild.
 
-A fresh generic subagent applied the Impeccable finish-review contract independently. The redesigned course retains the VUB brand and uses a lighter sidebar, task-first openings, interactive models at 27 teaching points and varied discussion/check/completion treatments. Desktop/mobile initial and changed states are in `review/redesign/`; `scripts/dl2/capture-workshops.cjs` reproduces those captures.
+A fresh generic subagent applied the Impeccable finish-review contract independently. The redesigned course retains the VUB brand and used a lighter sidebar in the preceding iteration, task-first openings, interactive models at 27 teaching points and varied discussion/check/completion treatments. Desktop/mobile initial and changed states are in `review/redesign/`; `scripts/dl2/capture-workshops.cjs` reproduces those captures.
 
 | Finding | Final status |
 | --- | --- |
@@ -48,6 +48,21 @@ A fresh generic subagent applied the Impeccable finish-review contract independe
 | Decorative objective glyphs | Resolved: working model replaces checklist opener |
 
 Remaining material UI findings: none. **Disposition: ship.** This independent review covered the slide UI; delivered media was checked separately with the technical and visual evidence above.
+
+## Approved illustrated learning-app delivery
+
+The user approved combining all three assessment compositions. The final course combines the navy course rail and illustrated welcome from A, the focused question workspace from B, and topic navigation from C. Three separately generated illustration assets are recorded in `.impeccable/asset-manifest.json`; the approved comps and approval records remain in `.impeccable/mocks/`.
+
+Three additional browser tests verify one-question navigation, answer and position persistence, topic counts, review-all and missing-answer recovery, clearing, truthful course continuation, mobile menu controls, largest-text overflow and selected-state accessibility. Print proofs were regenerated and inspected: three syllabus pages and eight full-result pages. The six Britt-narrated videos are unchanged.
+
+Desktop/mobile captures of the home, assessment, opening lesson and calendar model are in `review/learning-app/`. The bounded detector pass identified a decorative top border, which was removed. Independent finish review requested two material fixes:
+
+| Finding | Final status |
+| --- | --- |
+| Durable records contradicted approved composition | Resolved: PRODUCT, DESIGN, REDESIGN and sidecar reflect approved A+B+C and implemented states |
+| Redundant question-domain eyebrow | Resolved: topic metadata remains accessible without a duplicate visible label |
+
+Independent finding-focused re-review confirmed both fixes, observed no regressions and returned **disposition: ship**, with no remaining material findings.
 
 ## Verification boundary
 

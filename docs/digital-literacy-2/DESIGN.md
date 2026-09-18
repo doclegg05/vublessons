@@ -1,6 +1,6 @@
 ---
 name: VUB Digital Literacy Level 2
-description: A task-first visual workshop within the VUB course system.
+description: An illustrated learning app and task-first workshop within the VUB course system.
 colors:
   primary: "#1b365d"
   primary-hover: "#2c4a7c"
@@ -9,15 +9,21 @@ colors:
   practice-surface: "#e1efed"
   selected-surface: "#dcece9"
   frame-navy: "#102c4b"
-  sidebar: "#f8fafc"
-  sidebar-hover: "#e2ebf1"
+  sidebar: "#102c4b"
+  sidebar-hover: "#25486c"
+  navigation-current: "#2a5277"
+  app-gold: "#e4b62e"
+  app-ink: "#173657"
+  app-line: "#cbd7e2"
+  answer-selected: "#173c61"
+  topic-surface: "#eaf1f7"
   workshop-canvas: "#e8eef3"
   workshop-paper: "#f7f9fb"
-  discussion-surface: "#f6ecd6"
+  discussion-surface: "#e5eff6"
   check-surface: "#eaf3f1"
   check-selected: "#163e38"
-  completion-surface: "#e5efe9"
-  canvas: "#f5f7fa"
+  completion-surface: "#e4efeb"
+  canvas: "#f4f7fb"
   paper: "#ffffff"
   ink: "#16243a"
   muted: "#46566d"
@@ -51,7 +57,7 @@ rounded:
   navigation: "8px"
   field: "6px"
   control: "8px"
-  panel: "16px"
+  panel: "12px"
   window: "12px"
 spacing:
   compact: ".7rem"
@@ -59,6 +65,13 @@ spacing:
   section: "2rem"
   spacious: "3rem"
 components:
+  button-gold:
+    backgroundColor: "{colors.app-gold}"
+    textColor: "{colors.frame-navy}"
+    rounded: "{rounded.control}"
+    padding: "12px 24px"
+  button-gold-hover:
+    backgroundColor: "#f2ce61"
   button-primary:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.paper}"
@@ -82,7 +95,7 @@ components:
     rounded: "{rounded.control}"
     padding: "1rem 1.4rem"
   slide-navigation-current:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.navigation-current}"
     textColor: "{colors.paper}"
     rounded: "{rounded.navigation}"
     padding: "12px"
@@ -94,14 +107,16 @@ components:
 
 **Creative North Star: "The VUB guided lab"**
 
-This name describes the existing VUB world, now expressed as the user-authorized visual workshop in `REDESIGN.md`. Put a useful working task in front of the learner, then explain why it works. Original fictional software models make cause and effect visible in an instructor-led computer lab. A light sidebar keeps the lesson location stable while the central composition follows the task.
+The VUB guided lab now uses the user-approved modern learning-app composition: substantial object illustration, confident humanist type, persistent navy course navigation and visible progress. Put a useful working task in front of the learner, then explain why it works. Original fictional software models make cause and effect visible in an instructor-led computer lab.
 
-The governing visual authority is the existing VUB brand, the direction contract in `REDESIGN.md`, and the implemented `course.css` plus `workshop.css` cascade. This record applies to Digital Literacy Level 2 only. It does not replace platform-wide design authority or impose this course's layout on other courses.
+The governing visual authority is the existing VUB brand, the approved combination of assessment A, B and C in `.impeccable/mocks/README.md`, the direction contract in `REDESIGN.md`, and the implemented `course.css`, `workshop.css` and final `learning-app.css` cascade. This record applies to Digital Literacy Level 2 only. It does not replace platform-wide design authority or impose this course's layout on other courses.
 
 **Key Characteristics:**
 
-- VUB navy with a narrow gold brand line and navy current-slide treatment.
-- Task-first white panels beside a light, independently scrollable desktop sidebar.
+- VUB navy navigation with a narrow gold brand line and gold-underlined current location.
+- Task-first white panels beside dark, independently scrollable desktop navigation.
+- Rich original laptop, computer, book and notebook illustrations with semantic HTML copy.
+- Focused assessment questions, seven-topic answer counts and real browser-saved continuation.
 - Familiar Segoe UI typography with an enlarged classroom slide-body scale.
 - Original software models, progressively disclosed explanations and explicit outcomes.
 - Lesson-kind surfaces distinguish discussion, checks, video and completion.
@@ -117,16 +132,16 @@ The palette combines an established navy-and-gold frame with quiet reading surfa
 
 ### Secondary
 
-- **Brand Gold:** the thin brand line beneath the header.
+- **Brand Gold:** the thin brand line beneath the header. **App Gold:** welcome/check-in primary actions and current-location emphasis.
 - **Practice Teal:** step numbers, progress and selected-answer borders.
 - **Practice Surface / Selected Surface:** hands-on notes, card fronts and selected answers.
 
 ### Neutral
 
 - **Frame Navy:** header, code blocks and media background.
-- **Sidebar / Sidebar Hover:** light navigation surface and quiet hover state; the current slide uses VUB Navy with white text.
+- **Sidebar / Sidebar Hover / Navigation Current:** dark course and lesson navigation, a lighter hover surface, and a distinct current-location surface with white text and a gold underline.
 - **Workshop Canvas / Workshop Paper:** blue-gray lesson surroundings and the modeled software window.
-- **Discussion / Check / Completion Surfaces:** warm sand discussion, pale teal knowledge checks and soft green completion. Selected check answers use dark green with white text.
+- **Discussion / Check / Completion Surfaces:** cool blue discussion, pale teal knowledge checks and soft green completion. Selected check answers use dark green with white text.
 - **Canvas / Paper:** page background and white reading panels.
 - **Ink / Muted:** main text and supporting metadata.
 - **Divider / Cool Surface:** separators, table headings and secondary hover states.
@@ -143,9 +158,13 @@ Page titles use a fluid scale; lesson titles are slightly tighter. Base reading 
 
 Printed presentations retain large lesson type. Printable worksheets, instructor material and assessment results use document sizing, with headings above a 12pt body. This print distinction is intentional; it is not a mobile-slide reduction.
 
+The illustrated welcome headline uses a tight 1.09 line height, negative tracking and a fluid 38–58px scale (64px above 1500px; 40px on narrow screens). Assessment introductions use large compact white headings; question legends use a fluid 24–34px base and respect the shared slide-size setting. Assessment answer rows use `max(19px,var(--fs-body,18px))`; they are distinct from the 32px classroom slide answers.
+
 ## Layout
 
-Course and document pages use a centred container capped at 1120px. The landing introduction pairs a text column and a six-week route map; weekly resources are separated by rows rather than arranged as interchangeable dashboard tiles.
+Course home, assessments and course documents share a navy course rail: 218px on desktop, 180px at 1200px and below. The home pairs a substantial illustrated welcome with a gold begin/continue action, a real progress strip, six illustrated week rows and a teal assessment companion. Document content inside the shell is capped at 1100px. At 900px and below, a semantic Course navigation button reveals the horizontal link row in normal flow; text-size controls remain beside it. At 650px and below, home art moves below its copy and support areas stack.
+
+Assessments place seven scrollable topic buttons above a portrait illustrated introduction and a focused question. The desktop question layout uses `minmax(265px,.78fr) minmax(0,1.55fr)` columns, changing to 250px plus remaining width at 1200px. At 650px, a compact landscape illustration precedes the question. Results remove the story/topic chrome and use a wide reading area. Review-all mode exposes all question fieldsets.
 
 Desktop lessons use a 270px sidebar and a flexible main region capped at 1600px. At 1100px and below, the sidebar narrows to 230px. It stays sticky with its own vertical scrolling so the active slide and resource links remain reachable. The lesson toolbar, progress indicator, task panel and previous/next navigation establish a consistent reading sequence. The shared text-size toolbar is moved into the toolbar in normal flow, reserving space above the lesson rather than overlaying its example.
 
@@ -155,7 +174,7 @@ At 760px and below, the page becomes one column. A semantic menu button reveals 
 
 ## Elevation & Depth
 
-Tonal separation and borders provide most structure. Lesson panels use a restrained ambient shadow (`0 12px 32px #16334b0c`); selected navigation and document models carry smaller contextual shadows. Window borders and tinted toolbars distinguish the modeled application from the surrounding lesson. Flip cards use perspective only to expose an answer; reduced-motion mode switches visible faces without rotation. Nothing advances automatically.
+Tonal separation and borders provide most structure. The final learning-app cascade removes lesson-panel shadows and top borders. Course week rows use a restrained shadow (`0 8px 22px #102c4b08`), with a slightly deeper hover shadow. Current navigation uses an inset gold underline. Generated still-life imagery provides material depth; document models retain their own contextual shadows. Window borders and tinted toolbars distinguish the modeled application from the surrounding lesson. Flip cards use perspective only to expose an answer; reduced-motion mode switches visible faces without rotation. Nothing advances automatically.
 
 ## Shapes
 
@@ -165,19 +184,21 @@ Controls use gently rounded corners, fields slightly tighter corners, and larger
 
 ### Buttons
 
-Solid navy marks primary actions; white with navy border marks secondary actions. Controls have a 48px minimum height, clear hover treatment and a subtle 1px pressed displacement. Visible focus uses a 4px warm-brown outline with a 4px offset; the dark header retains pale gold while lesson slide links use brown. Workshop fields use brown focus with a 3px offset. Workshop actions have a 54px minimum height and classroom-scale labels, with selected state exposed through `aria-pressed`. Disabled navigation is visibly dimmed and actually disabled.
+Gold marks welcome and assessment-ready primary actions; solid navy marks task navigation and lesson actions; white with navy border marks secondary actions. Controls have a 48px minimum height, clear hover treatment and a subtle 1px pressed displacement. Visible focus uses a 4px warm-brown outline with a 4px offset; the dark header retains pale gold while lesson slide links use brown. Workshop fields use brown focus with a 3px offset. Workshop actions have a 54px minimum height and classroom-scale labels, with selected state exposed through `aria-pressed`. Disabled navigation is visibly dimmed and actually disabled.
 
 ### Fields and assessments
 
 Inputs have white backgrounds, strong borders, explicit labels and a shared type stack. Assessment choices are native radios within fieldsets and legends. Validation focuses the first missing answer; results move focus to their heading. Results use a score, domain table and separated answer explanations. Print removes interaction controls and preserves readable results.
 
+Focused assessments show one native-radio fieldset at a time with previous/next actions; Review all questions reveals the complete form. Topic controls show actual answered counts out of four and move to that topic’s first unanswered question. The overall meter counts real selections, not elapsed time or earned proficiency. Selected answer rows use white text on dark blue. Optional learner details remain in a native disclosure. There is no automatic advance after selecting an answer.
+
 ### Navigation
 
-Current slide links use a navy surface, white text, heavier weight, a small shadow and `aria-current` against the light sidebar. The sidebar includes weekly resources as links; its scroll region is independent of the lesson. Previous/next controls, slide counter and progress bar remain consistent. Arrow keys, Page Up/Down, Home and End navigate when focus is outside interactive controls, leaving field editing and native control behavior intact.
+Current course and slide links use a lighter navy surface, white text, heavier weight, an inset gold underline and `aria-current` against dark navigation. The sidebar includes weekly resources as links; its scroll region is independent of the lesson. Previous/next controls, slide counter and progress bar remain consistent. Arrow keys, Page Up/Down, Home and End navigate when focus is outside interactive controls, leaving field editing and native control behavior intact.
 
 ### Lesson panels and practice notes
 
-Panels carry one slide at a time. Task-first opening panels are white with a navy top edge; discussion uses sand, checks use pale teal, video uses navy and completion uses soft green. Teal notes mark contextual practice. Numbered steps and explicit instructions explain what to do. Full-page print exposes explanations, all slides and both sides of flip content; workshop controls are hidden.
+Panels carry one slide at a time. Task-first opening panels are white with a desktop title-and-illustration composition above the working model; discussion uses cool blue, checks use pale teal, video uses navy and completion uses soft green. Teal notes mark contextual practice. Numbered steps and explicit instructions explain what to do. Full-page print exposes explanations, all slides and both sides of flip content; workshop controls are hidden.
 
 ### Fictional software workspaces
 
@@ -189,11 +210,17 @@ Sync/deletion and backup recovery, heading-and-step structure, export choices, s
 
 Flip cards are real buttons with `aria-expanded`; the hidden face has its own accessibility state. Card fronts use a cool blue reading surface; answers use navy. Knowledge-check buttons identify the selected answer with `aria-pressed`; text feedback supports retrying. Preserve readable answer text and keyboard activation.
 
+### Illustration and course progress
+
+Three locally hosted generated WebP assets supply the welcome, assessment focus and practice companion. `.impeccable/asset-manifest.json` records original sources, prompts and roles. Their blank screens and pages contain no teaching text or answer clues; all meaningful headings and controls remain HTML. Mobile uses the wide welcome illustration for the compact assessment introduction. Preserve the substantial imagery and type hierarchy as the user’s saved design preference.
+
+The home’s begin/continue action and six-lesson progress read `VubProgress`; “viewed to the end” describes navigation state, not mastery or certification. Assessment answer counts read current selections and drafts stay in sessionStorage in the learner’s tab.
+
 ### Video
 
 Video uses the available width, a dark resting background, native controls, selectable WebVTT captions and an adjacent transcript link. Playback pauses when its slide is left. The learner chooses when to play or advance.
 
-Implementation sources: `assets/course.css`, `assets/workshop.css`, `assets/workshop.js`, `scripts/dl2/workshops.py` and `scripts/dl2/build-pages.py`. Captured examples are in `review/redesign/`; this documentation records implementation and direction, not a completed accessibility, CI or finish-review certification.
+Implementation sources: course `assets/course.css`, `assets/workshop.css`, `assets/workshop.js`, `assets/learning-app.css`, `assets/learning-app.js`, `assets/assessment.js`, and repository `scripts/dl2/learning.py`, `scripts/dl2/workshops.py` and `scripts/dl2/build-pages.py`. Current captured examples are in `review/learning-app/`; earlier workshop captures remain in `review/redesign/`. The local quality gate passed with 60 browser tests; independent finish review returned ship. See VALIDATION.md for evidence and verification boundaries; local checks do not establish remote CI or production deployment.
 
 ## Do's and Don'ts
 
@@ -212,5 +239,5 @@ Implementation sources: `assets/course.css`, `assets/workshop.css`, `assets/work
 - **Don't** add CDN dependencies or assume external fonts are available.
 - **Don't** turn compact navigation typography into lesson body typography.
 - **Don't** use animation as the only way to reveal an answer.
-- **Don't** infer a platform redesign or approved comp from this course-scoped record.
+- **Don't** expand the approved Level 2 composition into a platform redesign without authorization.
 - **Don't** substitute repeated title-and-list panels for the approved task-first composition.
