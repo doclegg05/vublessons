@@ -42,7 +42,7 @@ python3 scripts/dl2/author-assessments.py
 python3 scripts/dl2/build-pages.py
 ```
 
-Video scripts live in `author-media.py`; visual compositions are authored in `video-scenes.py`, and interactive lesson models in `workshops.py`. Production source, original narration text, take provenance, word alignments, caption files and scene HTML are under `video/digital-literacy-2/`. Python 3.12 dependencies are pinned in that directory's `requirements.txt`; install them into an isolated venv. Run `npm ci --prefix video/digital-literacy-2/production` for local GSAP. Generate each authored beat through ElevenLabs MCP into `video/digital-literacy-2/elevenlabs-britt/week-NN/beat-NN/`, with exactly one MP3 per directory and the settings in `scripts/dl2/import-elevenlabs-narration.py`. The original MP3s and decoded WAVs are local working assets, excluded from Git; the delivered MP4s, receipts and take hashes are tracked. Preserve these source MP3s locally to rebuild without paying for another generation. FFmpeg/FFprobe and HyperFrames 0.8.47 are also required only for media authoring.
+Video scripts live in `author-media.py`; visual compositions are authored in `video-scenes.py`, and interactive lesson models in `workshops.py`. Production source, original narration text, take provenance, word alignments, caption files and scene HTML are under `video/digital-literacy-2/`. Python 3.12 dependencies are pinned in that directory's `requirements.txt`; install them into an isolated venv. Run `npm ci --prefix video/digital-literacy-2/production` for local GSAP. Generate each authored beat through ElevenLabs MCP into `video/digital-literacy-2/elevenlabs-britt-v3/week-NN/beat-NN/`, with exactly one MP3 and the exact V3 `prompt.txt` per directory and the settings in `scripts/dl2/import-elevenlabs-narration.py`. Use `eleven_v3`, natural stability 0.5, speed 0.95, and Britt’s existing cloned voice. Keep pause tags in `prompt.txt`, not learner captions. The pacing step measures the natural take and allocates a 0.45-second scene lead-in plus 1.1-second closing hold (2 seconds for the final practice scene); it does not stretch speech. The original MP3s and decoded WAVs are local working assets, excluded from Git; the delivered MP4s, receipts and take hashes are tracked. Preserve these source MP3s locally to rebuild without paying for another generation. FFmpeg/FFprobe and HyperFrames 0.8.48 are also required only for media authoring.
 
 ```sh
 python3 scripts/dl2/author-media.py
@@ -54,8 +54,8 @@ python scripts/dl2/align-captions.py
 python3 scripts/dl2/build-media.py
 python3 scripts/dl2/build-pages.py
 # For each week-01 through week-06:
-npx hyperframes@0.8.47 check video/digital-literacy-2/week-01 --strict --contrast --json
-npx hyperframes@0.8.47 render video/digital-literacy-2/week-01 --output courses/digital-literacy-2/media/week-01.mp4 --fps 24 --quality high --workers 2 --crf 24
+npx hyperframes@0.8.48 check video/digital-literacy-2/week-01 --strict --contrast --json
+npx hyperframes@0.8.48 render video/digital-literacy-2/week-01 --output courses/digital-literacy-2/media/week-01.mp4 --fps 24 --quality delivery --workers 2 --crf 24
 python3 scripts/dl2/verify-media.py
 scripts/quality.sh
 ```
@@ -104,3 +104,6 @@ Six new original illustration assets (about 463 KiB total) are tracked with `sli
 Pre/post grading uses a shared branded report theme in `assets/results-report.css`. The page builder embeds its CSS and the official white seal in assessment pages; downloads reuse both without external resources. Results include learner metadata, the actual score, domain bars with numeric equivalents, up to two lowest-scoring practice domains and all answer explanations. Perfect scores receive an application task instead of invented weak areas. Existing comparison wording, grading, clearing and optional learner information are preserved.
 
 The print layout isolates report colors/type from the shared handout and text-size overrides, reserves the first page for the summary, and avoids splitting answer sections. Samples with fictional learner data, screen captures and PDFs live in `review/results-report/`; reproduce them with `node scripts/dl2/capture-results.cjs`. The report test file covers offline branding, accessibility, scoring edge cases and mobile/print behavior. Current full suite: 73 tests.
+
+
+V3 delivery guidance: [ElevenLabs prompting and pause controls](https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices). The sibling pacing checker uses 100–210 WPM as its defect band; the A/V audit separately warns outside 135–145 WPM. Retain and report those style warnings rather than mechanically retiming speech. Automated timing/defect checks do not certify the subjective quality of the cloned voice.

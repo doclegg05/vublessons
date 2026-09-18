@@ -1,0 +1,1 @@
+Tell the AI what the user should do, which controls are needed, and how to test them. Ask for labeled fields, visible keyboard focus, and no external dependencies. [short pause] Use fictional data. Do not place passwords or private API keys in browser code, because people can inspect that code.

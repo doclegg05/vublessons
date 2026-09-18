@@ -1,11 +1,12 @@
 """Import locally saved ElevenLabs MCP takes; never request or read API credentials.
 
-Generate one MP3 per elevenlabs-britt/week-NN/beat-NN directory using the
+Generate one MP3 per elevenlabs-britt-v3/week-NN/beat-NN directory using the
 parameters below and the matching beats.json text. Existing receipt hashes bind
 those local source files to the script and prevent accidental stale reuse.
 """
 import hashlib
 import json
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -13,10 +14,10 @@ from pathlib import Path
 import soundfile as sf
 
 ROOT = Path('video/digital-literacy-2')
-PARAMETERS = dict(model='eleven_multilingual_v2', voice='iKrofGyA12WC0e6AhZ8B',
+PARAMETERS = dict(model='eleven_v3', voice='iKrofGyA12WC0e6AhZ8B',
                   voiceName='Britt - Mild Appalachian Male Voice', speed=0.95,
-                  stability=0.5, similarityBoost=0.8, style=0.1,
-                  useSpeakerBoost=True, language='en', outputFormat='mp3_44100_128')
+                  stability=0.5, similarityBoost=0.8, style=0,
+                  useSpeakerBoost=False, language='en', outputFormat='mp3_44100_128')
 
 
 def digest(data):
@@ -28,13 +29,18 @@ jobs = []
 for folder in sorted(ROOT.glob('week-*/narration')):
   beats = json.loads((folder / 'beats.json').read_text())
   for beat in beats:
-    source_dir = ROOT / 'elevenlabs-britt' / folder.parent.name / beat['id']
+    source_dir = ROOT / 'elevenlabs-britt-v3' / folder.parent.name / beat['id']
     files = list(source_dir.glob('*.mp3'))
     if len(files) != 1:
       raise RuntimeError(f'{source_dir}: expected exactly one generated source MP3')
     source = files[0]
+    prompt = (source_dir / 'prompt.txt').read_text()
+    spoken = re.sub(r'\[[^]]+\]', '', prompt)
+    if ' '.join(spoken.split()) != ' '.join(beat['text'].split()):
+      raise RuntimeError(f'{source_dir}: prompt changes the authored narration')
     receipt = dict(provider='ElevenLabs MCP', **PARAMETERS,
                    textSha256=digest(beat['text'].encode()),
+                   promptSha256=digest((source_dir / 'prompt.txt').read_bytes()),
                    sourceSha256=digest(source.read_bytes()), sourceFile=source.name)
     receipt_path = source_dir / 'receipt.json'
     if receipt_path.exists() and json.loads(receipt_path.read_text()) != receipt:

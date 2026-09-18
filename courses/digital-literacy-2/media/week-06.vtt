@@ -1,95 +1,95 @@
 WEBVTT
 
-00:00:00.010 --> 00:00:03.130
+00:00:00.450 --> 00:00:03.950
 Start with a small problem: help someone
 find a fictional
 
-00:00:03.130 --> 00:00:07.410
+00:00:03.950 --> 00:00:08.410
 community resource. Keep the first app to
 one page with
 
-00:00:07.410 --> 00:00:12.750
+00:00:08.410 --> 00:00:15.390
 search, a category filter, and readable
 results. Write three checks
 
-00:00:12.750 --> 00:00:16.310
+00:00:15.390 --> 00:00:18.650
 before asking AI to build anything, so you
 can tell
 
-00:00:16.310 --> 00:00:18.510
+00:00:18.650 --> 00:00:20.350
 whether the result actually works.
 
-00:00:20.526 --> 00:00:25.106
+00:00:22.320 --> 00:00:26.780
 HTML gives the page its content and
 structure. CSS controls
 
-00:00:25.106 --> 00:00:29.366
+00:00:26.780 --> 00:00:33.380
 appearance and layout. JavaScript responds
 to input, such as filtering
 
-00:00:29.366 --> 00:00:33.506
+00:00:33.380 --> 00:00:37.680
 a list. The supplied starter keeps
 fictional records inside the
 
-00:00:33.506 --> 00:00:37.826
+00:00:37.680 --> 00:00:42.400
 file. It has no real account system,
 private database, or payment service.
 
-00:00:39.763 --> 00:00:42.763
+00:00:44.510 --> 00:00:47.630
 Tell the AI what the user should do, which
 controls
 
-00:00:42.763 --> 00:00:46.023
+00:00:47.630 --> 00:00:51.050
 are needed, and how to test them. Ask for
 labeled
 
-00:00:46.023 --> 00:00:51.583
+00:00:51.050 --> 00:00:57.650
 fields, visible keyboard focus, and no
 external dependencies. Use
 
-00:00:51.583 --> 00:00:56.243
+00:00:57.650 --> 00:01:01.990
 fictional data. Do not place passwords or
 private API keys
 
-00:00:56.243 --> 00:00:59.743
+00:01:01.990 --> 00:01:05.110
 in browser code, because people can
 inspect that code.
 
-00:01:01.571 --> 00:01:05.251
+00:01:07.020 --> 00:01:10.780
 Run the checks yourself. Try a matching
 name, a search
 
-00:01:05.251 --> 00:01:09.491
+00:01:10.780 --> 00:01:16.080
 with no results, and different letter
 cases. Use only the
 
-00:01:09.491 --> 00:01:13.411
+00:01:16.080 --> 00:01:20.220
 keyboard, then narrow the screen. Record
 what you expected and
 
-00:01:13.411 --> 00:01:17.951
+00:01:20.220 --> 00:01:24.120
 what actually happened. A confident AI
 statement does not count
 
-00:01:17.951 --> 00:01:20.551
+00:01:24.120 --> 00:01:25.700
 as evidence that these paths work.
 
-00:01:22.509 --> 00:01:26.729
+00:01:27.450 --> 00:01:30.670
 Save a first version, request or make one
 small improvement,
 
-00:01:27.289 --> 00:01:31.249
+00:01:31.330 --> 00:01:34.690
 and repeat the affected test. Also repeat
 a test that
 
-00:01:31.249 --> 00:01:34.709
+00:01:34.690 --> 00:01:39.030
 already passed to catch a new problem. If
 no AI
 
-00:01:34.709 --> 00:01:38.789
+00:01:39.030 --> 00:01:42.430
 tool is available, edit the starter's
 heading and a fictional
 
-00:01:38.789 --> 00:01:44.609
+00:01:42.430 --> 00:01:47.550
 resource in a plain-text editor. Keep both
 versions and your test log.

@@ -1,223 +1,223 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "9e47ee93012e2bac68d9784ebc03a084ec2c028969e3128e5e8c1a63b2316612",
+  "wavSha256": "b7b097cb4b55c5933146e9085b07cca24637e36d6f75c61c32799be898494cf3",
   "textSha256": "7ba27256b0ae01b6c1043c1d0ad40a951db374990626dc714ad8a0879f61441b",
-  "matchRatio": 0.9767441860465116,
+  "matchRatio": 1.0,
   "words": [
     {
       "word": "When",
       "start": 0.0,
-      "end": 0.2
+      "end": 0.16
     },
     {
       "word": "sound",
-      "start": 0.2,
-      "end": 0.48
+      "start": 0.16,
+      "end": 0.38
     },
     {
       "word": "is",
-      "start": 0.48,
-      "end": 0.78
+      "start": 0.38,
+      "end": 0.6
     },
     {
       "word": "missing,",
-      "start": 0.78,
-      "end": 1.22
+      "start": 0.6,
+      "end": 0.92
     },
     {
       "word": "first",
-      "start": 1.56,
-      "end": 1.82
+      "start": 1.3,
+      "end": 1.5
     },
     {
       "word": "check",
-      "start": 1.82,
-      "end": 2.2
+      "start": 1.5,
+      "end": 1.76
     },
     {
       "word": "the",
-      "start": 2.2,
-      "end": 2.48
+      "start": 1.76,
+      "end": 2.0
     },
     {
       "word": "selected",
-      "start": 2.48,
-      "end": 3.02
+      "start": 2.0,
+      "end": 2.36
     },
     {
       "word": "output",
-      "start": 3.02,
-      "end": 3.44
+      "start": 2.36,
+      "end": 2.62
     },
     {
       "word": "device",
-      "start": 3.44,
-      "end": 4.06
+      "start": 2.62,
+      "end": 3.1
     },
     {
       "word": "and",
-      "start": 4.06,
-      "end": 4.48
+      "start": 3.1,
+      "end": 3.42
     },
     {
       "word": "mute",
-      "start": 4.48,
-      "end": 4.72
+      "start": 3.42,
+      "end": 3.6
     },
     {
       "word": "setting.",
-      "start": 4.72,
-      "end": 5.16
+      "start": 3.6,
+      "end": 3.92
     },
     {
       "word": "A",
-      "start": 5.62,
-      "end": 5.66
+      "start": 4.8,
+      "end": 4.84
     },
     {
       "word": "connected",
-      "start": 5.66,
-      "end": 6.04
+      "start": 4.84,
+      "end": 5.12
     },
     {
       "word": "headset",
-      "start": 6.04,
-      "end": 6.62
+      "start": 5.12,
+      "end": 5.5
     },
     {
       "word": "may",
-      "start": 6.62,
-      "end": 7.02
+      "start": 5.5,
+      "end": 5.9
     },
     {
       "word": "be",
-      "start": 7.02,
-      "end": 7.22
+      "start": 5.9,
+      "end": 6.08
     },
     {
       "word": "receiving",
-      "start": 7.22,
-      "end": 7.66
+      "start": 6.08,
+      "end": 6.44
     },
     {
       "word": "the",
-      "start": 7.66,
-      "end": 8.04
+      "start": 6.44,
+      "end": 6.68
     },
     {
       "word": "sound.",
-      "start": 8.04,
-      "end": 8.44
+      "start": 6.68,
+      "end": 7.02
     },
     {
       "word": "Adjust",
-      "start": 9.1,
-      "end": 9.22
+      "start": 8.18,
+      "end": 8.18
     },
     {
       "word": "the",
-      "start": 9.22,
-      "end": 9.62
+      "start": 8.18,
+      "end": 8.48
     },
     {
       "word": "volume,",
-      "start": 9.62,
-      "end": 10.02
+      "start": 8.48,
+      "end": 8.7
     },
     {
       "word": "then",
-      "start": 10.02,
-      "end": 10.48
+      "start": 9.12,
+      "end": 9.18
     },
     {
       "word": "play",
-      "start": 10.48,
-      "end": 10.76
+      "start": 9.18,
+      "end": 9.36
     },
     {
       "word": "a",
-      "start": 10.76,
-      "end": 11.0
+      "start": 9.36,
+      "end": 9.54
     },
     {
       "word": "short",
-      "start": 11.0,
-      "end": 11.22
+      "start": 9.54,
+      "end": 9.72
     },
     {
       "word": "test.",
-      "start": 11.22,
-      "end": 11.72
+      "start": 9.72,
+      "end": 10.06
     },
     {
       "word": "The",
-      "start": 12.66,
-      "end": 12.68
+      "start": 11.58,
+      "end": 12.16
     },
     {
       "word": "same",
-      "start": 12.68,
-      "end": 12.94
+      "start": 12.16,
+      "end": 12.34
     },
     {
       "word": "habit",
-      "start": 12.94,
-      "end": 13.38
+      "start": 12.34,
+      "end": 12.68
     },
     {
       "word": "applies",
-      "start": 13.38,
-      "end": 13.94
+      "start": 12.68,
+      "end": 13.04
     },
     {
       "word": "to",
-      "start": 13.94,
-      "end": 14.22
+      "start": 13.04,
+      "end": 13.28
     },
     {
       "word": "printing:",
-      "start": 14.22,
-      "end": 14.52
+      "start": 13.28,
+      "end": 13.48
     },
     {
       "word": "choose",
-      "start": 15.16,
-      "end": 15.2
+      "start": 14.4,
+      "end": 14.4
     },
     {
       "word": "the",
-      "start": 15.2,
-      "end": 15.48
+      "start": 14.4,
+      "end": 14.6
     },
     {
       "word": "printer",
-      "start": 15.48,
-      "end": 15.76
+      "start": 14.6,
+      "end": 14.78
     },
     {
       "word": "and",
-      "start": 15.76,
-      "end": 16.28
+      "start": 14.78,
+      "end": 15.16
     },
     {
       "word": "inspect",
-      "start": 16.28,
-      "end": 16.7
+      "start": 15.16,
+      "end": 15.5
     },
     {
       "word": "a",
-      "start": 16.7,
-      "end": 17.02
+      "start": 15.5,
+      "end": 15.74
     },
     {
       "word": "test",
-      "start": 17.02,
-      "end": 17.22
+      "start": 15.74,
+      "end": 15.86
     },
     {
       "word": "page.",
-      "start": 17.22,
-      "end": 17.64
+      "start": 15.86,
+      "end": 16.18
     }
   ]
 }

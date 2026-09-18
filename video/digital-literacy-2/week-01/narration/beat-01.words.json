@@ -1,203 +1,203 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "42cffa6006bae3f597f77bcb0262c9b8497321c5a4c0f679477838a235dd1c91",
+  "wavSha256": "343d6a44b813d43506ad31f507c8ae73c6f06f174263c1cbc2d870369a2fbccf",
   "textSha256": "a5f45af492170983b69204dd800471f66adf3ca63a525849df2416f61cabda6f",
   "matchRatio": 0.9743589743589743,
   "words": [
     {
       "word": "A",
       "start": 0.0,
-      "end": 0.12
+      "end": 0.1
     },
     {
       "word": "useful",
-      "start": 0.12,
-      "end": 0.44
+      "start": 0.1,
+      "end": 0.36
     },
     {
       "word": "computer",
-      "start": 0.44,
-      "end": 1.14
+      "start": 0.36,
+      "end": 0.78
     },
     {
       "word": "setup",
-      "start": 1.14,
-      "end": 1.7
+      "start": 0.78,
+      "end": 1.14
     },
     {
       "word": "begins",
-      "start": 1.7,
-      "end": 2.32
+      "start": 1.14,
+      "end": 1.54
     },
     {
       "word": "with",
-      "start": 2.32,
-      "end": 2.68
+      "start": 1.54,
+      "end": 1.84
     },
     {
       "word": "the",
-      "start": 2.68,
-      "end": 2.88
+      "start": 1.84,
+      "end": 1.94
     },
     {
       "word": "task",
-      "start": 2.88,
-      "end": 3.28
+      "start": 1.94,
+      "end": 2.3
     },
     {
       "word": "you",
-      "start": 3.28,
-      "end": 3.62
+      "start": 2.3,
+      "end": 2.58
     },
     {
       "word": "want",
-      "start": 3.62,
-      "end": 3.88
+      "start": 2.58,
+      "end": 2.82
     },
     {
       "word": "to",
-      "start": 3.88,
-      "end": 4.04
+      "start": 2.82,
+      "end": 3.0
     },
     {
       "word": "do.",
-      "start": 4.04,
-      "end": 4.32
+      "start": 3.0,
+      "end": 3.18
     },
     {
       "word": "Suppose",
-      "start": 4.96,
-      "end": 5.02
+      "start": 4.04,
+      "end": 4.2
     },
     {
       "word": "the",
-      "start": 5.02,
-      "end": 5.54
+      "start": 4.2,
+      "end": 4.6
     },
     {
       "word": "words",
-      "start": 5.54,
-      "end": 5.82
+      "start": 4.6,
+      "end": 4.84
     },
     {
       "word": "on",
-      "start": 5.82,
-      "end": 6.12
+      "start": 4.84,
+      "end": 5.08
     },
     {
       "word": "a",
-      "start": 6.12,
-      "end": 6.24
+      "start": 5.08,
+      "end": 5.16
     },
     {
       "word": "webpage",
-      "start": 6.24,
-      "end": 6.9
+      "start": 5.16,
+      "end": 5.74
     },
     {
       "word": "are",
-      "start": 6.9,
-      "end": 7.16
+      "start": 5.74,
+      "end": 5.94
     },
     {
       "word": "hard",
-      "start": 7.16,
-      "end": 7.44
+      "start": 5.94,
+      "end": 6.46
     },
     {
       "word": "to",
-      "start": 7.44,
-      "end": 7.7
+      "start": 6.46,
+      "end": 6.64
     },
     {
       "word": "read.",
-      "start": 7.7,
-      "end": 8.06
+      "start": 6.64,
+      "end": 6.94
     },
     {
       "word": "Decide",
-      "start": 8.5,
-      "end": 8.86
+      "start": 8.28,
+      "end": 8.68
     },
     {
       "word": "which",
-      "start": 8.86,
-      "end": 9.12
+      "start": 8.68,
+      "end": 9.02
     },
     {
       "word": "control",
-      "start": 9.12,
-      "end": 9.7
+      "start": 9.02,
+      "end": 9.52
     },
     {
       "word": "affects",
-      "start": 9.7,
-      "end": 10.2
+      "start": 9.52,
+      "end": 9.88
     },
     {
       "word": "that",
-      "start": 10.2,
-      "end": 10.7
+      "start": 9.88,
+      "end": 10.18
     },
     {
       "word": "page,",
-      "start": 10.7,
-      "end": 11.16
+      "start": 10.18,
+      "end": 10.5
     },
     {
       "word": "make",
-      "start": 11.42,
-      "end": 11.68
+      "start": 11.1,
+      "end": 11.28
     },
     {
       "word": "one",
-      "start": 11.68,
-      "end": 11.98
+      "start": 11.28,
+      "end": 11.58
     },
     {
       "word": "change,",
-      "start": 11.98,
-      "end": 12.4
+      "start": 11.58,
+      "end": 11.92
     },
     {
       "word": "and",
-      "start": 12.9,
-      "end": 12.96
+      "start": 12.56,
+      "end": 12.64
     },
     {
       "word": "check",
-      "start": 12.96,
-      "end": 13.2
+      "start": 12.64,
+      "end": 12.86
     },
     {
       "word": "the",
-      "start": 13.2,
-      "end": 13.48
+      "start": 12.86,
+      "end": 13.08
     },
     {
       "word": "result",
-      "start": 13.48,
-      "end": 13.9
+      "start": 13.08,
+      "end": 13.36
     },
     {
       "word": "before",
-      "start": 13.9,
-      "end": 14.26
+      "start": 13.36,
+      "end": 13.66
     },
     {
       "word": "changing",
-      "start": 14.26,
-      "end": 14.98
+      "start": 13.66,
+      "end": 14.14
     },
     {
       "word": "anything",
-      "start": 14.98,
-      "end": 15.36
+      "start": 14.14,
+      "end": 14.5
     },
     {
       "word": "else.",
-      "start": 15.36,
-      "end": 15.96
+      "start": 14.5,
+      "end": 14.9
     }
   ]
 }

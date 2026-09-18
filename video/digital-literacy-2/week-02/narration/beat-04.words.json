@@ -1,8 +1,8 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "6bb1d62953e8ba4259095de058b069a89cbdbfb5a14a5478c019d8eae296d934",
+  "wavSha256": "4f3ca64911bb1ff116442fe1b72796a4e40f0424ab9eab3583cb84975bd351d5",
   "textSha256": "813239427640a5dc9b3204ffeecaec577294ceedfe2e323e2fc58cf823d76f96",
-  "matchRatio": 1.0,
+  "matchRatio": 0.9772727272727273,
   "words": [
     {
       "word": "If",
@@ -12,217 +12,217 @@
     {
       "word": "the",
       "start": 0.16,
-      "end": 0.32
+      "end": 0.26
     },
     {
       "word": "whole",
-      "start": 0.32,
-      "end": 0.54
+      "start": 0.26,
+      "end": 0.26
     },
     {
       "word": "file",
-      "start": 0.54,
-      "end": 0.92
+      "start": 0.26,
+      "end": 0.4
     },
     {
       "word": "was",
-      "start": 0.92,
-      "end": 1.32
+      "start": 0.4,
+      "end": 0.88
     },
     {
       "word": "deleted,",
-      "start": 1.32,
-      "end": 1.8
+      "start": 0.88,
+      "end": 1.16
     },
     {
       "word": "check",
-      "start": 2.28,
-      "end": 2.4
+      "start": 1.58,
+      "end": 1.68
     },
     {
       "word": "the",
-      "start": 2.4,
-      "end": 2.64
+      "start": 1.68,
+      "end": 1.88
     },
     {
       "word": "trash",
-      "start": 2.64,
-      "end": 2.94
+      "start": 1.88,
+      "end": 2.08
     },
     {
       "word": "or",
-      "start": 2.94,
-      "end": 3.38
+      "start": 2.08,
+      "end": 2.44
     },
     {
       "word": "recycle",
-      "start": 3.38,
-      "end": 3.88
+      "start": 2.44,
+      "end": 2.8
     },
     {
       "word": "bin.",
-      "start": 3.88,
-      "end": 4.38
+      "start": 2.8,
+      "end": 3.12
     },
     {
       "word": "If",
-      "start": 5.0,
-      "end": 5.0
+      "start": 3.84,
+      "end": 3.86
     },
     {
       "word": "the",
-      "start": 5.0,
-      "end": 5.22
+      "start": 3.86,
+      "end": 4.0
     },
     {
       "word": "file",
-      "start": 5.22,
-      "end": 5.56
+      "start": 4.0,
+      "end": 4.2
     },
     {
       "word": "is",
-      "start": 5.56,
-      "end": 5.84
+      "start": 4.2,
+      "end": 4.4
     },
     {
       "word": "still",
-      "start": 5.84,
-      "end": 6.14
+      "start": 4.4,
+      "end": 4.66
     },
     {
       "word": "there",
-      "start": 6.14,
-      "end": 6.48
+      "start": 4.66,
+      "end": 4.96
     },
     {
       "word": "but",
-      "start": 6.48,
-      "end": 6.74
+      "start": 4.96,
+      "end": 5.24
     },
     {
       "word": "its",
-      "start": 6.74,
-      "end": 6.9
+      "start": 5.24,
+      "end": 5.38
     },
     {
       "word": "content",
-      "start": 6.9,
-      "end": 7.24
+      "start": 5.38,
+      "end": 5.66
     },
     {
       "word": "changed,",
-      "start": 7.24,
-      "end": 8.12
+      "start": 5.66,
+      "end": 6.22
     },
     {
       "word": "inspect",
-      "start": 8.34,
-      "end": 8.74
+      "start": 6.7,
+      "end": 6.98
     },
     {
       "word": "version",
-      "start": 8.74,
-      "end": 9.32
+      "start": 6.98,
+      "end": 7.5
     },
     {
       "word": "history.",
-      "start": 9.32,
-      "end": 9.74
+      "start": 7.5,
+      "end": 7.76
     },
     {
       "word": "Preview",
-      "start": 10.7,
-      "end": 10.8
+      "start": 11.42,
+      "end": 11.98
     },
     {
       "word": "the",
-      "start": 10.8,
-      "end": 11.2
+      "start": 11.98,
+      "end": 12.28
     },
     {
       "word": "earlier",
-      "start": 11.2,
-      "end": 11.42
+      "start": 12.28,
+      "end": 12.58
     },
     {
       "word": "version",
-      "start": 11.42,
-      "end": 12.06
+      "start": 12.58,
+      "end": 12.96
     },
     {
       "word": "before",
-      "start": 12.06,
-      "end": 12.46
+      "start": 12.96,
+      "end": 13.34
     },
     {
       "word": "restoring",
-      "start": 12.46,
-      "end": 13.12
+      "start": 13.34,
+      "end": 13.96
     },
     {
       "word": "it,",
-      "start": 13.12,
-      "end": 13.56
+      "start": 13.96,
+      "end": 14.18
     },
     {
       "word": "and",
-      "start": 13.56,
-      "end": 13.92
+      "start": 14.62,
+      "end": 14.66
     },
     {
       "word": "coordinate",
-      "start": 13.92,
-      "end": 14.44
+      "start": 14.66,
+      "end": 15.04
     },
     {
       "word": "with",
-      "start": 14.44,
-      "end": 14.88
+      "start": 15.04,
+      "end": 15.34
     },
     {
       "word": "collaborators",
-      "start": 14.88,
-      "end": 15.26
+      "start": 15.34,
+      "end": 15.7
     },
     {
       "word": "so",
-      "start": 15.26,
-      "end": 16.02
+      "start": 15.7,
+      "end": 16.42
     },
     {
       "word": "you",
-      "start": 16.02,
-      "end": 16.18
+      "start": 16.42,
+      "end": 16.54
     },
     {
       "word": "do",
-      "start": 16.18,
-      "end": 16.34
+      "start": 16.54,
+      "end": 16.68
     },
     {
       "word": "not",
-      "start": 16.34,
-      "end": 16.58
+      "start": 16.68,
+      "end": 16.84
     },
     {
       "word": "overwrite",
-      "start": 16.58,
-      "end": 17.04
+      "start": 16.84,
+      "end": 17.14
     },
     {
       "word": "work",
-      "start": 17.04,
-      "end": 17.66
+      "start": 17.14,
+      "end": 17.6
     },
     {
       "word": "they",
-      "start": 17.66,
-      "end": 17.96
+      "start": 17.6,
+      "end": 17.86
     },
     {
       "word": "need.",
-      "start": 17.96,
-      "end": 18.28
+      "start": 17.86,
+      "end": 18.06
     }
   ]
 }

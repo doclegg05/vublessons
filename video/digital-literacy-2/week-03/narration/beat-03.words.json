@@ -1,243 +1,243 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "7009a04815aff8b6caf3f2f2eb9fca8a0904e34e85793f8bdf23d6ac81705eea",
+  "wavSha256": "f74ba1cc583da04ef9e0854a93b63d6f505a52b310c66f2943061453655f8063",
   "textSha256": "ad003fa9308e875d10f3365316587a494389fb13023dbfa389382d202dada035",
   "matchRatio": 0.9574468085106383,
   "words": [
     {
       "word": "In",
       "start": 0.0,
-      "end": 0.14
+      "end": 0.12
     },
     {
       "word": "a",
-      "start": 0.14,
-      "end": 0.24
+      "start": 0.12,
+      "end": 0.2
     },
     {
       "word": "practice",
-      "start": 0.24,
-      "end": 0.68
+      "start": 0.2,
+      "end": 0.52
     },
     {
       "word": "workbook,",
-      "start": 0.68,
-      "end": 1.42
+      "start": 0.52,
+      "end": 1.08
     },
     {
       "word": "enter",
-      "start": 1.42,
-      "end": 1.92
+      "start": 1.4,
+      "end": 1.52
     },
     {
       "word": "paper",
-      "start": 1.92,
-      "end": 2.26
+      "start": 1.52,
+      "end": 1.72
     },
     {
       "word": "at",
-      "start": 2.26,
-      "end": 2.82
+      "start": 1.72,
+      "end": 2.0
     },
     {
       "word": "twelve",
-      "start": 2.82,
-      "end": 3.18
+      "start": 2.0,
+      "end": 2.2
     },
     {
       "word": "dollars,",
-      "start": 3.18,
-      "end": 3.84
+      "start": 2.2,
+      "end": 2.62
     },
     {
       "word": "folders",
-      "start": 4.08,
-      "end": 4.28
+      "start": 3.08,
+      "end": 3.18
     },
     {
       "word": "at",
-      "start": 4.28,
-      "end": 4.78
+      "start": 3.18,
+      "end": 3.52
     },
     {
       "word": "eight,",
-      "start": 4.78,
-      "end": 5.1
+      "start": 3.52,
+      "end": 3.66
     },
     {
       "word": "and",
-      "start": 5.46,
-      "end": 5.5
+      "start": 4.08,
+      "end": 4.12
     },
     {
       "word": "pens",
-      "start": 5.5,
-      "end": 5.76
+      "start": 4.12,
+      "end": 4.32
     },
     {
       "word": "at",
-      "start": 5.76,
-      "end": 6.1
+      "start": 4.32,
+      "end": 4.54
     },
     {
       "word": "five.",
-      "start": 6.1,
-      "end": 6.46
+      "start": 4.54,
+      "end": 4.74
     },
     {
       "word": "The",
-      "start": 7.1,
-      "end": 7.12
+      "start": 5.26,
+      "end": 5.28
     },
     {
       "word": "total",
-      "start": 7.12,
-      "end": 7.4
+      "start": 5.28,
+      "end": 5.48
     },
     {
       "word": "is",
-      "start": 7.4,
-      "end": 7.76
+      "start": 5.48,
+      "end": 5.9
     },
     {
       "word": "twenty-five.",
-      "start": 7.76,
-      "end": 8.96
+      "start": 5.9,
+      "end": 8.14
     },
     {
       "word": "Use",
-      "start": 8.96,
-      "end": 9.04
+      "start": 8.14,
+      "end": 8.6
     },
     {
       "word": "a",
-      "start": 9.04,
-      "end": 9.24
+      "start": 8.6,
+      "end": 8.78
     },
     {
       "word": "sum",
-      "start": 9.24,
-      "end": 9.5
+      "start": 8.78,
+      "end": 8.94
     },
     {
       "word": "formula",
-      "start": 9.5,
-      "end": 9.92
+      "start": 8.94,
+      "end": 9.28
     },
     {
       "word": "over",
-      "start": 9.92,
-      "end": 10.66
+      "start": 9.28,
+      "end": 9.74
     },
     {
       "word": "all",
-      "start": 10.66,
-      "end": 11.0
+      "start": 9.74,
+      "end": 10.04
     },
     {
       "word": "three",
-      "start": 11.0,
-      "end": 11.32
+      "start": 10.04,
+      "end": 10.34
     },
     {
       "word": "cells.",
-      "start": 11.32,
-      "end": 11.82
+      "start": 10.34,
+      "end": 10.68
     },
     {
       "word": "Change",
-      "start": 12.3,
-      "end": 12.4
+      "start": 11.46,
+      "end": 11.6
     },
     {
       "word": "paper",
-      "start": 12.4,
-      "end": 12.78
+      "start": 11.6,
+      "end": 11.86
     },
     {
       "word": "to",
-      "start": 12.78,
-      "end": 13.16
+      "start": 11.86,
+      "end": 12.14
     },
     {
       "word": "fifteen",
-      "start": 13.16,
-      "end": 13.54
+      "start": 12.14,
+      "end": 12.42
     },
     {
       "word": "and",
-      "start": 13.54,
-      "end": 14.18
+      "start": 12.42,
+      "end": 13.34
     },
     {
       "word": "check",
-      "start": 14.18,
-      "end": 14.48
+      "start": 13.34,
+      "end": 13.5
     },
     {
       "word": "that",
-      "start": 14.48,
-      "end": 14.78
+      "start": 13.5,
+      "end": 13.7
     },
     {
       "word": "the",
-      "start": 14.78,
-      "end": 14.96
+      "start": 13.7,
+      "end": 13.82
     },
     {
       "word": "total",
-      "start": 14.96,
-      "end": 15.3
+      "start": 13.82,
+      "end": 14.04
     },
     {
       "word": "becomes",
-      "start": 15.3,
-      "end": 15.88
+      "start": 14.04,
+      "end": 14.42
     },
     {
       "word": "twenty-eight.",
-      "start": 15.88,
-      "end": 17.4
+      "start": 14.42,
+      "end": 16.08
     },
     {
       "word": "This",
-      "start": 17.4,
-      "end": 17.48
+      "start": 16.08,
+      "end": 16.18
     },
     {
       "word": "tests",
-      "start": 17.48,
-      "end": 17.82
+      "start": 16.18,
+      "end": 16.42
     },
     {
       "word": "the",
-      "start": 17.82,
-      "end": 18.18
+      "start": 16.42,
+      "end": 16.64
     },
     {
       "word": "formula",
-      "start": 18.18,
-      "end": 18.58
+      "start": 16.64,
+      "end": 17.02
     },
     {
       "word": "rather",
-      "start": 18.58,
-      "end": 19.08
+      "start": 17.02,
+      "end": 17.54
     },
     {
       "word": "than",
-      "start": 19.08,
-      "end": 19.56
+      "start": 17.54,
+      "end": 17.9
     },
     {
       "word": "its",
-      "start": 19.56,
-      "end": 19.74
+      "start": 17.9,
+      "end": 18.0
     },
     {
       "word": "appearance.",
-      "start": 19.74,
-      "end": 20.1
+      "start": 18.0,
+      "end": 18.28
     }
   ]
 }

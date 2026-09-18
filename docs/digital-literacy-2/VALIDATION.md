@@ -15,9 +15,9 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | Assessment alignment | 28 distinct pre/post items each, matched objective/domain pairs, four items in each of seven domains |
 | Sandra narration pacing | 30 final takes passed, zero flagged |
 | Sandra draft-audio guard | Six projects passed; no draft audio or hash warnings |
-| Sandra audio/video sync | Six projects; zero failures and zero warnings; every caption cue long enough for an audit anchor |
-| HyperFrames strict source checks | All six passed lint, runtime, layout and contrast checks; 314 text contrast checks altogether |
-| Final video delivery | Six H.264/AAC 1280×720 24fps MP4s, 17.38 MiB total; complete decode passed, no black intervals, non-silent audio, fast-start containers |
+| Sandra audio/video sync | Six projects; zero failures, 20 house-pace warnings (118–168 WPM natural V3 delivery); no caption drift, cut crossing or dead-air warnings |
+| HyperFrames strict source checks | All six passed lint, runtime, layout and contrast checks; 207 text contrast checks altogether |
+| Final video delivery | Six H.264/AAC 1280×720 24fps MP4s, 26.35 MiB total; complete decode passed, no black intervals, non-silent audio, fast-start containers |
 | Captions | Timed against final audio; complete caption text matches every original script in order |
 | Secret scan | Gitleaks staged-change scan passed with no leaks |
 | Readability report | All six new decks below the grade-8 ceiling; report-only metric, not a teaching effectiveness claim |
@@ -84,4 +84,15 @@ Both illustrative reports in `review/results-report/` print as eight pages, with
 
 Chromium, automated checks and local print output were verified. This is not a certification of all assistive-technology/browser combinations or a live classroom pilot. The current build has not been deployed to production. Existing site accessibility baseline findings remain outside this course change.
 
-Explain Video Generator's trial was completed and its narration/captions were checked separately. Following the user's voice selection, all 30 current narration takes were generated through ElevenLabs MCP using multilingual v2 and the saved Britt voice (`iKrofGyA12WC0e6AhZ8B`). The six delivery MP4s were rebuilt with 30 topic-specific visual demonstrations and fresh caption alignment. Provider receipts, source hashes and final take hashes record the replacement. One take with a pause artifact was regenerated before final pacing checks; all final takes pass. Sandra names the existing sibling checking toolkit, not the narrator.
+Explain Video Generator's trial was completed and its narration/captions were checked separately. Following the user's voice selection, the preceding 30 narration takes were generated through ElevenLabs MCP using multilingual v2 and the saved Britt voice (`iKrofGyA12WC0e6AhZ8B`). The six delivery MP4s were rebuilt with 30 topic-specific visual demonstrations and fresh caption alignment. Provider receipts, source hashes and final take hashes record the replacement. One take with a pause artifact was regenerated before final pacing checks; all final takes pass. Sandra names the existing sibling checking toolkit, not the narrator.
+
+
+## Picture-led V3 video revision
+
+All 30 scenes were rebuilt around original topic artwork and animated visual explanations, with navy/gold VUB framing and fewer on-screen words. Source review covered every scene; it caught a file/backup collision and a temporarily stale formula total, both corrected before delivery. HyperFrames advanced from 0.8.47 to 0.8.48; all six final compositions pass strict lint, runtime, layout and contrast checks (207 checked text samples).
+
+Thirty new takes use the same Britt cloned voice with `eleven_v3`, stability 0.5 and requested speed 0.95. Exact prompts and receipts are preserved under `elevenlabs-britt-v3`. The old automatic 140-WPM time stretch was removed. The timeline gives every scene a 0.45-second visual lead-in and a 1.1-second closing hold, extended to 2 seconds for the final practice scene. Word alignment was regenerated from final WAVs: direct matches range from 92.5% to 100%, with isolated unmatched words interpolated between recognized anchors. Captions retain the complete authored text without spoken delivery tags.
+
+Sandra's pacing defect checker passes all 30 takes; the provenance/draft guard passes all six projects. The A/V audit has zero failures and 20 warnings outside its narrow 135–145 WPM house style. Those warnings are retained, not suppressed: natural take pacing ranges from 118–168 WPM, with no forced time stretching. Automated checks establish timing, continuity and detected defects; they do not substitute for the user's listening judgment of the cloned voice and breathing.
+
+Final delivery: six new H.264/AAC 1280×720, 24fps fast-start MP4s; 26.35 MiB total. All six passed full decode, black-frame, audio-level, caption-content and current-source hash/alignment checks. Exported scene proofs are in `review/video-v3/`.

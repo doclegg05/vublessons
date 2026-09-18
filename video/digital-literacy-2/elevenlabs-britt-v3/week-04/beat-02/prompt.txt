@@ -1,0 +1,1 @@
+Working on the same document during a live call is synchronous collaboration. Leaving comments for someone to read later is asynchronous collaboration. [short pause] Choose based on schedules and the decision needed. For later feedback, include enough context that the writer can act without another meeting.

@@ -1,208 +1,208 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "dfde9b95c7fc77af88aa2940ecc25dba7bdb53f1f7c4e65696005145d4ee72f6",
+  "wavSha256": "db3555cb6dbabf5862730dfeac080faddca13e483e51db16fe8575d0d72ef208",
   "textSha256": "544066ebd4e93440c292cb05300ea235edfb878cd8b53ee36d379ab1a62bdb60",
-  "matchRatio": 0.95,
+  "matchRatio": 0.925,
   "words": [
     {
       "word": "Your",
       "start": 0.0,
-      "end": 0.14
+      "end": 0.18
     },
     {
       "word": "classmate",
-      "start": 0.14,
-      "end": 0.52
+      "start": 0.18,
+      "end": 0.54
     },
     {
       "word": "should",
-      "start": 0.52,
-      "end": 0.96
+      "start": 0.54,
+      "end": 1.04
     },
     {
       "word": "suggest",
-      "start": 0.96,
-      "end": 1.6
+      "start": 1.04,
+      "end": 1.5
     },
     {
       "word": "clearer",
-      "start": 1.6,
-      "end": 2.04
+      "start": 1.5,
+      "end": 1.86
     },
     {
       "word": "wording",
-      "start": 2.04,
-      "end": 2.66
+      "start": 1.86,
+      "end": 2.24
     },
     {
       "word": "without",
-      "start": 2.66,
-      "end": 2.94
+      "start": 2.24,
+      "end": 2.52
     },
     {
       "word": "rewriting",
-      "start": 2.94,
-      "end": 3.7
+      "start": 2.52,
+      "end": 3.38
     },
     {
       "word": "your",
-      "start": 3.7,
-      "end": 3.92
+      "start": 3.38,
+      "end": 3.54
     },
     {
       "word": "handout",
-      "start": 3.92,
-      "end": 4.38
+      "start": 3.54,
+      "end": 3.98
     },
     {
       "word": "directly.",
-      "start": 4.38,
-      "end": 4.74
+      "start": 3.98,
+      "end": 4.36
     },
     {
       "word": "Which",
-      "start": 5.46,
-      "end": 5.48
+      "start": 5.26,
+      "end": 5.4
     },
     {
       "word": "permission",
-      "start": 5.48,
-      "end": 5.8
+      "start": 5.4,
+      "end": 5.78
     },
     {
       "word": "fits?",
-      "start": 5.8,
-      "end": 6.32
+      "start": 5.78,
+      "end": 6.2
     },
     {
       "word": "Pause",
-      "start": 7.16,
-      "end": 7.32
+      "start": 6.68,
+      "end": 6.9
     },
     {
       "word": "and",
       "start": 7.32,
-      "end": 7.48
+      "end": 7.36
     },
     {
       "word": "decide.",
-      "start": 7.48,
-      "end": 7.92
+      "start": 7.36,
+      "end": 7.68
     },
     {
       "word": "Commenter",
-      "start": 7.92,
-      "end": 8.94
+      "start": 7.68,
+      "end": 12.0
     },
     {
       "word": "access",
-      "start": 8.94,
-      "end": 9.24
+      "start": 12.0,
+      "end": 12.4
     },
     {
       "word": "fits",
-      "start": 9.24,
-      "end": 9.7
+      "start": 12.4,
+      "end": 12.92
     },
     {
       "word": "when",
-      "start": 9.7,
-      "end": 10.02
+      "start": 12.92,
+      "end": 13.24
     },
     {
       "word": "it",
-      "start": 10.02,
-      "end": 10.18
+      "start": 13.24,
+      "end": 13.48
     },
     {
       "word": "is",
-      "start": 10.18,
-      "end": 10.32
+      "start": 13.48,
+      "end": 13.62
     },
     {
       "word": "available.",
-      "start": 10.32,
-      "end": 10.62
+      "start": 13.62,
+      "end": 13.94
     },
     {
       "word": "Try",
-      "start": 11.4,
-      "end": 11.42
+      "start": 14.84,
+      "end": 14.86
     },
     {
       "word": "that",
-      "start": 11.42,
-      "end": 11.66
+      "start": 14.86,
+      "end": 15.06
     },
     {
       "word": "choice",
-      "start": 11.66,
-      "end": 11.88
+      "start": 15.06,
+      "end": 15.26
     },
     {
       "word": "in",
-      "start": 11.88,
-      "end": 12.14
+      "start": 15.26,
+      "end": 15.52
     },
     {
       "word": "the",
-      "start": 12.14,
-      "end": 12.26
+      "start": 15.52,
+      "end": 15.6
     },
     {
       "word": "course",
-      "start": 12.26,
-      "end": 12.44
+      "start": 15.6,
+      "end": 15.78
     },
     {
       "word": "simulator,",
-      "start": 12.44,
-      "end": 12.98
+      "start": 15.78,
+      "end": 16.18
     },
     {
       "word": "explain",
-      "start": 13.44,
-      "end": 13.66
+      "start": 16.9,
+      "end": 17.16
     },
     {
       "word": "your",
-      "start": 13.66,
-      "end": 13.92
+      "start": 17.16,
+      "end": 17.4
     },
     {
       "word": "reason,",
-      "start": 13.92,
-      "end": 14.26
+      "start": 17.4,
+      "end": 17.68
     },
     {
       "word": "and",
-      "start": 14.8,
-      "end": 14.84
+      "start": 18.12,
+      "end": 18.16
     },
     {
       "word": "keep",
-      "start": 14.84,
-      "end": 15.04
+      "start": 18.16,
+      "end": 18.36
     },
     {
       "word": "all",
-      "start": 15.04,
-      "end": 15.28
+      "start": 18.36,
+      "end": 18.62
     },
     {
       "word": "practice",
-      "start": 15.28,
-      "end": 15.7
+      "start": 18.62,
+      "end": 19.04
     },
     {
       "word": "records",
-      "start": 15.7,
-      "end": 15.98
+      "start": 19.04,
+      "end": 19.3
     },
     {
       "word": "fictional.",
-      "start": 15.98,
-      "end": 16.54
+      "start": 19.3,
+      "end": 20.14
     }
   ]
 }

@@ -1,37 +1,37 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "9c6156043ab333a8e8881022a35fadafe6a7180617928e4970076b9afcb60b13",
+  "wavSha256": "2ada408ca8019f9f561ddf4bc35072dadb5fdfa7d637c7bec9d1c3bc1a39ec5a",
   "textSha256": "2cfe952b82c69152e4262355b4b36834d978b2b826e1bb68cfa985bfc80a9223",
-  "matchRatio": 0.9803921568627451,
+  "matchRatio": 1.0,
   "words": [
     {
       "word": "Helpful",
       "start": 0.0,
-      "end": 0.3
+      "end": 0.32
     },
     {
       "word": "feedback",
-      "start": 0.3,
-      "end": 0.94
+      "start": 0.32,
+      "end": 0.78
     },
     {
       "word": "names",
-      "start": 0.94,
-      "end": 1.48
+      "start": 0.78,
+      "end": 1.34
     },
     {
       "word": "a",
-      "start": 1.48,
-      "end": 1.82
+      "start": 1.34,
+      "end": 1.66
     },
     {
       "word": "change",
-      "start": 1.82,
-      "end": 2.14
+      "start": 1.66,
+      "end": 1.9
     },
     {
       "word": "and",
-      "start": 2.14,
+      "start": 1.9,
       "end": 2.5
     },
     {
@@ -42,222 +42,222 @@
     {
       "word": "purpose.",
       "start": 2.7,
-      "end": 3.26
+      "end": 3.08
     },
     {
       "word": "You",
-      "start": 3.84,
-      "end": 3.84
+      "start": 3.7,
+      "end": 3.7
     },
     {
       "word": "might",
-      "start": 3.84,
-      "end": 4.08
+      "start": 3.7,
+      "end": 3.9
     },
     {
       "word": "write:",
-      "start": 4.08,
-      "end": 4.42
+      "start": 3.9,
+      "end": 4.14
     },
     {
       "word": "add",
-      "start": 4.86,
-      "end": 5.38
+      "start": 4.62,
+      "end": 4.98
     },
     {
       "word": "the",
-      "start": 5.38,
-      "end": 5.6
+      "start": 4.98,
+      "end": 5.14
     },
     {
       "word": "contact",
-      "start": 5.6,
-      "end": 6.0
+      "start": 5.14,
+      "end": 5.44
     },
     {
       "word": "number",
-      "start": 6.0,
-      "end": 6.64
+      "start": 5.44,
+      "end": 5.86
     },
     {
       "word": "after",
-      "start": 6.64,
-      "end": 6.9
+      "start": 5.86,
+      "end": 6.14
     },
     {
       "word": "the",
-      "start": 6.9,
-      "end": 7.32
+      "start": 6.14,
+      "end": 6.46
     },
     {
       "word": "steps",
-      "start": 7.32,
-      "end": 7.72
+      "start": 6.46,
+      "end": 6.74
     },
     {
       "word": "so",
-      "start": 7.72,
-      "end": 8.12
+      "start": 6.74,
+      "end": 7.14
     },
     {
       "word": "readers",
-      "start": 8.12,
-      "end": 8.44
+      "start": 7.14,
+      "end": 7.36
     },
     {
       "word": "can",
-      "start": 8.44,
-      "end": 8.86
+      "start": 7.36,
+      "end": 7.7
     },
     {
       "word": "find",
-      "start": 8.86,
-      "end": 9.22
+      "start": 7.7,
+      "end": 7.96
     },
     {
       "word": "help.",
-      "start": 9.22,
-      "end": 9.66
+      "start": 7.96,
+      "end": 8.28
     },
     {
       "word": "The",
-      "start": 10.34,
-      "end": 10.36
+      "start": 9.5,
+      "end": 10.06
     },
     {
       "word": "writer",
-      "start": 10.36,
-      "end": 10.62
+      "start": 10.06,
+      "end": 10.24
     },
     {
       "word": "can",
-      "start": 10.62,
-      "end": 11.02
+      "start": 10.24,
+      "end": 10.52
     },
     {
       "word": "accept",
-      "start": 11.02,
-      "end": 11.54
+      "start": 10.52,
+      "end": 10.8
     },
     {
       "word": "the",
-      "start": 11.54,
-      "end": 11.8
+      "start": 10.8,
+      "end": 11.0
     },
     {
       "word": "idea,",
-      "start": 11.8,
-      "end": 12.44
+      "start": 11.0,
+      "end": 11.36
     },
     {
       "word": "ask",
+      "start": 11.62,
+      "end": 11.88
+    },
+    {
+      "word": "a",
+      "start": 11.88,
+      "end": 12.02
+    },
+    {
+      "word": "question,",
+      "start": 12.02,
+      "end": 12.32
+    },
+    {
+      "word": "or",
+      "start": 12.68,
+      "end": 12.72
+    },
+    {
+      "word": "explain",
       "start": 12.72,
       "end": 13.02
     },
     {
       "word": "a",
       "start": 13.02,
-      "end": 13.32
-    },
-    {
-      "word": "question,",
-      "start": 13.32,
-      "end": 13.88
-    },
-    {
-      "word": "or",
-      "start": 14.24,
-      "end": 14.28
-    },
-    {
-      "word": "explain",
-      "start": 14.28,
-      "end": 14.7
-    },
-    {
-      "word": "a",
-      "start": 14.7,
-      "end": 14.98
+      "end": 13.26
     },
     {
       "word": "different",
-      "start": 14.98,
-      "end": 15.28
+      "start": 13.26,
+      "end": 13.42
     },
     {
       "word": "choice.",
-      "start": 15.28,
-      "end": 15.76
+      "start": 13.42,
+      "end": 13.8
     },
     {
       "word": "A",
-      "start": 16.58,
-      "end": 16.62
+      "start": 14.6,
+      "end": 14.62
     },
     {
       "word": "comment",
-      "start": 16.62,
-      "end": 17.06
+      "start": 14.62,
+      "end": 14.9
     },
     {
       "word": "about",
-      "start": 17.06,
-      "end": 17.38
+      "start": 14.9,
+      "end": 15.14
     },
     {
       "word": "the",
-      "start": 17.38,
-      "end": 17.62
+      "start": 15.14,
+      "end": 15.3
     },
     {
       "word": "work",
-      "start": 17.62,
-      "end": 17.88
+      "start": 15.3,
+      "end": 15.48
     },
     {
       "word": "is",
-      "start": 17.88,
-      "end": 18.16
+      "start": 15.48,
+      "end": 15.72
     },
     {
       "word": "more",
-      "start": 18.16,
-      "end": 18.46
+      "start": 15.72,
+      "end": 15.96
     },
     {
       "word": "useful",
-      "start": 18.46,
-      "end": 18.84
+      "start": 15.96,
+      "end": 16.26
     },
     {
       "word": "than",
-      "start": 18.84,
-      "end": 19.42
+      "start": 16.26,
+      "end": 16.62
     },
     {
       "word": "a",
-      "start": 19.42,
-      "end": 19.54
+      "start": 16.62,
+      "end": 16.72
     },
     {
       "word": "judgment",
-      "start": 19.54,
-      "end": 19.96
+      "start": 16.72,
+      "end": 17.0
     },
     {
       "word": "about",
-      "start": 19.96,
-      "end": 20.48
+      "start": 17.0,
+      "end": 17.56
     },
     {
       "word": "the",
-      "start": 20.48,
-      "end": 20.72
+      "start": 17.56,
+      "end": 17.74
     },
     {
       "word": "person.",
-      "start": 20.72,
-      "end": 21.2
+      "start": 17.74,
+      "end": 18.04
     }
   ]
 }

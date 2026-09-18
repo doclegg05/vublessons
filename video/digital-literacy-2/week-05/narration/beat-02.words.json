@@ -1,223 +1,223 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "889ea3a8843bb7bf128617e06461bcde3fc69757653f847b2714e6300fd52448",
+  "wavSha256": "202c96baf0da63c1b0b07e6bc6661f6ff8b1e4a05affea8fbb547cabae54b47f",
   "textSha256": "820caa1fcb292fb21b753eaf4dfcfced4d5bc42fb6654f3fa99530840a5ad25f",
   "matchRatio": 1.0,
   "words": [
     {
       "word": "A",
       "start": 0.0,
-      "end": 0.12
+      "end": 0.16
     },
     {
       "word": "video",
-      "start": 0.12,
-      "end": 0.38
+      "start": 0.16,
+      "end": 0.4
     },
     {
       "word": "meeting",
-      "start": 0.38,
+      "start": 0.4,
       "end": 0.66
     },
     {
       "word": "may",
       "start": 0.66,
-      "end": 1.04
+      "end": 1.06
     },
     {
       "word": "need",
-      "start": 1.04,
-      "end": 1.22
+      "start": 1.06,
+      "end": 1.34
     },
     {
       "word": "camera",
-      "start": 1.22,
-      "end": 1.68
+      "start": 1.34,
+      "end": 1.62
     },
     {
       "word": "access.",
-      "start": 1.68,
-      "end": 2.28
+      "start": 1.62,
+      "end": 2.16
     },
     {
       "word": "A",
-      "start": 2.8,
-      "end": 2.9
+      "start": 2.84,
+      "end": 2.96
     },
     {
       "word": "simple",
-      "start": 2.9,
-      "end": 3.36
+      "start": 2.96,
+      "end": 3.24
     },
     {
       "word": "text",
-      "start": 3.36,
-      "end": 3.72
+      "start": 3.24,
+      "end": 3.52
     },
     {
       "word": "page",
-      "start": 3.72,
-      "end": 4.26
+      "start": 3.52,
+      "end": 3.9
     },
     {
       "word": "usually",
-      "start": 4.26,
-      "end": 4.98
+      "start": 3.9,
+      "end": 4.38
     },
     {
       "word": "does",
-      "start": 4.98,
-      "end": 5.36
+      "start": 4.38,
+      "end": 4.62
     },
     {
       "word": "not.",
-      "start": 5.36,
-      "end": 5.76
+      "start": 4.62,
+      "end": 6.28
     },
     {
       "word": "Grant",
-      "start": 6.16,
-      "end": 6.22
+      "start": 6.32,
+      "end": 6.88
     },
     {
       "word": "permissions",
-      "start": 6.22,
-      "end": 6.58
+      "start": 6.88,
+      "end": 7.12
     },
     {
       "word": "only",
-      "start": 6.58,
-      "end": 7.46
-    },
-    {
-      "word": "when",
-      "start": 7.46,
+      "start": 7.12,
       "end": 7.74
     },
     {
-      "word": "they",
+      "word": "when",
       "start": 7.74,
-      "end": 7.92
+      "end": 8.0
+    },
+    {
+      "word": "they",
+      "start": 8.0,
+      "end": 8.12
     },
     {
       "word": "fit",
-      "start": 7.92,
-      "end": 8.18
-    },
-    {
-      "word": "a",
-      "start": 8.18,
+      "start": 8.12,
       "end": 8.34
     },
     {
-      "word": "clear",
+      "word": "a",
       "start": 8.34,
-      "end": 8.58
+      "end": 8.44
+    },
+    {
+      "word": "clear",
+      "start": 8.44,
+      "end": 8.68
     },
     {
       "word": "task",
-      "start": 8.58,
-      "end": 9.1
+      "start": 8.68,
+      "end": 9.14
     },
     {
       "word": "and",
-      "start": 9.1,
-      "end": 9.54
-    },
-    {
-      "word": "you",
-      "start": 9.54,
+      "start": 9.14,
       "end": 9.7
     },
     {
-      "word": "trust",
+      "word": "you",
       "start": 9.7,
-      "end": 10.0
+      "end": 9.86
+    },
+    {
+      "word": "trust",
+      "start": 9.86,
+      "end": 10.08
     },
     {
       "word": "the",
-      "start": 10.0,
+      "start": 10.08,
       "end": 10.34
     },
     {
       "word": "app.",
       "start": 10.34,
-      "end": 10.62
+      "end": 10.56
     },
     {
       "word": "You",
-      "start": 11.04,
-      "end": 11.08
+      "start": 11.46,
+      "end": 11.54
     },
     {
       "word": "can",
-      "start": 11.08,
-      "end": 11.28
+      "start": 11.54,
+      "end": 11.68
     },
     {
       "word": "deny",
-      "start": 11.28,
-      "end": 11.66
+      "start": 11.68,
+      "end": 11.96
     },
     {
       "word": "an",
-      "start": 11.66,
-      "end": 11.98
+      "start": 11.96,
+      "end": 12.2
     },
     {
       "word": "unrelated",
-      "start": 11.98,
-      "end": 12.4
+      "start": 12.2,
+      "end": 12.54
     },
     {
       "word": "request",
-      "start": 12.4,
-      "end": 13.3
+      "start": 12.54,
+      "end": 13.24
     },
     {
       "word": "and",
-      "start": 13.3,
-      "end": 13.86
+      "start": 13.24,
+      "end": 13.78
     },
     {
       "word": "review",
-      "start": 13.86,
-      "end": 14.24
+      "start": 13.78,
+      "end": 14.08
     },
     {
       "word": "camera",
-      "start": 14.24,
-      "end": 14.8
+      "start": 14.08,
+      "end": 14.58
     },
     {
       "word": "or",
-      "start": 14.8,
-      "end": 15.12
+      "start": 14.58,
+      "end": 14.82
     },
     {
       "word": "microphone",
-      "start": 15.12,
-      "end": 15.64
+      "start": 14.82,
+      "end": 15.2
     },
     {
       "word": "permissions",
-      "start": 15.64,
-      "end": 16.38
+      "start": 15.2,
+      "end": 15.8
     },
     {
       "word": "after",
-      "start": 16.38,
-      "end": 17.0
+      "start": 15.8,
+      "end": 16.3
     },
     {
       "word": "you",
-      "start": 17.0,
-      "end": 17.4
+      "start": 16.3,
+      "end": 16.6
     },
     {
       "word": "finish.",
-      "start": 17.4,
-      "end": 17.7
+      "start": 16.6,
+      "end": 16.86
     }
   ]
 }

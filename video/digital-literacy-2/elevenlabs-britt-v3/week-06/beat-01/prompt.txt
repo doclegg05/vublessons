@@ -1,0 +1,1 @@
+Start with a small problem: help someone find a fictional community resource. Keep the first app to one page with search, a category filter, and readable results. [short pause] Write three checks before asking AI to build anything, so you can tell whether the result actually works.

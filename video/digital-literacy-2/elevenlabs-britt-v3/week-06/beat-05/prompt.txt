@@ -1,0 +1,1 @@
+Save a first version, request or make one small improvement, and repeat the affected test. Also repeat a test that already passed to catch a new problem. [short pause] If no AI tool is available, edit the starter's heading and a fictional resource in a plain-text editor. Keep both versions and your test log.

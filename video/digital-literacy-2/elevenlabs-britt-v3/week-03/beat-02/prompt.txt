@@ -1,0 +1,1 @@
+Use real heading styles for sections, a short numbered list for steps, and link text that explains the destination. Making a line bold can change its appearance without creating a heading. [short pause] Check that the structure still makes sense when you read the document in order.

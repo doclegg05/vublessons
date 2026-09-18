@@ -44,7 +44,8 @@ for(let week=1;week<=6;week++)test(`DL2 week ${week}: video plays, seeks, and lo
  await page.locator('[data-slide]').filter({hasText:/Watch:/}).click();
  const video=page.locator('video');await video.evaluate(v=>{v.muted=true;v.load();});
  await expect.poll(()=>video.evaluate(v=>v.readyState)).toBeGreaterThanOrEqual(2);
- expect(await video.evaluate(v=>v.duration)).toBeGreaterThan(90);
+ const media=JSON.parse(fs.readFileSync('courses/digital-literacy-2/media/manifest.json','utf8'));
+ expect(await video.evaluate(v=>v.duration)).toBeCloseTo(media.videos[week-1].durationSeconds,1);
  await video.evaluate(v=>v.play());await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(.2);
  await video.evaluate(v=>{v.pause();v.textTracks[0].mode='showing';v.currentTime=v.duration-3;});
  await expect.poll(()=>video.evaluate(v=>v.textTracks[0].cues?.length||0)).toBeGreaterThan(15);

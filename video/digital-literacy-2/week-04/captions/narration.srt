@@ -1,115 +1,115 @@
 1
-00:00:00,010 --> 00:00:03,410
+00:00:00,450 --> 00:00:03,650
 A shared file works better when people
 know their roles.
 
 2
-00:00:04,010 --> 00:00:07,630
+00:00:04,350 --> 00:00:07,730
 Choose an owner who makes final decisions,
 a writer who
 
 3
-00:00:07,630 --> 00:00:11,690
+00:00:07,730 --> 00:00:13,190
 drafts, and a reviewer who gives feedback.
 Agree on where
 
 4
-00:00:11,690 --> 00:00:17,750
+00:00:13,190 --> 00:00:18,390
 the common copy lives and what finished
 means before several people begin editing.
 
 5
-00:00:19,672 --> 00:00:22,632
+00:00:20,240 --> 00:00:23,160
 Working on the same document during a live
 call is
 
 6
-00:00:22,632 --> 00:00:26,412
+00:00:23,160 --> 00:00:26,840
 synchronous collaboration. Leaving
 comments for someone to read
 
 7
-00:00:26,412 --> 00:00:31,452
+00:00:26,840 --> 00:00:34,160
 later is asynchronous collaboration.
 Choose based on schedules and
 
 8
-00:00:31,452 --> 00:00:35,352
+00:00:34,160 --> 00:00:38,020
 the decision needed. For later feedback,
 include enough context
 
 9
-00:00:35,352 --> 00:00:37,892
+00:00:38,020 --> 00:00:40,420
 that the writer can act without another
 meeting.
 
 10
-00:00:39,766 --> 00:00:43,846
+00:00:42,190 --> 00:00:46,090
 Helpful feedback names a change and its
 purpose. You might
 
 11
-00:00:43,846 --> 00:00:48,206
+00:00:46,090 --> 00:00:49,550
 write: add the contact number after the
 steps so readers
 
 12
-00:00:48,206 --> 00:00:52,786
+00:00:49,550 --> 00:00:54,070
 can find help. The writer can accept the
 idea, ask
 
 13
-00:00:52,786 --> 00:00:57,146
+00:00:54,070 --> 00:00:57,330
 a question, or explain a different choice.
 A comment about
 
 14
-00:00:57,146 --> 00:01:00,966
+00:00:57,330 --> 00:01:00,230
 the work is more useful than a judgment
 about the person.
 
 15
-00:01:02,838 --> 00:01:05,758
+00:01:01,980 --> 00:01:04,580
 Before a meeting, test the sound and
 choose the correct
 
 16
-00:01:05,758 --> 00:01:10,898
+00:01:04,580 --> 00:01:09,540
 microphone. Mute when appropriate, use the
 agreed chat or raise-hand
 
 17
-00:01:10,898 --> 00:01:15,178
+00:01:09,540 --> 00:01:16,340
 tools, and ask before recording. In a
 webinar, the host
 
 18
-00:01:15,178 --> 00:01:20,798
+00:01:16,340 --> 00:01:21,400
 may control who can speak. Follow the
 event's instructions and respect other
 participants.
 
 19
-00:01:22,930 --> 00:01:26,530
+00:01:23,370 --> 00:01:26,490
 Draft a fictional message asking a partner
 to review your
 
 20
-00:01:26,530 --> 00:01:30,730
+00:01:26,490 --> 00:01:31,090
 handout. Use a specific subject, one clear
 request, and a
 
 21
-00:01:30,730 --> 00:01:35,110
+00:01:31,090 --> 00:01:37,010
 reasonable response time. Choose feedback
 access when that fits.
 
 22
-00:01:35,970 --> 00:01:39,770
+00:01:37,790 --> 00:01:40,970
 After the review, record the decision and
 verify the final
 
 23
-00:01:39,770 --> 00:01:43,550
+00:01:40,970 --> 00:01:44,270
 file. No real message needs to be sent for
 this practice.

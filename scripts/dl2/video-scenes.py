@@ -1,98 +1,212 @@
-"""Thirty topic-specific visual demonstrations, timed against final word alignment."""
+"""Picture-led motion lessons: original artwork + concise, word-timed diagrams."""
 import html,json,re
-from workshops import workshop
+E=lambda s:html.escape(str(s),quote=True)
+KINDS={1:['zoom','zoom','sound','privacy','routine'],2:['sync','permission','sync','recovery','permission'],3:['document','document','sheet','export','bundle'],4:['roles','timing','feedback','meeting','message'],5:['phishing','access','encrypt','attention','verify'],6:['app','parts','prompt','app','versions']}
+TITLES={1:['Start with one task','Zoom into the task','Follow the sound','Share availability','Choose. Test. Explain.'],2:['Follow your file','Match access to the task','Deletion can travel too','Bring back the right copy','Suggest without rewriting'],3:['Make the next step visible','Structure guides the reader','Make the numbers prove it','Choose what travels','Show your resource pack'],4:['One file. Clear roles.','Together or later?','Show the useful change','Make room for others','Make the next action clear'],5:['Pause the pressure','Match access to purpose','Protect what can be read','Make room for a break','Show your safer next step'],6:['Build one useful thing','Three layers. One app.','Give the build boundaries','Test what actually happens','Keep a way back']}
+ART={1:'workstation',2:'research',3:'creation',4:'collaboration',5:'security',6:'building'}
+PATHS={
+'computer':'<rect x="5" y="7" width="54" height="36" rx="3"/><path d="M32 43v13M18 57h28"/>',
+'file':'<path d="M14 5h25l12 12v42H14zM39 5v14h12M23 30h19M23 40h19M23 50h12"/>',
+'cloud':'<path d="M15 47a13 13 0 0 1-1-26 18 18 0 0 1 35-2 14 14 0 0 1 1 28z"/>',
+'headset':'<path d="M9 34v-7a23 23 0 0 1 46 0v7M9 32H4v21h12V32zm46 0h5v21H48V32z"/>',
+'speaker':'<path d="M6 23h13L36 8v48L19 41H6zM44 22q11 10 0 20M51 12q20 20 0 40"/>',
+'camera':'<rect x="4" y="16" width="39" height="32" rx="4"/><path d="m43 25 16-10v34L43 39z"/>',
+'lock':'<rect x="12" y="27" width="40" height="31" rx="4"/><path d="M21 27V17a11 11 0 0 1 22 0v10M32 38v10"/>',
+'person':'<circle cx="32" cy="17" r="11"/><path d="M10 58v-9a22 22 0 0 1 44 0v9z"/>',
+'check':'<circle cx="32" cy="32" r="27"/><path d="m17 32 10 11 21-23"/>',
+'edit':'<path d="m10 44 32-32 12 12-32 32-15 3zM36 18l12 12"/>',
+'chat':'<path d="M5 7h54v38H30L13 59V45H5zM16 21h32M16 31h23"/>',
+'clock':'<circle cx="32" cy="32" r="27"/><path d="M32 15v18l12 9"/>',
+'bin':'<path d="M9 17h46M24 17V7h16v10M15 17l4 42h26l4-42M26 26v22M38 26v22"/>',
+'email':'<rect x="5" y="12" width="54" height="40" rx="4"/><path d="m7 15 25 20 25-20"/>',
+'search':'<circle cx="27" cy="26" r="19"/><path d="m41 41 17 17"/>',
+'key':'<circle cx="19" cy="24" r="13"/><path d="m29 34 23 23 9-9-7-7-7 7M35 40l8-8"/>',
+'mic':'<rect x="23" y="4" width="18" height="35" rx="9"/><path d="M14 28v6a18 18 0 0 0 36 0v-6M32 52v9M20 61h24"/>',
+'hand':'<path d="M15 34V16a4 4 0 0 1 8 0v15V9a4 4 0 0 1 8 0v22V7a4 4 0 0 1 8 0v24V14a4 4 0 0 1 8 0v29c0 12-6 18-18 18-6 0-11-4-15-9L5 39a5 5 0 0 1 7-7l7 8"/>',
+'pause':'<circle cx="32" cy="32" r="27"/><path d="M24 20v24M40 20v24"/>',
+'shield':'<path d="M32 4 55 14v17c0 15-12 25-23 30C21 56 9 46 9 31V14zM20 31l9 10 17-21"/>',
+'usb':'<rect x="19" y="22" width="26" height="36" rx="4"/><path d="M24 22V4h16v18M29 8v8M35 8v8"/>',
+'grid':'<rect x="5" y="7" width="54" height="50" rx="3"/><path d="M5 23h54M5 40h54M23 7v50M42 7v50"/>',
+'slides':'<rect x="9" y="8" width="48" height="35" rx="3"/><path d="M4 20v31h42M33 43v14M21 60l12-3 12 3M20 20h25M20 29h17"/>',
+'undo':'<path d="M18 22h22a17 17 0 0 1 0 34H18M18 22 30 10M18 22l12 12"/>',
+'filter':'<path d="M4 8h56L38 33v23H26V33z"/>',
+}
+def icon(kind,x,y,size=78,color='#E6C65C',id=''):
+ return f'<svg {f"id={id}" if id else ""} x="{x}" y="{y}" width="{size}" height="{size}" viewBox="0 0 64 64" fill="none" stroke="{color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">{PATHS[kind]}</svg>'
+def text(s,x,y,size=32,color='white',id='',anchor='start'):
+ return f'<text x="{x}" y="{y}" fill="{color}" font-size="{size}" font-weight="700" text-anchor="{anchor}" {f"id={id}" if id else ""}>{E(s)}</text>'
+def rect(x,y,w,h,fill='#234b6a',id='',radius=14):return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{radius}" fill="{fill}" {f"id={id}" if id else ""}/>'
+def arrow(x1,y1,x2,y2,id=''):
+ direction=1 if x2>x1 else -1
+ return f'<path {f"id={id}" if id else ""} d="M{x1} {y1}H{x2}m{-12*direction} -10 {12*direction} 10 {-12*direction} 10" fill="none" stroke="#E6C65C" stroke-width="4"/>'
+def tile(kind,label,x,y,w=210,h=170,id=''):
+ return f'<g {f"id={id}" if id else ""}>'+rect(x,y,w,h)+icon(kind,x+(w-68)/2,y+22,68)+text(label,x+w/2,y+h-22,28,anchor='middle')+'</g>'
+def paper(x,y,w=190,h=235,id=''):
+ return f'<g {f"id={id}" if id else ""}>'+rect(x,y,w,h,'#e1efed')+rect(x+22,y+h*.11,w-44,14,'#1b365d',radius=3)+''.join(rect(x+22,y+h*(.30+j*.13),w-44-(j%2)*35,7,'#72978f',radius=2) for j in range(4))+'</g>'
 
-def model(title,body):return f'<div class="work-window"><div class="window-bar">{title} · fictional example</div><div class="window-content">{body}</div></div>'
-def custom(kind):
- if kind=='permission':return model('Share resource guide', '<div class="sharing"><div class="paper-file"><strong>Resource guide</strong><p>Owner: You</p><div class="paper-rule"></div><div class="paper-rule"></div></div><div class="sharing-panel"><h4>Alex needs to suggest wording.</h4><div class="permission-options"><span id="viewer">Viewer · read</span><span id="commenter">Commenter · suggest</span><span id="editor">Editor · change</span></div></div></div>')
- if kind=='recovery':return model('Choose a recovery path','<div class="recovery-paths"><div><h4>Whole file missing?</h4><div class="recovery-target" id="trash">Trash / recycle bin</div></div><div><h4>Content changed?</h4><div class="recovery-target" id="history">Version history</div></div></div><div class="result-note" id="recover-result">Preview the earlier copy before restoring.</div>')
- if kind=='routine':return '<div class="routine"><div id="routine-1"><span class="step-number">1</span><h4>Choose</h4><p>One useful change</p></div><div id="routine-2"><span class="step-number">2</span><h4>Test</h4><p>Check the result</p></div><div id="routine-3"><span class="step-number">3</span><h4>Explain</h4><p>Show how to undo it</p></div></div>'
- if kind=='bundle':return '<div class="artifact-spread"><div class="artifact document-art"><strong>HANDOUT</strong><h4>Find computer help</h4><div class="paper-rule"></div><div class="paper-rule"></div><p>Clear next action</p></div><div class="artifact sheet-art"><strong>WORKBOOK</strong><div class="big-total">$28</div><p>Checked formula</p></div><div class="artifact slide-art"><strong>PRESENTATION</strong><h4>One useful message</h4><p>Three clear slides</p></div></div>'
- if kind=='roles':return model('One common copy','<div class="role-map"><div><span class="role-avatar">O</span><h4>Owner</h4><p>Final decision</p></div><div><span class="role-avatar">W</span><h4>Writer</h4><p>Draft the content</p></div><div><span class="role-avatar">R</span><h4>Reviewer</h4><p>Useful feedback</p></div></div><div class="common-file">Shared handout · one agreed location</div>')
- if kind=='timing':return model('Choose the collaboration pattern','<div class="time-lane" id="live"><h4>Together</h4><div class="time-track"><span>Discuss</span><span>Edit</span><span>Check</span></div><p>Synchronous · same time</p></div><div class="time-lane" id="later"><h4>At different times</h4><div class="time-track"><span>Comment</span><span>Revise</span><span>Reply</span></div><p>Asynchronous · enough context to act</p></div>')
- if kind=='message':return model('Draft only · nothing is sent','<div class="email-compose"><div id="subject"><strong>Subject</strong><span>Review the computer-help handout</span></div><div id="request"><strong>Request</strong><span>Alex, please comment on the contact section.</span></div><div id="deadline"><strong>Next step</strong><span>Please reply before our next practice session.</span></div></div>')
- if kind=='attention':return model('Take control of interruptions','<div class="attention-layout"><div class="notifications"><div>New post</div><div>Another alert</div><div>Check your feed</div></div><div class="quiet-panel"><h4>Make room for a break.</h4><p id="quiet-text">Pause. Review. Choose.</p><div class="quiet-switch">Notifications <strong id="quiet-state">on</strong></div></div></div>')
- if kind=='verify':return model('A safer decision','<div class="verification-steps"><div id="evidence"><strong>Evidence</strong><p>What does the message actually show?</p></div><div id="independent"><strong>Independent check</strong><p>Use a known website or phone number.</p></div><div id="safe"><strong>Safer action</strong><p>Keep private information private.</p></div></div>')
- if kind=='prompt-video':return model('A useful request to AI','<div class="prompt-lines"><div id="task"><strong>Task</strong> Find a fictional community resource.</div><div id="controls"><strong>Controls</strong> Search, filter, readable results.</div><div id="checks"><strong>Checks</strong> Keyboard, no matches, small screen.</div><div id="limits"><strong>Limits</strong> No secrets or private records.</div></div>')
- if kind=='versions':return model('Keep a version you can return to','<div class="version-track"><div id="v1"><strong>Version 1</strong><p>Save a working copy.</p></div><div id="v2"><strong>Version 2</strong><p>Make one improvement.</p></div></div><div class="test-record"><div id="new-test">Repeat the affected test</div><div id="old-test">Repeat a test that already passed</div></div>')
- return ''
+def diagram(kind,i):
+ note='';v=''
+ if kind=='zoom':
+  v=rect(25,22,710,356,'#e1efed')+rect(25,22,710,47,'#c4d8de')+text('100%',675,55,28,'#1b365d','zoom-value',anchor='end')
+  v+='<g id="zoom-content">'+text('Computer help',70,139,34,'#1b365d')+text('Choose one task.',70,192,28,'#1b365d')+rect(70,229,420,12,'#72978f',radius=3)+rect(70,259,345,12,'#72978f',radius=3)+rect(70,305,242,48,'#0f655f')+text('Find help',191,338,28,anchor='middle')+'</g>'
+  note='One change. Check the result.'
+ elif kind=='sound':
+  v=tile('computer','Computer',20,60,210,180)+arrow(246,149,468,149)+tile('speaker','Output',490,60,235,180,'speaker-output')
+  v+='<g id="headphones" opacity="0">'+rect(490,60,235,180)+icon('headset',567,83,78)+text('Headset',607,210,28,anchor='middle')+'</g>'
+  v+=''.join(rect(190+j*44,343,24,8,'#E6C65C',f'wave-{j}',4) for j in range(9));note='Select. Unmute. Test.'
+ elif kind=='privacy':
+  v=rect(20,35,330,295)+rect(410,35,330,295)+text('Your calendar',185,83,31,anchor='middle')+text('Partner sees',575,83,31,anchor='middle')
+  v+=rect(44,114,280,186,'#e1efed')+text('Library visit',64,157,29,'#1b365d')+text('2:00–3:00',64,205,28,'#1b365d')+text('Room A',64,253,28,'#1b365d')
+  v+=rect(434,114,280,186,'#c9a227')+icon('lock',543,126,62,'#1b365d')+text('Busy',574,233,42,'#1b365d',anchor='middle')+text('2:00–3:00',574,279,28,'#1b365d',anchor='middle');note='Availability, without private details.'
+ elif kind=='routine':
+  v=tile('edit','Choose',18,92,210,220,'choose')+tile('check','Test',274,92,210,220,'test')+tile('undo','Explain / undo',530,92,210,220,'explain')+arrow(233,185,270,185)+arrow(490,185,525,185);note='Save work. Restore lab settings.'
+ elif kind=='sync':
+  v=tile('computer','This device',20,30,230,170)+tile('cloud','Cloud account',500,30,240,170)+arrow(265,110,490,110)
+  v+=icon('file',292,73,65,id='travel-file')+paper(70,237,130,145,'local-copy')+paper(552,237,130,145,'cloud-copy')
+  v+='<g id="backup">'+icon('file',343,235,65)+text('Backup',376,330,29,anchor='middle')+text('Separate copy',376,368,25,anchor='middle')+'</g>'
+  v+='<g id="deletion" opacity="0">'+icon('bin',86,255,95,'#E6C65C')+icon('bin',568,255,95,'#E6C65C')+'</g>';note='Check saving and the account.' if i==0 else 'Sync ≠ a separate backup.'
+ elif kind=='permission':
+  v=paper(16,73,180,255)+icon('person',68,91,73,'#0f655f')+arrow(205,205,274,205)
+  for j,(k,label) in enumerate([('search','Viewer'),('chat','Commenter'),('edit','Editor')]):
+   y=30+j*128;v+=f'<g id="access-{j}">'+rect(292,y,444,110)+icon(k,313,y+21,63)+text(label,410,y+65,34)+'</g>'
+  note='Give only the access the task needs.'
+ elif kind=='recovery':
+  v=tile('bin','Deleted file',20,34,310,180,'trash')+tile('clock','Earlier version',430,34,310,180,'history')+paper(288,257,184,144,'restored')+text('Preview → restore',380,444,32,anchor='middle');note='Coordinate before replacing shared work.'
+ elif kind=='document':
+  v=rect(65,17,630,396,'#e1efed')+text('Computer help',107,83,37,'#1b365d','doc-title')
+  for j,s in enumerate(['Choose a task','Visit the desk','Ask how to repeat']):
+   v+=f'<g id="doc-step-{j}">'+rect(105,117+j*77,50,50,'#0f655f')+text(str(j+1),130,152+j*77,28,anchor='middle')+text(s,181,152+j*77,31,'#1b365d')+'</g>'
+  note='A clear heading. A useful sequence.'
+ elif kind=='sheet':
+  v=rect(20,30,440,330,'#e1efed')+text('Item',50,78,29,'#1b365d')+text('Cost ($)',295,78,29,'#1b365d')
+  for j,(name,value) in enumerate([('Paper','12'),('Folders','8'),('Pens','5')]):v+=text(name,50,140+j*63,31,'#1b365d')+text(value,342,140+j*63,34,'#1b365d','paper-cost' if j==0 else '')
+  v+=rect(490,30,250,330,'#0f655f')+text('Total',615,92,34,anchor='middle')+text('25',615,234,104,'#E6C65C','total',anchor='middle')+text('=SUM(B2:B4)',380,419,38,anchor='middle');note='Change a value. Watch the formula.'
+ elif kind=='export':
+  for j,(kind2,title) in enumerate([('edit','DOCX'),('file','PDF'),('grid','CSV')]):v+=tile(kind2,title,18+j*253,66,217,248,f'format-{j}')
+  note='Revise · preserve layout · move data'
+ elif kind=='bundle':
+  v=paper(10,66,207,265,'handout')+rect(254,66,220,265,'#0f655f','workbook')+icon('grid',319,106,90)+text('28',364,280,68,'#E6C65C',anchor='middle')
+  v+='<g id="slides">'+rect(514,110,182,158,'#72978f')+rect(534,87,182,158,'#c9a227')+rect(554,64,182,158,'#e1efed')+icon('slides',609,95,70,'#1b365d')+'</g>'
+  for x,t in [(113,'Handout'),(364,'Workbook'),(634,'Slides')]:v+=text(t,x,388,29,anchor='middle')
+  note='Check it with another reader.'
+ elif kind=='roles':
+  for j,t in enumerate(['Owner','Writer','Reviewer']):v+=tile('person',t,18+j*253,30,217,182,f'role-{j}')
+  v+=f'<path d="M126 222v42h506v-42M379 222v86" fill="none" stroke="#E6C65C" stroke-width="4"/>'+rect(234,308,292,110,'#0f655f')+icon('file',258,326,67)+text('One copy',422,374,31,anchor='middle');note='Agree where the shared file lives.'
+ elif kind=='timing':
+  for j,label in enumerate(['Together','Later']):
+   y=45+j*201;v+=text(label,20,y+45,33)+rect(210,y,530,135)
+   for k in range(3):v+=icon('person' if j==0 else ['chat','edit','check'][k],244+k*172,y+28,62,id=f'time-{j}-{k}')
+  note='Same time—or enough context for later.'
+ elif kind=='feedback':
+  v=paper(24,30,300,355)+rect(369,50,370,180,'#e1efed')+icon('chat',398,78,65,'#0f655f')+text('Add contact details',397,187,29,'#1b365d')+arrow(390,272,270,272)
+  v+='<g id="contact" opacity="0">'+rect(45,284,258,64,'#0f655f')+text('Learning desk',174,325,28,anchor='middle')+'</g>'+icon('check',520,272,94,id='accepted');note='Specific change → useful result.'
+ elif kind=='meeting':
+  v=tile('person','You',40,30,295,220)+tile('person','Host',425,30,295,220)
+  for j,k in enumerate(['headset','mic','hand']):v+=f'<g id="meeting-{j}">'+rect(132+j*185,294,128,123)+icon(k,165+j*185,318,64)+'</g>'
+  v+=f'<path id="muted" d="M347 321l64 65" stroke="#E6C65C" stroke-width="6" opacity="0"/>';note='Test sound. Mute. Raise your hand.'
+ elif kind=='message':
+  v=rect(30,30,700,355,'#e1efed')+icon('email',65,60,75,'#0f655f')
+  for j,t in enumerate(['Review the handout','Comment on the contact section','Reply before practice']):v+=f'<g id="message-{j}">'+rect(64,157+j*70,630,53,'#c4d8de')+text(t,85,192+j*70,29,'#1b365d')+'</g>'
+  note='Subject · request · response time'
+ elif kind=='phishing':
+  v=rect(15,43,324,280,'#e1efed')+icon('email',128,72,87,'#1b365d')+text('ACT NOW',177,220,38,'#1b365d',anchor='middle')+rect(84,251,183,45,'#c9a227')+text('Unknown link',177,282,24,'#1b365d',anchor='middle')
+  v+=icon('pause',354,136,82)+arrow(448,180,493,180)+tile('shield','Known contact',505,71,239,226,'verified');note='Pause. Verify independently.'
+ elif kind=='access':
+  v=tile('camera','Video meeting',25,37,320,190,'camera-yes')+tile('file','Text page',415,37,320,190,'camera-no')+icon('check',146,276,95,id='allow')
+  v+='<g id="deny">'+icon('camera',529,278,95)+f'<path d="M524 280l100 94" stroke="#E6C65C" stroke-width="6"/>'+'</g>';note='Access must fit the task.'
+ elif kind=='encrypt':
+  v=tile('usb','Unknown drive',10,54,203,208)+f'<path d="M46 90l129 119" stroke="#E6C65C" stroke-width="6"/>'+tile('file','Readable file',273,54,210,208)+arrow(491,155,529,155)+tile('lock','Key required',538,54,210,208,'locked')
+  v+='<g id="cipher">'+rect(287,299,448,91,'#0f655f')+text('7fA2 · 9cD4 · e18B',511,359,34,anchor='middle')+'</g>';note='Encryption protects reading.'
+ elif kind=='attention':
+  for j in range(3):v+=f'<g id="alert-{j}">'+rect(15,45+j*108,330,82)+icon('chat',34,61+j*108,48)+rect(105,71+j*108,205,12,'#b7d1ce',radius=3)+'</g>'
+  v+=tile('pause','Take a break',425,70,315,264,'quiet');note='Choose what gets your attention.'
+ elif kind=='verify':
+  for j,(k,t) in enumerate([('search','Evidence'),('shield','Verify'),('check','Safer action')]):v+=tile(k,t,18+j*253,90,217,226,f'safe-{j}')
+  v+=arrow(239,200,267,200)+arrow(490,200,520,200);note='Explain the decision to a partner.'
+ elif kind=='app':
+  v=rect(30,22,700,370,'#e1efed')+rect(53,48,474,63,'white')+icon('search',68,62,34,'#0f655f')+text('library',126,92,31,'#1b365d','query')+rect(543,48,162,63,'#c9a227')+text('All',625,91,29,'#1b365d',anchor='middle')
+  v+='<g id="match">'+rect(53,142,651,94,'#c4d8de')+icon('file',74,161,53,'#0f655f')+text('Community library',153,201,33,'#1b365d')+'</g>'
+  v+='<g id="empty" opacity="0">'+icon('search',338,147,75,'#0f655f')+text('No matching resources',380,285,34,'#1b365d',anchor='middle')+'</g>'
+  v+=text('Fictional resources',380,355,26,'#1b365d',anchor='middle');note='Search. Filter. Check the result.'
+ elif kind=='parts':
+  for j,(k,t) in enumerate([('file','HTML'),('grid','CSS'),('filter','JavaScript')]):v+=tile(k,t,18+j*253,60,217,220,f'layer-{j}')
+  v+=text('Structure',126,343,29,anchor='middle')+text('Appearance',379,343,29,anchor='middle')+text('Behavior',632,343,29,anchor='middle');note='A local prototype—not a real account service.'
+ elif kind=='prompt':
+  for j,(k,t) in enumerate([('search','Task'),('filter','Controls'),('check','Tests'),('lock','Boundaries')]):v+=tile(k,t,20+(j%2)*380,20+(j//2)*212,340,190,f'prompt-{j}')
+  note='Fictional data. No private keys.'
+ elif kind=='versions':
+  v=tile('file','Version 1',15,42,265,234,'version-1')+arrow(293,159,455,159)+tile('edit','Version 2',477,42,265,234,'version-2')
+  v+=icon('undo',335,287,89,id='restore')+text('Retest the change',194,406,30,anchor='middle')+text('Retest what worked',574,406,30,anchor='middle');note='Keep both versions and your test log.'
+ return '<svg class="diagram" viewBox="0 0 760 460" role="img" aria-label="'+E(note)+'">'+v+'</svg>',note
 
-KINDS={1:['zoom','zoom','sound','privacy','routine'],2:['sync','permission','sync','recovery','permission'],3:['document','document','sheet','export','bundle'],4:['roles','timing','feedback','meeting','message'],5:['phishing','access','encrypt','attention','verify'],6:['app','parts','prompt-video','app','versions']}
-CSS='''
-*{box-sizing:border-box} .ground{position:absolute;inset:0;background:#edf2f6}.top-rule{position:absolute;left:0;top:0;right:0;height:8px;background:#c9a227}.brand{position:absolute;right:48px;top:32px;display:flex;align-items:center;gap:12px;font-size:22px;color:#1b365d;font-weight:700}.brand img{width:38px;height:38px;background:#1b365d;border-radius:50%;padding:3px}.scene-title{position:absolute;left:56px;top:43px;margin:0;font-size:45px;line-height:1.12;font-weight:700;letter-spacing:-1px;color:#1b365d;max-width:890px}.stage{position:absolute;left:56px;right:56px;top:136px;height:436px;color:#16344e}.scene-footer{position:absolute;bottom:45px;left:56px;color:#34526c;font-size:22px}.phase{position:absolute;right:56px;bottom:45px;color:#34526c;font-size:22px}.timeline-rail{position:absolute;left:56px;right:56px;bottom:89px;height:5px;background:#c9d7e2}.timeline-fill{height:5px;background:#0f655f;transform-origin:left}.work-heading,.work-outcome,.work-controls,.simulation-label{display:none}.workshop{margin:0;border:0;padding:0}.work-window{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 28px #18344c12;height:436px}.window-bar{height:48px;background:#dce7f0;color:#264865;font-size:22px;display:flex;align-items:center;gap:20px;padding:10px 24px}.window-bar svg{fill:#71899f}.window-content{padding:26px 32px}.stage h4{font-size:34px;line-height:1.22;margin:0 0 18px;color:#1b365d}.stage p{font-size:32px;line-height:1.35;margin:18px 0}.stage button,.stage input{font-family:VUB;font-size:30px}.stage pre,.stage code{font-family:VUB;font-size:32px;line-height:1.4;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}.browser-tools{border-bottom:1px solid #b9cbd9;padding-bottom:12px;font-size:26px;color:#45637b}.browser-tools .work-controls{display:none}.zoom-page{padding-top:30px;max-width:1000px}.zoom-page h4{font-size:38px}.example-link{font-size:30px;color:#145886;border-bottom:2px solid #145886}.signal-path{display:flex;gap:36px;align-items:center;justify-content:center;margin:22px 0;font-size:34px}.signal-path>div{background:#e5edf4;padding:28px;border-radius:12px}.signal-path svg{width:110px;fill:none;stroke:#0f655f;stroke-width:3}.sound-meter{height:105px;display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px}.sound-meter i{width:35px;height:8px;background:#0f655f;border-radius:4px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:25px 0}.comparison>div{background:white;padding:34px;border-radius:12px}.calendar-event{padding:26px;background:#d5e7f5;color:#173c61;border-radius:10px;font-size:34px}.calendar-event span{display:block;font-size:28px;margin-top:18px}.gold-event{background:#f0e3bb;color:#594213}.sync-map{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:30px}.sync-arrow{color:#0f655f;text-align:center}.file-object{background:#e3edf5;padding:22px;border-radius:10px;font-size:32px}.backup-copy{background:#deeee5;display:flex;justify-content:space-between;gap:20px;padding:24px;border-radius:10px;margin-top:28px;font-size:28px}.document-page{background:white;font-size:32px;line-height:1.4;padding:10px 16px}.document-title{font-size:36px;margin-bottom:24px}.document-line{margin:12px 0;padding:4px 0;line-height:1.25}.formula-bar{display:flex;gap:30px;background:#eef4f7;padding:6px 20px;font-size:28px;margin-bottom:14px}.demo-sheet{width:100%;border-collapse:collapse;font-size:30px;line-height:1.1}.demo-sheet td,.demo-sheet th{border:1px solid #a5bdce;padding:4px 22px;text-align:left}.demo-sheet thead{background:#e6eef5}.demo-sheet th:first-child{width:60px}.formula-cell{background:#e0eee6}.sum-row{background:#d8ebdf;font-weight:700}.export-preview{display:flex;gap:44px;align-items:center;height:310px;padding:16px}.file-extension{font-size:52px;font-weight:700;background:#1b365d;color:#f0d57c;padding:54px 32px;border-radius:12px}.export-preview>div:last-child{max-width:710px}.review-document{display:none}.comment-thread{display:flex;gap:24px;padding:28px;background:#eef4f8;border-radius:12px;margin-top:26px}.comment-thread strong{font-size:26px}.avatar{width:64px;height:64px;border-radius:50%;background:#1b365d;color:white;display:flex;align-items:center;justify-content:center;font-size:32px;flex:none}.comment-thread p{font-size:38px}.meeting-stage{display:grid;grid-template-columns:1fr 1fr;gap:26px}.meeting-stage>div{background:#173c61;color:#fff;padding:44px;border-radius:12px;display:flex;flex-direction:column;text-align:center;gap:34px;font-size:28px}.participant-mark{font-size:48px}.permission-request{display:flex;gap:36px;align-items:center;height:200px}.permission-request svg{width:120px;flex:none;fill:none;stroke:#1b365d;stroke-width:4}.permission-request h4{max-width:780px;font-size:42px}.protected-file{padding:18px 12px}.protected-file pre{background:#e6eef5;padding:24px;border-radius:10px}.code-workspace{display:grid;grid-template-columns:1fr 1fr;gap:28px}.code-workspace pre{background:#102c4b;color:#fff;padding:32px;border-radius:12px;min-height:380px}.mini-app{background:#fff;padding:32px;border-radius:12px}.mock-search{display:block;padding:14px;background:#e8eff5;font-size:28px}.result-row{padding:20px 0;border-bottom:1px solid #bdcbd5;font-size:30px}.resource-results{font-size:32px}.stage label{display:block;font-size:28px}.stage input[type=search]{display:block;width:100%;padding:14px 20px;border:1px solid #839fb5;background:#f8fafb;color:#1b365d;border-radius:8px;margin:10px 0}.sharing{display:grid;grid-template-columns:380px 1fr;gap:40px}.paper-file{background:#e7eef5;padding:30px;border-radius:10px;font-size:34px}.paper-rule{height:8px;width:85%;background:#adbfce;margin:26px 0}.paper-rule:nth-last-child(1){width:65%}.permission-options{display:grid;gap:12px}.permission-options span{padding:14px 20px;background:#edf3f7;font-size:32px;border-radius:8px}.recovery-paths{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:16px 0}.recovery-target{background:#e7eef5;padding:28px;font-size:34px;border-radius:10px}.result-note{font-size:30px;color:#185a49;background:#e0eee6;margin-top:28px;padding:24px;border-radius:10px}.routine{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;height:410px}.routine>div{padding:36px;background:#fff;border-radius:12px}.step-number{display:block;font-size:70px;color:#0f655f;margin:4px 0 32px}.artifact-spread{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:16px 0}.artifact{padding:32px;border-radius:12px;height:380px;box-shadow:0 12px 24px #1b365d12}.artifact strong{display:block;font-size:22px;margin-bottom:30px}.document-art{background:white}.sheet-art{background:#deeee5}.slide-art{background:#1b365d;color:white}.slide-art h4{color:white}.big-total{font-size:80px;line-height:1.3;font-weight:700;color:#1b365d}.role-map{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:26px}.role-avatar{display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;background:#dce9f4;border-radius:50%;font-size:40px;color:#1b365d;margin-bottom:14px}.role-map h4{margin-bottom:8px}.role-map p{font-size:28px;margin:0}.common-file{background:#1b365d;color:white;text-align:center;padding:22px;font-size:32px;border-radius:10px;margin-top:28px}.time-lane{display:grid;grid-template-columns:320px 1fr;gap:14px 26px;margin-bottom:26px}.time-lane h4{font-size:32px;margin:0}.time-lane p{grid-column:2;margin:0;font-size:26px}.time-track{display:flex;justify-content:space-between;background:#e1edf5;border-radius:8px;padding:16px;font-size:30px}.email-compose>div{display:grid;grid-template-columns:180px 1fr;gap:26px;padding:24px 16px;border-bottom:1px solid #adc1d2;font-size:32px}.attention-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px}.notifications{display:grid;gap:16px}.notifications>div{padding:24px;background:#e5edf5;border-radius:10px;font-size:32px}.quiet-panel{padding:28px}.quiet-switch{padding:22px;background:#e0ece5;font-size:30px;margin-top:20px}.verification-steps{display:grid;gap:18px}.verification-steps>div{display:grid;grid-template-columns:310px 1fr;gap:20px;padding:18px;font-size:30px;background:#edf3f7;border-radius:8px}.verification-steps p{font-size:30px;margin:0}.prompt-lines{display:grid;gap:12px}.prompt-lines>div{font-size:31px;padding:12px;background:#e6eef5;border-radius:8px}.prompt-lines strong{display:inline-block;width:180px;color:#0f655f}.version-track{display:grid;grid-template-columns:1fr 1fr;gap:26px}.version-track>div{background:#e6eef5;padding:26px;border-radius:10px;font-size:34px}.version-track p{font-size:30px}.test-record{display:flex;gap:26px;margin-top:24px}.test-record>div{padding:20px;font-size:28px;background:#dcece3;border-radius:8px;flex:1}.message-preview>p{margin:4px 0;font-size:30px}.message-preview>strong{font-size:24px}.message-preview .work-controls{display:block;margin:0 0 8px}.message-preview button{background:#fff0d2;color:#684700;border:0;border-radius:8px;padding:10px 20px;font-size:30px}.message-preview .work-controls button{display:inline-block}.stage [data-workshop=phishing]>.work-controls{display:none}.message-preview p:empty{display:none}
-'''
+CSS='''*{box-sizing:border-box}.canvas-ground{position:absolute;inset:0;background:#102c4b}.photo-window{position:absolute;left:0;top:0;width:400px;height:720px;overflow:hidden}.topic-photo{width:100%;height:100%;object-fit:cover;object-position:48% center}.photo-shade{position:absolute;left:0;bottom:0;width:400px;height:130px;background:#102c4b}.gold-divider{position:absolute;left:395px;top:0;width:5px;height:720px;background:#c9a227}.video-title{position:absolute;left:440px;top:55px;max-width:755px;margin:0;font-size:46px;line-height:1.14;color:white;letter-spacing:-.5px}.graphic-stage{position:absolute;left:440px;top:153px;width:784px;height:460px}.diagram{width:100%;height:100%;overflow:visible}.video-note{position:absolute;left:445px;bottom:53px;font-size:29px;color:#e6c65c;margin:0;max-width:755px;line-height:1.3}.video-brand{position:absolute;left:31px;bottom:37px;display:flex;align-items:center;gap:12px;color:white;font-size:24px;font-weight:700}.video-brand img{width:49px;height:49px}.graphic-stage text{font-family:VUB}.layout-wide .photo-window{width:270px}.layout-wide .gold-divider{left:265px}.layout-wide .photo-shade{width:270px}.layout-wide .video-title{left:312px;max-width:880px}.layout-wide .graphic-stage{left:312px;width:910px;height:466px;top:153px}.layout-wide .video-note{left:320px;max-width:870px}.layout-finale .photo-window{left:850px;width:430px}.layout-finale .gold-divider{left:845px}.layout-finale .photo-shade{left:850px;width:430px}.layout-finale .video-title{left:55px;max-width:740px}.layout-finale .graphic-stage{left:40px;width:780px}.layout-finale .video-note{left:55px;max-width:750px}.layout-finale .video-brand{left:885px}'''
 def scene(n,i,b,words):
- kind=KINDS[n][i];cid=f'w{n}-scene-{i+1}'
- content=custom(kind) or workshop(kind)
- if kind=='privacy':content=content.replace('Busy<span>2:00–3:00</span>','Busy · 2:00–3:00')
- if kind=='app':content=model('Fictional resource finder','<label>Search the practice resources<input data-resource-search type="search" value="" placeholder="Try library or zzz"></label><div class="resource-results">Search the fictional resource list.</div>')
- if kind=='sync' and i==0:content=content.replace('<strong>Separate backup</strong><span>Resource guide.docx · earlier saved copy</span>','A separate recovery copy stays outside sync.')
- # All selectors are scene-scoped and ids prefixed so the assembled document is unique.
- ids=re.findall(r'id="([^"]+)"',content)
- for old in ids:content=content.replace(f'id="{old}"',f'id="{cid}-{old}"')
- def selector(s):
-  if s.startswith('#'):s='#'+cid+'-'+s[1:]
-  return '#'+cid+' '+s
- def time(phrase,fallback):
+ kind=KINDS[n][i];cid=f'w{n}-scene-{i+1}';content,note=diagram(kind,i)
+ # Scope ids and every animation to the owning frame.
+ for old in re.findall(r'id=([a-zA-Z0-9-]+)',content):content=content.replace(f'id={old}',f'id="{cid}-{old}"')
+ for old in re.findall(r'id="([^\"]+)"',content):
+  if not old.startswith(cid):content=content.replace(f'id="{old}"',f'id="{cid}-{old}"')
+ def selector(s):return '#'+cid+' '+('#'+cid+'-'+s[1:] if s.startswith('#') else s)
+ def at(phrase,fallback):
   tokens=[re.sub('[^a-z0-9]','',w['word'].lower()) for w in words];needle=[re.sub('[^a-z0-9]','',x.lower()) for x in phrase.split()]
   for j in range(len(tokens)-len(needle)+1):
-   if tokens[j:j+len(needle)]==needle:return round(words[j]['start'],3)
-  return round(b['audioDuration']*fallback,3)
+   if needle and tokens[j:j+len(needle)]==needle:return round(words[j]['start']+b.get('leadIn',0.01),3)
+  return round(b['audioDuration']*fallback+b.get('leadIn',0.01),3)
  events=[]
- def set_(s,props,phrase='',fraction=.5):events.append(f'tl.set({json.dumps(selector(s))},{json.dumps(props)},{time(phrase,fraction)});')
- def tween(s,props,phrase='',fraction=.5):events.append(f'tl.to({json.dumps(selector(s))},{json.dumps(dict(duration=.7,ease="power2.out",**props))},{time(phrase,fraction)});')
+ def change(s,props,phrase='',f=.5):events.append(f'tl.set({json.dumps(selector(s))},{json.dumps(props)},{at(phrase,f)});')
+ def move(s,props,phrase='',f=.5):events.append(f'tl.to({json.dumps(selector(s))},{json.dumps(dict(duration=.8,ease="power2.out",**props))},{at(phrase,f)});')
+ def light(s,phrase='',f=.5):move(s,{'scale':1.06,'transformOrigin':'50% 50%'},phrase,f)
  if kind=='zoom':
-  set_('.zoom-page h4',{'fontSize':48},'larger',.4);set_('.zoom-page p',{'fontSize':38},'try browser zoom',.5);set_('.browser-tools',{'textContent':'Page zoom · 125%'},'larger',.4)
+  move('#zoom-content',{'scale':1.14,'transformOrigin':'70px 120px'},'larger' if i else 'one change',.45);change('#zoom-value',{'textContent':'125%'},'larger' if i else 'one change',.45)
  elif kind=='sound':
-  set_('[data-output]',{'textContent':'Headphones selected'},'headset',.35);tween('.sound-meter i',{'height':60,'stagger':.12},'play a short test',.55)
- elif kind=='privacy':
-  set_('[data-shared-event]',{'textContent':'Busy · 2:00–3:00'},'free or busy',.5);tween('[data-shared-event]',{'backgroundColor':'#deeee5'},'availability',.45)
- elif kind=='sync' and i==2:
-  set_('[data-local-file]',{'textContent':'File deleted'},'a deletion',.25);tween('[data-local-file]',{'backgroundColor':'#f3dddd'},'a deletion',.25);set_('[data-cloud-file]',{'textContent':'Deletion synced'},'sync alone',.4);tween('.backup-copy',{'backgroundColor':'#bcdcc7'},'a backup',.55)
- elif kind=='sync':
-  tween('[data-local-file]',{'backgroundColor':'#f0e3bb'},'this computer',.08);tween('[data-cloud-file]',{'backgroundColor':'#bcdcc7'},'cloud service',.35);set_('.backup-copy',{'textContent':'Check saving / sync, then verify the account.'},'check that',.55)
- elif kind=='permission':
-  if i==1:
-   for s,phrase,f in [('#viewer','a viewer',.25),('#commenter','a commenter',.4),('#editor','an editor',.55)]:tween(s,{'backgroundColor':'#c9e2d5'},phrase,f)
-  else:tween('#commenter',{'backgroundColor':'#bcdcc7'},'commenter access',.5)
- elif kind=='recovery':
-  tween('#trash',{'backgroundColor':'#c9e2d5'},'trash',.2);tween('#history',{'backgroundColor':'#c9e2d5'},'version history',.5)
+  change('#speaker-output',{'opacity':0},'headset',.35);change('#headphones',{'opacity':1},'headset',.35)
+  for j in range(9):move(f'#wave-{j}',{'scaleY':[3,5,7,4,6,8,5,3,6][j],'transformOrigin':'50% 50%'},'play a short test',.55)
+ elif kind=='privacy':move('.diagram',{'scale':1.04,'transformOrigin':'70% 45%'},'free or busy',.6)
  elif kind=='routine':
-  for s,phrase,f in [('#routine-1','one helpful adjustment',.15),('#routine-2','show a partner',.35),('#routine-3','restore',.6)]:tween(s,{'backgroundColor':'#deeee5'},phrase,f)
+  for s,p,f in [('#choose','one helpful adjustment',.2),('#test','show a partner',.4),('#explain','restore',.6)]:light(s,p,f)
+ elif kind=='sync':
+  move('#travel-file',{'x':130},'cloud service' if i==0 else 'changes',.2)
+  if i==2:
+   move('#local-copy',{'opacity':0},'a deletion',.3);move('#cloud-copy',{'opacity':0},'sync alone',.45);move('#deletion',{'opacity':1},'sync alone',.45);light('#backup','a backup',.6)
+  else:light('#cloud-copy','check that',.6)
+ elif kind=='permission':
+  for j,p in enumerate(['a viewer','a commenter','an editor'] if i==1 else ['','','']):
+   if i==1:move(f'#access-{j} rect',{'fill':'#0f655f'},p,.25+j*.2)
+  if i==4:move('#access-1 rect',{'fill':'#0f655f'},'commenter access',.5)
+ elif kind=='recovery':light('#trash','trash',.2);light('#history','version history',.5);light('#restored','preview',.7)
  elif kind=='document':
-  set_('.document-title',{'fontSize':42,'fontWeight':700,'color':'#1b365d'},'heading styles',.25)
-  for j in range(1,4):set_(f'.document-line:nth-child({j+1})',{'textContent':f'{j}. '+['Choose one task you want to practice.','Bring your question to the learning desk.','Ask how to repeat the task at home.'][j-1]},'numbered list',.42+j*.07)
- elif kind=='sheet':
-  tween('[data-sum]',{'backgroundColor':'#a9d5ba'},'twenty-five',.27);set_('[data-paper]',{'textContent':'$15'},'paper to fifteen',.6);set_('[data-sum]',{'textContent':'$28'},'paper to fifteen',.6);tween('[data-sum]',{'backgroundColor':'#a9d5ba'},'twenty-eight',.75)
+  for j in range(3):move(f'#doc-step-{j}',{'x':10},'numbered list' if i==1 else 'next action',.28+j*.2)
+ elif kind=='sheet':change('#paper-cost',{'textContent':'15'},'paper to fifteen',.6);change('#total',{'textContent':'28'},'paper to fifteen',.6);light('#total','twenty-eight',.73)
  elif kind=='export':
-  for ext,title,copy,phrase,f in [('PDF','Share a finished layout','Reopen the export and inspect its pages.','a pdf',.35),('CSV','Move plain table data','Formatting and formulas do not survive.','a csv',.53)]:
-   set_('[data-extension]',{'textContent':ext},phrase,f);set_('[data-export-title]',{'textContent':title},phrase,f);set_('[data-export-copy]',{'textContent':copy},phrase,f)
+  for j,p in enumerate(['editable document','a pdf','a csv']):light(f'#format-{j}',p,.15+j*.24)
  elif kind=='bundle':
-  for s,phrase,f in [('.document-art','handout',.2),('.sheet-art','workbook',.3),('.slide-art','slides',.4)]:tween(s,{'y':-8},phrase,f)
- elif kind=='roles':tween('.role-avatar',{'backgroundColor':'#f0e3bb','stagger':2},'owner',.2)
- elif kind=='timing':tween('#live',{'backgroundColor':'#deeee5'},'synchronous collaboration',.2);tween('#later',{'backgroundColor':'#f0e3bb'},'asynchronous collaboration',.45)
- elif kind=='feedback':
-  set_('[data-comment]',{'textContent':'Add the contact number after the steps so readers can find help.'},'add the contact number',.2);tween('.comment-thread',{'backgroundColor':'#deeee5'},'accept the idea',.55)
- elif kind=='meeting':set_('[data-mic-state]',{'textContent':'Microphone checked'},'correct microphone',.22);set_('[data-mic-state]',{'textContent':'Muted while listening'},'mute',.35)
+  for s,p,f in [('#handout','handout',.2),('#workbook','workbook',.28),('#slides','slides',.36)]:move(s,{'y':-10},p,f)
+ elif kind=='roles':
+  for j,p in enumerate(['owner','writer','reviewer']):light(f'#role-{j}',p,.15+j*.17)
+ elif kind=='timing':
+  for j in range(3):move(f'#time-0-{j}',{'y':-9},'synchronous collaboration',.22);move(f'#time-1-{j}',{'x':10},'asynchronous collaboration',.5+j*.08)
+ elif kind=='feedback':move('#contact',{'opacity':1},'add the contact number',.25);light('#accepted','accept the idea',.55)
+ elif kind=='meeting':light('#meeting-0','test the sound',.15);move('#muted',{'opacity':1},'mute',.35);light('#meeting-2','raise-hand',.5)
  elif kind=='message':
-  for s,phrase,f in [('#subject','specific subject',.3),('#request','clear request',.45),('#deadline','response time',.55)]:tween(s,{'backgroundColor':'#deeee5'},phrase,f)
- elif kind=='phishing':
-  tween('[data-value=urgency]',{'backgroundColor':'#f0d57c'},'urgency',.2);tween('[data-value=sender]',{'backgroundColor':'#f0d57c'},'known website',.6);set_('[data-value=link]',{'textContent':'Use a known website to verify.'},'verify the claim',.8)
- elif kind=='access':set_('.permission-request h4',{'textContent':'Text-only page: deny unrelated camera access.'},'deny',.7);tween('.permission-request',{'backgroundColor':'#deeee5'},'deny',.7)
- elif kind=='encrypt':
-  set_('[data-protection]',{'textContent':'Encryption · key required'},'encryption',.35);set_('[data-file-text]',{'textContent':'7fA2 · 9cD4 · e18B\nUnreadable without the key'},'unreadable',.45);set_('[data-protection-note]',{'textContent':'Read-only is different: it restricts editing.'},'read-only',.65)
- elif kind=='attention':tween('.notifications>div',{'opacity':.18,'x':-16,'stagger':.5},'notification limits',.6);set_('#quiet-state',{'textContent':'limited'},'notification limits',.6);set_('#quiet-text',{'textContent':'Take a screen break.'},'take breaks',.75)
+  for j,p in enumerate(['specific subject','clear request','response time']):move(f'#message-{j} rect',{'fill':'#b2d8c9'},p,.2+j*.17)
+ elif kind=='phishing':light('#verified','known website',.62)
+ elif kind=='access':light('#allow','video meeting',.1);light('#deny','deny',.68)
+ elif kind=='encrypt':light('#locked','encryption',.35);move('#cipher',{'y':-9},'unreadable',.45)
+ elif kind=='attention':
+  for j in range(3):move(f'#alert-{j}',{'x':-100,'opacity':0},'notification limits',.58+j*.04)
+  light('#quiet','take breaks',.75)
  elif kind=='verify':
-  for s,phrase,f in [('#evidence','evidence',.3),('#independent','independent source',.4),('#safe','limits risk',.6)]:tween(s,{'backgroundColor':'#deeee5'},phrase,f)
- elif kind=='parts':
-  set_('[data-code]',{'textContent':'.result {\n  color: #1B365D;\n  padding: 1rem;\n}'},'css',.2);tween('.mini-app',{'backgroundColor':'#deeee5'},'appearance',.3);set_('[data-code]',{'textContent':'resources.filter(item =>\n  item.name.includes(query)\n)'},'javascript',.4);set_('.result-row:last-child',{'textContent':'Filtered to matching records'},'filtering a list',.5)
- elif kind=='prompt-video':
-  for s,phrase,f in [('#task','user should do',.15),('#controls','controls',.3),('#checks','keyboard focus',.5),('#limits','private api keys',.75)]:tween(s,{'backgroundColor':'#cde3d5'},phrase,f)
+  for j,p in enumerate(['evidence','independent source','action']):light(f'#safe-{j}',p,.2+j*.2)
  elif kind=='app':
-  set_('[data-resource-search]',{'value':'library'},'matching name',.25);set_('.resource-results',{'textContent':'Community library · Learning'},'matching name',.25)
-  if i==3:set_('[data-resource-search]',{'value':'zzz'},'no results',.4);set_('.resource-results',{'textContent':'No matching resources. Try another search.'},'no results',.4)
- elif kind=='versions':
-  for s,phrase,f in [('#v1','first version',.12),('#v2','improvement',.3),('#new-test','affected test',.4),('#old-test','already passed',.6)]:tween(s,{'backgroundColor':'#c7e2d0'},phrase,f)
- css=CSS.replace('\n','\n')
- # Scope every rule via a wrapper; each template transports its own local font.
- return f'''<template><div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{b['window']}" data-width="1280" data-height="720" style="position:relative;width:100%;height:100%;overflow:hidden"><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}#{cid}{{font-family:VUB}}{css}</style><div class="ground"></div><div class="top-rule"></div><h1 class="scene-title">{html.escape(b['title'])}</h1><div class="brand"><img src="assets/vub-seal.png" alt="">VUB</div><div class="stage">{content}</div><div class="timeline-rail"><div class="timeline-fill"></div></div><div class="scene-footer">Week {n} · Digital Literacy Level 2</div><div class="phase">{i+1} / 5 · Practice, check, explain</div><script>const tl=gsap.timeline({{paused:true}});tl.fromTo("#{cid} .stage",{{opacity:1,y:12}},{{opacity:1,y:0,duration:.6,ease:"power2.out"}},0);{''.join(events)}tl.fromTo("#{cid} .timeline-fill",{{scaleX:0}},{{scaleX:1,duration:{b['window']},ease:"none"}},0);window.__timelines["{cid}"]=tl;</script></div></template>'''
+  if i==3:change('#query',{'textContent':'zzz'},'no results',.3);move('#match',{'opacity':0},'no results',.3);move('#empty',{'opacity':1},'no results',.3);change('#query',{'textContent':'LIBRARY'},'letter cases',.5);move('#empty',{'opacity':0},'letter cases',.5);move('#match',{'opacity':1},'letter cases',.5)
+  else:light('#match','readable results',.3)
+ elif kind=='parts':
+  for j,p in enumerate(['html','css','javascript']):light(f'#layer-{j}',p,.08+j*.25)
+ elif kind=='prompt':
+  for j,p in enumerate(['user should do','controls','test','fictional data']):move(f'#prompt-{j} rect',{'fill':'#0f655f'},p,.1+j*.2)
+ elif kind=='versions':light('#version-1','first version',.1);light('#version-2','improvement',.28);move('#restore',{'rotation':-20,'transformOrigin':'50% 50%'},'keep both versions',.8)
+ layout='layout-finale' if i==4 else 'layout-wide' if i in [1,2,3] else 'layout-split'
+ css=CSS
+ for variant in ["layout-wide","layout-finale"]:
+  css=re.sub(r"\."+variant+r" ([^{}]+)\{([^{}]+)\}", lambda m: m[1]+"{"+m[2]+"}" if variant==layout else "", css)
+ return f'''<template><div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{b['window']}" data-width="1280" data-height="720" style="position:relative;width:100%;height:100%;overflow:hidden"><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}#{cid}{{font-family:VUB}}{css}</style><div class="canvas-ground"></div><div class="photo-window"><img class="topic-photo" src="assets/topic.webp" alt=""></div><div class="photo-shade"></div><div class="gold-divider"></div><h1 class="video-title">{E(TITLES[n][i])}</h1><div class="graphic-stage">{content}</div><p class="video-note">{E(note)}</p><div class="video-brand"><img src="assets/vub-seal.png" alt="">VUB Learning</div><script>const tl=gsap.timeline({{paused:true}});tl.fromTo("#{cid} .topic-photo",{{scale:1}},{{scale:1.07,duration:{b['window']},ease:"none"}},0);tl.fromTo("#{cid} .graphic-stage",{{opacity:1,y:10}},{{opacity:1,y:0,duration:.7,ease:"power2.out"}},0);{''.join(events)}window.__timelines["{cid}"]=tl;</script></div></template>'''

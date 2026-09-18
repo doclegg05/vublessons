@@ -1,223 +1,223 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "2b7e6223f03d7f410163a0e8f69add9afe5975a2a0cff8148186db3761026930",
+  "wavSha256": "3c283a1c8b2790822a3378523be3da5ec3ca5559e3cfb26f35bf313b490fb209",
   "textSha256": "ce034024ec00786ad774a268364d82f58cf5075026b17b0e593fb7baf34bccb5",
   "matchRatio": 1.0,
   "words": [
     {
       "word": "A",
       "start": 0.0,
-      "end": 0.08
+      "end": 0.16
     },
     {
       "word": "shared",
-      "start": 0.08,
+      "start": 0.16,
       "end": 0.38
     },
     {
       "word": "file",
       "start": 0.38,
-      "end": 0.78
+      "end": 0.7
     },
     {
       "word": "works",
-      "start": 0.78,
-      "end": 1.26
+      "start": 0.7,
+      "end": 1.08
     },
     {
       "word": "better",
-      "start": 1.26,
-      "end": 1.74
+      "start": 1.08,
+      "end": 1.54
     },
     {
       "word": "when",
-      "start": 1.74,
-      "end": 2.0
+      "start": 1.54,
+      "end": 1.98
     },
     {
       "word": "people",
-      "start": 2.0,
-      "end": 2.4
+      "start": 1.98,
+      "end": 2.2
     },
     {
       "word": "know",
-      "start": 2.4,
-      "end": 2.7
+      "start": 2.2,
+      "end": 2.56
     },
     {
       "word": "their",
-      "start": 2.7,
-      "end": 2.96
+      "start": 2.56,
+      "end": 2.74
     },
     {
       "word": "roles.",
-      "start": 2.96,
-      "end": 3.4
+      "start": 2.74,
+      "end": 3.2
     },
     {
       "word": "Choose",
-      "start": 4.0,
-      "end": 4.06
+      "start": 3.9,
+      "end": 3.98
     },
     {
       "word": "an",
-      "start": 4.06,
-      "end": 4.32
+      "start": 3.98,
+      "end": 4.22
     },
     {
       "word": "owner",
-      "start": 4.32,
-      "end": 4.58
+      "start": 4.22,
+      "end": 4.46
     },
     {
       "word": "who",
-      "start": 4.58,
-      "end": 4.94
+      "start": 4.46,
+      "end": 4.76
     },
     {
       "word": "makes",
-      "start": 4.94,
-      "end": 5.18
+      "start": 4.76,
+      "end": 4.96
     },
     {
       "word": "final",
-      "start": 5.18,
-      "end": 5.54
+      "start": 4.96,
+      "end": 5.2
     },
     {
       "word": "decisions,",
-      "start": 5.54,
-      "end": 6.22
+      "start": 5.2,
+      "end": 5.78
     },
     {
       "word": "a",
-      "start": 6.96,
-      "end": 7.0
+      "start": 6.68,
+      "end": 6.7
     },
     {
       "word": "writer",
-      "start": 7.0,
-      "end": 7.24
+      "start": 6.7,
+      "end": 6.94
     },
     {
       "word": "who",
-      "start": 7.24,
-      "end": 7.62
+      "start": 6.94,
+      "end": 7.28
     },
     {
       "word": "drafts,",
-      "start": 7.62,
-      "end": 7.9
+      "start": 7.28,
+      "end": 7.46
     },
     {
       "word": "and",
-      "start": 7.9,
-      "end": 8.46
+      "start": 8.18,
+      "end": 8.36
     },
     {
       "word": "a",
-      "start": 8.46,
-      "end": 8.6
+      "start": 8.36,
+      "end": 8.46
     },
     {
       "word": "reviewer",
-      "start": 8.6,
-      "end": 9.06
+      "start": 8.46,
+      "end": 8.78
     },
     {
       "word": "who",
-      "start": 9.06,
-      "end": 9.58
+      "start": 8.78,
+      "end": 9.28
     },
     {
       "word": "gives",
-      "start": 9.58,
-      "end": 9.86
+      "start": 9.28,
+      "end": 9.46
     },
     {
       "word": "feedback.",
-      "start": 9.86,
-      "end": 10.5
+      "start": 9.46,
+      "end": 9.92
     },
     {
       "word": "Agree",
-      "start": 10.96,
-      "end": 11.22
-    },
-    {
-      "word": "on",
-      "start": 11.22,
-      "end": 11.42
-    },
-    {
-      "word": "where",
-      "start": 11.42,
-      "end": 11.68
-    },
-    {
-      "word": "the",
-      "start": 11.68,
-      "end": 11.88
-    },
-    {
-      "word": "common",
-      "start": 11.88,
+      "start": 11.56,
       "end": 12.2
     },
     {
-      "word": "copy",
+      "word": "on",
       "start": 12.2,
-      "end": 12.66
+      "end": 12.48
+    },
+    {
+      "word": "where",
+      "start": 12.48,
+      "end": 12.74
+    },
+    {
+      "word": "the",
+      "start": 12.74,
+      "end": 12.92
+    },
+    {
+      "word": "common",
+      "start": 12.92,
+      "end": 13.14
+    },
+    {
+      "word": "copy",
+      "start": 13.14,
+      "end": 13.46
     },
     {
       "word": "lives",
-      "start": 12.66,
-      "end": 13.32
+      "start": 13.46,
+      "end": 13.92
     },
     {
       "word": "and",
-      "start": 13.84,
-      "end": 14.24
-    },
-    {
-      "word": "what",
-      "start": 14.24,
+      "start": 14.38,
       "end": 14.46
     },
     {
-      "word": "finished",
+      "word": "what",
       "start": 14.46,
-      "end": 14.86
+      "end": 14.7
+    },
+    {
+      "word": "finished",
+      "start": 14.7,
+      "end": 15.14
     },
     {
       "word": "means",
-      "start": 14.86,
-      "end": 15.3
+      "start": 15.14,
+      "end": 15.68
     },
     {
       "word": "before",
-      "start": 15.3,
-      "end": 15.82
+      "start": 15.68,
+      "end": 16.28
     },
     {
       "word": "several",
-      "start": 15.82,
-      "end": 16.24
+      "start": 16.28,
+      "end": 16.78
     },
     {
       "word": "people",
-      "start": 16.24,
-      "end": 16.82
+      "start": 16.78,
+      "end": 17.14
     },
     {
       "word": "begin",
-      "start": 16.82,
-      "end": 17.24
+      "start": 17.14,
+      "end": 17.58
     },
     {
       "word": "editing.",
-      "start": 17.24,
-      "end": 17.74
+      "start": 17.58,
+      "end": 17.94
     }
   ]
 }

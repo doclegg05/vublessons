@@ -20,24 +20,385 @@
     "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "infoCount": 0,
-    "findings": [],
-    "duration": 106.446,
+    "infoCount": 8,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 6.098,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -3.88,
+          "top": -6.98,
+          "right": 403.88,
+          "bottom": 726.98,
+          "width": 407.76,
+          "height": 733.97
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 400,
+          "bottom": 720,
+          "width": 400,
+          "height": 720
+        },
+        "overflow": {
+          "left": 3.88,
+          "right": 3.88,
+          "top": 6.98,
+          "bottom": 6.98
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": -3.88,
+          "y": -6.98,
+          "width": 407.76,
+          "height": 733.97
+        },
+        "firstSeen": 6.098,
+        "lastSeen": 6.098,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 18.295,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -11.7,
+          "top": -21.06,
+          "right": 411.7,
+          "bottom": 741.06,
+          "width": 423.4,
+          "height": 762.12
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 400,
+          "bottom": 720,
+          "width": 400,
+          "height": 720
+        },
+        "overflow": {
+          "left": 11.7,
+          "right": 11.7,
+          "top": 21.06,
+          "bottom": 21.06
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": -11.7,
+          "y": -21.06,
+          "width": 423.4,
+          "height": 762.12
+        },
+        "firstSeen": 18.295,
+        "lastSeen": 18.295,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 30.492,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -3.66,
+          "top": -9.76,
+          "right": 273.66,
+          "bottom": 729.76,
+          "width": 277.32,
+          "height": 739.51
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 270,
+          "bottom": 720,
+          "width": 270,
+          "height": 720
+        },
+        "overflow": {
+          "left": 3.66,
+          "right": 3.66,
+          "top": 9.76,
+          "bottom": 9.76
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": -3.66,
+          "y": -9.76,
+          "width": 277.32,
+          "height": 739.51
+        },
+        "firstSeen": 30.492,
+        "lastSeen": 30.492,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 42.688,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -8.86,
+          "top": -23.62,
+          "right": 278.86,
+          "bottom": 743.62,
+          "width": 287.71,
+          "height": 767.23
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 270,
+          "bottom": 720,
+          "width": 270,
+          "height": 720
+        },
+        "overflow": {
+          "left": 8.86,
+          "right": 8.86,
+          "top": 23.62,
+          "bottom": 23.62
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": -8.86,
+          "y": -23.62,
+          "width": 287.71,
+          "height": 767.23
+        },
+        "firstSeen": 42.688,
+        "lastSeen": 42.688,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 54.885,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -4.54,
+          "top": -12.1,
+          "right": 274.54,
+          "bottom": 732.1,
+          "width": 279.07,
+          "height": 744.19
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 270,
+          "bottom": 720,
+          "width": 270,
+          "height": 720
+        },
+        "overflow": {
+          "left": 4.54,
+          "right": 4.54,
+          "top": 12.1,
+          "bottom": 12.1
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": -4.54,
+          "y": -12.1,
+          "width": 279.07,
+          "height": 744.19
+        },
+        "firstSeen": 54.885,
+        "lastSeen": 54.885,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 79.278,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -5.87,
+          "top": -15.66,
+          "right": 275.87,
+          "bottom": 735.66,
+          "width": 281.74,
+          "height": 751.32
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 270,
+          "bottom": 720,
+          "width": 270,
+          "height": 720
+        },
+        "overflow": {
+          "left": 5.87,
+          "right": 5.87,
+          "top": 15.66,
+          "bottom": 15.66
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": -5.87,
+          "y": -15.66,
+          "width": 281.74,
+          "height": 751.32
+        },
+        "firstSeen": 79.278,
+        "lastSeen": 79.278,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 91.475,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 847.05,
+          "top": -4.93,
+          "right": 1282.95,
+          "bottom": 724.93,
+          "width": 435.89,
+          "height": 729.86
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 850,
+          "top": 0,
+          "right": 1280,
+          "bottom": 720,
+          "width": 430,
+          "height": 720
+        },
+        "overflow": {
+          "left": 2.95,
+          "right": 2.95,
+          "top": 4.93,
+          "bottom": 4.93
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": 847.05,
+          "y": -4.93,
+          "width": 435.89,
+          "height": 729.86
+        },
+        "firstSeen": 91.475,
+        "lastSeen": 91.475,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 103.672,
+        "selector": "img.topic-photo",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 838.99,
+          "top": -18.43,
+          "right": 1291.01,
+          "bottom": 738.43,
+          "width": 452.02,
+          "height": 756.86
+        },
+        "containerSelector": "div.photo-window",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 850,
+          "top": 0,
+          "right": 1280,
+          "bottom": 720,
+          "width": 430,
+          "height": 720
+        },
+        "overflow": {
+          "left": 11.01,
+          "right": 11.01,
+          "top": 18.43,
+          "bottom": 18.43
+        },
+        "dataAttributes": {
+          "data-hf-authored-opacity": ""
+        },
+        "sourceFile": "compositions/frames/scene-1.html",
+        "bbox": {
+          "x": 838.99,
+          "y": -18.43,
+          "width": 452.02,
+          "height": 756.86
+        },
+        "firstSeen": 103.672,
+        "lastSeen": 103.672,
+        "occurrences": 1,
+        "heldMs": 0
+      }
+    ],
+    "duration": 109.77,
     "samples": [
-      5.914,
-      17.741,
-      29.568,
-      41.396,
-      53.223,
-      65.05,
-      76.878,
-      88.705,
-      100.532
+      6.098,
+      18.295,
+      30.492,
+      42.688,
+      54.885,
+      67.082,
+      79.278,
+      91.475,
+      103.672
     ],
     "transitionSamples": [],
     "transitionSamplesDropped": 0,
     "tolerance": 2,
-    "totalIssueCount": 0,
+    "totalIssueCount": 8,
     "truncated": false
   },
   "motion": {
@@ -57,14 +418,14 @@
     "findings": [],
     "enabled": true,
     "samples": [
-      5.914,
-      29.568,
-      53.223,
-      76.878,
-      100.532
+      6.098,
+      30.492,
+      54.885,
+      79.278,
+      103.672
     ],
-    "checked": 47,
-    "passed": 47
+    "checked": 37,
+    "passed": 37
   },
   "hdr": {
     "autoPromotion": null,
@@ -77,8 +438,8 @@
     "findingFiles": []
   },
   "_meta": {
-    "version": "0.8.47",
-    "latestVersion": "0.8.47",
+    "version": "0.8.48",
+    "latestVersion": "0.8.48",
     "updateAvailable": false
   }
 }
