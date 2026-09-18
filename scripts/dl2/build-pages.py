@@ -2,6 +2,7 @@
 import json,html
 from workshops import for_slide,workshop
 import learning
+import scenes as slide_scenes
 from pathlib import Path
 ROOT=Path('courses/digital-literacy-2'); BASE='/courses/digital-literacy-2'
 C=json.loads(Path('scripts/dl2/curriculum.json').read_text()); W=C['weeks']; Q=json.loads((ROOT/'assets/questions.json').read_text())
@@ -11,13 +12,13 @@ def ul(items):return '<ul>'+''.join('<li>'+e(x)+'</li>' for x in items)+'</ul>'
 def page(title,body,cls='doc',week=None,script='lesson.js'):
  if cls!='lesson':body=learning.frame(body)
  return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/learning-app.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/learning-app.css">{f'<link rel="stylesheet" href="{BASE}/assets/slide-scenes.css">' if cls=="lesson" else ""}</head>
 <body class="{cls}" {f'data-week="{week}"' if week else ''}>
 {learning.CONTRACT}
 <a class="skip" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/"><img src="/assets/vub-seal-white.png" alt=""><span>VUB Learning</span></a><span class="course-name">Digital Literacy · Level 2</span>{link('index.html','Course home')}</header><div class="brand-line"></div>
 {body}
 <footer class="footer">WV Veterans Upward Bound · Build technology confidence through practice.</footer>
-<script src="/shared/progress.js"></script><script src="/shared/text-size.js"></script><script src="{BASE}/assets/{script}"></script><script src="{BASE}/assets/workshop.js"></script><script src="{BASE}/assets/learning-app.js"></script></body></html>'''
+<script src="/shared/progress.js"></script><script src="/shared/text-size.js"></script><script src="{BASE}/assets/{script}"></script><script src="{BASE}/assets/workshop.js"></script><script src="{BASE}/assets/learning-app.js"></script>{f'<script src="{BASE}/assets/slide-scenes.js"></script>' if cls=="lesson" else ""}</body></html>'''
 def write(path,text):p=ROOT/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
 def doc(title,body):return page(title,f'<main class="page doc" id="main"><h1>{e(title)}</h1><div class="actions"><button type="button" data-print>Print / Save as PDF</button>{link("index.html","Course home","button secondary")}</div>{body}</main>')
 def resources(n):
@@ -25,7 +26,7 @@ def resources(n):
  return ''.join(link(x,y) for x,y in [(p+'/worksheet.html','Worksheet'),(p+'/lesson-plan.html','Instructor lesson plan'),(p+'/answer-key.html','Worksheet answer guide'),(p+'/video-transcript.html','Video and transcript'),('syllabus.html','Syllabus'),('assessments/pre-test.html','Pre-test'),('assessments/post-test.html','Post-test')])
 def exercise(s,n,i):
  k=s['kind']; prefix=f'w{n}s{i}'
- if k=='steps': return '<ol class="step-list">'+''.join('<li>'+e(x)+'</li>' for x in s['items'])+'</ol>'
+ if k=='steps': return '<ol class="step-list interactive-steps">'+''.join('<li><button type="button" data-step-done aria-pressed="false"><span>'+e(x)+'</span><span class="step-state">Mark practiced</span></button></li>' for x in s['items'])+'</ol>'
  if k=='flip':return '<div class="flip-grid">'+''.join(f'<button class="flip" type="button" aria-expanded="false" aria-label="{e(a)}: reveal explanation"><span class="flip-inner"><span class="flip-front" aria-hidden="false">{e(a)}<span class="flip-hint">Select to reveal</span></span><span class="flip-back" aria-hidden="true">{e(b)}<span class="flip-hint">Select to turn back</span></span></span></button>' for a,b in s['cards'])+'</div>'
  if k=='check':return f'<div class="check-options" data-explanation="{e(s["why"])}">'+''.join(f'<button type="button" aria-pressed="false" data-correct="{str(j==s["answer"]).lower()}">{e(o)}</button>' for j,o in enumerate(s['options']))+'</div><p class="feedback" role="status"></p>'
  if k=='video':return f'<video controls preload="metadata" playsinline aria-label="Week {n} explainer"><source src="{BASE}/media/week-{n:02}.mp4" type="video/mp4"><track kind="captions" src="{BASE}/media/week-{n:02}.vtt" srclang="en" label="English" default></video><p class="video-caption">Captions are available in the player. {link(f"weeks/week-{n:02}/video-transcript.html","Read the full transcript")}.</p>'
@@ -44,14 +45,15 @@ for w in W:
  for i,s in enumerate(slides):
   more=ul(w['objectives']) if s['kind']=='objectives' else exercise(s,n,i)
   if s['kind']=='complete':more='<div class="actions">'+link(f'weeks/week-{n+1:02}/presentation.html','Continue to next week','button')+'</div>' if n<6 else link('index.html','Return to your course','button')
-  demo=for_slide(n,i+1)
+  demo=for_slide(n,i+1) or slide_scenes.feature(n,i+1)
   if s['kind']=='objectives':
    demo=workshop({1:'zoom',2:'source',3:'sheet',4:'feedback',5:'phishing',6:'app'}[n])
    more='<details class="concept-note"><summary>What you will learn</summary>'+more+'</details>'
   if demo:
    content=(f'<div class="lesson-welcome-art" aria-hidden="true"></div>' if s['kind']=='objectives' else '')+demo+f'<details class="concept-note"><summary>Read the explanation</summary><p>{e(s["body"])}</p></details>'+more
   else:
-   content=f'<p>{e(s["body"])}</p>'+more
+   art=slide_scenes.supporting(s,n)
+   content=(f'<div class="illustrated-copy">{art}<div><p>{e(s["body"])}</p>{more}</div></div>' if art else f'<p>{e(s["body"])}</p>'+more)
   sections+=f'<section class="slide slide-kind-{s["kind"]} {"has-workshop" if demo else ""} {"summary" if s["kind"] in ["summary","complete"] else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2>{content}</section>'
 
  body=f'<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="lesson-sidebar">Show lesson navigation</button><div class="deck-layout"><aside class="sidebar" id="lesson-sidebar" aria-label="Lesson navigation"><h2>Week {n} · Lesson contents</h2><nav aria-label="Slides">{nav}</nav><nav class="resources" aria-label="Week resources">{resources(n)}</nav></aside><main class="deck-main" id="main"><div class="deck-toolbar"><p>Week {n} · {e(w["title"])}</p><button type="button" class="secondary" id="restart">Start from first slide</button></div><progress id="lesson-progress" value="1" max="{len(slides)}" aria-label="Lesson progress"></progress>{sections}<div class="bottom-nav"><button type="button" id="previous">Previous slide</button><span id="slide-counter" role="status"></span><button type="button" id="next">Next slide</button></div><p class="muted small">Use arrow keys, Page Up / Page Down, Home / End outside a control. Swipe horizontally on touch screens. Your slide position is saved in this browser.</p></main></div>'

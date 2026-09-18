@@ -241,3 +241,12 @@ Implementation sources: course `assets/course.css`, `assets/workshop.css`, `asse
 - **Don't** use animation as the only way to reveal an answer.
 - **Don't** expand the approved Level 2 composition into a platform redesign without authorization.
 - **Don't** substitute repeated title-and-list panels for the approved task-first composition.
+
+
+## Illustrated lesson scenes
+
+The lesson canvas extends the approved learning-app identity with topic imagery and worked examples. `slide-scenes.css` is loaded only by presentations. Navy example stages, teal consequences and original editorial illustrations give content slides a visual structure; discussion/lab pages use split image and text, summary/completion pages use navy, and video slides provide a dark viewing surface. Existing interactive workshops remain intact.
+
+`scripts/dl2/scenes.py` defines 53 authored choice-based examples plus three dedicated chart, crop/resize and trim/split models. Examples use native buttons with pressed state and a single visible panel; drawings represent actual relationships or field structures, not software screenshots. Six WebP illustrations total 474,230 bytes, with provenance in `slide-illustrations.json`. Images are decorative and lazy-loaded; all teaching information remains text. Workbook cells, recipients and flow relationships use semantic HTML.
+
+Choice controls use immediate state changes to preserve contrast. The chart's values, bar lengths, accessible name and table update together. Crop and resize are distinct reversible previews. The editing timeline labels removed sections and explains the new duration. Procedure steps can be marked practiced and undone within the page. Print reveals every topic explanation. Mobile stacks images and scenes while retaining the 32px instructional body floor and shared text controls.

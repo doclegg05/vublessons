@@ -90,3 +90,10 @@ The approved A+B+C compositions are combined across the DL2 course: a navy cours
 Assessments show one question at a time, preserve position and answers, offer Review all, and retain existing grading, printable/downloadable results and clearing controls. Topic counts are actual answers, not estimated completion. Illustrations and provenance live under the course assets and `.impeccable/asset-manifest.json`; approved comps are in `.impeccable/mocks/`. The user's default preference is this illustrated, modern learning-app direction.
 
 The repository quality gate now covers 60 browser tests, including three dedicated learning-app state/mobile tests. Final evidence is in VALIDATION.md and `review/learning-app/`. All six Britt voice videos remain unchanged by this visual pass.
+
+
+## Topic-specific slide enrichment
+
+The six decks now add 53 illustrated, choice-based topic examples and dedicated chart, image-edit and video-edit demonstrations. Teaching prose, assessment alignment and existing models are preserved. Edit the examples in `scripts/dl2/scenes.py`, regenerate with `build-pages.py`, then run the quality gate. New styling and logic live in `assets/slide-scenes.css` and `assets/slide-scenes.js` and load only on presentation pages.
+
+Six new original illustration assets (about 463 KiB total) are tracked with `slide-illustrations.json`. `capture-slide-scenes.cjs` records desktop/mobile examples under `review/slide-scenes/`. Ten new tests verify all 53 topic selectors with keyboard and enlarged mobile text, plus chart consistency, crop/resize, trim/split, practice toggles and print content. The current full suite has 70 tests. These interactions are browser-local demonstrations; they do not perform real edits, payments, messages or account operations. Practice-step selections reset when the page is reloaded.

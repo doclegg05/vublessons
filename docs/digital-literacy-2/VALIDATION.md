@@ -6,8 +6,8 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | --- | --- |
 | Repository quality gate | PASS, including build, links, catalog, Playwright, accessibility ratchet and readability report |
 | Site build | 193 HTML pages; four courses and 24 catalog lessons |
-| Internal links | 1,311 references checked; zero broken |
-| Browser tests | 60 passed in Chromium on the illustrated learning-app delivery |
+| Internal links | 1,403 references checked; zero broken |
+| Browser tests | 70 passed in Chromium on the illustrated slide delivery |
 | New course accessibility scans | Zero axe WCAG 2.1 A/AA violations on the six tested DL2 routes |
 | Workshop state accessibility | Zero axe WCAG A/AA violations across 12 initial/changed states on six representative models |
 | Existing platform accessibility ratchet | No violations beyond the committed baseline; the baseline was not expanded |
@@ -63,6 +63,14 @@ Desktop/mobile captures of the home, assessment, opening lesson and calendar mod
 | Redundant question-domain eyebrow | Resolved: topic metadata remains accessible without a duplicate visible label |
 
 Independent finding-focused re-review confirmed both fixes, observed no regressions and returned **disposition: ship**, with no remaining material findings.
+
+## Illustrated slide enrichment
+
+All six decks retain their 137 slides and existing curriculum. The formerly paragraph-led teaching pages now contain 53 authored choice-based examples and three dedicated interactive demonstrations: chart comparison/data updates, crop versus resize, and trim versus splitting a clip. Six new generated illustrations support the weekly topics and 26 discussion, activity and reflection surfaces. Existing simulations, flip cards, assessments and videos remain available.
+
+Ten new tests pass: all 53 example selectors are exercised with keyboard activation and largest-text mobile overflow checks; representative selected scenes from each week receive axe scans. Dedicated checks verify chart values/order/table consistency, reversible image edits, timeline duration, practice-step toggle behavior and print visibility. Three specialized models also receive axe scans. The full repository suite now passes 70 tests. A transient contrast issue during button background changes was removed; lazy image assertions wait for actual load completion. The detector's two width-transition warnings were resolved by removing those transitions.
+
+Final desktop/mobile captures are in `review/slide-scenes/`. Images were inspected together and representative changed-state pages were visually reviewed. This pass was reviewed in the build thread; the independent reviews above describe the preceding deliveries. No new independent review is claimed.
 
 ## Verification boundary
 
