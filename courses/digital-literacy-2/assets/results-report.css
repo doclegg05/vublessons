@@ -1,0 +1,56 @@
+/* One self-contained report theme shared by browser, print and offline download. */
+.dl2-report{--report-navy:#1b365d;--report-teal:#0f655f;color:#16243a;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;overflow-wrap:anywhere}
+.dl2-report .report-masthead{display:flex;align-items:center;gap:20px;background:#1b365d;color:white;padding:26px 30px;border-bottom:5px solid #c9a227;border-radius:12px 12px 0 0}
+.dl2-report .report-seal{width:68px;height:68px;object-fit:contain;flex:none}
+.dl2-report .report-masthead strong{display:block;font-size:25px;line-height:1.3}.dl2-report .report-masthead span{display:block;font-size:16px;margin-top:5px;color:white}
+.dl2-report .report-heading{padding:28px 30px 16px;background:#f5f7fa}.dl2-report #results-title{font-size:36px;line-height:1.2;margin:0 0 16px;color:#1b365d;max-width:22ch}.dl2-report .report-learner{margin:0;font-size:20px}.dl2-report .report-version{font-size:15px;color:#46566d;margin:8px 0 0}
+.dl2-report .report-scoreband{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:26px 30px;background:#e1efed;align-items:center;margin-bottom:28px}
+.dl2-report .report-scoreband .score{font-size:clamp(30px,3.5vw,48px);line-height:1.2;margin:0 0 10px;padding:0;background:transparent;border-radius:0;color:#1b365d;white-space:normal;font-weight:800}.dl2-report .score-label{font-size:16px;margin:0;color:#0f655f;font-weight:700}
+.dl2-report .report-score-note{margin:0;font-size:19px}.dl2-report .report-score-note strong{display:block;font-size:23px;line-height:1.3;margin-bottom:8px;color:#0f655f}
+.dl2-report .report-comparison{padding:20px 24px;background:#f5f7fa;border:1px solid #aebfcb;border-radius:8px;margin:22px 0}.dl2-report .report-comparison h3{font-size:22px;margin:0 0 8px;color:#1b365d}.dl2-report .report-comparison p{margin:0}
+.dl2-report h2{font-size:28px;line-height:1.3;color:#1b365d;margin:32px 0 18px}.dl2-report .domain-table{width:100%;border-collapse:collapse;font-size:18px;table-layout:fixed}.dl2-report .domain-table caption{text-align:left;font-size:28px;font-weight:700;color:#1b365d;margin-bottom:16px}.dl2-report .domain-table th,.dl2-report .domain-table td{text-align:left;padding:16px 14px;border:0;border-bottom:1px solid #c3d1dc;vertical-align:middle}.dl2-report .domain-table thead th{background:#1b365d;color:white;font-size:16px}.dl2-report .domain-table thead th:first-child{width:38%}.dl2-report .domain-table thead th:nth-child(2){width:23%}.dl2-report .domain-table tbody th{background:transparent;font-weight:600;color:#1b365d}.dl2-report .domain-table tbody tr:nth-child(even){background:#f5f7fa}.dl2-report .domain-score{display:block;font-size:22px;font-weight:700;white-space:nowrap}.dl2-report .domain-meter{display:block;background:#d5e1e9;height:8px;margin-top:9px;width:100%;max-width:160px;overflow:hidden;border-radius:4px}.dl2-report .domain-meter span{display:block;height:100%;background:#0f655f}.dl2-report .domain-guidance{font-size:16px;line-height:1.5}
+.dl2-report .practice-plan{background:#e1efed;padding:24px 28px;margin:28px 0;border-radius:12px}.dl2-report .practice-plan h2{margin:0 0 12px;color:#0f655f;font-size:26px}.dl2-report .practice-plan p{margin:8px 0}.dl2-report .practice-plan ol{padding-left:25px;margin:12px 0 0}.dl2-report .practice-plan li{padding:5px 0}.dl2-report a{color:#1b365d;text-decoration:underline;text-underline-offset:3px}.dl2-report a:focus-visible{outline:3px solid #a65a00;outline-offset:4px}
+.dl2-report .report-disclaimer{font-size:15px;color:#46566d;margin:20px 0}.dl2-report .actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 12px}.dl2-report .print-instructions{font-size:16px;color:#46566d}.dl2-report .answers-heading{border-top:3px solid #1b365d;padding-top:26px;margin-top:36px}
+.dl2-report .result-item{padding:24px 0;border-bottom:1px solid #aebfcb;break-inside:avoid}.dl2-report .result-item h3{font-size:22px;line-height:1.45;margin:12px 0;color:#1b365d}.dl2-report .result-item p{margin:10px 0;font-size:18px}.dl2-report .answer-status{display:inline-block;border:1px solid #0f655f;color:#0f655f;background:#e1efed;padding:4px 12px;border-radius:6px;font-weight:700;font-size:15px}.dl2-report .needs-practice .answer-status{background:#fff2d8;color:#603400;border-color:#b97820}.dl2-report .answer-explanation{padding:14px 18px;background:#f5f7fa;border-radius:8px}.dl2-report .review-link{font-size:16px!important}.dl2-report .report-footer{border-top:3px solid #c9a227;color:#1b365d;padding:22px 0;margin-top:30px;font-size:16px}.dl2-report .report-footer strong{display:block}.dl2-report .report-footer p{margin:5px 0}
+@media(max-width:650px){.dl2-report .report-masthead{padding:20px 18px;gap:14px}.dl2-report .report-masthead strong{font-size:21px}.dl2-report .report-seal{width:52px;height:52px}.dl2-report .report-heading{padding:24px 18px 16px}.dl2-report #results-title{font-size:30px}.dl2-report .report-scoreband{grid-template-columns:1fr;gap:18px;padding:24px 18px}.dl2-report .domain-table thead th,.dl2-report .domain-table td,.dl2-report .domain-table tbody th{padding:13px 8px;font-size:16px}.dl2-report .domain-table thead th:first-child{width:41%}.dl2-report .domain-table thead th:nth-child(2){width:24%}.dl2-report .domain-score{font-size:19px}.dl2-report .domain-guidance{font-size:15px}.dl2-report .practice-plan{padding:22px 18px}}
+@media print{
+ @page{size:letter;margin:.55in}
+ .dl2-report{font-size:11pt;color:black;line-height:1.4;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .dl2-report .report-overview{break-after:page}.dl2-report .report-masthead{padding:12pt 16pt;border-radius:0;gap:12pt}.dl2-report .report-seal{width:42pt;height:42pt}.dl2-report .report-masthead strong{font-size:17pt}.dl2-report .report-masthead span{font-size:10pt}
+ .dl2-report .report-heading{padding:14pt 16pt 10pt}.dl2-report #results-title{font-size:23pt;margin-bottom:8pt}.dl2-report .report-learner{font-size:12pt}.dl2-report .report-version{font-size:9pt;margin-top:4pt}
+ .dl2-report .report-scoreband{display:grid;grid-template-columns:1fr 1fr;padding:14pt 16pt;gap:16pt;margin-bottom:14pt}.dl2-report .report-scoreband .score{font-size:27pt}.dl2-report .score-label{font-size:10pt}.dl2-report .report-score-note{font-size:10pt}.dl2-report .report-score-note strong{font-size:13pt}
+ .dl2-report .domain-table{font-size:10pt}.dl2-report .domain-table caption{font-size:15pt;margin-bottom:8pt}.dl2-report .domain-table th,.dl2-report .domain-table td,.dl2-report .domain-table thead th,.dl2-report .domain-table tbody th{font-size:10pt;padding:7pt 8pt}.dl2-report .domain-score{font-size:12pt}.dl2-report .domain-guidance{font-size:9pt}.dl2-report .domain-meter{height:5pt;margin-top:4pt}.dl2-report .domain-table tr{break-inside:avoid}
+ .dl2-report .practice-plan{padding:12pt 16pt;margin:14pt 0}.dl2-report .practice-plan h2{font-size:14pt;margin-bottom:6pt}.dl2-report .practice-plan p,.dl2-report .practice-plan li{font-size:10pt;margin:4pt 0;padding:0}.dl2-report .practice-plan ol{margin:4pt 0;padding-left:16pt}.dl2-report .report-disclaimer{font-size:9pt;margin:10pt 0}.dl2-report .report-comparison{padding:10pt 14pt;margin:12pt 0}.dl2-report .report-comparison h3{font-size:12pt}.dl2-report .report-comparison p{font-size:10pt}
+ .dl2-report .actions,.dl2-report .print-instructions{display:none!important}.dl2-report .answers-heading{margin-top:0;font-size:19pt;padding-top:12pt}.dl2-report .result-item{padding:12pt 0;break-inside:avoid}.dl2-report .result-item h3{font-size:12pt;margin:6pt 0}.dl2-report .result-item p{font-size:10pt;margin:6pt 0}.dl2-report .answer-status{font-size:9pt;padding:3pt 8pt}.dl2-report .answer-explanation{padding:8pt 10pt}.dl2-report .review-link{font-size:9pt!important}.dl2-report .report-footer{font-size:10pt;padding:12pt 0;margin-top:18pt}.dl2-report a{color:#1b365d}
+}
+/* Keep report print rules stable against the shared handout/text-size overrides. */
+@media print{
+ .dl2-report *{box-sizing:border-box;line-height:1.35!important}
+ .dl2-report :focus{outline:none!important}
+ .dl2-report p,.dl2-report li,.dl2-report td,.dl2-report th{font-size:10pt!important}
+ .dl2-report .report-masthead,.dl2-report .report-masthead *{color:white!important}
+ .dl2-report #results-title{font-size:23pt!important;color:#1b365d!important}
+ .dl2-report .report-scoreband .score{font-size:27pt!important;color:#1b365d!important}
+ .dl2-report .report-score-note strong,.dl2-report .practice-plan h2{color:#0f655f!important}
+ .dl2-report .practice-plan h2{font-size:14pt!important}.dl2-report .report-comparison h3{font-size:12pt!important}
+ .dl2-report .domain-table{margin:10pt 0;page-break-inside:auto}
+ .dl2-report .domain-table th,.dl2-report .domain-table td{padding:6pt 8pt!important;border:0!important;border-bottom:1px solid #c3d1dc!important;background:transparent!important}
+ .dl2-report .domain-table thead th{color:white!important;background:#1b365d!important}
+ .dl2-report .domain-table tbody th{color:#1b365d!important}
+ .dl2-report .domain-table caption{font-size:15pt!important;color:#1b365d!important}
+ .dl2-report .report-disclaimer{font-size:9pt!important}
+ .dl2-report .practice-plan{break-inside:avoid}
+ .dl2-report .result-item h3{font-size:12pt!important;color:#1b365d!important}
+ .dl2-report .answer-status{color:#0f655f!important}.dl2-report .needs-practice .answer-status{color:#603400!important}
+ .dl2-report .answer-explanation{background:#f5f7fa!important}
+ .dl2-report .answers-heading{font-size:19pt!important;color:#1b365d!important}
+}
+@media print{
+ .dl2-report .report-masthead{padding:8pt 12pt}.dl2-report .report-seal{width:32pt;height:32pt!important}
+ .dl2-report .report-heading{padding:10pt 12pt 8pt}.dl2-report #results-title{font-size:20pt!important;margin-bottom:6pt}.dl2-report .report-version{margin-top:3pt}
+ .dl2-report .report-scoreband{padding:10pt 12pt;margin-bottom:10pt}.dl2-report .report-scoreband .score{font-size:24pt!important;margin-bottom:5pt}
+ .dl2-report .report-comparison{padding:8pt 12pt;margin:8pt 0}.dl2-report .report-comparison p{font-size:9pt!important}
+ .dl2-report .domain-table{margin:8pt 0}.dl2-report .domain-table th,.dl2-report .domain-table td{padding:3pt 8pt!important}.dl2-report .domain-table caption{margin-bottom:6pt}.dl2-report .domain-meter{height:4pt;margin-top:3pt}
+ .dl2-report .practice-plan{margin:10pt 0;padding:9pt 12pt}.dl2-report .report-disclaimer{margin:8pt 0}
+}
+@media print{.dl2-report .report-footer{display:none}}

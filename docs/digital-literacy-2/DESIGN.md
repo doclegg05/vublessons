@@ -250,3 +250,10 @@ The lesson canvas extends the approved learning-app identity with topic imagery 
 `scripts/dl2/scenes.py` defines 53 authored choice-based examples plus three dedicated chart, crop/resize and trim/split models. Examples use native buttons with pressed state and a single visible panel; drawings represent actual relationships or field structures, not software screenshots. Six WebP illustrations total 474,230 bytes, with provenance in `slide-illustrations.json`. Images are decorative and lazy-loaded; all teaching information remains text. Workbook cells, recipients and flow relationships use semantic HTML.
 
 Choice controls use immediate state changes to preserve contrast. The chart's values, bar lengths, accessible name and table update together. Crop and resize are distinct reversible previews. The editing timeline labels removed sections and explains the new duration. Procedure steps can be marked practiced and undone within the page. Print reveals every topic explanation. Mobile stacks images and scenes while retaining the 32px instructional body floor and shared text controls.
+
+
+## Branded results reports
+
+Pre/post grading uses a shared branded report theme in `assets/results-report.css`. The page builder embeds its CSS and the official white seal in assessment pages; downloads reuse both without external resources. Results include learner metadata, the actual score, domain bars with numeric equivalents, up to two lowest-scoring practice domains and all answer explanations. Perfect scores receive an application task instead of invented weak areas. Existing comparison wording, grading, clearing and optional learner information are preserved.
+
+The print layout isolates report colors/type from the shared handout and text-size overrides, reserves the first page for the summary, and avoids splitting answer sections. Samples with fictional learner data, screen captures and PDFs live in `review/results-report/`; reproduce them with `node scripts/dl2/capture-results.cjs`. The report test file covers offline branding, accessibility, scoring edge cases and mobile/print behavior. Current full suite: 73 tests.

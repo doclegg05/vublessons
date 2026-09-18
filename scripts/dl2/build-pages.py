@@ -1,5 +1,5 @@
 """Render the reusable course and its print materials from one curriculum source."""
-import json,html
+import json,html,base64
 from workshops import for_slide,workshop
 import learning
 import scenes as slide_scenes
@@ -10,9 +10,12 @@ def e(t): return html.escape(str(t),quote=True)
 def link(path,label,cls=''):return f'<a class="{cls}" href="{BASE}/{path}">{e(label)}</a>'
 def ul(items):return '<ul>'+''.join('<li>'+e(x)+'</li>' for x in items)+'</ul>'
 def page(title,body,cls='doc',week=None,script='lesson.js'):
+ if script=='assessment.js':
+  seal=base64.b64encode(Path('assets/vub-seal-white.png').read_bytes()).decode()
+  body+=f'<template id="report-brand"><img class="report-seal" src="data:image/png;base64,{seal}" alt="WV Veterans Upward Bound seal"></template>'
  if cls!='lesson':body=learning.frame(body)
  return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/learning-app.css">{f'<link rel="stylesheet" href="{BASE}/assets/slide-scenes.css">' if cls=="lesson" else ""}</head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning."><title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/learning-app.css">{f'<link rel="stylesheet" href="{BASE}/assets/slide-scenes.css">' if cls=="lesson" else ""}{('<style id="result-report-style">'+(ROOT/'assets/results-report.css').read_text()+'</style>') if script=='assessment.js' else ''}</head>
 <body class="{cls}" {f'data-week="{week}"' if week else ''}>
 {learning.CONTRACT}
 <a class="skip" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/"><img src="/assets/vub-seal-white.png" alt=""><span>VUB Learning</span></a><span class="course-name">Digital Literacy · Level 2</span>{link('index.html','Course home')}</header><div class="brand-line"></div>

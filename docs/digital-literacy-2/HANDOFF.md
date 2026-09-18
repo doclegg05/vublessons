@@ -97,3 +97,10 @@ The repository quality gate now covers 60 browser tests, including three dedicat
 The six decks now add 53 illustrated, choice-based topic examples and dedicated chart, image-edit and video-edit demonstrations. Teaching prose, assessment alignment and existing models are preserved. Edit the examples in `scripts/dl2/scenes.py`, regenerate with `build-pages.py`, then run the quality gate. New styling and logic live in `assets/slide-scenes.css` and `assets/slide-scenes.js` and load only on presentation pages.
 
 Six new original illustration assets (about 463 KiB total) are tracked with `slide-illustrations.json`. `capture-slide-scenes.cjs` records desktop/mobile examples under `review/slide-scenes/`. Ten new tests verify all 53 topic selectors with keyboard and enlarged mobile text, plus chart consistency, crop/resize, trim/split, practice toggles and print content. The current full suite has 70 tests. These interactions are browser-local demonstrations; they do not perform real edits, payments, messages or account operations. Practice-step selections reset when the page is reloaded.
+
+
+## Branded results reports
+
+Pre/post grading uses a shared branded report theme in `assets/results-report.css`. The page builder embeds its CSS and the official white seal in assessment pages; downloads reuse both without external resources. Results include learner metadata, the actual score, domain bars with numeric equivalents, up to two lowest-scoring practice domains and all answer explanations. Perfect scores receive an application task instead of invented weak areas. Existing comparison wording, grading, clearing and optional learner information are preserved.
+
+The print layout isolates report colors/type from the shared handout and text-size overrides, reserves the first page for the summary, and avoids splitting answer sections. Samples with fictional learner data, screen captures and PDFs live in `review/results-report/`; reproduce them with `node scripts/dl2/capture-results.cjs`. The report test file covers offline branding, accessibility, scoring edge cases and mobile/print behavior. Current full suite: 73 tests.

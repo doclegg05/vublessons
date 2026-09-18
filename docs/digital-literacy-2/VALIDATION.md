@@ -7,7 +7,7 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | Repository quality gate | PASS, including build, links, catalog, Playwright, accessibility ratchet and readability report |
 | Site build | 193 HTML pages; four courses and 24 catalog lessons |
 | Internal links | 1,403 references checked; zero broken |
-| Browser tests | 70 passed in Chromium on the illustrated slide delivery |
+| Browser tests | 73 passed in Chromium on the branded results delivery |
 | New course accessibility scans | Zero axe WCAG 2.1 A/AA violations on the six tested DL2 routes |
 | Workshop state accessibility | Zero axe WCAG A/AA violations across 12 initial/changed states on six representative models |
 | Existing platform accessibility ratchet | No violations beyond the committed baseline; the baseline was not expanded |
@@ -71,6 +71,14 @@ All six decks retain their 137 slides and existing curriculum. The formerly para
 Ten new tests pass: all 53 example selectors are exercised with keyboard activation and largest-text mobile overflow checks; representative selected scenes from each week receive axe scans. Dedicated checks verify chart values/order/table consistency, reversible image edits, timeline duration, practice-step toggle behavior and print visibility. Three specialized models also receive axe scans. The full repository suite now passes 70 tests. A transient contrast issue during button background changes was removed; lazy image assertions wait for actual load completion. The detector's two width-transition warnings were resolved by removing those transitions.
 
 Final desktop/mobile captures are in `review/slide-scenes/`. Images were inspected together and representative changed-state pages were visually reviewed. This pass was reviewed in the build thread; the independent reviews above describe the preceding deliveries. No new independent review is claimed.
+
+## Branded assessment reports
+
+The pre/post results now use the VUB seal, navy/gold report header, learner metadata, score summary, seven-domain score bars, prioritized practice links and answer-status labels. Inspiration came from the local DL1 and Computer Skills browser-generated reports, not Google Forms. Grading and assessment content are unchanged. Zero-score reports receive real practice priorities; perfect reports recommend applying skills without inventing weaknesses. Post-test comparisons remain clearly labeled as self-entered.
+
+`results-report.css` is embedded by the page builder and reused verbatim in standalone downloads. The seal is embedded too, so the offline HTML requires no network. Three new tests cover zero/partial/perfect scores, negative/zero comparisons, learner escaping, graded-state accessibility, enlarged mobile layout, print colors and offline output with network access blocked. The full gate passed 73 tests; the three report tests were rerun after the final print-only orphan-footer fix.
+
+Both illustrative reports in `review/results-report/` print as eight pages, with the complete summary on page one. Desktop/mobile screenshots, first-page summaries and answer-page proofs were inspected. Shared print overrides that darkened the masthead and caused summary spill were corrected within the report scope. The on-screen footer is omitted in print to prevent an otherwise empty ninth page. The detector's border warnings are intentional existing-brand treatments: a gold divider below the navy masthead and above the report footer, not decorative side borders. This review was performed in the build thread.
 
 ## Verification boundary
 
