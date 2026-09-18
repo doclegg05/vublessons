@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T13:31:42.471Z",
+  "generatedAt": "2026-09-18T13:55:15.041Z",
   "project": "week-06",
   "summary": {
     "passed": 5,
@@ -10,12 +10,12 @@
       "id": "beat-01",
       "pass": true,
       "metrics": {
-        "seconds": 19.32,
-        "window": 20.518,
+        "seconds": 18.94,
+        "window": 20.151,
         "words": 45,
-        "wpm": 140,
-        "leadingSilence": 0,
-        "trailingSilence": 0,
+        "wpm": 146,
+        "leadingSilence": 0.17,
+        "trailingSilence": 0.25,
         "requestedBreaks": []
       },
       "failures": [],
@@ -25,12 +25,12 @@
       "id": "beat-02",
       "pass": true,
       "metrics": {
-        "seconds": 18.07,
-        "window": 19.259,
+        "seconds": 18.05,
+        "window": 19.266,
         "words": 42,
-        "wpm": 139,
-        "leadingSilence": 0,
-        "trailingSilence": 0,
+        "wpm": 143,
+        "leadingSilence": 0.16,
+        "trailingSilence": 0.21,
         "requestedBreaks": []
       },
       "failures": [],
@@ -40,12 +40,12 @@
       "id": "beat-03",
       "pass": true,
       "metrics": {
-        "seconds": 20.62,
-        "window": 21.809,
+        "seconds": 20.74,
+        "window": 21.962,
         "words": 48,
-        "wpm": 140,
+        "wpm": 141,
         "leadingSilence": 0,
-        "trailingSilence": 0,
+        "trailingSilence": 0.26,
         "requestedBreaks": []
       },
       "failures": [],
@@ -55,11 +55,11 @@
       "id": "beat-04",
       "pass": true,
       "metrics": {
-        "seconds": 19.75,
-        "window": 20.952,
+        "seconds": 19.12,
+        "window": 20.337,
         "words": 46,
-        "wpm": 140,
-        "leadingSilence": 0,
+        "wpm": 146,
+        "leadingSilence": 0.17,
         "trailingSilence": 0,
         "requestedBreaks": []
       },
@@ -70,10 +70,10 @@
       "id": "beat-05",
       "pass": true,
       "metrics": {
-        "seconds": 22.75,
-        "window": 23.953,
+        "seconds": 22.33,
+        "window": 23.541,
         "words": 52,
-        "wpm": 137,
+        "wpm": 140,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []

@@ -8,8 +8,8 @@
       "Unfamiliar links"
     ],
     "text": "An unexpected message says you must act immediately to keep a service. Urgency can push you to skip checks. Pause before opening the link or providing information. Find the organization through a known website or contact method, then verify the claim independently.",
-    "window": 19.725,
-    "audioDuration": 18.474666666666668,
+    "window": 19.243,
+    "audioDuration": 17.993015873015874,
     "start": 0.01
   },
   {
@@ -20,9 +20,9 @@
       "No camera for simple text"
     ],
     "text": "A video meeting may need camera access. A simple text page usually does not. Grant permissions only when they fit a clear task and you trust the app. You can deny an unrelated request and review camera or microphone permissions after you finish.",
-    "window": 19.668,
-    "audioDuration": 18.418125,
-    "start": 19.735
+    "window": 19.656,
+    "audioDuration": 18.406009070294786,
+    "start": 19.253
   },
   {
     "id": "beat-03",
@@ -33,9 +33,9 @@
       "Read-only: editing restricted"
     ],
     "text": "Do not plug in an unknown USB drive to discover who owns it. Give it to authorized staff. Encryption makes data unreadable without a key. Read-only settings restrict editing, which is a different protection. A locked or encrypted device still needs careful account and file access.",
-    "window": 21.261,
-    "audioDuration": 20.010666666666665,
-    "start": 39.403
+    "window": 20.708,
+    "audioDuration": 19.458321995464853,
+    "start": 38.909
   },
   {
     "id": "beat-04",
@@ -46,9 +46,9 @@
       "Take a screen break"
     ],
     "text": "Online safety also includes attention and wellbeing. Catfishing uses a false identity to build trust. Fear of missing out can make it hard to stop checking alerts. Set useful notification limits, take breaks, and seek support when online behavior makes you feel pressured or unsafe.",
-    "window": 21.026,
-    "audioDuration": 19.776,
-    "start": 60.664
+    "window": 20.801,
+    "audioDuration": 19.551201814058956,
+    "start": 59.617
   },
   {
     "id": "beat-05",
@@ -59,8 +59,8 @@
       "What action limits risk?"
     ],
     "text": "Choose one practice scenario and explain your next step to a partner. Name the evidence, the independent source you would check, and the action that limits risk. Then complete the skills challenge and post-test. Use the results to choose a task for more practice.",
-    "window": 20.529,
-    "audioDuration": 19.279291666666666,
-    "start": 81.69
+    "window": 20.537,
+    "audioDuration": 19.286757369614513,
+    "start": 80.418
   }
 ]

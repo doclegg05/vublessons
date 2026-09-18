@@ -1,228 +1,228 @@
 {
-  "source": "faster-whisper base.en on final Kokoro wav",
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "b0ef89bb1a92e1bb0556227499525f4030944f589dad0a876e7a2bc664032b30",
+  "textSha256": "58db7e52b1d8a8fd9c848a66fb022ac876eae788b0ad29509cdff8c3d6872977",
   "matchRatio": 1.0,
   "words": [
     {
       "word": "The",
       "start": 0.0,
-      "end": 0.12
+      "end": 0.1
     },
     {
       "word": "right",
-      "start": 0.12,
-      "end": 0.32
+      "start": 0.1,
+      "end": 0.28
     },
     {
       "word": "file",
-      "start": 0.32,
-      "end": 0.56
+      "start": 0.28,
+      "end": 0.52
     },
     {
       "word": "format",
-      "start": 0.56,
-      "end": 1.06
+      "start": 0.52,
+      "end": 1.02
     },
     {
       "word": "depends",
-      "start": 1.06,
-      "end": 1.38
+      "start": 1.02,
+      "end": 1.3
     },
     {
       "word": "on",
-      "start": 1.38,
-      "end": 1.8
+      "start": 1.3,
+      "end": 1.68
     },
     {
       "word": "the",
-      "start": 1.8,
-      "end": 1.9
+      "start": 1.68,
+      "end": 1.76
     },
     {
       "word": "next",
-      "start": 1.9,
-      "end": 2.06
+      "start": 1.76,
+      "end": 1.94
     },
     {
       "word": "person's",
-      "start": 2.06,
-      "end": 2.56
+      "start": 1.94,
+      "end": 2.58
     },
     {
       "word": "task.",
-      "start": 2.56,
-      "end": 2.78
+      "start": 2.58,
+      "end": 2.82
     },
     {
       "word": "An",
-      "start": 3.66,
-      "end": 3.66
+      "start": 3.54,
+      "end": 3.54
     },
     {
       "word": "editable",
-      "start": 3.66,
-      "end": 4.12
+      "start": 3.54,
+      "end": 4.0
     },
     {
       "word": "document",
-      "start": 4.12,
-      "end": 4.48
+      "start": 4.0,
+      "end": 4.36
     },
     {
       "word": "supports",
-      "start": 4.48,
-      "end": 5.0
+      "start": 4.36,
+      "end": 4.88
     },
     {
       "word": "revision.",
-      "start": 5.0,
-      "end": 5.36
+      "start": 4.88,
+      "end": 5.28
     },
     {
       "word": "A",
-      "start": 6.32,
-      "end": 6.36
+      "start": 6.08,
+      "end": 6.1
     },
     {
       "word": "PDF",
-      "start": 6.36,
-      "end": 6.66
+      "start": 6.1,
+      "end": 6.36
     },
     {
       "word": "often",
-      "start": 6.66,
-      "end": 7.38
+      "start": 6.36,
+      "end": 7.12
     },
     {
       "word": "preserves",
-      "start": 7.38,
-      "end": 7.7
+      "start": 7.12,
+      "end": 7.44
     },
     {
       "word": "a",
-      "start": 7.7,
-      "end": 8.08
+      "start": 7.44,
+      "end": 7.82
     },
     {
       "word": "finished",
-      "start": 8.08,
-      "end": 8.38
+      "start": 7.82,
+      "end": 8.04
     },
     {
       "word": "layout.",
-      "start": 8.38,
-      "end": 8.76
+      "start": 8.04,
+      "end": 8.42
     },
     {
       "word": "A",
-      "start": 9.6,
-      "end": 9.64
+      "start": 9.14,
+      "end": 9.16
     },
     {
       "word": "CSV",
-      "start": 9.64,
-      "end": 9.96
+      "start": 9.16,
+      "end": 9.44
     },
     {
       "word": "carries",
-      "start": 9.96,
-      "end": 10.56
+      "start": 9.44,
+      "end": 10.2
     },
     {
       "word": "plain",
-      "start": 10.56,
-      "end": 10.82
+      "start": 10.2,
+      "end": 10.4
     },
     {
       "word": "table",
-      "start": 10.82,
-      "end": 11.18
+      "start": 10.4,
+      "end": 10.8
     },
     {
       "word": "data",
-      "start": 11.18,
-      "end": 11.54
+      "start": 10.8,
+      "end": 11.14
     },
     {
       "word": "but",
-      "start": 11.9,
-      "end": 12.02
+      "start": 11.46,
+      "end": 11.52
     },
     {
       "word": "loses",
-      "start": 12.02,
-      "end": 12.34
+      "start": 11.52,
+      "end": 11.88
     },
     {
       "word": "formatting",
-      "start": 12.34,
-      "end": 12.82
+      "start": 11.88,
+      "end": 12.4
     },
     {
       "word": "and",
-      "start": 12.82,
-      "end": 13.18
+      "start": 12.4,
+      "end": 12.78
     },
     {
       "word": "formulas.",
-      "start": 13.18,
-      "end": 13.5
+      "start": 12.78,
+      "end": 13.12
     },
     {
       "word": "Choose",
-      "start": 14.66,
-      "end": 14.66
+      "start": 14.26,
+      "end": 14.26
     },
     {
       "word": "deliberately,",
-      "start": 14.66,
-      "end": 15.0
+      "start": 14.26,
+      "end": 14.6
     },
     {
       "word": "then",
-      "start": 15.74,
-      "end": 15.84
+      "start": 15.46,
+      "end": 15.54
     },
     {
       "word": "reopen",
-      "start": 15.84,
-      "end": 16.08
+      "start": 15.54,
+      "end": 15.84
     },
     {
       "word": "the",
-      "start": 16.08,
-      "end": 16.42
+      "start": 15.84,
+      "end": 16.2
     },
     {
       "word": "exported",
-      "start": 16.42,
-      "end": 16.6
+      "start": 16.2,
+      "end": 16.4
     },
     {
       "word": "file",
-      "start": 16.6,
-      "end": 17.1
+      "start": 16.4,
+      "end": 17.02
     },
     {
       "word": "and",
-      "start": 17.1,
-      "end": 17.66
+      "start": 17.02,
+      "end": 17.36
     },
     {
       "word": "check",
-      "start": 17.66,
-      "end": 17.86
+      "start": 17.36,
+      "end": 17.54
     },
     {
       "word": "what",
-      "start": 17.86,
-      "end": 18.1
+      "start": 17.54,
+      "end": 17.8
     },
     {
       "word": "survived.",
-      "start": 18.1,
-      "end": 18.36
+      "start": 17.8,
+      "end": 18.12
     }
-  ],
-  "wavSha256": "72c0fbc72bd71f7a9cf1fea96fb8aec8d4559fffbff01e0bdddc112b6f4bf34b",
-  "textSha256": "58db7e52b1d8a8fd9c848a66fb022ac876eae788b0ad29509cdff8c3d6872977"
+  ]
 }

@@ -1,218 +1,218 @@
 {
-  "source": "faster-whisper base.en on final Kokoro wav",
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "0241b7983597283d55cf4fe91413f4b8588076586342b5245aa430f1c21a7ef0",
+  "textSha256": "e2f4a9cfba16e97c349687c84eb690310f0351b862b965819c28f160fbb0b210",
   "matchRatio": 1.0,
   "words": [
     {
       "word": "An",
       "start": 0.0,
-      "end": 0.08
+      "end": 0.12
     },
     {
       "word": "unexpected",
-      "start": 0.08,
-      "end": 0.42
+      "start": 0.12,
+      "end": 0.34
     },
     {
       "word": "message",
-      "start": 0.42,
-      "end": 1.04
+      "start": 0.34,
+      "end": 1.02
     },
     {
       "word": "says",
-      "start": 1.04,
-      "end": 1.7
+      "start": 1.02,
+      "end": 1.42
     },
     {
       "word": "you",
-      "start": 1.7,
-      "end": 1.96
+      "start": 1.42,
+      "end": 1.6
     },
     {
       "word": "must",
-      "start": 1.96,
-      "end": 2.12
+      "start": 1.6,
+      "end": 1.74
     },
     {
       "word": "act",
-      "start": 2.12,
-      "end": 2.46
+      "start": 1.74,
+      "end": 2.06
     },
     {
       "word": "immediately",
-      "start": 2.46,
-      "end": 2.88
+      "start": 2.06,
+      "end": 2.58
     },
     {
       "word": "to",
-      "start": 2.88,
-      "end": 3.44
+      "start": 2.58,
+      "end": 3.14
     },
     {
       "word": "keep",
-      "start": 3.44,
-      "end": 3.62
+      "start": 3.14,
+      "end": 3.3
     },
     {
       "word": "a",
-      "start": 3.62,
-      "end": 3.76
+      "start": 3.3,
+      "end": 3.4
     },
     {
       "word": "service.",
-      "start": 3.76,
-      "end": 4.14
+      "start": 3.4,
+      "end": 3.94
     },
     {
       "word": "Urgency",
-      "start": 5.02,
-      "end": 5.32
+      "start": 4.64,
+      "end": 5.0
     },
     {
       "word": "can",
-      "start": 5.32,
-      "end": 5.72
+      "start": 5.0,
+      "end": 5.3
     },
     {
       "word": "push",
-      "start": 5.72,
-      "end": 5.96
+      "start": 5.3,
+      "end": 5.54
     },
     {
       "word": "you",
-      "start": 5.96,
-      "end": 6.14
+      "start": 5.54,
+      "end": 5.76
     },
     {
       "word": "to",
-      "start": 6.14,
-      "end": 6.22
+      "start": 5.76,
+      "end": 5.92
     },
     {
       "word": "skip",
-      "start": 6.22,
-      "end": 6.48
+      "start": 5.92,
+      "end": 6.2
     },
     {
       "word": "checks.",
-      "start": 6.48,
-      "end": 6.88
+      "start": 6.2,
+      "end": 6.56
     },
     {
       "word": "Pause",
-      "start": 7.72,
-      "end": 8.04
+      "start": 7.16,
+      "end": 7.54
     },
     {
       "word": "before",
-      "start": 8.04,
-      "end": 8.32
+      "start": 7.54,
+      "end": 7.84
     },
     {
       "word": "opening",
-      "start": 8.32,
-      "end": 8.86
+      "start": 7.84,
+      "end": 8.42
     },
     {
       "word": "the",
-      "start": 8.86,
-      "end": 9.04
+      "start": 8.42,
+      "end": 8.6
     },
     {
       "word": "link",
-      "start": 9.04,
-      "end": 9.24
+      "start": 8.6,
+      "end": 8.84
     },
     {
       "word": "or",
-      "start": 9.24,
-      "end": 9.76
+      "start": 8.84,
+      "end": 9.12
     },
     {
       "word": "providing",
-      "start": 9.76,
-      "end": 10.14
+      "start": 9.12,
+      "end": 9.48
     },
     {
       "word": "information.",
-      "start": 10.14,
-      "end": 11.04
+      "start": 9.48,
+      "end": 10.44
     },
     {
       "word": "Find",
-      "start": 11.84,
-      "end": 12.1
+      "start": 11.1,
+      "end": 11.34
     },
     {
       "word": "the",
-      "start": 12.1,
-      "end": 12.26
+      "start": 11.34,
+      "end": 11.52
     },
     {
       "word": "organization",
-      "start": 12.26,
-      "end": 12.66
+      "start": 11.52,
+      "end": 11.86
     },
     {
       "word": "through",
-      "start": 12.66,
-      "end": 13.38
+      "start": 11.86,
+      "end": 12.52
     },
     {
       "word": "a",
-      "start": 13.38,
-      "end": 13.56
+      "start": 12.52,
+      "end": 12.64
     },
     {
       "word": "known",
-      "start": 13.56,
-      "end": 13.74
+      "start": 12.64,
+      "end": 12.82
     },
     {
       "word": "website",
-      "start": 13.74,
-      "end": 14.32
+      "start": 12.82,
+      "end": 13.34
     },
     {
       "word": "or",
-      "start": 14.32,
-      "end": 14.74
+      "start": 13.34,
+      "end": 13.7
     },
     {
       "word": "contact",
-      "start": 14.74,
-      "end": 15.1
+      "start": 13.7,
+      "end": 14.06
     },
     {
       "word": "method,",
-      "start": 15.1,
-      "end": 15.68
+      "start": 14.06,
+      "end": 14.76
     },
     {
       "word": "then",
-      "start": 16.14,
-      "end": 16.36
+      "start": 15.32,
+      "end": 15.46
     },
     {
       "word": "verify",
-      "start": 16.36,
-      "end": 16.6
+      "start": 15.46,
+      "end": 15.76
     },
     {
       "word": "the",
-      "start": 16.6,
-      "end": 17.06
+      "start": 15.76,
+      "end": 16.16
     },
     {
       "word": "claim",
-      "start": 17.06,
-      "end": 17.3
+      "start": 16.16,
+      "end": 16.44
     },
     {
       "word": "independently.",
-      "start": 17.3,
-      "end": 17.7
+      "start": 16.44,
+      "end": 16.9
     }
-  ],
-  "wavSha256": "778e8290e2ed7c168d42b628920f8c4b3b53e10d55039cfa1d66ce17b9fe4f44",
-  "textSha256": "e2f4a9cfba16e97c349687c84eb690310f0351b862b965819c28f160fbb0b210"
+  ]
 }

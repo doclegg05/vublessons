@@ -11,7 +11,7 @@ for p in sorted(Path('video/digital-literacy-2').glob('week-*/narration')):
  for b in beats:
   wav=p/(b['id']+'.wav');mp3=p/(b['id']+'.mp3')
   textHash=hashlib.sha256(b['text'].encode()).hexdigest()
-  if not wav.exists() or previous.get(b['id'],{}).get('textSha256')!=textHash:
+  if not wav.exists() or previous.get(b['id'],{}).get('textSha256')!=textHash or previous.get(b['id'],{}).get('engine')!='kokoro-onnx 0.6.1':
    samples,rate=k.create(b['text'],voice='af_heart',speed=.88,lang='en-us');sf.write(str(wav),samples,rate);shutil.copy(wav,p/(b['id']+'.raw.wav'))
   seconds=sf.info(str(wav)).duration;b['window']=round(seconds+1.25,3);b['audioDuration']=seconds
   subprocess.run(['ffmpeg','-v','error','-y','-i',str(wav),'-codec:a','libmp3lame','-b:a','128k',str(mp3)],check=True)

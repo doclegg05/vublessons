@@ -1,218 +1,218 @@
 {
-  "source": "faster-whisper base.en on final Kokoro wav",
-  "matchRatio": 1.0,
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "30a05a02f329bea9cb94535c34a96017c0f83e06b9f7cfb51a905052107acd58",
+  "textSha256": "5bcfd5c9803a220b49a29d1a42154bee5ddf538b6c3d55959d329cc17f586ae3",
+  "matchRatio": 0.9761904761904762,
   "words": [
     {
       "word": "HTML",
       "start": 0.0,
-      "end": 0.36
+      "end": 0.46
     },
     {
       "word": "gives",
-      "start": 0.36,
-      "end": 0.92
+      "start": 0.46,
+      "end": 1.04
     },
     {
       "word": "the",
-      "start": 0.92,
-      "end": 1.1
+      "start": 1.04,
+      "end": 1.24
     },
     {
       "word": "page",
-      "start": 1.1,
-      "end": 1.32
+      "start": 1.24,
+      "end": 1.54
     },
     {
       "word": "its",
-      "start": 1.32,
-      "end": 1.58
+      "start": 1.54,
+      "end": 1.88
     },
     {
       "word": "content",
-      "start": 1.58,
-      "end": 1.98
+      "start": 1.88,
+      "end": 2.4
     },
     {
       "word": "and",
-      "start": 1.98,
-      "end": 2.22
+      "start": 2.4,
+      "end": 2.74
     },
     {
       "word": "structure.",
-      "start": 2.22,
-      "end": 2.58
+      "start": 2.74,
+      "end": 3.2
     },
     {
       "word": "CSS",
-      "start": 3.68,
-      "end": 3.68
+      "start": 4.24,
+      "end": 4.24
     },
     {
       "word": "controls",
-      "start": 3.68,
-      "end": 4.28
+      "start": 4.24,
+      "end": 4.84
     },
     {
       "word": "appearance",
-      "start": 4.28,
-      "end": 4.72
+      "start": 4.84,
+      "end": 5.2
     },
     {
       "word": "and",
-      "start": 4.72,
-      "end": 5.26
+      "start": 5.2,
+      "end": 5.58
     },
     {
       "word": "layout.",
-      "start": 5.26,
-      "end": 5.5
+      "start": 5.58,
+      "end": 5.84
     },
     {
       "word": "JavaScript",
-      "start": 6.64,
-      "end": 6.64
+      "start": 6.8,
+      "end": 6.8
     },
     {
       "word": "responds",
-      "start": 6.64,
-      "end": 7.24
+      "start": 6.8,
+      "end": 7.46
     },
     {
       "word": "to",
-      "start": 7.24,
-      "end": 7.66
+      "start": 7.46,
+      "end": 7.74
     },
     {
       "word": "input,",
-      "start": 7.66,
-      "end": 8.0
+      "start": 7.74,
+      "end": 8.02
     },
     {
       "word": "such",
-      "start": 8.3,
-      "end": 8.48
+      "start": 8.02,
+      "end": 8.52
     },
     {
       "word": "as",
-      "start": 8.48,
-      "end": 8.64
+      "start": 8.52,
+      "end": 8.7
     },
     {
       "word": "filtering",
-      "start": 8.64,
-      "end": 9.02
+      "start": 8.7,
+      "end": 9.12
     },
     {
       "word": "a",
-      "start": 9.02,
-      "end": 9.22
+      "start": 9.12,
+      "end": 9.32
     },
     {
       "word": "list.",
-      "start": 9.22,
-      "end": 9.42
+      "start": 9.32,
+      "end": 9.56
     },
     {
       "word": "The",
-      "start": 10.3,
-      "end": 10.3
+      "start": 10.36,
+      "end": 10.36
     },
     {
       "word": "supplied",
-      "start": 10.3,
-      "end": 10.56
+      "start": 10.36,
+      "end": 10.6
     },
     {
       "word": "starter",
-      "start": 10.56,
-      "end": 10.98
+      "start": 10.6,
+      "end": 11.06
     },
     {
       "word": "keeps",
-      "start": 10.98,
-      "end": 11.34
+      "start": 11.06,
+      "end": 11.42
     },
     {
       "word": "fictional",
-      "start": 11.34,
-      "end": 11.64
+      "start": 11.42,
+      "end": 11.88
     },
     {
       "word": "records",
-      "start": 11.64,
-      "end": 12.06
+      "start": 11.88,
+      "end": 12.24
     },
     {
       "word": "inside",
-      "start": 12.06,
-      "end": 12.42
+      "start": 12.24,
+      "end": 12.62
     },
     {
       "word": "the",
-      "start": 12.42,
-      "end": 12.78
+      "start": 12.62,
+      "end": 12.92
     },
     {
       "word": "file.",
-      "start": 12.78,
-      "end": 12.98
+      "start": 12.92,
+      "end": 13.22
     },
     {
       "word": "It",
-      "start": 13.66,
-      "end": 13.72
+      "start": 13.88,
+      "end": 13.9
     },
     {
       "word": "has",
-      "start": 13.72,
-      "end": 13.86
+      "start": 13.9,
+      "end": 14.02
     },
     {
       "word": "no",
-      "start": 13.86,
-      "end": 14.1
+      "start": 14.02,
+      "end": 14.24
     },
     {
       "word": "real",
-      "start": 14.1,
-      "end": 14.4
+      "start": 14.24,
+      "end": 14.42
     },
     {
       "word": "account",
-      "start": 14.4,
-      "end": 14.74
+      "start": 14.42,
+      "end": 14.72
     },
     {
       "word": "system,",
-      "start": 14.74,
-      "end": 15.24
+      "start": 14.72,
+      "end": 15.26
     },
     {
       "word": "private",
-      "start": 15.62,
-      "end": 15.84
+      "start": 15.6,
+      "end": 15.82
     },
     {
       "word": "database,",
-      "start": 15.84,
-      "end": 16.2
+      "start": 15.82,
+      "end": 16.18
     },
     {
       "word": "or",
-      "start": 16.8,
-      "end": 16.98
+      "start": 16.18,
+      "end": 16.68
     },
     {
       "word": "payment",
-      "start": 16.98,
-      "end": 17.22
+      "start": 16.68,
+      "end": 16.9
     },
     {
       "word": "service.",
-      "start": 17.22,
-      "end": 17.64
+      "start": 16.9,
+      "end": 17.44
     }
-  ],
-  "wavSha256": "fb801f155efa5d001293128c8f7184d66ce73779e27b01b4c7520b84cc3d84a6",
-  "textSha256": "5bcfd5c9803a220b49a29d1a42154bee5ddf538b6c3d55959d329cc17f586ae3"
+  ]
 }

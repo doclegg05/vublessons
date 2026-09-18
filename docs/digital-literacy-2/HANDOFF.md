@@ -24,7 +24,7 @@ Assessment drafts and results use sessionStorage in the learner's tab. There is 
 
 The user-requested **Explain Video Generator** was tried first. Its nine-scene, 2:32 trial completed, and narration/caption playback was checked in the browser. Source: `video/digital-literacy-2/explain-generator-trial.opml`. The plain player URL required sign-in; the tool's full claim link played without sign-in. That ownership-bearing claim link is kept out of the public repository and course pages. The trial remains a comparison, not a required course dependency.
 
-ElevenLabs returned `401 Invalid API key` from its subscription check. No credentials were read or changed. The six deployable explainers therefore use local **Kokoro ONNX 0.6.1**, voice `af_heart`, and HyperFrames 0.8.47. Pitch-preserving tempo adjustment brings narration into Sandra's 135–145 word-per-minute band. Final audio was transcribed locally to align original captions; the matcher refuses weak alignments rather than inventing word times.
+The initial ElevenLabs attempt returned `401 Invalid API key`, so the first preview used local Kokoro narration. After the user repaired the connection and restarted Codex, all 30 narration segments were regenerated through **ElevenLabs MCP**, model `eleven_multilingual_v2`, using the premade **Sarah — Mature, Reassuring, Confident** voice (`EXAVITQu4vr4xnSDxMaL`). The six current explainers use those takes and HyperFrames 0.8.47. Generation settings and source hashes are recorded in `elevenlabs-source/week-*/beat-*/receipt.json`; API credentials are never stored in course sources. Pitch-preserving tempo adjustment brings narration into Sandra's 135–145 word-per-minute band. Final audio was transcribed locally to align original captions; the matcher refuses weak alignments rather than inventing word times.
 
 Delivered videos are 1280×720 H.264/AAC at 24 fps with fast-start playback, optional WebVTT captions and text transcripts. Visuals use original text/layouts, the existing VUB seal and self-hosted fonts, with no software screenshots or music. GSAP is local to production sources; no CDN is added to learner pages.
 
@@ -40,12 +40,13 @@ python3 scripts/dl2/author-assessments.py
 python3 scripts/dl2/build-pages.py
 ```
 
-Video scripts live in `author-media.py`. Production source, original narration text, take provenance, word alignments, caption files and scene HTML are under `video/digital-literacy-2/`. Python 3.12 dependencies are pinned in that directory's `requirements.txt`; install them into an isolated venv. Run `npm ci --prefix video/digital-literacy-2/production` for local GSAP. Kokoro model files use HyperFrames' local TTS cache; initialize it with HyperFrames TTS if absent. FFmpeg/FFprobe and HyperFrames 0.8.47 are also required only for media authoring.
+Video scripts live in `author-media.py`. Production source, original narration text, take provenance, word alignments, caption files and scene HTML are under `video/digital-literacy-2/`. Python 3.12 dependencies are pinned in that directory's `requirements.txt`; install them into an isolated venv. Run `npm ci --prefix video/digital-literacy-2/production` for local GSAP. Generate each authored beat through ElevenLabs MCP into `video/digital-literacy-2/elevenlabs-source/week-NN/beat-NN/`, with exactly one MP3 per directory and the settings in `scripts/dl2/import-elevenlabs-narration.py`. The original MP3s and decoded WAVs are local working assets, excluded from Git; the delivered MP4s, receipts and take hashes are tracked. Preserve these source MP3s locally to rebuild without paying for another generation. FFmpeg/FFprobe and HyperFrames 0.8.47 are also required only for media authoring.
 
 ```sh
 python3 scripts/dl2/author-media.py
+# First generate matching ElevenLabs takes as described above.
 # Use the media Python venv for the next three commands.
-python scripts/dl2/generate-narration.py
+python scripts/dl2/import-elevenlabs-narration.py
 python scripts/dl2/normalize-pace.py
 python scripts/dl2/align-captions.py
 python3 scripts/dl2/build-media.py

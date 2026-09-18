@@ -44,7 +44,7 @@ Retain VUB Learning's name, existing seal, navy-and-gold identity and establishe
 
 `scripts/dl2/curriculum.json` records the six-week sequence, objectives, agendas, tasks and answers. The course's `instructor-guide.html`, weekly plans and `sources.html` provide teaching and source context. `assets/questions.json` and `assets/assessment.js` define the actual question bank and result behavior. The course has a working fictional resource-finder app, local media, WebVTT captions and transcripts.
 
-`HANDOFF.md` records media provenance: Explain Video Generator was trialled separately; ElevenLabs returned an authorization error; the six delivered videos use local Kokoro narration and HyperFrames production. The trial is not a required learner dependency. `review/` contains captured views and print proofs; verification reports record their own scope. These artifacts do not establish live deployment or certify accessibility by themselves.
+`HANDOFF.md` records media provenance: Explain Video Generator was trialled separately; the initial ElevenLabs authorization error was repaired; the six delivered videos now use ElevenLabs Sarah narration and HyperFrames production. The trial is not a required learner dependency. `review/` contains captured views and print proofs; verification reports record their own scope. These artifacts do not establish live deployment or certify accessibility by themselves.
 
 No approved design comp applies to this brand extension. No testimonials, certification claims or production-service capabilities should be invented.
 

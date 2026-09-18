@@ -1,238 +1,238 @@
 {
-  "source": "faster-whisper base.en on final Kokoro wav",
-  "matchRatio": 0.9782608695652174,
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "d319c4acf2c7bead0feabcaab666a8fbb9284f94e994b609d13f66d6f315aac9",
+  "textSha256": "5ee76ef6133cd021b15afb782f26f4d74bd460cdb97306c26e6c237ecfbc2fd9",
+  "matchRatio": 1.0,
   "words": [
     {
       "word": "Run",
       "start": 0.0,
-      "end": 0.26
+      "end": 0.4
     },
     {
       "word": "the",
-      "start": 0.26,
-      "end": 0.48
+      "start": 0.4,
+      "end": 0.56
     },
     {
       "word": "checks",
-      "start": 0.48,
-      "end": 0.66
+      "start": 0.56,
+      "end": 0.72
     },
     {
       "word": "yourself.",
-      "start": 0.66,
-      "end": 1.24
+      "start": 0.72,
+      "end": 1.34
     },
     {
       "word": "Try",
-      "start": 2.16,
-      "end": 2.22
+      "start": 1.9,
+      "end": 2.14
     },
     {
       "word": "a",
-      "start": 2.22,
-      "end": 2.4
+      "start": 2.14,
+      "end": 2.3
     },
     {
       "word": "matching",
-      "start": 2.4,
-      "end": 2.7
+      "start": 2.3,
+      "end": 2.64
     },
     {
       "word": "name,",
-      "start": 2.7,
-      "end": 3.12
+      "start": 2.64,
+      "end": 3.08
     },
     {
       "word": "a",
-      "start": 3.6,
-      "end": 3.66
+      "start": 3.48,
+      "end": 3.56
     },
     {
       "word": "search",
-      "start": 3.66,
-      "end": 3.92
+      "start": 3.56,
+      "end": 3.82
     },
     {
       "word": "with",
-      "start": 3.92,
-      "end": 4.24
+      "start": 3.82,
+      "end": 4.06
     },
     {
       "word": "no",
-      "start": 4.24,
-      "end": 4.48
+      "start": 4.06,
+      "end": 4.28
     },
     {
       "word": "results,",
-      "start": 4.48,
-      "end": 4.94
+      "start": 4.28,
+      "end": 4.7
     },
     {
       "word": "and",
-      "start": 4.94,
-      "end": 5.38
+      "start": 5.12,
+      "end": 5.2
     },
     {
       "word": "different",
-      "start": 5.38,
-      "end": 5.62
+      "start": 5.2,
+      "end": 5.5
     },
     {
       "word": "letter",
-      "start": 5.62,
-      "end": 5.9
+      "start": 5.5,
+      "end": 5.76
     },
     {
       "word": "cases.",
-      "start": 5.9,
-      "end": 6.36
+      "start": 5.76,
+      "end": 6.18
     },
     {
       "word": "Use",
-      "start": 7.36,
-      "end": 7.48
+      "start": 7.16,
+      "end": 7.22
     },
     {
       "word": "only",
-      "start": 7.48,
-      "end": 7.9
+      "start": 7.22,
+      "end": 7.64
     },
     {
       "word": "the",
-      "start": 7.9,
-      "end": 8.08
+      "start": 7.64,
+      "end": 7.82
     },
     {
       "word": "keyboard,",
-      "start": 8.08,
-      "end": 8.36
+      "start": 7.82,
+      "end": 8.14
     },
     {
       "word": "then",
-      "start": 9.04,
-      "end": 9.18
+      "start": 8.66,
+      "end": 8.78
     },
     {
       "word": "narrow",
-      "start": 9.18,
-      "end": 9.5
+      "start": 8.78,
+      "end": 9.12
     },
     {
       "word": "the",
-      "start": 9.5,
-      "end": 9.84
+      "start": 9.12,
+      "end": 9.4
     },
     {
       "word": "screen.",
-      "start": 9.84,
-      "end": 10.16
+      "start": 9.4,
+      "end": 9.78
     },
     {
       "word": "Record",
-      "start": 10.96,
-      "end": 11.18
+      "start": 10.5,
+      "end": 10.56
     },
     {
       "word": "what",
-      "start": 11.18,
-      "end": 11.56
+      "start": 10.56,
+      "end": 11.12
     },
     {
       "word": "you",
-      "start": 11.56,
-      "end": 11.74
+      "start": 11.12,
+      "end": 11.26
     },
     {
       "word": "expected",
-      "start": 11.74,
-      "end": 12.12
+      "start": 11.26,
+      "end": 11.64
     },
     {
       "word": "and",
-      "start": 12.12,
-      "end": 12.84
+      "start": 11.64,
+      "end": 12.28
     },
     {
       "word": "what",
-      "start": 12.84,
-      "end": 13.02
+      "start": 12.28,
+      "end": 12.46
     },
     {
       "word": "actually",
-      "start": 13.02,
-      "end": 13.44
+      "start": 12.46,
+      "end": 12.94
     },
     {
       "word": "happened.",
-      "start": 13.44,
-      "end": 13.9
+      "start": 12.94,
+      "end": 13.54
     },
     {
       "word": "A",
-      "start": 14.78,
-      "end": 14.86
+      "start": 14.42,
+      "end": 14.44
     },
     {
       "word": "confident",
-      "start": 14.86,
-      "end": 15.34
+      "start": 14.44,
+      "end": 14.88
     },
     {
       "word": "AI",
-      "start": 15.34,
-      "end": 15.82
+      "start": 14.88,
+      "end": 15.32
     },
     {
       "word": "statement",
-      "start": 15.82,
-      "end": 16.5
+      "start": 15.32,
+      "end": 15.94
     },
     {
       "word": "does",
-      "start": 16.5,
-      "end": 16.82
+      "start": 15.94,
+      "end": 16.22
     },
     {
       "word": "not",
-      "start": 16.82,
-      "end": 17.06
+      "start": 16.22,
+      "end": 16.42
     },
     {
       "word": "count",
-      "start": 17.06,
-      "end": 17.42
+      "start": 16.42,
+      "end": 16.74
     },
     {
       "word": "as",
-      "start": 17.42,
-      "end": 17.7
+      "start": 16.74,
+      "end": 16.92
     },
     {
       "word": "evidence",
-      "start": 17.7,
-      "end": 18.02
+      "start": 16.92,
+      "end": 17.2
     },
     {
       "word": "that",
-      "start": 18.02,
-      "end": 18.44
+      "start": 17.2,
+      "end": 17.6
     },
     {
       "word": "these",
-      "start": 18.44,
-      "end": 18.68
+      "start": 17.6,
+      "end": 17.8
     },
     {
       "word": "paths",
-      "start": 18.68,
-      "end": 18.98
+      "start": 17.8,
+      "end": 18.18
     },
     {
       "word": "work.",
-      "start": 18.98,
-      "end": 19.38
+      "start": 18.18,
+      "end": 18.64
     }
-  ],
-  "wavSha256": "9339171bb081fb1bfca4ba9c5fe5af41fc76dca5d12de2ea4ffc3b47be8d98b0",
-  "textSha256": "5ee76ef6133cd021b15afb782f26f4d74bd460cdb97306c26e6c237ecfbc2fd9"
+  ]
 }

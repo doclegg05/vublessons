@@ -13,54 +13,60 @@ BROKEN: 0
 ==> 3/5 courses.json drift check
 check-courses: OK — 4 courses, 24 lessons, catalog and courses/ tree agree.
 ==> 4/5 playwright
+[WebServer] (node:28125) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:28160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
 
 Running 48 tests using 5 workers
 
-(node:18925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28161) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28165) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28162) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28163) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18927) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28163) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28161) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-(node:18926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:28162) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1/48] tests/content/dl2-curriculum.spec.js:3:1 › DL2 six complete weeks have two-hour plans and aligned assessment pairs
+[1/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-01: sidebar scrolls independently and lists handouts
+(node:28165) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
 [2/48] tests/content/dl2-curriculum.spec.js:4:1 › DL2 cohort dates appear only in syllabus; pages include shared text sizing
-[3/48] tests/content/homepage-catalog.spec.js:27:1 › homepage has zero external CDN dependencies (offline-capable)
-[4/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-01: sidebar scrolls independently and lists handouts
-(node:18927) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
-(Use `node --trace-warnings ...` to show where the warning was created)
-
-
-[5/48] tests/content/homepage-catalog.spec.js:11:1 › homepage renders one card per course in courses.json
+[3/48] tests/content/homepage-catalog.spec.js:11:1 › homepage renders one card per course in courses.json
+[4/48] tests/content/homepage-catalog.spec.js:27:1 › homepage has zero external CDN dependencies (offline-capable)
+[5/48] tests/content/dl2-curriculum.spec.js:3:1 › DL2 six complete weeks have two-hour plans and aligned assessment pairs
 [6/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-02: sidebar scrolls independently and lists handouts
 [7/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-03: sidebar scrolls independently and lists handouts
 [8/48] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-04: sidebar scrolls independently and lists handouts
@@ -104,7 +110,7 @@ Running 48 tests using 5 workers
 [46/48] tests/functional/shell.spec.js:83:1 › reduced-motion: flag carries the gate class
 [47/48] tests/functional/shell.spec.js:91:1 › skip-to-content link is present and targets main
 [48/48] tests/functional/shell.spec.js:98:1 › instructors landing loads (no dead /instructors/ link) with the shell
-  48 passed (21.7s)
+  48 passed (22.0s)
 ==> 5/5 a11y check (axe-core, ratchet vs committed baseline)
   / [homepage] — clean
   /courses/computer-skills/weeks/week-01/presentation.html [computer-skills (lesson 1: VA Online Services)] — clean

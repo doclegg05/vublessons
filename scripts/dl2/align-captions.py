@@ -38,5 +38,5 @@ for folder in sorted(Path('video/digital-literacy-2').glob('week-*/narration')):
    width=max(0,end-start)/(nxt-prev-1)
    aligned[i]=(start+width*(i-prev-1),start+width*(i-prev))
   words=[dict(word=w,start=round(aligned[i][0],3),end=round(aligned[i][1],3)) for i,w in enumerate(script)]
-  out.write_text(json.dumps(dict(source='faster-whisper base.en on final Kokoro wav',wavSha256=wavHash,textSha256=textHash,matchRatio=ratio,words=words),indent=2)+'\n')
+  out.write_text(json.dumps(dict(source='faster-whisper base.en on final narration wav',wavSha256=wavHash,textSha256=textHash,matchRatio=ratio,words=words),indent=2)+'\n')
   print(folder.parent.name,beat['id'],'matched',round(ratio,3),flush=True)
