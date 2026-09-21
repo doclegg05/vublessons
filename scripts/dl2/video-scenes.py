@@ -4,6 +4,96 @@ E=lambda s:html.escape(str(s),quote=True)
 KINDS={1:['zoom','zoom','sound','privacy','routine'],2:['sync','permission','sync','recovery','permission'],3:['document','document','sheet','export','bundle'],4:['roles','timing','feedback','meeting','message'],5:['phishing','access','encrypt','attention','verify'],6:['app','parts','prompt','app','versions']}
 TITLES={1:['Start with one task','Zoom into the task','Follow the sound','Share availability','Choose. Test. Explain.'],2:['Follow your file','Match access to the task','Deletion can travel too','Bring back the right copy','Suggest without rewriting'],3:['Make the next step visible','Structure guides the reader','Make the numbers prove it','Choose what travels','Show your resource pack'],4:['One file. Clear roles.','Together or later?','Show the useful change','Make room for others','Make the next action clear'],5:['Pause the pressure','Match access to purpose','Protect what can be read','Make room for a break','Show your safer next step'],6:['Build one useful thing','Three layers. One app.','Give the build boundaries','Test what actually happens','Keep a way back']}
 ART={1:'workstation',2:'research',3:'creation',4:'collaboration',5:'security',6:'building'}
+
+# Every chapter has an explicit visual plan; tuple = scene kind, scenario photo,
+# and three inspectable states. Photos establish context, never carry UI text.
+CHAPTERS = {
+1: [
+ ('routine','workstation',['Choose|Read a page comfortably','Test|Can I reach the next action?','Restore|Keep the original setting']),
+ ('zoom',None,['Before|Page zoom: 100%','Change|Page zoom: 125%','Check|Find help stays reachable']),
+ ('scope',None,['Page zoom|Only this webpage grows','Display scaling|Apps and system controls grow','Choose|Make the smallest useful change']),
+ ('sound',None,['Destination|Headset selected','App setting|Check the meeting output too','Test|Unmute and play a short sample']),
+ ('connections',None,['Processor|Carries out instructions','Memory|Current work on the workbench','Storage|Saved file in the cabinet']),
+ ('print',None,['Preview|Destination · range · orientation','Test|Print one page first','Queue|Check before sending it again']),
+ ('calendar',None,['Library practice|2:00–3:00 · Room A','Reminder|Check timing and permission','Reopen|Same event in day / week / month']),
+ ('privacy',None,['Owner|Library practice · Room A','Partner|Busy · 2:00–3:00','Verify|Inspect the partner view']),
+ ('automation',None,['Account|Confirm the active account','Reminder|Check notification permission','Help|Match instructions to your version']),
+ ('routine','workstation',['Choose|Read · hear · remember','Explain|Expected result versus actual','Finish|Save · restore · sign out'])],
+2: [
+ ('search','library',['Task|Find community computer help','Place|Use your West Virginia town','Evidence|Confirm the details independently']),
+ ('search',None,['Broad|Computer help','Refine|Computer help + library + town','Adjust|Remove a term if too restrictive']),
+ ('source-check',None,['Responsibility|Who published this page?','Fit|Place · date · purpose','Conflict|Check the responsible organization']),
+ ('source-trail',None,['Source|Organization · title · address','Checked|Date accessed · verified fact','Separate|Source statement ≠ my interpretation']),
+ ('form',None,['Purpose|Who collects this information?','Required|Fictional topic and contact route','Review|Practice only: nothing is sent']),
+ ('files',None,['Folder|Practice resources','Rename|computer-help-notes.txt','Reopen|Check location and account']),
+ ('permission',None,['Viewer|Read the shared document','Commenter|Suggest without rewriting','Editor|Change the content; test access']),
+ ('sync',None,['Sync|A deletion may reach both devices','Backup|Separate earlier recovery copy','Check|Saving status and recovery options']),
+ ('recovery',None,['Recover|Trash or earlier version?','Package|Create ZIP from approved copies','Inspect|Extract and open the files']),
+ ('evidence','library',['Source note|Fact · address · date checked','Folder|Recognizable name and location','Partner|Right access and recovery choice'])],
+3: [
+ ('document','resource-pack',['Audience|Community computer-help reader','Purpose|A clear next action','Pack|Handout · workbook · slides']),
+ ('document',None,['Heading style|Computer help','Numbered steps|Choose · visit · ask','Useful link|Read the computer-help guide']),
+ ('editing',None,['Select|Check exactly what is selected','Preserve|Copy and undo unwanted changes','Review|Comment ≠ tracked suggestion']),
+ ('sheet',None,['Column A|Item names','Column B|Cost in dollars','Cell B2|Paper: 12']),
+ ('sheet',None,['Formula|=SUM(B2:B4)','Challenge|Paper: 12 → 15','Check|Total: 25 → 28']),
+ ('chart',None,['Source|Paper 15 · folders 8 · pens 5','Question|Which supply costs most?','Check|Title and units match the table']),
+ ('slide-design',None,['Slide 1|Purpose and useful image','Slide 2|One action at a time','Image edit|Crop removes; resize changes size']),
+ ('media-edit',None,['Preserve|Keep the original clip','Edit|Trim ends; split unwanted section','Review|Listen at cuts; recheck captions']),
+ ('export',None,['DOCX|Editable document structure','PDF|Inspect the saved page layout','CSV|Inspect values; record image credit']),
+ ('bundle','resource-pack',['Reader|Can they find the next action?','Workbook|Does the total respond?','Improve|Fix one observed confusion'])],
+4: [
+ ('roles','collaboration',['Task|Plan a community help session','Output|One useful handout','People|Owner · writer · reviewer']),
+ ('identity-channel',None,['Task|Message, shared file or meeting?','Identity|Training profile is active','Timing|Enough context for a later reply']),
+ ('message',None,['Subject|Review the computer-help handout','Request|Comment on the contact section','Timing|Reply before our practice session']),
+ ('email-fields',None,['To / Cc|Visible recipient list','Bcc|Other recipients cannot see addresses','Reply all|Inspect who will receive it']),
+ ('roles',None,['Before|Three competing file copies','Agree|One shared handout','Coordinate|Roles, access and response time']),
+ ('feedback',None,['Vague|Make this better','Specific|Add the contact details here','Resolve|Explain decision after responding']),
+ ('meeting',None,['Prepare|Sound test and captions','Participate|Mute or raise hand as needed','Choice|Ask before recording; keep notes']),
+ ('community',None,['Read|Community rules and context','Verify|Compare claim with official source','Post|Share only agreed information']),
+ ('commerce',None,['Today|Fictional trial offer','Renewal|12 dollars each month','Inspect|Seller · cancellation · full terms']),
+ ('evidence','collaboration',['Draft|Clear request and response time','Shared file|Correct access and revised section','Record|Decision and next action'])],
+5: [
+ ('verify','safety',['Pause|What is being requested?','Inspect|What evidence do I have?','Verify|Choose an independent route']),
+ ('comfort','workstation',['Comfort|Screen and input within reach','Access|Captions · large text · keyboard','Control|Choose a helpful adjustment']),
+ ('phishing',None,['Claim|Your service will stop','Request|Provide information immediately','Evidence|A convincing logo is not proof']),
+ ('trusted-route',None,['Message route|Sender supplies its own evidence','Independent route|Open a known website or bookmark','Confirm|Ask whether the issue exists']),
+ ('encrypt',None,['Read-only|Content remains readable','Encryption|Key required to read the data','Limit|Unlocked accounts still need care']),
+ ('usb','usb',['Found|Ordinary appearance proves nothing','Pause|Keep the drive disconnected','Procedure|Give it to authorized staff']),
+ ('access',None,['Meeting|Camera or microphone may fit task','Text page|Camera access is unrelated','Review|Check app and permission later']),
+ ('wellbeing',None,['Identity|A friendly story is not verification','Attention|Choose notifications and breaks','Support|Report · block · trusted help']),
+ ('decision',None,['Claim|A code is needed for an appointment','Unverified|Who is actually asking?','Next step|Do not share; check known contact']),
+ ('results',None,['Result|A classroom score, not certification','Review|Find a skill to practice','Transfer|Repeat a useful task with less help'])],
+6: [
+ ('app','app-planning',['Familiar task|Find a community resource','Small scope|One page, search and filter','Safe data|Fictional records only']),
+ ('product-types',None,['Website|Information to read','Web app|Input → filtered result','SaaS|Hosted service and ongoing support']),
+ ('parts',None,['HTML|Heading, label and search field','CSS|Layout and readable focus','JavaScript|Match records to the search']),
+ ('acceptance',None,['Search library|Community library appears','Search zzz|No matching resources','Keyboard|Every control has visible focus']),
+ ('prompt',None,['User and task|Find fictional community resources','Controls|Labeled search and category filter','Boundaries|No external dependencies or secrets']),
+ ('local-file',None,['Save|resource-finder-v1.html','Open|Check heading, controls and results','No account|Edit heading; save and refresh']),
+ ('app',None,['library|Matching resource shown','zzz|Clear no-results message','LIBRARY|Same match; also test category']),
+ ('keyboard',None,['Keyboard|Tab through visible controls','Narrow screen|Labels and results remain readable','Data|Bundled file ≠ shared database']),
+ ('versions',None,['Report|LIBRARY fails; library succeeds','Repair|Match case without losing filter','Retest|Failed check and a passing check']),
+ ('evidence','app-planning',['Demonstrate|Run three acceptance checks','Explain|One part and one revision','Limit|Local prototype ≠ public service'])]
+}
+
+def chapter_plan(n,index):
+ kind,photo,steps=CHAPTERS[n][index]
+ return dict(kind=kind,photo=photo,steps=steps,layout='scenario' if photo else 'demonstration')
+
+def package_panel():
+ v=''
+ for j,(k,label,sub) in enumerate([('file','Approved copies','Inspect the contents'),('file','ZIP archive','Package, not encrypt'),('file','Extracted files','Open and check each')]):
+  v+=tile(k,label,18+j*253,45,217,239)+text(sub,126+j*253,340,25,anchor='middle')
+ v+=arrow(239,165,266,165)+arrow(492,165,518,165)
+ return '<svg class="diagram" viewBox="0 0 760 460" role="img" aria-label="Package, extract and verify a ZIP">'+v+'</svg>'
+
+def evidence_panel(steps):
+ v=''
+ for j,entry in enumerate(steps):
+  label,value=entry.split('|',1);y=18+j*140
+  v+=f'<g id="detail-{j}">'+rect(18,y,724,124,'#173d5c')+rect(18,y,7,124,'#c9a227',radius=0)+text(f'{j+1:02}  {label}',47,y+42,29,'#E6C65C')+text(value,47,y+88,29)+'</g>'
+ return '<svg class="diagram" viewBox="0 0 760 460" role="img" aria-label="Worked example">'+v+'</svg>'
+
 PATHS={
 'usb':'<rect x=17 y=22 width=30 height=37 rx=6/><path d="M22 22V5h20v17M28 9v7M36 9v7"/>',
 'computer':'<rect x="5" y="7" width="54" height="36" rx="3"/><path d="M32 43v13M18 57h28"/>',
@@ -57,7 +147,7 @@ def diagram(kind,i):
   v+=''.join(rect(190+j*44,343,24,8,'#E6C65C',f'wave-{j}',4) for j in range(9));note='Select. Unmute. Test.'
  elif kind=='privacy':
   v=rect(20,35,330,295)+rect(410,35,330,295)+text('Your calendar',185,83,31,anchor='middle')+text('Partner sees',575,83,31,anchor='middle')
-  v+=rect(44,114,280,186,'#e1efed')+text('Library visit',64,157,29,'#1b365d')+text('2:00–3:00',64,205,28,'#1b365d')+text('Room A',64,253,28,'#1b365d')
+  v+=rect(44,114,280,186,'#e1efed')+text('Library practice',64,157,28,'#1b365d')+text('2:00–3:00',64,205,28,'#1b365d')+text('Room A',64,253,28,'#1b365d')
   v+=rect(434,114,280,186,'#c9a227')+icon('lock',543,126,62,'#1b365d')+text('Busy',574,233,42,'#1b365d',anchor='middle')+text('2:00–3:00',574,279,28,'#1b365d',anchor='middle');note='Availability, without private details.'
  elif kind=='routine':
   v=tile('edit','Choose',18,92,210,220,'choose')+tile('check','Test',274,92,210,220,'test')+tile('undo','Explain / undo',530,92,210,220,'explain')+arrow(233,185,270,185)+arrow(490,185,525,185);note='Save work. Restore lab settings.'
@@ -117,7 +207,7 @@ def diagram(kind,i):
   v=tile('camera','Video meeting',25,37,320,190,'camera-yes')+tile('file','Text page',415,37,320,190,'camera-no')+icon('check',146,276,95,id='allow')
   v+='<g id="deny">'+icon('camera',529,278,95)+f'<path d="M524 280l100 94" stroke="#E6C65C" stroke-width="6"/>'+'</g>';note='Access must fit the task.'
  elif kind=='encrypt':
-  v=tile('usb','Unknown drive',10,54,203,208)+f'<path d="M46 90l129 119" stroke="#E6C65C" stroke-width="6"/>'+tile('file','Readable file',273,54,210,208)+arrow(491,155,529,155)+tile('lock','Key required',538,54,210,208,'locked')
+  v=tile('file','Read-only',10,54,203,208)+text('Still readable',111,306,26,anchor='middle')+tile('file','Original data',273,54,210,208)+arrow(491,155,529,155)+tile('lock','Key required',538,54,210,208,'locked')
   v+='<g id="cipher">'+rect(287,299,448,91,'#0f655f')+text('7fA2 · 9cD4 · e18B',511,359,34,anchor='middle')+'</g>';note='Encryption protects reading.'
  elif kind=='attention':
   for j in range(3):v+=f'<g id="alert-{j}">'+rect(15,45+j*108,330,82)+icon('chat',34,61+j*108,48)+rect(105,71+j*108,205,12,'#b7d1ce',radius=3)+'</g>'
@@ -141,7 +231,7 @@ def diagram(kind,i):
   v+=icon('undo',335,287,89,id='restore')+text('Retest the change',194,406,30,anchor='middle')+text('Retest what worked',574,406,30,anchor='middle');note='Keep both versions and your test log.'
  elif kind=='connections':
   for j,(k,t) in enumerate([('computer','Processing'),('grid','Working memory'),('file','Saved storage')]):v+=tile(k,t,15+j*253,40,222,197,f'concept-{j}')
-  v+=icon('computer',40,290,78)+arrow(135,330,288,330)+icon('grid',307,290,78)+arrow(400,330,554,330)+icon('cloud',580,290,78);note='Identify the job before changing a connection.'
+  v+=icon('computer',40,290,78)+arrow(135,330,288,330)+icon('grid',307,290,78)+arrow(400,330,554,330)+icon('file',580,290,78);note='Active work and saved files serve different jobs.'
  elif kind=='print':
   v=rect(20,26,287,373,'#e1efed')+text('Preview',163,82,31,'#1b365d',anchor='middle')+''.join(rect(45,124+j*49,234-(j%2)*28,8,'#72978f',radius=2) for j in range(5))
   for j,t in enumerate(['1  Destination','2  Page range','3  Test one page']):v+=f'<g id="concept-{j}">'+rect(354,46+j*116,387,95)+text(t,380,104+j*116,30)+'</g>'
@@ -153,7 +243,7 @@ def diagram(kind,i):
    for row in range(3):v+=rect(45+col*94,178+row*65,87,58,'#c4d8de',radius=5)
   v+=rect(233,243,181,58,'#0f655f')+text('2–3 · Room A',324,281,25,anchor='middle');note='Check the day, time, place and reminder.'
  elif kind=='search':
-  v=rect(22,27,716,67,'#e1efed')+icon('search',41,40,43,'#0f655f')+text('computer help + library + town',105,72,29,'#1b365d')
+  v=rect(22,27,716,67,'#e1efed')+icon('search',41,40,43,'#0f655f')+text('computer help',105,72,29,'#1b365d','search-query')
   for j,(t,sub) in enumerate([('Official service page','Responsible organization'),('Check the details','Location · date · purpose'),('Record the source','Address · fact · date checked')]):
    v+=f'<g id="concept-{j}">'+rect(22,122+j*101,716,88)+text(t,49,158+j*101,29)+text(sub,49,189+j*101,24,'#E6C65C')+'</g>'
   note='Useful results need evidence and relevance.'
@@ -181,13 +271,80 @@ def diagram(kind,i):
   v=tile('clock','Trial today',20,41,300,192,'concept-0')+arrow(336,143,415,143)+tile('file','$12 each month',436,41,304,192,'concept-1')
   v+=f'<g id="concept-2">'+rect(20,283,720,109,'#0f655f')+text('Seller · renewal · cancellation',380,348,34,anchor='middle')+'</g>';note='Fictional offer. No payment is required.'
  elif kind=='source-trail':
-  v=rect(30,28,700,374,'#e1efed')+text('My source record',65,82,34,'#1b365d')
-  for j,(label,value) in enumerate([('Address','Official service page'),('Verified fact','Room and opening hours'),('Date checked','Check again before acting')]):
-   v+=f'<g id="concept-{j}">'+text(label,65,145+j*94,25,'#0f655f')+text(value,65,181+j*94,31,'#1b365d')+'</g>'
-  note='Record evidence you can return to.'
+  v=rect(22,14,716,425,'#e1efed')+text('My source record',52,61,34,'#1b365d')
+  rows=[('Organization','Fictional community library'),('Title / address','Computer help · example.org/help'),('Date accessed','Record the day you checked'),('Verified fact','The source states Room A'),('Interpretation','My conclusion is separate')]
+  for j,(label,value) in enumerate(rows):
+   y=95+j*67;v+=f'<g id="concept-{j}">'+text(label,52,y,23,'#0f655f')+text(value,52,y+32,28,'#1b365d')+'</g>'
+  note='Fictional example · record evidence you can revisit.'
  elif kind=='usb':
   v=tile('usb','Unknown drive',20,64,214,228,'concept-0')+tile('hand','Do not connect',273,64,214,228,'concept-1')+tile('person','Authorized staff',526,64,214,228,'concept-2')
   v+=arrow(240,180,267,180)+arrow(493,180,520,180);note='Appearance does not prove safety.'
+ elif kind=='automation':
+  v=rect(25,25,710,385,'#e1efed')+text('Practice settings',58,77,35,'#1b365d')
+  for j,(k,label,value) in enumerate([('person','Active account','Training profile'),('clock','Reminder','Before Library practice'),('search','Help version','Matches this application')]):
+   y=100+j*96;v+=f'<g id="detail-{j}">'+rect(48,y,664,81,'#c4d8de')+icon(k,62,y+14,48,'#0f655f')+text(label,131,y+29,23,'#1b365d')+text(value,131,y+62,29,'#1b365d')+'</g>'
+  note='Check the saved setting, not just the request.'
+ elif kind=='source-check':
+  for j,(label,body) in enumerate([('Directory lead','Possible computer help'),('Responsible source','Confirm place and availability')]):
+   x=14+j*385;v+=rect(x,25,350,337,'#e1efed')+rect(x,25,350,53,'#c4d8de')+text(label,x+175,62,29,'#1b365d',anchor='middle')+icon('search' if j==0 else 'person',x+133,107,80,'#0f655f')
+   v+=text('Computer help',x+175,240,28,'#1b365d',anchor='middle')+text('Check current details',x+175,287,24,'#1b365d',anchor='middle')
+  v+=arrow(290,396,473,396);note='A lead becomes useful after independent confirmation.'
+ elif kind=='editing':
+  v=rect(18,20,456,391,'#e1efed')+text('Computer help',45,73,34,'#1b365d')+rect(43,106,400,60,'#c9a227')+text('Visit the learning desk',56,145,28,'#1b365d')
+  v+=text('Selected passage',48,217,27,'#1b365d')+icon('undo',184,272,90,'#0f655f')+rect(495,70,245,252)+icon('chat',578,94,70)+text('Comment',617,224,29,anchor='middle')+text('Suggest a change',617,275,24,anchor='middle');note='Select carefully. Keep a route back.'
+ elif kind=='slide-design':
+  for j,label in enumerate(['Purpose','Action','Result']):
+   x=18+j*250;v+=rect(x,30,225,170,'#e1efed')+text(label,x+112,72,30,'#1b365d',anchor='middle')+icon(['person','edit','check'][j],x+75,99,69,'#0f655f')
+  v+=rect(45,253,280,154,'#72978f')+rect(85,277,196,105,'#0f655f')+text('Crop',185,439,28,anchor='middle')+rect(441,268,234,130,'#72978f')+text('Resize proportionally',558,439,27,anchor='middle');note='One message per slide. Preserve the original image.'
+ elif kind=='identity-channel':
+  v=rect(22,22,716,83,'#e1efed')+icon('person',42,35,57,'#0f655f')+text('Active profile: Training',128,74,34,'#1b365d')
+  for j,(k,t) in enumerate([('email','Message'),('file','Shared file'),('camera','Meeting')]):v+=tile(k,t,18+j*253,147,217,236)
+  note='Choose a channel and identity that fit the task.'
+ elif kind=='community':
+  v=rect(15,30,346,360,'#e1efed')+text('Community draft',40,82,30,'#1b365d')+icon('chat',130,107,91,'#0f655f')+text('Is this detail verified?',188,254,24,'#1b365d',anchor='middle')+text('Permission to share?',188,308,24,'#1b365d',anchor='middle')
+  v+=rect(395,30,350,360)+text('Source check',570,82,30,anchor='middle')+icon('search',526,114,84)+text('Official contact',570,258,27,anchor='middle')+text('Hours · requirements',570,313,24,anchor='middle');note='Read the rules. Verify details. Respect privacy.'
+ elif kind=='comfort':
+  v=icon('computer',271,20,214)+rect(172,254,416,25,'#c9a227')+icon('grid',239,298,74)+icon('hand',411,295,76)
+  v+=text('Readable screen',379,247,31,anchor='middle')+text('Input within reach',379,423,31,anchor='middle')+icon('chat',48,95,76)+text('Captions',88,220,24,anchor='middle')+icon('pause',642,95,76)+text('Breaks',679,220,24,anchor='middle');note='Adapt the setup to your task and comfort.'
+ elif kind=='wellbeing':
+  v=rect(20,20,340,390,'#e1efed')+text('Notifications',190,74,31,'#1b365d',anchor='middle')
+  for j in range(3):v+=rect(43,110+j*78,294,57,'#c4d8de')+icon('chat',59,122+j*78,31,'#0f655f')+text('Choose alerts',110,149+j*78,23,'#1b365d')
+  v+=rect(408,51,330,328)+text('Interaction options',573,105,29,anchor='middle')
+  for j,t in enumerate(['Report','Block','Ask trusted support']):v+=rect(430,137+j*70,286,53,'#0f655f')+text(t,573,172+j*70,25,anchor='middle')
+  note='Your attention and wellbeing are part of safety.'
+ elif kind=='decision':
+  v=rect(20,25,420,367,'#e1efed')+icon('email',50,50,71,'#0f655f')+text('Appointment message',52,159,31,'#1b365d')+text('A private code is requested',52,222,26,'#1b365d')+rect(52,267,350,63,'#c9a227')+text('Pause before sharing',227,309,28,'#1b365d',anchor='middle')
+  v+=icon('pause',475,81,100)+icon('search',607,230,100)+arrow(494,229,601,229);note='Evidence → unknowns → independent next step.'
+ elif kind=='evidence':
+  for j,(k,t) in enumerate([('file','Saved work'),('check','Test evidence'),('chat','Next step')]):v+=tile(k,t,18+j*253,45,217,258)
+  v+=arrow(237,167,269,167)+arrow(491,167,522,167)+text('Show the result. Explain why you trust it.',380,396,31,anchor='middle');note='Choose a useful task to repeat independently.'
+ elif kind=='product-types':
+  for j,(k,label,detail) in enumerate([('file','Website','Read information'),('filter','Web app','Input → result'),('cloud','SaaS','Ongoing service')]):
+   v+=tile(k,label,18+j*253,30,217,226)+text(detail,126+j*253,310,25,anchor='middle')
+  v+=rect(20,357,720,69,'#0f655f')+text('Accounts · shared data · support · maintenance',380,400,26,anchor='middle');note='Our local prototype is a smaller task.'
+ elif kind=='scope':
+  for j,label in enumerate(['Page zoom','Display scaling']):
+   x=15+j*385;v+=rect(x,32,350,315,'#e1efed')+rect(x,32,350,45,'#c4d8de')+text(label,x+175,65,29,'#1b365d',anchor='middle')
+   v+=rect(x+23,102,303,62,'#0f655f')+text('Page content',x+175,143,32,anchor='middle')
+   v+=rect(x+23,190,303,105,'#c4d8de')+text('Find help',x+175,253,32,'#1b365d',anchor='middle')
+  v+=text('Page only',190,403,32,anchor='middle')+text('Apps + system',575,403,32,anchor='middle');note='Choose the scope that fits the task.'
+ elif kind=='files' or kind=='local-file':
+  v=rect(20,25,720,379,'#e1efed')+rect(20,25,720,65,'#c4d8de')+text('Practice resources',49,69,33,'#1b365d')
+  name='computer-help-notes.txt' if kind=='files' else 'resource-finder-v1.html'
+  v+=icon('file',60,123,80,'#0f655f')+text(name,165,172,31,'#1b365d')+arrow(160,234,585,234)+rect(79,272,600,82,'#0f655f')+text('Save → reopen → inspect',379,326,32,anchor='middle');note='Keep a recognizable working copy.'
+ elif kind=='trusted-route':
+  v=tile('email','Unexpected message',18,32,345,233)+tile('search','Known contact',397,32,345,233)
+  v+=text('Unverified request',190,326,29,anchor='middle')+text('Independent check',570,326,29,anchor='middle')+text('Do not use the message’s supplied number',380,411,30,'#E6C65C',anchor='middle');note='Use a route you already trust.'
+ elif kind=='results':
+  v=rect(30,24,700,378,'#e1efed')+text('My next practice',65,81,36,'#1b365d')
+  for j,(name,w) in enumerate([('Settings',430),('Files',310),('Communication',365)]):
+   y=119+j*87;v+=text(name,62,y+30,26,'#1b365d')+rect(285,y,w,40,'#0f655f')
+  note='Fictional learning report · not certification'
+ elif kind=='acceptance':
+  v=rect(20,30,720,375,'#e1efed')+text('Check',55,82,30,'#1b365d')+text('Expected result',338,82,30,'#1b365d')
+  for j,(a,b) in enumerate([('library','Community library'),('zzz','No matching resources'),('Tab key','Visible focus')]):
+   y=130+j*95;v+=rect(40,y-20,680,75,'#c4d8de')+text(a,55,y+27,30,'#1b365d')+text(b,335,y+27,28,'#1b365d')
+  note='Expected versus actual: observe the saved app.'
  elif kind=='keyboard':
   v=rect(25,22,710,320,'#e1efed')+rect(53,56,469,65,'#c4d8de','concept-0')+text('Search resources',80,99,30,'#1b365d')+rect(548,56,158,65,'#c9a227','concept-1')+text('All',627,99,29,'#1b365d',anchor='middle')
   v+=rect(53,155,653,95,'#c4d8de','concept-2')+text('Community library',85,214,32,'#1b365d')+rect(200,373,165,57)+text('Tab →',282,412,30,anchor='middle')+text('Visible focus',545,412,30,anchor='middle');v+='<rect id=focus-ring x=50 y=53 width=475 height=71 rx=8 fill=none stroke=#1b365d stroke-width=4 />';note='Keyboard · narrow screen · data location'
@@ -195,7 +352,10 @@ def diagram(kind,i):
 
 CSS='''*{box-sizing:border-box}.canvas-ground{position:absolute;inset:0;background:#102c4b}.photo-window{position:absolute;left:0;top:0;width:400px;height:720px;overflow:hidden}.topic-photo{width:100%;height:100%;object-fit:cover;object-position:48% center}.photo-shade{position:absolute;left:0;bottom:0;width:400px;height:130px;background:#102c4b}.gold-divider{position:absolute;left:395px;top:0;width:5px;height:720px;background:#c9a227}.video-title{position:absolute;left:440px;top:55px;max-width:755px;margin:0;font-size:46px;line-height:1.14;color:white;letter-spacing:-.5px}.graphic-stage{position:absolute;left:440px;top:153px;width:784px;height:460px}.diagram{width:100%;height:100%;overflow:visible}.video-note{position:absolute;left:445px;bottom:53px;font-size:29px;color:#e6c65c;margin:0;max-width:755px;line-height:1.3}.video-brand{position:absolute;left:31px;bottom:37px;display:flex;align-items:center;gap:12px;color:white;font-size:24px;font-weight:700}.video-brand img{width:49px;height:49px}.graphic-stage text{font-family:VUB}.layout-wide .photo-window{width:270px}.layout-wide .gold-divider{left:265px}.layout-wide .photo-shade{width:270px}.layout-wide .video-title{left:312px;max-width:880px}.layout-wide .graphic-stage{left:312px;width:910px;height:466px;top:153px}.layout-wide .video-note{left:320px;max-width:870px}.layout-finale .photo-window{left:850px;width:430px}.layout-finale .gold-divider{left:845px}.layout-finale .photo-shade{left:850px;width:430px}.layout-finale .video-title{left:55px;max-width:740px}.layout-finale .graphic-stage{left:40px;width:780px}.layout-finale .video-note{left:55px;max-width:750px}.layout-finale .video-brand{left:885px}'''
 def scene(n,i,b,words):
- index=i;kind=b.get('visual',KINDS[n][i%5]);i=b.get('variant',i);cid=f'w{n}-scene-{index+1}';content,note=diagram(kind,i)
+ index=i;plan=chapter_plan(n,index);kind=plan['kind'];i=b.get('variant',i);cid=f'w{n}-scene-{index+1}';content,note=diagram(kind,i)
+ if not note:raise ValueError(f'No authored diagram for {kind}')
+ detail=(package_panel() if n==2 and index==8 else evidence_panel(plan['steps'])).replace('id="detail-', 'id="inspect-')
+ content=f'<div class=main-example>{content}</div><div class=detail-example style="opacity:0">{detail}</div>'
  # Scope ids and every animation to the owning frame.
  for old in re.findall(r'id=([a-zA-Z0-9-]+)',content):content=content.replace(f'id={old}',f'id="{cid}-{old}"')
  for old in re.findall(r'id="([^\"]+)"',content):
@@ -212,9 +372,13 @@ def scene(n,i,b,words):
  def light(s,phrase='',f=.5):move(s,{'scale':1.06,'transformOrigin':'50% 50%'},phrase,f)
  if kind=='zoom':
   move('#zoom-content',{'scale':1.14,'transformOrigin':'70px 120px'},'larger' if i else 'one change',.45);change('#zoom-value',{'textContent':'125%'},'larger' if i else 'one change',.45)
+  move('#zoom-content',{'scale':1},'restore',.84);change('#zoom-value',{'textContent':'100%'},'restore',.84)
  elif kind=='sound':
   change('#speaker-output',{'opacity':0},'headset',.35);change('#headphones',{'opacity':1},'headset',.35)
   for j in range(9):move(f'#wave-{j}',{'scaleY':[3,5,7,4,6,8,5,3,6][j],'transformOrigin':'50% 50%'},'play a short test',.55)
+ elif kind=='search':
+  change('#search-query',{'textContent':'computer help + library + town'},'library',.3)
+  if index==1:change('#search-query',{'textContent':'computer help + town'},'remove',.72)
  elif kind=='privacy':move('.diagram',{'scale':1.04,'transformOrigin':'70% 45%'},'free or busy',.6)
  elif kind=='routine':
   for s,p,f in [('#choose','one helpful adjustment',.2),('#test','show a partner',.4),('#explain','restore',.6)]:light(s,p,f)
@@ -230,7 +394,7 @@ def scene(n,i,b,words):
  elif kind=='recovery':light('#trash','trash',.2);light('#history','version history',.5);light('#restored','preview',.7)
  elif kind=='document':
   for j in range(3):move(f'#doc-step-{j}',{'x':10},'numbered list' if i==1 else 'next action',.28+j*.2)
- elif kind=='sheet':change('#paper-cost',{'textContent':'15'},'paper to fifteen',.6);change('#total',{'textContent':'28'},'paper to fifteen',.6);light('#total','twenty-eight',.73)
+ elif kind=='sheet' and index==4:change('#paper-cost',{'textContent':'15'},'paper to fifteen',.6);change('#total',{'textContent':'28'},'paper to fifteen',.6);light('#total','twenty-eight',.73)
  elif kind=='export':
   for j,p in enumerate(['editable document','a pdf','a csv']):light(f'#format-{j}',p,.15+j*.24)
  elif kind=='bundle':
@@ -252,19 +416,39 @@ def scene(n,i,b,words):
  elif kind=='verify':
   for j,p in enumerate(['evidence','independent source','action']):light(f'#safe-{j}',p,.2+j*.2)
  elif kind=='app':
-  if i==3:change('#query',{'textContent':'zzz'},'no results',.3);move('#match',{'opacity':0},'no results',.3);move('#empty',{'opacity':1},'no results',.3);change('#query',{'textContent':'LIBRARY'},'letter cases',.5);move('#empty',{'opacity':0},'letter cases',.5);move('#match',{'opacity':1},'letter cases',.5)
+  if i==3:change('#query',{'textContent':'zzz'},'unmatched term',.3);move('#match',{'opacity':0},'unmatched term',.3);move('#empty',{'opacity':1},'unmatched term',.3);change('#query',{'textContent':'LIBRARY'},'uppercase',.5);move('#empty',{'opacity':0},'uppercase',.5);move('#match',{'opacity':1},'uppercase',.5)
   else:light('#match','readable results',.3)
  elif kind=='parts':
   for j,p in enumerate(['html','css','javascript']):light(f'#layer-{j}',p,.08+j*.25)
  elif kind=='prompt':
   for j,p in enumerate(['user should do','controls','test','fictional data']):move(f'#prompt-{j} rect',{'fill':'#0f655f'},p,.1+j*.2)
  elif kind=='versions':light('#version-1','first version',.1);light('#version-2','improvement',.28);move('#restore',{'rotation':-20,'transformOrigin':'50% 50%'},'keep both versions',.8)
+ if kind=='automation':
+  for j in range(3):light(f'#detail-{j}','',.17+j*.25)
  if kind=='keyboard':move('#focus-ring',{'attr':{'x':545,'width':166}},'operate the filter',.4)
  if kind in ['connections','print','calendar','search','form','chart','media-edit','email-fields','commerce','keyboard','usb','source-trail']:
-  for j in range(3):
-   move(f'#concept-{j}',{'scale':1.025,'transformOrigin':'50% 50%'},'',.18+j*.24)
- layout='layout-finale' if index==9 else 'layout-wide' if index%3 else 'layout-split'
+  for j in range(5 if kind=='source-trail' else 3):
+   move(f'#concept-{j}',{'scale':1.025,'transformOrigin':'50% 50%'},'',.12+j*(.14 if kind=='source-trail' else .24))
+ layout='layout-split'
+ # Preserve the instructional diagram; the ZIP handoff is a separate mechanism.
+ if n==2 and index==8:
+  move('.main-example',{'opacity':0},'zip',.66);move('.detail-example',{'opacity':1},'zip',.66)
+ # Small chapter-specific evidence caption changes, without replacing pictures.
+ for j,entry in enumerate(plan['steps']):
+  change('.video-note',{'textContent':entry.replace('|',' · ')},'',.10+j*.28)
+ photo=plan['photo']
+ photohtml=f'<div class=photo-window><img class=topic-photo src="assets/{photo}.webp" alt=""></div>' if photo else ''
+ if photo=='safety':
+  photohtml='<div class=photo-window><svg class=topic-photo viewBox="0 0 1376 768" role="img" aria-label="Fictional home verification scenario"><image href="assets/safety.webp" width="1376" height="768"/><polygon points="287,355 361,337 440,540 353,566" fill="#e1efed"/><polygon points="805,174 1137,198 1120,407 779,375" fill="#e1efed"/><g transform="translate(319 376) rotate(-18)"><rect width="40" height="32" rx="4" fill="#1b365d"/><path d="M3 4 L20 19 L37 4" fill="none" stroke="#e6c65c" stroke-width="3"/></g><g transform="translate(812 215) rotate(5)"><text fill="#1b365d" font-size="24">Known contact</text><rect y="24" width="260" height="44" rx="5" fill="#c4d8de"/><text x="12" y="53" fill="#1b365d" font-size="21">Community desk</text><text y="107" fill="#1b365d" font-size="21">Verify independently</text></g></svg></div>'
+ if photo:
+  # Full landscape context first, then an unobstructed authored demonstration.
+  events.insert(0,f'tl.set("#{cid} .graphic-stage",{{opacity:0}},0);')
+  events.append(f'tl.to("#{cid} .photo-window",{{opacity:0,duration:.5}},{min(7,b["audioDuration"]*.16)});')
+  events.append(f'tl.to("#{cid} .graphic-stage",{{opacity:1,duration:.5}},{min(7,b["audioDuration"]*.16)});')
  css=CSS
+ css+=' .graphic-stage{opacity:'+('0' if photo else '1')+'}'
+ css+=' .main-example,.detail-example{position:absolute;inset:0}.graphic-stage{top:160px;height:445px}.video-note{bottom:92px;font-size:25px}.video-brand{bottom:20px;font-size:21px}.video-title{font-size:40px;top:34px}.video-brand img{width:36px;height:36px}'
+ css+=' .gold-divider{left:40px;top:131px;width:1200px;height:3px}.video-title{left:52px;max-width:1160px;background:#102c4b;padding:5px 12px}.graphic-stage{left:105px;width:1070px;top:156px;height:445px}.video-note{left:105px;max-width:1070px;background:#102c4b;padding:5px 12px}.video-brand{left:52px}.photo-window{width:1280px;height:720px;inset:0}.topic-photo{width:100%;height:100%;object-fit:contain}.topic-photo text{font-family:VUB}.video-brand{background:#102c4b;padding:4px 8px}'
  for variant in ["layout-wide","layout-finale"]:
   css=re.sub(r"\."+variant+r" ([^{}]+)\{([^{}]+)\}", lambda m: m[1]+"{"+m[2]+"}" if variant==layout else "", css)
- return f'''<template><div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{b['window']}" data-width="1280" data-height="720" style="position:relative;width:100%;height:100%;overflow:hidden"><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}#{cid}{{font-family:VUB}}{css}</style><div class="canvas-ground"></div><div class="photo-window"><img class="topic-photo" src="assets/topic.webp" alt=""></div><div class="photo-shade"></div><div class="gold-divider"></div><h1 class="video-title">{E(b["title"])}</h1><div class="graphic-stage">{content}</div><p class="video-note">{E(note)}</p><div class="video-brand"><img src="assets/vub-seal.png" alt="">VUB Learning</div><script>const tl=gsap.timeline({{paused:true}});tl.fromTo("#{cid} .graphic-stage",{{opacity:1,y:10}},{{opacity:1,y:0,duration:.7,ease:"power2.out"}},0);{''.join(events)}window.__timelines["{cid}"]=tl;</script></div></template>'''
+ return f'''<template><div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{b['window']}" data-width="1280" data-height="720" style="position:relative;width:100%;height:100%;overflow:hidden"><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}#{cid}{{font-family:VUB}}{css}</style><div class="canvas-ground"></div>{photohtml}<div class="gold-divider"></div><h1 class="video-title">{E(b["title"])}</h1><div class="graphic-stage">{content}</div><p class="video-note">{E(note)}</p><div class="video-brand"><img src="assets/vub-seal.png" alt="">VUB Learning</div><script>const tl=gsap.timeline({{paused:true}});tl.fromTo("#{cid} .graphic-stage",{{y:10}},{{y:0,duration:.7,ease:"power2.out"}},0);{''.join(events)}window.__timelines["{cid}"]=tl;</script></div></template>'''

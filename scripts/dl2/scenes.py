@@ -1,5 +1,6 @@
 """Topic-specific illustrated teaching scenes. All examples are fictional and local."""
 import html
+import photo_scenes
 E=lambda s:html.escape(str(s),quote=True)
 # Each choice changes the worked example; explanatory prose remains in the source slide.
 # label, artifact headline, artifact content, teaching consequence
@@ -13,7 +14,7 @@ SCENES={
 (1,11):('printer','Choose for the print job',[
  ('Laser','Toner-based printing','Document → toner → printed page','Compare the running cost and task, not just the purchase price.'),('Inkjet','Liquid-ink printing','Document → ink → printed page','Check the type of output you need and the cost of replacement ink.'),('Default','Which printer is selected?','Print destination: Training room','Default means the app initially selects it. Check before sending.')]),
 (1,13):('calendar','Build a usable event',[
- ('When','Library visit','Monday · 10:00–11:00','Include the day and both start and end times.'),('Where','Library visit','Community library · learning desk','A useful location tells you where to go.'),('Reminder','Library visit','Reminder: 30 minutes before','Choose a reminder you will notice. Check time zones for another region.')]),
+ ('When','Library practice','Monday · 2:00–3:00 p.m.','Include the day and both start and end times.'),('Where','Library practice','Room A','A useful location tells you where to go.'),('Reminder','Library practice','Reminder: 30 minutes before','Choose a reminder you will notice. Check time zones for another region.')]),
 (1,16):('automation','Inspect the automatic result',[
  ('Autocorrect','A change was made','Typed wording → changed wording','Check names and meaning before keeping the correction.'),('Autocomplete','A suggestion is offered','Typed beginning → suggested ending','You decide whether the suggestion matches what you meant.'),('Rule','A repeated action','Matching mail → chosen folder','Test a rule with one item and check that it went to the right place.')]),
 (1,17):('network','Follow a cloud save',[
@@ -147,9 +148,11 @@ def concept(n,i):
  if (n,i) not in SCENES:return ''
  kind,title,choices=SCENES[n,i]
  buttons=''.join(f'<button type="button" data-scene-choice="{j}" aria-pressed="{str(j==0).lower()}">{E(x[0])}</button>' for j,x in enumerate(choices))
- panels=''.join(f'<div class="scene-state" data-scene-state="{j}" {"hidden" if j else ""}><div class="scene-artifact">{icon(kind)}<h4>{E(x[1])}</h4><div class="artifact-content">{artifact(kind,x[2],j)}</div></div><p class="scene-consequence">{E(x[3])}</p></div>' for j,x in enumerate(choices))
- image={1:'workstation',2:'research',3:'creation',4:'collaboration',5:'security',6:'building'}[n]
- return f'<div class="topic-scene scene-{kind}" data-topic-scene><h3>{E(title)}</h3><div class="scene-choices" role="group" aria-label="Explore this example">{buttons}</div><div class="scene-body"><img class="scene-illustration" src="/courses/digital-literacy-2/assets/illustrations/slide-{image}.webp" alt="" width="1536" height="1024" loading="lazy"><div class="scene-stage" aria-live="polite">{panels}</div></div><span class="scene-label">Illustrative example · select a choice to explore</span></div>'
+ panels=''.join(f'<div class="scene-state" data-scene-state="{j}" {"hidden" if j else ""}><div class="scene-artifact">{icon(kind)}<h4>{E(x[1])}</h4><div class="artifact-content">{photo_scenes.artifact(n,i,j) or artifact(kind,x[2],j)}</div></div><p class="scene-consequence">{E(x[3])}</p></div>' for j,x in enumerate(choices))
+
+ context=photo_scenes.comfort_hotspots() if (n,i)==(5,3) else ''
+ if (n,i)==(5,3): buttons=''
+ return f'<div class="topic-scene scene-{kind}" data-topic-scene><h3>{E(title)}</h3>{context}<div class="scene-choices" role="group" aria-label="Explore this example">{buttons}</div><div class="scene-body authored-body"><div class="scene-stage" aria-live="polite">{panels}</div></div><span class="scene-label">Illustrative example · select a choice to explore</span></div>'
 
 def chart():
  return '''<div class="topic-scene chart-lab" data-chart-lab><h3>Which supply costs the most?</h3><div class="scene-choices"><button type="button" data-chart="cost" aria-pressed="true">Compare costs</button><button type="button" data-chart="sorted" aria-pressed="false">Lowest cost first</button><button type="button" data-chart="changed" aria-pressed="false">Paper becomes $15</button></div><figure><figcaption>Fictional supply costs ($)</figcaption><div class="bar-chart" role="img" aria-label="Paper 12 dollars, Folders 8 dollars, Pens 5 dollars"><div class="bar-row" data-item="Paper"><strong>Paper</strong><div class="bar-track"><span style="width:80%"></span></div><b>$12</b></div><div class="bar-row" data-item="Folders"><strong>Folders</strong><div class="bar-track"><span style="width:53.33%"></span></div><b>$8</b></div><div class="bar-row" data-item="Pens"><strong>Pens</strong><div class="bar-track"><span style="width:33.33%"></span></div><b>$5</b></div></div></figure><p data-chart-insight role="status">Paper costs the most: $12. Compare bar lengths from the same zero baseline.</p><table class="chart-data"><caption>The same information as a data table</caption><thead><tr><th scope="col">Item</th><th scope="col">Cost ($)</th></tr></thead><tbody><tr><th scope="row">Paper</th><td data-chart-paper>12</td></tr><tr><th scope="row">Folders</th><td>8</td></tr><tr><th scope="row">Pens</th><td>5</td></tr></tbody></table></div>'''
@@ -163,9 +166,5 @@ def trim():
 def feature(n,i):
  return {(3,11):chart,(3,13):crop,(3,14):trim}.get((n,i),lambda:concept(n,i))()
 
-def supporting(s,n):
- """Illustrated discussion, activity and reflection surfaces without duplicated lesson copy."""
- kind=s['kind'];image={1:'workstation',2:'research',3:'creation',4:'collaboration',5:'security',6:'building'}[n]
- if kind in ['discussion','lab','summary','complete','assessment']:
-  return f'<div class="slide-topic-art"><img src="/courses/digital-literacy-2/assets/illustrations/slide-{image}.webp" alt="" width="1536" height="1024" loading="lazy"></div>'
- return ''
+def supporting(s,n,i):
+ return photo_scenes.supporting(s,n,i)

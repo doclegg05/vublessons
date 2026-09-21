@@ -1,0 +1,347 @@
+{
+  "provider": "ElevenLabs hosted MCP",
+  "model": "Google Nano Banana Pro",
+  "flow_id": "kgp7HEMtlFq6PuHVBNAI",
+  "estimated_new_generation_cost_usd": 4.019598,
+  "estimated_new_generation_credits": 24361.2,
+  "assets": [
+    {
+      "name": "workstation",
+      "source_file": "docs/digital-literacy-2/review/photo-refresh/originals/workstation.png",
+      "generation_id": "TgUALWRsL6cVAQ0Y3b8C",
+      "model_id": "gemini-3-pro-image",
+      "prompt": "Create a photorealistic editorial photograph for an adult digital-literacy lesson. A believable modest home workstation used by an older adult: ordinary computer monitor, full-size keyboard and mouse, comfortable over-ear headset neatly beside the monitor, compact home printer with a single sheet emerging, and a small notebook. A tidy but lived-in wooden desk beside a window, subtle signs of everyday use, realistic cables and physically plausible equipment. Monitor displays a simple fictional browser article with generous text scaling, with no legible words or logos. Soft natural window light, realistic neutral colors, restrained navy accents only where natural, authentic materials, documentary photography, eye-level three-quarter composition, deep enough focus to recognize the tools. Landscape 3:2 composition with generous margins. No people, no branding, no watermarks. This must look like a real photograph, not a 3D render, miniature, toy, illustration, or luxury showroom.",
+      "width": 1376,
+      "height": 768,
+      "price": {
+        "credits": 1218.0600000000002,
+        "price_cents": 20.097990000000003,
+        "cost_fiat_currency": "usd"
+      },
+      "source_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=TgUALWRsL6cVAQ0Y3b8C",
+      "settings": [
+        {
+          "label": "Aspect ratio",
+          "value": "16:9"
+        },
+        {
+          "label": "Resolution",
+          "value": "1K"
+        }
+      ],
+      "selection_variant": 1,
+      "path": "courses/digital-literacy-2/assets/photos/workstation.webp",
+      "public_url": "/courses/digital-literacy-2/assets/photos/workstation.webp",
+      "source_sha256": "3c672cfb1a51b8d327a9b55b41d4b9e4cd2ee9eddf989de66ff7e0b3e086cce2",
+      "sha256": "dad576d7f1e045bd982a0c8950860754fec6596d62e917c8bbfa43800fdcba4c",
+      "bytes": 114762,
+      "alt": "Everyday workstation with printer, keyboard and headset.",
+      "review_note": "Corrected candidate ID after visual review: prior UI fourth maps to first returned media entry. Neutral browser screen; do not use tiny browser chrome as instruction.",
+      "reviewed_at_source_resolution": true,
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preferred_layout": "full landscape photo; preserve all subjects/devices; authored UI outside photo"
+    },
+    {
+      "name": "library",
+      "source_file": "docs/digital-literacy-2/review/photo-refresh/originals/library.png",
+      "generation_id": "2nVchgpaG5WQhTGJ43Hb",
+      "model_id": "gemini-3-pro-image",
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Show a capable older woman and a peer helper at equal eye level at a modest fictional community-library computer-help desk. Laptop with screen oblique and neutral, notebook and bookshelf nearby, subtle wooded Appalachian hills through a window. Calm collaborative interaction, hands resting naturally, readable faces and laptop as focal points; avoid posed handshakes.",
+      "width": 1376,
+      "height": 768,
+      "price": {
+        "credits": 1218.0600000000002,
+        "price_cents": 20.097990000000003,
+        "cost_fiat_currency": "usd"
+      },
+      "source_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=2nVchgpaG5WQhTGJ43Hb",
+      "settings": [
+        {
+          "label": "Aspect ratio",
+          "value": "16:9"
+        },
+        {
+          "label": "Resolution",
+          "value": "1K"
+        }
+      ],
+      "selection_variant": 1,
+      "path": "courses/digital-literacy-2/assets/photos/library.webp",
+      "public_url": "/courses/digital-literacy-2/assets/photos/library.webp",
+      "source_sha256": "e185b4a58d3c9cfb9b7cd753807a233dda609e6a21984ace11d5f75d157e1ea1",
+      "sha256": "6c9b236c943b8717e8932e536dca12288162e2a0c16a8b259a9ae1180186b81e",
+      "bytes": 155116,
+      "alt": "Two older adults exploring computer help together in a fictional West Virginia library.",
+      "review_note": "Chosen for equal participation, natural faces and unobtrusive screen. Tiny back-panel mark is not instructional branding.",
+      "reviewed_at_source_resolution": true,
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preferred_layout": "full landscape photo; preserve all subjects/devices; authored UI outside photo"
+    },
+    {
+      "name": "resource-pack",
+      "source_file": "docs/digital-literacy-2/review/photo-refresh/originals/resource-pack.png",
+      "generation_id": "O9Y3Ri6r5zJ0q8NEpHFB",
+      "model_id": "gemini-3-pro-image",
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Show two older adult learners, an older Black man and an older white woman, jointly reviewing a fictional community-help resource pack at an ordinary library table. One laptop viewed from behind, three loose blank paper drafts, a folder, pens and notebook. They discuss the paper calmly as equal contributors, not teacher correcting pupil. Wooded hills softly visible through a distant window. Paper is blank or softly unfocused, hands naturally resting.",
+      "width": 1376,
+      "height": 768,
+      "price": {
+        "credits": 1218.0600000000002,
+        "price_cents": 20.097990000000003,
+        "cost_fiat_currency": "usd"
+      },
+      "source_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=O9Y3Ri6r5zJ0q8NEpHFB",
+      "settings": [
+        {
+          "label": "Aspect ratio",
+          "value": "16:9"
+        },
+        {
+          "label": "Resolution",
+          "value": "1K"
+        }
+      ],
+      "selection_variant": 2,
+      "path": "courses/digital-literacy-2/assets/photos/resource-pack.webp",
+      "public_url": "/courses/digital-literacy-2/assets/photos/resource-pack.webp",
+      "source_sha256": "cc7e45e37f730ead6b53624f89c8adad13ddb88f74b349628942cd922a21ba00",
+      "sha256": "be8c59b625f55d936665978a9c22f8af67e0f4c3125a22cd48f2a229de8d5502",
+      "bytes": 110638,
+      "alt": "Two older adults comparing paper drafts beside a laptop in a fictional community library.",
+      "review_note": "Chosen for clear joint-review action and visible paper; no critical text is carried by photo.",
+      "reviewed_at_source_resolution": true,
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preferred_layout": "full landscape photo; preserve all subjects/devices; authored UI outside photo"
+    },
+    {
+      "name": "collaboration",
+      "source_file": "docs/digital-literacy-2/review/photo-refresh/originals/collaboration.png",
+      "generation_id": "u4qFMUyYIX8AaINCZhk1",
+      "model_id": "gemini-3-pro-image",
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Show three older adults of varied backgrounds planning a small volunteer computer-help session together around one laptop and paper notes in a modest accessible fictional West Virginia community room. Equal participation, relaxed focused expressions, a few simple chairs, window with subtle Appalachian hills. Laptop viewed from the back; paper notes blank/unreadable. Keep faces and three seated bodies complete, hands resting simply. Focus on joint planning, not a corporate pose.",
+      "width": 1376,
+      "height": 768,
+      "price": {
+        "credits": 1218.0600000000002,
+        "price_cents": 20.097990000000003,
+        "cost_fiat_currency": "usd"
+      },
+      "source_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=u4qFMUyYIX8AaINCZhk1",
+      "settings": [
+        {
+          "label": "Aspect ratio",
+          "value": "16:9"
+        },
+        {
+          "label": "Resolution",
+          "value": "1K"
+        }
+      ],
+      "selection_variant": 4,
+      "path": "courses/digital-literacy-2/assets/photos/collaboration.webp",
+      "public_url": "/courses/digital-literacy-2/assets/photos/collaboration.webp",
+      "source_sha256": "5989aae45ab5dd41c86078e4afb6635ecbf8fe5b71017bbb4bd6c3fca89b784f",
+      "sha256": "2d0db0127e62c64955c8c239842236dcd299595bc5cb7c527dce89887d40a483",
+      "bytes": 114000,
+      "alt": "Three older adults planning together around a laptop in a fictional West Virginia community room.",
+      "review_note": "Chosen for clear group participation and cleaner room. Tiny clothing marks remain incidental generated artifacts; do not crop them as content or imply endorsement.",
+      "reviewed_at_source_resolution": true,
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preferred_layout": "full landscape photo; preserve all subjects/devices; authored UI outside photo"
+    },
+    {
+      "name": "usb",
+      "source_file": "docs/digital-literacy-2/review/photo-refresh/originals/usb.png",
+      "generation_id": "IJFWY5t5ROLPSpiuc8yP",
+      "model_id": "gemini-3-pro-image",
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Close-up still life of one ordinary unbranded USB-A flash drive resting disconnected on a clean worn wooden learning-lab desk. Laptop edge remains far in background and every port is visibly separate from the drive. USB connector must be geometrically plausible; no cables, hands, inserted drive or glow. Simple generous negative space, reassuring neutral light; tiny wooded-hill window bokeh can suggest a West Virginia classroom without distracting.",
+      "width": 1376,
+      "height": 768,
+      "price": {
+        "credits": 1218.0600000000002,
+        "price_cents": 20.097990000000003,
+        "cost_fiat_currency": "usd"
+      },
+      "source_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=IJFWY5t5ROLPSpiuc8yP",
+      "settings": [
+        {
+          "label": "Aspect ratio",
+          "value": "16:9"
+        },
+        {
+          "label": "Resolution",
+          "value": "1K"
+        }
+      ],
+      "selection_variant": 2,
+      "path": "courses/digital-literacy-2/assets/photos/usb.webp",
+      "public_url": "/courses/digital-literacy-2/assets/photos/usb.webp",
+      "source_sha256": "fd5726bd9d383a1b9ac0d26135f4ce50e2e562b5ac0acafd8fe4e986c11b94d2",
+      "sha256": "be0565e15872dac046d1a1bb1dbfddf1193d353d236722fdfac483f3853a32df",
+      "bytes": 77768,
+      "alt": "An unconnected USB flash drive lying separately from a laptop.",
+      "review_note": "Connector visibly disconnected; photograph is contextual, not a connector pinout reference.",
+      "reviewed_at_source_resolution": true,
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preferred_layout": "full landscape photo; preserve all subjects/devices; authored UI outside photo"
+    },
+    {
+      "name": "app-planning",
+      "source_file": "docs/digital-literacy-2/review/photo-refresh/originals/app-planning.png",
+      "generation_id": "Dwl4fyVw3guRO8TkFYpo",
+      "model_id": "gemini-3-pro-image",
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. A quiet community app-planning desk in a modest fictional West Virginia home or library room. Ordinary laptop angled away with a neutral blank screen, open blank notebook, pencil, several blank index cards arranged as a simple planning layout. Window looks toward a modest Appalachian town and wooded hills, not dramatic tourism scenery. No people, visible code, graphs, written labels or branding. The physical planning objects are the focal point; everyday wood and soft window light.",
+      "width": 1376,
+      "height": 768,
+      "price": {
+        "credits": 1218.0600000000002,
+        "price_cents": 20.097990000000003,
+        "cost_fiat_currency": "usd"
+      },
+      "source_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=Dwl4fyVw3guRO8TkFYpo",
+      "settings": [
+        {
+          "label": "Aspect ratio",
+          "value": "16:9"
+        },
+        {
+          "label": "Resolution",
+          "value": "1K"
+        }
+      ],
+      "selection_variant": 1,
+      "path": "courses/digital-literacy-2/assets/photos/app-planning.webp",
+      "public_url": "/courses/digital-literacy-2/assets/photos/app-planning.webp",
+      "source_sha256": "44cd004e1fc20d77dafc31d21f56e494438f56db26f2f9590d78144d010b47fe",
+      "sha256": "676580f7bed6fccba539bacd48fead537faf700d30478e8e4b7fabfb91e90055",
+      "bytes": 92462,
+      "alt": "Blank planning cards and notebook beside a laptop overlooking a fictional Appalachian town.",
+      "review_note": "Chosen for blank screen/cards and recognizable regional setting; no actual institution/location claim.",
+      "reviewed_at_source_resolution": true,
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preferred_layout": "full landscape photo; preserve all subjects/devices; authored UI outside photo"
+    },
+    {
+      "name": "safety",
+      "source_file": "docs/digital-literacy-2/review/photo-refresh/originals/safety.png",
+      "generation_id": "Zh1SQTQhO4IMfz9ZX7BC",
+      "model_id": "gemini-3-pro-image",
+      "prompt": "Create a photorealistic editorial photograph for an adult digital-literacy lesson about independently checking an unexpected message. Over-the-shoulder view of an older adult seated at an ordinary home desk, with their face mostly outside the frame. A smartphone resting securely on a stand shows one fictional incoming message represented by a small envelope icon and indistinct short text lines; beside it an open laptop shows a separately opened fictional contact directory with simple contact rows and phone icons. A handwritten contact notebook is nearby but all writing is out of focus and unreadable. The person is calmly comparing the two devices, with one naturally posed hand resting beside the laptop. Show ordinary lived-in surroundings, plausible anatomy and device proportions, soft daylight, natural neutral colors, authentic texture and documentary photographic realism. Landscape 3:2, close enough to understand the relationship between devices, generous margins. No real personal information, legible text, logos, military insignia, padlocks, shields, danger overlays, watermarks, or dramatic hacker imagery. A real-life photograph look, not a 3D render or illustration.",
+      "width": 1376,
+      "height": 768,
+      "price": {
+        "credits": 1218.0600000000002,
+        "price_cents": 20.097990000000003,
+        "cost_fiat_currency": "usd"
+      },
+      "source_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=Zh1SQTQhO4IMfz9ZX7BC",
+      "settings": [
+        {
+          "label": "Aspect ratio",
+          "value": "16:9"
+        },
+        {
+          "label": "Resolution",
+          "value": "1K"
+        }
+      ],
+      "selection_variant": 3,
+      "path": "courses/digital-literacy-2/assets/photos/safety.webp",
+      "public_url": "/courses/digital-literacy-2/assets/photos/safety.webp",
+      "source_sha256": "f06d96485a2992103b3606126c1efba8a3b780f4dd312e8efd71d29ca6315101",
+      "sha256": "140df1d85fa0125fcc8c234c87ad64c47f6dfd50a233e25df3738944dcf589f2",
+      "bytes": 120568,
+      "alt": "Older adult comparing a phone message with a laptop contact directory.",
+      "review_note": "Raw photo phone contains generated gibberish. Consumers MUST mask phone message and laptop content with authored fictional UI; this source photo alone is not final learner-ready.",
+      "reviewed_at_source_resolution": true,
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preferred_layout": "full landscape photo; preserve all subjects/devices; authored UI outside photo",
+      "screen_overlay_polygons_pixels": {
+        "phone": [
+          [
+            284,
+            352
+          ],
+          [
+            365,
+            333
+          ],
+          [
+            446,
+            543
+          ],
+          [
+            350,
+            570
+          ]
+        ],
+        "phone_message": [
+          [
+            304,
+            419
+          ],
+          [
+            394,
+            394
+          ],
+          [
+            426,
+            484
+          ],
+          [
+            333,
+            512
+          ]
+        ],
+        "laptop": [
+          [
+            790,
+            162
+          ],
+          [
+            1138,
+            188
+          ],
+          [
+            1112,
+            412
+          ],
+          [
+            766,
+            373
+          ]
+        ]
+      },
+      "requires_authored_screen_overlay": true
+    }
+  ],
+  "source_policy": "Synthetic photographic scenarios; not actual VUB learners or real named institutions. Preserve captions/alt semantics. No API credentials or signed download URLs retained.",
+  "dimensions_note": "All selected source/output images1376x768; use exact aspect ratio for screen overlays.",
+  "workstation_selection_correction": {
+    "previous_supplied_id": "aTbvInE3270SWjvHp8Xf",
+    "actual_visual_choice_id": "TgUALWRsL6cVAQ0Y3b8C",
+    "reason": "Matched requested cleaner monitor-center/printer-left image by inspecting all four originals; prior UI ordering differed from returned media order."
+  },
+  "new_generation_receipts": "docs/digital-literacy-2/review/photo-refresh/generation-receipts.json"
+}

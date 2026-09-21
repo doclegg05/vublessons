@@ -6,8 +6,8 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | --- | --- |
 | Repository quality gate | PASS, including build, links, catalog, Playwright, accessibility ratchet and readability report |
 | Site build | 193 HTML pages; four courses and 24 catalog lessons |
-| Internal links | 1,403 references checked; zero broken |
-| Browser tests | 75 passed in Chromium, including chapter navigation and enlarged mobile video controls |
+| Internal links | 1,352 references checked; zero broken |
+| Browser tests | 78 passed in Chromium, including chapter navigation and enlarged mobile video controls |
 | New course accessibility scans | Zero axe WCAG 2.1 A/AA violations on the six tested DL2 routes |
 | Workshop state accessibility | Zero axe WCAG A/AA violations across 12 initial/changed states on six representative models |
 | Existing platform accessibility ratchet | No violations beyond the committed baseline; the baseline was not expanded |
@@ -16,11 +16,15 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | Sandra narration pacing | 60 final cleaned V3 takes passed, zero flagged; four flagged candidates replaced |
 | Sandra draft-audio guard | Six projects passed; no draft audio or hash warnings |
 | Sandra audio/video sync | Six projects; zero failures, 44 house-pace warnings (130–176 WPM natural V3 delivery); no caption drift, cut crossing or dead-air warnings |
-| HyperFrames strict source checks | All six passed lint, runtime, layout and contrast checks; 224 text contrast checks altogether |
-| Final video delivery | Six H.264/AAC 1280×720 24fps MP4s, 81.97 MiB total; complete decode passed, no black intervals, non-silent audio, fast-start containers |
+| HyperFrames strict source checks | All six passed lint, runtime, layout and contrast checks; 247 text contrast checks altogether |
+| Final video delivery | Six H.264/AAC 1280×720 24fps MP4s, 79.62 MiB total; complete decode passed, no black intervals, non-silent audio, fast-start containers |
 | Captions | Timed against final audio; complete caption text matches every original script in order |
 | Secret scan | Gitleaks staged-change scan passed with no leaks |
 | Readability report | All six new decks below the grade-8 ceiling; report-only metric, not a teaching effectiveness claim |
+
+## West Virginia photographic revision
+
+All 137 slides and 60 video chapters have explicit change/keep mappings in `PHOTOGRAPHIC-VISUAL-PLAN.md` and its linked audits. Seven optimized photos establish relatable home/library/community scenarios; authored diagrams and fictional interfaces teach the steps. Sixty source narration WAV hashes remain unchanged. The six final videos use HyperFrames 0.8.58. Final exported frames were reviewed across all chapters; the photo-to-diagram overlap discovered during review was corrected and re-exported. Automated audio checks do not establish subjective voice quality.
 
 ## Browser coverage
 
@@ -32,7 +36,7 @@ Both assessments are tested for required answers, 100% scoring, partial scoring 
 
 ## Visual and PDF review
 
-Desktop/mobile course, lesson, knowledge-check and results captures are under `review/`. Printed syllabus and results were rendered to images and inspected for legibility and page breaks; the generated syllabus has three pages and the representative full graded results have eight. The week 3 print proof includes 24pt knowledge-check answers. Current video contact sheets show all ten chapters in each final MP4 under `review/video-teaching/`. Earlier five-scene captures remain as historical evidence.
+Desktop/mobile course, lesson, knowledge-check and results captures are under `review/`. Printed syllabus and results were rendered to images and inspected for legibility and page breaks; the generated syllabus has three pages and the representative full graded results have eight. The week 3 print proof includes 24pt knowledge-check answers. Current video contact sheets show all ten chapters in each final MP4 under `review/video-photographic/`. Earlier five-scene captures remain as historical evidence.
 
 A fresh generic subagent applied the Impeccable finish-review contract independently. The redesigned course retains the VUB brand and used a lighter sidebar in the preceding iteration, task-first openings, interactive models at 27 teaching points and varied discussion/check/completion treatments. Desktop/mobile initial and changed states are in `review/redesign/`; `scripts/dl2/capture-workshops.cjs` reproduces those captures.
 

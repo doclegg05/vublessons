@@ -1,5 +1,13 @@
 # Digital Literacy Level 2 course
 
+## Photographic teaching revision
+
+The approved September visual refinement is mapped in `PHOTOGRAPHIC-VISUAL-PLAN.md` and its three linked slide/chapter audits. It uses fictional West Virginia community/home scenes, original instructional interfaces, and the existing Britt narration. Selected photographs and generation provenance are recorded in `photo-assets.json`; originals and contact sheets are in `review/photo-refresh/`.
+
+`scripts/dl2/photo_scenes.py` now controls explicit slide-photo placements, authored artifacts and additional local practice views. Photos establish the scenario; procedural scenes prioritize readable controls and visible outcomes. The safety-photo screen replacements are authored SVG overlays registered to the original image dimensions. Keep them aligned if resizing or changing that image.
+
+Video `CHAPTERS` in `video-scenes.py` maps every chapter to a scene and optional scenario photo. `python3 scripts/dl2/build-media.py --visual-only` rebuilds compositions while preserving audio/caption metadata; do not run `author-media.py` for this visual-only path. The production CLI pin advanced from HyperFrames 0.8.48 to 0.8.58 and passed strict source validation. Use the current production pin for subsequent exports. See `VALIDATION.md` for the actual delivery-verification status rather than inferring it from source generation.
+
 The fourth VUB Learning course teaches IC3 GS6 Level 2 across five two-hour sessions, followed by a two-hour web app building extension. The cohort calendar appears only in `courses/digital-literacy-2/syllabus.html`; presentations and resources can be reused.
 
 ## Entry points
@@ -42,7 +50,7 @@ python3 scripts/dl2/author-assessments.py
 python3 scripts/dl2/build-pages.py
 ```
 
-Video scripts live in `video/digital-literacy-2/teaching-scripts/`; `author-media.py` imports them. Visual compositions are authored in `video-scenes.py`, and interactive lesson models in `workshops.py`. Production source, narration, provenance, word alignments, captions and scene HTML are under `video/digital-literacy-2/`. Install that directory's pinned Python requirements into an isolated venv and run `npm ci --prefix video/digital-literacy-2/production` for local GSAP. FFmpeg/FFprobe and HyperFrames 0.8.48 are media-authoring dependencies.
+Video scripts live in `video/digital-literacy-2/teaching-scripts/`; `author-media.py` imports them. Visual compositions are authored in `video-scenes.py`, and interactive lesson models in `workshops.py`. Production source, narration, provenance, word alignments, captions and scene HTML are under `video/digital-literacy-2/`. Install that directory's pinned Python requirements into an isolated venv and run `npm ci --prefix video/digital-literacy-2/production` for local GSAP. FFmpeg/FFprobe and HyperFrames 0.8.58 are media-authoring dependencies.
 
 Generate matching takes using the Desktop workflow in **Expanded teaching-video rebuild** below. Keep delivery tags in `prompt.txt`, not learner captions. The pacing step measures the natural take and allocates a 0.45-second scene lead-in plus 1.1-second closing hold (2 seconds for the final practice chapter). Source MP3s and WAVs are local working assets excluded from Git; delivered MP4s, receipts and hashes are tracked. Preserve source audio locally to rebuild without another generation.
 
@@ -56,8 +64,8 @@ python scripts/dl2/align-captions.py
 python3 scripts/dl2/build-media.py
 python3 scripts/dl2/build-pages.py
 # For each week-01 through week-06:
-npx hyperframes@0.8.48 check video/digital-literacy-2/week-01 --strict --contrast --json
-npx hyperframes@0.8.48 render video/digital-literacy-2/week-01 --output courses/digital-literacy-2/media/week-01.mp4 --fps 24 --quality delivery --workers 2 --crf 24
+npx hyperframes@0.8.58 check video/digital-literacy-2/week-01 --strict --contrast --json
+npx hyperframes@0.8.58 render video/digital-literacy-2/week-01 --output courses/digital-literacy-2/media/week-01.mp4 --fps 24 --quality delivery --workers 2 --crf 24
 python3 scripts/dl2/verify-media.py
 scripts/quality.sh
 ```

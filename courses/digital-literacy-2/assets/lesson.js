@@ -49,6 +49,13 @@
   const permission=document.querySelector('#permission');
   permission?.addEventListener('change',()=>{document.querySelector('#permission-result').textContent={viewer:'Viewer: Alex can read this fictional file. They cannot edit it.',commenter:'Commenter: Alex can suggest clearer wording. You decide which edits to make.',editor:'Editor: Alex can change the fictional file. Use this only for coauthoring.'}[permission.value]||'Choose a permission.';});
   const paper=document.querySelector('#paper-cost');
-  paper?.addEventListener('input',()=>{const n=Number(paper.value);document.querySelector('#budget-total').textContent=paper.value!==''&&Number.isFinite(n)&&n>=0?`Total: $${(n+8+5).toFixed(2)}`:'Enter a nonnegative paper cost.';});
+  const updateBudget=()=>{
+    const n=Number(paper.value);const valid=paper.value!==''&&Number.isFinite(n)&&n>=0;
+    const total=valid?(n+8+5).toFixed(2):null;
+    document.querySelector('#budget-total').textContent=valid?`Total: $${total}`:'Enter a nonnegative paper cost.';
+    document.querySelectorAll('[data-budget-paper]').forEach(cell=>{cell.textContent=valid?n.toFixed(2):'—';});
+    document.querySelectorAll('[data-budget-sum]').forEach(cell=>{cell.textContent=valid?total:'—';});
+  };
+  if(paper){paper.addEventListener('input',updateBudget);updateBudget();}
   document.querySelectorAll('[data-week-status]').forEach(el=>{const p=window.VubProgress?.get('dl2',el.dataset.weekStatus);el.textContent=p?.completed?'Lesson viewed to the end':p?`Resume at slide ${p.slide+1}`:'Ready to begin';});
 })();

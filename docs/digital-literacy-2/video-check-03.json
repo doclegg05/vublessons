@@ -63,8 +63,8 @@
       321.1,
       419.9
     ],
-    "checked": 53,
-    "passed": 53
+    "checked": 56,
+    "passed": 56
   },
   "hdr": {
     "autoPromotion": null,
@@ -77,8 +77,8 @@
     "findingFiles": []
   },
   "_meta": {
-    "version": "0.8.48",
-    "latestVersion": "0.8.48",
+    "version": "0.8.58",
+    "latestVersion": "0.8.58",
     "updateAvailable": false
   }
 }

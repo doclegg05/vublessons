@@ -3,6 +3,7 @@ import json,html,base64
 from workshops import for_slide,workshop
 import learning
 import scenes as slide_scenes
+import photo_scenes
 from pathlib import Path
 ROOT=Path('courses/digital-literacy-2'); BASE='/courses/digital-literacy-2'
 C=json.loads(Path('scripts/dl2/curriculum.json').read_text()); W=C['weeks']; Q=json.loads((ROOT/'assets/questions.json').read_text())
@@ -39,7 +40,7 @@ def exercise(s,n,i):
  if k=='steps': return '<ol class="step-list interactive-steps">'+''.join('<li><button type="button" data-step-done aria-pressed="false"><span>'+e(x)+'</span><span class="step-state">Mark practiced</span></button></li>' for x in s['items'])+'</ol>'
  if k=='flip':return '<div class="flip-grid">'+''.join(f'<button class="flip" type="button" aria-expanded="false" aria-label="{e(a)}: reveal explanation"><span class="flip-inner"><span class="flip-front" aria-hidden="false">{e(a)}<span class="flip-hint">Select to reveal</span></span><span class="flip-back" aria-hidden="true">{e(b)}<span class="flip-hint">Select to turn back</span></span></span></button>' for a,b in s['cards'])+'</div>'
  if k=='check':return f'<div class="check-options" data-explanation="{e(s["why"])}">'+''.join(f'<button type="button" aria-pressed="false" data-correct="{str(j==s["answer"]).lower()}">{e(o)}</button>' for j,o in enumerate(s['options']))+'</div><p class="feedback" role="status"></p>'
- if k=='video':return f'<video id="lesson-video" tabindex="0" controls preload="metadata" playsinline aria-label="Week {n} explainer"><source src="{BASE}/media/week-{n:02}.mp4" type="video/mp4"><track kind="captions" src="{BASE}/media/week-{n:02}.vtt" srclang="en" label="English" default></video><p class="video-caption">Captions are available in the player. {link(f"weeks/week-{n:02}/video-transcript.html","Read the full transcript")}.</p>'+chapters(n,"lesson-video")
+ if k=='video':return f'<video {("poster="+chr(34)+photo_scenes.PHOTO_ROOT+photo_scenes.PHOTOS[n][1]+".webp"+chr(34)) if n!=5 else ""} id="lesson-video" tabindex="0" controls preload="metadata" playsinline aria-label="Week {n} explainer"><source src="{BASE}/media/week-{n:02}.mp4" type="video/mp4"><track kind="captions" src="{BASE}/media/week-{n:02}.vtt" srclang="en" label="English" default></video><p class="video-caption">Captions are available in the player. {link(f"weeks/week-{n:02}/video-transcript.html","Read the full transcript")}.</p>'+chapters(n,"lesson-video")
  if k=='lab':return link(f'weeks/week-{n:02}/worksheet.html','Open the activity worksheet','button')
  if k=='assessment':return link(f'assessments/{s["href"]}-test.html','Open the '+s['href']+'-test','button')
  if k=='form':return '<form id="practice-form" class="exercise"><label for="practice-topic">Help topic (required)</label><select id="practice-topic" name="topic" required><option value="">Choose a topic</option><option>Finding a file</option><option>Using a calendar</option></select><label for="practice-method">Practice contact method (required)</label><select id="practice-method" name="method" required><option value="">Choose a method</option><option>Fictional email reply</option><option>Ask at the desk</option></select><div class="actions"><button type="submit">Review practice request</button><button type="reset" class="secondary">Reset practice form</button></div><p id="form-result" class="sim-status" role="status"></p></form>'
@@ -55,15 +56,16 @@ for w in W:
  for i,s in enumerate(slides):
   more=ul(w['objectives']) if s['kind']=='objectives' else exercise(s,n,i)
   if s['kind']=='complete':more='<div class="actions">'+link(f'weeks/week-{n+1:02}/presentation.html','Continue to next week','button')+'</div>' if n<6 else link('index.html','Return to your course','button')
-  demo=for_slide(n,i+1) or slide_scenes.feature(n,i+1)
+  demo=photo_scenes.special(n,i+1) or for_slide(n,i+1) or slide_scenes.feature(n,i+1)
   if s['kind']=='objectives':
-   demo=workshop({1:'zoom',2:'source',3:'sheet',4:'feedback',5:'phishing',6:'app'}[n])
+   demo=photo_scenes.sequence(photo_scenes.EVIDENCE[n]) if n in [1,2] else workshop({3:'sheet',4:'feedback',5:'phishing',6:'app'}[n])
    more='<details class="concept-note"><summary>What you will learn</summary>'+more+'</details>'
   if demo:
-   content=(f'<div class="lesson-welcome-art" aria-hidden="true"></div>' if s['kind']=='objectives' else '')+demo+f'<details class="concept-note"><summary>Read the explanation</summary><p>{e(s["body"])}</p></details>'+more
+   content=('' if (n,i+1)==(5,3) else photo_scenes.photo(n,i+1,compact=s['kind']!='objectives'))+demo+f'<details class="concept-note"><summary>Read the explanation</summary><p>{e(s["body"])}</p></details>'+more
   else:
-   art=slide_scenes.supporting(s,n)
+   art=slide_scenes.supporting(s,n,i+1)
    content=(f'<div class="illustrated-copy">{art}<div><p>{e(s["body"])}</p>{more}</div></div>' if art else f'<p>{e(s["body"])}</p>'+more)
+  content+=photo_scenes.supplement(n,i+1)
   sections+=f'<section class="slide slide-kind-{s["kind"]} {"has-workshop" if demo else ""} {"summary" if s["kind"] in ["summary","complete"] else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2>{content}</section>'
 
  body=f'<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="lesson-sidebar">Show lesson navigation</button><div class="deck-layout"><aside class="sidebar" id="lesson-sidebar" aria-label="Lesson navigation"><h2>Week {n} · Lesson contents</h2><nav aria-label="Slides">{nav}</nav><nav class="resources" aria-label="Week resources">{resources(n)}</nav></aside><main class="deck-main" id="main"><div class="deck-toolbar"><p>Week {n} · {e(w["title"])}</p><button type="button" class="secondary" id="restart">Start from first slide</button></div><progress id="lesson-progress" value="1" max="{len(slides)}" aria-label="Lesson progress"></progress>{sections}<div class="bottom-nav"><button type="button" id="previous">Previous slide</button><span id="slide-counter" role="status"></span><button type="button" id="next">Next slide</button></div><p class="muted small">Use arrow keys, Page Up / Page Down, Home / End outside a control. Swipe horizontally on touch screens. Your slide position is saved in this browser.</p></main></div>'
@@ -83,7 +85,7 @@ for w in W:
  plan+='</tbody></table><h2>Using the chaptered video</h2><p>Use relevant chapters during the demonstration phases, within the existing time allocation. The full video provides approximately seven to eight minutes of instruction; paused practice uses the scheduled lab time. Ask learners to choose a familiar community or household task, predict the result before the demonstration, and explain the evidence afterward. Replay only the chapter needed for a refresher. Do not add the video as extra time on top of the two-hour plan.</p><h2>Facilitation and access</h2><p>Demonstrate slowly, then let learners try. Offer keyboard and mouse paths, captions and the written transcript. Print large copies if needed. Pair a driver and coach, then switch. Provide extra practice time without requiring learners to disclose a disability.</p><h2>Evidence to collect</h2>'+ul(w['lab'])+'<h2>Feedback and differentiation</h2><p>Ask the learner to explain a choice and demonstrate the result. Mark Independent, With prompt, or Needs practice. Re-model only the missing step. For faster learners, ask them to test an edge case or explain an alternative; do not add unrelated tasks.</p><h2>Materials and answers</h2><nav>'+resources(n)+'</nav><h2>Alignment</h2><p>GS6 Level 2 objective groups: '+e(', '.join(w['refs']))+'. The final week is a VUB extension.</p>'
  write(folder+'/lesson-plan.html',doc(f'Week {n} lesson plan: '+w['title'],plan))
  # Transcript is populated from final narration beats by the media builder.
- transcript=f'<p>{e(w["summary"])}</p><video id="transcript-video" tabindex="0" controls preload="metadata" aria-label="Week {n} explainer"><source src="{BASE}/media/week-{n:02}.mp4" type="video/mp4"><track kind="captions" src="{BASE}/media/week-{n:02}.vtt" srclang="en" label="English" default></video>'+chapters(n,"transcript-video")+'<div id="transcript-content">'
+ transcript=f'<p>{e(w["summary"])}</p><video {("poster="+chr(34)+photo_scenes.PHOTO_ROOT+photo_scenes.PHOTOS[n][1]+".webp"+chr(34)) if n!=5 else ""} id="transcript-video" tabindex="0" controls preload="metadata" aria-label="Week {n} explainer"><source src="{BASE}/media/week-{n:02}.mp4" type="video/mp4"><track kind="captions" src="{BASE}/media/week-{n:02}.vtt" srclang="en" label="English" default></video>'+chapters(n,"transcript-video")+'<div id="transcript-content">'
  beats=Path(f'video/digital-literacy-2/week-{n:02}/narration/beats.json')
  if beats.exists():
   for b in json.loads(beats.read_text()):transcript+=f'<section><h2>{e(b["title"])}</h2><p>{e(b["text"])}</p></section>'

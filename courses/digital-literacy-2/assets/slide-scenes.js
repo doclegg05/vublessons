@@ -3,7 +3,7 @@
   'use strict';
   document.querySelectorAll('[data-topic-scene]').forEach(scene => {
     scene.querySelectorAll('[data-scene-choice]').forEach(button => button.addEventListener('click', () => {
-      scene.querySelectorAll('[data-scene-choice]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      scene.querySelectorAll('[data-scene-choice]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.sceneChoice === button.dataset.sceneChoice)));
       scene.querySelectorAll('[data-scene-state]').forEach(panel => { panel.hidden = panel.dataset.sceneState !== button.dataset.sceneChoice; });
     }));
   });

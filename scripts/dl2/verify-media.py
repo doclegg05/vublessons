@@ -43,5 +43,7 @@ for n in range(1,7):
  videos.append(dict(path=str(p),sha256=hashlib.sha256(raw).hexdigest(),durationSeconds=duration,bytes=len(raw),captions=f'courses/digital-literacy-2/media/week-{n:02}.vtt'))
  reports.append(dict(week=n,durationSeconds=duration,fullDecode='pass',blackFrames='none',meanVolumeDb=mean,peakVolumeDb=peak,captionCues=len(ranges),fastStart=True,hyperframesStrict='pass'))
  print(f'Week {n}: delivery decode, picture, audio, captions and strict source checks PASS',flush=True)
-manifest=dict(formatVersion=1,voiceEngine='ElevenLabs eleven_v3, Britt (iKrofGyA12WC0e6AhZ8B); Voice Isolator cleanup; natural delivery, no time stretch; chaptered teaching',renderer='HyperFrames 0.8.48, local GSAP 3.14.2',videos=videos)
+renderer_versions={json.loads(Path(f'docs/digital-literacy-2/video-check-{n:02}.json').read_text())['_meta']['version'] for n in range(1,7)}
+assert len(renderer_versions)==1, 'All delivered videos must use the same verified renderer version'
+manifest=dict(formatVersion=1,voiceEngine='ElevenLabs eleven_v3, Britt (iKrofGyA12WC0e6AhZ8B); Voice Isolator cleanup; natural delivery, no time stretch; chaptered teaching',renderer=f'HyperFrames {next(iter(renderer_versions))}, local GSAP 3.14.2',videos=videos)
 (public/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');Path('docs/digital-literacy-2/media-verification.json').write_text(json.dumps(reports,indent=2)+'\n')
