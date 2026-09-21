@@ -43,47 +43,47 @@ calculations, pictures,
 00:00:40.610 --> 00:00:42.010
 and the final file format.
 
-00:00:43.750 --> 00:00:46.430
+00:00:43.750 --> 00:00:46.430 line:0 position:50% align:center size:95%
 Start the handout with the service and the
 next action.
 
-00:00:46.710 --> 00:00:49.250
+00:00:46.710 --> 00:00:49.250 line:0 position:50% align:center size:95%
 Use a real heading style for the title and
 section
 
-00:00:49.250 --> 00:00:53.090
+00:00:49.250 --> 00:00:53.090 line:0 position:50% align:center size:95%
 headings, followed by short paragraphs or
 a numbered list when
 
-00:00:53.090 --> 00:00:57.790
+00:00:53.090 --> 00:00:57.790 line:0 position:50% align:center size:95%
 order matters. Selecting bold text changes
 appearance, but does
 
-00:00:57.790 --> 00:01:01.610
+00:00:57.790 --> 00:01:01.610 line:0 position:50% align:center size:95%
 not necessarily identify a heading to
 assistive technology or a
 
-00:01:01.610 --> 00:01:07.550
+00:01:01.610 --> 00:01:07.550 line:0 position:50% align:center size:95%
 navigation pane. A numbered sequence might
 say choose a task,
 
-00:01:08.230 --> 00:01:10.990
+00:01:08.230 --> 00:01:10.990 line:0 position:50% align:center size:95%
 visit the learning desk, and ask how to
 repeat the
 
-00:01:10.990 --> 00:01:14.810
+00:01:10.990 --> 00:01:14.810 line:0 position:50% align:center size:95%
 skill at home. Use link text that names
 the destination
 
-00:01:14.810 --> 00:01:18.730
+00:01:14.810 --> 00:01:18.730 line:0 position:50% align:center size:95%
 instead of click here. Read the document
 in order without
 
-00:01:18.730 --> 00:01:22.550
+00:01:18.730 --> 00:01:22.550 line:0 position:50% align:center size:95%
 relying on color or position alone. Does
 it still make
 
-00:01:22.550 --> 00:01:26.050
+00:01:22.550 --> 00:01:26.050 line:0 position:50% align:center size:95%
 sense? That is a useful first
 accessibility check.
 
@@ -174,47 +174,47 @@ correct formula cannot
 00:02:48.573 --> 00:02:50.813
 rescue numbers assigned to the wrong rows.
 
-00:02:52.998 --> 00:02:56.618
+00:02:52.998 --> 00:02:56.618 line:0 position:50% align:center size:95%
 Select a total cell outside the three
 input cells and
 
-00:02:56.618 --> 00:03:02.158
+00:02:56.618 --> 00:03:02.158 line:0 position:50% align:center size:95%
 enter equals SUM, followed by the range B2
 through B4
 
-00:03:02.158 --> 00:03:06.598
+00:03:02.158 --> 00:03:06.598 line:0 position:50% align:center size:95%
 in parentheses. The colon means include
 the cells from the
 
-00:03:06.598 --> 00:03:11.468
+00:03:06.598 --> 00:03:11.468 line:0 position:50% align:center size:95%
 first address through the last. The
 expected total is twenty-five
 
-00:03:11.468 --> 00:03:17.678
+00:03:11.468 --> 00:03:17.678 line:0 position:50% align:center size:95%
 dollars. Now change paper from twelve to
 fifteen. The total
 
-00:03:17.678 --> 00:03:21.318
+00:03:17.678 --> 00:03:21.318 line:0 position:50% align:center size:95%
 should become twenty-eight because the
 formula refers to the cells,
 
-00:03:21.778 --> 00:03:25.418
+00:03:21.778 --> 00:03:25.418 line:0 position:50% align:center size:95%
 not to a permanently typed answer. If it
 stays at
 
-00:03:25.418 --> 00:03:29.838
+00:03:25.418 --> 00:03:29.838 line:0 position:50% align:center size:95%
 twenty-five, inspect the formula and
 range. Did you type the
 
-00:03:29.838 --> 00:03:34.478
+00:03:29.838 --> 00:03:34.478 line:0 position:50% align:center size:95%
 total manually? Did the range omit a cell?
 Pause and
 
-00:03:34.478 --> 00:03:39.398
+00:03:34.478 --> 00:03:39.398 line:0 position:50% align:center size:95%
 predict the result before changing a
 value. Then compare the
 
-00:03:39.398 --> 00:03:42.818
+00:03:39.398 --> 00:03:42.818 line:0 position:50% align:center size:95%
 observed total with your prediction and
 correct any mismatch.
 

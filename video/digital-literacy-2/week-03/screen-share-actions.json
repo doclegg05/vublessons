@@ -1,0 +1,114 @@
+[
+  {
+    "chapter": 2,
+    "title": "Give the document a readable structure",
+    "startSeconds": 43.3,
+    "durationSeconds": 44.089,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 558,
+        "y": 251,
+        "label": "Start with meaningful document structure"
+      },
+      {
+        "at": 3.41,
+        "phrase": "Use a real heading style",
+        "state": 1,
+        "x": 554,
+        "y": 250,
+        "label": "Select the title text"
+      },
+      {
+        "at": 4.69,
+        "phrase": "for the title",
+        "state": 2,
+        "x": 160,
+        "y": 157,
+        "label": "Open Styles \u2192 choose Heading 1"
+      },
+      {
+        "at": 5.61,
+        "phrase": "section headings",
+        "state": 3,
+        "x": 148,
+        "y": 270,
+        "label": "The title now appears in Navigation"
+      },
+      {
+        "at": 29.17,
+        "phrase": "Use link text",
+        "state": 4,
+        "x": 588,
+        "y": 450,
+        "label": "Name the destination in the link text"
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "title": "Build a formula and challenge it",
+    "startSeconds": 172.548,
+    "durationSeconds": 51.868,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 764,
+        "y": 455,
+        "label": "Select B5 \u2022 keep the total outside the input range"
+      },
+      {
+        "at": 4.07,
+        "phrase": "enter equals SUM",
+        "state": 1,
+        "x": 467,
+        "y": 160,
+        "label": "Enter =SUM(B2:B4)"
+      },
+      {
+        "at": 18.21,
+        "phrase": "twenty five dollars",
+        "state": 2,
+        "x": 771,
+        "y": 455,
+        "label": "Check the expected total: $25"
+      },
+      {
+        "at": 19.63,
+        "phrase": "Now change paper",
+        "state": 3,
+        "x": 769,
+        "y": 324,
+        "label": "Predict the new total before the change"
+      },
+      {
+        "at": 21.09,
+        "phrase": "from twelve to fifteen",
+        "state": 4,
+        "x": 769,
+        "y": 324,
+        "label": "Change B2 from 12 to 15"
+      },
+      {
+        "at": 25.73,
+        "phrase": "twenty eight",
+        "state": 5,
+        "x": 769,
+        "y": 455,
+        "label": "The formula recalculates: $28"
+      },
+      {
+        "at": 34.09,
+        "phrase": "inspect the formula and range",
+        "state": 6,
+        "x": 414,
+        "y": 158,
+        "label": "Check =SUM(B2:B4) if the result is wrong"
+      }
+    ]
+  }
+]

@@ -5,44 +5,44 @@
   "videos": [
     {
       "path": "courses/digital-literacy-2/media/week-01.mp4",
-      "sha256": "1906ae3059d4c60bea913ce566f4cd38bee9ca92c3150a2a7baa66905d981b85",
+      "sha256": "3a79132678b8448d6c755e5dffca64bc072665b9c855a69fd7445a753a83f2a8",
       "durationSeconds": 443.625,
-      "bytes": 13525635,
+      "bytes": 14201769,
       "captions": "courses/digital-literacy-2/media/week-01.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-02.mp4",
-      "sha256": "f8c2b44f95e2ac77b0e90559a9bc33e4d4a36b43fd023ab998855a23db9f48e2",
+      "sha256": "a33ecf43a470665114db2b7f72944c8c49d413d1709e3010467deba6c3b7f8fe",
       "durationSeconds": 452.375,
-      "bytes": 14393964,
+      "bytes": 14728906,
       "captions": "courses/digital-literacy-2/media/week-02.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-03.mp4",
-      "sha256": "21b832d887a75c2504f57d86577615bdd01f564f84edca874d15cede4627e673",
+      "sha256": "78b3a2096dd202dca75a4aeadb7c8caf443d7dbf31d906e9da50282942040bfd",
       "durationSeconds": 444.625,
-      "bytes": 13461583,
+      "bytes": 13721896,
       "captions": "courses/digital-literacy-2/media/week-03.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-04.mp4",
-      "sha256": "b2438c5eecfd65d182b1fe4338d29d01075d0a212293f33a1a77269910a37b73",
+      "sha256": "77f0443d785e2ff4e4b9f7d93e56db1e0aab820f26aa097c9c3851865a65db22",
       "durationSeconds": 463.0,
-      "bytes": 14131116,
+      "bytes": 14430500,
       "captions": "courses/digital-literacy-2/media/week-04.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-05.mp4",
-      "sha256": "9c892fcd3810cb3ba385cea9e3064a549033fc32b3119ca57bfbce0636c27ead",
+      "sha256": "8b86e82c8ae2e65d0f87b4a6b3ef53ec881b609cab72e00634ab86979b83487b",
       "durationSeconds": 461.25,
-      "bytes": 14235416,
+      "bytes": 14481016,
       "captions": "courses/digital-literacy-2/media/week-05.vtt"
     },
     {
       "path": "courses/digital-literacy-2/media/week-06.mp4",
-      "sha256": "621c08bbabfb07abc756579a8d79ec3f440644a0e369d1a8649f9536f46a73e5",
+      "sha256": "cd31f687cdccf800294aa3d590b690a6819d4ce995b51df4c2d87bb0ef5f8633",
       "durationSeconds": 452.417,
-      "bytes": 13736560,
+      "bytes": 13969788,
       "captions": "courses/digital-literacy-2/media/week-06.vtt"
     }
   ]

@@ -1,0 +1,114 @@
+[
+  {
+    "chapter": 4,
+    "title": "Check who receives the message",
+    "startSeconds": 140.533,
+    "durationSeconds": 51.45,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 438,
+        "y": 165,
+        "label": "Inspect every recipient before sending"
+      },
+      {
+        "at": 8.23,
+        "phrase": "Cc sends a visible copy",
+        "state": 1,
+        "x": 472,
+        "y": 220,
+        "label": "Cc is visible to the recipients"
+      },
+      {
+        "at": 12.65,
+        "phrase": "Bcc hides those recipients",
+        "state": 2,
+        "x": 468,
+        "y": 274,
+        "label": "Bcc hides addresses \u2022 it is not confidentiality"
+      },
+      {
+        "at": 22.07,
+        "phrase": "Reply all can send",
+        "state": 3,
+        "x": 951,
+        "y": 251,
+        "label": "Reply all: check the entire recipient list"
+      },
+      {
+        "at": 40.43,
+        "phrase": "Remove unnecessary recipients",
+        "state": 4,
+        "x": 490,
+        "y": 220,
+        "label": "Remove the unnecessary Cc recipient"
+      },
+      {
+        "at": 43.61,
+        "phrase": "reasonable response window",
+        "state": 5,
+        "x": 493,
+        "y": 432,
+        "label": "Keep a clear request and response window \u2022 draft only"
+      }
+    ]
+  },
+  {
+    "chapter": 6,
+    "title": "Give feedback that leads to a useful change",
+    "startSeconds": 237.999,
+    "durationSeconds": 41.93,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 914,
+        "y": 234,
+        "label": "Review the steps in one shared handout"
+      },
+      {
+        "at": 5.19,
+        "phrase": "Add the contact number",
+        "state": 1,
+        "x": 915,
+        "y": 272,
+        "label": "Suggest a location, change, and reason"
+      },
+      {
+        "at": 9.21,
+        "phrase": "identifies a location",
+        "state": 2,
+        "x": 1006,
+        "y": 429,
+        "label": "Add the specific comment"
+      },
+      {
+        "at": 23.03,
+        "phrase": "After making the edit",
+        "state": 3,
+        "x": 356,
+        "y": 426,
+        "label": "Author adds the fictional help number"
+      },
+      {
+        "at": 24.23,
+        "phrase": "acknowledge the feedback",
+        "state": 4,
+        "x": 946,
+        "y": 378,
+        "label": "Acknowledge the change and check it"
+      },
+      {
+        "at": 26.71,
+        "phrase": "Resolve a comment only",
+        "state": 5,
+        "x": 1021,
+        "y": 434,
+        "label": "Resolve after the request has been addressed"
+      }
+    ]
+  }
+]

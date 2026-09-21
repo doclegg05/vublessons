@@ -1,5 +1,8 @@
 """Picture-led motion lessons: original artwork + concise, word-timed diagrams."""
-import html,json,re
+import html,json,re,importlib.util
+from pathlib import Path
+_screen_spec=importlib.util.spec_from_file_location('screen_share_scenes',Path(__file__).with_name('screen-share-scenes.py'))
+screens=importlib.util.module_from_spec(_screen_spec);_screen_spec.loader.exec_module(screens)
 E=lambda s:html.escape(str(s),quote=True)
 KINDS={1:['zoom','zoom','sound','privacy','routine'],2:['sync','permission','sync','recovery','permission'],3:['document','document','sheet','export','bundle'],4:['roles','timing','feedback','meeting','message'],5:['phishing','access','encrypt','attention','verify'],6:['app','parts','prompt','app','versions']}
 TITLES={1:['Start with one task','Zoom into the task','Follow the sound','Share availability','Choose. Test. Explain.'],2:['Follow your file','Match access to the task','Deletion can travel too','Bring back the right copy','Suggest without rewriting'],3:['Make the next step visible','Structure guides the reader','Make the numbers prove it','Choose what travels','Show your resource pack'],4:['One file. Clear roles.','Together or later?','Show the useful change','Make room for others','Make the next action clear'],5:['Pause the pressure','Match access to purpose','Protect what can be read','Make room for a break','Show your safer next step'],6:['Build one useful thing','Three layers. One app.','Give the build boundaries','Test what actually happens','Keep a way back']}
@@ -78,6 +81,8 @@ CHAPTERS = {
 
 def chapter_plan(n,index):
  kind,photo,steps=CHAPTERS[n][index]
+ if (n,index) in screens.SELECTED:
+  return dict(kind=kind,photo=None,steps=[action[4] for action in screens.PLANS[n,index][1]],layout='screen-share')
  return dict(kind=kind,photo=photo,steps=steps,layout='scenario' if photo else 'demonstration')
 
 def package_panel():
@@ -352,6 +357,7 @@ def diagram(kind,i):
 
 CSS='''*{box-sizing:border-box}.canvas-ground{position:absolute;inset:0;background:#102c4b}.photo-window{position:absolute;left:0;top:0;width:400px;height:720px;overflow:hidden}.topic-photo{width:100%;height:100%;object-fit:cover;object-position:48% center}.photo-shade{position:absolute;left:0;bottom:0;width:400px;height:130px;background:#102c4b}.gold-divider{position:absolute;left:395px;top:0;width:5px;height:720px;background:#c9a227}.video-title{position:absolute;left:440px;top:55px;max-width:755px;margin:0;font-size:46px;line-height:1.14;color:white;letter-spacing:-.5px}.graphic-stage{position:absolute;left:440px;top:153px;width:784px;height:460px}.diagram{width:100%;height:100%;overflow:visible}.video-note{position:absolute;left:445px;bottom:53px;font-size:29px;color:#e6c65c;margin:0;max-width:755px;line-height:1.3}.video-brand{position:absolute;left:31px;bottom:37px;display:flex;align-items:center;gap:12px;color:white;font-size:24px;font-weight:700}.video-brand img{width:49px;height:49px}.graphic-stage text{font-family:VUB}.layout-wide .photo-window{width:270px}.layout-wide .gold-divider{left:265px}.layout-wide .photo-shade{width:270px}.layout-wide .video-title{left:312px;max-width:880px}.layout-wide .graphic-stage{left:312px;width:910px;height:466px;top:153px}.layout-wide .video-note{left:320px;max-width:870px}.layout-finale .photo-window{left:850px;width:430px}.layout-finale .gold-divider{left:845px}.layout-finale .photo-shade{left:850px;width:430px}.layout-finale .video-title{left:55px;max-width:740px}.layout-finale .graphic-stage{left:40px;width:780px}.layout-finale .video-note{left:55px;max-width:750px}.layout-finale .video-brand{left:885px}'''
 def scene(n,i,b,words):
+ if (n,i) in screens.SELECTED:return screens.scene(n,i,b,words)
  index=i;plan=chapter_plan(n,index);kind=plan['kind'];i=b.get('variant',i);cid=f'w{n}-scene-{index+1}';content,note=diagram(kind,i)
  if not note:raise ValueError(f'No authored diagram for {kind}')
  detail=(package_panel() if n==2 and index==8 else evidence_panel(plan['steps'])).replace('id="detail-', 'id="inspect-')
@@ -438,13 +444,16 @@ def scene(n,i,b,words):
   change('.video-note',{'textContent':entry.replace('|',' · ')},'',.10+j*.28)
  photo=plan['photo']
  photohtml=f'<div class=photo-window><img class=topic-photo src="assets/{photo}.webp" alt=""></div>' if photo else ''
+ if n==1 and index==0:
+  photohtml='<div class=photo-window><video id="w1-generated-workstation" class="topic-photo clip" src="assets/workstation-intro.mp4" data-start="0" data-duration="7" data-track-index="0" muted playsinline></video></div>'
  if photo=='safety':
   photohtml='<div class=photo-window><svg class=topic-photo viewBox="0 0 1376 768" role="img" aria-label="Fictional home verification scenario"><image href="assets/safety.webp" width="1376" height="768"/><polygon points="287,355 361,337 440,540 353,566" fill="#e1efed"/><polygon points="805,174 1137,198 1120,407 779,375" fill="#e1efed"/><g transform="translate(319 376) rotate(-18)"><rect width="40" height="32" rx="4" fill="#1b365d"/><path d="M3 4 L20 19 L37 4" fill="none" stroke="#e6c65c" stroke-width="3"/></g><g transform="translate(812 215) rotate(5)"><text fill="#1b365d" font-size="24">Known contact</text><rect y="24" width="260" height="44" rx="5" fill="#c4d8de"/><text x="12" y="53" fill="#1b365d" font-size="21">Community desk</text><text y="107" fill="#1b365d" font-size="21">Verify independently</text></g></svg></div>'
  if photo:
   # Full landscape context first, then an unobstructed authored demonstration.
   events.insert(0,f'tl.set("#{cid} .graphic-stage",{{opacity:0}},0);')
-  events.append(f'tl.to("#{cid} .photo-window",{{opacity:0,duration:.5}},{min(7,b["audioDuration"]*.16)});')
-  events.append(f'tl.to("#{cid} .graphic-stage",{{opacity:1,duration:.5}},{min(7,b["audioDuration"]*.16)});')
+  transition=6.5 if n==1 and index==0 else min(7,b["audioDuration"]*.16)
+  events.append(f'tl.to("#{cid} .photo-window",{{opacity:0,duration:.5}},{transition});')
+  events.append(f'tl.to("#{cid} .graphic-stage",{{opacity:1,duration:.5}},{transition});')
  css=CSS
  css+=' .graphic-stage{opacity:'+('0' if photo else '1')+'}'
  css+=' .main-example,.detail-example{position:absolute;inset:0}.graphic-stage{top:160px;height:445px}.video-note{bottom:92px;font-size:25px}.video-brand{bottom:20px;font-size:21px}.video-title{font-size:40px;top:34px}.video-brand img{width:36px;height:36px}'

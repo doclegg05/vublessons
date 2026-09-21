@@ -1,5 +1,20 @@
 # Digital Literacy Level 2 course
 
+## Screen-share task walkthroughs
+
+The six videos include twelve screen-share chapters (9m14s total), mapped in
+`SCREEN-SHARE-VIDEO-PLAN.md`. Original fictional interfaces, pointer movement,
+clicks, and typing are synchronized to Britt’s existing word alignment. Chapter
+menus identify the demonstrations; transcript sections provide visual step guides.
+`SCREEN-SHARE-VIDEO-VERIFICATION.md` records delivery and preview checks.
+
+Edit `scripts/dl2/screen-share-scenes.py`, then run the visual-only media builder.
+`node scripts/dl2/check-screen-shares.mjs` checks every state; after rendering,
+`python3 scripts/dl2/verify-screen-share-frames.py` compares encoded video frames
+with the independently sought source states. Keep the local generated week-1
+opening clip under `video/digital-literacy-2/generated-screen-share/`; its receipt
+is tracked, while the working MP4 is excluded like the source narration.
+
 ## Photographic teaching revision
 
 The approved September visual refinement is mapped in `PHOTOGRAPHIC-VISUAL-PLAN.md` and its three linked slide/chapter audits. It uses fictional West Virginia community/home scenes, original instructional interfaces, and the existing Britt narration. Selected photographs and generation provenance are recorded in `photo-assets.json`; originals and contact sheets are in `review/photo-refresh/`.

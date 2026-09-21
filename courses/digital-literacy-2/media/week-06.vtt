@@ -225,91 +225,91 @@ should clarify behavior
 00:03:44.290 --> 00:03:45.950
 or a boundary you can verify.
 
-00:03:47.978 --> 00:03:51.438
+00:03:47.978 --> 00:03:51.438 line:0 position:50% align:center size:95%
 Use the instructor-approved tool if one is
 available, or begin
 
-00:03:51.438 --> 00:03:55.238
+00:03:51.438 --> 00:03:55.238 line:0 position:50% align:center size:95%
 with the supplied starter. Save the file
 with its HTML
 
-00:03:55.238 --> 00:03:59.018
+00:03:55.238 --> 00:03:59.018 line:0 position:50% align:center size:95%
 extension and open it in the browser.
 Confirm that the
 
-00:03:59.018 --> 00:04:04.938
+00:03:59.018 --> 00:04:04.938 line:0 position:50% align:center size:95%
 heading, search field, filter, and results
 appear. Keep this first
 
-00:04:04.938 --> 00:04:09.138
+00:04:04.938 --> 00:04:09.138 line:0 position:50% align:center size:95%
 working version before asking for changes.
 If no AI account
 
-00:04:09.138 --> 00:04:12.418
+00:04:09.138 --> 00:04:12.418 line:0 position:50% align:center size:95%
 is available, you can still complete the
 exercise with a
 
-00:04:12.418 --> 00:04:16.418
+00:04:12.418 --> 00:04:16.418 line:0 position:50% align:center size:95%
 plain-text editor: change the heading and
 one fictional resource,
 
-00:04:17.138 --> 00:04:20.838
+00:04:17.138 --> 00:04:20.838 line:0 position:50% align:center size:95%
 save the file, and refresh the browser. Be
 careful that
 
-00:04:20.838 --> 00:04:24.818
+00:04:20.838 --> 00:04:24.818 line:0 position:50% align:center size:95%
 the editor has not silently added a
 text-file extension. The
 
-00:04:24.818 --> 00:04:27.818
+00:04:24.818 --> 00:04:27.818 line:0 position:50% align:center size:95%
 goal is a working result you can explain,
 not evidence
 
-00:04:27.818 --> 00:04:30.678
+00:04:27.818 --> 00:04:30.678 line:0 position:50% align:center size:95%
 that you used a particular paid service or
 model.
 
-00:04:32.647 --> 00:04:35.487
+00:04:32.647 --> 00:04:35.487 line:0 position:50% align:center size:95%
 Type library into the search field and
 compare the result
 
-00:04:35.487 --> 00:04:39.387
+00:04:35.487 --> 00:04:39.387 line:0 position:50% align:center size:95%
 with your first acceptance check. Then
 enter an unmatched term
 
-00:04:39.387 --> 00:04:43.027
+00:04:39.387 --> 00:04:43.027 line:0 position:50% align:center size:95%
 such as zzz. The page should explain that
 there are
 
-00:04:43.027 --> 00:04:46.567
+00:04:43.027 --> 00:04:46.567 line:0 position:50% align:center size:95%
 no matching resources rather than
 appearing broken or showing an
 
-00:04:46.567 --> 00:04:50.547
+00:04:46.567 --> 00:04:50.547 line:0 position:50% align:center size:95%
 old result. Clear the field and try
 LIBRARY in uppercase.
 
-00:04:51.767 --> 00:04:55.707
+00:04:51.767 --> 00:04:55.707 line:0 position:50% align:center size:95%
 If the intended behavior is a
 case-insensitive search, it should
 
-00:04:55.707 --> 00:04:59.187
+00:04:55.707 --> 00:04:59.187 line:0 position:50% align:center size:95%
 find the same record. Next combine the
 search with a
 
-00:04:59.187 --> 00:05:03.147
+00:04:59.187 --> 00:05:03.147 line:0 position:50% align:center size:95%
 category filter and inspect whether both
 conditions apply. Record
 
-00:05:03.147 --> 00:05:07.387
+00:05:03.147 --> 00:05:07.387 line:0 position:50% align:center size:95%
 expected and actual results separately. A
 confident statement from
 
-00:05:07.387 --> 00:05:10.447
+00:05:07.387 --> 00:05:10.447 line:0 position:50% align:center size:95%
 the AI is not test evidence. The evidence
 is what
 
-00:05:10.447 --> 00:05:13.287
+00:05:10.447 --> 00:05:13.287 line:0 position:50% align:center size:95%
 happened when you carried out a named
 check on the saved file.
 

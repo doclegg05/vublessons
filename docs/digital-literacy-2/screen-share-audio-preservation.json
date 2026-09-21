@@ -1,0 +1,44 @@
+[
+  {
+    "week": 1,
+    "aacSha256": "a4d8a2a91b64e7e3f03963ef64cc046cb4dfc55913c6850cdbc5904379ffbe9b",
+    "deliveredAudioBitIdentical": true,
+    "captionTextAndTimestampsIdentical": true,
+    "topCaptionCues": 22
+  },
+  {
+    "week": 2,
+    "aacSha256": "2d9ffa19c213245b2e64fa0c1d63dc7b259b2d8e92d4a8723200234c0dfc417e",
+    "deliveredAudioBitIdentical": true,
+    "captionTextAndTimestampsIdentical": true,
+    "topCaptionCues": 22
+  },
+  {
+    "week": 3,
+    "aacSha256": "e9e15a39fbea8692105a6545b2c0f57f11c4037662d80d295490aee1e319e6a3",
+    "deliveredAudioBitIdentical": true,
+    "captionTextAndTimestampsIdentical": true,
+    "topCaptionCues": 22
+  },
+  {
+    "week": 4,
+    "aacSha256": "6b3e8d6e8685b97e5756de2fd390283ce7fe2e506fd78f75cdd10be7d8f3eadf",
+    "deliveredAudioBitIdentical": true,
+    "captionTextAndTimestampsIdentical": true,
+    "topCaptionCues": 23
+  },
+  {
+    "week": 5,
+    "aacSha256": "ccab51ab9e2199f874aca9ced21d024f48f53503c4c5a611505a5191d67b7011",
+    "deliveredAudioBitIdentical": true,
+    "captionTextAndTimestampsIdentical": true,
+    "topCaptionCues": 22
+  },
+  {
+    "week": 6,
+    "aacSha256": "058e8ec1f69afb6bbdcded04ad778b6b2a7ae43bc96c31125ab2d4c183400233",
+    "deliveredAudioBitIdentical": true,
+    "captionTextAndTimestampsIdentical": true,
+    "topCaptionCues": 22
+  }
+]

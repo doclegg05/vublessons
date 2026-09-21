@@ -28,7 +28,9 @@ def chapters(n,video_id):
  if not p.exists():return ''
  beats=json.loads(p.read_text())
  if not all('start' in b for b in beats):return ''
- items=''.join(f'<li><button type="button" data-video-seek="{b["start"]:.3f}"><time datetime="PT{b["start"]:.3f}S">{int(b["start"])//60}:{int(b["start"])%60:02}</time>{e(b["title"])}</button></li>' for b in beats)
+ demo_path=p.parent.parent/'screen-share-actions.json'
+ demo_chapters={s['chapter'] for s in json.loads(demo_path.read_text())} if demo_path.exists() else set()
+ items=''.join(f'<li><button type="button" data-video-seek="{b["start"]:.3f}"><time datetime="PT{b["start"]:.3f}S">{int(b["start"])//60}:{int(b["start"])%60:02}</time>{e(b["title"])}{(" · Screen demo" if i+1 in demo_chapters else "")}</button></li>' for i,b in enumerate(beats))
  return f'<details class="video-chapters"><summary>Choose a chapter or replay a skill</summary><nav aria-label="Video chapters" data-video-chapters="{video_id}"><p>Selecting a chapter pauses the video at that point. Use Play when you are ready.</p><ol>{items}</ol></nav></details>'
 def write(path,text):p=ROOT/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
 def doc(title,body):return page(title,f'<main class="page doc" id="main"><h1>{e(title)}</h1><div class="actions"><button type="button" data-print>Print / Save as PDF</button>{link("index.html","Course home","button secondary")}</div>{body}</main>')
@@ -88,7 +90,12 @@ for w in W:
  transcript=f'<p>{e(w["summary"])}</p><video {("poster="+chr(34)+photo_scenes.PHOTO_ROOT+photo_scenes.PHOTOS[n][1]+".webp"+chr(34)) if n!=5 else ""} id="transcript-video" tabindex="0" controls preload="metadata" aria-label="Week {n} explainer"><source src="{BASE}/media/week-{n:02}.mp4" type="video/mp4"><track kind="captions" src="{BASE}/media/week-{n:02}.vtt" srclang="en" label="English" default></video>'+chapters(n,"transcript-video")+'<div id="transcript-content">'
  beats=Path(f'video/digital-literacy-2/week-{n:02}/narration/beats.json')
  if beats.exists():
-  for b in json.loads(beats.read_text()):transcript+=f'<section><h2>{e(b["title"])}</h2><p>{e(b["text"])}</p></section>'
+  demo_path=beats.parent.parent/'screen-share-actions.json'
+  demos={s['chapter']:s for s in json.loads(demo_path.read_text())} if demo_path.exists() else {}
+  for i,b in enumerate(json.loads(beats.read_text())):
+   demo=demos.get(i+1)
+   guide=('<details class="screen-demo-guide"><summary>Screen demonstration steps</summary><p>This is an original screen simulation with fictional practice data. Menus vary by application. Pause or replay each action before trying it yourself.</p><ol>'+''.join('<li>'+e(a['label'])+'</li>' for a in demo['actions'])+'</ol></details>') if demo else ''
+   transcript+=f'<section><h2>{e(b["title"])}</h2><p>{e(b["text"])}</p>{guide}</section>'
  transcript+='</div><div class="actions">'+link(folder+'/presentation.html','Return to lesson','button')+'</div>'
  write(folder+'/video-transcript.html',doc(f'Week {n} explainer and transcript',transcript))
 write('index.html',page(C['title'],learning.home(W,link),'course-home'))

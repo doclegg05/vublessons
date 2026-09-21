@@ -37,3 +37,35 @@ test('DL2 lesson and transcript chapters fit enlarged mobile text and retain nat
   expect(await page.locator('video').evaluate(v=>v.paused)).toBe(true);
  }
 });
+test('DL2 screen demonstrations are replayable and the app exercise matches the narrated checks',async({page})=>{
+ for(let n=1;n<=6;n++){
+  await page.goto(`${base}/weeks/week-${String(n).padStart(2,'0')}/video-transcript.html`);
+  await page.locator('.video-chapters summary').click();
+  const demos=page.getByRole('button',{name:/Screen demo/});
+  await expect(demos).toHaveCount(2);
+  await expect(page.locator('.screen-demo-guide')).toHaveCount(2);
+  await demos.first().focus();await page.keyboard.press('Enter');
+  await expect(page.locator('video')).toBeFocused();
+  expect(await page.locator('video').evaluate(v=>v.paused)).toBe(true);
+  // Cues in walkthroughs use the title band, away from fields and results.
+  await expect.poll(()=>page.locator('video').evaluate(v=>v.textTracks[0]?.cues?.length||0)).toBeGreaterThan(0);
+  expect(await page.locator('video').evaluate(v=>[...v.textTracks[0].cues].filter(c=>c.startTime>=v.currentTime-.01&&c.startTime<v.currentTime+10).every(c=>c.line===0))).toBe(true);
+  for(const guide of await page.locator('.screen-demo-guide').all()){
+   await guide.locator('summary').click();
+   await expect(guide).toContainText('fictional practice data');
+   expect(await guide.locator('li').count()).toBeGreaterThanOrEqual(5);
+  }
+ }
+ await page.goto(`${base}/activities/resource-finder.html`);
+ const search=page.getByLabel('Search fictional');
+ for(const query of ['library','LIBRARY']){
+  await search.fill(query);
+  await expect(page.locator('#results h2')).toHaveText('Community library');
+ }
+ await search.fill('zzz');await expect(page.locator('#status')).toContainText('No matching resources');
+ await search.fill('LIBRARY');await page.getByLabel('Category').selectOption('Learning');
+ await expect(page.locator('#results h2')).toHaveText('Community library');
+ await page.getByLabel('Category').selectOption('Community');
+ await expect(page.locator('#results h2')).toHaveCount(0);
+ await expect(page.locator('#status')).toContainText('No matching resources');
+});

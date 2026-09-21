@@ -37,7 +37,7 @@ for n in range(1,7):
  for start,end in ranges:
   lo,hi=seconds(start),seconds(end);assert lo>=prior-.001 and hi>lo and hi<=duration;prior=hi
  # Captions must reproduce the authored narration, in order.
- body=re.sub(r'\d{2}:\d{2}:\d{2}\.\d{3} --> \d{2}:\d{2}:\d{2}\.\d{3}','',captions.replace('WEBVTT',''))
+ body=re.sub(r'(?m)^\d{2}:\d{2}:\d{2}\.\d{3} --> \d{2}:\d{2}:\d{2}\.\d{3}[^\n]*','',captions.replace('WEBVTT',''))
  assert ' '.join(body.split())==' '.join(' '.join(b['text'] for b in beats).split())
  check=json.loads(Path(f'docs/digital-literacy-2/video-check-{n:02}.json').read_text());assert check['ok'] and check['contrast']['checked']>0
  videos.append(dict(path=str(p),sha256=hashlib.sha256(raw).hexdigest(),durationSeconds=duration,bytes=len(raw),captions=f'courses/digital-literacy-2/media/week-{n:02}.vtt'))

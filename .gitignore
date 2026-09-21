@@ -71,6 +71,7 @@ playwright-report/
 /video/digital-literacy-2/**/narration/*.wav
 /video/digital-literacy-2/**/renders/
 /video/digital-literacy-2/**/snapshots/
+/video/digital-literacy-2/screen-share-review/
 /video/digital-literacy-2/**/.hyperframes/
 !/courses/digital-literacy-2/media/week-*.mp4
 

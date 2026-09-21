@@ -1,0 +1,591 @@
+{
+  "states": 73,
+  "minimumStructuralSimilarity": 0.95,
+  "failures": [],
+  "checks": [
+    {
+      "week": 1,
+      "chapter": 2,
+      "action": 5,
+      "seconds": 82.891,
+      "structuralSimilarity": 0.986334,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 2,
+      "action": 4,
+      "seconds": 67.391,
+      "structuralSimilarity": 0.986204,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 2,
+      "action": 3,
+      "seconds": 55.371,
+      "structuralSimilarity": 0.984154,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 2,
+      "action": 2,
+      "seconds": 53.991,
+      "structuralSimilarity": 0.984979,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 2,
+      "action": 1,
+      "seconds": 52.451,
+      "structuralSimilarity": 0.984941,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 2,
+      "action": 0,
+      "seconds": 41.121,
+      "structuralSimilarity": 0.988369,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 8,
+      "seconds": 305.2,
+      "structuralSimilarity": 0.979875,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 7,
+      "seconds": 295.86,
+      "structuralSimilarity": 0.984366,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 6,
+      "seconds": 291.98,
+      "structuralSimilarity": 0.987386,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 5,
+      "seconds": 290.2,
+      "structuralSimilarity": 0.9847,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 4,
+      "seconds": 286.4,
+      "structuralSimilarity": 0.9819,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 3,
+      "seconds": 278.04,
+      "structuralSimilarity": 0.982418,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 2,
+      "seconds": 275.94,
+      "structuralSimilarity": 0.981635,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 1,
+      "seconds": 274.69,
+      "structuralSimilarity": 0.983487,
+      "passCheck": true
+    },
+    {
+      "week": 1,
+      "chapter": 7,
+      "action": 0,
+      "seconds": 264.45,
+      "structuralSimilarity": 0.988056,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 6,
+      "action": 6,
+      "seconds": 250.361,
+      "structuralSimilarity": 0.980844,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 6,
+      "action": 5,
+      "seconds": 246.201,
+      "structuralSimilarity": 0.981704,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 6,
+      "action": 4,
+      "seconds": 232.101,
+      "structuralSimilarity": 0.98415,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 6,
+      "action": 3,
+      "seconds": 229.061,
+      "structuralSimilarity": 0.982724,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 6,
+      "action": 2,
+      "seconds": 226.881,
+      "structuralSimilarity": 0.984374,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 6,
+      "action": 1,
+      "seconds": 223.241,
+      "structuralSimilarity": 0.986075,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 6,
+      "action": 0,
+      "seconds": 219.171,
+      "structuralSimilarity": 0.988438,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 7,
+      "action": 4,
+      "seconds": 284.543,
+      "structuralSimilarity": 0.980401,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 7,
+      "action": 3,
+      "seconds": 282.503,
+      "structuralSimilarity": 0.977701,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 7,
+      "action": 2,
+      "seconds": 275.843,
+      "structuralSimilarity": 0.979884,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 7,
+      "action": 1,
+      "seconds": 271.043,
+      "structuralSimilarity": 0.979746,
+      "passCheck": true
+    },
+    {
+      "week": 2,
+      "chapter": 7,
+      "action": 0,
+      "seconds": 262.633,
+      "structuralSimilarity": 0.977686,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 2,
+      "action": 4,
+      "seconds": 73.17,
+      "structuralSimilarity": 0.982963,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 2,
+      "action": 3,
+      "seconds": 49.61,
+      "structuralSimilarity": 0.984251,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 2,
+      "action": 2,
+      "seconds": 48.45,
+      "structuralSimilarity": 0.981391,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 2,
+      "action": 1,
+      "seconds": 47.35,
+      "structuralSimilarity": 0.984133,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 2,
+      "action": 0,
+      "seconds": 44,
+      "structuralSimilarity": 0.985041,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 5,
+      "action": 6,
+      "seconds": 207.338,
+      "structuralSimilarity": 0.985447,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 5,
+      "action": 5,
+      "seconds": 198.978,
+      "structuralSimilarity": 0.98588,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 5,
+      "action": 4,
+      "seconds": 194.338,
+      "structuralSimilarity": 0.987345,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 5,
+      "action": 3,
+      "seconds": 192.878,
+      "structuralSimilarity": 0.983143,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 5,
+      "action": 2,
+      "seconds": 191.458,
+      "structuralSimilarity": 0.98662,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 5,
+      "action": 1,
+      "seconds": 177.318,
+      "structuralSimilarity": 0.986785,
+      "passCheck": true
+    },
+    {
+      "week": 3,
+      "chapter": 5,
+      "action": 0,
+      "seconds": 173.248,
+      "structuralSimilarity": 0.987463,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 4,
+      "action": 5,
+      "seconds": 184.843,
+      "structuralSimilarity": 0.981621,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 4,
+      "action": 4,
+      "seconds": 181.663,
+      "structuralSimilarity": 0.982446,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 4,
+      "action": 3,
+      "seconds": 163.303,
+      "structuralSimilarity": 0.978928,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 4,
+      "action": 2,
+      "seconds": 153.883,
+      "structuralSimilarity": 0.981243,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 4,
+      "action": 1,
+      "seconds": 149.463,
+      "structuralSimilarity": 0.982539,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 4,
+      "action": 0,
+      "seconds": 141.233,
+      "structuralSimilarity": 0.982621,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 6,
+      "action": 5,
+      "seconds": 265.409,
+      "structuralSimilarity": 0.980119,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 6,
+      "action": 4,
+      "seconds": 262.929,
+      "structuralSimilarity": 0.98023,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 6,
+      "action": 3,
+      "seconds": 261.629,
+      "structuralSimilarity": 0.980054,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 6,
+      "action": 2,
+      "seconds": 247.909,
+      "structuralSimilarity": 0.981476,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 6,
+      "action": 1,
+      "seconds": 243.889,
+      "structuralSimilarity": 0.981553,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 6,
+      "action": 0,
+      "seconds": 238.699,
+      "structuralSimilarity": 0.984601,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 4,
+      "action": 4,
+      "seconds": 152.181,
+      "structuralSimilarity": 0.984509,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 4,
+      "action": 3,
+      "seconds": 143.901,
+      "structuralSimilarity": 0.988308,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 4,
+      "action": 2,
+      "seconds": 141.261,
+      "structuralSimilarity": 0.989787,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 4,
+      "action": 1,
+      "seconds": 137.921,
+      "structuralSimilarity": 0.983256,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 4,
+      "action": 0,
+      "seconds": 136.996,
+      "structuralSimilarity": 0.987077,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 7,
+      "action": 4,
+      "seconds": 299.37,
+      "structuralSimilarity": 0.980704,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 7,
+      "action": 3,
+      "seconds": 296.93,
+      "structuralSimilarity": 0.980794,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 7,
+      "action": 2,
+      "seconds": 293.13,
+      "structuralSimilarity": 0.98324,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 7,
+      "action": 1,
+      "seconds": 291.61,
+      "structuralSimilarity": 0.983503,
+      "passCheck": true
+    },
+    {
+      "week": 5,
+      "chapter": 7,
+      "action": 0,
+      "seconds": 278.4,
+      "structuralSimilarity": 0.983713,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 6,
+      "action": 4,
+      "seconds": 239.038,
+      "structuralSimilarity": 0.983772,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 6,
+      "action": 3,
+      "seconds": 237.098,
+      "structuralSimilarity": 0.983199,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 6,
+      "action": 2,
+      "seconds": 234.998,
+      "structuralSimilarity": 0.982202,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 6,
+      "action": 1,
+      "seconds": 233.938,
+      "structuralSimilarity": 0.981598,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 6,
+      "action": 0,
+      "seconds": 228.228,
+      "structuralSimilarity": 0.988917,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 7,
+      "action": 6,
+      "seconds": 301.767,
+      "structuralSimilarity": 0.983327,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 7,
+      "action": 5,
+      "seconds": 298.667,
+      "structuralSimilarity": 0.982163,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 7,
+      "action": 4,
+      "seconds": 289.507,
+      "structuralSimilarity": 0.981804,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 7,
+      "action": 3,
+      "seconds": 288.467,
+      "structuralSimilarity": 0.98191,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 7,
+      "action": 2,
+      "seconds": 278.187,
+      "structuralSimilarity": 0.983522,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 7,
+      "action": 1,
+      "seconds": 273.347,
+      "structuralSimilarity": 0.981743,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 7,
+      "action": 0,
+      "seconds": 272.422,
+      "structuralSimilarity": 0.982056,
+      "passCheck": true
+    }
+  ]
+}

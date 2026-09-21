@@ -1458,7 +1458,7 @@
         "Name the app\u2019s user, problem and three acceptance checks. Keep the scope to one page.",
         "Write a prompt naming content, behavior, accessibility and privacy boundaries.",
         "Open the starter. Save a copy as resource-finder-v1.html using a plain-text editor. If working offline, no AI tool is required.",
-        "Find the <h1> heading in the source and replace only its text. In the resources array, change the fictional Library Skills Desk name to Community Skills Desk. Save as resource-finder-v2.html and reopen.",
+        "Find the <h1> heading in the source and replace only its text. In the resources array, change the fictional Community library name to Community Skills Desk. Save as resource-finder-v2.html and reopen.",
         "Ask an approved AI tool for one small improvement, or make the heading/data edit manually. Record exactly what changed.",
         "Test blank input, matching and nonmatching search, mixed case, category filters, keyboard focus and narrow-screen layout. Record expected, actual and pass/fail.",
         "Fix one defect or improve one requirement. Repeat its test and one previously passing test. Keep both versions.",
