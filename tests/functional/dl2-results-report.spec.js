@@ -1,7 +1,7 @@
 const {test,expect}=require('@playwright/test');const AxeBuilder=require('@axe-core/playwright').default;const fs=require('fs');const bank=require('../../courses/digital-literacy-2/assets/questions.json');
 async function result(page,kind,score,preScore=''){
  await page.goto(`/courses/digital-literacy-2/assessments/${kind}-test.html`);
- await page.evaluate(({kind,score,preScore,bank})=>sessionStorage.setItem('vub:dl2:assessment:v1:'+kind,JSON.stringify({answers:Object.fromEntries(bank[kind].map((q,i)=>[q.id,i<score?q.answer:(q.answer+1)%q.options.length])),learner:'Sample <learner>',preScore,graded:true,index:0,review:false})),{kind,score,preScore,bank});await page.reload();await expect(page.locator('#results-title')).toBeVisible();
+ await page.evaluate(({kind,score,preScore,bank})=>sessionStorage.setItem('vub:dl2:assessment:v2:'+kind,JSON.stringify({answers:Object.fromEntries(bank[kind].map((q,i)=>[q.id,i<score?q.answer:(q.answer+1)%q.options.length])),learner:'Sample <learner>',preScore,graded:true,index:0,review:false})),{kind,score,preScore,bank});await page.reload();await expect(page.locator('#results-title')).toBeVisible();
 }
 for(const kind of ['pre','post'])test(`DL2 ${kind} branded results stay accessible and preserve an offline printable report`,async({page,browser})=>{
  await result(page,kind,kind==='pre'?0:14,kind==='post'?'20':'');
@@ -15,4 +15,30 @@ for(const kind of ['pre','post'])test(`DL2 ${kind} branded results stay accessib
 });
 test('DL2 perfect results offer application practice without invented weak domains',async({page})=>{
  await result(page,'post',28,'28');await expect(page.locator('.practice-plan')).toContainText('answered every item correctly');await expect(page.locator('.practice-plan li')).toHaveCount(0);await expect(page.locator('.report-comparison')).toContainText('Change: 0 points (0 percentage points)');await expect(page.locator('.needs-practice')).toHaveCount(0);
+});
+for(const kind of ['pre','post'])test(`DL2 ${kind} scenario questions and paper answer key stay aligned`,async({page})=>{
+ await page.goto(`/courses/digital-literacy-2/assessments/${kind}-test-printable.html`);
+ await expect(page.locator('main')).toContainText('Assessment version 2');
+ const paper=page.locator('section.question');await expect(paper).toHaveCount(28);
+ for(const [i,q] of bank[kind].entries()){
+  await expect(paper.nth(i).locator('h2')).toHaveText(`${i+1}. ${q.question}`);
+  expect(await paper.nth(i).locator('li').allTextContents()).toEqual(q.options.map(o=>'☐ '+o));
+ }
+ await page.goto(`/courses/digital-literacy-2/assessments/${kind}-test-answer-key.html`);
+ const key=page.locator('section.question');await expect(key).toHaveCount(28);
+ for(const [i,q] of bank[kind].entries()){
+  await expect(key.nth(i).locator('h2')).toHaveText(`${i+1}. ${q.question}`);
+  await expect(key.nth(i).locator('strong')).toHaveText(`${'ABC'[q.answer]}. ${q.options[q.answer]}`);
+  await expect(key.nth(i)).toContainText(q.why);
+ }
+});
+test('DL2 revised scenarios do not reuse version 1 draft answers or graded results',async({page})=>{
+ await page.goto('/courses/digital-literacy-2/assessments/pre-test.html');
+ await page.evaluate(bank=>sessionStorage.setItem('vub:dl2:assessment:v1:pre',JSON.stringify({answers:Object.fromEntries(bank.pre.map(q=>[q.id,q.answer])),learner:'Old draft',graded:true,index:27})),bank);
+ await page.reload();await expect(page.locator('fieldset')).toHaveCount(28);
+ await expect(page.locator('#results')).toBeHidden();await expect(page.locator('input:checked')).toHaveCount(0);
+ await expect(page.locator('#question-position')).toHaveText('Question 1 of 28');
+ await page.locator('input[name="pre-01"]').first().check();await page.reload();
+ await expect(page.locator('input:checked')).toHaveCount(1);
+ expect(await page.evaluate(()=>JSON.parse(sessionStorage.getItem('vub:dl2:assessment:v1:pre')).learner)).toBe('Old draft');
 });

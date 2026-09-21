@@ -28,6 +28,10 @@ The parallel pre/post tests each contain 28 original questions, four per GS6 dom
 
 Assessment drafts and results use sessionStorage in the learner's tab. There is no server submission or instructor dashboard. On shared computers, save or print results and select **Clear my assessment**. Slide progress uses the existing `VubProgress` localStorage layer. Worksheets keep typed answers only in the open page and include them when printed.
 
+## Assessment scenario revision
+
+Assessment version 2 uses 56 complete, fictional community/library scenarios with lesson-aligned choices and fuller feedback. The source remains `scripts/dl2/author-assessments.py`; run it, then `build-pages.py`, to regenerate the browser bank, printable tests and keys together. Version 2 uses its own session-storage key to avoid applying old answers to new questions. Use version 2 pre/post scores together; the post-test entry help explains this restriction. Pair-to-slide evidence and checks are in `review/assessment-v2.md`.
+
 ## Video production
 
 The user-requested **Explain Video Generator** was tried first. Its nine-scene, 2:32 trial completed, and narration/caption playback was checked in the browser. Source: `video/digital-literacy-2/explain-generator-trial.opml`. The plain player URL required sign-in; the tool's full claim link played without sign-in. That ownership-bearing claim link is kept out of the public repository and course pages. The trial remains a comparison, not a required course dependency.

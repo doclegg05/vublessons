@@ -7,7 +7,7 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | Repository quality gate | PASS, including build, links, catalog, Playwright, accessibility ratchet and readability report |
 | Site build | 193 HTML pages; four courses and 24 catalog lessons |
 | Internal links | 1,352 references checked; zero broken |
-| Browser tests | 78 passed in Chromium, including chapter navigation and enlarged mobile video controls |
+| Browser tests | 81 passed in Chromium, including chapter navigation and enlarged mobile video controls |
 | New course accessibility scans | Zero axe WCAG 2.1 A/AA violations on the six tested DL2 routes |
 | Workshop state accessibility | Zero axe WCAG A/AA violations across 12 initial/changed states on six representative models |
 | Existing platform accessibility ratchet | No violations beyond the committed baseline; the baseline was not expanded |
@@ -25,6 +25,10 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 ## West Virginia photographic revision
 
 All 137 slides and 60 video chapters have explicit change/keep mappings in `PHOTOGRAPHIC-VISUAL-PLAN.md` and its linked audits. Seven optimized photos establish relatable home/library/community scenarios; authored diagrams and fictional interfaces teach the steps. Sixty source narration WAV hashes remain unchanged. The six final videos use HyperFrames 0.8.58. Final exported frames were reviewed across all chapters; the photo-to-diagram overlap discovered during review was corrected and re-exported. Automated audio checks do not establish subjective voice quality.
+
+## Assessment version 2
+
+All 56 pre/post items use complete fictional scenarios, plausible choices and expanded feedback. The 28 pairs keep the same domain/objective blueprint and counts. Paper tests and keys match the browser bank. Three added tests cover both paper variants and prevent old version 1 drafts from being silently regraded. The complete quality gate passes 81 tests. Both revised sample results reports were reviewed at 11 pages with the existing branding and intact answer sections. See `review/assessment-v2.md` for the lesson mapping and version policy.
 
 ## Browser coverage
 
