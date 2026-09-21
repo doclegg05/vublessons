@@ -1,17 +1,19 @@
 [
   {
     "name": "workstation",
-    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-6ac6a053-55e6-4f43-bfa9-b9b8744094e2.png",
+    "source": "docs/digital-literacy-2/review/image-refresh/workstation-candidate.png",
     "path": "courses/digital-literacy-2/assets/illustrations/slide-workstation.webp",
     "dimensions": [
       1200,
       800
     ],
-    "bytes": 86884,
-    "sha256": "bbbf8fb7ff6828e7a248c4b98e05aeb32fd5572a4401859eca5927f4c94398eb",
+    "bytes": 80834,
+    "sha256": "1a68677d6545654cc03984c02afb2685bd26005c43273f43e86785ec8e806c8d",
     "generator": "image_gen",
     "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
-    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots.",
+    "approved": "2026-09-21",
+    "prompt_record": "docs/digital-literacy-2/review/image-refresh/prompts.json"
   },
   {
     "name": "research",
@@ -57,17 +59,19 @@
   },
   {
     "name": "security",
-    "source": "/Users/brittlegg/.codex/generated_images/01a0b4a2-eec6-7032-af5b-96aef6628f65/exec-19c3d3a6-a66b-447e-b3e9-11e6323ca867.png",
+    "source": "docs/digital-literacy-2/review/image-refresh/security-candidate.png",
     "path": "courses/digital-literacy-2/assets/illustrations/slide-security.webp",
     "dimensions": [
       1200,
       800
     ],
-    "bytes": 71014,
-    "sha256": "58f66e0140b25dcff1b3d922757ae38c07522e648df2c88107f35f6ec1bf7f65",
+    "bytes": 93636,
+    "sha256": "b57f44cdba3d27c0ba234b3ab606ae7a8f0da15887935c50e0a5abf80fdb9b86",
     "generator": "image_gen",
     "purpose": "Original decorative topic illustration; teaching content and controls remain semantic HTML.",
-    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots."
+    "direction": "VUB navy, teal and gold; tactile editorial illustration, no people, words or real software screenshots.",
+    "approved": "2026-09-21",
+    "prompt_record": "docs/digital-literacy-2/review/image-refresh/prompts.json"
   },
   {
     "name": "building",
