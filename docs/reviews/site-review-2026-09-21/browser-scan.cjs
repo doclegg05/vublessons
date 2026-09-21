@@ -1,0 +1,20 @@
+const fs=require('fs'), path=require('path');
+const root=process.cwd();
+const {chromium}=require(root+'/node_modules/playwright');
+const {AxeBuilder}=require(root+'/node_modules/@axe-core/playwright');
+const out='/tmp/vub-site-review';fs.mkdirSync(out,{recursive:true});
+function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(d=>d.isDirectory()?files(path.join(dir,d.name)):[path.join(dir,d.name)]);}
+(async()=>{
+const paths=files(root+'/dist/site').filter(p=>p.endsWith('.html')).map(p=>p.slice((root+'/dist/site').length));
+const browser=await chromium.launch(); const results=[];let index=0;
+async function worker(){const context=await browser.newContext({viewport:{width:1366,height:900},reducedMotion:'reduce'});await context.route('**/*',r=>r.request().url().startsWith('http://localhost:3940')||r.request().url().startsWith('data:')?r.continue():r.abort());
+while(index<paths.length){const url=paths[index++];const page=await context.newPage();const errors=[],missing=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)missing.push({url:r.url(),status:r.status()});});
+let result={url};try{const res=await page.goto('http://localhost:3940'+url,{waitUntil:'load',timeout:20000});await page.evaluate(()=>document.fonts.ready);result={...result,status:res.status(),errors,missing,...await page.evaluate(()=>({title:document.title,textSize:!!document.querySelector('script[src*="text-size.js"]'),brokenImages:[...document.images].filter(i=>i.offsetWidth&&!i.complete||i.offsetWidth&&i.naturalWidth===0).map(i=>i.getAttribute('src'))}))};
+const selected=url==='/index.html'||/\/index.html$/.test(url)&&url.split('/').length===4||/\/assessments\/(pre-test|post-test|pre-test-form|post-test-form).html$/.test(url)||/\/presentation.html$/.test(url)||/financial-readiness.html$/.test(url)||/instructors\/(intake|syllabus-overview).html$/.test(url);
+if(selected){const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();result.axe=axe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,html:n.html,summary:n.failureSummary}))}));
+await page.setViewportSize({width:390,height:844});await page.waitForTimeout(100);result.mobile=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('main *, .slide.active *, form *')].filter(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return r.width>0&&r.right>innerWidth+2&&r.left>=0&&s.position!=='fixed'&&s.visibility!=='hidden';}).slice(0,8).map(e=>({tag:e.tagName,cls:e.className,text:e.textContent.trim().slice(0,80),width:e.getBoundingClientRect().width}))}));
+if(url==='/index.html'||url.endsWith('/week-01/presentation.html')||url.endsWith('/financial-readiness.html')||url.endsWith('/post-test.html')){const name=url.replaceAll('/','_').replace('.html','');await page.screenshot({path:out+'/'+name+'-mobile.png',fullPage:false});await page.setViewportSize({width:1366,height:900});await page.screenshot({path:out+'/'+name+'-desktop.png',fullPage:false});}
+}
+}catch(e){result.error=e.message;}results.push(result);await page.close();if(results.length%20===0)console.log('Reviewed '+results.length+'/'+paths.length);}
+await context.close();}
+await Promise.all(Array.from({length:4},worker));await browser.close();fs.writeFileSync(out+'/results.json',JSON.stringify(results,null,2));console.log(JSON.stringify({pages:results.length,axePages:results.filter(r=>r.axe).length,errors:results.filter(r=>r.error||r.errors?.length||r.missing?.length||r.brokenImages?.length).map(r=>({url:r.url,error:r.error,errors:r.errors,missing:r.missing,brokenImages:r.brokenImages})),axe:results.filter(r=>r.axe?.length).map(r=>({url:r.url,rules:r.axe.map(a=>a.id+':'+a.nodes.length)})),overflow:results.filter(r=>r.mobile?.scrollWidth>392).map(r=>({url:r.url,...r.mobile})),missingTextSize:results.filter(r=>!r.textSize).map(r=>r.url)},null,2));})();

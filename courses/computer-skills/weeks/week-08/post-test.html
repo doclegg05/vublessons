@@ -1042,6 +1042,8 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/shared/assessment-pairing.css">
+  <script src="/shared/assessment-pairing.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -1095,7 +1097,7 @@
         <div class="topic-list">
           <h3>Topics Covered (All 8 Weeks)</h3>
           <ul>
-            <li>VA Online Services (VA.gov, MyHealtheVet)</li>
+            <li>VA Online Services (VA.gov, My HealtheVet on VA.gov)</li>
             <li>Windows Tips & Productivity (shortcuts, windows, screenshots)</li>
             <li>Email Productivity (Gmail)</li>
             <li>Microsoft Word & Excel</li>
@@ -1113,6 +1115,8 @@
           <p id="instructorError" role="alert" style="color:var(--danger);margin-top:.5rem" hidden>Please enter your instructor's name to begin.</p>
         </div>
 
+        <section id="assessmentPairing" class="assessment-pairing" aria-label="Choose a pre-test comparison"></section>
+
         <button class="btn-start" id="btnStart">Begin Final Assessment →</button>
       </div>
     </div>
@@ -1129,7 +1133,7 @@
         </ul>
         <p class="important">
           🎉 This is your moment to shine! Show what you've learned over the past 8 weeks.
-          Your results will be compared to your pre-test to show your improvement!
+          If you confirm your own pre-test attempt, your report will include a comparison of the two scores.
         </p>
       </div>
 
@@ -1223,6 +1227,7 @@
         <div class="report-score-detail" id="reportScoreDetail">0 of 20 correct</div>
       </div>
 
+      <p id="reportPairingNote"></p>
       <div class="report-comparison" id="reportComparison">
         <h3>Course Progress Comparison</h3>
         <div class="report-comparison-scores">
@@ -1272,7 +1277,7 @@
       {
         id: 1,
         category: "VA Online Services",
-        question: "What is MyHealtheVet primarily used for?",
+        question: "What is My HealtheVet on VA.gov primarily used for?",
         options: [
           { letter: "A", text: "Filing disability claims" },
           { letter: "B", text: "Managing health care, messaging doctors, and refilling prescriptions" },
@@ -1296,7 +1301,7 @@
       {
         id: 3,
         category: "VA Online Services",
-        question: "In MyHealtheVet, how do you contact your doctor without calling?",
+        question: "In My HealtheVet on VA.gov, how do you contact your doctor without calling?",
         options: [
           { letter: "A", text: "Post on social media" },
           { letter: "B", text: "Send a regular email" },
@@ -1546,19 +1551,7 @@
 
     // Initialize Quiz
     function init() {
-      // Try to load pre-test results from localStorage
-      try {
-        const saved = localStorage.getItem('vub_pretest_results');
-        if (saved) {
-          preTestResults = JSON.parse(saved);
-          // Pre-fill name if available
-          if (preTestResults.name) {
-            participantInput.value = preTestResults.name;
-          }
-        }
-      } catch(e) {
-        console.log('Could not load pre-test results');
-      }
+      window.assessmentPairing = VUBAssessmentPairing({ preKey: 'vub_pretest_results', postKey: 'vub_posttest_results' });
 
       renderQuestions();
       renderQuestionDots();
@@ -1670,6 +1663,7 @@
         return;
       }
 
+      preTestResults = window.assessmentPairing.getConfirmed();
       startSection.classList.add('hidden');
       quizSection.classList.add('active');
       progressContainer.style.display = 'flex';
@@ -1743,6 +1737,7 @@
 
     // Submit Quiz
     function submitQuiz() {
+      preTestResults = window.assessmentPairing.getConfirmed();
       if (Object.keys(answers).length < questions.length) {
         alert('Please answer all questions before submitting.');
         return;
@@ -1799,7 +1794,8 @@
         }
         comparisonBox.style.display = 'block';
       } else {
-        comparisonBox.style.display = 'none';
+        comparisonBox.innerHTML = '<h3>No pre-test comparison</h3><p>No pre-test attempt was confirmed as yours. Your post-test score stands on its own. Your instructor can compare your saved reports.</p>';
+        comparisonBox.style.display = 'block';
       }
 
       // Score Breakdown
@@ -1839,7 +1835,8 @@
         score: overallPercentage,
         answers: answers,
         categories: categories,
-        preTestScore: preTestResults ? preTestResults.score : null
+        preTestScore: preTestResults ? preTestResults.score : null,
+        preTestAttempt: preTestResults
       };
       console.log('Post-Test Results:', results);
 
@@ -1860,7 +1857,8 @@
         percentage: overallPercentage,
         categories: categories,
         answers: answers,
-        preTestScore: preTestResults ? preTestResults.score : null
+        preTestScore: preTestResults ? preTestResults.score : null,
+        preTestAttempt: preTestResults
       };
     }
 
@@ -1881,6 +1879,7 @@
         `${results.totalCorrect} of ${results.totalQuestions} correct`;
 
       // Populate comparison section
+      document.getElementById('reportPairingNote').textContent = results.preTestAttempt ? 'Compared with the pre-test you confirmed: ' + results.preTestAttempt.name + ' · ' + (results.preTestAttempt.date || 'date unavailable') + '.' : 'No pre-test comparison: no attempt was confirmed as yours.';
       const reportComparison = document.getElementById('reportComparison');
       if (results.preTestScore !== null) {
         const improvement = results.percentage - results.preTestScore;

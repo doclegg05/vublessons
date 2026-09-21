@@ -993,7 +993,7 @@
         <div class="topic-list">
           <h3>Topics Covered</h3>
           <ul>
-            <li>VA Online Services (VA.gov, MyHealtheVet)</li>
+            <li>VA Online Services (VA.gov, My HealtheVet on VA.gov)</li>
             <li>Windows Tips & Productivity</li>
             <li>Email Productivity</li>
             <li>Microsoft Word & Excel</li>
@@ -1150,7 +1150,7 @@
       {
         id: 2,
         category: "VA Online Services",
-        question: "What is MyHealtheVet primarily used for?",
+        question: "What is My HealtheVet on VA.gov primarily used for?",
         options: [
           { letter: "A", text: "Filing disability claims" },
           { letter: "B", text: "Managing health care - messaging doctors, refilling prescriptions, viewing records" },
@@ -1661,6 +1661,7 @@
         instructor: instructorName,
         date: new Date().toLocaleDateString(),
         score: overallPercentage,
+        timestamp: new Date().toISOString(),
         answers: answers,
         categories: categories
       };
