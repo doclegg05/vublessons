@@ -149,3 +149,18 @@ The importer, natural-pacing allocator and aligner accept an optional `week-NN` 
 The research and teaching rationale are in `research/video-teaching-redesign.md`. The curriculum and scheduled contact time remain unchanged; show chapters within the planned demonstrations and use the scheduled lab time for paused practice.
 
 The expanded-video quality gate passes 75 browser tests. `capture-video-review.py` captures each exported chapter; `capture-video-chapters.cjs` records desktop/mobile navigation and its accessibility scan. See `VALIDATION.md` for current evidence and the distinction between technical audio checks and listening judgment.
+
+## Expressive narration revision
+
+The latest narration pass uses the same Britt voice and teaching words with
+chapter-specific V3 performance direction. See `EXPRESSIVE-NARRATION.md` and
+`video/digital-literacy-2/elevenlabs-britt-v3-expressive/` for prompts, actual
+per-take settings, source hashes, and unprompted transcription checks. The
+original `elevenlabs-britt-v3-deep` receipts remain historical provenance.
+
+Use `import-elevenlabs-narration.py --profile expressive`, followed by natural
+pacing measurement, word alignment, a normal `build-media.py` run, and
+`build-pages.py`. Do not use visual-only mode after changing audio. Screen-share
+cursor actions, captions, scene windows, and chapter links must all be rebuilt
+from the new word timings before rendering. The prior screen-share-only
+audio-preservation report does not apply to this intentional narration change.

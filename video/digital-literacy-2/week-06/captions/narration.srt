@@ -1,559 +1,559 @@
 1
-00:00:00,450 --> 00:00:03,870
+00:00:00,450 --> 00:00:04,510
 Think about a list you already use:
 contacts, places to
 
 2
-00:00:03,870 --> 00:00:07,810
+00:00:04,510 --> 00:00:08,870
 visit, or resources for a community
 activity. We will turn
 
 3
-00:00:07,810 --> 00:00:10,930
+00:00:08,870 --> 00:00:12,230
 a fictional resource list into a small
 browser app that
 
 4
-00:00:10,930 --> 00:00:15,390
+00:00:12,230 --> 00:00:16,310
 helps someone find an entry. Your
 experience with lists gives
 
 5
-00:00:15,390 --> 00:00:18,230
+00:00:16,310 --> 00:00:19,250
 you a useful starting point for deciding
 whether the result
 
 6
-00:00:18,230 --> 00:00:22,390
+00:00:19,250 --> 00:00:22,850
 makes sense. You do not need to become a
 professional
 
 7
-00:00:22,390 --> 00:00:26,490
+00:00:22,850 --> 00:00:27,010
 programmer today. You will practice
 directing a build, checking
 
 8
-00:00:26,490 --> 00:00:30,710
+00:00:27,010 --> 00:00:31,610
 what it does, and making one controlled
 improvement. The first
 
 9
-00:00:30,710 --> 00:00:34,510
+00:00:31,610 --> 00:00:35,550
 version has one page, a search field, a
 category filter,
 
 10
-00:00:35,070 --> 00:00:39,110
+00:00:36,090 --> 00:00:39,910
 and readable results. Keep the records
 fictional so the work
 
 11
-00:00:39,110 --> 00:00:42,490
+00:00:39,910 --> 00:00:43,550
 can be shared and tested without exposing
 anyone's private information.
 
 12
-00:00:44,633 --> 00:00:48,193
+00:00:45,746 --> 00:00:49,186
 A website can present information for
 people to read. A
 
 13
-00:00:48,193 --> 00:00:51,753
+00:00:49,186 --> 00:00:52,726
 web app responds to input, such as
 filtering our resource
 
 14
-00:00:51,753 --> 00:00:56,333
+00:00:52,726 --> 00:00:57,026
 list. Software as a service usually
 provides an ongoing hosted
 
 15
-00:00:56,333 --> 00:01:00,993
+00:00:57,026 --> 00:01:01,446
 service and may include accounts, stored
 data, subscriptions, and
 
 16
-00:01:00,993 --> 00:01:05,493
+00:01:01,446 --> 00:01:05,686
 operational support. Our one-file practice
 app is not all of
 
 17
-00:01:05,493 --> 00:01:09,573
+00:01:05,686 --> 00:01:09,226
 that. It has no real account system,
 private database, or
 
 18
-00:01:09,573 --> 00:01:13,353
+00:01:09,226 --> 00:01:12,966
 payment service. This distinction helps
 you ask for an achievable
 
 19
-00:01:13,353 --> 00:01:18,073
+00:01:12,966 --> 00:01:17,106
 first version. A convincing sign-in screen
 does not prove secure
 
 20
-00:01:18,073 --> 00:01:22,273
+00:01:17,106 --> 00:01:21,166
 authentication exists behind it. Start by
 describing the useful
 
 21
-00:01:22,273 --> 00:01:26,153
+00:01:21,166 --> 00:01:24,506
 behavior you can actually test in the
 browser, then treat
 
 22
-00:01:26,153 --> 00:01:30,313
+00:01:24,506 --> 00:01:28,726
 hosting, security, and service operations
 as separate decisions
 
 23
-00:01:30,313 --> 00:01:31,893
+00:01:28,726 --> 00:01:30,146
 that require more work.
 
 24
-00:01:33,761 --> 00:01:37,921
+00:01:31,925 --> 00:01:36,385
 HTML describes the content and structure:
 a heading, a labeled
 
 25
-00:01:37,921 --> 00:01:42,461
+00:01:36,385 --> 00:01:40,785
 search field, and a list of resources. CSS
 controls how
 
 26
-00:01:42,461 --> 00:01:46,761
+00:01:40,785 --> 00:01:45,025
 those parts are arranged and displayed.
 JavaScript responds to input,
 
 27
-00:01:47,001 --> 00:01:51,741
+00:01:45,345 --> 00:01:48,865
 such as deciding which records match a
 search. Think of
 
 28
-00:01:51,741 --> 00:01:55,021
+00:01:48,865 --> 00:01:51,845
 a familiar form: the questions and fields
 are its structure,
 
 29
-00:01:55,861 --> 00:01:58,761
+00:01:52,565 --> 00:01:55,465
 their presentation helps you read them,
 and the rules determine
 
 30
-00:01:58,761 --> 00:02:02,041
+00:01:55,465 --> 00:01:58,925
 what happens when you use it. The analogy
 is a
 
 31
-00:02:02,041 --> 00:02:05,761
+00:01:58,925 --> 00:02:03,025
 starting point, not a complete description
 of software. Open the
 
 32
-00:02:05,761 --> 00:02:08,841
+00:02:03,025 --> 00:02:06,185
 supplied starter in the browser and
 identify a visible example
 
 33
-00:02:08,841 --> 00:02:12,321
+00:02:06,185 --> 00:02:10,005
 of each part. Changing a heading is
 different from changing
 
 34
-00:02:12,321 --> 00:02:13,881
+00:02:10,005 --> 00:02:11,945
 the rule that filters the list.
 
 35
-00:02:15,783 --> 00:02:20,843
+00:02:13,855 --> 00:02:18,775
 Define success in terms someone else can
 observe. First, searching
 
 36
-00:02:20,843 --> 00:02:25,523
+00:02:18,775 --> 00:02:23,175
 for library should show the fictional
 Community library entry. Second,
 
 37
-00:02:25,823 --> 00:02:29,863
+00:02:23,435 --> 00:02:26,935
 searching for an unmatched term should
 show a clear no-results
 
 38
-00:02:29,863 --> 00:02:34,283
+00:02:26,935 --> 00:02:31,955
 message. Third, the controls should work
 with the keyboard. Add
 
 39
-00:02:34,283 --> 00:02:37,383
+00:02:31,955 --> 00:02:34,875
 a check for different letter cases and a
 narrow screen.
 
 40
-00:02:37,943 --> 00:02:41,543
+00:02:35,595 --> 00:02:39,035
 These are acceptance checks: statements
 about behavior that help
 
 41
-00:02:41,543 --> 00:02:45,023
+00:02:39,035 --> 00:02:42,855
 you decide whether the result is usable.
 Avoid a requirement
 
 42
-00:02:45,023 --> 00:02:48,363
+00:02:42,855 --> 00:02:46,295
 such as make it amazing, because it does
 not explain
 
 43
-00:02:48,363 --> 00:02:51,923
+00:02:46,295 --> 00:02:50,435
 what to test. Pause and write three checks
 for a
 
 44
-00:02:51,923 --> 00:02:55,283
+00:02:50,435 --> 00:02:55,155
 small app idea of your own. Ask a partner
 whether
 
 45
-00:02:55,283 --> 00:02:58,503
+00:02:55,155 --> 00:02:58,295
 they could carry out each check without
 guessing what you meant.
 
 46
-00:03:00,290 --> 00:03:04,150
+00:03:00,103 --> 00:03:03,663
 A useful prompt describes the user, the
 task, the controls,
 
 47
-00:03:04,790 --> 00:03:09,010
+00:03:04,223 --> 00:03:08,043
 the data boundaries, and the checks. For
 example: build one
 
 48
-00:03:09,010 --> 00:03:13,090
+00:03:08,043 --> 00:03:12,463
 local HTML page that searches fictional
 community resources by name
 
 49
-00:03:13,090 --> 00:03:18,110
+00:03:12,463 --> 00:03:17,163
 and category. Include labeled fields,
 visible keyboard focus, a
 
 50
-00:03:18,110 --> 00:03:22,910
+00:03:17,163 --> 00:03:21,423
 no-results message, and no external
 dependencies. Keep all example
 
 51
-00:03:22,910 --> 00:03:27,730
+00:03:21,423 --> 00:03:24,623
 records fictional and explain how to run
 the file. Ask
 
 52
-00:03:27,730 --> 00:03:30,450
+00:03:24,623 --> 00:03:27,303
 the AI to describe the important parts so
 you can
 
 53
-00:03:30,450 --> 00:03:33,810
+00:03:27,303 --> 00:03:30,903
 inspect its work. Do not put passwords or
 private API
 
 54
-00:03:33,810 --> 00:03:37,270
+00:03:30,903 --> 00:03:34,043
 keys into the prompt or the browser code.
 People can
 
 55
-00:03:37,270 --> 00:03:40,750
+00:03:34,043 --> 00:03:37,263
 inspect code delivered to their browser. A
 longer prompt is
 
 56
-00:03:40,750 --> 00:03:44,290
+00:03:37,263 --> 00:03:40,663
 not automatically better; each instruction
 should clarify behavior
 
 57
-00:03:44,290 --> 00:03:45,950
+00:03:40,663 --> 00:03:42,143
 or a boundary you can verify.
 
 58
-00:03:47,978 --> 00:03:51,438
+00:03:44,122 --> 00:03:47,442
 Use the instructor-approved tool if one is
 available, or begin
 
 59
-00:03:51,438 --> 00:03:55,238
+00:03:47,442 --> 00:03:51,002
 with the supplied starter. Save the file
 with its HTML
 
 60
-00:03:55,238 --> 00:03:59,018
+00:03:51,002 --> 00:03:54,622
 extension and open it in the browser.
 Confirm that the
 
 61
-00:03:59,018 --> 00:04:04,938
+00:03:54,622 --> 00:03:59,262
 heading, search field, filter, and results
 appear. Keep this first
 
 62
-00:04:04,938 --> 00:04:09,138
+00:03:59,262 --> 00:04:04,722
 working version before asking for changes.
 If no AI account
 
 63
-00:04:09,138 --> 00:04:12,418
+00:04:04,722 --> 00:04:07,822
 is available, you can still complete the
 exercise with a
 
 64
-00:04:12,418 --> 00:04:16,418
+00:04:07,822 --> 00:04:11,422
 plain-text editor: change the heading and
 one fictional resource,
 
 65
-00:04:17,138 --> 00:04:20,838
+00:04:11,942 --> 00:04:15,362
 save the file, and refresh the browser. Be
 careful that
 
 66
-00:04:20,838 --> 00:04:24,818
+00:04:15,362 --> 00:04:19,242
 the editor has not silently added a
 text-file extension. The
 
 67
-00:04:24,818 --> 00:04:27,818
+00:04:19,242 --> 00:04:22,382
 goal is a working result you can explain,
 not evidence
 
 68
-00:04:27,818 --> 00:04:30,678
+00:04:22,382 --> 00:04:25,082
 that you used a particular paid service or
 model.
 
 69
-00:04:32,647 --> 00:04:35,487
+00:04:26,934 --> 00:04:29,754
 Type library into the search field and
 compare the result
 
 70
-00:04:35,487 --> 00:04:39,387
+00:04:29,754 --> 00:04:33,514
 with your first acceptance check. Then
 enter an unmatched term
 
 71
-00:04:39,387 --> 00:04:43,027
+00:04:33,514 --> 00:04:37,254
 such as zzz. The page should explain that
 there are
 
 72
-00:04:43,027 --> 00:04:46,567
+00:04:37,254 --> 00:04:40,554
 no matching resources rather than
 appearing broken or showing an
 
 73
-00:04:46,567 --> 00:04:50,547
+00:04:40,554 --> 00:04:44,954
 old result. Clear the field and try
 LIBRARY in uppercase.
 
 74
-00:04:51,767 --> 00:04:55,707
+00:04:45,594 --> 00:04:49,534
 If the intended behavior is a
 case-insensitive search, it should
 
 75
-00:04:55,707 --> 00:04:59,187
+00:04:49,534 --> 00:04:52,894
 find the same record. Next combine the
 search with a
 
 76
-00:04:59,187 --> 00:05:03,147
+00:04:52,894 --> 00:04:57,054
 category filter and inspect whether both
 conditions apply. Record
 
 77
-00:05:03,147 --> 00:05:07,387
+00:04:57,054 --> 00:05:02,414
 expected and actual results separately. A
 confident statement from
 
 78
-00:05:07,387 --> 00:05:10,447
+00:05:02,414 --> 00:05:06,154
 the AI is not test evidence. The evidence
 is what
 
 79
-00:05:10,447 --> 00:05:13,287
+00:05:06,154 --> 00:05:09,254
 happened when you carried out a named
 check on the saved file.
 
 80
-00:05:15,227 --> 00:05:17,887
+00:05:11,023 --> 00:05:13,723
 Set the mouse aside and move through the
 controls with
 
 81
-00:05:17,887 --> 00:05:22,167
+00:05:13,723 --> 00:05:18,423
 the keyboard. Can you see which control
 has focus? Can
 
 82
-00:05:22,167 --> 00:05:26,187
+00:05:18,423 --> 00:05:22,023
 you enter a search and operate the filter?
 Narrow the
 
 83
-00:05:26,187 --> 00:05:30,067
+00:05:22,023 --> 00:05:25,763
 browser window and check that labels,
 results, and buttons remain
 
 84
-00:05:30,067 --> 00:05:34,147
+00:05:25,763 --> 00:05:30,423
 readable without important content being
 cut off. Then ask where
 
 85
-00:05:34,147 --> 00:05:38,687
+00:05:30,423 --> 00:05:33,843
 the data lives. In our starter, fictional
 records are inside
 
 86
-00:05:38,687 --> 00:05:43,147
+00:05:33,843 --> 00:05:38,023
 the file. Browser storage, if added later,
 may remain only
 
 87
-00:05:43,147 --> 00:05:45,987
+00:05:38,023 --> 00:05:40,983
 in that browser and may be cleared; it is
 not
 
 88
-00:05:45,987 --> 00:05:49,927
+00:05:40,983 --> 00:05:46,103
 automatically a shared database or a
 backup. Test persistence rather
 
 89
-00:05:49,927 --> 00:05:54,507
+00:05:46,103 --> 00:05:50,443
 than assuming it. Use the course's
 existing text-size and accessibility
 
 90
-00:05:54,507 --> 00:05:57,547
+00:05:50,443 --> 00:05:53,023
 habits as standards for the app you build.
 
 91
-00:05:59,316 --> 00:06:03,516
+00:05:54,810 --> 00:05:59,670
 Suppose the uppercase search failed. A
 useful revision request names
 
 92
-00:06:03,516 --> 00:06:08,016
+00:05:59,670 --> 00:06:04,710
 the observed problem, the expected
 behavior, and the check: LIBRARY
 
 93
-00:06:08,016 --> 00:06:12,816
+00:06:04,710 --> 00:06:10,090
 returns no result, but library returns
 Community library; make both
 
 94
-00:06:12,816 --> 00:06:16,196
+00:06:10,090 --> 00:06:13,530
 searches match the same entry and preserve
 the category filter.
 
 95
-00:06:17,216 --> 00:06:20,376
+00:06:14,630 --> 00:06:18,670
 Save the revised version under a distinct
 name. Repeat the
 
 96
-00:06:20,376 --> 00:06:25,516
+00:06:18,670 --> 00:06:22,870
 failed check, then repeat a check that
 previously passed. This
 
 97
-00:06:25,516 --> 00:06:29,196
+00:06:22,870 --> 00:06:26,410
 second step can reveal a regression, where
 fixing one behavior
 
 98
-00:06:29,196 --> 00:06:32,776
+00:06:26,410 --> 00:06:31,250
 breaks another. If the new version is
 worse, return to
 
 99
-00:06:32,776 --> 00:06:36,336
+00:06:31,250 --> 00:06:36,210
 the saved working version. Pause and make
 one small improvement
 
 100
-00:06:36,336 --> 00:06:39,556
+00:06:36,210 --> 00:06:39,830
 or repair. Keep a brief test log so a
 partner
 
 101
-00:06:39,556 --> 00:06:42,435
+00:06:39,830 --> 00:06:42,490
 can follow what changed and why you trust
 it.
 
 102
-00:06:43,985 --> 00:06:46,185
+00:06:44,193 --> 00:06:46,633
 Show a partner the saved app and carry out
 your
 
 103
-00:06:46,185 --> 00:06:50,445
+00:06:46,633 --> 00:06:50,973
 three acceptance checks. Explain one part
 of the page, one
 
 104
-00:06:50,445 --> 00:06:55,565
+00:06:50,973 --> 00:06:54,953
 change you made, and one limitation that
 remains. A local
 
 105
-00:06:55,565 --> 00:06:58,625
+00:06:54,953 --> 00:06:58,613
 fictional prototype can be a successful
 learning result without
 
 106
-00:06:58,625 --> 00:07:03,365
+00:06:58,613 --> 00:07:02,293
 being ready to operate a public service.
 Hosting is a
 
 107
-00:07:03,365 --> 00:07:07,305
+00:07:02,293 --> 00:07:06,113
 separate choice. A real service handling
 accounts, private data,
 
 108
-00:07:07,305 --> 00:07:11,845
+00:07:06,493 --> 00:07:10,593
 or payments needs appropriate security,
 access controls, support,
 
 109
-00:07:12,445 --> 00:07:16,305
+00:07:10,773 --> 00:07:14,953
 and testing beyond this exercise. Do not
 treat a decorative
 
 110
-00:07:16,305 --> 00:07:20,685
+00:07:14,953 --> 00:07:19,353
 sign-in form as protection. Carry forward
 the method you practiced:
 
 111
-00:07:20,685 --> 00:07:25,285
+00:07:20,073 --> 00:07:23,993
 define a small task, give clear
 instructions, inspect the result,
 
 112
-00:07:26,145 --> 00:07:28,925
+00:07:24,733 --> 00:07:27,653
 test more than the easiest path, and keep
 a way
 
 113
-00:07:28,925 --> 00:07:30,165
+00:07:27,653 --> 00:07:28,953
 back when you revise it.

@@ -1,553 +1,553 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "1c2f725967adccc721f8c6ec2c320352728e752950ebade029cdc0ed2ccc2321",
+  "wavSha256": "c5c0ab9bc80de6ed36257d283a6b7b62c60f2aaffbc9f1edcdc11a1bdb4acf57",
   "textSha256": "c9fd939a812b6f391f7850fa163c726feb14fa785f5aeb21240121016fd4f4b7",
   "matchRatio": 1.0,
   "words": [
     {
       "word": "Picture",
       "start": 0.0,
-      "end": 0.26
+      "end": 0.34
     },
     {
       "word": "a",
-      "start": 0.26,
-      "end": 0.42
+      "start": 0.34,
+      "end": 0.48
     },
     {
       "word": "radio",
-      "start": 0.42,
-      "end": 0.74
+      "start": 0.48,
+      "end": 0.86
     },
     {
       "word": "connected",
-      "start": 0.74,
-      "end": 1.12
+      "start": 0.86,
+      "end": 1.28
     },
     {
       "word": "to",
-      "start": 1.12,
-      "end": 1.4
+      "start": 1.28,
+      "end": 1.58
     },
     {
       "word": "headphones.",
-      "start": 1.4,
-      "end": 1.62
+      "start": 1.58,
+      "end": 2.0
     },
     {
       "word": "Turning",
-      "start": 2.28,
-      "end": 2.5
+      "start": 2.78,
+      "end": 3.08
     },
     {
       "word": "up",
-      "start": 2.5,
-      "end": 2.72
+      "start": 3.08,
+      "end": 3.28
     },
     {
       "word": "the",
-      "start": 2.72,
-      "end": 2.84
+      "start": 3.28,
+      "end": 3.42
     },
     {
       "word": "radio",
-      "start": 2.84,
-      "end": 3.1
+      "start": 3.42,
+      "end": 3.72
     },
     {
       "word": "does",
-      "start": 3.1,
-      "end": 3.36
+      "start": 3.72,
+      "end": 3.98
     },
     {
       "word": "not",
-      "start": 3.36,
-      "end": 3.56
+      "start": 3.98,
+      "end": 4.24
     },
     {
       "word": "make",
-      "start": 3.56,
-      "end": 3.84
+      "start": 4.24,
+      "end": 4.54
     },
     {
       "word": "the",
-      "start": 3.84,
-      "end": 4.0
+      "start": 4.54,
+      "end": 4.72
     },
     {
       "word": "room",
-      "start": 4.0,
-      "end": 4.18
+      "start": 4.72,
+      "end": 4.9
     },
     {
       "word": "speaker",
-      "start": 4.18,
-      "end": 4.52
+      "start": 4.9,
+      "end": 5.22
     },
     {
       "word": "play",
-      "start": 4.52,
-      "end": 5.0
+      "start": 5.22,
+      "end": 5.64
     },
     {
       "word": "if",
-      "start": 5.0,
-      "end": 5.36
+      "start": 5.64,
+      "end": 5.94
     },
     {
       "word": "the",
-      "start": 5.36,
-      "end": 5.5
+      "start": 5.94,
+      "end": 6.06
     },
     {
       "word": "sound",
-      "start": 5.5,
-      "end": 5.82
+      "start": 6.06,
+      "end": 6.32
     },
     {
       "word": "is",
-      "start": 5.82,
-      "end": 6.0
+      "start": 6.32,
+      "end": 6.48
     },
     {
       "word": "still",
-      "start": 6.0,
-      "end": 6.2
+      "start": 6.48,
+      "end": 6.7
     },
     {
       "word": "going",
-      "start": 6.2,
-      "end": 6.5
+      "start": 6.7,
+      "end": 7.0
     },
     {
       "word": "to",
-      "start": 6.5,
-      "end": 6.68
+      "start": 7.0,
+      "end": 7.18
     },
     {
       "word": "the",
-      "start": 6.68,
-      "end": 6.78
+      "start": 7.18,
+      "end": 7.3
     },
     {
       "word": "headphones.",
-      "start": 6.78,
-      "end": 7.12
+      "start": 7.3,
+      "end": 7.62
     },
     {
       "word": "A",
-      "start": 7.8,
-      "end": 7.86
+      "start": 8.38,
+      "end": 8.58
     },
     {
       "word": "computer",
-      "start": 7.86,
-      "end": 8.16
+      "start": 8.58,
+      "end": 8.96
     },
     {
       "word": "can",
-      "start": 8.16,
-      "end": 8.5
+      "start": 8.96,
+      "end": 9.22
     },
     {
       "word": "work",
-      "start": 8.5,
-      "end": 8.7
+      "start": 9.22,
+      "end": 9.42
     },
     {
       "word": "the",
-      "start": 8.7,
-      "end": 8.88
+      "start": 9.42,
+      "end": 9.6
     },
     {
       "word": "same",
-      "start": 8.88,
-      "end": 9.1
+      "start": 9.6,
+      "end": 9.84
     },
     {
       "word": "way.",
-      "start": 9.1,
-      "end": 9.38
+      "start": 9.84,
+      "end": 10.24
     },
     {
       "word": "First",
-      "start": 10.06,
-      "end": 10.06
-    },
-    {
-      "word": "check",
-      "start": 10.1,
-      "end": 10.48
-    },
-    {
-      "word": "whether",
-      "start": 10.48,
-      "end": 10.76
-    },
-    {
-      "word": "the",
-      "start": 10.76,
+      "start": 10.74,
       "end": 10.96
     },
     {
-      "word": "sound",
+      "word": "check",
       "start": 10.96,
-      "end": 11.26
+      "end": 11.28
+    },
+    {
+      "word": "whether",
+      "start": 11.28,
+      "end": 11.52
+    },
+    {
+      "word": "the",
+      "start": 11.52,
+      "end": 11.78
+    },
+    {
+      "word": "sound",
+      "start": 11.78,
+      "end": 12.08
     },
     {
       "word": "is",
-      "start": 11.26,
-      "end": 11.44
+      "start": 12.08,
+      "end": 12.24
     },
     {
       "word": "muted.",
-      "start": 11.44,
-      "end": 11.68
+      "start": 12.24,
+      "end": 12.48
     },
     {
       "word": "Then",
-      "start": 13.34,
-      "end": 13.62
+      "start": 13.06,
+      "end": 13.28
     },
     {
       "word": "inspect",
-      "start": 13.62,
-      "end": 14.12
+      "start": 13.28,
+      "end": 13.64
     },
     {
       "word": "the",
-      "start": 14.12,
-      "end": 14.42
+      "start": 13.64,
+      "end": 13.92
     },
     {
       "word": "selected",
-      "start": 14.42,
-      "end": 14.8
+      "start": 13.92,
+      "end": 14.32
     },
     {
       "word": "output",
-      "start": 14.8,
-      "end": 15.06
+      "start": 14.32,
+      "end": 14.56
     },
     {
       "word": "device:",
-      "start": 15.06,
-      "end": 15.6
+      "start": 14.56,
+      "end": 15.06
     },
     {
       "word": "speakers,",
-      "start": 15.98,
-      "end": 16.34
+      "start": 15.42,
+      "end": 15.78
     },
     {
       "word": "a",
-      "start": 16.86,
-      "end": 16.88
+      "start": 16.22,
+      "end": 16.24
     },
     {
       "word": "monitor,",
-      "start": 16.88,
-      "end": 17.18
+      "start": 16.24,
+      "end": 16.54
     },
     {
       "word": "or",
-      "start": 17.6,
-      "end": 17.7
+      "start": 17.02,
+      "end": 17.06
     },
     {
       "word": "a",
-      "start": 17.7,
-      "end": 17.8
+      "start": 17.06,
+      "end": 17.18
     },
     {
       "word": "headset.",
-      "start": 17.8,
-      "end": 18.1
+      "start": 17.18,
+      "end": 17.44
     },
     {
       "word": "Choose",
-      "start": 18.7,
-      "end": 18.74
+      "start": 18.28,
+      "end": 18.54
     },
     {
       "word": "the",
-      "start": 18.74,
-      "end": 18.96
+      "start": 18.54,
+      "end": 18.8
     },
     {
       "word": "device",
-      "start": 18.96,
-      "end": 19.28
+      "start": 18.8,
+      "end": 19.08
     },
     {
       "word": "you",
-      "start": 19.28,
-      "end": 19.52
+      "start": 19.08,
+      "end": 19.3
     },
     {
       "word": "intend",
-      "start": 19.52,
-      "end": 19.66
+      "start": 19.3,
+      "end": 19.54
     },
     {
       "word": "to",
-      "start": 19.66,
-      "end": 20.04
+      "start": 19.54,
+      "end": 19.74
     },
     {
       "word": "hear,",
-      "start": 20.04,
-      "end": 20.28
+      "start": 19.74,
+      "end": 19.96
     },
     {
       "word": "begin",
-      "start": 20.74,
-      "end": 20.94
+      "start": 20.46,
+      "end": 20.64
     },
     {
       "word": "at",
-      "start": 20.94,
-      "end": 21.18
+      "start": 20.64,
+      "end": 20.88
     },
     {
       "word": "a",
-      "start": 21.18,
-      "end": 21.22
+      "start": 20.88,
+      "end": 20.92
     },
     {
       "word": "comfortable",
-      "start": 21.22,
-      "end": 21.48
+      "start": 20.92,
+      "end": 21.24
     },
     {
       "word": "volume,",
-      "start": 21.48,
-      "end": 22.08
+      "start": 21.24,
+      "end": 21.86
     },
     {
       "word": "and",
-      "start": 22.44,
-      "end": 22.54
+      "start": 22.38,
+      "end": 22.48
     },
     {
       "word": "play",
-      "start": 22.54,
-      "end": 22.8
+      "start": 22.48,
+      "end": 22.7
     },
     {
       "word": "a",
-      "start": 22.8,
-      "end": 22.96
+      "start": 22.7,
+      "end": 22.86
     },
     {
       "word": "short",
-      "start": 22.96,
-      "end": 23.16
+      "start": 22.86,
+      "end": 23.08
     },
     {
       "word": "test.",
-      "start": 23.16,
-      "end": 23.54
+      "start": 23.08,
+      "end": 23.44
     },
     {
       "word": "If",
-      "start": 23.98,
-      "end": 24.14
+      "start": 24.1,
+      "end": 24.42
     },
     {
       "word": "that",
-      "start": 24.14,
-      "end": 24.28
+      "start": 24.42,
+      "end": 24.58
     },
     {
       "word": "test",
-      "start": 24.28,
-      "end": 24.52
+      "start": 24.58,
+      "end": 24.88
     },
     {
       "word": "works",
-      "start": 24.52,
-      "end": 24.86
+      "start": 24.88,
+      "end": 25.24
     },
     {
       "word": "but",
-      "start": 24.86,
-      "end": 25.2
+      "start": 25.24,
+      "end": 25.58
     },
     {
       "word": "a",
-      "start": 25.2,
-      "end": 25.28
+      "start": 25.58,
+      "end": 25.66
     },
     {
       "word": "meeting",
-      "start": 25.28,
-      "end": 25.5
+      "start": 25.66,
+      "end": 25.84
     },
     {
       "word": "does",
-      "start": 25.5,
-      "end": 25.76
+      "start": 25.84,
+      "end": 26.08
     },
     {
       "word": "not,",
-      "start": 25.76,
-      "end": 26.12
+      "start": 26.08,
+      "end": 26.56
     },
     {
       "word": "check",
-      "start": 26.32,
-      "end": 26.54
+      "start": 26.86,
+      "end": 27.14
     },
     {
       "word": "the",
-      "start": 26.54,
-      "end": 26.74
+      "start": 27.14,
+      "end": 27.36
     },
     {
       "word": "meeting",
-      "start": 26.74,
-      "end": 27.02
+      "start": 27.36,
+      "end": 27.62
     },
     {
       "word": "app's",
-      "start": 27.02,
-      "end": 27.48
+      "start": 27.62,
+      "end": 28.1
     },
     {
       "word": "own",
-      "start": 27.48,
-      "end": 27.74
+      "start": 28.1,
+      "end": 28.34
     },
     {
       "word": "audio",
-      "start": 27.74,
-      "end": 28.14
+      "start": 28.34,
+      "end": 28.7
     },
     {
       "word": "choice",
-      "start": 28.14,
-      "end": 28.58
+      "start": 28.7,
+      "end": 29.06
     },
     {
       "word": "next.",
-      "start": 28.58,
-      "end": 28.92
+      "start": 29.06,
+      "end": 29.36
     },
     {
       "word": "Change",
-      "start": 29.76,
-      "end": 29.76
+      "start": 30.0,
+      "end": 30.56
     },
     {
       "word": "one",
-      "start": 29.76,
-      "end": 29.98
+      "start": 30.56,
+      "end": 30.9
     },
     {
       "word": "setting",
-      "start": 29.98,
-      "end": 30.34
+      "start": 30.9,
+      "end": 31.26
     },
     {
       "word": "at",
-      "start": 30.34,
-      "end": 30.62
+      "start": 31.26,
+      "end": 31.5
     },
     {
       "word": "a",
-      "start": 30.62,
-      "end": 30.68
+      "start": 31.5,
+      "end": 31.6
     },
     {
       "word": "time.",
-      "start": 30.68,
-      "end": 31.02
+      "start": 31.6,
+      "end": 31.86
     },
     {
       "word": "This",
-      "start": 31.36,
-      "end": 31.48
+      "start": 32.42,
+      "end": 32.6
     },
     {
       "word": "gives",
-      "start": 31.48,
-      "end": 31.68
+      "start": 32.6,
+      "end": 32.82
     },
     {
       "word": "you",
-      "start": 31.68,
-      "end": 31.88
+      "start": 32.82,
+      "end": 33.0
     },
     {
       "word": "evidence",
-      "start": 31.88,
-      "end": 32.22
+      "start": 33.0,
+      "end": 33.3
     },
     {
       "word": "about",
-      "start": 32.22,
-      "end": 32.64
+      "start": 33.3,
+      "end": 33.76
     },
     {
       "word": "what",
-      "start": 32.64,
-      "end": 32.9
+      "start": 33.76,
+      "end": 34.06
     },
     {
       "word": "fixed",
-      "start": 32.9,
-      "end": 33.2
+      "start": 34.06,
+      "end": 34.36
     },
     {
       "word": "the",
-      "start": 33.2,
-      "end": 33.46
+      "start": 34.36,
+      "end": 34.6
     },
     {
       "word": "problem",
-      "start": 33.46,
-      "end": 33.82
+      "start": 34.6,
+      "end": 34.88
     },
     {
       "word": "instead",
-      "start": 33.82,
-      "end": 34.22
+      "start": 34.88,
+      "end": 35.4
     },
     {
       "word": "of",
-      "start": 34.22,
-      "end": 34.56
+      "start": 35.4,
+      "end": 35.66
     },
     {
       "word": "leaving",
-      "start": 34.56,
-      "end": 34.82
+      "start": 35.66,
+      "end": 35.86
     },
     {
       "word": "you",
-      "start": 34.82,
-      "end": 35.06
+      "start": 35.86,
+      "end": 36.12
     },
     {
       "word": "with",
-      "start": 35.06,
-      "end": 35.22
+      "start": 36.12,
+      "end": 36.26
     },
     {
       "word": "several",
-      "start": 35.22,
-      "end": 35.48
+      "start": 36.26,
+      "end": 36.54
     },
     {
       "word": "unexplained",
-      "start": 35.48,
-      "end": 35.92
+      "start": 36.54,
+      "end": 37.0
     },
     {
       "word": "changes.",
-      "start": 35.92,
-      "end": 36.72
+      "start": 37.0,
+      "end": 37.78
     }
   ]
 }

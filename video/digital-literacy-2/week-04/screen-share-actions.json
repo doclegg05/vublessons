@@ -2,8 +2,8 @@
   {
     "chapter": 4,
     "title": "Check who receives the message",
-    "startSeconds": 140.533,
-    "durationSeconds": 51.45,
+    "startSeconds": 138.305,
+    "durationSeconds": 45.947,
     "actions": [
       {
         "at": 0.0,
@@ -14,7 +14,7 @@
         "label": "Inspect every recipient before sending"
       },
       {
-        "at": 8.23,
+        "at": 7.85,
         "phrase": "Cc sends a visible copy",
         "state": 1,
         "x": 472,
@@ -22,7 +22,7 @@
         "label": "Cc is visible to the recipients"
       },
       {
-        "at": 12.65,
+        "at": 11.67,
         "phrase": "Bcc hides those recipients",
         "state": 2,
         "x": 468,
@@ -30,7 +30,7 @@
         "label": "Bcc hides addresses \u2022 it is not confidentiality"
       },
       {
-        "at": 22.07,
+        "at": 20.57,
         "phrase": "Reply all can send",
         "state": 3,
         "x": 951,
@@ -38,7 +38,7 @@
         "label": "Reply all: check the entire recipient list"
       },
       {
-        "at": 40.43,
+        "at": 36.17,
         "phrase": "Remove unnecessary recipients",
         "state": 4,
         "x": 490,
@@ -46,7 +46,7 @@
         "label": "Remove the unnecessary Cc recipient"
       },
       {
-        "at": 43.61,
+        "at": 38.75,
         "phrase": "reasonable response window",
         "state": 5,
         "x": 493,
@@ -58,8 +58,8 @@
   {
     "chapter": 6,
     "title": "Give feedback that leads to a useful change",
-    "startSeconds": 237.999,
-    "durationSeconds": 41.93,
+    "startSeconds": 229.386,
+    "durationSeconds": 38.029,
     "actions": [
       {
         "at": 0.0,
@@ -70,7 +70,7 @@
         "label": "Review the steps in one shared handout"
       },
       {
-        "at": 5.19,
+        "at": 5.03,
         "phrase": "Add the contact number",
         "state": 1,
         "x": 915,
@@ -78,7 +78,7 @@
         "label": "Suggest a location, change, and reason"
       },
       {
-        "at": 9.21,
+        "at": 8.73,
         "phrase": "identifies a location",
         "state": 2,
         "x": 1006,
@@ -86,7 +86,7 @@
         "label": "Add the specific comment"
       },
       {
-        "at": 23.03,
+        "at": 19.69,
         "phrase": "After making the edit",
         "state": 3,
         "x": 356,
@@ -94,7 +94,7 @@
         "label": "Author adds the fictional help number"
       },
       {
-        "at": 24.23,
+        "at": 20.91,
         "phrase": "acknowledge the feedback",
         "state": 4,
         "x": 946,
@@ -102,7 +102,7 @@
         "label": "Acknowledge the change and check it"
       },
       {
-        "at": 26.71,
+        "at": 23.95,
         "phrase": "Resolve a comment only",
         "state": 5,
         "x": 1021,

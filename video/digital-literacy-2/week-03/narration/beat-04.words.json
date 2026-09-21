@@ -1,543 +1,543 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "ecb196a0fbb1e592cd76970ba3872a33564bba2b9879f3659ae3ff88ce66d6a3",
+  "wavSha256": "5133cf05f5fbf8015ddad055a20546f87dbc89934fa3357ddc6314c8126eda94",
   "textSha256": "42d20b09d05797e61afe665590bf4481d02cc3127dc1929a65259d8fc5205865",
-  "matchRatio": 0.9439252336448598,
+  "matchRatio": 0.9532710280373832,
   "words": [
     {
       "word": "A",
       "start": 0.0,
-      "end": 0.12
+      "end": 0.22
     },
     {
       "word": "workbook",
-      "start": 0.12,
-      "end": 0.5
+      "start": 0.22,
+      "end": 0.68
     },
     {
       "word": "can",
-      "start": 0.5,
-      "end": 0.72
+      "start": 0.68,
+      "end": 0.9
     },
     {
       "word": "contain",
-      "start": 0.72,
-      "end": 1.1
+      "start": 0.9,
+      "end": 1.26
     },
     {
       "word": "several",
-      "start": 1.1,
-      "end": 1.48
+      "start": 1.26,
+      "end": 1.66
     },
     {
       "word": "worksheets.",
-      "start": 1.48,
-      "end": 2.3
+      "start": 1.66,
+      "end": 2.54
     },
     {
       "word": "Within",
-      "start": 2.56,
-      "end": 2.86
+      "start": 2.92,
+      "end": 3.08
     },
     {
       "word": "a",
-      "start": 2.86,
-      "end": 3.0
+      "start": 3.08,
+      "end": 3.24
     },
     {
       "word": "sheet,",
-      "start": 3.0,
-      "end": 3.22
+      "start": 3.24,
+      "end": 3.48
     },
     {
       "word": "columns",
-      "start": 3.44,
-      "end": 3.6
+      "start": 3.66,
+      "end": 3.84
     },
     {
       "word": "usually",
-      "start": 3.6,
-      "end": 4.02
+      "start": 3.84,
+      "end": 4.28
     },
     {
       "word": "have",
-      "start": 4.02,
-      "end": 4.26
-    },
-    {
-      "word": "letters,",
-      "start": 4.26,
+      "start": 4.28,
       "end": 4.56
     },
     {
+      "word": "letters,",
+      "start": 4.56,
+      "end": 4.88
+    },
+    {
       "word": "rows",
-      "start": 5.22,
-      "end": 5.36
+      "start": 5.26,
+      "end": 5.48
     },
     {
       "word": "have",
-      "start": 5.36,
-      "end": 5.62
+      "start": 5.48,
+      "end": 5.76
     },
     {
       "word": "numbers,",
-      "start": 5.62,
-      "end": 5.94
+      "start": 5.76,
+      "end": 6.16
     },
     {
       "word": "and",
-      "start": 6.34,
-      "end": 6.38
+      "start": 6.58,
+      "end": 6.62
     },
     {
       "word": "a",
-      "start": 6.38,
-      "end": 6.48
+      "start": 6.62,
+      "end": 6.74
     },
     {
       "word": "cell",
-      "start": 6.48,
-      "end": 6.7
+      "start": 6.74,
+      "end": 6.94
     },
     {
       "word": "address",
-      "start": 6.7,
-      "end": 7.18
+      "start": 6.94,
+      "end": 7.24
     },
     {
       "word": "combines",
-      "start": 7.18,
-      "end": 7.66
+      "start": 7.24,
+      "end": 7.58
     },
     {
       "word": "both.",
-      "start": 7.66,
-      "end": 8.28
+      "start": 7.58,
+      "end": 8.16
     },
     {
       "word": "B2",
-      "start": 8.8,
-      "end": 9.14
+      "start": 8.78,
+      "end": 9.04
     },
     {
       "word": "means",
-      "start": 9.14,
-      "end": 9.52
+      "start": 9.04,
+      "end": 9.36
     },
     {
       "word": "column",
-      "start": 9.52,
-      "end": 9.82
+      "start": 9.36,
+      "end": 9.72
     },
     {
       "word": "B,",
-      "start": 9.82,
-      "end": 10.28
+      "start": 9.72,
+      "end": 10.14
     },
     {
       "word": "row",
-      "start": 10.58,
-      "end": 10.84
+      "start": 10.54,
+      "end": 10.58
     },
     {
       "word": "two.",
-      "start": 10.84,
-      "end": 11.68
+      "start": 10.58,
+      "end": 11.36
     },
     {
       "word": "Our",
-      "start": 11.68,
-      "end": 11.74
+      "start": 11.36,
+      "end": 11.4
     },
     {
       "word": "fictional",
-      "start": 11.74,
-      "end": 12.08
+      "start": 11.4,
+      "end": 11.78
     },
     {
       "word": "supply",
-      "start": 12.08,
-      "end": 12.36
+      "start": 11.78,
+      "end": 12.1
     },
     {
       "word": "list",
-      "start": 12.36,
-      "end": 12.82
+      "start": 12.1,
+      "end": 12.6
     },
     {
       "word": "puts",
-      "start": 12.82,
-      "end": 13.04
+      "start": 12.6,
+      "end": 12.8
     },
     {
       "word": "item",
-      "start": 13.04,
-      "end": 13.32
+      "start": 12.8,
+      "end": 13.1
     },
     {
       "word": "names",
-      "start": 13.32,
-      "end": 13.62
+      "start": 13.1,
+      "end": 13.36
     },
     {
       "word": "in",
-      "start": 13.62,
-      "end": 13.8
+      "start": 13.36,
+      "end": 13.6
     },
     {
       "word": "column",
-      "start": 13.8,
-      "end": 14.02
+      "start": 13.6,
+      "end": 13.86
     },
     {
       "word": "A",
-      "start": 14.02,
-      "end": 14.38
+      "start": 13.86,
+      "end": 14.2
     },
     {
       "word": "and",
-      "start": 14.38,
-      "end": 14.76
+      "start": 14.2,
+      "end": 14.56
     },
     {
       "word": "dollar",
-      "start": 14.76,
-      "end": 15.08
+      "start": 14.56,
+      "end": 14.88
     },
     {
       "word": "amounts",
-      "start": 15.08,
-      "end": 15.34
+      "start": 14.88,
+      "end": 15.16
     },
     {
       "word": "in",
-      "start": 15.34,
-      "end": 15.72
+      "start": 15.16,
+      "end": 15.42
     },
     {
       "word": "column",
-      "start": 15.72,
-      "end": 15.92
+      "start": 15.42,
+      "end": 15.64
     },
     {
       "word": "B:",
-      "start": 15.92,
-      "end": 16.34
+      "start": 15.64,
+      "end": 16.06
     },
     {
       "word": "paper",
-      "start": 16.58,
-      "end": 16.88
+      "start": 16.36,
+      "end": 16.56
     },
     {
       "word": "at",
-      "start": 16.88,
-      "end": 17.04
+      "start": 16.56,
+      "end": 16.82
     },
     {
       "word": "twelve,",
-      "start": 17.04,
-      "end": 17.84
+      "start": 16.82,
+      "end": 17.68
     },
     {
       "word": "folders",
-      "start": 17.84,
-      "end": 17.88
+      "start": 17.68,
+      "end": 17.74
     },
     {
       "word": "at",
-      "start": 17.88,
-      "end": 18.24
+      "start": 17.74,
+      "end": 18.14
     },
     {
       "word": "eight,",
-      "start": 18.24,
-      "end": 18.8
+      "start": 18.14,
+      "end": 18.7
     },
     {
       "word": "and",
-      "start": 18.8,
-      "end": 18.86
+      "start": 18.7,
+      "end": 18.8
     },
     {
       "word": "pens",
-      "start": 18.86,
-      "end": 19.08
+      "start": 18.8,
+      "end": 19.0
     },
     {
       "word": "at",
-      "start": 19.08,
-      "end": 19.54
+      "start": 19.0,
+      "end": 19.28
     },
     {
       "word": "five.",
-      "start": 19.54,
-      "end": 22.26
+      "start": 19.28,
+      "end": 19.6
     },
     {
       "word": "Include",
-      "start": 22.26,
-      "end": 22.26
+      "start": 19.6,
+      "end": 20.24
     },
     {
       "word": "a",
-      "start": 22.26,
-      "end": 22.4
+      "start": 20.24,
+      "end": 20.4
     },
     {
       "word": "heading",
-      "start": 22.4,
-      "end": 22.56
+      "start": 20.4,
+      "end": 20.62
     },
     {
       "word": "that",
-      "start": 22.56,
-      "end": 22.84
+      "start": 20.62,
+      "end": 20.84
     },
     {
       "word": "explains",
-      "start": 22.84,
-      "end": 23.16
+      "start": 20.84,
+      "end": 21.12
     },
     {
       "word": "the",
-      "start": 23.16,
-      "end": 23.48
+      "start": 21.12,
+      "end": 21.4
     },
     {
       "word": "units,",
-      "start": 23.48,
-      "end": 23.96
+      "start": 21.4,
+      "end": 21.66
     },
     {
       "word": "so",
-      "start": 23.96,
-      "end": 24.06
+      "start": 22.12,
+      "end": 22.18
     },
     {
       "word": "twelve",
-      "start": 24.06,
-      "end": 24.3
+      "start": 22.18,
+      "end": 22.46
     },
     {
       "word": "is",
-      "start": 24.3,
-      "end": 24.54
+      "start": 22.46,
+      "end": 22.7
     },
     {
       "word": "clearly",
-      "start": 24.54,
-      "end": 24.84
+      "start": 22.7,
+      "end": 23.0
     },
     {
       "word": "dollars",
-      "start": 24.84,
-      "end": 25.3
+      "start": 23.0,
+      "end": 23.4
     },
     {
       "word": "rather",
-      "start": 25.3,
-      "end": 25.68
+      "start": 23.4,
+      "end": 23.76
     },
     {
       "word": "than",
-      "start": 25.68,
-      "end": 26.0
+      "start": 23.76,
+      "end": 24.04
     },
     {
       "word": "boxes.",
-      "start": 26.0,
-      "end": 26.34
+      "start": 24.04,
+      "end": 24.3
     },
     {
       "word": "Enter",
-      "start": 26.86,
-      "end": 27.04
+      "start": 25.12,
+      "end": 25.18
     },
     {
       "word": "the",
-      "start": 27.04,
-      "end": 27.2
+      "start": 25.18,
+      "end": 25.34
     },
     {
       "word": "values",
-      "start": 27.2,
-      "end": 27.52
+      "start": 25.34,
+      "end": 25.66
     },
     {
       "word": "in",
-      "start": 27.52,
-      "end": 27.74
+      "start": 25.66,
+      "end": 25.86
     },
     {
       "word": "separate",
-      "start": 27.74,
-      "end": 28.04
+      "start": 25.86,
+      "end": 26.14
     },
     {
       "word": "cells",
-      "start": 28.04,
-      "end": 28.34
+      "start": 26.14,
+      "end": 26.5
     },
     {
       "word": "instead",
-      "start": 28.34,
-      "end": 28.74
+      "start": 26.5,
+      "end": 26.86
     },
     {
       "word": "of",
-      "start": 28.74,
-      "end": 28.92
+      "start": 26.86,
+      "end": 27.08
     },
     {
       "word": "putting",
-      "start": 28.92,
-      "end": 29.16
+      "start": 27.08,
+      "end": 27.28
     },
     {
       "word": "the",
-      "start": 29.16,
-      "end": 29.32
+      "start": 27.28,
+      "end": 27.46
     },
     {
       "word": "whole",
-      "start": 29.32,
-      "end": 29.5
+      "start": 27.46,
+      "end": 27.68
     },
     {
       "word": "list",
-      "start": 29.5,
-      "end": 29.76
+      "start": 27.68,
+      "end": 27.94
     },
     {
       "word": "into",
-      "start": 29.76,
-      "end": 30.12
+      "start": 27.94,
+      "end": 28.32
     },
     {
       "word": "one",
-      "start": 30.12,
-      "end": 30.34
+      "start": 28.32,
+      "end": 28.54
     },
     {
       "word": "cell.",
-      "start": 30.34,
-      "end": 30.68
+      "start": 28.54,
+      "end": 28.86
     },
     {
       "word": "Before",
-      "start": 31.0,
-      "end": 31.16
+      "start": 29.22,
+      "end": 29.48
     },
     {
       "word": "calculating",
-      "start": 31.16,
-      "end": 31.64
+      "start": 29.48,
+      "end": 29.92
     },
     {
       "word": "anything,",
-      "start": 31.64,
-      "end": 32.3
+      "start": 29.92,
+      "end": 30.54
     },
     {
       "word": "check",
-      "start": 32.48,
-      "end": 32.68
+      "start": 30.8,
+      "end": 30.98
     },
     {
       "word": "that",
-      "start": 32.68,
-      "end": 32.9
+      "start": 30.98,
+      "end": 31.18
     },
     {
       "word": "each",
-      "start": 32.9,
-      "end": 33.1
+      "start": 31.18,
+      "end": 31.38
     },
     {
       "word": "amount",
-      "start": 33.1,
-      "end": 33.38
+      "start": 31.38,
+      "end": 31.68
     },
     {
       "word": "sits",
-      "start": 33.38,
-      "end": 33.66
+      "start": 31.68,
+      "end": 32.06
     },
     {
       "word": "beside",
-      "start": 33.66,
-      "end": 33.96
+      "start": 32.06,
+      "end": 32.46
     },
     {
       "word": "the",
-      "start": 33.96,
-      "end": 34.26
+      "start": 32.46,
+      "end": 32.68
     },
     {
       "word": "intended",
-      "start": 34.26,
-      "end": 34.42
+      "start": 32.68,
+      "end": 32.98
     },
     {
       "word": "item.",
-      "start": 34.42,
-      "end": 34.9
+      "start": 32.98,
+      "end": 33.36
     },
     {
       "word": "A",
-      "start": 35.24,
-      "end": 35.3
+      "start": 33.84,
+      "end": 33.9
     },
     {
       "word": "correct",
-      "start": 35.3,
-      "end": 35.54
+      "start": 33.9,
+      "end": 34.2
     },
     {
       "word": "formula",
-      "start": 35.54,
-      "end": 35.98
+      "start": 34.2,
+      "end": 34.64
     },
     {
       "word": "cannot",
-      "start": 35.98,
-      "end": 36.32
+      "start": 34.64,
+      "end": 35.02
     },
     {
       "word": "rescue",
-      "start": 36.32,
-      "end": 36.9
+      "start": 35.02,
+      "end": 35.46
     },
     {
       "word": "numbers",
-      "start": 36.9,
-      "end": 37.3
+      "start": 35.46,
+      "end": 35.86
     },
     {
       "word": "assigned",
-      "start": 37.3,
-      "end": 37.68
+      "start": 35.86,
+      "end": 36.26
     },
     {
       "word": "to",
-      "start": 37.68,
-      "end": 37.98
+      "start": 36.26,
+      "end": 36.58
     },
     {
       "word": "the",
-      "start": 37.98,
-      "end": 38.08
+      "start": 36.58,
+      "end": 36.64
     },
     {
       "word": "wrong",
-      "start": 38.08,
-      "end": 38.26
+      "start": 36.64,
+      "end": 36.82
     },
     {
       "word": "rows.",
-      "start": 38.26,
-      "end": 38.56
+      "start": 36.82,
+      "end": 37.1
     }
   ]
 }

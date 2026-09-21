@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T13:18:17.808Z",
+  "generatedAt": "2026-09-21T18:09:52.216Z",
   "results": [
     {
       "project": "week-01",
@@ -9,64 +9,64 @@
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-01",
-          "detail": "157 wpm outside house band 135–145",
-          "wpm": 157,
+          "detail": "165 wpm outside house band 135–145",
+          "wpm": 165,
           "words": 102
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
-          "beat": "beat-02",
-          "detail": "147 wpm outside house band 135–145",
-          "wpm": 147,
-          "words": 105
+          "beat": "beat-03",
+          "detail": "157 wpm outside house band 135–145",
+          "wpm": 157,
+          "words": 107
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-04",
-          "detail": "176 wpm outside house band 135–145",
-          "wpm": 176,
+          "detail": "172 wpm outside house band 135–145",
+          "wpm": 172,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-05",
-          "detail": "150 wpm outside house band 135–145",
-          "wpm": 150,
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
-          "beat": "beat-06",
-          "detail": "133 wpm outside house band 135–145",
-          "wpm": 133,
-          "words": 103
+          "beat": "beat-07",
+          "detail": "160 wpm outside house band 135–145",
+          "wpm": 160,
+          "words": 106
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
-          "beat": "beat-07",
-          "detail": "147 wpm outside house band 135–145",
-          "wpm": 147,
+          "beat": "beat-08",
+          "detail": "146 wpm outside house band 135–145",
+          "wpm": 146,
           "words": 106
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-09",
-          "detail": "158 wpm outside house band 135–145",
-          "wpm": 158,
+          "detail": "165 wpm outside house band 135–145",
+          "wpm": 165,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-10",
-          "detail": "160 wpm outside house band 135–145",
-          "wpm": 160,
+          "detail": "162 wpm outside house band 135–145",
+          "wpm": 162,
           "words": 111
         }
       ],
@@ -87,49 +87,73 @@
         {
           "level": "WARN",
           "check": "pace-off-house",
+          "beat": "beat-02",
+          "detail": "168 wpm outside house band 135–145",
+          "wpm": 168,
+          "words": 108
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
           "beat": "beat-03",
-          "detail": "159 wpm outside house band 135–145",
-          "wpm": 159,
+          "detail": "150 wpm outside house band 135–145",
+          "wpm": 150,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-04",
-          "detail": "168 wpm outside house band 135–145",
-          "wpm": 168,
+          "detail": "181 wpm outside house band 135–145",
+          "wpm": 181,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-05",
-          "detail": "156 wpm outside house band 135–145",
-          "wpm": 156,
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
           "words": 105
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-06",
-          "detail": "150 wpm outside house band 135–145",
-          "wpm": 150,
+          "detail": "152 wpm outside house band 135–145",
+          "wpm": 152,
           "words": 105
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
+          "beat": "beat-07",
+          "detail": "130 wpm outside house band 135–145",
+          "wpm": 130,
+          "words": 111
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-08",
+          "detail": "156 wpm outside house band 135–145",
+          "wpm": 156,
+          "words": 107
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
           "beat": "beat-09",
-          "detail": "149 wpm outside house band 135–145",
-          "wpm": 149,
+          "detail": "161 wpm outside house band 135–145",
+          "wpm": 161,
           "words": 107
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-10",
-          "detail": "134 wpm outside house band 135–145",
-          "wpm": 134,
+          "detail": "159 wpm outside house band 135–145",
+          "wpm": 159,
           "words": 103
         }
       ],
@@ -143,48 +167,40 @@
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-01",
-          "detail": "148 wpm outside house band 135–145",
-          "wpm": 148,
+          "detail": "165 wpm outside house band 135–145",
+          "wpm": 165,
           "words": 103
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-02",
-          "detail": "151 wpm outside house band 135–145",
-          "wpm": 151,
+          "detail": "167 wpm outside house band 135–145",
+          "wpm": 167,
           "words": 107
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-03",
-          "detail": "153 wpm outside house band 135–145",
-          "wpm": 153,
+          "detail": "150 wpm outside house band 135–145",
+          "wpm": 150,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-04",
-          "detail": "164 wpm outside house band 135–145",
-          "wpm": 164,
+          "detail": "171 wpm outside house band 135–145",
+          "wpm": 171,
           "words": 107
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
-          "beat": "beat-05",
-          "detail": "134 wpm outside house band 135–145",
-          "wpm": 134,
-          "words": 112
-        },
-        {
-          "level": "WARN",
-          "check": "pace-off-house",
           "beat": "beat-06",
-          "detail": "169 wpm outside house band 135–145",
-          "wpm": 169,
+          "detail": "163 wpm outside house band 135–145",
+          "wpm": 163,
           "words": 111
         },
         {
@@ -199,16 +215,16 @@
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-08",
-          "detail": "155 wpm outside house band 135–145",
-          "wpm": 155,
+          "detail": "154 wpm outside house band 135–145",
+          "wpm": 154,
           "words": 104
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-09",
-          "detail": "150 wpm outside house band 135–145",
-          "wpm": 150,
+          "detail": "153 wpm outside house band 135–145",
+          "wpm": 153,
           "words": 108
         }
       ],
@@ -221,50 +237,66 @@
         {
           "level": "WARN",
           "check": "pace-off-house",
-          "beat": "beat-01",
-          "detail": "150 wpm outside house band 135–145",
-          "wpm": 150,
-          "words": 107
+          "beat": "beat-02",
+          "detail": "147 wpm outside house band 135–145",
+          "wpm": 147,
+          "words": 114
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-03",
-          "detail": "152 wpm outside house band 135–145",
-          "wpm": 152,
+          "detail": "166 wpm outside house band 135–145",
+          "wpm": 166,
           "words": 113
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
+          "beat": "beat-04",
+          "detail": "151 wpm outside house band 135–145",
+          "wpm": 151,
+          "words": 112
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
           "beat": "beat-06",
-          "detail": "160 wpm outside house band 135–145",
-          "wpm": 160,
+          "detail": "178 wpm outside house band 135–145",
+          "wpm": 178,
           "words": 108
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-07",
-          "detail": "149 wpm outside house band 135–145",
-          "wpm": 149,
+          "detail": "159 wpm outside house band 135–145",
+          "wpm": 159,
           "words": 110
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-08",
-          "detail": "148 wpm outside house band 135–145",
-          "wpm": 148,
+          "detail": "153 wpm outside house band 135–145",
+          "wpm": 153,
           "words": 106
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-09",
-          "detail": "151 wpm outside house band 135–145",
-          "wpm": 151,
+          "detail": "158 wpm outside house band 135–145",
+          "wpm": 158,
           "words": 108
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-10",
+          "detail": "156 wpm outside house band 135–145",
+          "wpm": 156,
+          "words": 109
         }
       ],
       "takeCount": 10
@@ -273,6 +305,14 @@
       "project": "week-05",
       "dir": "/Users/brittlegg/MacDev/companies/education/vublessons/video/digital-literacy-2/week-05",
       "findings": [
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
+          "beat": "beat-01",
+          "detail": "164 wpm outside house band 135–145",
+          "wpm": 164,
+          "words": 110
+        },
         {
           "level": "WARN",
           "check": "pace-off-house",
@@ -285,16 +325,24 @@
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-03",
-          "detail": "161 wpm outside house band 135–145",
-          "wpm": 161,
+          "detail": "160 wpm outside house band 135–145",
+          "wpm": 160,
           "words": 108
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
+          "beat": "beat-04",
+          "detail": "170 wpm outside house band 135–145",
+          "wpm": 170,
+          "words": 112
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
           "beat": "beat-06",
-          "detail": "160 wpm outside house band 135–145",
-          "wpm": 160,
+          "detail": "169 wpm outside house band 135–145",
+          "wpm": 169,
           "words": 112
         },
         {
@@ -309,17 +357,17 @@
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-08",
-          "detail": "151 wpm outside house band 135–145",
-          "wpm": 151,
+          "detail": "132 wpm outside house band 135–145",
+          "wpm": 132,
           "words": 110
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
-          "beat": "beat-09",
-          "detail": "148 wpm outside house band 135–145",
-          "wpm": 148,
-          "words": 108
+          "beat": "beat-10",
+          "detail": "146 wpm outside house band 135–145",
+          "wpm": 146,
+          "words": 114
         }
       ],
       "takeCount": 10
@@ -332,65 +380,73 @@
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-01",
-          "detail": "153 wpm outside house band 135–145",
-          "wpm": 153,
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
+          "beat": "beat-02",
+          "detail": "151 wpm outside house band 135–145",
+          "wpm": 151,
+          "words": 112
+        },
+        {
+          "level": "WARN",
+          "check": "pace-off-house",
           "beat": "beat-03",
-          "detail": "157 wpm outside house band 135–145",
-          "wpm": 157,
+          "detail": "158 wpm outside house band 135–145",
+          "wpm": 158,
           "words": 106
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-04",
-          "detail": "155 wpm outside house band 135–145",
-          "wpm": 155,
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
           "words": 111
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-05",
-          "detail": "147 wpm outside house band 135–145",
-          "wpm": 147,
+          "detail": "160 wpm outside house band 135–145",
+          "wpm": 160,
           "words": 113
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-06",
-          "detail": "154 wpm outside house band 135–145",
-          "wpm": 154,
+          "detail": "161 wpm outside house band 135–145",
+          "wpm": 161,
           "words": 111
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-07",
-          "detail": "162 wpm outside house band 135–145",
-          "wpm": 162,
+          "detail": "157 wpm outside house band 135–145",
+          "wpm": 157,
           "words": 111
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
           "beat": "beat-08",
-          "detail": "154 wpm outside house band 135–145",
-          "wpm": 154,
+          "detail": "155 wpm outside house band 135–145",
+          "wpm": 155,
           "words": 109
         },
         {
           "level": "WARN",
           "check": "pace-off-house",
-          "beat": "beat-09",
-          "detail": "152 wpm outside house band 135–145",
-          "wpm": 152,
-          "words": 109
+          "beat": "beat-10",
+          "detail": "149 wpm outside house band 135–145",
+          "wpm": 149,
+          "words": 112
         }
       ],
       "takeCount": 10

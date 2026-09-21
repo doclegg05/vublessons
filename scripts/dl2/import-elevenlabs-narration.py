@@ -1,4 +1,4 @@
-import sys
+import argparse
 """Import locally saved ElevenLabs MCP takes; never request or read API credentials.
 
 Generate one raw V3 MP3 and one Voice Isolator MP3 per chapter in the
@@ -15,11 +15,19 @@ from pathlib import Path
 import soundfile as sf
 
 ROOT = Path('video/digital-literacy-2')
-LOCAL = Path.home() / 'Desktop/vub-deep-narration'
+parser = argparse.ArgumentParser()
+parser.add_argument('week', nargs='?', default='week-*')
+parser.add_argument('--profile', choices=['deep', 'expressive'], default='deep')
+args = parser.parse_args()
+LOCAL = Path.home() / f'Desktop/vub-{args.profile}-narration'
 PARAMETERS = dict(model='eleven_v3', voice='iKrofGyA12WC0e6AhZ8B',
                   voiceName='Britt - Mild Appalachian Male Voice', speed=0.95,
                   stability=0.5, similarityBoost=0.8, style=0,
                   useSpeakerBoost=False, language='en', outputFormat='mp3_44100_128')
+if args.profile == 'expressive':
+  PARAMETERS = json.loads((ROOT / 'elevenlabs-britt-v3-expressive/profile.json').read_text())
+  checks = {(c['week'], c['chapter']): c for c in json.loads(
+    (ROOT / 'elevenlabs-britt-v3-expressive/transcription-checks.json').read_text())}
 
 
 def digest(data):
@@ -28,21 +36,29 @@ def digest(data):
 
 # Validate the complete source batch before replacing any working narration.
 jobs = []
-for folder in sorted(ROOT.glob((sys.argv[1] if len(sys.argv)>1 else 'week-*')+'/narration')):
+for folder in sorted(ROOT.glob(args.week+'/narration')):
   beats = json.loads((folder / 'beats.json').read_text())
   for beat in beats:
     local = LOCAL / folder.parent.name / beat['id']
-    source_dir = ROOT / 'elevenlabs-britt-v3-deep' / folder.parent.name / beat['id']
+    source_dir = ROOT / f'elevenlabs-britt-v3-{args.profile}' / folder.parent.name / beat['id']
     raw_files = list((local / 'raw').glob('*.mp3'))
     clean_files = list((local / 'clean').glob('*.mp3'))
     if len(raw_files) != 1 or len(clean_files) != 1:
       raise RuntimeError(f'{local}: expected one raw and one isolated take')
     source = clean_files[0]
+    if args.profile == 'expressive':
+      check = checks.get((folder.parent.name, beat['id']), {})
+      if (check.get('sha256') != digest(source.read_bytes()) or
+          check.get('matchRatio', 0) < .87 or
+          not 100 <= check.get('wordsPerMinute', 0) <= 185):
+        raise RuntimeError(f'{local}: missing or unsuccessful transcription/pacing preflight')
     prompt = (local / 'prompt.txt').read_text()
     spoken = re.sub(r'\[[^]]+\]', '', prompt)
     if ' '.join(spoken.split()) != ' '.join(beat['text'].split()):
       raise RuntimeError(f'{source_dir}: prompt changes the authored narration')
-    receipt = dict(provider='ElevenLabs MCP', **PARAMETERS,
+    parameters = (json.loads((local / 'generation-settings.json').read_text())
+                  if args.profile == 'expressive' else PARAMETERS)
+    receipt = dict(provider='ElevenLabs MCP', **parameters,
                    cleanup='ElevenLabs Voice Isolator',
                    originalSha256=digest(raw_files[0].read_bytes()),
                    textSha256=digest(beat['text'].encode()),
@@ -72,7 +88,8 @@ for folder, beat, source, receipt_path, receipt, original, local in jobs:
   state = json.loads(state_path.read_text()) if state_path.exists() else {}
   mp3 = folder / (beat['id'] + '.mp3')
   shutil.copyfile(source, mp3)
-  state[beat['id']] = dict(engine='ElevenLabs', **PARAMETERS, draft=False,
+  state[beat['id']] = dict(engine='ElevenLabs', **{key: receipt[key] for key in PARAMETERS}, draft=False,
+                           performanceProfile=args.profile,
                            textSha256=receipt['textSha256'],
                            cleanup=receipt['cleanup'],
                            originalSha256=receipt['originalSha256'],

@@ -1,28 +1,30 @@
 # Final validation
 
-Disposition: **ship**. The course is built and ready for deployment review. This report does not claim a production deployment.
+Disposition: **ship**. The course is built and ready for deployment review. This report does not claim a production deployment. Current narration evidence is in `EXPRESSIVE-NARRATION.md`; the later sections preserve earlier revision reviews.
 
 | Check | Observed result |
 | --- | --- |
 | Repository quality gate | PASS, including build, links, catalog, Playwright, accessibility ratchet and readability report |
 | Site build | 193 HTML pages; four courses and 24 catalog lessons |
-| Internal links | 1,352 references checked; zero broken |
-| Browser tests | 82 passed in Chromium, including chapter navigation and enlarged mobile video controls |
+| Internal links | 1,380 references checked; zero broken |
+| Browser tests | 120 passed in Chromium, including chapter navigation and enlarged mobile video controls |
 | New course accessibility scans | Zero axe WCAG 2.1 A/AA violations on the six tested DL2 routes |
 | Workshop state accessibility | Zero axe WCAG A/AA violations across 12 initial/changed states on six representative models |
 | Existing platform accessibility ratchet | No violations beyond the committed baseline; the baseline was not expanded |
 | Dates and curriculum | All six syllabus dates present; no cohort dates on reusable course pages; six 120-minute plans; 137 slides |
 | Assessment alignment | 28 distinct pre/post items each, matched objective/domain pairs, four items in each of seven domains |
-| Sandra narration pacing | 60 final cleaned V3 takes passed, zero flagged; four flagged candidates replaced |
+| Sandra narration pacing | 60 final cleaned V3 takes passed, zero flagged; eleven candidates replaced after transcription, pronunciation, pace, or pause-artifact review |
 | Sandra draft-audio guard | Six projects passed; no draft audio or hash warnings |
-| Sandra audio/video sync | Six projects; zero failures, 44 house-pace warnings (130–176 WPM natural V3 delivery); no caption drift, cut crossing or dead-air warnings |
-| HyperFrames strict source checks | All six passed lint, runtime, layout and contrast checks; 247 text contrast checks altogether |
-| Final video delivery | Six H.264/AAC 1280×720 24fps MP4s, 79.62 MiB total; complete decode passed, no black intervals, non-silent audio, fast-start containers |
+| Sandra audio/video sync | Six projects; zero failures, 51 house-pace warnings (128–181.4 WPM measured expressive V3 delivery); no caption drift, cut crossing or dead-air warnings |
+| HyperFrames strict source checks | All six passed lint, runtime, layout and contrast checks; 254 text contrast checks altogether |
+| Final video delivery | Six H.264/AAC 1280×720 24fps MP4s, 79.21 MiB total; complete decode passed, no black intervals, non-silent audio, fast-start containers |
 | Captions | Timed against final audio; complete caption text matches every original script in order |
 | Secret scan | Gitleaks staged-change scan passed with no leaks |
 | Readability report | All six new decks below the grade-8 ceiling; report-only metric, not a teaching effectiveness claim |
 
 ## West Virginia photographic revision
+
+Historical visual-only revision: its audio-preservation statements precede the intentional expressive-narration replacement.
 
 All 137 slides and 60 video chapters have explicit change/keep mappings in `PHOTOGRAPHIC-VISUAL-PLAN.md` and its linked audits. Seven optimized photos establish relatable home/library/community scenarios; authored diagrams and fictional interfaces teach the steps. Sixty source narration WAV hashes remain unchanged. The six final videos use HyperFrames 0.8.58. Final exported frames were reviewed across all chapters; the photo-to-diagram overlap discovered during review was corrected and re-exported. Automated audio checks do not establish subjective voice quality.
 

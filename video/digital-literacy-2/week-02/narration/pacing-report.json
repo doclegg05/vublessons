@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T13:18:09.861Z",
+  "generatedAt": "2026-09-21T17:56:26.168Z",
   "project": "week-02",
   "summary": {
     "passed": 10,
@@ -10,12 +10,12 @@
       "id": "beat-01",
       "pass": true,
       "metrics": {
-        "seconds": 42.19,
-        "window": 43.694,
+        "seconds": 42.27,
+        "window": 43.787,
         "words": 105,
-        "wpm": 151,
-        "leadingSilence": 0.22,
-        "trailingSilence": 0.22,
+        "wpm": 149,
+        "leadingSilence": 0,
+        "trailingSilence": 0,
         "requestedBreaks": []
       },
       "failures": [],
@@ -25,11 +25,11 @@
       "id": "beat-02",
       "pass": true,
       "metrics": {
-        "seconds": 48.12,
-        "window": 49.616,
+        "seconds": 38.5,
+        "window": 40.025,
         "words": 108,
-        "wpm": 135,
-        "leadingSilence": 0,
+        "wpm": 169,
+        "leadingSilence": 0.16,
         "trailingSilence": 0,
         "requestedBreaks": []
       },
@@ -40,11 +40,11 @@
       "id": "beat-03",
       "pass": true,
       "metrics": {
-        "seconds": 41.14,
-        "window": 42.649,
+        "seconds": 43.62,
+        "window": 45.134,
         "words": 108,
-        "wpm": 158,
-        "leadingSilence": 0,
+        "wpm": 149,
+        "leadingSilence": 0.18,
         "trailingSilence": 0,
         "requestedBreaks": []
       },
@@ -55,10 +55,10 @@
       "id": "beat-04",
       "pass": true,
       "metrics": {
-        "seconds": 38.97,
-        "window": 40.49,
+        "seconds": 36.1,
+        "window": 37.611,
         "words": 109,
-        "wpm": 168,
+        "wpm": 181,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []
@@ -70,11 +70,11 @@
       "id": "beat-05",
       "pass": true,
       "metrics": {
-        "seconds": 40.52,
-        "window": 42.022,
+        "seconds": 42.34,
+        "window": 43.857,
         "words": 105,
-        "wpm": 155,
-        "leadingSilence": 0,
+        "wpm": 149,
+        "leadingSilence": 0.16,
         "trailingSilence": 0,
         "requestedBreaks": []
       },
@@ -85,12 +85,12 @@
       "id": "beat-06",
       "pass": true,
       "metrics": {
-        "seconds": 41.95,
-        "window": 43.462,
+        "seconds": 41.46,
+        "window": 42.974,
         "words": 103,
-        "wpm": 148,
-        "leadingSilence": 0,
-        "trailingSilence": 0.22,
+        "wpm": 150,
+        "leadingSilence": 0.17,
+        "trailingSilence": 0,
         "requestedBreaks": []
       },
       "failures": [],
@@ -100,10 +100,10 @@
       "id": "beat-07",
       "pass": true,
       "metrics": {
-        "seconds": 49.32,
-        "window": 50.823,
+        "seconds": 51.15,
+        "window": 52.657,
         "words": 109,
-        "wpm": 133,
+        "wpm": 128,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []
@@ -115,11 +115,11 @@
       "id": "beat-08",
       "pass": true,
       "metrics": {
-        "seconds": 44.98,
-        "window": 46.504,
+        "seconds": 41.14,
+        "window": 42.649,
         "words": 107,
-        "wpm": 143,
-        "leadingSilence": 0.19,
+        "wpm": 157,
+        "leadingSilence": 0.17,
         "trailingSilence": 0,
         "requestedBreaks": []
       },
@@ -130,12 +130,12 @@
       "id": "beat-09",
       "pass": true,
       "metrics": {
-        "seconds": 43.08,
-        "window": 44.577,
+        "seconds": 40.02,
+        "window": 41.535,
         "words": 107,
-        "wpm": 150,
+        "wpm": 161,
         "leadingSilence": 0,
-        "trailingSilence": 0.16,
+        "trailingSilence": 0.15,
         "requestedBreaks": []
       },
       "failures": [],
@@ -145,10 +145,10 @@
       "id": "beat-10",
       "pass": true,
       "metrics": {
-        "seconds": 46.11,
-        "window": 48.518,
+        "seconds": 38.97,
+        "window": 41.39,
         "words": 103,
-        "wpm": 134,
+        "wpm": 159,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []

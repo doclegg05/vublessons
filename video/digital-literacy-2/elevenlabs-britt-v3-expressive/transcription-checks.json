@@ -1,0 +1,1035 @@
+[
+  {
+    "week": "week-01",
+    "chapter": "beat-01",
+    "sha256": "78cb421654ee7df1a59ebb5c6bce4871af48c9afdd19077dc346ca5591f2bc74",
+    "durationSeconds": 37.105,
+    "wordsPerMinute": 164.9,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "it."
+      }
+    ],
+    "recognized": "Think about a time you needed to read a letter, hear instructions, or remember an appointment. You already know how to judge whether those everyday tools help you. We will apply that judgment to a computer. Choose one task that matters to you. Reading a library page, joining a practice call, or keeping a household reminder. You do not need to know every setting. Our goal is to choose one useful change, observe the result, and know how to undo it. it. Keep a scrap of paper nearby to record the original setting. That makes experimenting safer, especially on a shared lab computer."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-02",
+    "sha256": "f8aa80e0f86c2f69bc57996201e0772146131a6bf52bac2b70c31424509a206f",
+    "durationSeconds": 44.698,
+    "wordsPerMinute": 140.9,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Imagine the library page is difficult to read, but the computer's other menus look comfortable. Start with the browser's zoom control because the problem is inside that page. Open the browser menu, find zoom, and increase it one step. On many Windows browsers, Control and plus also zooms in. Control and zero returns to the default. Watch the page get larger. then check the important part. Can you still find the search field? Read the instructions and reach the button. Larger is useful only if the task still works. Pause the video, try one zoom step on a practice page and restore it before continuing."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-03",
+    "sha256": "059d81274f39d87b088706011839d087fd910081009adf434e3aefef7e733e9d",
+    "durationSeconds": 40.961,
+    "wordsPerMinute": 156.7,
+    "matchRatio": 0.9533,
+    "differences": [
+      {
+        "expected": "Page",
+        "recognized": "Paid"
+      },
+      {
+        "expected": "workstation's",
+        "recognized": "workstation"
+      },
+      {
+        "expected": "a",
+        "recognized": "the"
+      },
+      {
+        "expected": "Browser zoom,",
+        "recognized": "Browsersoom,"
+      }
+    ],
+    "recognized": "Now suppose the browser tabs and the rest of the desktop are also hard to see. Paid Zoom will not solve every part of that problem. System Text Size changes text in supported areas. Display scaling changes the size of text, apps, and other interface elements more broadly. The exact controls depend on your computer. Ask the instructor before changing a shared workstation system settings. This is like choosing between a magnifying glass for one page and the more comfortable arrangement for the whole desk. Which would you try first if only one website is too small? Browsersoom, because it matches the scope of the problem."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-04",
+    "sha256": "d796375e16eea357cb92b16768c6abf90f218a5e1409f5e11f7f94b7d94445ff",
+    "durationSeconds": 38.058,
+    "wordsPerMinute": 171.8,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "picture a radio connected to headphones. Turning up the radio does not make the room speaker play if the sound is still going to the headphones. A computer can work the same way. First check whether the sound is muted, then inspect the selected output device, speakers, a monitor, or a headset. Choose the device you intend to hear, begin at a comfortable volume, and play a short test. If that test works but a meeting does not, check the meeting app's own audio choice next. Change one setting at a time. This gives you evidence about what fixed the problem instead of leaving you with several unexplained changes."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-05",
+    "sha256": "fba2e17645b2fa098f0c6041455cbcc963ce44107834c543a3a46c936a28c6a9",
+    "durationSeconds": 43.979,
+    "wordsPerMinute": 148.7,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "files."
+      }
+    ],
+    "recognized": "A slow computer and a full computer are not exactly the same problem. The processor carries out instructions. Working memory holds information in active use, while storage keeps saved files. Think of a workbench and a filing cabinet. A crowded workbench and a full cabinet require different responses. Closing an unused app may reduce active workload. It does not create a reliable backup of your files. files. For connections, identify the job before choosing the cable. A display connection carries a picture, a network connection carries data, and a USB connection may carry data or power depending on the equipment. Match the labels and ask before forcing an unfamiliar connector."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-06",
+    "sha256": "87073623cf383d58f87aba80852dca30b0868ce98c5f2a4bf944700141e3b5e2",
+    "durationSeconds": 42.539,
+    "wordsPerMinute": 145.3,
+    "matchRatio": 0.9903,
+    "differences": [
+      {
+        "expected": "webpage",
+        "recognized": "web page"
+      },
+      {
+        "expected": "",
+        "recognized": "text,"
+      }
+    ],
+    "recognized": "Suppose you want one page of directions for a community event. Open Print Preview before sending anything to the printer. Check the destination first, a physical printer and save as PDF produce different results. Next, inspect the page count, orientation, and selected range. A web page may create extra pages containing menus or blank space. Choose one useful page, look for clipped text, text, and print a single test copy. Only then print more. If the printer does not respond, check its status or queue and ask for help rather than repeatedly pressing print. Repeated requests can arrive later as an unexpected stack of duplicates."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-07",
+    "sha256": "36756f47c53dd89d69e4482aff2e2f16f94ff7692f6a586afb1c4308c6b220ae",
+    "durationSeconds": 39.822,
+    "wordsPerMinute": 159.7,
+    "matchRatio": 0.9811,
+    "differences": [
+      {
+        "expected": "two",
+        "recognized": "2"
+      },
+      {
+        "expected": "three",
+        "recognized": "3"
+      },
+      {
+        "expected": "",
+        "recognized": "conflicts,"
+      }
+    ],
+    "recognized": "A paper calendar works because a short note connects a time to an action. A digital entry needs the same meaning. In our fictional example, create library practice from 2 to 3 in the afternoon, with room A as the location. Check the correct day, start time, end time, and time zone when one is shown. Add a reminder early enough to help you prepare. Day view helps inspect the details. Week view helps notice conflicts. conflicts, month view gives a wider overview. Change the view and find the same appointment again. Saving an entry is only the first step. Reopening it confirms that the details survived."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-08",
+    "sha256": "77136fbeeff9a4967449601353df639ff2d529213f883ef18acb282977f2ef90",
+    "durationSeconds": 43.584,
+    "wordsPerMinute": 143.2,
+    "matchRatio": 0.9904,
+    "differences": [
+      {
+        "expected": "Free-or-busy",
+        "recognized": "Free or busy"
+      }
+    ],
+    "recognized": "your partner needs to choose a meeting time, but does not need every detail of your calendar. Free or busy sharing can communicate that a time is occupied without exposing its title or location. Compare the two views. Your calendar contains library practice and room A. Your partner sees only busy. Before sharing, read the actual services options because not every calendar offers identical controls. Ask who needs access, what they need to know, and for how long. Pause and decide. Should someone arranging a study session automatically receive private appointment details? No. Start with availability, then share more only when the task calls for it."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-09",
+    "sha256": "8db681371f1600daf5c88756a9c5d847a0f72f69e0b46a71cd535ce6bb1f1dce",
+    "durationSeconds": 39.59,
+    "wordsPerMinute": 165.2,
+    "matchRatio": 0.9908,
+    "differences": [
+      {
+        "expected": "a",
+        "recognized": "to"
+      }
+    ],
+    "recognized": "reminders, saved browser preferences, and cloud services can save effort, but automation still needs to check. A cloud service runs on another computer and often connects your work to an account. Confirm which account is active before saving or sharing. After setting a reminder, check that notifications are allowed and that the reminder time is sensible. If you need help, use instructions from the software's official support site and match them to your version. A menu from an older version may look different. Describe the task and what happened. I selected the headset but the test sound still plays through the monitor. That is useful evidence for a helper."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-10",
+    "sha256": "10af7987a5bf99c0e60418a6d6e17b2e5f3770634d443a39e2938db6ab7a4221",
+    "durationSeconds": 41.099,
+    "wordsPerMinute": 162.0,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "work,"
+      }
+    ],
+    "recognized": "Now pause and choose one improvement that matters to your own routine. Make a practice page comfortable to read, route a test sound to the intended device, or create a fictional calendar entry. Tell a partner what you expected before you act. Then show the result and explain how to undo the change. If the result is different from your prediction, return to the original setting and try a smaller step. Before leaving, save your practice work, work, restore shared settings, and sign out of any demonstration account as directed. The skill is not memorizing every menu. It is choosing a change, checking evidence, and repeating a routine you can use elsewhere."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-01",
+    "sha256": "22ecc66d0f4f99838ebd636069079f12efb37e695eae62cf56d0124fab331593",
+    "durationSeconds": 42.237,
+    "wordsPerMinute": 149.2,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Imagine a neighbor asks where they can get help using a computer. You may already have a familiar library, community center, or veterans organization in mind. Use that experience as a starting point, then verify what is available now. Our task is to find a suitable public service, record enough evidence to revisit it, and organize a fictional handout without exposing private information. You can use a different local service that matters to you. The names and details in this demonstration are examples, not a claim about any particular organization. A useful search ends with a supported decision, not just a page that looks impressive."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-02",
+    "sha256": "695175fc8cf7bfbb9669b75e519a59b4af069d179d9e35d935beb3d77cbd1e84",
+    "durationSeconds": 38.475,
+    "wordsPerMinute": 168.4,
+    "matchRatio": 0.9907,
+    "differences": [
+      {
+        "expected": "task.",
+        "recognized": "tasks."
+      }
+    ],
+    "recognized": "Start with the words that describe your task, the kind of service, and the location. Computer help library plus your town is more useful than typing help by itself. Inspect the result title and the website address before opening it. If the results are too broad, add a specific service or location. If there are no useful results, remove one restriction rather than assuming the service does not exist. Filters can help, but they can also hide a relevant page. Pause and write a search for your chosen community tasks. Explain what each word contributes. Then change one term and compare the results instead of opening every link."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-03",
+    "sha256": "04391deddc1d2617c5e18ba158a227a41d17dc7d622d57d49d400b838bf453b5",
+    "durationSeconds": 43.584,
+    "wordsPerMinute": 148.7,
+    "matchRatio": 0.9907,
+    "differences": [
+      {
+        "expected": "Search-result",
+        "recognized": "Search results"
+      }
+    ],
+    "recognized": "A page can be accurate and still be wrong for your decision. An official library page from another town may describe a real service but not the one available to your neighbor. Ask who published the information, what evidence supports it, when it was updated, why it was written, and whether it answers your question. For opening hours or eligibility, go to the organization responsible for that service and check the details there. Search results snippets may be incomplete. Compare two pages that disagree. Do not count votes between websites. Identify which source is in a position to know and confirm uncertain details through an independently found contact method."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-04",
+    "sha256": "446d824734b8332cfa5023e05d99d16a4d3ea4ef282541b0576edfc106dd950d",
+    "durationSeconds": 36.061,
+    "wordsPerMinute": 181.4,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Suppose you find a useful service today and need it again next month. A note saying good website will not be enough. Record the organization, the page title, the web address, the date you checked it, and the particular fact you plan to use. A bookmark helps you return, but it does not freeze the page or prove that the information remains current. In your handout, distinguish a checked fact from your own interpretation. If the page does not answer a question, write needs confirmation rather than filling the gap with a guess. This is the digital equivalent of writing the source beside a number in a household notebook."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-05",
+    "sha256": "bd5012b539997c8416143c7536f73c8f3e84899b1f4aeac158f5305b797e273c",
+    "durationSeconds": 42.307,
+    "wordsPerMinute": 148.9,
+    "matchRatio": 0.8762,
+    "differences": [
+      {
+        "expected": "and",
+        "recognized": "in"
+      },
+      {
+        "expected": "does not send a real request. That distinction matters: seeing a confirmation",
+        "recognized": ""
+      }
+    ],
+    "recognized": "An online form is a structured request. Read its purpose in required fields before typing. In our course practice form, choose the kind of computer help needed and a fictional contact preference. Review the entries before selecting the final button. On a real service, ask whether a sensitive detail is necessary for the task and verify the site before entering it. Our practice message in a simulator proves that you completed the exercise, not that an organization received anything. Pause, complete the fictional form, and explain what you deliberately left out and why."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-06",
+    "sha256": "c93c556a2ee577be43540a75f2b24bc7389b7bf70acf5f5ee7b23d90dfc50f6f",
+    "durationSeconds": 41.424,
+    "wordsPerMinute": 149.2,
+    "matchRatio": 0.9903,
+    "differences": [
+      {
+        "expected": "library-help-draft.",
+        "recognized": "library -help -draft."
+      }
+    ],
+    "recognized": "Think of a folder as a labeled place to put related work. Create a practice folder for the community resource task and use a descriptive file name such as library -help -draft. A file saved on this computer may not appear on another computer. A cloud file belongs to a service and an account, and a synced folder may keep copies in more than one place. Before moving to another device, check the account and the saving or syncing status. Reopen the file from the intended location. That simple test catches a common mistake, editing one copy while later opening an older copy somewhere else."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-07",
+    "sha256": "a78eb1b7bcde1d19a8acabcfebc19b0a318f3902999180dfd7d4160230fe978e",
+    "durationSeconds": 51.107,
+    "wordsPerMinute": 128.0,
+    "matchRatio": 0.9817,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "controls."
+      },
+      {
+        "expected": "read-only",
+        "recognized": "read -only"
+      },
+      {
+        "expected": "Read-only",
+        "recognized": "Read -only"
+      }
+    ],
+    "recognized": "Our partner should suggest clearer wording without rewriting the handout directly. Viewer access usually allows reading. Commenter access, when supported, allows suggestions through comments. Editor access permits changes to the content. Choose the smallest role that fits the task, inspect the recipient carefully, and have the partner verify that the file opens with the expected controls. controls. A link that works for you may still fail for someone else. Also, distinguish read -only from encryption. Read -only limits editing. It does not necessarily prevent someone from reading or copying the information. Pause and choose a role for someone who only needs to read the finished handout. Viewer is the appropriate starting point."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-08",
+    "sha256": "66842f0017ae26aa07000a5e67287783e57699928d7b474bc07a6d492bbd4472",
+    "durationSeconds": 41.099,
+    "wordsPerMinute": 156.2,
+    "matchRatio": 0.9907,
+    "differences": [
+      {
+        "expected": "Version",
+        "recognized": "Virgin"
+      },
+      {
+        "expected": "",
+        "recognized": "attention"
+      }
+    ],
+    "recognized": "Sync is convenient because a change can travel between a device and an online service. The same convenience can carry a deletion. Watch the practice file disappear from one location and then the other. That is why Sync alone is not a separate backup. A backup provides another recovery copy under an appropriate plan. Virgin history may preserve earlier content while a recycle bin may retain a deleted file for a limited time. Availability and retention attention depend on the service. Do not test deletion with your only important file. Use the fictional copy and explain which protection would help if the mistake spread through every synced location."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-09",
+    "sha256": "587ce1976a7236293703cba9523bdbca9fdc7f88fc9447e7180f3ab1c1f6179d",
+    "durationSeconds": 39.985,
+    "wordsPerMinute": 160.6,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "First, identify the problem. If the whole file is missing after deletion, inspect the appropriate trash or recycle bin. If the file exists but it's wording changed, inspect version history. Preview the earlier version and coordinate with collaborators before restoring it. You do not want to replace useful work someone just added. Compression is a separate tool. A zip file can package several files for transfer and may reduce their size. It is not automatically encryption or a backup plan. After extracting a practice zip, open a file to confirm the contents are usable. Choose the tool that matches the problem rather than trusting a familiar icon."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-10",
+    "sha256": "afab33161e655191a26ef4d4a61404709ce079fe8e71c4b649ac3f39f779167f",
+    "durationSeconds": 38.94,
+    "wordsPerMinute": 158.7,
+    "matchRatio": 0.8932,
+    "differences": [
+      {
+        "expected": "course simulator and label it simulated. For your next independent task,",
+        "recognized": ""
+      }
+    ],
+    "recognized": "Pause and build a small resource folder for your chosen community task, include a source note, a fictional handout, and a clear file name. Tell a partner which fact you verified, why that source is appropriate, and which permission fits the review task. Then explain how you would recover a deleted file and how that differs from restoring earlier wording. If an account or sharing feature is unavailable, demonstrate the decision with the reuse this sequence. Ask a focused question, check the evidence, record a trail, organize the file, and verify access."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-01",
+    "sha256": "be674e95f436fbe667b292bf8cd636f583f6e44e05e4df3e9ce033f30ad0b57a",
+    "durationSeconds": 37.431,
+    "wordsPerMinute": 163.5,
+    "matchRatio": 0.9902,
+    "differences": [
+      {
+        "expected": "computer-help",
+        "recognized": "computer help"
+      },
+      {
+        "expected": "",
+        "recognized": "finished."
+      }
+    ],
+    "recognized": "Think about a notice, set of directions, or supply list that was easy to use. What helped you find the next step? We will apply those same practical standards to a small resource pack, a handout, a supply workbook, and three slides. Choose a fictional community activity such as a library computer help session or a neighborhood meeting. Decide who will use the material and what they need to do after reading it. A beautiful page that leaves the reader unsure is unfinished. finished. Keep that reader's task in view as we make choices about words, structure, calculations, pictures, and the final file format."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-02",
+    "sha256": "e9a9575384704d4e68a7d2fc4b2b59921b45c9cebe9556da364123afc5ffb383",
+    "durationSeconds": 38.545,
+    "wordsPerMinute": 166.6,
+    "matchRatio": 0.9907,
+    "differences": [
+      {
+        "expected": "and",
+        "recognized": "in"
+      }
+    ],
+    "recognized": "Start the handout with the service in the next action. Use a real heading style for the title and section headings, followed by short paragraphs or a numbered list when order matters. Selecting bold text changes appearance but does not necessarily identify a heading to assistive technology or a navigation pane. A numbered sequence might say, choose a task, visit the learning desk, and ask how to repeat the skill at home. Use link text that names the destination instead of Click here. Read the document in order without relying on color or position alone. Does it still make sense? That is a useful first accessibility check."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-03",
+    "sha256": "0a1188c776df26eedf1fc71dca04c48b1253cb54db998bfe04df7578afd346a3",
+    "durationSeconds": 43.514,
+    "wordsPerMinute": 150.3,
+    "matchRatio": 0.9725,
+    "differences": [
+      {
+        "expected": "Tracked changes",
+        "recognized": "Track to change is"
+      },
+      {
+        "expected": "where",
+        "recognized": "or"
+      }
+    ],
+    "recognized": "Select a short piece of text before changing it and check what the selection includes. Common shortcuts such as copy, paste, save, and undo can reduce repeated mouse work. Your instructor can show the keys for your computer. Practice on a copy so a mistake is easy to reverse. When reviewing someone else's document, a comment asks a question or suggests an improvement. Track to change is record proposed edits for review or the application supports them. They are not the same as silently replacing the text. Pause and propose one specific improvement to the handout. Explain the reader's problem it solves, then let the author decide whether to accept it."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-04",
+    "sha256": "22ca0a965dc68759c4207f6c37bebe86ef2c9ddcac8df9efba777aca499614d5",
+    "durationSeconds": 37.5,
+    "wordsPerMinute": 171.2,
+    "matchRatio": 0.9533,
+    "differences": [
+      {
+        "expected": "two.",
+        "recognized": "2."
+      },
+      {
+        "expected": "twelve,",
+        "recognized": "12,"
+      },
+      {
+        "expected": "eight,",
+        "recognized": "8,"
+      },
+      {
+        "expected": "five.",
+        "recognized": "5."
+      },
+      {
+        "expected": "twelve",
+        "recognized": "12"
+      },
+      {
+        "expected": "",
+        "recognized": "Well,"
+      }
+    ],
+    "recognized": "A workbook can contain several worksheets. Within a sheet, columns usually have letters, rows have numbers, and a cell address combines both. B2 means column B, row 2. Our fictional supply list puts item names in column A and dollar amounts in column B. Paper at 12, folders at 8, and pens at 5. Include a heading that explains the units, so 12 is clearly dollars rather than boxes. Enter the values in separate cells instead of putting the whole list into one cell. Well, before calculating anything, check that each amount sits beside the intended item. A correct formula cannot rescue numbers assigned to the wrong rows."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-05",
+    "sha256": "9595480ea943e78b35f42be28e5e47072223268c9bc37a4b2e2e4873a2e4b22c",
+    "durationSeconds": 46.719,
+    "wordsPerMinute": 140.0,
+    "matchRatio": 0.945,
+    "differences": [
+      {
+        "expected": "twenty-five dollars.",
+        "recognized": "$25."
+      },
+      {
+        "expected": "twelve",
+        "recognized": "12"
+      },
+      {
+        "expected": "fifteen.",
+        "recognized": "15."
+      },
+      {
+        "expected": "twenty-eight",
+        "recognized": "28"
+      },
+      {
+        "expected": "twenty-five,",
+        "recognized": "25,"
+      }
+    ],
+    "recognized": "Select a total cell outside the three input cells and enter equals sum, followed by the range B2 through B4 in parentheses. The colon means include the cells from the first address through the last. The expected total is $25. Now change paper from 12 to 15. The total should become 28 because the formula refers to the cells, not to a permanently typed answer. If it stays at 25, inspect the formula and range. Did you type the total manually? Did the range omit a cell? Pause and predict the result before changing a value. Then compare the observed total with your prediction and correct any mismatch."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-06",
+    "sha256": "167e0a01fa9c188347d3e481b3d4ec70281cba75fea32cab678c9c1c27c6a03a",
+    "durationSeconds": 40.797,
+    "wordsPerMinute": 163.2,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "a chart should help someone see a relationship in the checked data. To compare the three supply costs, select the item labels and their values. Then choose a simple bar or column chart. Give it a meaningful title and make the dollar units clear. Check that the labels still match their bars. A large bar should represent the larger value, not merely a brighter color. After changing the paper cost, confirm that the chart follows the updated cells. If a chart looks surprising, return to the table before decorating it. Keep the table available so a reader can inspect exact amounts and understand the information without relying only on the graphic."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-07",
+    "sha256": "23898cdb0dc0c8dcf98a8deda529172768435df0aaacc63acf479205bfb49674",
+    "durationSeconds": 42.075,
+    "wordsPerMinute": 149.7,
+    "matchRatio": 0.9905,
+    "differences": [
+      {
+        "expected": "three-slide",
+        "recognized": "three -slide"
+      },
+      {
+        "expected": "",
+        "recognized": "problems."
+      },
+      {
+        "expected": "",
+        "recognized": "equivalent"
+      }
+    ],
+    "recognized": "For a three -slide presentation, use the first slide to name the useful task, the second to demonstrate the key steps, and the third to show the next action. Prefer a relevant picture or diagram to a paragraph copied from the handout. Keep text large and explain unfamiliar terms aloud. Cropping removes outer parts of an image from the view. Resizing changes its displayed dimensions. Those actions solve different problems. problems. Preserve the original file before experimenting and check that a crop has not removed information the viewer needs. If an image carries meaning, provide an equivalent equivalent explanation or alternative text in the format you are using."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-08",
+    "sha256": "63f8931af3f54585252744c1600e22f83ea4d4edc853a3cd3f5f4b150f674ad5",
+    "durationSeconds": 40.472,
+    "wordsPerMinute": 154.2,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "A useful instructional clip has a clear beginning, an understandable action, and a visible result. Trimming removes unwanted material at the start or end. Splitting allows you to work with sections inside a clip, such as removing a long, unrelated interruption. Watch both sides of an edit. Did it cut off the first syllable, or remove the step that explains the result? Keep speech intelligible and check captions against the final audio after editing. Captions from an earlier version may drift. You do not need elaborate effects. The goal is for another person to follow the action, pause when needed, and understand what changed."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-09",
+    "sha256": "87df96ef1f146b79a04b835703d1ada6e93585fa450f3f9a5a24dda3fde4dc5b",
+    "durationSeconds": 42.237,
+    "wordsPerMinute": 153.4,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Decide what the next person needs to do. An editable document supports revision. A PDF often preserves a finished layout for viewing or printing. A CSV carries plain table data but does not preserve a workbook's full formatting and formula behavior. Keep the editable original as well as the export. Reopen the exported file and inspect the page breaks, labels, links, and important values. If you reused someone else's image or wording, check the permission or license and provide the required credit. Finding an image in a search result does not automatically give you permission to reuse it. Use original or appropriately licensed material for the practice pack."
+  },
+  {
+    "week": "week-03",
+    "chapter": "beat-10",
+    "sha256": "68fb3f67d8ee89a5a332262bc23a3f7c9a0dd26bbc3abd641ed374b807016d3d",
+    "durationSeconds": 46.788,
+    "wordsPerMinute": 141.1,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Pause and ask a partner to use your resource pack without your explanation first. Can they identify the next action on the handout? Can they find the total and explain what changed when one cost changed? Can they tell what each slide contributes? Record one point of confusion and revise it. Then reopen the export and repeat the affected check. This is useful evidence of learning. The document has structure, the calculation responds correctly, and another reader can act on the result. Carry the same routine into a household budget, a community notice, or another task you choose. Create for a reader, test the result, and keep a recoverable original."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-01",
+    "sha256": "71842996e4865ebe2481575cd9d70e66e2d8f9fdb265e5dda4559f9b893b2852",
+    "durationSeconds": 46.138,
+    "wordsPerMinute": 137.8,
+    "matchRatio": 0.9906,
+    "differences": [
+      {
+        "expected": "computer-help",
+        "recognized": "computer help"
+      },
+      {
+        "expected": "",
+        "recognized": "success."
+      },
+      {
+        "expected": "",
+        "recognized": "full"
+      }
+    ],
+    "recognized": "Think of a group task you have helped organize, a family gathering, a volunteer activity, or a meeting. Confusion often begins when people assume someone else knows what to do. We will coordinate a fictional community computer help session using a clear message, one shared handout, and an agreed review process. success. You can connect the example to a group you know without entering real members information. The goal is not to send more messages. It is to help the right person take the right next action. By the end, you should be able to choose a channel, request useful full feedback and verify the decision everyone will follow."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-02",
+    "sha256": "f51234cc4a0f96f5257dcc386a9a73015f2ddc74c59e5d3964c91c30d06fd792",
+    "durationSeconds": 46.556,
+    "wordsPerMinute": 145.6,
+    "matchRatio": 0.9912,
+    "differences": [
+      {
+        "expected": "private-looking",
+        "recognized": "private -looking"
+      }
+    ],
+    "recognized": "A live conversation can help resolve an urgent misunderstanding, while a written message can preserve details for someone who responds later. A shared document is useful when several people must work on the same content. Choose the channel by the task, timing, and audience. Check which account you are using before posting or sending. A personal account and an organization account may have different audiences, permissions, and expectations. Do not assume that a private -looking group makes every detail appropriate to share. Pause and choose a channel for a partner who cannot meet today but needs to review tomorrow's handout. A clear written request with the shared document gives them a useful starting point."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-03",
+    "sha256": "fae80e1ab02542e38533202cc48b6beeaba195b8f24f5e9136bc9f07ab6635d0",
+    "durationSeconds": 40.961,
+    "wordsPerMinute": 164.1,
+    "matchRatio": 0.9821,
+    "differences": [
+      {
+        "expected": "computer-help",
+        "recognized": "computer help"
+      },
+      {
+        "expected": "contact",
+        "recognized": "context"
+      }
+    ],
+    "recognized": "Our subject line is review the computer help handout. The message says which section needs attention, what kind of feedback would help, and when a response is useful. For example, please comment on whether the context section is clear before our next practice session. That is more actionable than please look at this. Use respectful, direct language, and explain abbreviations the reader may not know. Attach or link the intended file, then check that it is the correct version. Read the message once from the recipient's point of view. Could they act without asking what you meant? In this course, draft the message with fictional information. You do not need to send it."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-04",
+    "sha256": "2766fbad7f1920d38da655d71bfe45b1ad2bc22d304b57654da09ef9ead94e79",
+    "durationSeconds": 44.397,
+    "wordsPerMinute": 151.4,
+    "matchRatio": 0.9911,
+    "differences": [
+      {
+        "expected": "To",
+        "recognized": "Two"
+      }
+    ],
+    "recognized": "before sending a real email inspect every recipient field. Two usually identifies the main recipients. CC sends a visible copy to people who need to be informed. BCC hides those recipient's addresses from the other recipients, but it does not make the message confidential or stop someone from forwarding it. Reply all can send your response to more people than you intended. Check whether everyone needs that response. Timing also matters. A late message with an immediate deadline may be difficult for others to act on. Pause and review your fictional draft. Remove unnecessary recipients and give the partner a reasonable response window. Clear communication includes both the content and its destination."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-05",
+    "sha256": "4443d9fec2a122373c2805e13062d57c10ff0156fc8124a6278adaa5d326bb10",
+    "durationSeconds": 43.584,
+    "wordsPerMinute": 144.5,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Imagine three people editing three separate handouts and calling each one final. It becomes difficult to know which instructions to use. Instead, agree where the common copy lives and what each person is responsible for. The owner coordinates the final decision, the writer drafts, and the reviewer suggests improvements. Give each person access appropriate to that task and verify that the link opens for them. Working together at the same time is synchronous collaboration. Leaving comments for later is asynchronous collaboration. Neither is automatically better. Choose the arrangement that fits people's schedules and the decision needed, then record the agreed outcome in the shared place."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-06",
+    "sha256": "67a44679f56f1b83f76ea9b64e2c24105d97f54099e4082be81a2c69de9ac36f",
+    "durationSeconds": 36.479,
+    "wordsPerMinute": 177.6,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "Clear."
+      }
+    ],
+    "recognized": "Compare two comments. This is confusing, gives the writer little to act on. Add the contact number after the steps so readers can find help, identifies a location, a change, and a reason. The writer can accept the idea, ask a clarifying question, or explain another choice. Discuss the work rather than judging the person. After making the edit, acknowledge the feedback and check the revised document. Resolve a comment only when the issue has been addressed or an alternative decision is clear. Clear. Pause and write one useful comment on the fictional handout. Have a partner explain the change they think you are requesting before they make it."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-07",
+    "sha256": "8f113c56f8def2c2a37b450d5c8b3f96503f575dfc6ee7bbcb7f3a0c2fa567b8",
+    "durationSeconds": 41.588,
+    "wordsPerMinute": 157.3,
+    "matchRatio": 0.9908,
+    "differences": [
+      {
+        "expected": "raise-hand",
+        "recognized": "raise hand"
+      }
+    ],
+    "recognized": "Before a practice meeting, select and test the intended speaker and microphone. Check the apps controls rather than assuming the computer's general settings tell the whole story. Mute when appropriate and use the agreed chat or raise hand control to contribute. A webinar may give the host more control over who can speak than a small meeting does. Follow the events instructions and ask before recording. If captions are available and helpful, turn them on. Ask for clarification when a term is unfamiliar. If the connection fails, use the agreed backup plan, such as reading the shared notes afterward. Preparation reduces the amount of meeting time spent guessing about controls."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-08",
+    "sha256": "02c89cea409bb58d6d5031d281a8ec809a201bfbd4ce483594346be7d1c00b26",
+    "durationSeconds": 41.588,
+    "wordsPerMinute": 152.9,
+    "matchRatio": 0.9906,
+    "differences": [
+      {
+        "expected": "A",
+        "recognized": "The"
+      },
+      {
+        "expected": "",
+        "recognized": "familiar"
+      }
+    ],
+    "recognized": "The community page can be useful for finding an event or asking a question, but members posts are not automatically verified service information. Read the community's purpose and rules, observe how people ask for help, and contribute respectfully. For eligibility, opening hours, or official requirements, check the responsible organization through its known website or contact method. Keep private details out of a public question. If someone suggests an unfamiliar familiar service, record what needs confirmation before acting. You already use judgment when accepting advice in person. Bring that same habit online, consider who is speaking, what they can know, and where the claim can be checked independently."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-09",
+    "sha256": "cb730c47b7ab5328258d979124e3fed2dc386801253af2ba55ee0deea0f28c5f",
+    "durationSeconds": 40.961,
+    "wordsPerMinute": 155.3,
+    "matchRatio": 0.9528,
+    "differences": [
+      {
+        "expected": "then twelve dollars",
+        "recognized": "than $12"
+      },
+      {
+        "expected": "one-time",
+        "recognized": "one -time"
+      },
+      {
+        "expected": "in-app",
+        "recognized": "in -app"
+      }
+    ],
+    "recognized": "A fictional offer says, free trial today than $12 each month, before accepting identify what is being purchased, a physical good, a one -time service, or a continuing subscription. Check the amount due now, future charges, renewal timing, cancellation conditions, and the seller's identity. A small in -app purchase can still cost real money, and several small purchases can add up. A familiar logo or a professional page is not proof that every offer is suitable. Our practice ends with explaining the decision. No purchase or payment details are required. Pause and name the fact you would need if the future price or cancellation method were missing."
+  },
+  {
+    "week": "week-04",
+    "chapter": "beat-10",
+    "sha256": "d8153fe2a87dedb961c65fb8ddbfdb3efd7eb3da46b2fd737ec05a0ac7dbdc50",
+    "durationSeconds": 41.912,
+    "wordsPerMinute": 156.0,
+    "matchRatio": 0.9908,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "outcome."
+      },
+      {
+        "expected": "clearer",
+        "recognized": "clear"
+      }
+    ],
+    "recognized": "Complete the fictional coordination task with a partner. Draft the request, choose the recipient's and access role, propose a useful comment, and record the final decision in one shared place. Switch roles so both people practice explaining and checking. Then review the subscription example and state what you would verify before committing money. Judge success by observable results. The partner knows what to do, can open the right file, and understands the agreed outcome. outcome. For a group task from your own life, choose one habit to transfer. It might be a clear subject, fewer recipients, one common copy, or a written decision that prevents the next round of confusion."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-01",
+    "sha256": "d0ccc31229fdf02b4de712ba631cda0a6c8ad0936dd38f711e2d5e935515d3d9",
+    "durationSeconds": 40.217,
+    "wordsPerMinute": 164.1,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Think about how you handle an unexpected request in everyday life. You might ask who is asking, why they need something, and how you can check the story. Those habits are valuable online too. In this lesson, we will examine a fictional urgent message, compare different protections for a file, and choose permissions that fit a task. You do not need to identify every kind of attack by name. You need a repeatable decision process, pause, inspect the evidence, verify independently, and choose an action that limits risk. Use fictional examples throughout. There is no reason to open a suspicious link or expose a private account to complete the practice."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-02",
+    "sha256": "5876536ccb4859389e1f609b490a9752b3d4f8cb0dcd3b0a6c69885ed2b8212b",
+    "durationSeconds": 43.514,
+    "wordsPerMinute": 151.7,
+    "matchRatio": 0.9909,
+    "differences": [
+      {
+        "expected": "screen-free",
+        "recognized": "screen -free"
+      }
+    ],
+    "recognized": "A workable setup supports attention as well as visibility, adjust the chair, screen position, text size, and sound to suit the task and your comfort following the lab's arrangements. Take a screen -free break when needed. People differ in what they find helpful. Do not assume one text size or pace suits everyone. Captions, clear labels, keyboard access, and instructions that do not rely on color can help many learners. These are examples of designing for a wider range of users rather than treating access as an afterthought. Pause and choose one control in this course that makes the work easier for you. Explain the benefit in terms of your task."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-03",
+    "sha256": "774f376cf9faa1564fb9ed63386bc180c74d97d78319e53d2e447e78e09196c1",
+    "durationSeconds": 40.472,
+    "wordsPerMinute": 160.1,
+    "matchRatio": 0.9907,
+    "differences": [
+      {
+        "expected": "sender",
+        "recognized": "center"
+      },
+      {
+        "expected": "",
+        "recognized": "usual."
+      }
+    ],
+    "recognized": "Our fictional message says, your service will stop unless you act immediately through a link. The urgency is a reason to slow down, not proof that the request is genuine. Look at what the center wants you to do, reveal a password, provide a payment, open an attachment, or follow an unfamiliar link. A convincing name or logo can be copied. Even a message from a familiar account deserves a check when the request is unusual. usual. Avoid trying to prove safety by clicking the link. Instead, describe the claim in plain language. Someone says I must provide information immediately. That helps you separate the pressure from the evidence."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-04",
+    "sha256": "a4e5bbd7c2654c2b1fd5b296b714c2c98e7a020feca83b6650ff7958dd742d3e",
+    "durationSeconds": 39.59,
+    "wordsPerMinute": 169.7,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "shared,"
+      }
+    ],
+    "recognized": "Open the organization's known website yourself. Use a saved bookmark you trust, or find its contact details independently. Do not use the suspicious message's phone number as your independent check. Ask whether the claimed issue exists and what action, if any, is needed. If you already acted, stop further interaction and contact the appropriate official support channel promptly. In the lab, tell the instructor what happened. The exact recovery steps depend on what was shared. shared, pause and choose between replying to the message for reassurance and checking through a known route. The known route is stronger because it does not let the original sender supply all the evidence for its own claim."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-05",
+    "sha256": "f0facae2d7302ff1955d37dac875d1a5b721727ce933c2aafe6c7218fbdd0cf1",
+    "durationSeconds": 45.999,
+    "wordsPerMinute": 139.6,
+    "matchRatio": 0.9813,
+    "differences": [
+      {
+        "expected": "read-only.",
+        "recognized": "Read -Only."
+      },
+      {
+        "expected": "",
+        "recognized": "encrypted."
+      },
+      {
+        "expected": "edits,",
+        "recognized": ""
+      }
+    ],
+    "recognized": "Imagine a document labeled Read -Only. That may prevent ordinary editing, but the content can still be readable. Encryption addresses a different question. Can someone understand the data without the required key or authorized access? A password can protect different actions depending on the application, so do not assume every password prompt means the file is encrypted. encrypted. Inspect what the feature actually promises. In our diagram, a readable file becomes protected data that requires a key. That does not remove the need to manage who can access an unlocked device or account. Pause and explain which protection fits preventing accidental and which addresses readable data being exposed."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-06",
+    "sha256": "bf0121688b4225c04fab1ed6029effda53314c0d1cf24d10ba05c65c869ce9a0",
+    "durationSeconds": 39.753,
+    "wordsPerMinute": 167.5,
+    "matchRatio": 0.991,
+    "differences": [
+      {
+        "expected": "instructor-approved",
+        "recognized": "instructor -approved"
+      }
+    ],
+    "recognized": "A USB drive found in a parking lot might look like an ordinary storage device. You cannot determine that it is safe by its appearance or by the label written on it. Do not plug it into your computer to discover its owner. Give it to authorized staff and follow the organization's procedure. The same general habit applies to unfamiliar attachments or unexpected software prompts. Stop and verify the purpose before opening or installing. This is not about avoiding every useful tool. It is about making the source and task clear before granting a device or file a path into your system. Use only the instructor -approved fictional examples for this exercise."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-07",
+    "sha256": "50147379550151ab5f92c1acdb1a384ce1a9279836743098754fbe8599e0a899",
+    "durationSeconds": 41.262,
+    "wordsPerMinute": 161.4,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "appropriate."
+      }
+    ],
+    "recognized": "A video meeting may need a camera and microphone, but a simple text page normally has no reason to use them. When a permission prompt appears, identify which app is asking and what task you are trying to complete. Grant access only when the request fits that task and you trust the application. Deny an unrelated request, then review the setting later if a legitimate feature needs it. After a meeting, check the app's state and review permissions when appropriate. appropriate. A permission decision is not permanent approval of everything an app might do. Pause and compare our two examples. Explain why a meeting and a text page lead to different choices."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-08",
+    "sha256": "0797672b06e7a92b1a8ceb9562e09267d71a8f3ff0952160b0463af15533da9d",
+    "durationSeconds": 49.993,
+    "wordsPerMinute": 132.0,
+    "matchRatio": 0.9909,
+    "differences": [
+      {
+        "expected": "wellbeing.",
+        "recognized": "well -being."
+      }
+    ],
+    "recognized": "Safety also includes the way an online interaction affects your attention and well -being. Catfishing uses a false identity to build trust. A friendly conversation does not by itself verify the person's story. Fear of missing out can encourage repeated checking of alerts even when you intended to do something else. Choose notification settings and breaks that support your own goals. If a post or interaction becomes harmful, avoid escalating it. Use the services reporting or blocking tools when appropriate and seek help from a trusted person or the relevant support channel. You do not have to solve every problem alone or continue a conversation because someone pressures you to respond."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-09",
+    "sha256": "12bf769f96ceaab8d025d120a6e0eb202e5281ef903104aeab571669fc82b266",
+    "durationSeconds": 47.346,
+    "wordsPerMinute": 136.9,
+    "matchRatio": 0.9907,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "answer"
+      },
+      {
+        "expected": "wants.",
+        "recognized": "once."
+      }
+    ],
+    "recognized": "Here is a new fictional scenario. A message claiming to represent a community service asks for a private code before it will confirm an appointment. Pause the video and state three things, what evidence you have, what remains unverified, and what you would do next. A strong response identifies the unusual request, avoids sharing the code, and checks the appointment through a known contact method. It does not rely only on spelling mistakes or how professional the message looks. Ask a partner to explain a different scenario using the same process. If you disagree, discuss the evidence behind each choice rather than guessing what answer answer the instructor once."
+  },
+  {
+    "week": "week-05",
+    "chapter": "beat-10",
+    "sha256": "3eb4f11f01e60b32f3068c369d5d5a20307a124a504548ba69582af1cc704e4a",
+    "durationSeconds": 46.788,
+    "wordsPerMinute": 144.9,
+    "matchRatio": 0.9912,
+    "differences": [
+      {
+        "expected": "post-test,",
+        "recognized": "post test,"
+      }
+    ],
+    "recognized": "Before the post test, review the skills you can demonstrate, adjust a setting and check it, justify a source, choose file access, test a calculation, and communicate a clear next step. Complete the assessment independently, then use its explanations to identify a useful practice task. A classroom score is one piece of evidence, not a judgment about your ability to learn and not a certification result. Keep the saved report if it helps you plan. Choose one skill to repeat with less help and one situation from your own routine where it would be useful. Confidence grows from being able to explain and repeat a successful process, including knowing when to ask for support."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-01",
+    "sha256": "42663cd88f4af0dcc15dfbaca676c825010b1e9fd229fc405ae60aae210325a2",
+    "durationSeconds": 43.746,
+    "wordsPerMinute": 149.5,
+    "matchRatio": 0.9908,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "is"
+      },
+      {
+        "expected": "a",
+        "recognized": "the"
+      }
+    ],
+    "recognized": "Think about a list you already use, contacts, places to visit, or resources for a community activity. We will turn a fictional resource list into a small browser app that helps someone find an entry. Your experience with lists gives you a useful starting point for deciding whether the result makes sense. You do not need to become a professional programmer today. You will practice is directing the build, checking what it does, and making one controlled improvement. The first version has one page, a search field, a category filter, and readable results. Keep the records fictional so the work can be shared and tested without exposing anyone's private information."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-02",
+    "sha256": "4be36250edc7b821e92002c3d294a07bb18c153a79ac3755f732391921a8cf5d",
+    "durationSeconds": 44.629,
+    "wordsPerMinute": 147.9,
+    "matchRatio": 0.9727,
+    "differences": [
+      {
+        "expected": "one-file",
+        "recognized": "one -file"
+      },
+      {
+        "expected": "A",
+        "recognized": "The"
+      },
+      {
+        "expected": "sign-in",
+        "recognized": "sign -in"
+      }
+    ],
+    "recognized": "A website can present information for people to read. A web app responds to input, such as filtering our resource list. Software as a service usually provides an ongoing hosted service and may include accounts, stored data, subscriptions, and operational support. Our one -file practice app is not all of that. It has no real account system, private database, or payment service. This distinction helps you ask for an achievable first version. The convincing sign -in screen does not prove secure authentication exists behind it. Start by describing the useful behavior you can actually test in the browser. Then treat hosting, security, and service operations as separate decisions that require more work."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-03",
+    "sha256": "51cc8371bd337d53fd0e289d81c0d3579f494f744f150dac30f29a6078b31562",
+    "durationSeconds": 40.38,
+    "wordsPerMinute": 157.5,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "it."
+      }
+    ],
+    "recognized": "HTML describes the content and structure, a heading, a labeled search field, and a list of resources. CSS controls how those parts are arranged and displayed. JavaScript responds to input, such as deciding which records match a search. Think of a familiar form. The questions and fields are its structure. Their presentation helps you read them, and the rules determine what happens when you use it. it. The analogy is a starting point, not a complete description of software. Open the supplied starter in the browser and identify a visible example of each part. Changing a heading is different from changing the rule that filters the list."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-04",
+    "sha256": "24ebedafdf9b6767b0d93524b274b62e7911e1cdedb972464f09cf1a88fd0f70",
+    "durationSeconds": 44.698,
+    "wordsPerMinute": 147.7,
+    "matchRatio": 0.9818,
+    "differences": [
+      {
+        "expected": "no-results",
+        "recognized": "no results"
+      },
+      {
+        "expected": "acceptance",
+        "recognized": "exceptions"
+      }
+    ],
+    "recognized": "Define success in terms someone else can observe. First, searching for library should show the fictional community library entry. Second, searching for an unmatched term should show a clear, no results message. Third, the controls should work with the keyboard. Add a check for different letter cases and a narrow screen. These are exceptions checks, statements about behavior that help you decide whether the result is usable. Avoid a requirement such as make it amazing because it does not explain what to test. Pause and write three checks for a small app idea of your own. Ask a partner whether they could carry out each check without guessing what you meant."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-05",
+    "sha256": "74a0c8350ed8f92182dba340bc41e25ee4dd620dc585f9c4c9251fde633153aa",
+    "durationSeconds": 42.469,
+    "wordsPerMinute": 158.2,
+    "matchRatio": 0.9911,
+    "differences": [
+      {
+        "expected": "no-results",
+        "recognized": "no results"
+      },
+      {
+        "expected": "",
+        "recognized": "work."
+      }
+    ],
+    "recognized": "A useful prompt describes the user, the task, the controls, the data boundaries, and the checks. For example, build one local HTML page that searches fictional community resources by name and category. Include labeled fields, visible keyboard focus, a no results message, and no external dependencies. Keep all example records fictional and explain how to run the file. Ask the AI to describe the important parts so you can inspect its work. work. Do not put passwords or private API keys into the prompt or the browser code. People can inspect code delivered to their browser. A longer prompt is not automatically better. Each instruction should clarify behavior or a boundary you can verify."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-06",
+    "sha256": "b02e39ea369f222b0ccf8e393fd15290f333ba6576d3115b5bd7bb2dd2d117b4",
+    "durationSeconds": 41.262,
+    "wordsPerMinute": 157.0,
+    "matchRatio": 0.963,
+    "differences": [
+      {
+        "expected": "instructor-approved",
+        "recognized": "instructor -approved"
+      },
+      {
+        "expected": "the",
+        "recognized": "a"
+      },
+      {
+        "expected": "plain-text",
+        "recognized": "plain text editor."
+      },
+      {
+        "expected": "text-file",
+        "recognized": "text file"
+      },
+      {
+        "expected": "",
+        "recognized": "paid"
+      }
+    ],
+    "recognized": "Use the instructor -approved tool if one is available or begin with a supplied starter. Save the file with its HTML extension and open it in the browser. Confirm that the heading, search field, filter, and results appear. Keep this first working version before asking for changes. If no AI account is available, you can still complete the exercise with a plain text editor. editor. Change the heading and one fictional resource, save the file, and refresh the browser. Be careful that the editor has not silently added a text file extension. The goal is a working result you can explain, not evidence that you used a particular paid paid service or model."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-07",
+    "sha256": "e97de86e9cca6223f31555de3933c2558f0e7a66f6217592fd9f346f0ad2fa7c",
+    "durationSeconds": 42.539,
+    "wordsPerMinute": 155.2,
+    "matchRatio": 0.9818,
+    "differences": [
+      {
+        "expected": "case-insensitive",
+        "recognized": "case -insensitive"
+      },
+      {
+        "expected": "confident",
+        "recognized": "confidence"
+      }
+    ],
+    "recognized": "Type library into the search field and compare the result with your first acceptance check. Then enter an unmatched term such as ZZZ. The page should explain that there are no matching resources rather than appearing broken or showing an old result. Clear the field and try library in uppercase. If the intended behavior is a case -insensitive search, it should find the same record. Next, combine the search with a category filter and inspect whether both conditions apply. record expected and actual results separately. A confidence statement from the AI is not test evidence. The evidence is what happened when you carried out a named check on the saved file."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-08",
+    "sha256": "289a7e70a1eac1a070bcb8c01f3dc5b67183c8d522511a68f2edb307946c224d",
+    "durationSeconds": 42.237,
+    "wordsPerMinute": 153.4,
+    "matchRatio": 0.9907,
+    "differences": [
+      {
+        "expected": "text-size",
+        "recognized": "text size"
+      }
+    ],
+    "recognized": "set the mouse aside and move through the controls with the keyboard. Can you see which control has focus? Can you enter a search and operate the filter? Narrow the browser window and check that labels, results, and buttons remain readable without important content being cut off. Then ask where the data lives. In our starter, fictional records are inside the file. Browser storage, if added later, may remain only in that browser and may be cleared. It is not automatically a shared database or a backup. Test persistence rather than assuming it. Use the course's existing text size and accessibility habits as standards for the app you build."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-09",
+    "sha256": "cb1007697780825114a8cb7686a669017cfe8a63d35fc623a450f57c9bd186fb",
+    "durationSeconds": 47.833,
+    "wordsPerMinute": 136.7,
+    "matchRatio": 0.9908,
+    "differences": [
+      {
+        "expected": "result,",
+        "recognized": "results,"
+      },
+      {
+        "expected": "",
+        "recognized": "past."
+      }
+    ],
+    "recognized": "Suppose the uppercase search failed. A useful revision request names the observed problem, the expected behavior, and the check. Library returns no results, but library returns community library. Make both searches match the same entry and preserve the category filter. Save the revised version under a distinct name. Repeat the failed check, then repeat a check that previously passed. past. This second step can reveal a regression where fixing one behavior breaks another. If the new version is worse, return to the saved working version. Pause and make one small improvement or repair. Keep a brief test log so a partner can follow what changed and why you trust it."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-10",
+    "sha256": "70ce250a04bdbe8fb0bca4e26874b80d4b51c52060540bdb021f37b052ba2413",
+    "durationSeconds": 44.954,
+    "wordsPerMinute": 148.2,
+    "matchRatio": 0.982,
+    "differences": [
+      {
+        "expected": "a",
+        "recognized": "the"
+      },
+      {
+        "expected": "",
+        "recognized": "size."
+      },
+      {
+        "expected": "sign-in",
+        "recognized": "sign and"
+      }
+    ],
+    "recognized": "Show the partner the saved app and carry out your three acceptance checks. Explain one part of the page, one change you made, and one limitation that remains. A local fictional prototype can be a successful learning result without being ready to operate a public service. Hosting is a separate choice. A real service handling accounts, private data, or payments needs appropriate security, access controls, support, and testing beyond this exercise. size. Do not treat a decorative sign and form as protection. Carry forward the method you practiced. Define a small task, give clear instructions, inspect the result, test more than the easiest path, and keep a way back when you revise it."
+  }
+]

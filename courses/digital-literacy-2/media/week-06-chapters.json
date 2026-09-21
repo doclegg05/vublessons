@@ -5,38 +5,38 @@
   },
   {
     "title": "Distinguish a website, an app, and a service",
-    "startSeconds": 44.633
+    "startSeconds": 45.746
   },
   {
     "title": "Understand the three parts of the page",
-    "startSeconds": 93.761
+    "startSeconds": 91.925
   },
   {
     "title": "Write checks before asking for code",
-    "startSeconds": 135.783
+    "startSeconds": 133.855
   },
   {
     "title": "Give the AI a bounded, useful request",
-    "startSeconds": 180.29
+    "startSeconds": 180.103
   },
   {
     "title": "Open a working version before changing it",
-    "startSeconds": 227.978
+    "startSeconds": 224.122
   },
   {
     "title": "Test the happy path and the missing result",
-    "startSeconds": 272.647
+    "startSeconds": 266.934
   },
   {
     "title": "Test access, screen size, and data assumptions",
-    "startSeconds": 315.227
+    "startSeconds": 311.023
   },
   {
     "title": "Request one repair and retest what worked",
-    "startSeconds": 359.316
+    "startSeconds": 354.81
   },
   {
     "title": "Demonstrate the result and name its limits",
-    "startSeconds": 403.985
+    "startSeconds": 404.193
   }
 ]

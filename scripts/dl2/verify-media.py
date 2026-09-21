@@ -24,6 +24,14 @@ for n in range(1,7):
   assert alignment['matchRatio']>=.87
   assert abs(beat['window']-beat['audioDuration']-beat['leadIn']-beat['visualHold'])<.002
   assert 'paceAdjustment' not in states[beat['id']], 'V3 delivery must not be time-stretched'
+  if states[beat['id']].get('performanceProfile') == 'expressive':
+   receipt_dir=Path(f'video/digital-literacy-2/elevenlabs-britt-v3-expressive/week-{n:02}')/beat['id']
+   receipt=json.loads((receipt_dir/'receipt.json').read_text())
+   assert receipt['textSha256']==alignment['textSha256']
+   assert receipt['sourceSha256']==states[beat['id']]['sha256']==hashlib.sha256((source/f"narration/{beat['id']}.mp3").read_bytes()).hexdigest()
+   assert receipt['promptSha256']==hashlib.sha256((receipt_dir/'prompt.txt').read_bytes()).hexdigest()
+   prompt=re.sub(r'\[[^]]+\]','',(receipt_dir/'prompt.txt').read_text())
+   assert ' '.join(prompt.split())==' '.join(beat['text'].split()), 'Performance direction must not alter the lesson'
 
  # Decode every delivered frame/sample, not just container metadata.
  decoded=run(['ffmpeg','-v','error','-i',str(p),'-f','null','-']);assert not decoded.stderr.strip(),decoded.stderr
@@ -45,5 +53,5 @@ for n in range(1,7):
  print(f'Week {n}: delivery decode, picture, audio, captions and strict source checks PASS',flush=True)
 renderer_versions={json.loads(Path(f'docs/digital-literacy-2/video-check-{n:02}.json').read_text())['_meta']['version'] for n in range(1,7)}
 assert len(renderer_versions)==1, 'All delivered videos must use the same verified renderer version'
-manifest=dict(formatVersion=1,voiceEngine='ElevenLabs eleven_v3, Britt (iKrofGyA12WC0e6AhZ8B); Voice Isolator cleanup; natural delivery, no time stretch; chaptered teaching',renderer=f'HyperFrames {next(iter(renderer_versions))}, local GSAP 3.14.2',videos=videos)
+manifest=dict(formatVersion=1,voiceEngine='ElevenLabs eleven_v3, Britt (iKrofGyA12WC0e6AhZ8B); Voice Isolator cleanup; directed delivery, no time stretch; chaptered teaching',renderer=f'HyperFrames {next(iter(renderer_versions))}, local GSAP 3.14.2',videos=videos)
 (public/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');Path('docs/digital-literacy-2/media-verification.json').write_text(json.dumps(reports,indent=2)+'\n')

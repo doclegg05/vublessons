@@ -21,7 +21,9 @@ for folder in sorted(Path('video/digital-literacy-2').glob((sys.argv[1] if len(s
   for a,b,size in match.get_matching_blocks():
    for offset in range(size):aligned[a+offset]=(observed[b+offset].start,observed[b+offset].end)
   ratio=len(aligned)/len(script)
-  if ratio<.87:
+  # A long missed phrase can still clear the minimum match gate. Retry before
+  # interpolating so an expressive pause does not spread a sentence's captions.
+  if ratio<.96:
    segments,_=model.transcribe(str(folder/(beat['id']+'.wav')),word_timestamps=True,language='en',beam_size=5,initial_prompt=beat['text'])
    retry=[w for seg in segments for w in seg.words]
    match=difflib.SequenceMatcher(None,[norm(x) for x in script],[norm(w.word) for w in retry],autojunk=False)

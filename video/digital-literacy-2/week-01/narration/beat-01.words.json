@@ -1,518 +1,518 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "cf7169a7e1b0ad92ac6c7bef4e27a1c029249f7a8c81dc58a90ae41d2c269514",
+  "wavSha256": "b0d19e6841ede0ca47c3922d5405089c364b331ac37b9aa3c54a91cf0f3a6c54",
   "textSha256": "703ed524035673d78f75b22eeb97f583af388453d620bf981ac0c0c5f1dfcab9",
   "matchRatio": 1.0,
   "words": [
     {
       "word": "Think",
       "start": 0.0,
-      "end": 0.14
+      "end": 0.16
     },
     {
       "word": "about",
-      "start": 0.14,
+      "start": 0.16,
       "end": 0.38
     },
     {
       "word": "a",
       "start": 0.38,
-      "end": 0.52
+      "end": 0.54
     },
     {
       "word": "time",
-      "start": 0.52,
-      "end": 0.88
+      "start": 0.54,
+      "end": 0.84
     },
     {
       "word": "you",
-      "start": 0.88,
-      "end": 1.12
+      "start": 0.84,
+      "end": 1.1
     },
     {
       "word": "needed",
-      "start": 1.12,
+      "start": 1.1,
       "end": 1.34
     },
     {
       "word": "to",
       "start": 1.34,
-      "end": 1.56
+      "end": 1.58
     },
     {
       "word": "read",
-      "start": 1.56,
-      "end": 1.76
+      "start": 1.58,
+      "end": 1.78
     },
     {
       "word": "a",
-      "start": 1.76,
+      "start": 1.78,
       "end": 1.88
     },
     {
       "word": "letter,",
       "start": 1.88,
-      "end": 2.2
+      "end": 2.18
     },
     {
       "word": "hear",
-      "start": 2.96,
-      "end": 2.98
+      "start": 2.6,
+      "end": 2.66
     },
     {
       "word": "instructions,",
-      "start": 2.98,
-      "end": 3.56
+      "start": 2.66,
+      "end": 3.22
     },
     {
       "word": "or",
-      "start": 4.18,
-      "end": 4.3
+      "start": 3.74,
+      "end": 3.86
     },
     {
       "word": "remember",
-      "start": 4.3,
-      "end": 4.58
+      "start": 3.86,
+      "end": 4.14
     },
     {
       "word": "an",
-      "start": 4.58,
-      "end": 4.88
+      "start": 4.14,
+      "end": 4.44
     },
     {
       "word": "appointment.",
-      "start": 4.88,
-      "end": 5.22
+      "start": 4.44,
+      "end": 4.64
     },
     {
       "word": "You",
-      "start": 6.28,
-      "end": 6.44
+      "start": 5.72,
+      "end": 5.84
     },
     {
       "word": "already",
-      "start": 6.44,
+      "start": 5.84,
+      "end": 6.04
+    },
+    {
+      "word": "know",
+      "start": 6.04,
+      "end": 6.46
+    },
+    {
+      "word": "how",
+      "start": 6.46,
       "end": 6.64
     },
     {
-      "word": "know",
-      "start": 6.64,
-      "end": 7.06
-    },
-    {
-      "word": "how",
-      "start": 7.06,
-      "end": 7.26
-    },
-    {
       "word": "to",
-      "start": 7.26,
-      "end": 7.38
+      "start": 6.64,
+      "end": 6.74
     },
     {
       "word": "judge",
-      "start": 7.38,
-      "end": 7.56
+      "start": 6.74,
+      "end": 6.9
     },
     {
       "word": "whether",
-      "start": 7.56,
-      "end": 7.88
+      "start": 6.9,
+      "end": 7.2
     },
     {
       "word": "those",
-      "start": 7.88,
-      "end": 8.24
+      "start": 7.2,
+      "end": 7.56
     },
     {
       "word": "everyday",
-      "start": 8.24,
-      "end": 8.42
+      "start": 7.56,
+      "end": 7.76
     },
     {
       "word": "tools",
-      "start": 8.42,
-      "end": 8.92
+      "start": 7.76,
+      "end": 8.28
     },
     {
       "word": "help",
-      "start": 8.92,
-      "end": 9.24
+      "start": 8.28,
+      "end": 8.62
     },
     {
       "word": "you.",
-      "start": 9.24,
-      "end": 9.46
+      "start": 8.62,
+      "end": 8.84
     },
     {
       "word": "We",
-      "start": 10.14,
-      "end": 10.46
+      "start": 9.58,
+      "end": 9.84
     },
     {
       "word": "will",
-      "start": 10.46,
-      "end": 10.6
+      "start": 9.84,
+      "end": 10.02
     },
     {
       "word": "apply",
-      "start": 10.6,
-      "end": 10.86
+      "start": 10.02,
+      "end": 10.3
     },
     {
       "word": "that",
-      "start": 10.86,
-      "end": 11.1
+      "start": 10.3,
+      "end": 10.56
     },
     {
       "word": "judgment",
-      "start": 11.1,
-      "end": 11.4
+      "start": 10.56,
+      "end": 10.82
     },
     {
       "word": "to",
-      "start": 11.4,
-      "end": 11.86
+      "start": 10.82,
+      "end": 11.22
     },
     {
       "word": "a",
-      "start": 11.86,
-      "end": 11.98
+      "start": 11.22,
+      "end": 11.34
     },
     {
       "word": "computer.",
-      "start": 11.98,
-      "end": 12.36
+      "start": 11.34,
+      "end": 11.66
     },
     {
       "word": "Choose",
-      "start": 13.44,
-      "end": 13.8
+      "start": 12.38,
+      "end": 12.62
     },
     {
       "word": "one",
-      "start": 13.8,
-      "end": 14.1
+      "start": 12.62,
+      "end": 12.94
     },
     {
       "word": "task",
-      "start": 14.1,
-      "end": 14.52
+      "start": 12.94,
+      "end": 13.3
     },
     {
       "word": "that",
-      "start": 14.52,
-      "end": 14.82
+      "start": 13.3,
+      "end": 13.58
     },
     {
       "word": "matters",
-      "start": 14.82,
-      "end": 15.14
+      "start": 13.58,
+      "end": 13.86
     },
     {
       "word": "to",
-      "start": 15.14,
-      "end": 15.4
+      "start": 13.86,
+      "end": 14.12
     },
     {
       "word": "you:",
-      "start": 15.4,
-      "end": 15.6
+      "start": 14.12,
+      "end": 14.26
     },
     {
       "word": "reading",
-      "start": 16.14,
-      "end": 16.4
+      "start": 14.9,
+      "end": 15.14
     },
     {
       "word": "a",
-      "start": 16.4,
-      "end": 16.6
+      "start": 15.14,
+      "end": 15.36
     },
     {
       "word": "library",
-      "start": 16.6,
-      "end": 16.82
+      "start": 15.36,
+      "end": 15.54
     },
     {
       "word": "page,",
-      "start": 16.82,
-      "end": 17.42
+      "start": 15.54,
+      "end": 16.12
     },
     {
       "word": "joining",
-      "start": 17.78,
-      "end": 18.38
+      "start": 16.6,
+      "end": 16.9
     },
     {
       "word": "a",
-      "start": 18.38,
-      "end": 18.52
+      "start": 16.9,
+      "end": 17.08
     },
     {
       "word": "practice",
-      "start": 18.52,
-      "end": 18.86
+      "start": 17.08,
+      "end": 17.4
     },
     {
       "word": "call,",
-      "start": 18.86,
-      "end": 19.22
+      "start": 17.4,
+      "end": 17.74
     },
     {
       "word": "or",
-      "start": 19.78,
-      "end": 20.02
+      "start": 18.22,
+      "end": 18.44
     },
     {
       "word": "keeping",
-      "start": 20.02,
-      "end": 20.24
+      "start": 18.44,
+      "end": 18.7
     },
     {
       "word": "a",
-      "start": 20.24,
-      "end": 20.44
+      "start": 18.7,
+      "end": 18.94
     },
     {
       "word": "household",
-      "start": 20.44,
-      "end": 20.68
+      "start": 18.94,
+      "end": 19.24
     },
     {
       "word": "reminder.",
-      "start": 20.68,
-      "end": 21.2
+      "start": 19.24,
+      "end": 19.74
     },
     {
       "word": "You",
-      "start": 22.22,
-      "end": 22.78
+      "start": 20.58,
+      "end": 20.64
     },
     {
       "word": "do",
-      "start": 22.78,
-      "end": 22.9
+      "start": 20.64,
+      "end": 20.76
     },
     {
       "word": "not",
-      "start": 22.9,
-      "end": 23.1
+      "start": 20.76,
+      "end": 21.04
     },
     {
       "word": "need",
-      "start": 23.1,
-      "end": 23.32
+      "start": 21.04,
+      "end": 21.28
     },
     {
       "word": "to",
-      "start": 23.32,
-      "end": 23.46
+      "start": 21.28,
+      "end": 21.42
     },
     {
       "word": "know",
-      "start": 23.46,
-      "end": 23.64
+      "start": 21.42,
+      "end": 21.6
     },
     {
       "word": "every",
-      "start": 23.64,
-      "end": 23.94
+      "start": 21.6,
+      "end": 21.94
     },
     {
       "word": "setting.",
-      "start": 23.94,
-      "end": 25.16
+      "start": 21.94,
+      "end": 22.36
     },
     {
       "word": "Our",
-      "start": 25.16,
-      "end": 25.16
+      "start": 22.86,
+      "end": 23.02
     },
     {
       "word": "goal",
-      "start": 25.16,
-      "end": 25.36
+      "start": 23.02,
+      "end": 23.26
     },
     {
       "word": "is",
-      "start": 25.36,
-      "end": 25.56
+      "start": 23.26,
+      "end": 23.44
     },
     {
       "word": "to",
-      "start": 25.56,
-      "end": 25.7
+      "start": 23.44,
+      "end": 23.58
     },
     {
       "word": "choose",
-      "start": 25.7,
-      "end": 25.96
+      "start": 23.58,
+      "end": 23.84
     },
     {
       "word": "one",
-      "start": 25.96,
-      "end": 26.32
+      "start": 23.84,
+      "end": 24.22
     },
     {
       "word": "useful",
-      "start": 26.32,
-      "end": 26.62
+      "start": 24.22,
+      "end": 24.6
     },
     {
       "word": "change,",
-      "start": 26.62,
-      "end": 27.2
+      "start": 24.6,
+      "end": 25.04
     },
     {
       "word": "observe",
-      "start": 27.62,
-      "end": 27.88
+      "start": 25.54,
+      "end": 25.74
     },
     {
       "word": "the",
-      "start": 27.88,
-      "end": 28.14
+      "start": 25.74,
+      "end": 26.1
     },
     {
       "word": "result,",
-      "start": 28.14,
-      "end": 28.42
+      "start": 26.1,
+      "end": 26.36
     },
     {
       "word": "and",
-      "start": 29.1,
-      "end": 29.12
+      "start": 27.0,
+      "end": 27.06
     },
     {
       "word": "know",
-      "start": 29.12,
-      "end": 29.32
+      "start": 27.06,
+      "end": 27.26
     },
     {
       "word": "how",
-      "start": 29.32,
-      "end": 29.54
+      "start": 27.26,
+      "end": 27.5
     },
     {
       "word": "to",
-      "start": 29.54,
-      "end": 29.64
+      "start": 27.5,
+      "end": 27.66
     },
     {
       "word": "undo",
-      "start": 29.64,
-      "end": 29.88
+      "start": 27.66,
+      "end": 27.9
     },
     {
       "word": "it.",
-      "start": 29.88,
-      "end": 30.14
+      "start": 27.9,
+      "end": 28.12
     },
     {
       "word": "Keep",
-      "start": 30.98,
-      "end": 31.26
+      "start": 28.78,
+      "end": 28.92
     },
     {
       "word": "a",
-      "start": 31.26,
-      "end": 31.4
+      "start": 28.92,
+      "end": 29.06
     },
     {
       "word": "scrap",
-      "start": 31.4,
-      "end": 31.6
+      "start": 29.06,
+      "end": 29.28
     },
     {
       "word": "of",
-      "start": 31.6,
-      "end": 31.84
+      "start": 29.28,
+      "end": 29.5
     },
     {
       "word": "paper",
-      "start": 31.84,
-      "end": 32.02
+      "start": 29.5,
+      "end": 29.68
     },
     {
       "word": "nearby",
-      "start": 32.02,
-      "end": 32.38
+      "start": 29.68,
+      "end": 30.08
     },
     {
       "word": "to",
-      "start": 32.38,
-      "end": 32.86
+      "start": 30.08,
+      "end": 30.44
     },
     {
       "word": "record",
-      "start": 32.86,
-      "end": 33.08
+      "start": 30.44,
+      "end": 30.66
     },
     {
       "word": "the",
-      "start": 33.08,
-      "end": 33.44
+      "start": 30.66,
+      "end": 31.04
     },
     {
       "word": "original",
-      "start": 33.44,
-      "end": 33.58
+      "start": 31.04,
+      "end": 31.34
     },
     {
       "word": "setting.",
-      "start": 33.58,
-      "end": 34.26
+      "start": 31.34,
+      "end": 31.76
     },
     {
       "word": "That",
-      "start": 34.94,
-      "end": 35.12
+      "start": 32.98,
+      "end": 33.12
     },
     {
       "word": "makes",
-      "start": 35.12,
-      "end": 35.3
+      "start": 33.12,
+      "end": 33.28
     },
     {
       "word": "experimenting",
-      "start": 35.3,
-      "end": 35.76
+      "start": 33.28,
+      "end": 33.82
     },
     {
       "word": "safer,",
-      "start": 35.76,
-      "end": 36.5
+      "start": 33.82,
+      "end": 34.5
     },
     {
       "word": "especially",
-      "start": 36.86,
-      "end": 37.18
+      "start": 34.84,
+      "end": 35.26
     },
     {
       "word": "on",
-      "start": 37.18,
-      "end": 37.66
+      "start": 35.26,
+      "end": 35.72
     },
     {
       "word": "a",
-      "start": 37.66,
-      "end": 37.74
+      "start": 35.72,
+      "end": 35.82
     },
     {
       "word": "shared",
-      "start": 37.74,
-      "end": 38.0
+      "start": 35.82,
+      "end": 36.08
     },
     {
       "word": "lab",
-      "start": 38.0,
-      "end": 38.3
+      "start": 36.08,
+      "end": 36.4
     },
     {
       "word": "computer.",
-      "start": 38.3,
-      "end": 38.58
+      "start": 36.4,
+      "end": 36.82
     }
   ]
 }

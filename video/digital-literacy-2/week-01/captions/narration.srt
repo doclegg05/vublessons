@@ -1,541 +1,541 @@
 1
-00:00:00,450 --> 00:00:02,650
+00:00:00,450 --> 00:00:02,630
 Think about a time you needed to read a
 letter,
 
 2
-00:00:03,410 --> 00:00:07,510
+00:00:03,050 --> 00:00:06,910
 hear instructions, or remember an
 appointment. You already know
 
 3
-00:00:07,510 --> 00:00:10,910
+00:00:06,910 --> 00:00:10,290
 how to judge whether those everyday tools
 help you. We
 
 4
-00:00:10,910 --> 00:00:14,970
+00:00:10,290 --> 00:00:13,750
 will apply that judgment to a computer.
 Choose one task
 
 5
-00:00:14,970 --> 00:00:18,970
+00:00:13,750 --> 00:00:17,530
 that matters to you: reading a library
 page, joining a
 
 6
-00:00:18,970 --> 00:00:23,550
+00:00:17,530 --> 00:00:21,490
 practice call, or keeping a household
 reminder. You do not
 
 7
-00:00:23,550 --> 00:00:26,410
+00:00:21,490 --> 00:00:24,290
 need to know every setting. Our goal is to
 choose
 
 8
-00:00:26,410 --> 00:00:30,090
+00:00:24,290 --> 00:00:28,110
 one useful change, observe the result, and
 know how to
 
 9
-00:00:30,090 --> 00:00:33,530
+00:00:28,110 --> 00:00:31,110
 undo it. Keep a scrap of paper nearby to
 record
 
 10
-00:00:33,530 --> 00:00:37,630
+00:00:31,110 --> 00:00:35,710
 the original setting. That makes
 experimenting safer, especially
 
 11
-00:00:37,630 --> 00:00:39,030
+00:00:35,710 --> 00:00:37,270
 on a shared lab computer.
 
 12
-00:00:40,871 --> 00:00:44,031
+00:00:39,106 --> 00:00:42,486
 Imagine the library page is difficult to
 read, but the
 
 13
-00:00:44,031 --> 00:00:47,911
+00:00:42,486 --> 00:00:47,026
 computer's other menus look comfortable.
 Start with the browser's
 
 14
-00:00:47,911 --> 00:00:52,091
+00:00:47,026 --> 00:00:51,566
 zoom control because the problem is inside
 that page. Open
 
 15
-00:00:52,091 --> 00:00:55,891
+00:00:51,566 --> 00:00:55,146
 the browser menu, find Zoom, and increase
 it one step.
 
 16
-00:00:57,751 --> 00:01:01,511
+00:00:56,326 --> 00:01:00,126
 On many Windows browsers, Control and plus
 also zooms in;
 
 17
-00:01:02,091 --> 00:01:06,211
+00:01:00,686 --> 00:01:05,506
 Control and zero returns to the default.
 Watch the page
 
 18
-00:01:06,211 --> 00:01:09,771
+00:01:05,506 --> 00:01:09,446
 get larger. Then check the important part:
 can you still
 
 19
-00:01:09,771 --> 00:01:12,991
+00:01:09,446 --> 00:01:12,646
 find the search field, read the
 instructions, and reach the
 
 20
-00:01:12,991 --> 00:01:17,151
+00:01:12,646 --> 00:01:16,846
 button? Larger is useful only if the task
 still works.
 
 21
-00:01:18,231 --> 00:01:21,131
+00:01:18,186 --> 00:01:21,246
 Pause the video, try one zoom step on a
 practice
 
 22
-00:01:21,131 --> 00:01:23,551
+00:01:21,246 --> 00:01:23,626
 page, and restore it before continuing.
 
 23
-00:01:25,378 --> 00:01:27,778
+00:01:25,354 --> 00:01:28,054
 Now suppose the browser tabs and the rest
 of the
 
 24
-00:01:27,778 --> 00:01:31,778
+00:01:28,054 --> 00:01:31,654
 desktop are also hard to see. Page zoom
 will not
 
 25
-00:01:31,778 --> 00:01:35,378
+00:01:31,654 --> 00:01:35,514
 solve every part of that problem. System
 text size changes
 
 26
-00:01:35,378 --> 00:01:39,938
+00:01:35,514 --> 00:01:40,094
 text in supported areas; display scaling
 changes the size of
 
 27
-00:01:39,938 --> 00:01:47,578
+00:01:40,094 --> 00:01:44,534
 text, apps, and other interface elements
 more broadly. The exact
 
 28
-00:01:47,578 --> 00:01:52,178
+00:01:44,534 --> 00:01:49,074
 controls depend on your computer. Ask the
 instructor before changing
 
 29
-00:01:52,178 --> 00:01:56,858
+00:01:49,074 --> 00:01:53,354
 a shared workstation's system settings.
 This is like choosing between
 
 30
-00:01:56,858 --> 00:02:00,058
+00:01:53,354 --> 00:01:56,554
 a magnifying glass for one page and a more
 comfortable
 
 31
-00:02:00,058 --> 00:02:04,058
+00:01:56,554 --> 00:02:00,054
 arrangement for the whole desk. Which
 would you try first
 
 32
-00:02:04,058 --> 00:02:08,758
+00:02:00,054 --> 00:02:04,374
 if only one website is too small? Browser
 zoom, because
 
 33
-00:02:08,758 --> 00:02:10,478
+00:02:04,374 --> 00:02:06,014
 it matches the scope of the problem.
 
 34
-00:02:12,278 --> 00:02:15,378
+00:02:07,865 --> 00:02:11,585
 Picture a radio connected to headphones.
 Turning up the radio
 
 35
-00:02:15,378 --> 00:02:18,098
+00:02:11,585 --> 00:02:14,185
 does not make the room speaker play if the
 sound
 
 36
-00:02:18,098 --> 00:02:20,978
+00:02:14,185 --> 00:02:17,285
 is still going to the headphones. A
 computer can work
 
 37
-00:02:20,978 --> 00:02:23,958
+00:02:17,285 --> 00:02:20,345
 the same way. First check whether the
 sound is muted.
 
 38
-00:02:25,618 --> 00:02:29,978
+00:02:20,925 --> 00:02:24,925
 Then inspect the selected output device:
 speakers, a monitor, or
 
 39
-00:02:29,978 --> 00:02:33,218
+00:02:24,925 --> 00:02:28,505
 a headset. Choose the device you intend to
 hear, begin
 
 40
-00:02:33,218 --> 00:02:36,418
+00:02:28,505 --> 00:02:32,285
 at a comfortable volume, and play a short
 test. If
 
 41
-00:02:36,418 --> 00:02:39,018
+00:02:32,285 --> 00:02:35,225
 that test works but a meeting does not,
 check the
 
 42
-00:02:39,018 --> 00:02:42,898
+00:02:35,225 --> 00:02:39,365
 meeting app's own audio choice next.
 Change one setting at
 
 43
-00:02:42,898 --> 00:02:45,738
+00:02:39,365 --> 00:02:42,465
 a time. This gives you evidence about what
 fixed the
 
 44
-00:02:45,738 --> 00:02:48,998
+00:02:42,465 --> 00:02:45,645
 problem instead of leaving you with
 several unexplained changes.
 
 45
-00:02:51,027 --> 00:02:53,827
+00:02:47,473 --> 00:02:50,633
 A slow computer and a full computer are
 not exactly
 
 46
-00:02:53,827 --> 00:02:57,867
+00:02:50,633 --> 00:02:55,193
 the same problem. The processor carries
 out instructions. Working
 
 47
-00:02:57,867 --> 00:03:01,827
+00:02:55,193 --> 00:02:59,153
 memory holds information in active use,
 while storage keeps saved
 
 48
-00:03:01,827 --> 00:03:05,507
+00:02:59,153 --> 00:03:03,093
 files. Think of a workbench and a filing
 cabinet: a
 
 49
-00:03:05,507 --> 00:03:09,107
+00:03:03,093 --> 00:03:06,333
 crowded workbench and a full cabinet
 require different responses.
 
 50
-00:03:10,767 --> 00:03:14,487
+00:03:07,653 --> 00:03:10,733
 Closing an unused app may reduce active
 workload; it does
 
 51
-00:03:14,487 --> 00:03:18,347
+00:03:10,733 --> 00:03:14,693
 not create a reliable backup of your
 files. For connections,
 
 52
-00:03:18,847 --> 00:03:22,227
+00:03:15,193 --> 00:03:18,773
 identify the job before choosing the
 cable. A display connection
 
 53
-00:03:22,227 --> 00:03:26,227
+00:03:18,773 --> 00:03:22,913
 carries a picture, a network connection
 carries data, and a
 
 54
-00:03:26,227 --> 00:03:29,587
+00:03:22,913 --> 00:03:26,233
 USB connection may carry data or power
 depending on the
 
 55
-00:03:29,587 --> 00:03:34,287
+00:03:26,233 --> 00:03:30,993
 equipment. Match the labels and ask before
 forcing an unfamiliar connector.
 
 56
-00:03:36,255 --> 00:03:38,715
+00:03:33,002 --> 00:03:36,022
 Suppose you want one page of directions
 for a community
 
 57
-00:03:38,715 --> 00:03:43,095
+00:03:36,022 --> 00:03:40,202
 event. Open print preview before sending
 anything to the printer.
 
 58
-00:03:44,275 --> 00:03:48,015
+00:03:41,102 --> 00:03:44,602
 Check the destination first: a physical
 printer and Save as
 
 59
-00:03:48,015 --> 00:03:53,395
+00:03:44,602 --> 00:03:49,382
 PDF produce different results. Next
 inspect the page count, orientation,
 
 60
-00:03:54,095 --> 00:03:59,715
+00:03:50,282 --> 00:03:54,362
 and selected range. A webpage may create
 extra pages containing
 
 61
-00:03:59,715 --> 00:04:04,575
+00:03:54,362 --> 00:03:58,902
 menus or blank space. Choose one useful
 page, look for
 
 62
-00:04:04,575 --> 00:04:08,615
+00:03:58,902 --> 00:04:02,762
 clipped text, and print a single test
 copy. Only then
 
 63
-00:04:08,615 --> 00:04:12,495
+00:04:02,762 --> 00:04:06,562
 print more. If the printer does not
 respond, check its
 
 64
-00:04:12,495 --> 00:04:15,995
+00:04:06,562 --> 00:04:09,262
 status or queue and ask for help rather
 than repeatedly
 
 65
-00:04:15,995 --> 00:04:22,235
+00:04:09,262 --> 00:04:15,122
 pressing Print. Repeated requests can
 arrive later as an unexpected stack of
 duplicates.
 
 66
-00:04:24,200 --> 00:04:27,660
+00:04:17,091 --> 00:04:20,351
 A paper calendar works because a short
 note connects a
 
 67
-00:04:27,660 --> 00:04:31,480
+00:04:20,351 --> 00:04:24,011
 time to an action. A digital entry needs
 the same
 
 68
-00:04:31,480 --> 00:04:35,540
+00:04:24,011 --> 00:04:28,251
 meaning. In our fictional example, create
 Library practice from
 
 69
-00:04:35,540 --> 00:04:38,320
+00:04:28,251 --> 00:04:30,971
 two to three in the afternoon, with Room A
 as
 
 70
-00:04:38,320 --> 00:04:42,080
+00:04:30,971 --> 00:04:35,471
 the location. Check the correct day, start
 time, end time,
 
 71
-00:04:42,360 --> 00:04:46,680
+00:04:35,851 --> 00:04:38,731
 and time zone when one is shown. Add a
 reminder
 
 72
-00:04:46,680 --> 00:04:50,620
+00:04:38,731 --> 00:04:42,471
 early enough to help you prepare. Day view
 helps inspect
 
 73
-00:04:50,620 --> 00:04:56,320
+00:04:42,471 --> 00:04:46,611
 the details; week view helps notice
 conflicts; month view gives
 
 74
-00:04:56,320 --> 00:05:00,000
+00:04:46,611 --> 00:04:50,071
 a wider overview. Change the view and find
 the same
 
 75
-00:05:00,000 --> 00:05:03,880
+00:04:50,071 --> 00:04:53,451
 appointment again. Saving an entry is only
 the first step.
 
 76
-00:05:04,500 --> 00:05:07,040
+00:04:54,131 --> 00:04:56,511
 Reopening it confirms that the details
 survived.
 
 77
-00:05:09,010 --> 00:05:11,750
+00:04:58,463 --> 00:05:01,223
 Your partner needs to choose a meeting
 time, but does
 
 78
-00:05:11,750 --> 00:05:16,050
+00:05:01,223 --> 00:05:05,743
 not need every detail of your calendar.
 Free-or-busy sharing can
 
 79
-00:05:16,050 --> 00:05:19,710
+00:05:05,743 --> 00:05:09,363
 communicate that a time is occupied
 without exposing its title
 
 80
-00:05:19,710 --> 00:05:24,850
+00:05:09,363 --> 00:05:14,103
 or location. Compare the two views: your
 calendar contains Library
 
 81
-00:05:24,850 --> 00:05:31,590
+00:05:14,103 --> 00:05:19,063
 practice and Room A; your partner sees
 only Busy. Before
 
 82
-00:05:31,590 --> 00:05:35,650
+00:05:19,063 --> 00:05:22,943
 sharing, read the actual service's options
 because not every calendar
 
 83
-00:05:35,650 --> 00:05:40,490
+00:05:22,943 --> 00:05:27,783
 offers identical controls. Ask who needs
 access, what they need
 
 84
-00:05:40,490 --> 00:05:45,130
+00:05:27,783 --> 00:05:31,743
 to know, and for how long. Pause and
 decide: should
 
 85
-00:05:45,130 --> 00:05:48,450
+00:05:31,743 --> 00:05:35,143
 someone arranging a study session
 automatically receive private
 
 86
-00:05:48,450 --> 00:05:53,270
+00:05:35,143 --> 00:05:39,863
 appointment details? No. Start with
 availability, then share more
 
 87
-00:05:53,270 --> 00:05:55,330
+00:05:39,863 --> 00:05:42,023
 only when the task calls for it.
 
 88
-00:05:57,023 --> 00:06:01,083
+00:05:43,597 --> 00:05:47,757
 Reminders, saved browser preferences, and
 cloud services can save
 
 89
-00:06:01,083 --> 00:06:05,203
+00:05:47,757 --> 00:05:51,457
 effort, but automation still needs a
 check. A cloud service
 
 90
-00:06:05,203 --> 00:06:08,523
+00:05:51,457 --> 00:05:54,997
 runs on another computer and often
 connects your work to
 
 91
-00:06:08,523 --> 00:06:12,383
+00:05:54,997 --> 00:05:58,917
 an account. Confirm which account is
 active before saving or
 
 92
-00:06:12,383 --> 00:06:16,023
+00:05:58,917 --> 00:06:02,457
 sharing. After setting a reminder, check
 that notifications are
 
 93
-00:06:16,023 --> 00:06:21,143
+00:06:02,457 --> 00:06:05,797
 allowed and that the reminder time is
 sensible. If you
 
 94
-00:06:21,143 --> 00:06:24,203
+00:06:05,797 --> 00:06:08,777
 need help, use instructions from the
 software's official support
 
 95
-00:06:24,203 --> 00:06:27,743
+00:06:08,777 --> 00:06:12,157
 site and match them to your version. A
 menu from
 
 96
-00:06:27,743 --> 00:06:31,123
+00:06:12,157 --> 00:06:15,757
 an older version may look different.
 Describe the task and
 
 97
-00:06:31,123 --> 00:06:34,423
+00:06:15,757 --> 00:06:18,877
 what happened: I selected the headset, but
 the test sound
 
 98
-00:06:34,423 --> 00:06:38,043
+00:06:18,877 --> 00:06:22,657
 still plays through the monitor. That is
 useful evidence for a helper.
 
 99
-00:06:39,928 --> 00:06:42,468
+00:06:24,737 --> 00:06:27,617
 Now pause and choose one improvement that
 matters to your
 
 100
-00:06:42,468 --> 00:06:46,388
+00:06:27,617 --> 00:06:31,677
 own routine. Make a practice page
 comfortable to read, route
 
 101
-00:06:46,388 --> 00:06:49,588
+00:06:31,677 --> 00:06:34,717
 a test sound to the intended device, or
 create a
 
 102
-00:06:49,588 --> 00:06:53,508
+00:06:34,717 --> 00:06:38,617
 fictional calendar entry. Tell a partner
 what you expected before
 
 103
-00:06:53,508 --> 00:06:56,728
+00:06:38,617 --> 00:06:41,857
 you act. Then show the result and explain
 how to
 
 104
-00:06:56,728 --> 00:07:02,908
+00:06:41,857 --> 00:06:45,477
 undo the change. If the result is
 different from your
 
 105
-00:07:02,908 --> 00:07:05,908
+00:06:45,477 --> 00:06:48,817
 prediction, return to the original setting
 and try a smaller
 
 106
-00:07:05,908 --> 00:07:10,188
+00:06:48,817 --> 00:06:53,517
 step. Before leaving, save your practice
 work, restore shared settings,
 
 107
-00:07:10,188 --> 00:07:14,348
+00:06:54,277 --> 00:06:57,977
 and sign out of any demonstration account
 as directed. The
 
 108
-00:07:14,348 --> 00:07:17,228
+00:06:57,977 --> 00:07:01,117
 skill is not memorizing every menu. It is
 choosing a
 
 109
-00:07:17,228 --> 00:07:21,108
+00:07:01,117 --> 00:07:05,337
 change, checking evidence, and repeating a
 routine you can use elsewhere.

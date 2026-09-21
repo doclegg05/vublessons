@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T13:18:07.305Z",
+  "generatedAt": "2026-09-21T17:57:50.163Z",
   "project": "week-01",
   "summary": {
     "passed": 10,
@@ -10,10 +10,10 @@
       "id": "beat-01",
       "pass": true,
       "metrics": {
-        "seconds": 38.92,
-        "window": 40.421,
+        "seconds": 37.15,
+        "window": 38.656,
         "words": 102,
-        "wpm": 157,
+        "wpm": 165,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []
@@ -25,12 +25,12 @@
       "id": "beat-02",
       "pass": true,
       "metrics": {
-        "seconds": 43,
-        "window": 44.507,
+        "seconds": 44.75,
+        "window": 46.248,
         "words": 105,
-        "wpm": 147,
+        "wpm": 141,
         "leadingSilence": 0,
-        "trailingSilence": 0.15,
+        "trailingSilence": 0,
         "requestedBreaks": []
       },
       "failures": [],
@@ -40,10 +40,10 @@
       "id": "beat-03",
       "pass": true,
       "metrics": {
-        "seconds": 45.4,
-        "window": 46.9,
+        "seconds": 41.01,
+        "window": 42.511,
         "words": 107,
-        "wpm": 141,
+        "wpm": 157,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []
@@ -55,10 +55,10 @@
       "id": "beat-04",
       "pass": true,
       "metrics": {
-        "seconds": 37.25,
-        "window": 38.749,
+        "seconds": 38.09,
+        "window": 39.608,
         "words": 109,
-        "wpm": 176,
+        "wpm": 172,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []
@@ -70,10 +70,10 @@
       "id": "beat-05",
       "pass": true,
       "metrics": {
-        "seconds": 43.73,
-        "window": 45.228,
+        "seconds": 44.02,
+        "window": 45.529,
         "words": 109,
-        "wpm": 150,
+        "wpm": 149,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []
@@ -85,10 +85,10 @@
       "id": "beat-06",
       "pass": true,
       "metrics": {
-        "seconds": 46.45,
-        "window": 47.945,
+        "seconds": 42.58,
+        "window": 44.089,
         "words": 103,
-        "wpm": 133,
+        "wpm": 145,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []
@@ -100,11 +100,11 @@
       "id": "beat-07",
       "pass": true,
       "metrics": {
-        "seconds": 43.31,
-        "window": 44.81,
+        "seconds": 39.86,
+        "window": 41.372,
         "words": 106,
-        "wpm": 147,
-        "leadingSilence": 0,
+        "wpm": 160,
+        "leadingSilence": 0.18,
         "trailingSilence": 0,
         "requestedBreaks": []
       },
@@ -115,12 +115,12 @@
       "id": "beat-08",
       "pass": true,
       "metrics": {
-        "seconds": 46.5,
-        "window": 48.013,
+        "seconds": 43.62,
+        "window": 45.134,
         "words": 104,
-        "wpm": 135,
-        "leadingSilence": 0,
-        "trailingSilence": 0.25,
+        "wpm": 144,
+        "leadingSilence": 0.18,
+        "trailingSilence": 0,
         "requestedBreaks": []
       },
       "failures": [],
@@ -130,12 +130,12 @@
       "id": "beat-09",
       "pass": true,
       "metrics": {
-        "seconds": 41.4,
-        "window": 42.905,
+        "seconds": 39.63,
+        "window": 41.14,
         "words": 109,
-        "wpm": 158,
+        "wpm": 166,
         "leadingSilence": 0,
-        "trailingSilence": 0,
+        "trailingSilence": 0.28,
         "requestedBreaks": []
       },
       "failures": [],
@@ -145,10 +145,10 @@
       "id": "beat-10",
       "pass": true,
       "metrics": {
-        "seconds": 41.72,
-        "window": 44.13,
+        "seconds": 41.14,
+        "window": 43.549,
         "words": 111,
-        "wpm": 160,
+        "wpm": 162,
         "leadingSilence": 0,
         "trailingSilence": 0,
         "requestedBreaks": []

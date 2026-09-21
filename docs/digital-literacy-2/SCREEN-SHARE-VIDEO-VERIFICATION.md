@@ -1,5 +1,10 @@
 # Screen-share video verification
 
+Historical snapshot of commit `2e3b85e`, before the expressive-narration request.
+The audio-preservation claim and delivery hashes below apply only to that
+revision. See `EXPRESSIVE-NARRATION.md` for the later narration replacement;
+the media manifest and JSON checks describe the latest verified delivery.
+
 ## Delivered revision
 
 Twelve screen-share walkthroughs replace selected diagram chapters across all six videos. Total walkthrough time is 553.730 seconds (9m14s). The remaining illustrated explainer chapters are retained. One silent, seven-second ElevenLabs-generated workstation shot introduces week 1; the task interfaces, cursor motion, click indicators, and typing are authored with HyperFrames.

@@ -6,10 +6,10 @@
     "variant": 0,
     "labels": [],
     "text": "Think of a group task you have helped organize: a family gathering, a volunteer activity, or a meeting. Confusion often begins when people assume someone else knows what to do. We will coordinate a fictional community computer-help session using a clear message, one shared handout, and an agreed review process. You can connect the example to a group you know, without entering real members' information. The goal is not to send more messages. It is to help the right person take the right next action. By the end, you should be able to choose a channel, request useful feedback, and verify the decision everyone will follow.",
-    "window": 44.414,
+    "window": 47.688,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 42.8640589569161,
+    "audioDuration": 46.138072562358275,
     "start": 0.45
   },
   {
@@ -19,11 +19,11 @@
     "variant": 1,
     "labels": [],
     "text": "A live conversation can help resolve an urgent misunderstanding, while a written message can preserve details for someone who responds later. A shared document is useful when several people must work on the same content. Choose the channel by the task, timing, and audience. Check which account you are using before posting or sending. A personal account and an organization account may have different audiences, permissions, and expectations. Do not assume that a private-looking group makes every detail appropriate to share. Pause and choose a channel for a partner who cannot meet today but needs to review tomorrow's handout. A clear written request with the shared document gives them a useful starting point.",
-    "window": 50.01,
+    "window": 48.106,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 48.46006802721089,
-    "start": 44.864
+    "audioDuration": 46.55603174603175,
+    "start": 48.138
   },
   {
     "id": "beat-03",
@@ -32,11 +32,11 @@
     "variant": 4,
     "labels": [],
     "text": "Our subject line is Review the computer-help handout. The message says which section needs attention, what kind of feedback would help, and when a response is useful. For example: please comment on whether the contact section is clear before our next practice session. That is more actionable than please look at this. Use respectful, direct language and explain abbreviations the reader may not know. Attach or link the intended file, then check that it is the correct version. Read the message once from the recipient's point of view. Could they act without asking what you meant? In this course, draft the message with fictional information; you do not need to send it.",
-    "window": 46.109,
+    "window": 42.511,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 44.559115646258505,
-    "start": 94.874
+    "audioDuration": 40.96106575963719,
+    "start": 96.244
   },
   {
     "id": "beat-04",
@@ -45,11 +45,11 @@
     "variant": 0,
     "labels": [],
     "text": "Before sending a real email, inspect every recipient field. To usually identifies the main recipients. Cc sends a visible copy to people who need to be informed. Bcc hides those recipients' addresses from the other recipients, but it does not make the message confidential or stop someone from forwarding it. Reply all can send your response to more people than you intended. Check whether everyone needs that response. Timing also matters: a late message with an immediate deadline may be difficult for others to act on. Pause and review your fictional draft. Remove unnecessary recipients and give the partner a reasonable response window. Clear communication includes both the content and its destination.",
-    "window": 51.45,
+    "window": 45.947,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 49.8997052154195,
-    "start": 140.983
+    "audioDuration": 44.396575963718824,
+    "start": 138.755
   },
   {
     "id": "beat-05",
@@ -58,11 +58,11 @@
     "variant": 0,
     "labels": [],
     "text": "Imagine three people editing three separate handouts and calling each one final. It becomes difficult to know which instructions to use. Instead, agree where the common copy lives and what each person is responsible for. The owner coordinates the final decision, the writer drafts, and the reviewer suggests improvements. Give each person access appropriate to that task, and verify that the link opens for them. Working together at the same time is synchronous collaboration. Leaving comments for later is asynchronous collaboration. Neither is automatically better. Choose the arrangement that fits people's schedules and the decision needed, then record the agreed outcome in the shared place.",
-    "window": 46.016,
+    "window": 45.134,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 44.4662358276644,
-    "start": 192.433
+    "audioDuration": 43.58387755102041,
+    "start": 184.702
   },
   {
     "id": "beat-06",
@@ -71,11 +71,11 @@
     "variant": 2,
     "labels": [],
     "text": "Compare two comments. This is confusing gives the writer little to act on. Add the contact number after the steps so readers can find help identifies a location, a change, and a reason. The writer can accept the idea, ask a clarifying question, or explain another choice. Discuss the work rather than judging the person. After making the edit, acknowledge the feedback and check the revised document. Resolve a comment only when the issue has been addressed or an alternative decision is clear. Pause and write one useful comment on the fictional handout. Have a partner explain the change they think you are requesting before they make it.",
-    "window": 41.93,
+    "window": 38.029,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 40.37952380952381,
-    "start": 238.449
+    "audioDuration": 36.47857142857143,
+    "start": 229.836
   },
   {
     "id": "beat-07",
@@ -84,11 +84,11 @@
     "variant": 3,
     "labels": [],
     "text": "Before a practice meeting, select and test the intended speaker and microphone. Check the app's controls rather than assuming the computer's general settings tell the whole story. Mute when appropriate, and use the agreed chat or raise-hand control to contribute. A webinar may give the host more control over who can speak than a small meeting does. Follow the event's instructions and ask before recording. If captions are available and helpful, turn them on; ask for clarification when a term is unfamiliar. If the connection fails, use the agreed backup plan, such as reading the shared notes afterward. Preparation reduces the amount of meeting time spent guessing about controls.",
-    "window": 45.784,
+    "window": 43.138,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 44.23403628117914,
-    "start": 280.379
+    "audioDuration": 41.58800453514739,
+    "start": 267.865
   },
   {
     "id": "beat-08",
@@ -97,11 +97,11 @@
     "variant": 4,
     "labels": [],
     "text": "A community page can be useful for finding an event or asking a question, but members' posts are not automatically verified service information. Read the community's purpose and rules, observe how people ask for help, and contribute respectfully. For eligibility, opening hours, or official requirements, check the responsible organization through its known website or contact method. Keep private details out of a public question. If someone suggests an unfamiliar service, record what needs confirmation before acting. You already use judgment when accepting advice in person. Bring that same habit online: consider who is speaking, what they can know, and where the claim can be checked independently.",
-    "window": 44.577,
+    "window": 43.138,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 43.026598639455784,
-    "start": 326.163
+    "audioDuration": 41.58800453514739,
+    "start": 311.003
   },
   {
     "id": "beat-09",
@@ -110,11 +110,11 @@
     "variant": 0,
     "labels": [],
     "text": "A fictional offer says free trial today, then twelve dollars each month. Before accepting, identify what is being purchased: a physical good, a one-time service, or a continuing subscription. Check the amount due now, future charges, renewal timing, cancellation conditions, and the seller's identity. A small in-app purchase can still cost real money, and several small purchases can add up. A familiar logo or a professional page is not proof that every offer is suitable. Our practice ends with explaining the decision; no purchase or payment details are required. Pause and name the fact you would need if the future price or cancellation method were missing.",
-    "window": 44.414,
+    "window": 42.511,
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 42.8640589569161,
-    "start": 370.74
+    "audioDuration": 40.96106575963719,
+    "start": 354.141
   },
   {
     "id": "beat-10",
@@ -123,10 +123,10 @@
     "variant": 4,
     "labels": [],
     "text": "Complete the fictional coordination task with a partner. Draft the request, choose the recipients and access role, propose a useful comment, and record the final decision in one shared place. Switch roles so both people practice explaining and checking. Then review the subscription example and state what you would verify before committing money. Judge success by observable results: the partner knows what to do, can open the right file, and understands the agreed outcome. For a group task from your own life, choose one habit to transfer. It might be a clearer subject, fewer recipients, one common copy, or a written decision that prevents the next round of confusion.",
-    "window": 48.286,
+    "window": 44.362,
     "leadIn": 0.45,
     "visualHold": 2.0,
-    "audioDuration": 45.83621315192744,
-    "start": 415.154
+    "audioDuration": 41.91204081632653,
+    "start": 396.652
   }
 ]

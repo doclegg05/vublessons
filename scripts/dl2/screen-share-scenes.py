@@ -415,12 +415,17 @@ def scene(n, i, beat, words):
             at=action['at']
             # Move before the spoken action; the click and state change coincide.
             travel=min(.65,max(.12,(at-actions[j-1]['at'])/2))
+            # A new performance can bring two clicks closer together. Finish
+            # this pulse before the next one so reverse seeking stays stable.
+            next_click=actions[j+1]['at'] if j+1<len(actions) else beat['window']
+            pulse_duration=.55 if next_click-at>=.55 else max(.001,next_click-at-.02)
+            pulse='.55' if pulse_duration==.55 else f'{pulse_duration:.3f}'
             events += [f'tl.to("#{cid} .pointer",{{x:{action["x"]},y:{action["y"]},duration:{travel},ease:"power2.inOut"}},{max(0,at-travel)});',
                        f'tl.set("#{cid}-state-{j-1}",{{opacity:0}},{at});',
                        f'tl.set("#{sid}",{{opacity:1}},{at});',
                        f'tl.set("#{cid} .action-label",{{textContent:{json.dumps(action["label"])}}},{at});',
                        f'tl.set("#{cid} .step-number",{{textContent:"{j+1:02} / {len(actions):02}"}},{at});',
-                       f'tl.fromTo("#{cid} .click-ring",{{opacity:1,scale:.6}},{{opacity:0,scale:1.45,duration:.55,immediateRender:false}},{at});']
+                       f'tl.fromTo("#{cid} .click-ring",{{opacity:1,scale:.6}},{{opacity:0,scale:1.45,duration:{pulse},immediateRender:false}},{at});']
     first=actions[0]
     events.insert(0,f'tl.set("#{cid} .pointer",{{x:{first["x"]},y:{first["y"]}}},0);')
     return f'''<template><div id="{cid}" data-composition-id="{cid}" data-start="0" data-duration="{beat['window']}" data-width="1280" data-height="720" data-screen-share="true" style="position:relative;width:100%;height:100%;overflow:hidden">
