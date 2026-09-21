@@ -104,9 +104,10 @@ sources+='<h2>Adult learning and deeper video lessons</h2><p>The chaptered video
 write('sources.html',doc('Sources and curriculum alignment',sources))
 for kind,questions in Q.items():
  title=kind.title()+'-test'
+ version=3 if kind=='post' else 2
  write(f'assessments/{kind}-test.html',page(title,learning.assessment(kind,link),'assessment',script='assessment.js'))
- paper='<p>Assessment version 2 · Fictional practice scenarios</p><p>Name or learner code: ____________________</p><p>Read each situation and choose the one answer that best fits the task. Each correct answer earns one point. Total: 28. This is a classroom assessment, not a certification exam.</p>'
- key='<p>Assessment version 2</p><p>One point per correct answer. Domain totals: four points each. Total: 28. Accept only the keyed choice for the knowledge score; use worksheet rubrics for demonstrated skills.</p>'
+ paper=f'<p>Assessment version {version} · Fictional practice scenarios</p><p>Name or learner code: ____________________</p><p>Read each situation and choose the one answer that best fits the task. Each correct answer earns one point. Total: 28. This is a classroom assessment, not a certification exam.</p>'
+ key=f'<p>Assessment version {version}</p><p>One point per correct answer. Domain totals: four points each. Total: 28. Accept only the keyed choice for the knowledge score; use worksheet rubrics for demonstrated skills.</p>'
  for i,q in enumerate(questions):
   paper+=f'<section class="question"><h2>{i+1}. {e(q["question"])}</h2><ol type="A">'+''.join('<li>☐ '+e(o)+'</li>' for o in q['options'])+'</ol></section>'
   key+=f'<section class="question"><h2>{i+1}. {e(q["question"])}</h2><p><strong>{"ABC"[q["answer"]]}. {e(q["options"][q["answer"]])}</strong></p><p>{e(q["why"])}</p><p>Domain: {e(q["domain"])} · objective {e(q["objective"])} · week {q["week"]}</p></section>'

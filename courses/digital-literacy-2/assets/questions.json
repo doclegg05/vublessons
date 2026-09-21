@@ -428,14 +428,14 @@
       "domain": "Technology Basics",
       "week": 1,
       "objective": "1.1",
-      "question": "You are reading a community workshop page at home. Its words are too small, but your email app and desktop labels are readable. What should you try first?",
+      "question": "At a community computer lab, text is too small in the word processor, email app and desktop menus. Enlarging one webpage did not help those other areas. Which setting best matches the wider problem?",
       "options": [
-        "Enlarge every app with display scaling.",
-        "Increase screen brightness while leaving text size unchanged.",
-        "Enlarge the webpage with browser zoom."
+        "Increase only the browser\u2019s page zoom again.",
+        "Change the default printer\u2019s paper size.",
+        "Increase the computer\u2019s display scaling, then check the apps."
       ],
       "answer": 2,
-      "why": "Browser zoom changes the size of webpage content. Display scaling affects the wider desktop, and brightness changes light output. Start with the control that matches the problem, then check the result."
+      "why": "Display scaling affects the wider desktop and its apps. Browser zoom changes webpage content, so it does not solve small menus and text across other programs. Make one adjustment, then check the result."
     },
     {
       "id": "post-02",
@@ -443,14 +443,14 @@
       "domain": "Technology Basics",
       "week": 1,
       "objective": "1.2",
-      "question": "A community group is choosing a meeting time. The organizer needs your available times, not the details of your personal appointments. Which calendar information should you share?",
+      "question": "You are arranging two volunteer visits on different days next week. Both are saved in your calendar. Which view would best help you compare their times with your other appointments?",
       "options": [
-        "All calendar details through a public link.",
-        "Free/busy times without appointment details.",
-        "Full event descriptions with the organizer."
+        "A task list containing only tasks with no meeting times.",
+        "Week view, which shows the days together for checking conflicts.",
+        "Day view for today, without opening the days of the visits."
       ],
       "answer": 1,
-      "why": "Free/busy sharing answers the scheduling question without exposing appointment details. Check the actual sharing settings and what the other person can see; sharing a whole calendar may reveal more than the task needs."
+      "why": "Week view helps compare appointments across several days. Day view provides detail for one day; month view gives a broader overview. Check the saved start and end times when looking for conflicts."
     },
     {
       "id": "post-03",
@@ -458,14 +458,14 @@
       "domain": "Technology Basics",
       "week": 1,
       "objective": "1.3",
-      "question": "You begin typing a volunteer\u2019s email address, and autocomplete selects another person with a similar name. The message is meant for only one volunteer. What should you do before sending?",
+      "question": "You create a repeating reminder for a Monday library visit. When you check next week, the reminder appears on Tuesday. What should you do before relying on it?",
       "options": [
-        "Check the full address and select the intended person.",
-        "Accept the suggestion because you have emailed that person before.",
-        "Send to both suggested addresses to reach the right person."
+        "Correct the repeat settings and check the next occurrence.",
+        "Leave the rule alone because automatic reminders must be accurate.",
+        "Keep adding separate Monday reminders without checking the original rule."
       ],
       "answer": 0,
-      "why": "Autocorrect and autocomplete offer suggestions, not guarantees. Check names, full addresses and meaning yourself. A correctly spelled word or familiar contact can still be wrong for this message."
+      "why": "An automated rule repeats its settings, even when those settings are wrong for the task. Inspect the schedule, correct it and verify the next occurrence instead of assuming automation guarantees the intended result."
     },
     {
       "id": "post-04",
@@ -473,14 +473,14 @@
       "domain": "Technology Basics",
       "week": 1,
       "objective": "1.5",
-      "question": "You need 15 copies of a library workshop flyer. You have changed the page layout since its last printout. Which step best avoids wasting paper?",
+      "question": "Your print preview for a community flyer shows the last line on a second page. You need each flyer to fit on one sheet. What should you do before making copies?",
       "options": [
-        "Print all 15 because the earlier layout printed correctly.",
-        "Send the job twice so a spare set will be ready.",
-        "Check the destination and preview, then inspect one printed copy."
+        "Print only page one and let the missing line be left out.",
+        "Increase the number of copies without changing the layout.",
+        "Adjust the layout, check the preview again and inspect one test print."
       ],
       "answer": 2,
-      "why": "The selected printer may be left over from another task, and a layout change can alter the output. Confirm the destination and preview, then inspect one test copy before sending the remaining copies."
+      "why": "Preview reveals output problems before you spend paper. Correct the layout without dropping needed content, then inspect a test print. Copy count does not fix a page break."
     },
     {
       "id": "post-05",
@@ -488,14 +488,14 @@
       "domain": "Digital Citizenship",
       "week": 4,
       "objective": "2.1",
-      "question": "You are ready to answer a community group question in your volunteer role. Your browser has opened your personal profile instead. What is the best next step?",
+      "question": "You are setting up a separate account for volunteer work. You already have a personal account with a strong password. Which plan best keeps the two accounts protected?",
       "options": [
-        "Copy the volunteer profile picture onto the personal reply.",
-        "Select the volunteer profile and confirm who will see the reply.",
-        "Reply from the personal profile because the same person owns both."
+        "Give every volunteer the same password so the team can remember it.",
+        "Use a different strong password and enable multifactor authentication where available.",
+        "Reuse the personal password because it is already strong."
       ],
       "answer": 1,
-      "why": "The active account determines the identity attached to a post. A signature or profile picture does not switch accounts. Confirm both your role and the intended audience before posting."
+      "why": "The lesson recommends separate credentials, a trusted password manager and multifactor authentication where available. A reused password can expose more than one account if compromised. Shared passwords also weaken individual control."
     },
     {
       "id": "post-06",
@@ -503,14 +503,14 @@
       "domain": "Digital Citizenship",
       "week": 4,
       "objective": "2.2",
-      "question": "On Sunday evening, you finish a handout for a team that reviews work on weekdays. Feedback is needed by Thursday. Which message plan gives a clear, reasonable expectation?",
+      "question": "A teammate drafts this nonurgent message: \u201cLook at the flyer soon.\u201d You need their review before the community team meets on Friday. Which revision sets a clear response expectation?",
       "options": [
-        "Send during the team\u2019s usual hours and ask for feedback by Thursday.",
-        "Send repeated reminders tonight until someone responds.",
-        "Request a reply as soon as possible without stating the deadline."
+        "\u201cPlease check the flyer\u2019s contact details and send corrections by Thursday afternoon.\u201d",
+        "\u201cURGENT: look at this whenever you can.\u201d",
+        "\u201cI will keep sending this until you answer.\u201d"
       ],
       "answer": 0,
-      "why": "Match message timing to urgency and the group\u2019s expectations. A specific deadline tells the recipient when to act. For a nonurgent task, an urgent label or repeated reminders creates needless pressure."
+      "why": "A useful request states what needs checking and when a response is needed. A clear deadline supports planning; vague timing, an unnecessary urgent label and repeated messages do not clarify the task."
     },
     {
       "id": "post-07",
@@ -518,14 +518,14 @@
       "domain": "Digital Citizenship",
       "week": 4,
       "objective": "2.2",
-      "question": "A new volunteer asks you to explain a term in a shared handout. They have not used this program before. Which response respects their experience and supports learning?",
+      "question": "A volunteer guide begins, \u201cOlder people will need someone else to do this for them.\u201d The class includes people with varied experience. Which replacement best supports everyone\u2019s participation?",
       "options": [
-        "Tell them to memorize the term before asking more questions.",
-        "Assume their age explains the question and complete the task for them.",
-        "Define the term and connect it to the task they are trying to do."
+        "\u201cEveryone over a certain age should skip the practice.\u201d",
+        "\u201cAnyone who needs help should watch instead of trying.\u201d",
+        "\u201cTry these steps at your own pace, and ask for help where you need it.\u201d"
       ],
       "answer": 2,
-      "why": "Explain the unfamiliar term and connect it to the task. One question does not tell you someone\u2019s overall ability. Plain language and an offer of help support learning without making assumptions."
+      "why": "Inclusive language avoids assuming ability from age. Offer clear steps, time to practice and help based on the person\u2019s needs. Learners bring different prior experience and should have a chance to participate."
     },
     {
       "id": "post-08",
@@ -533,14 +533,14 @@
       "domain": "Digital Citizenship",
       "week": 1,
       "objective": "2.3",
-      "question": "You need to change a reminder in an updated calendar app. A saved tutorial shows a menu that is no longer there. How should you look for instructions that fit?",
+      "question": "A library practice document will not save. You have tried Save As, but the app still displays \u201cFolder unavailable.\u201d Which request would give official support the most useful starting information?",
       "options": [
-        "Choose the oldest tutorial because it has collected the most views.",
-        "Check current official help for the app and the reminder task.",
-        "Follow the old tutorial\u2019s button positions even when the labels differ."
+        "Send your account password instead of describing the problem.",
+        "Name the app and version, the save task, what you tried and the exact error.",
+        "Say only \u201cMy computer does not work\u201d and wait for a guess."
       ],
       "answer": 1,
-      "why": "Current official help is a good starting point when menus change. Identify the app version and the task, rather than relying only on old button positions. When asking for help, describe what you tried and what happened."
+      "why": "A precise help request names the application, task, attempted steps and error. This helps someone give instructions that fit. A password is not needed to explain the problem."
     },
     {
       "id": "post-09",
@@ -548,14 +548,14 @@
       "domain": "Information Management",
       "week": 2,
       "objective": "3.1",
-      "question": "You want an in-person computer class at a public library near Elkins, West Virginia. Which search is the best starting point for this task?",
+      "question": "Searching for \u201cclasses\u201d returns cooking, exercise and computer lessons across the country. You need beginner computer instruction near Charleston, West Virginia. Which revision would make the results more useful?",
       "options": [
-        "Elkins WV public library computer classes",
-        "computer classes around the world",
-        "West Virginia places to visit"
+        "Search for \u201cbeginner computer classes Charleston WV.\u201d",
+        "Search for \u201cclasses\u201d again without adding any details.",
+        "Search for \u201cpopular activities\u201d and rely on the first result."
       ],
       "answer": 0,
-      "why": "Useful search terms name the service, place and setting you need. These searches are starting points, not proof that a class exists. Confirm current details with the library before making plans."
+      "why": "Refine a broad search with the subject, audience and location. These terms describe the task more clearly; search results still need checking for current availability and suitability."
     },
     {
       "id": "post-10",
@@ -563,14 +563,14 @@
       "domain": "Information Management",
       "week": 2,
       "objective": "3.2",
-      "question": "An online directory says a nearby community center offers free computer repairs. It does not say where that information came from. What should you do before relying on the offer?",
+      "question": "A page selling a paid computer course says it is the only reliable way to learn. It provides no evidence for that claim. How should you judge the recommendation?",
       "options": [
-        "Assume the listing is verified because it is the first search result.",
-        "Use the directory\u2019s professional appearance as evidence that the offer is current.",
-        "Confirm the service through the center\u2019s official contact information."
+        "Accept it because a business would not promote its own course unfairly.",
+        "Assume that a polished layout proves the claim.",
+        "Consider the seller\u2019s interest and compare the claim with independent evidence."
       ],
       "answer": 2,
-      "why": "Verify a service with the organization responsible for providing it. Search position, appearance and repeated claims do not establish current availability. Check the details that matter for your visit."
+      "why": "A source\u2019s purpose and interests can shape its claims. Check evidence and compare relevant sources. A commercial interest does not make every statement false, but it is a reason to examine the support for a recommendation."
     },
     {
       "id": "post-11",
@@ -578,14 +578,14 @@
       "domain": "Information Management",
       "week": 2,
       "objective": "3.2",
-      "question": "You need a local workshop you can attend in person. A reliable community-center page lists a class in another state with no online option. What is missing for your task?",
+      "question": "You find an official local workshop announcement from three years ago. It accurately describes the event held then, but you need a session you can attend now. What still needs checking?",
       "options": [
-        "A more recent date, which would make the distant class local.",
-        "A class relevant to the place where you can attend.",
-        "Proof that all information on the page must be false."
+        "Nothing; an accurate past announcement guarantees a current session.",
+        "Whether the program still runs and what its current schedule is.",
+        "Only whether the old announcement has a familiar logo."
       ],
       "answer": 1,
-      "why": "Accuracy and relevance are different checks. A trustworthy page can describe a real class that does not fit your location or attendance needs. Use the source that answers your actual question."
+      "why": "Currency matters even when a source is accurate and local. Verify whether the service still operates and whether dates, eligibility or arrangements have changed before relying on an older announcement."
     },
     {
       "id": "post-12",
@@ -593,14 +593,14 @@
       "domain": "Information Management",
       "week": 2,
       "objective": "3.3",
-      "question": "A fictional community-center form lets you request a workshop place. Some fields are optional and do not seem related to booking. What is the best approach before completing the form?",
+      "question": "After submitting the fictional computer-help form, you see a confirmation for \u201cphone help,\u201d although you intended an in-person visit. What does checking this confirmation tell you to do?",
       "options": [
-        "Check the collector and purpose, then provide only information needed for the task.",
-        "Treat every visible field as required and supply as much detail as possible.",
-        "Assume a form with the center\u2019s name can request any personal information."
+        "Use the available correction or contact method to fix the requested help type.",
+        "Assume the confirmation is unimportant because the form was submitted.",
+        "Submit several more requests without checking whether they replace the first."
       ],
       "answer": 0,
-      "why": "Check who collects the information, the purpose and the required fields. Optional does not mean necessary. In class, use fictional details; review the completed request and read its confirmation."
+      "why": "The confirmation is evidence of what the system received. Check that it matches your intended request, then use the stated correction or contact process. Repeated submissions can create duplicates rather than repair the original."
     },
     {
       "id": "post-13",
@@ -608,14 +608,14 @@
       "domain": "Content Creation",
       "week": 3,
       "objective": "4.1",
-      "question": "Your community workshop guide has three main sections. You want clear structure that assistive technology can recognize, not just titles that look different. What should you use?",
+      "question": "Your handout\u2019s section titles look large and bold, but the document\u2019s heading navigation does not list them. What is the most useful correction?",
       "options": [
-        "Larger font sizes on ordinary paragraphs only.",
-        "Pictures of the section titles instead of text headings.",
-        "Built-in heading styles at the appropriate level."
+        "Make the same ordinary paragraphs even larger.",
+        "Add more blank lines before each title.",
+        "Apply real heading styles to the section titles."
       ],
       "answer": 2,
-      "why": "Heading styles give section titles structural meaning, which helps navigation and assistive technology. Bold, font size and spacing can change appearance without creating that structure."
+      "why": "Visual formatting alone may leave titles as ordinary paragraphs. Heading styles add document structure that navigation and assistive technology can recognize. Check the structure as well as how the page looks."
     },
     {
       "id": "post-14",
@@ -623,14 +623,14 @@
       "domain": "Content Creation",
       "week": 3,
       "objective": "4.1",
-      "question": "Your practice supply list has 6 notebooks in C2, 4 folders in C3 and 3 pens in C4. You want the total quantity to update if any entry changes. Which formula should you use?",
+      "question": "A practice budget shows three costs: 12, 8 and 5, with a total of 25. You want to check whether the total really uses all three cells. Which test gives useful evidence?",
       "options": [
-        "=13",
-        "=SUM(C2:C4)",
-        "=C2+C4"
+        "Rename the worksheet and assume the total is now verified.",
+        "Change 12 to 15 and check that the total updates to 28.",
+        "Change the total cell\u2019s color and check that it stays 25."
       ],
       "answer": 1,
-      "why": "The colon includes every cell in the range, including the middle row. Adding only the first and last cells misses an item. A fixed number can look correct now but will not update when an input changes. Test the formula by changing one input."
+      "why": "Changing an input checks calculation behavior. The total should increase by the same amount, from 25 to 28. If it does not, inspect the formula\u2019s range and whether inputs are stored as numbers; formatting is not a calculation test."
     },
     {
       "id": "post-15",
@@ -638,14 +638,14 @@
       "domain": "Content Creation",
       "week": 3,
       "objective": "4.3",
-      "question": "You want to adapt a diagram from a website for a library workshop handout. You have not checked its license or permission terms. What should you do first?",
+      "question": "A practice image has written permission allowing reuse and cropping if the creator, title, source and license are credited. You want to crop it for a flyer. Which plan follows those stated conditions?",
       "options": [
-        "Check whether adapting it is allowed and what attribution is required.",
-        "Change the colors and assume it is now entirely your own work.",
-        "Use a screenshot because that avoids the need to check reuse terms."
+        "Crop a copy and include the required credit with the reused image.",
+        "Crop it and omit the credit because only part of the image remains.",
+        "Keep only the creator\u2019s name because the other required details are optional."
       ],
       "answer": 0,
-      "why": "Find the actual license or permission and follow its conditions, including whether changes are allowed and what credit is needed. Credit, a screenshot or free distribution does not by itself establish permission. Use an approved alternative if permission is unclear."
+      "why": "Read and follow the permission actually supplied. In this fictional example, cropping is allowed but the stated credit is still required. Save a copy so the original stays available."
     },
     {
       "id": "post-16",
@@ -653,14 +653,14 @@
       "domain": "Content Creation",
       "week": 3,
       "objective": "4.4",
-      "question": "A coauthor must correct the wording in your community resource guide before it is finished. Which sharing choice lets them make those changes directly?",
+      "question": "Your finished community handout is ready for neighbors to read and print. They do not need to edit it, and you want to preserve its page layout. Which delivery fits that purpose?",
       "options": [
-        "Send only a screenshot of the current guide.",
-        "Share the editable file with reading access only.",
-        "Share the editable file with suitable editing access."
+        "Export CSV because it preserves document layout and images.",
+        "Send a photo of the screen without checking whether all the text is readable.",
+        "Export a PDF, then open it to check page breaks, links and missing content."
       ],
       "answer": 2,
-      "why": "Direct revision needs both an editable format and permission to edit. A screenshot shows the content but does not provide editable paragraphs. A view-only link also prevents the intended task; a checked PDF can be useful later for finished distribution."
+      "why": "PDF is useful for distributing a finished layout. Open the exported file to inspect it; export success alone does not prove the result is usable. CSV is for simple table data and does not preserve this document\u2019s layout."
     },
     {
       "id": "post-17",
@@ -668,14 +668,14 @@
       "domain": "Communication",
       "week": 4,
       "objective": "5.1",
-      "question": "You are emailing a community organizer to ask when the resource workshop starts. Which subject line most clearly describes your request?",
+      "question": "Your email to a community organizer already has a clear subject. The body only says, \u201cHere is the flyer.\u201d You need the organizer to check the room number before printing. What should you add?",
       "options": [
-        "Resource workshop start time confirmed",
-        "Please confirm the resource workshop start time",
-        "Information about a community activity"
+        "A second copy of the same attachment without explaining the task.",
+        "A specific request to verify the room number, with the deadline and attached draft.",
+        "More praise for the flyer without saying what needs checking."
       ],
       "answer": 1,
-      "why": "A useful subject names the topic and the action needed. A vague subject hides the request, while saying something is confirmed incorrectly suggests the question is already settled. Put the needed context in the message as well."
+      "why": "The body needs enough context and a clear next action, even when the subject is good. State what the recipient should check and when, then verify the intended recipient and attachment before sending."
     },
     {
       "id": "post-18",
@@ -683,14 +683,14 @@
       "domain": "Communication",
       "week": 4,
       "objective": "5.1",
-      "question": "You are emailing a library event reminder to several volunteers. They should receive the message without seeing the full list of other recipients\u2019 addresses. Which field fits?",
+      "question": "You sent a volunteer announcement using Bcc. A partner says this also prevents recipients from forwarding its contents. Which statement correctly explains the limit?",
       "options": [
-        "Bcc for the addresses that should be hidden.",
-        "Cc for the addresses that should be hidden.",
-        "To for every address in the list."
+        "Bcc hides those recipient addresses; it does not stop forwarding the message.",
+        "Bcc encrypts the message and makes forwarding impossible.",
+        "Bcc removes the attachment as soon as a recipient opens it."
       ],
       "answer": 0,
-      "why": "Bcc hides those recipient addresses from other recipients; To and Cc normally show them. Bcc does not encrypt the message, stop forwarding or make an attachment safe."
+      "why": "Bcc controls visibility of recipient addresses, not what recipients can do with the content. It does not encrypt the message or prevent forwarding. Consider the content\u2019s sensitivity before sending it."
     },
     {
       "id": "post-19",
@@ -698,14 +698,14 @@
       "domain": "Communication",
       "week": 4,
       "objective": "5.2",
-      "question": "A fictional video service offers a free month, and you only want to try one lesson. What information do you need before accepting the offer?",
+      "question": "A fictional app trial says: \u201cNo charge for seven days; then $8 each month unless canceled.\u201d You only need the app for one weekend. Which conclusion follows from these terms?",
       "options": [
-        "Only the price shown for the first month.",
-        "Only whether you can remove the app icon afterward.",
-        "Renewal timing, the later price and cancellation terms."
+        "Deleting its desktop shortcut ends the subscription automatically.",
+        "The seven free days mean all later use will also be free.",
+        "Keeping the trial active after seven days can start a recurring charge."
       ],
       "answer": 2,
-      "why": "Look beyond the introductory price to renewal and cancellation terms. Removing an app is not the same as following the service\u2019s cancellation process. The class uses fictional offers and does not require a real purchase."
+      "why": "Read the later price and renewal schedule, not just the introductory offer. Follow the stated cancellation process if you do not want renewal. Removing a shortcut does not establish cancellation. This is a fictional offer, not a real purchase."
     },
     {
       "id": "post-20",
@@ -713,14 +713,14 @@
       "domain": "Communication",
       "week": 4,
       "objective": "5.2",
-      "question": "A fictional free app offers an optional tool for a one-time $3 charge. You are reviewing the offer in class. What should happen before anyone authorizes that upgrade?",
+      "question": "A fictional free game offers a $2 upgrade. Its purchase screen also offers a way to require approval for future purchases. Why is that control useful?",
       "options": [
-        "Approve it now and review the cost after trying the tool.",
-        "Review the separate charge and purchase terms before deciding.",
-        "Accept it as free because downloading the app cost nothing."
+        "It proves that no charge has ever been made in the app.",
+        "It can help prevent additional purchases from being authorized without review.",
+        "It makes every paid upgrade free from then on."
       ],
       "answer": 1,
-      "why": "The download price and the price of an extra feature are separate. Read the purchase details before authorizing anything; do not assume when or whether a charge applies. No real payment is needed for the practice."
+      "why": "Purchase controls help manage later transactions; they do not erase charges or turn paid features into free ones. Review the offer, authorization settings and receipts. Class practice does not require making a real purchase."
     },
     {
       "id": "post-21",
@@ -728,14 +728,14 @@
       "domain": "Collaboration",
       "week": 4,
       "objective": "6.1",
-      "question": "A community team meets online and edits one shared workshop outline together during the meeting. What type of collaboration is this?",
+      "question": "Two volunteers cannot work at the same time. One can draft a handout today, and the other can review it tomorrow. Which plan fits their schedules while keeping one shared copy?",
       "options": [
-        "Synchronous work because people are collaborating at the same time.",
-        "Asynchronous work because the file is stored online.",
-        "Separate-copy work because each person has a different computer."
+        "Leave comments in the shared draft for the other person to review later.",
+        "Require both volunteers to type in the file during a live call today.",
+        "Create separate copies without agreeing how changes will be combined."
       ],
       "answer": 0,
-      "why": "Synchronous means working together at the same time. Asynchronous work happens at different times, such as leaving comments for tomorrow. Online storage and separate computers do not determine which timing pattern the team uses."
+      "why": "Asynchronous collaboration supports work at different times. A shared draft and clear comments let the next person continue the task. A live session does not fit these schedules, and unmanaged copies can create conflicting versions."
     },
     {
       "id": "post-22",
@@ -743,14 +743,14 @@
       "domain": "Collaboration",
       "week": 4,
       "objective": "6.1",
-      "question": "You want a volunteer to point out unclear steps in a draft. They should add feedback without directly changing the document. The tool supports comments. Which permission should you give?",
+      "question": "A named reviewer has finished commenting on your draft. You now ask that person to make the agreed corrections directly, while everyone else should still only read it. What access change fits?",
       "options": [
-        "View-only access to that volunteer.",
-        "Editing access to anyone who receives the link.",
-        "Commenter access to that volunteer."
+        "Make anyone with the link an editor to avoid changing one person\u2019s role.",
+        "Keep the reviewer view-only and expect direct edits to work.",
+        "Give that reviewer editing access and keep the others as viewers."
       ],
       "answer": 2,
-      "why": "Commenter access supports feedback without direct rewriting. Viewer access does not provide the requested commenting ability in this scenario, and a public editing link gives more access than the task requires."
+      "why": "Match access to the current task and the named people who need it. Direct corrections require editing access; that does not justify giving every reader the same permission. Review sharing after the work is complete."
     },
     {
       "id": "post-23",
@@ -758,14 +758,14 @@
       "domain": "Collaboration",
       "week": 4,
       "objective": "6.1",
-      "question": "A workshop guide uses an abbreviation without explaining it. New readers may not know what it means. Which comment would best help the author revise the guide?",
+      "question": "A partner comments, \u201cAdd the help desk\u2019s contact method after step 3 so readers know where to ask questions.\u201d You are responsible for revising the handout. What is a useful response?",
       "options": [
-        "Make the abbreviation bold so an explanation is no longer needed.",
-        "Spell out the abbreviation the first time so new readers can follow the steps.",
-        "Improve this section because it needs more work."
+        "Change the background color and mark the contact issue resolved.",
+        "Add the verified contact information and acknowledge how you addressed the comment.",
+        "Delete the comment without checking the missing information."
       ],
       "answer": 1,
-      "why": "Useful feedback identifies the specific problem, suggests a change and explains how readers benefit. Vague criticism leaves the author guessing. A cosmetic change does not supply missing information."
+      "why": "Constructive collaboration includes acting on specific feedback and communicating what changed. Resolve a comment when its issue is addressed, or ask a focused question if the requested change is unclear. An unrelated visual change does not solve the stated problem."
     },
     {
       "id": "post-24",
@@ -773,14 +773,14 @@
       "domain": "Collaboration",
       "week": 4,
       "objective": "6.2",
-      "question": "You would like to save a video discussion from a library workshop for later study. The recording would include other participants. What should guide your next step?",
+      "question": "During a live workshop call, background noise from your room makes it hard for others to hear the speaker. You are listening and do not need to speak yet. What should you do?",
       "options": [
-        "Follow the organizer\u2019s recording rules and confirm the needed permission.",
-        "Treat an invitation to attend as automatic permission to record.",
-        "Record first because you intend to keep the file for your own use."
+        "Mute your microphone and unmute when it is your turn to speak.",
+        "Raise your speaker volume to cover the noise.",
+        "Start a recording so the background noise will stop."
       ],
       "answer": 0,
-      "why": "The presence of a Record button or an invitation does not establish recording permission. Check the organizer\u2019s rules and the appropriate permissions before recording participants. A helpful purpose does not replace that check."
+      "why": "Meeting etiquette includes controlling background noise, taking turns and using mute appropriately. Muting your microphone stops your room\u2019s sound from being sent; speaker volume and recording controls do not solve that problem."
     },
     {
       "id": "post-25",
@@ -788,14 +788,14 @@
       "domain": "Safety and Security",
       "week": 5,
       "objective": "7.1",
-      "question": "A volunteer cannot comfortably use a mouse, and another studies with the sound off. Which workshop page would let both people complete the task?",
+      "question": "A practice page marks completed steps only in green and unfinished steps only in red. Some learners cannot distinguish those colors. Which change makes the status clearer?",
       "options": [
-        "One with keyboard access but no text alternative to spoken content.",
-        "One with captions but buttons that work only with a mouse.",
-        "One with keyboard access and accurate captions for spoken content."
+        "Use brighter red and green but keep color as the only signal.",
+        "Move the color key to the bottom without labeling the steps.",
+        "Add visible \u201cComplete\u201d and \u201cNot yet\u201d labels beside the colored indicators."
       ],
       "answer": 2,
-      "why": "Flexible input and captions address different needs. Providing both lets more people complete the same task in different situations. Supporting one need does not remove the other barrier."
+      "why": "Do not rely on color alone to communicate meaning. Text labels provide the same information for people who perceive colors differently and for situations where color is hard to see."
     },
     {
       "id": "post-26",
@@ -803,14 +803,14 @@
       "domain": "Safety and Security",
       "week": 5,
       "objective": "7.2",
-      "question": "In a fictional community forum, someone you have never met builds a friendly relationship and asks you to keep a request for private information secret. Their identity is unverified. What should you do?",
+      "question": "Notifications from a community group keep pulling you away from your practice task. You feel you must check every alert so you do not miss out. Which response supports your own learning goal?",
       "options": [
-        "Accept a second profile sent by the same person as independent proof.",
-        "Withhold the information and check their identity independently.",
-        "Rely on the friendly conversation as proof of who they are."
+        "Join more groups so you are less likely to miss an update.",
+        "Adjust nonessential alerts and choose a planned time to check the group.",
+        "Open every alert immediately, even when it interrupts the task."
       ],
       "answer": 1,
-      "why": "A false identity used to build trust is called catfishing. This scenario does not prove the person is an impostor, but friendliness and local photos do not verify identity. Pause and check through a separate trusted route before sharing private information."
+      "why": "Fear of missing out can encourage repeated checking. Choose notification settings, breaks and checking times that support your own goals. You can remain part of a group without responding to every alert immediately."
     },
     {
       "id": "post-27",
@@ -818,14 +818,14 @@
       "domain": "Safety and Security",
       "week": 5,
       "objective": "7.3",
-      "question": "An unfamiliar person leaves a USB drive labeled \u201cuseful workshop files\u201d at the community computer lab. Staff have not approved it. What should you do?",
+      "question": "A webpage that only displays a written community schedule asks to use your camera. Nothing in your task needs a photo or video call. What is the most appropriate choice?",
       "options": [
-        "Keep it disconnected and ask authorized staff what to do.",
-        "Open it briefly because the label describes useful material.",
-        "Use a different lab computer to test whether the files open."
+        "Deny camera access because the permission does not fit the task.",
+        "Allow access because every permission request is required to read a page.",
+        "Allow it because the page uses a familiar community logo."
       ],
       "answer": 0,
-      "why": "An unknown drive can carry harmful software. Its label and appearance do not prove it is safe, and switching computers does not remove the risk. Let authorized staff handle it without connecting it yourself."
+      "why": "A permission request should fit a clear task and a trusted app. Reading a written schedule does not need the camera. A logo is not a reason to grant unrelated access; review the setting if a legitimate need arises later."
     },
     {
       "id": "post-28",
@@ -833,14 +833,14 @@
       "domain": "Safety and Security",
       "week": 5,
       "objective": "7.3",
-      "question": "You are protecting a stored practice document. Preventing edits is not enough; someone without the key should be unable to read its contents. Which protection matches that need?",
+      "question": "Your practice laptop uses device encryption, but you leave it unlocked and signed in at a shared table. What protection is still needed when you step away?",
       "options": [
-        "Renaming the document to make it less obvious.",
-        "Compressing it into an unencrypted ZIP file.",
-        "Encrypting the stored data."
+        "Nothing; encryption makes an unlocked account inaccessible to everyone else.",
+        "Rename the files so the open account can safely remain unattended.",
+        "Lock the session so another person cannot use the open account."
       ],
       "answer": 2,
-      "why": "Encryption protects readable data by requiring the appropriate key or authorized access. Read-only settings restrict changes, renaming changes a label, and an ordinary ZIP is not automatically encrypted. An unlocked account or device still needs protection."
+      "why": "Encryption can protect stored data without the required key, but it does not prevent someone using an already unlocked session. Lock or sign out of the device as appropriate when leaving it. File names do not control access."
     }
   ]
 }

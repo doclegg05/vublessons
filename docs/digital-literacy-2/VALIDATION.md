@@ -7,7 +7,7 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 | Repository quality gate | PASS, including build, links, catalog, Playwright, accessibility ratchet and readability report |
 | Site build | 193 HTML pages; four courses and 24 catalog lessons |
 | Internal links | 1,352 references checked; zero broken |
-| Browser tests | 81 passed in Chromium, including chapter navigation and enlarged mobile video controls |
+| Browser tests | 82 passed in Chromium, including chapter navigation and enlarged mobile video controls |
 | New course accessibility scans | Zero axe WCAG 2.1 A/AA violations on the six tested DL2 routes |
 | Workshop state accessibility | Zero axe WCAG A/AA violations across 12 initial/changed states on six representative models |
 | Existing platform accessibility ratchet | No violations beyond the committed baseline; the baseline was not expanded |
@@ -25,6 +25,10 @@ Disposition: **ship**. The course is built and ready for deployment review. This
 ## West Virginia photographic revision
 
 All 137 slides and 60 video chapters have explicit change/keep mappings in `PHOTOGRAPHIC-VISUAL-PLAN.md` and its linked audits. Seven optimized photos establish relatable home/library/community scenarios; authored diagrams and fictional interfaces teach the steps. Sixty source narration WAV hashes remain unchanged. The six final videos use HyperFrames 0.8.58. Final exported frames were reviewed across all chapters; the photo-to-diagram overlap discovered during review was corrected and re-exported. Automated audio checks do not establish subjective voice quality.
+
+## Distinct post-test version 3
+
+The version 2 pre-test bank and pages remain unchanged. All 28 post-test questions and explanations now test different decisions within the same taught objective groups. The new post-test keeps four questions per domain and 28 total points. Browser/paper/key labels identify version 3; the pre-test remains version 2. Existing pre results are retained while old post responses are isolated. The full quality gate passes 82 tests. The new sample report has 11 visually reviewed pages. Lesson mapping: `review/post-test-v3.md`.
 
 ## Assessment version 2
 

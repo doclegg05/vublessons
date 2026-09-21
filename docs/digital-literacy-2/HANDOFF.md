@@ -30,6 +30,8 @@ Assessment drafts and results use sessionStorage in the learner's tab. There is 
 
 ## Assessment scenario revision
 
+Current pairing: **pre-test version 2 / post-test version 3**. The pre-test is unchanged. The new post-test applies the same objective groups in different decisions and situations; see `review/post-test-v3.md` for the exact lesson map and version behavior. Its separate storage key avoids applying old post answers to new items, while existing pre-test results remain available.
+
 Assessment version 2 uses 56 complete, fictional community/library scenarios with lesson-aligned choices and fuller feedback. The source remains `scripts/dl2/author-assessments.py`; run it, then `build-pages.py`, to regenerate the browser bank, printable tests and keys together. Version 2 uses its own session-storage key to avoid applying old answers to new questions. Use version 2 pre/post scores together; the post-test entry help explains this restriction. Pair-to-slide evidence and checks are in `review/assessment-v2.md`.
 
 ## Video production
