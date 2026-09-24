@@ -8,19 +8,18 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-Four courses. Digital Literacy Level 2 lives on `codex/digital-literacy-level-2` (`84859da`) and was
-reviewed 2026-09-24; course and video fixes are in PR #18, stacked on PR #17. Full Playwright
+Four courses, all on `main` and live. Digital Literacy Level 2 merged 2026-09-24 (PR #17) with the review fixes (PR #18). Full Playwright
 suite 128/128, link check 0 broken. Cohort starts 2026-09-28 per the DL2 syllabus.
 
 ## Last Session
 - **Date**: 2026-09-24
 - **What we worked on**: Six-agent review of Digital Literacy Level 2 (UI, content x3, functional x2), then fixed the six High findings; then a second six-agent review of the six lesson videos (visual x2, narration x2, playback, encoding), findings only, no fixes yet in `scripts/dl2/` generators plus `course.css` and `assessment.js`. Review reports are in the session scratchpad (`reports/00-DL2-REVIEW-SUMMARY.md` and 01 to 06); summary was delivered to Britt as files.
 - **What we decided**: Course content does not need veteran / VA / telehealth framing unless the topic calls for it (auto-memory holds the detail: `dl2-veteran-framing-not-required`). Decks keep starting keyboard focus inside the current slide; the skip link only had to become focusable. Topic-button accessible names come from a synced `aria-label`, not a hidden span (a hidden span escaped the scrolling row and broke mobile).
-- **Where we left off**: Course fixes and video fixes committed as six commits and opened as PR #18 (https://github.com/doclegg05/vublessons/pull/18), stacked on PR #17 (the DL2 course branch to main). Quality gate passed before push. Six videos re-rendered and re-verified. Remaining course findings (2 mobile Highs from the UI pass, 32 Mediums) not yet actioned. Video narration items need a re-record (listed in HANDOFF.md).
+- **Where we left off**: PR #17 (course) and PR #18 (review fixes) both merged to main and deployed. Quality gate passed before push. Six videos re-rendered and re-verified. Remaining course findings (2 mobile Highs from the UI pass, 32 Mediums) not yet actioned. Video narration items need a re-record (listed in HANDOFF.md).
 
 ## Open Items
 - [x] ~~DL2 video review fixes~~ done 2026-09-24: all visual and caption findings fixed in the generators and re-rendered (see HANDOFF.md "Video review fixes"). Still open, need a re-record: pause-prompt timing, fast chapters, week 3 formula cause, week 6 undefined terms, week 5 challenge setup.
-- [ ] Merge PR #17 (DL2 course) then PR #18 (review fixes, stacked on #17).
+- [x] ~~Merge PR #17 then PR #18~~ both merged to main 2026-09-24; Netlify deployed the DL2 course and the review fixes to vublessons.com.
 - [ ] DL2 UI Highs still open: Text Size widget covers text on `activities/resource-finder.html` at mobile width (page loads no course CSS); syllabus and sources tables overflow at 375px (`.table-scroll` exists, unused).
 - [ ] DL2 Mediums from the 2026-09-24 review (post-test guessability, throwaway knowledge-check distractors, four untested IC3 objective groups, answer key reachable from learner nav, no `<h1>` in decks, undefined terms, thin instructor guide).
 - [x] ~~Disable GitHub Pages on `doclegg05/VUB-Course`~~ — done 2026-07-28. `doclegg05.github.io/VUB-Course/` now 404s.
