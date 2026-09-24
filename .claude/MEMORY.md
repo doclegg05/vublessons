@@ -8,19 +8,18 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-Four courses. Digital Literacy Level 2 lives on `codex/digital-literacy-level-2` (`84859da`) and was
-reviewed 2026-09-24; course and video fixes are in PR #18, stacked on PR #17. Full Playwright
+Four courses, all on `main` and live. Digital Literacy Level 2 merged 2026-09-24 (PR #17) with the review fixes (PR #18). Full Playwright
 suite 128/128, link check 0 broken. Cohort starts 2026-09-28 per the DL2 syllabus.
 
 ## Last Session
 - **Date**: 2026-09-24
 - **What we worked on**: Six-agent review of Digital Literacy Level 2 (UI, content x3, functional x2), then fixed the six High findings; then a second six-agent review of the six lesson videos (visual x2, narration x2, playback, encoding), findings only, no fixes yet in `scripts/dl2/` generators plus `course.css` and `assessment.js`. Review reports are in the session scratchpad (`reports/00-DL2-REVIEW-SUMMARY.md` and 01 to 06); summary was delivered to Britt as files.
 - **What we decided**: Course content does not need veteran / VA / telehealth framing unless the topic calls for it (auto-memory holds the detail: `dl2-veteran-framing-not-required`). Decks keep starting keyboard focus inside the current slide; the skip link only had to become focusable. Topic-button accessible names come from a synced `aria-label`, not a hidden span (a hidden span escaped the scrolling row and broke mobile).
-- **Where we left off**: Course fixes and video fixes committed as six commits and opened as PR #18 (https://github.com/doclegg05/vublessons/pull/18), stacked on PR #17 (the DL2 course branch to main). Quality gate passed before push. Six videos re-rendered and re-verified. Remaining course findings (2 mobile Highs from the UI pass, 32 Mediums) not yet actioned. Video narration items need a re-record (listed in HANDOFF.md).
+- **Where we left off**: PR #17 (course) and PR #18 (review fixes) both merged to main and deployed. Quality gate passed before push. Six videos re-rendered and re-verified. Remaining course findings (2 mobile Highs from the UI pass, 32 Mediums) not yet actioned. Video narration items need a re-record (listed in HANDOFF.md).
 
 ## Open Items
 - [x] ~~DL2 video review fixes~~ done 2026-09-24: all visual and caption findings fixed in the generators and re-rendered (see HANDOFF.md "Video review fixes"). Still open, need a re-record: pause-prompt timing, fast chapters, week 3 formula cause, week 6 undefined terms, week 5 challenge setup.
-- [ ] Merge PR #17 (DL2 course) then PR #18 (review fixes, stacked on #17).
+- [x] ~~Merge PR #17 then PR #18~~ both merged to main 2026-09-24; Netlify deployed the DL2 course and the review fixes to vublessons.com.
 - [ ] DL2 UI Highs still open: Text Size widget covers text on `activities/resource-finder.html` at mobile width (page loads no course CSS); syllabus and sources tables overflow at 375px (`.table-scroll` exists, unused).
 - [ ] DL2 Mediums from the 2026-09-24 review (post-test guessability, throwaway knowledge-check distractors, four untested IC3 objective groups, answer key reachable from learner nav, no `<h1>` in decks, undefined terms, thin instructor guide).
 - [x] ~~Disable GitHub Pages on `doclegg05/VUB-Course`~~ — done 2026-07-28. `doclegg05.github.io/VUB-Course/` now 404s.
@@ -74,8 +73,12 @@ Britt asked to be reminded of both (2026-07-28).
 - Docs under `docs/` are historical and contain dead Windows paths (`C:/Users/Instructor/Dev/...`). Treat as history, not instructions.
 - **`.gitignore` uses `.claude/*`, not `.claude/`, on purpose.** Only `MEMORY.md` is tracked under `.claude/`; the negation that allows it can't work under the trailing-slash form, because git won't re-include a file whose parent directory is excluded. Keep the `/*` form if you add another tracked file there.
 - **DL1 lesson sidebar scrolls on an INNER element.** `.sidebar` (the `<nav>`) carries `overflow-y: auto` but never overflows; the real scroller is `.sidebar-scroll-container` (`flex: 1; overflow-y: auto`), which keeps the sidebar header and slide counter fixed. Script or test the inner element — driving `.sidebar.scrollTop` is a silent no-op.
+- **DL2 media pipeline (2026-09-24).** Generators in `scripts/dl2/` (`video-scenes.py` diagrams, `screen-share-scenes.py` demos, `build-media.py` compositions and caption cues). Rebuild order after a visual edit: `build-media.py` (full mode rewrites the .vtt), `check-screen-shares.mjs`, `check-text-floor.py`, `check-captions.py`, then per week `npx hyperframes@0.8.58 check --strict --contrast --json > docs/digital-literacy-2/video-check-0N.json` and `render`, then `normalize-loudness.py`, `verify-screen-share-frames.py`, `verify-media.py` (rewrites `media/manifest.json`; `build-site.js` asserts those hashes). Strict check about 2 min and render about 4.5 min per video on the M4; two renders in parallel are fine. Full write-up in `docs/digital-literacy-2/HANDOFF.md` "Video review fixes".
+- **DL2 git-ignored working files.** `video/digital-literacy-2/week-0N/narration/*.wav` and `generated-screen-share/workstation.mp4` are ignored and exist only in the main checkout at `MacDev/companies/education/vublessons/`. A fresh worktree cannot build or strict-check the videos until they are copied in; `verify-media.py` checks the WAV hashes against `*.words.json`.
 
 ## Known Issues
+- **Video visual reviewers measure ink, not font size.** In the 2026-09-24 review, "text at 17 to 23 px" came from glyph-row measurements on frames; those are about 70% of the CSS font size, and only the brand mark (21px) and a few labels (23px) were really under the 24px floor. Brief reviewers to report font-size, or run `check-text-floor.py`. Auto-memory holds the general rule.
+- `week-04.mp4` kept its original higher-bitrate AAC track because it was already at -18 LUFS when `normalize-loudness.py` ran (13.9 MB vs about 10.5 MB for the others). Harmless; drop the skip branch if uniform encoding matters.
 - **Assessment drift is the recurring failure mode here.** Week 2's lesson changed in June 2026 but its pre/post questions weren't updated until 2026-07-28 — veterans were tested on Zoom and VA Video Connect for a lesson that taught Windows shortcuts. `AGENTS.md` now carries a rule: changing what a week teaches means updating the interactive test, the printable test, the printable **answer key**, the intro topic list, and `syllabus-overview.html` in the same commit.
 - **Assert on behaviour, not styling.** The DL1 sidebar tests failed from the day the feature landed (2026-06-29) to 2026-07-28 while a sibling assertion — `overflow-y` is `auto` on `.sidebar` — kept passing on an element that never scrolls. Style properties prove intent, not effect; pair them with a `scrollHeight > clientHeight`-style check.
 - The `_archive/README.md` claim that Copy #2 "differs from canonical only by baked cohort dates + 1 pedagogical line" is **wrong** — Week 2 was an entirely different lesson. Don't trust that assessment for other files without re-diffing.
