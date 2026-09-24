@@ -43,16 +43,16 @@ def zoom(stage):
     s = chrome('VUB Practice Browser', 'library.example • Computer help')
     big = stage in (3, 4)
     s += box(30, 132, 1140, 348, '#fff')
-    s += txt('Mountain County Library', 64, 184, 36 if big else 29, weight=700)
-    s += txt('Find computer help near you', 64, 238, 34 if big else 28)
+    s += txt('Mountain County Library', 64, 184, 32 if big else 29, weight=700)
+    s += txt('Find computer help near you', 64, 238, 31 if big else 28)
     s += field('Search the library', 'computer help', 64, 282, 630, stage == 4)
     s += button('Find help', 64, 371, 215, stage == 4)
-    s += txt('Zoom: ' + ('125%' if big else '100%'), 843, 451, 29, weight=700)
+    s += txt('Zoom: ' + ('110%' if big else '100%'), 843, 451, 29, weight=700)
     if stage in (1, 2, 3):
         s += box(790, 109, 390, 241, '#fff', NAVY)
         s += lines(['New tab', 'Bookmarks'], 817, 151)
         s += txt('Zoom', 817, 260) + txt('−', 921, 260, 36)
-        s += txt('125%' if stage == 3 else '100%', 969, 258, 27)
+        s += txt('110%' if stage == 3 else '100%', 969, 258, 27)
         s += button('+', 1090, 226, 64, stage in (2, 3))
         s += txt('Print…', 817, 323)
     if stage == 5:
@@ -66,21 +66,17 @@ def calendar(stage):
         s += button('+ New event', 34, 130, 205, stage == 0)
         s += button('Day', 787, 130, 104, stage in (0,8)) + button('Week', 901, 130, 120, stage == 5) + button('Month', 1031, 130, 134, stage == 6)
         if stage in (0,8):
-            s += box(36, 195, 1129, 278, '#fff', LINE) + txt('Tuesday • Day view', 59, 235, 30, weight=700)
+            s += box(36, 195, 1129, 278, '#fff', LINE) + txt('Tuesday, October 13 • Day view', 59, 235, 30, weight=700)
             for j, time in enumerate(['1:00 PM', '2:00 PM', '3:00 PM']):
                 s += txt(time, 62, 302+j*67, 28) + f'<path d="M219 {279+j*67}H1140" stroke="{LINE}" stroke-width="2"/>'
             if stage==8:s += box(235, 346, 887, 65, '#c5dfdc', NAVY) + txt('Library practice • 2:00–3:00 PM • Room A', 254, 387, 29)
         if stage == 5:
-            for j, day in enumerate(['Mon', 'Tue', 'Wed', 'Thu', 'Fri']):
+            for j, day in enumerate(['Mon 12', 'Tue 13', 'Wed 14', 'Thu 15', 'Fri 16']):
                 x = 36+j*229
                 s += box(x, 195, 220, 276, '#fff', LINE) + txt(day, x+18, 231, 28, weight=700)
             s += box(272, 273, 204, 143, '#c5dfdc', NAVY) + lines(['Library', 'practice', '2:00–3:00'], 285, 310, 27, 34)
         if stage == 6:
-            for j, day in enumerate(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']):
-                x=36+j*162
-                s += txt(day, x+18, 226, 27, weight=700)
-                for row in range(3): s += box(x, 242+row*75, 156, 70, '#fff', LINE, 0)
-            s += box(198, 317, 156, 70, '#c5dfdc', NAVY, 0) + lines(['Library', '2:00–3:00'], 210, 345, 25, 30)
+            s += month_grid()
         return s
     s += box(190, 126, 820, 357, '#fff', NAVY)
     s += field('Event title', 'Library practice', 220, 157, 740, stage == 1, stage == 1)
@@ -90,6 +86,28 @@ def calendar(stage):
     s += button('Save' if stage != 7 else 'Details verified', 732, 418, 229, stage >= 4)
     if stage == 7: s += txt('Time zone: Eastern', 220, 451, 27)
     return s
+
+
+# October with Monday first: 28-30 September lead in, 1 November trails.
+MONTH_DAYS = [28, 29, 30] + list(range(1, 32)) + [1]
+EVENT_DAY = 13
+
+
+def month_grid():
+    s = txt('October', 270, 166, 30, weight=700)
+    for j, day in enumerate(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']):
+        s += txt(day, 46+j*161, 222, 26, weight=700)
+    event = ''
+    for k, day in enumerate(MONTH_DAYS):
+        x, y = 36+(k % 7)*161, 232+(k // 7)*51
+        in_month = 3 <= k < 34
+        if in_month and day == EVENT_DAY:
+            # Drawn last so neighbouring cell borders do not cover its outline.
+            event = box(x, y, 161, 51, '#c5dfdc', NAVY, 0) + txt(day, x+10, y+35, 26, weight=700) + txt('Library', x+50, y+35, 26, weight=700)
+            continue
+        s += box(x, y, 161, 51, '#fff' if in_month else '#e5edf2', LINE, 0)
+        s += txt(day, x+10, y+35, 26, INK if in_month else '#5A6A7A')
+    return s + event
 
 
 def files(stage):
@@ -139,7 +157,7 @@ def document(stage):
     s += txt('B    I    U', 306, 170, 28, weight=700) + txt('1.  List', 462, 170, 28)
     s += box(304, 201, 863, 275, '#fff', LINE) + box(26, 201, 260, 275, '#fff', LINE)
     if stage!=2:s += txt('Navigation', 47, 240, 29, weight=700)
-    if stage >= 3: s += lines(['Computer help', '  Next steps'], 48, 290, 27, 48)
+    if stage >= 3: s += txt('Computer help', 48, 290, 27)
     elif stage!=2: s += lines(['No headings', 'yet'], 48, 296, 27)
     if stage in (1, 2): s += box(333, 219, 455, 58, '#b9d8f1')
     s += txt('Computer help', 337, 260, 37 if stage >= 3 else 29, weight=700 if stage >= 3 else 400)
@@ -179,17 +197,24 @@ def sheet(stage):
 def email(stage):
     s = chrome('Practice Mail', 'Training account • Draft only — nothing is sent')
     s += box(27, 133, 1145, 347, '#fff', LINE)
-    rows=[('To', 'reviewer@example.invalid'), ('Cc', 'organizer@example.invalid' if stage < 4 else ''), ('Bcc', 'partner@example.invalid' if stage >= 2 else '')]
+    trimmed = stage >= 4
+    cc = 'organizer@example.invalid' + ('' if trimmed else ', class-list@example.invalid')
+    bcc = 'volunteers@example.invalid' if 2 <= stage < 4 else ''
+    rows=[('To', 'partner@example.invalid'), ('Cc', cc), ('Bcc', bcc)]
     for j, (name, value) in enumerate(rows):
         yy=172+j*56
         s += txt(name, 53, yy, 28, weight=700) + txt(value, 162, yy, 28)
         s += f'<path d="M46 {yy+14}H1144" stroke="{LINE}" stroke-width="2"/>'
     s += txt('Subject', 53, 342, 27, weight=700) + txt('Review the computer-help handout', 189, 342, 28)
-    s += lines(['Please comment on the contact section', 'before our next practice session.'], 53, 397, 28, 38)
-    if stage == 3:
-        s += box(722, 204, 426, 112, GOLD) + lines(['Reply all includes:', 'reviewer + organizer'], 742, 245, 28)
     if stage == 5:
-        s += box(758, 392, 390, 61, '#d3e9df') + txt('Saved as a practice draft', 774, 432, 27)
+        s += box(45, 409, 648, 38, '#fbeec2')
+        s += lines(['Please comment on the contact section', 'by Thursday at 3 PM, before Friday’s session.'], 53, 397, 28, 38)
+    else:
+        s += lines(['Please comment on the contact section', 'before our next practice session.'], 53, 397, 28, 38)
+    if stage == 3:
+        s += box(640, 352, 508, 120, GOLD) + lines(['If the partner clicks Reply all,', 'it reaches you, the organizer and', 'the class list, but not Bcc.'], 656, 384, 26, 34)
+    if stage == 5:
+        s += box(758, 408, 390, 58, '#d3e9df') + txt('Saved as a practice draft', 774, 446, 27)
     return s
 
 
@@ -245,16 +270,43 @@ def permissions(stage):
     return s
 
 
-def resource_app(query='', category='All categories', keyboard=False):
-    s = txt('Community Resource Finder', 56, 172, 35, weight=700)
-    s += field('Search by name', query, 55, 214, 627, keyboard, keyboard) + field('Category', category+' ▾', 716, 214, 411)
-    found = query.lower() in ('', 'library') and category in ('All categories', 'Learning')
-    if found:
-        s += box(54, 300, 1073, 146, '#fff', LINE) + txt('Community library', 78, 345, 32, weight=700)
-        s += lines(['Learning • Fictional West Virginia resource', 'Computer-help practice at the learning desk'], 78, 385, 27, 39)
-    else:
-        s += box(54, 302, 1073, 141, '#fff', LINE) + txt('No matching resources', 81, 348, 33, weight=700)
-        s += txt('Try another search or choose All categories.', 81, 400, 28)
+# Mirrors courses/digital-literacy-2/activities/resource-finder.html: the same
+# heading, search label and placeholder, filter, Reset button, records and
+# status messages, filtered the same way (name + description, any case).
+RESOURCES = (
+    ('Community library', 'Learning', 'Fictional one-to-one help with browser and file tasks.'),
+    ('Community Makers Group', 'Community', 'Fictional peer group for trying small projects together.'),
+    ('Practice Workbook Workshop', 'Learning', 'Fictional guided practice with tables, formulas and charts.'),
+)
+FOCUS = '#a65a00'
+
+
+def outlined(x, y, w, h, focus):
+    stroke, width = (FOCUS, 4) if focus else (NAVY, 2)
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" fill="#fff" stroke="{stroke}" stroke-width="{width}"/>'
+
+
+def matching(query, category):
+    wanted = query.strip().lower()
+    return [r for r in RESOURCES if category in ('All categories', r[1]) and wanted in f'{r[0]} {r[2]}'.lower()]
+
+
+def resource_app(query='', category='All categories', focus=None):
+    s = box(30, 128, 1140, 356, PAPER) + txt('Community resource finder', 56, 166, 34, NAVY, 700)
+    s += txt('Search fictional resources', 56, 204, 26, weight=700) + outlined(56, 214, 560, 50, focus == 'search')
+    value = txt(query, 72, 249) if query else txt('Try library', 72, 249, 28, '#5A6A7A')
+    s += value.replace('<text ', '<text data-type="true" ', 1) if focus == 'search' and query else value
+    s += txt('Category', 646, 204, 26, weight=700) + outlined(646, 214, 270, 50, focus == 'category') + txt(category + ' ▾', 660, 249, 27)
+    s += button('Reset filters', 944, 215, 200)
+    found = matching(query, category)
+    status = f'{len(found)} fictional resource{"" if len(found) == 1 else "s"} found.' if found else 'No matching resources. Try a different word or reset the filters.'
+    s += txt(status, 56, 306, 27, weight=700)
+    if len(found) == 1:
+        name, kind, about = found[0]
+        s += f'<path d="M56 324H1144" stroke="{LINE}" stroke-width="2"/>' + txt(name, 56, 366, 31, NAVY, 700) + txt(f'{kind} · {about}', 56, 410, 27)
+    for j, (name, kind, _) in enumerate(found if len(found) > 1 else []):
+        yy = 324 + j * 54
+        s += f'<path d="M56 {yy}H1144" stroke="{LINE}" stroke-width="2"/>' + txt(name, 56, yy+38, 29, NAVY, 700) + txt(kind, 700, yy+38, 27)
     return s
 
 
@@ -263,7 +315,7 @@ def local_app(stage):
         return chrome('VUB Practice Browser', 'Local file: resource-finder-v1.html') + resource_app()
     s = chrome('Practice Text Editor', 'Working copy • local file')
     s += box(28, 133, 1146, 347, '#fff')
-    if stage==0:s += lines(['<!doctype html>', '<title>Community Resource Finder</title>', '<label for="search">Search by name</label>', '<input id="search">'], 58, 183, 28, 58)
+    if stage==0:s += lines(['<title>Fictional community resource finder</title>', '<h1>Community resource finder</h1>', '<label for="search">Search fictional resources</label>', '<input id="search" type="search" placeholder="Try library">', '<button id="reset" type="button">Reset filters</button>'], 58, 183, 27, 58)
     if stage in (1, 2):
         s += box(288, 190, 852, 262, '#fff', NAVY) + txt('Save a working version', 313, 237, 33, weight=700)
         s += field('File name', 'resource-finder-v1.html', 314, 279, 785, True, stage==1)
@@ -274,7 +326,7 @@ def local_app(stage):
 def app_checks(stage):
     query=['', 'library', 'zzz', '', 'LIBRARY', 'LIBRARY', 'LIBRARY', 'LIBRARY'][stage]
     cat='Learning' if stage in (5, 7) else ('Community' if stage == 6 else 'All categories')
-    return chrome('VUB Practice Browser', 'Local file: resource-finder-v1.html • Test the saved file') + resource_app(query, cat, True)
+    return chrome('VUB Practice Browser', 'Local file: resource-finder-v1.html • Test the saved file') + resource_app(query, cat, 'category' if stage in (5, 6) else 'search')
 
 
 # Each phrase is looked up in the actual aligned narration; no estimated timing.
@@ -284,7 +336,7 @@ PLANS = {
   ('',0,660,308,'Start at 100% • change only the webpage'),
   ('Open the browser menu',1,1155,87,'Open the browser menu'),
   ('find Zoom',2,1120,248,'Find Zoom • choose one step'),
-  ('increase it one step',3,1120,248,'125% • the page is larger'),
+  ('increase it one step',3,1120,248,'110% • the page is larger'),
   ('Then check the important part',4,166,395,'Check the search field and button'),
   ('restore it before continuing',5,1020,439,'Ctrl + 0 • restore the original zoom')]),
  (1, 6): (calendar, [
@@ -315,7 +367,7 @@ PLANS = {
   ('',0,558,251,'Start with meaningful document structure'),
   ('Use a real heading style',1,554,250,'Select the title text'),
   ('for the title',2,160,157,'Open Styles → choose Heading 1'),
-  ('section headings',3,148,270,'The title now appears in Navigation'),
+  ('section headings',3,222,284,'The title now appears in Navigation'),
   ('Use link text',4,588,450,'Name the destination in the link text')]),
  (3, 4): (sheet, [
   ('',0,764,455,'Select B5 • keep the total outside the input range'),
@@ -329,9 +381,9 @@ PLANS = {
   ('',0,438,165,'Inspect every recipient before sending'),
   ('Cc sends a visible copy',1,472,220,'Cc is visible to the recipients'),
   ('Bcc hides those recipients',2,468,274,'Bcc hides addresses • it is not confidentiality'),
-  ('Reply all can send',3,951,251,'Reply all: check the entire recipient list'),
-  ('Remove unnecessary recipients',4,490,220,'Remove the unnecessary Cc recipient'),
-  ('reasonable response window',5,493,432,'Keep a clear request and response window • draft only')]),
+  ('Reply all can send',3,1105,372,'Reply all: check the entire recipient list'),
+  ('Remove unnecessary recipients',4,700,220,'Remove the class list and the Bcc list'),
+  ('reasonable response window',5,712,424,'Add a reasonable response window • draft only')]),
  (4, 5): (feedback, [
   ('',0,914,234,'Review the steps in one shared handout'),
   ('Add the contact number',1,915,272,'Suggest a location, change, and reason'),
@@ -352,19 +404,19 @@ PLANS = {
   ('Deny an unrelated request',4,680,384,'A text page does not need the camera → Block'),
   ('review the setting later',5,762,310,'Review permissions • blocked here')]),
  (6, 5): (local_app, [
-  ('',0,530,263,'Start from the supplied local HTML file'),
+  ('',0,760,420,'Start from the supplied local HTML file'),
   ('Save the file',1,650,324,'Save a distinct working version'),
   ('with its HTML extension',2,1003,396,'Keep .html • not .html.txt'),
   ('open it in the browser',3,981,397,'Open the file in a browser'),
   ('Confirm that the heading',4,550,173,'Check heading, search, category, and results')]),
  (6, 6): (app_checks, [
-  ('',0,353,253,'Test the actual saved app'),
-  ('Type library',1,353,253,'library → Community library'),
-  ('Then enter an unmatched term',2,353,253,'zzz → No matching resources'),
-  ('Clear the field',3,353,253,'Clear the search before the next check'),
-  ('try LIBRARY in uppercase',4,353,253,'LIBRARY → the same result'),
-  ('combine the search with a category filter',5,931,253,'Learning + LIBRARY → match'),
-  ('both conditions apply',6,931,253,'Community + LIBRARY → no match')])
+  ('',0,560,240,'Test the actual saved app'),
+  ('Type library',1,560,240,'library → Community library'),
+  ('Then enter an unmatched term',2,560,240,'zzz → No matching resources'),
+  ('Clear the field',3,560,240,'Clear the search before the next check'),
+  ('try LIBRARY in uppercase',4,560,240,'LIBRARY → the same result'),
+  ('combine the search with a category filter',5,790,240,'Learning + LIBRARY → match'),
+  ('both conditions apply',6,790,240,'Community + LIBRARY → no match')])
 }
 
 
@@ -434,13 +486,13 @@ def scene(n, i, beat, words):
 @font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}
 #{cid}{{background:#102c4b;font-family:VUB,'Segoe UI',sans-serif;color:#F5F7FA}}
 #{cid} .share-heading{{position:absolute;left:40px;top:23px;margin:0;font-size:34px;line-height:1.2;font-weight:700}}
-#{cid} .share-label{{position:absolute;left:42px;top:68px;font-size:24px;color:#E6C65C}}
+#{cid} .share-label{{position:absolute;left:42px;top:66px;font-size:26px;color:#E6C65C}}
 #{cid} .screen-state{{position:absolute;left:40px;top:104px;width:1200px;height:500px}}
 #{cid} .pointer{{position:absolute;left:40px;top:104px;width:35px;height:45px;z-index:5}}
 #{cid} .click-ring{{position:absolute;left:-19px;top:-19px;width:44px;height:44px;border:4px solid #8d253c;border-radius:50%;opacity:0;transform-origin:50% 50%}}
-#{cid} .action-label{{position:absolute;left:40px;top:616px;margin:0;font-size:28px;line-height:1.2;max-width:1060px}}
-#{cid} .step-number{{position:absolute;right:41px;top:617px;font-size:27px;color:#E6C65C}}
-#{cid} .simulation-label{{position:absolute;left:40px;bottom:15px;font-size:24px;color:#e5edf2}}
+#{cid} .action-label{{position:absolute;left:40px;top:615px;margin:0;font-size:30px;line-height:1.2;max-width:1060px}}
+#{cid} .step-number{{position:absolute;right:41px;top:617px;font-size:28px;color:#E6C65C}}
+#{cid} .simulation-label{{position:absolute;left:40px;bottom:12px;font-size:26px;color:#e5edf2}}
 </style>
 <h1 class="share-heading">{E(beat['title'])}</h1><div class="share-label">VUB LEARNING  /  FOLLOW THE SCREEN</div>
 {''.join(layers)}

@@ -63,8 +63,8 @@
       308.993,
       404.067
     ],
-    "checked": 40,
-    "passed": 40
+    "checked": 42,
+    "passed": 42
   },
   "hdr": {
     "autoPromotion": null,
@@ -78,7 +78,7 @@
   },
   "_meta": {
     "version": "0.8.58",
-    "latestVersion": "0.8.58",
-    "updateAvailable": false
+    "latestVersion": "0.8.65",
+    "updateAvailable": true
   }
 }

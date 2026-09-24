@@ -1,447 +1,487 @@
 WEBVTT
 
-00:00:00.450 --> 00:00:03.630
-Think about how you handle an unexpected
-request in everyday
+00:00:00.450 --> 00:00:04.250
+Think about how you handle an
+unexpected request in everyday life.
 
-00:00:03.630 --> 00:00:07.170
-life. You might ask who is asking, why
-they need
+00:00:04.670 --> 00:00:06.130
+You might ask who is asking,
 
-00:00:07.170 --> 00:00:10.250
-something, and how you can check the
-story. Those habits
+00:00:06.550 --> 00:00:09.503
+why they need something,
+and how you can check the story.
 
-00:00:10.250 --> 00:00:14.050
-are valuable online too. In this lesson,
-we will examine
+00:00:09.770 --> 00:00:12.010
+Those habits are valuable online too.
 
-00:00:14.050 --> 00:00:17.850
-a fictional urgent message, compare
-different protections for a
+00:00:12.490 --> 00:00:13.240
+In this lesson,
 
-00:00:17.850 --> 00:00:21.110
-file, and choose permissions that fit a
-task. You do
+00:00:13.430 --> 00:00:15.810
+we will examine a
+fictional urgent message,
 
-00:00:21.110 --> 00:00:24.110
-not need to identify every kind of attack
-by name.
+00:00:16.110 --> 00:00:20.430
+compare different protections for a file,
+and choose permissions that fit a task.
 
-00:00:24.110 --> 00:00:28.610
+00:00:20.850 --> 00:00:24.110
+You do not need to identify
+every kind of attack by name.
+
+00:00:24.110 --> 00:00:26.390
 You need a repeatable decision process:
+
+00:00:26.870 --> 00:00:28.610
 pause, inspect the evidence,
 
-00:00:28.950 --> 00:00:33.190
-verify independently, and choose an action
-that limits risk. Use
+00:00:28.950 --> 00:00:32.410
+verify independently,
+and choose an action that limits risk.
 
-00:00:33.190 --> 00:00:36.630
-fictional examples throughout. There is no
-reason to open a
+00:00:33.150 --> 00:00:36.470
+Use fictional examples throughout.
+There is no reason to open
 
-00:00:36.630 --> 00:00:40.230
-suspicious link or expose a private
-account to complete the practice.
+00:00:36.470 --> 00:00:37.510
+a suspicious link
 
-00:00:42.217 --> 00:00:46.297
-A workable setup supports attention as
-well as visibility. Adjust
+00:00:37.510 --> 00:00:40.256
+or expose a private account
+to complete the practice.
 
-00:00:46.297 --> 00:00:50.637
-the chair, screen position, text size, and
-sound to suit
+00:00:42.217 --> 00:00:45.477
+A workable setup supports
+attention as well as visibility.
 
-00:00:50.637 --> 00:00:54.837
-the task and your comfort, following the
-lab's arrangements. Take
+00:00:46.097 --> 00:00:46.957
+Adjust the chair,
 
-00:00:54.837 --> 00:00:58.797
-a screen-free break when needed. People
-differ in what they
+00:00:47.257 --> 00:00:48.008
+screen position,
 
-00:00:58.797 --> 00:01:01.957
-find helpful; do not assume one text size
-or pace
+00:00:48.497 --> 00:00:49.247
+text size,
 
-00:01:01.957 --> 00:01:06.777
-suits everyone. Captions, clear labels,
-keyboard access, and instructions
+00:00:49.557 --> 00:00:53.877
+and sound to suit the task and your
+comfort, following the lab's arrangements.
 
-00:01:06.777 --> 00:01:10.177
-that do not rely on color can help many
-learners.
+00:00:54.617 --> 00:00:56.777
+Take a screen-free break when needed.
 
-00:01:11.037 --> 00:01:13.537
-These are examples of designing for a
-wider range of
+00:00:57.657 --> 00:00:59.730
+People differ in what they find helpful;
 
-00:01:13.537 --> 00:01:19.217
-users rather than treating access as an
-afterthought. Pause and
+00:00:59.937 --> 00:01:02.917
+do not assume one text size
+or pace suits everyone.
 
-00:01:19.217 --> 00:01:21.677
-choose one control in this course that
-makes the work
+00:01:03.657 --> 00:01:04.857
+Captions, clear labels,
 
-00:01:21.677 --> 00:01:25.357
-easier for you. Explain the benefit in
-terms of your task.
+00:01:05.337 --> 00:01:09.817
+keyboard access, and instructions that
+do not rely on color can help many
 
-00:01:27.281 --> 00:01:31.041
-Our fictional message says your service
-will stop unless you
+00:01:09.817 --> 00:01:14.657
+learners. These are examples of designing
+for a wider range of users rather than
 
-00:01:31.041 --> 00:01:34.601
-act immediately through a link. The
-urgency is a reason
+00:01:14.657 --> 00:01:15.417
+treating access
 
-00:01:34.601 --> 00:01:37.441
-to slow down, not proof that the request
-is genuine.
+00:01:15.417 --> 00:01:16.617
+as an afterthought.
 
-00:01:38.281 --> 00:01:40.361
+00:01:18.457 --> 00:01:22.817
+Pause and choose one control in this
+course that makes the work easier for you.
+
+00:01:23.317 --> 00:01:25.493
+Explain the benefit in terms of your task.
+
+00:01:27.281 --> 00:01:28.941
+Our fictional message says
+
+00:01:28.941 --> 00:01:32.621
+your service will stop unless you
+act immediately through a link.
+
+00:01:33.361 --> 00:01:37.441
+The urgency is a reason to slow down,
+not proof that the request is genuine.
+
+00:01:38.281 --> 00:01:42.322
 Look at what the sender wants you to do:
-reveal
+reveal a password, provide a payment,
 
-00:01:40.361 --> 00:01:44.081
-a password, provide a payment, open an
-attachment, or follow
+00:01:42.661 --> 00:01:45.221
+open an attachment,
+or follow an unfamiliar link.
 
-00:01:44.081 --> 00:01:48.021
-an unfamiliar link. A convincing name or
-logo can be
+00:01:46.041 --> 00:01:48.361
+A convincing name or logo can be copied.
 
-00:01:48.021 --> 00:01:51.681
-copied. Even a message from a familiar
-account deserves a
+00:01:49.301 --> 00:01:52.561
+Even a message from a familiar
+account deserves a check when
 
-00:01:51.681 --> 00:01:55.661
-check when the request is unusual. Avoid
-trying to prove
+00:01:52.561 --> 00:01:53.661
+the request is unusual.
 
-00:01:55.661 --> 00:01:59.501
-safety by clicking the link. Instead,
-describe the claim in
+00:01:54.681 --> 00:01:57.272
+Avoid trying to prove
+safety by clicking the link.
 
-00:01:59.501 --> 00:02:03.881
-plain language. Someone says I must
-provide information immediately.
+00:01:57.601 --> 00:02:00.261
+Instead,
+describe the claim in plain language.
 
-00:02:04.761 --> 00:02:07.261
-That helps you separate the pressure from
-the evidence.
+00:02:01.021 --> 00:02:03.881
+Someone says I must provide
+information immediately.
 
-00:02:09.303 --> 00:02:13.163 line:0 position:50% align:center size:95%
-Open the organization's known website
-yourself, use a saved bookmark
+00:02:04.761 --> 00:02:07.611
+That helps you separate the
+pressure from the evidence.
 
-00:02:13.163 --> 00:02:17.443 line:0 position:50% align:center size:95%
-you trust, or find its contact details
-independently. Do not
+00:02:09.303 --> 00:02:11.843 line:0 position:50% align:center size:95%
+Open the organization's
+known website yourself,
 
-00:02:17.443 --> 00:02:21.003 line:0 position:50% align:center size:95%
-use the suspicious message's phone number
-as your independent check.
+00:02:12.423 --> 00:02:16.257 line:0 position:50% align:center size:95%
+use a saved bookmark you trust,
+or find its contact details independently.
 
-00:02:21.623 --> 00:02:24.923 line:0 position:50% align:center size:95%
-Ask whether the claimed issue exists and
-what action, if
+00:02:17.203 --> 00:02:21.089 line:0 position:50% align:center size:95%
+Do not use the suspicious message's
+phone number as your independent check.
 
-00:02:24.923 --> 00:02:28.543 line:0 position:50% align:center size:95%
-any, is needed. If you already acted, stop
+00:02:21.623 --> 00:02:25.723 line:0 position:50% align:center size:95%
+Ask whether the claimed issue exists
+and what action, if any, is needed.
+
+00:02:26.403 --> 00:02:27.723 line:0 position:50% align:center size:95%
+If you already acted, stop
+
+00:02:27.723 --> 00:02:28.543 line:0 position:50% align:center size:95%
 further interaction
 
-00:02:28.543 --> 00:02:32.343 line:0 position:50% align:center size:95%
-and contact the appropriate official
-support channel promptly; in
+00:02:28.543 --> 00:02:29.963 line:0 position:50% align:center size:95%
+and contact the appropriate
 
-00:02:32.343 --> 00:02:35.623 line:0 position:50% align:center size:95%
-the lab, tell the instructor what
-happened. The exact recovery
+00:02:29.963 --> 00:02:31.725 line:0 position:50% align:center size:95%
+official support channel promptly;
 
-00:02:35.623 --> 00:02:39.043 line:0 position:50% align:center size:95%
-steps depend on what was shared. Pause and
-choose between
+00:02:32.323 --> 00:02:34.706 line:0 position:50% align:center size:95%
+in the lab,
+tell the instructor what happened.
 
-00:02:39.043 --> 00:02:42.263 line:0 position:50% align:center size:95%
+00:02:34.843 --> 00:02:37.485 line:0 position:50% align:center size:95%
+The exact recovery steps
+depend on what was shared.
+
+00:02:37.883 --> 00:02:39.043 line:0 position:50% align:center size:95%
+Pause and choose between
+
+00:02:39.043 --> 00:02:42.929 line:0 position:50% align:center size:95%
 replying to the message for reassurance
-and checking through a
+and checking through a known route.
 
-00:02:42.263 --> 00:02:45.203 line:0 position:50% align:center size:95%
-known route. The known route is stronger
-because it does
+00:02:43.263 --> 00:02:43.963 line:0 position:50% align:center size:95%
+The known route is
 
-00:02:45.203 --> 00:02:48.683 line:0 position:50% align:center size:95%
-not let the original sender supply all the
-evidence for its own claim.
+00:02:43.963 --> 00:02:47.403 line:0 position:50% align:center size:95%
+stronger because it does not let
+the original sender supply all
 
-00:02:50.443 --> 00:02:54.743
-Imagine a document labeled read-only. That
-may prevent ordinary
+00:02:47.403 --> 00:02:48.858 line:0 position:50% align:center size:95%
+the evidence for its own claim.
 
-00:02:54.743 --> 00:02:59.603
-editing, but the content can still be
-readable. Encryption addresses
+00:02:50.443 --> 00:02:53.623
+Imagine a document labeled read-only.
 
-00:02:59.603 --> 00:03:04.023
-a different question: can someone
-understand the data without the
+00:02:53.623 --> 00:02:57.603
+That may prevent ordinary editing,
+but the content can still be readable.
 
-00:03:04.023 --> 00:03:08.803
-required key or authorized access? A
-password can protect different
+00:02:58.843 --> 00:03:01.019
+Encryption addresses a different question:
 
-00:03:08.803 --> 00:03:12.543
-actions depending on the application, so
-do not assume every
+00:03:01.303 --> 00:03:06.183
+can someone understand the data without
+the required key or authorized access?
 
-00:03:12.543 --> 00:03:16.523
-password prompt means the file is
-encrypted. Inspect what the
+00:03:06.903 --> 00:03:10.530
+A password can protect different
+actions depending on the application,
 
-00:03:16.523 --> 00:03:20.863
-feature actually promises. In our diagram,
-a readable file becomes
+00:03:11.123 --> 00:03:15.043
+so do not assume every password
+prompt means the file is encrypted.
 
-00:03:20.863 --> 00:03:24.643
-protected data that requires a key. That
-does not remove
+00:03:15.683 --> 00:03:17.911
+Inspect what the feature
+actually promises.
 
-00:03:24.643 --> 00:03:27.563
-the need to manage who can access an
-unlocked device
+00:03:18.723 --> 00:03:23.063
+In our diagram, a readable file becomes
+protected data that requires a key.
 
-00:03:27.563 --> 00:03:32.303
-or account. Pause and explain which
-protection fits preventing accidental
+00:03:23.623 --> 00:03:24.643
+That does not remove
 
-00:03:32.303 --> 00:03:35.903
-edits, and which addresses readable data
-being exposed.
+00:03:24.643 --> 00:03:28.283
+the need to manage who can access
+an unlocked device or account.
 
-00:03:37.992 --> 00:03:40.692
-A USB drive found in a parking lot might
-look
+00:03:29.183 --> 00:03:32.763
+Pause and explain which protection
+fits preventing accidental edits,
 
-00:03:40.692 --> 00:03:44.072
-like an ordinary storage device. You
-cannot determine that it
+00:03:32.763 --> 00:03:35.903
+and which addresses
+readable data being exposed.
 
-00:03:44.072 --> 00:03:46.512
-is safe by its appearance or by the label
-written
+00:03:37.992 --> 00:03:39.752
+A USB drive found in a parking
 
-00:03:46.512 --> 00:03:49.312
-on it. Do not plug it into your computer
-to
+00:03:39.752 --> 00:03:44.072
+lot might look like an ordinary storage
+device. You cannot determine that it
 
-00:03:49.312 --> 00:03:52.472
-discover its owner. Give it to authorized
-staff and follow
+00:03:44.072 --> 00:03:46.974
+is safe by its appearance or
+by the label written on it.
 
-00:03:52.472 --> 00:03:56.492
-the organization's procedure. The same
-general habit applies to
+00:03:47.312 --> 00:03:50.214
+Do not plug it into your
+computer to discover its owner.
 
-00:03:56.492 --> 00:04:00.712
-unfamiliar attachments or unexpected
-software prompts: stop and
+00:03:50.652 --> 00:03:54.175
+Give it to authorized staff and
+follow the organization's procedure.
 
-00:04:00.712 --> 00:04:04.952
-verify the purpose before opening or
-installing. This is not
+00:03:54.792 --> 00:03:56.292
+The same general habit applies
 
-00:04:04.952 --> 00:04:08.132
-about avoiding every useful tool. It is
-about making the
+00:03:56.292 --> 00:03:59.412
+to unfamiliar attachments or
+unexpected software prompts:
 
-00:04:08.132 --> 00:04:11.632
-source and task clear before granting a
-device or file
+00:04:00.112 --> 00:04:03.452
+stop and verify the purpose
+before opening or installing.
 
-00:04:11.632 --> 00:04:15.852
-a path into your system. Use only the
-instructor-approved fictional
+00:04:04.092 --> 00:04:06.692
+This is not about avoiding
+every useful tool.
 
-00:04:15.852 --> 00:04:17.252
-examples for this exercise.
+00:04:06.692 --> 00:04:07.632
+It is about
 
-00:04:19.295 --> 00:04:22.255 line:0 position:50% align:center size:95%
-A video meeting may need a camera and
-microphone, but
+00:04:07.632 --> 00:04:09.052
+making the source and task
 
-00:04:22.255 --> 00:04:25.215 line:0 position:50% align:center size:95%
-a simple text page normally has no reason
-to use
+00:04:09.052 --> 00:04:13.092
+clear before granting a device
+or file a path into your system.
 
-00:04:25.215 --> 00:04:29.635 line:0 position:50% align:center size:95%
-them. When a permission prompt appears,
-identify which app is
+00:04:13.712 --> 00:04:17.339
+Use only the instructor-approved
+fictional examples for this exercise.
 
-00:04:29.635 --> 00:04:33.495 line:0 position:50% align:center size:95%
-asking and what task you are trying to
-complete. Grant
+00:04:19.295 --> 00:04:21.834 line:0 position:50% align:center size:95%
+A video meeting may need
+a camera and microphone,
 
-00:04:33.495 --> 00:04:36.975 line:0 position:50% align:center size:95%
-access only when the request fits that
-task and you
+00:04:22.175 --> 00:04:25.495 line:0 position:50% align:center size:95%
+but a simple text page normally
+has no reason to use them.
 
-00:04:36.975 --> 00:04:41.435 line:0 position:50% align:center size:95%
-trust the application. Deny an unrelated
-request, then review the
+00:04:26.455 --> 00:04:28.165 line:0 position:50% align:center size:95%
+When a permission prompt appears,
 
-00:04:41.435 --> 00:04:44.615 line:0 position:50% align:center size:95%
-setting later if a legitimate feature
-needs it. After a
+00:04:28.315 --> 00:04:32.275 line:0 position:50% align:center size:95%
+identify which app is asking and
+what task you are trying to complete.
 
-00:04:44.615 --> 00:04:47.815 line:0 position:50% align:center size:95%
-meeting, check the app's state and review
-permissions when appropriate.
+00:04:33.155 --> 00:04:38.035 line:0 position:50% align:center size:95%
+Grant access only when the request fits
+that task and you trust the application.
 
-00:04:48.315 --> 00:04:52.115 line:0 position:50% align:center size:95%
+00:04:38.535 --> 00:04:39.875 line:0 position:50% align:center size:95%
+Deny an unrelated request,
+
+00:04:40.915 --> 00:04:44.179 line:0 position:50% align:center size:95%
+then review the setting later if
+a legitimate feature needs it.
+
+00:04:44.195 --> 00:04:48.288 line:0 position:50% align:center size:95%
+After a meeting, check the app's state
+and review permissions when appropriate.
+
+00:04:48.315 --> 00:04:52.855 line:0 position:50% align:center size:95%
 A permission decision is not permanent
-approval of everything an
+approval of everything an app might do.
 
-00:04:52.115 --> 00:04:57.235 line:0 position:50% align:center size:95%
-app might do. Pause and compare our two
-examples. Explain
+00:04:53.635 --> 00:04:55.448 line:0 position:50% align:center size:95%
+Pause and compare our two examples.
 
-00:04:57.235 --> 00:05:00.015 line:0 position:50% align:center size:95%
-why a meeting and a text page lead to
-different choices.
+00:04:56.635 --> 00:05:00.015 line:0 position:50% align:center size:95%
+Explain why a meeting and a text
+page lead to different choices.
 
-00:05:02.107 --> 00:05:06.227
-Safety also includes the way an online
-interaction affects your
+00:05:02.107 --> 00:05:03.427
+Safety also includes
 
-00:05:06.227 --> 00:05:11.887
-attention and wellbeing. Catfishing uses a
-false identity to build
+00:05:03.427 --> 00:05:09.047
+the way an online interaction
+affects your attention and wellbeing.
 
-00:05:11.887 --> 00:05:16.687
-trust. A friendly conversation does not by
-itself verify the
+00:05:09.047 --> 00:05:12.207
+Catfishing uses a false
+identity to build trust.
 
-00:05:16.687 --> 00:05:21.667
-person's story. Fear of missing out can
-encourage repeated checking
+00:05:13.187 --> 00:05:17.547
+A friendly conversation does not by
+itself verify the person's story.
 
-00:05:21.667 --> 00:05:24.787
-of alerts even when you intended to do
-something else.
+00:05:18.547 --> 00:05:19.387
+Fear of missing
+
+00:05:19.387 --> 00:05:20.227
+out can
+
+00:05:20.227 --> 00:05:24.787
+encourage repeated checking of alerts even
+when you intended to do something else.
 
 00:05:25.687 --> 00:05:30.187
-Choose notification settings and breaks
-that support your own goals.
+Choose notification settings and
+breaks that support your own goals.
 
 00:05:31.347 --> 00:05:35.227
 If a post or interaction becomes harmful,
 avoid escalating it.
 
 00:05:36.047 --> 00:05:39.427
-Use the service's reporting or blocking
-tools when appropriate,
+Use the service's reporting or
+blocking tools when appropriate,
 
-00:05:39.427 --> 00:05:42.927
-and seek help from a trusted person or the
-relevant
+00:05:39.427 --> 00:05:43.927
+and seek help from a trusted person
+or the relevant support channel.
 
-00:05:42.927 --> 00:05:47.307
-support channel. You do not have to solve
-every problem
+00:05:45.007 --> 00:05:45.947
+You do not have
 
-00:05:47.307 --> 00:05:51.707
-alone or continue a conversation because
-someone pressures you to respond.
+00:05:45.947 --> 00:05:46.787
+to solve every
 
-00:05:53.650 --> 00:05:58.310
-Here is a new fictional scenario. A
-message claiming to
+00:05:46.787 --> 00:05:51.707
+problem alone or continue a conversation
+because someone pressures you to respond.
 
-00:05:58.310 --> 00:06:02.870
-represent a community service asks for a
-private code before
+00:05:53.650 --> 00:05:56.010
+Here is a new fictional scenario.
 
-00:06:02.870 --> 00:06:06.670
-it will confirm an appointment. Pause the
-video and state
+00:05:56.870 --> 00:05:57.970
+A message claiming
 
-00:06:06.670 --> 00:06:12.190
-three things: what evidence you have, what
-remains unverified, and
+00:05:57.970 --> 00:05:58.730
+to represent
 
-00:06:12.190 --> 00:06:16.110
-what you would do next. A strong response
-identifies the
+00:05:58.730 --> 00:06:00.010
+a community service
 
-00:06:16.110 --> 00:06:20.710
-unusual request, avoids sharing the code,
-and checks the appointment
+00:06:00.510 --> 00:06:04.470
+asks for a private code before
+it will confirm an appointment.
 
-00:06:20.710 --> 00:06:24.490
-through a known contact method. It does
-not rely only
+00:06:05.310 --> 00:06:07.610
+Pause the video and state three things:
 
-00:06:24.490 --> 00:06:29.350
-on spelling mistakes or how professional
-the message looks. Ask
+00:06:08.270 --> 00:06:13.290
+what evidence you have, what remains
+unverified, and what you would do next.
 
-00:06:29.350 --> 00:06:32.650
-a partner to explain a different scenario
-using the same
+00:06:14.030 --> 00:06:17.030
+A strong response identifies
+the unusual request,
 
-00:06:32.650 --> 00:06:37.490
-process. If you disagree, discuss the
-evidence behind each choice
+00:06:17.630 --> 00:06:18.670
+avoids sharing
+
+00:06:18.670 --> 00:06:22.670
+the code, and checks the appointment
+through a known contact method.
+
+00:06:22.670 --> 00:06:28.290
+It does not rely only on spelling mistakes
+or how professional the message looks.
+
+00:06:28.790 --> 00:06:33.330
+Ask a partner to explain a different
+scenario using the same process.
+
+00:06:34.190 --> 00:06:34.970
+If you disagree,
+
+00:06:35.410 --> 00:06:37.490
+discuss the evidence behind each choice
 
 00:06:37.490 --> 00:06:40.996
-rather than guessing what answer the
-instructor wants.
+rather than guessing what
+answer the instructor wants.
 
-00:06:42.546 --> 00:06:46.386
-Before the post-test, review the skills
-you can demonstrate: adjust
+00:06:42.546 --> 00:06:45.655
+Before the post-test,
+review the skills you can demonstrate:
 
-00:06:46.386 --> 00:06:50.586
-a setting and check it, justify a source,
-choose file
+00:06:46.146 --> 00:06:47.566
+adjust a setting and check it,
 
-00:06:50.586 --> 00:06:55.806
-access, test a calculation, and
-communicate a clear next step.
+00:06:47.886 --> 00:06:49.246
+justify a source,
 
-00:06:57.326 --> 00:07:00.766
+00:06:49.866 --> 00:06:55.806
+choose file access, test a calculation,
+and communicate a clear next step.
+
+00:06:57.326 --> 00:06:59.295
 Complete the assessment independently,
-then use its explanations
 
-00:07:00.766 --> 00:07:05.706
-to identify a useful practice task. A
-classroom score is
+00:06:59.786 --> 00:07:03.506
+then use its explanations to
+identify a useful practice task.
 
-00:07:05.706 --> 00:07:08.826
-one piece of evidence, not a judgment
-about your ability
+00:07:04.466 --> 00:07:06.726
+A classroom score is
+one piece of evidence,
 
-00:07:08.826 --> 00:07:12.966
-to learn and not a certification result.
-Keep the saved
+00:07:07.046 --> 00:07:11.506
+not a judgment about your ability to
+learn and not a certification result.
 
-00:07:12.966 --> 00:07:15.826
-report if it helps you plan. Choose one
-skill to
+00:07:12.286 --> 00:07:14.514
+Keep the saved report
+if it helps you plan.
 
-00:07:15.826 --> 00:07:18.926
-repeat with less help and one situation
-from your own
+00:07:14.706 --> 00:07:15.586
+Choose one skill
 
-00:07:18.926 --> 00:07:22.926
+00:07:15.586 --> 00:07:16.666
+to repeat with less
+
+00:07:16.666 --> 00:07:20.746
+help and one situation from your own
 routine where it would be useful.
-Confidence grows from being
 
-00:07:22.926 --> 00:07:27.466
-able to explain and repeat a successful
-process, including knowing
+00:07:21.506 --> 00:07:25.986
+Confidence grows from being able to
+explain and repeat a successful process,
 
-00:07:27.466 --> 00:07:28.886
-when to ask for support.
+00:07:26.506 --> 00:07:28.886
+including knowing when to ask for support.

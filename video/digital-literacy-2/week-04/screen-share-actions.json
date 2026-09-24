@@ -33,25 +33,25 @@
         "at": 20.57,
         "phrase": "Reply all can send",
         "state": 3,
-        "x": 951,
-        "y": 251,
+        "x": 1105,
+        "y": 372,
         "label": "Reply all: check the entire recipient list"
       },
       {
         "at": 36.17,
         "phrase": "Remove unnecessary recipients",
         "state": 4,
-        "x": 490,
+        "x": 700,
         "y": 220,
-        "label": "Remove the unnecessary Cc recipient"
+        "label": "Remove the class list and the Bcc list"
       },
       {
         "at": 38.75,
         "phrase": "reasonable response window",
         "state": 5,
-        "x": 493,
-        "y": 432,
-        "label": "Keep a clear request and response window \u2022 draft only"
+        "x": 712,
+        "y": 424,
+        "label": "Add a reasonable response window \u2022 draft only"
       }
     ]
   },

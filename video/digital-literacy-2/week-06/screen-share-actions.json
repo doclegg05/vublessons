@@ -9,8 +9,8 @@
         "at": 0.0,
         "phrase": "",
         "state": 0,
-        "x": 530,
-        "y": 263,
+        "x": 760,
+        "y": 420,
         "label": "Start from the supplied local HTML file"
       },
       {
@@ -57,56 +57,56 @@
         "at": 0.0,
         "phrase": "",
         "state": 0,
-        "x": 353,
-        "y": 253,
+        "x": 560,
+        "y": 240,
         "label": "Test the actual saved app"
       },
       {
         "at": 0.45,
         "phrase": "Type library",
         "state": 1,
-        "x": 353,
-        "y": 253,
+        "x": 560,
+        "y": 240,
         "label": "library \u2192 Community library"
       },
       {
         "at": 5.45,
         "phrase": "Then enter an unmatched term",
         "state": 2,
-        "x": 353,
-        "y": 253,
+        "x": 560,
+        "y": 240,
         "label": "zzz \u2192 No matching resources"
       },
       {
         "at": 15.37,
         "phrase": "Clear the field",
         "state": 3,
-        "x": 353,
-        "y": 253,
+        "x": 560,
+        "y": 240,
         "label": "Clear the search before the next check"
       },
       {
         "at": 16.31,
         "phrase": "try LIBRARY in uppercase",
         "state": 4,
-        "x": 353,
-        "y": 253,
+        "x": 560,
+        "y": 240,
         "label": "LIBRARY \u2192 the same result"
       },
       {
         "at": 25.53,
         "phrase": "combine the search with a category filter",
         "state": 5,
-        "x": 931,
-        "y": 253,
+        "x": 790,
+        "y": 240,
         "label": "Learning + LIBRARY \u2192 match"
       },
       {
         "at": 28.07,
         "phrase": "both conditions apply",
         "state": 6,
-        "x": 931,
-        "y": 253,
+        "x": 790,
+        "y": 240,
         "label": "Community + LIBRARY \u2192 no match"
       }
     ]
