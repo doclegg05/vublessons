@@ -1,0 +1,18 @@
+.assessment-pairing {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 2px solid #1B365D;
+  border-radius: 12px;
+  background: #F5F7FA;
+  color: #1B365D;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.assessment-pairing h3 { margin: 0 0 0.75rem; font-size: 1.2rem; }
+.assessment-pairing p { margin: 0.75rem 0; }
+.assessment-pairing .pairing-choice { display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; }
+.assessment-pairing input[type="checkbox"] { flex: 0 0 24px; width: 24px; height: 24px; margin-top: 0.25rem; accent-color: #1B365D; }
+.assessment-pairing button { min-height: 44px; padding: 0.6rem 1rem; border: 2px solid #1B365D; border-radius: 6px; background: white; color: #1B365D; font: inherit; cursor: pointer; }
+.assessment-pairing :focus-visible { outline: 3px solid #1B365D; outline-offset: 4px; }
+
+.assessment-pairing [hidden] { display: none !important; }

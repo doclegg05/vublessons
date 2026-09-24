@@ -1,0 +1,533 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "fc95646d0a878735462f49e731c0dd8c356425fa63368769e021bd34f25bf186",
+  "textSha256": "3f82bae90863e8b94363a3a2754bc6d124ddf6991f414a10b7c3d7692f6f9e8e",
+  "matchRatio": 0.9904761904761905,
+  "words": [
+    {
+      "word": "An",
+      "start": 0.0,
+      "end": 0.24
+    },
+    {
+      "word": "online",
+      "start": 0.24,
+      "end": 0.42
+    },
+    {
+      "word": "form",
+      "start": 0.42,
+      "end": 0.96
+    },
+    {
+      "word": "is",
+      "start": 0.96,
+      "end": 1.4
+    },
+    {
+      "word": "a",
+      "start": 1.4,
+      "end": 1.52
+    },
+    {
+      "word": "structured",
+      "start": 1.52,
+      "end": 1.88
+    },
+    {
+      "word": "request.",
+      "start": 1.88,
+      "end": 2.56
+    },
+    {
+      "word": "Read",
+      "start": 3.48,
+      "end": 3.7
+    },
+    {
+      "word": "its",
+      "start": 3.7,
+      "end": 3.94
+    },
+    {
+      "word": "purpose",
+      "start": 3.94,
+      "end": 4.32
+    },
+    {
+      "word": "and",
+      "start": 4.32,
+      "end": 4.56
+    },
+    {
+      "word": "required",
+      "start": 4.56,
+      "end": 4.84
+    },
+    {
+      "word": "fields",
+      "start": 4.84,
+      "end": 5.38
+    },
+    {
+      "word": "before",
+      "start": 5.38,
+      "end": 5.76
+    },
+    {
+      "word": "typing.",
+      "start": 5.76,
+      "end": 6.14
+    },
+    {
+      "word": "In",
+      "start": 6.9,
+      "end": 6.92
+    },
+    {
+      "word": "our",
+      "start": 6.92,
+      "end": 7.06
+    },
+    {
+      "word": "course",
+      "start": 7.06,
+      "end": 7.32
+    },
+    {
+      "word": "practice",
+      "start": 7.32,
+      "end": 7.72
+    },
+    {
+      "word": "form,",
+      "start": 7.72,
+      "end": 8.3
+    },
+    {
+      "word": "choose",
+      "start": 8.66,
+      "end": 8.98
+    },
+    {
+      "word": "the",
+      "start": 8.98,
+      "end": 9.22
+    },
+    {
+      "word": "kind",
+      "start": 9.22,
+      "end": 9.46
+    },
+    {
+      "word": "of",
+      "start": 9.46,
+      "end": 9.6
+    },
+    {
+      "word": "computer",
+      "start": 9.6,
+      "end": 10.02
+    },
+    {
+      "word": "help",
+      "start": 10.02,
+      "end": 10.3
+    },
+    {
+      "word": "needed",
+      "start": 10.3,
+      "end": 10.66
+    },
+    {
+      "word": "and",
+      "start": 10.66,
+      "end": 11.26
+    },
+    {
+      "word": "a",
+      "start": 11.26,
+      "end": 11.34
+    },
+    {
+      "word": "fictional",
+      "start": 11.34,
+      "end": 11.66
+    },
+    {
+      "word": "contact",
+      "start": 11.66,
+      "end": 12.08
+    },
+    {
+      "word": "preference.",
+      "start": 12.08,
+      "end": 12.78
+    },
+    {
+      "word": "Review",
+      "start": 13.56,
+      "end": 13.86
+    },
+    {
+      "word": "the",
+      "start": 13.86,
+      "end": 14.12
+    },
+    {
+      "word": "entries",
+      "start": 14.12,
+      "end": 14.36
+    },
+    {
+      "word": "before",
+      "start": 14.36,
+      "end": 14.78
+    },
+    {
+      "word": "selecting",
+      "start": 14.78,
+      "end": 15.34
+    },
+    {
+      "word": "the",
+      "start": 15.34,
+      "end": 15.64
+    },
+    {
+      "word": "final",
+      "start": 15.64,
+      "end": 15.9
+    },
+    {
+      "word": "button.",
+      "start": 15.9,
+      "end": 16.34
+    },
+    {
+      "word": "On",
+      "start": 16.98,
+      "end": 17.1
+    },
+    {
+      "word": "a",
+      "start": 17.1,
+      "end": 17.18
+    },
+    {
+      "word": "real",
+      "start": 17.18,
+      "end": 17.34
+    },
+    {
+      "word": "service,",
+      "start": 17.34,
+      "end": 17.86
+    },
+    {
+      "word": "ask",
+      "start": 18.3,
+      "end": 18.56
+    },
+    {
+      "word": "whether",
+      "start": 18.56,
+      "end": 18.88
+    },
+    {
+      "word": "a",
+      "start": 18.88,
+      "end": 19.08
+    },
+    {
+      "word": "sensitive",
+      "start": 19.08,
+      "end": 19.48
+    },
+    {
+      "word": "detail",
+      "start": 19.48,
+      "end": 19.94
+    },
+    {
+      "word": "is",
+      "start": 19.94,
+      "end": 20.26
+    },
+    {
+      "word": "necessary",
+      "start": 20.26,
+      "end": 20.6
+    },
+    {
+      "word": "for",
+      "start": 20.6,
+      "end": 21.06
+    },
+    {
+      "word": "the",
+      "start": 21.06,
+      "end": 21.16
+    },
+    {
+      "word": "task,",
+      "start": 21.16,
+      "end": 21.46
+    },
+    {
+      "word": "and",
+      "start": 21.46,
+      "end": 22.18
+    },
+    {
+      "word": "verify",
+      "start": 22.18,
+      "end": 22.38
+    },
+    {
+      "word": "the",
+      "start": 22.38,
+      "end": 22.88
+    },
+    {
+      "word": "site",
+      "start": 22.88,
+      "end": 23.16
+    },
+    {
+      "word": "before",
+      "start": 23.16,
+      "end": 23.48
+    },
+    {
+      "word": "entering",
+      "start": 23.48,
+      "end": 23.9
+    },
+    {
+      "word": "it.",
+      "start": 23.9,
+      "end": 24.22
+    },
+    {
+      "word": "Our",
+      "start": 24.22,
+      "end": 24.76
+    },
+    {
+      "word": "practice",
+      "start": 24.76,
+      "end": 25.2
+    },
+    {
+      "word": "does",
+      "start": 25.2,
+      "end": 25.44
+    },
+    {
+      "word": "not",
+      "start": 25.44,
+      "end": 25.62
+    },
+    {
+      "word": "send",
+      "start": 25.62,
+      "end": 25.96
+    },
+    {
+      "word": "a",
+      "start": 25.96,
+      "end": 26.08
+    },
+    {
+      "word": "real",
+      "start": 26.08,
+      "end": 26.26
+    },
+    {
+      "word": "request.",
+      "start": 26.26,
+      "end": 26.7
+    },
+    {
+      "word": "That",
+      "start": 27.52,
+      "end": 27.52
+    },
+    {
+      "word": "distinction",
+      "start": 27.52,
+      "end": 27.82
+    },
+    {
+      "word": "matters:",
+      "start": 27.82,
+      "end": 28.4
+    },
+    {
+      "word": "seeing",
+      "start": 29.26,
+      "end": 29.26
+    },
+    {
+      "word": "a",
+      "start": 29.26,
+      "end": 29.44
+    },
+    {
+      "word": "confirmation",
+      "start": 29.44,
+      "end": 29.76
+    },
+    {
+      "word": "message",
+      "start": 29.76,
+      "end": 30.54
+    },
+    {
+      "word": "in",
+      "start": 30.54,
+      "end": 30.78
+    },
+    {
+      "word": "a",
+      "start": 30.78,
+      "end": 30.86
+    },
+    {
+      "word": "simulator",
+      "start": 30.86,
+      "end": 31.28
+    },
+    {
+      "word": "proves",
+      "start": 31.28,
+      "end": 32.14
+    },
+    {
+      "word": "that",
+      "start": 32.14,
+      "end": 32.44
+    },
+    {
+      "word": "you",
+      "start": 32.44,
+      "end": 32.6
+    },
+    {
+      "word": "completed",
+      "start": 32.6,
+      "end": 33.02
+    },
+    {
+      "word": "the",
+      "start": 33.02,
+      "end": 33.24
+    },
+    {
+      "word": "exercise,",
+      "start": 33.24,
+      "end": 33.66
+    },
+    {
+      "word": "not",
+      "start": 34.19,
+      "end": 34.52
+    },
+    {
+      "word": "that",
+      "start": 34.52,
+      "end": 34.74
+    },
+    {
+      "word": "an",
+      "start": 34.74,
+      "end": 34.86
+    },
+    {
+      "word": "organization",
+      "start": 34.86,
+      "end": 35.3
+    },
+    {
+      "word": "received",
+      "start": 35.3,
+      "end": 35.82
+    },
+    {
+      "word": "anything.",
+      "start": 35.82,
+      "end": 36.3
+    },
+    {
+      "word": "Pause,",
+      "start": 37.08,
+      "end": 37.32
+    },
+    {
+      "word": "complete",
+      "start": 37.7,
+      "end": 37.98
+    },
+    {
+      "word": "the",
+      "start": 37.98,
+      "end": 38.2
+    },
+    {
+      "word": "fictional",
+      "start": 38.2,
+      "end": 38.52
+    },
+    {
+      "word": "form,",
+      "start": 38.52,
+      "end": 38.96
+    },
+    {
+      "word": "and",
+      "start": 39.48,
+      "end": 39.52
+    },
+    {
+      "word": "explain",
+      "start": 39.52,
+      "end": 39.86
+    },
+    {
+      "word": "what",
+      "start": 39.86,
+      "end": 40.24
+    },
+    {
+      "word": "you",
+      "start": 40.24,
+      "end": 40.38
+    },
+    {
+      "word": "deliberately",
+      "start": 40.38,
+      "end": 40.72
+    },
+    {
+      "word": "left",
+      "start": 40.72,
+      "end": 41.3
+    },
+    {
+      "word": "out",
+      "start": 41.3,
+      "end": 41.6
+    },
+    {
+      "word": "and",
+      "start": 41.6,
+      "end": 41.92
+    },
+    {
+      "word": "why.",
+      "start": 41.92,
+      "end": 42.12
+    }
+  ]
+}

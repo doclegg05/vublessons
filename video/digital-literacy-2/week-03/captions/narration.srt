@@ -1,0 +1,546 @@
+1
+00:00:00,450 --> 00:00:03,710
+Think about a notice, set of directions,
+or supply list
+
+2
+00:00:03,710 --> 00:00:06,710
+that was easy to use. What helped you find
+the
+
+3
+00:00:06,710 --> 00:00:10,430
+next step? We will apply those same
+practical standards to
+
+4
+00:00:10,430 --> 00:00:14,470
+a small resource pack: a handout, a supply
+workbook, and
+
+5
+00:00:14,470 --> 00:00:18,210
+three slides. Choose a fictional community
+activity such as a
+
+6
+00:00:18,210 --> 00:00:21,950
+library computer-help session or a
+neighborhood meeting. Decide
+
+7
+00:00:21,950 --> 00:00:24,170
+who will use the material and what they
+need to
+
+8
+00:00:24,170 --> 00:00:27,290
+do after reading it. A beautiful page that
+leaves the
+
+9
+00:00:27,290 --> 00:00:31,270
+reader unsure is unfinished. Keep that
+reader's task in view
+
+10
+00:00:31,270 --> 00:00:35,790
+as we make choices about words, structure,
+calculations, pictures,
+
+11
+00:00:36,290 --> 00:00:37,570
+and the final file format.
+
+12
+00:00:39,431 --> 00:00:41,871
+Start the handout with the service and the
+next action.
+
+13
+00:00:42,351 --> 00:00:44,671
+Use a real heading style for the title and
+section
+
+14
+00:00:44,671 --> 00:00:48,071
+headings, followed by short paragraphs or
+a numbered list when
+
+15
+00:00:48,071 --> 00:00:52,491
+order matters. Selecting bold text changes
+appearance, but does
+
+16
+00:00:52,491 --> 00:00:56,371
+not necessarily identify a heading to
+assistive technology or a
+
+17
+00:00:56,371 --> 00:01:00,551
+navigation pane. A numbered sequence might
+say choose a task,
+
+18
+00:01:01,351 --> 00:01:04,211
+visit the learning desk, and ask how to
+repeat the
+
+19
+00:01:04,211 --> 00:01:07,371
+skill at home. Use link text that names
+the destination
+
+20
+00:01:07,371 --> 00:01:11,251
+instead of click here. Read the document
+in order without
+
+21
+00:01:11,251 --> 00:01:14,731
+relying on color or position alone. Does
+it still make
+
+22
+00:01:14,731 --> 00:01:17,771
+sense? That is a useful first
+accessibility check.
+
+23
+00:01:19,526 --> 00:01:22,526
+Select a short piece of text before
+changing it, and
+
+24
+00:01:22,526 --> 00:01:26,506
+check what the selection includes. Common
+shortcuts such as copy,
+
+25
+00:01:26,806 --> 00:01:30,906
+paste, save, and undo can reduce repeated
+mouse work; your
+
+26
+00:01:30,906 --> 00:01:34,326
+instructor can show the keys for your
+computer. Practice on
+
+27
+00:01:34,326 --> 00:01:39,266
+a copy so a mistake is easy to reverse.
+When
+
+28
+00:01:39,266 --> 00:01:43,226
+reviewing someone else's document, a
+comment asks a question or
+
+29
+00:01:43,226 --> 00:01:47,686
+suggests an improvement. Tracked changes
+record proposed edits for
+
+30
+00:01:47,686 --> 00:01:51,166
+review, where the application supports
+them. They are not the
+
+31
+00:01:51,166 --> 00:01:55,566
+same as silently replacing the text. Pause
+and propose one
+
+32
+00:01:55,566 --> 00:01:59,446
+specific improvement to the handout.
+Explain the reader's problem
+
+33
+00:01:59,446 --> 00:02:02,826
+it solves, then let the author decide
+whether to accept it.
+
+34
+00:02:04,590 --> 00:02:08,430
+A workbook can contain several worksheets.
+Within a sheet, columns
+
+35
+00:02:08,430 --> 00:02:11,830
+usually have letters, rows have numbers,
+and a cell address
+
+36
+00:02:11,830 --> 00:02:16,370
+combines both. B2 means column B, row two.
+Our fictional
+
+37
+00:02:16,370 --> 00:02:19,470
+supply list puts item names in column A
+and dollar
+
+38
+00:02:19,470 --> 00:02:23,290
+amounts in column B: paper at twelve,
+folders at eight,
+
+39
+00:02:23,290 --> 00:02:25,990
+and pens at five. Include a heading that
+explains the
+
+40
+00:02:25,990 --> 00:02:29,770
+units, so twelve is clearly dollars rather
+than boxes. Enter
+
+41
+00:02:29,770 --> 00:02:32,270
+the values in separate cells instead of
+putting the whole
+
+42
+00:02:32,270 --> 00:02:35,970
+list into one cell. Before calculating
+anything, check that each
+
+43
+00:02:35,970 --> 00:02:39,610
+amount sits beside the intended item. A
+correct formula cannot
+
+44
+00:02:39,610 --> 00:02:41,690
+rescue numbers assigned to the wrong rows.
+
+45
+00:02:43,640 --> 00:02:47,340
+Select a total cell outside the three
+input cells and
+
+46
+00:02:47,340 --> 00:02:52,460
+enter equals SUM, followed by the range B2
+through B4
+
+47
+00:02:52,460 --> 00:02:57,160
+in parentheses. The colon means include
+the cells from the
+
+48
+00:02:57,160 --> 00:03:01,820
+first address through the last. The
+expected total is twenty-five
+
+49
+00:03:01,820 --> 00:03:06,780
+dollars. Now change paper from twelve to
+fifteen. The total
+
+50
+00:03:06,780 --> 00:03:10,200
+should become twenty-eight because the
+formula refers to the cells,
+
+51
+00:03:10,720 --> 00:03:14,020
+not to a permanently typed answer. If it
+stays at
+
+52
+00:03:14,020 --> 00:03:18,280
+twenty-five, inspect the formula and
+range. Did you type the
+
+53
+00:03:18,280 --> 00:03:22,840
+total manually? Did the range omit a cell?
+Pause and
+
+54
+00:03:22,840 --> 00:03:26,640
+predict the result before changing a
+value. Then compare the
+
+55
+00:03:26,640 --> 00:03:29,780
+observed total with your prediction and
+correct any mismatch.
+
+56
+00:03:31,909 --> 00:03:34,569
+A chart should help someone see a
+relationship in the
+
+57
+00:03:34,569 --> 00:03:38,909
+checked data. To compare the three supply
+costs, select the
+
+58
+00:03:38,909 --> 00:03:42,509
+item labels and their values, then choose
+a simple bar
+
+59
+00:03:42,509 --> 00:03:45,909
+or column chart. Give it a meaningful
+title and make
+
+60
+00:03:45,909 --> 00:03:49,469
+the dollar units clear. Check that the
+labels still match
+
+61
+00:03:49,469 --> 00:03:53,229
+their bars. A large bar should represent
+the larger value,
+
+62
+00:03:53,549 --> 00:03:57,149
+not merely a brighter color. After
+changing the paper cost,
+
+63
+00:03:57,509 --> 00:04:00,829
+confirm that the chart follows the updated
+cells. If a
+
+64
+00:04:00,829 --> 00:04:04,309
+chart looks surprising, return to the
+table before decorating it.
+
+65
+00:04:04,889 --> 00:04:07,909
+Keep the table available so a reader can
+inspect exact
+
+66
+00:04:07,909 --> 00:04:12,349
+amounts and understand the information
+without relying only on the graphic.
+
+67
+00:04:14,256 --> 00:04:17,576
+For a three-slide presentation, use the
+first slide to name
+
+68
+00:04:17,576 --> 00:04:20,936
+the useful task, the second to demonstrate
+the key steps,
+
+69
+00:04:21,516 --> 00:04:24,916
+and the third to show the next action.
+Prefer a
+
+70
+00:04:24,916 --> 00:04:28,176
+relevant picture or diagram to a paragraph
+copied from the
+
+71
+00:04:28,176 --> 00:04:34,176
+handout. Keep text large and explain
+unfamiliar terms aloud. Cropping
+
+72
+00:04:34,176 --> 00:04:37,496
+removes outer parts of an image from the
+view; resizing
+
+73
+00:04:37,496 --> 00:04:41,876
+changes its displayed dimensions. Those
+actions solve different
+
+74
+00:04:41,876 --> 00:04:46,196
+problems. Preserve the original file
+before experimenting, and check
+
+75
+00:04:46,196 --> 00:04:48,996
+that a crop has not removed information
+the viewer needs.
+
+76
+00:04:49,916 --> 00:04:53,756
+If an image carries meaning, provide an
+equivalent explanation or
+
+77
+00:04:53,756 --> 00:04:56,116
+alternative text in the format you are
+using.
+
+78
+00:04:57,881 --> 00:05:01,521
+A useful instructional clip has a clear
+beginning, an understandable
+
+79
+00:05:01,521 --> 00:05:06,401
+action, and a visible result. Trimming
+removes unwanted material
+
+80
+00:05:06,401 --> 00:05:09,841
+at the start or end. Splitting allows you
+to work
+
+81
+00:05:09,841 --> 00:05:12,941
+with sections inside a clip, such as
+removing a long
+
+82
+00:05:12,941 --> 00:05:17,461
+unrelated interruption. Watch both sides
+of an edit: did it
+
+83
+00:05:17,461 --> 00:05:20,141
+cut off the first syllable or remove the
+step that
+
+84
+00:05:20,141 --> 00:05:24,601
+explains the result? Keep speech
+intelligible and check captions
+
+85
+00:05:24,601 --> 00:05:28,341
+against the final audio after editing.
+Captions from an earlier
+
+86
+00:05:28,341 --> 00:05:32,561
+version may drift. You do not need
+elaborate effects. The
+
+87
+00:05:32,561 --> 00:05:35,441
+goal is for another person to follow the
+action, pause
+
+88
+00:05:35,441 --> 00:05:37,961
+when needed, and understand what changed.
+
+89
+00:05:39,903 --> 00:05:43,503
+Decide what the next person needs to do.
+An editable
+
+90
+00:05:43,503 --> 00:05:47,843
+document supports revision. A PDF often
+preserves a finished layout
+
+91
+00:05:47,843 --> 00:05:51,963
+for viewing or printing. A CSV carries
+plain table data,
+
+92
+00:05:51,963 --> 00:05:55,303
+but does not preserve a workbook's full
+formatting and formula
+
+93
+00:05:55,303 --> 00:05:59,063
+behavior. Keep the editable original as
+well as the export.
+
+94
+00:05:59,943 --> 00:06:03,543
+Reopen the exported file and inspect the
+page breaks, labels,
+
+95
+00:06:04,143 --> 00:06:08,263
+links, and important values. If you reused
+someone else's image
+
+96
+00:06:08,263 --> 00:06:11,443
+or wording, check the permission or
+license and provide the
+
+97
+00:06:11,443 --> 00:06:14,823
+required credit. Finding an image in a
+search result does
+
+98
+00:06:14,823 --> 00:06:18,503
+not automatically give you permission to
+reuse it. Use original
+
+99
+00:06:18,503 --> 00:06:21,903
+or appropriately licensed material for the
+practice pack.
+
+100
+00:06:23,690 --> 00:06:26,330
+Pause and ask a partner to use your
+resource pack
+
+101
+00:06:26,330 --> 00:06:30,990
+without your explanation first. Can they
+identify the next action
+
+102
+00:06:30,990 --> 00:06:34,350
+on the handout? Can they find the total
+and explain
+
+103
+00:06:34,350 --> 00:06:38,950
+what changed when one cost changed? Can
+they tell what
+
+104
+00:06:38,950 --> 00:06:43,950
+each slide contributes? Record one point
+of confusion and revise
+
+105
+00:06:43,950 --> 00:06:48,490
+it. Then reopen the export and repeat the
+affected check.
+
+106
+00:06:49,310 --> 00:06:52,790
+This is useful evidence of learning: the
+document has structure,
+
+107
+00:06:53,590 --> 00:06:57,530
+the calculation responds correctly, and
+another reader can act on
+
+108
+00:06:57,530 --> 00:07:01,410
+the result. Carry the same routine into a
+household budget,
+
+109
+00:07:01,730 --> 00:07:06,050
+a community notice, or another task you
+choose. Create for
+
+110
+00:07:06,050 --> 00:07:10,110
+a reader, test the result, and keep a
+recoverable original.

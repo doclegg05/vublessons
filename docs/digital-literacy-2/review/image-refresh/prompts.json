@@ -1,0 +1,18 @@
+{
+  "generator": "Built-in image_gen; model version not exposed by tool",
+  "purpose": "Presentation artwork comparison candidates; existing course assets retained",
+  "assets": [
+    {
+      "name": "workstation",
+      "reference": "/Users/brittlegg/MacDev/companies/education/vublessons/courses/digital-literacy-2/assets/illustrations/slide-workstation.webp",
+      "prompt": "Use case: style-transfer. Create a refined alternate illustration for an adult digital-literacy teaching presentation. The supplied image is the existing asset and style reference. Retain its premium tactile editorial 3D illustration aesthetic and VUB navy #1B365D, deep teal, restrained warm gold, ivory, warm wood palette. Improve composition and educational relevance: one clear readable workstation, elegant physically plausible monitor with a simple original browser interface showing a visually enlarged article area, a realistic keyboard and mouse, a neatly placed headset, and a compact printer producing a single page. Remove decorative clutter, plants, extra wall art and coffee cup. Use softer directional daylight, rich material detail and natural believable proportions, not plastic toy objects. Monitor and essential tools must remain recognizable in the central two thirds for responsive crops. Landscape 3:2, cohesive visual hierarchy, crisp focal objects, restrained backdrop with depth. No people, no letters, no numbers, no logos, no watermark, no real software screenshot. This is contextual artwork; actual instructions will remain accessible HTML outside the image. Produce only the illustration, not a slide mockup.",
+      "candidate": "workstation-candidate.png"
+    },
+    {
+      "name": "security",
+      "reference": "/Users/brittlegg/MacDev/companies/education/vublessons/courses/digital-literacy-2/assets/illustrations/slide-security.webp",
+      "prompt": "Use case: style-transfer. Create a substantially more meaningful alternate illustration for the online-safety section of an adult digital-literacy presentation. Supplied image is the existing asset and style reference. Retain its sophisticated tactile editorial 3D style, matte navy #1B365D, deep teal, restrained brushed warm gold and ivory palette, warm natural daylight. Replace the generic giant padlock and empty laptop with a coherent realistic desk scene about pausing and independently verifying an unexpected message: central open navy laptop displays a simple original contact-directory interface, three clearly structured contact rows with person silhouettes and phone icons, no readable text; a smartphone on a stable stand beside it shows a single unfamiliar-message card with envelope symbol and a small amber question-mark badge; a physical notebook with a bookmark and pen suggests keeping a trusted contact record. Show no threatening imagery, no hacker, no red emergency styling, no giant shields or floating locks, no USB drive. Clear separation between the incoming message and the independently consulted contact directory, believable device anatomy and refined materials. Keep main objects together centrally and recognizable at small sizes, generous margins, landscape 3:2. No people, no words or numbers, no logos, no watermark, no real software screenshots. Contextual illustration only, not a teaching diagram and not a slide mockup.",
+      "candidate": "security-candidate.png"
+    }
+  ]
+}

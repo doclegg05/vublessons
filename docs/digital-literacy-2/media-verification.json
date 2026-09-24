@@ -1,0 +1,68 @@
+[
+  {
+    "week": 1,
+    "durationSeconds": 427.875,
+    "fullDecode": "pass",
+    "blackFrames": "none",
+    "meanVolumeDb": -22.3,
+    "peakVolumeDb": -1.5,
+    "captionCues": 109,
+    "fastStart": true,
+    "hyperframesStrict": "pass"
+  },
+  {
+    "week": 2,
+    "durationSeconds": 431.625,
+    "fullDecode": "pass",
+    "blackFrames": "none",
+    "meanVolumeDb": -21.2,
+    "peakVolumeDb": -1.5,
+    "captionCues": 109,
+    "fastStart": true,
+    "hyperframesStrict": "pass"
+  },
+  {
+    "week": 3,
+    "durationSeconds": 432.5,
+    "fullDecode": "pass",
+    "blackFrames": "none",
+    "meanVolumeDb": -22.0,
+    "peakVolumeDb": -1.5,
+    "captionCues": 110,
+    "fastStart": true,
+    "hyperframesStrict": "pass"
+  },
+  {
+    "week": 4,
+    "durationSeconds": 440.584,
+    "fullDecode": "pass",
+    "blackFrames": "none",
+    "meanVolumeDb": -21.5,
+    "peakVolumeDb": -1.5,
+    "captionCues": 112,
+    "fastStart": true,
+    "hyperframesStrict": "pass"
+  },
+  {
+    "week": 5,
+    "durationSeconds": 451.375,
+    "fullDecode": "pass",
+    "blackFrames": "none",
+    "meanVolumeDb": -22.1,
+    "peakVolumeDb": -1.1,
+    "captionCues": 112,
+    "fastStart": true,
+    "hyperframesStrict": "pass"
+  },
+  {
+    "week": 6,
+    "durationSeconds": 451.167,
+    "fullDecode": "pass",
+    "blackFrames": "none",
+    "meanVolumeDb": -22.4,
+    "peakVolumeDb": -1.5,
+    "captionCues": 113,
+    "fastStart": true,
+    "hyperframesStrict": "pass"
+  }
+]

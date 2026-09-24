@@ -1,6 +1,6 @@
 // Computed accessibility check: axe-core (WCAG A/AA, real computed contrast)
-// over the BUILT site, on the homepage plus one representative lesson page per
-// course in courses.json.
+// over the BUILT site: catalog entries, every lesson's initial state,
+// assessment entry screens, and instructor intake/class pages.
 //
 // Usage:  node scripts/a11y-check.mjs            — check against the baseline
 //         node scripts/a11y-check.mjs --update   — rewrite the baseline (review
@@ -53,13 +53,27 @@ const MIME = {
 
 async function selectPages() {
   const catalog = JSON.parse(await readFile(path.join(repoRoot, "courses.json"), "utf8"));
-  const lessonPages = catalog.courses.map((course) => {
-    const first = course.lessons[0];
-    // financial-readiness lesson paths carry #moduleN fragments; one page.
-    const clean = first.path.split("#")[0];
-    return { label: `${course.id} (lesson 1: ${first.title})`, urlPath: `/${clean}` };
-  });
-  return [{ label: "homepage", urlPath: "/" }, ...lessonPages];
+  const pages = [{ label: "homepage", urlPath: "/" }];
+  for (const course of catalog.courses) {
+    for (const [label, route] of [
+      ["course home", course.entry],
+      ["pre-test", course.preTest],
+      ["post-test", course.postTest],
+      ...course.lessons.map((lesson) => [lesson.title, lesson.path]),
+    ]) {
+      // Financial Readiness modules share a single page. Its deeper interactive
+      // states need separate functional coverage, rather than duplicate scans.
+      const urlPath = `/${route.split("#")[0]}`;
+      if (!pages.some((page) => page.urlPath === urlPath)) {
+        pages.push({ label: `${course.id}: ${label}`, urlPath });
+      }
+    }
+  }
+  pages.push(
+    { label: "instructor intake", urlPath: "/instructors/intake.html" },
+    { label: "class directory", urlPath: "/instructors/classes/index.html" },
+  );
+  return pages;
 }
 
 // ---------- static server over dist/site ----------
@@ -90,6 +104,14 @@ async function auditPages(pages, origin) {
   // AxeBuilder opens a sibling page in the same context, which a page-owned
   // context (browser.newPage()) refuses — so create the context explicitly.
   const context = await browser.newContext();
+  // This gate validates our built pages. Third-party form/video services need
+  // separate release checks and must not make local accessibility CI flaky.
+  await context.route("**/*", (route) => {
+    const url = new URL(route.request().url());
+    return url.origin === origin || ["data:", "blob:"].includes(url.protocol)
+      ? route.continue()
+      : route.abort();
+  });
   const results = [];
   try {
     for (const pageDef of pages) {
@@ -102,6 +124,15 @@ async function auditPages(pages, origin) {
         throw new Error(`${pageDef.urlPath}: HTTP ${response ? response.status() : "no response"}`);
       }
       await page.evaluate(() => document.fonts.ready);
+      // Settle finite entrances before measuring opacity-dependent contrast.
+      // Do not wait on perpetual decorative animations or change their styles.
+      await page.evaluate(() => {
+        for (const animation of document.getAnimations()) {
+          if (Number.isFinite(animation.effect?.getComputedTiming().endTime)) {
+            animation.finish();
+          }
+        }
+      });
       const axe = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze();
       const ruleCounts = Object.fromEntries(
         axe.violations

@@ -1,0 +1,362 @@
+[
+  {
+    "week": 1,
+    "chapter": 1,
+    "title": "A workstation that supports your task",
+    "text": "[warmly] Think about a time you needed to read a letter, hear instructions, or remember an appointment. You already know how to judge whether those everyday tools help you. [enthusiastically] We will apply that judgment to a computer. Choose one task that matters to you: reading a library page, joining a practice call, or keeping a household reminder. You do not need to know every setting. [encouraging] Our goal is to choose one useful change, observe the result, and know how to undo it. Keep a scrap of paper nearby to record the original setting. That makes experimenting safer, especially on a shared lab computer."
+  },
+  {
+    "week": 1,
+    "chapter": 2,
+    "title": "Make a webpage readable",
+    "text": "[curious] Imagine the library page is difficult to read, but the computer's other menus look comfortable. Start with the browser's zoom control because the problem is inside that page. Open the browser menu, find Zoom, and increase it one step. On many Windows browsers, Control and plus also zooms in; Control and zero returns to the default. [pleased] Watch the page get larger. Then check the important part: can you still find the search field, read the instructions, and reach the button? Larger is useful only if the task still works. [encouraging] [short pause] Pause the video, try one zoom step on a practice page, and restore it before continuing."
+  },
+  {
+    "week": 1,
+    "chapter": 3,
+    "title": "Choose the scope of the change",
+    "text": "[thoughtful] Now suppose the browser tabs and the rest of the desktop are also hard to see. Page zoom will not solve every part of that problem. System text size changes text in supported areas; display scaling changes the size of text, apps, and other interface elements more broadly. The exact controls depend on your computer. Ask the instructor before changing a shared workstation's system settings. This is like choosing between a magnifying glass for one page and a more comfortable arrangement for the whole desk. [curious] Which would you try first if only one website is too small? [confident] Browser zoom, because it matches the scope of the problem."
+  },
+  {
+    "week": 1,
+    "chapter": 4,
+    "title": "Follow the sound to its destination",
+    "text": "[warmly] Picture a radio connected to headphones. Turning up the radio does not make the room speaker play if the sound is still going to the headphones. [interested] A computer can work the same way. First check whether the sound is muted. Then inspect the selected output device: speakers, a monitor, or a headset. Choose the device you intend to hear, begin at a comfortable volume, and play a short test. If that test works but a meeting does not, check the meeting app's own audio choice next. [encouraging] Change one setting at a time. This gives you evidence about what fixed the problem instead of leaving you with several unexplained changes."
+  },
+  {
+    "week": 1,
+    "chapter": 5,
+    "title": "Understand the parts before troubleshooting",
+    "text": "[interested] A slow computer and a full computer are not exactly the same problem. The processor carries out instructions. Working memory holds information in active use, while storage keeps saved files. [warmly] Think of a workbench and a filing cabinet: a crowded workbench and a full cabinet require different responses. Closing an unused app may reduce active workload; it does not create a reliable backup of your files. For connections, identify the job before choosing the cable. A display connection carries a picture, a network connection carries data, and a USB connection may carry data or power depending on the equipment. [encouraging] Match the labels and ask before forcing an unfamiliar connector."
+  },
+  {
+    "week": 1,
+    "chapter": 6,
+    "title": "Print a useful page, not a surprise",
+    "text": "[warmly] Suppose you want one page of directions for a community event. Open print preview before sending anything to the printer. Check the destination first: a physical printer and Save as PDF produce different results. Next inspect the page count, orientation, and selected range. A webpage may create extra pages containing menus or blank space. Choose one useful page, look for clipped text, and print a single test copy. [pleased] Only then print more. [thoughtful] If the printer does not respond, check its status or queue and ask for help rather than repeatedly pressing Print. Repeated requests can arrive later as an unexpected stack of duplicates."
+  },
+  {
+    "week": 1,
+    "chapter": 7,
+    "title": "Make a calendar entry you can act on",
+    "text": "[warmly] A paper calendar works because a short note connects a time to an action. A digital entry needs the same meaning. In our fictional example, create Library practice from two to three in the afternoon, with Room A as the location. Check the correct day, start time, end time, and time zone when one is shown. Add a reminder early enough to help you prepare. Day view helps inspect the details; week view helps notice conflicts; month view gives a wider overview. [encouraging] Change the view and find the same appointment again. Saving an entry is only the first step. [pleased] Reopening it confirms that the details survived."
+  },
+  {
+    "week": 1,
+    "chapter": 8,
+    "title": "Share availability with a purpose",
+    "text": "[thoughtful] Your partner needs to choose a meeting time, but does not need every detail of your calendar. Free-or-busy sharing can communicate that a time is occupied without exposing its title or location. Compare the two views: your calendar contains Library practice and Room A; your partner sees only Busy. Before sharing, read the actual service's options because not every calendar offers identical controls. Ask who needs access, what they need to know, and for how long. [curious] [short pause] Pause and decide: should someone arranging a study session automatically receive private appointment details? [confident] No. Start with availability, then share more only when the task calls for it."
+  },
+  {
+    "week": 1,
+    "chapter": 9,
+    "title": "Check what the computer does automatically",
+    "text": "[interested] Reminders, saved browser preferences, and cloud services can save effort, but automation still needs a check. A cloud service runs on another computer and often connects your work to an account. Confirm which account is active before saving or sharing. After setting a reminder, check that notifications are allowed and that the reminder time is sensible. If you need help, use instructions from the software's official support site and match them to your version. A menu from an older version may look different. [encouraging] Describe the task and what happened: I selected the headset, but the test sound still plays through the monitor. [pleased] That is useful evidence for a helper."
+  },
+  {
+    "week": 1,
+    "chapter": 10,
+    "title": "Your independent workstation check",
+    "text": "[encouraging] Now pause and choose one improvement that matters to your own routine. Make a practice page comfortable to read, route a test sound to the intended device, or create a fictional calendar entry. Tell a partner what you expected before you act. Then show the result and explain how to undo the change. [reassuring] If the result is different from your prediction, return to the original setting and try a smaller step. Before leaving, save your practice work, restore shared settings, and sign out of any demonstration account as directed. The skill is not memorizing every menu. [enthusiastically] It is choosing a change, checking evidence, and repeating a routine you can use elsewhere."
+  },
+  {
+    "week": 2,
+    "chapter": 1,
+    "title": "Find information for a real decision",
+    "text": "[warmly] Imagine a neighbor asks where they can get help using a computer. You may already have a familiar library, community center, or veterans' organization in mind. Use that experience as a starting point, then verify what is available now. Our task is to find a suitable public service, record enough evidence to revisit it, and organize a fictional handout without exposing private information. [encouraging] You can use a different local service that matters to you. The names and details in this demonstration are examples, not a claim about any particular organization. [confident] A useful search ends with a supported decision, not just a page that looks impressive."
+  },
+  {
+    "week": 2,
+    "chapter": 2,
+    "title": "Turn a broad question into a useful search",
+    "text": "[interested] Start with the words that describe your task, the kind of service, and the location. Computer help library plus your town is more useful than typing help by itself. Inspect the result title and the website address before opening it. If the results are too broad, add a specific service or location. [reassuring] If there are no useful results, remove one restriction rather than assuming the service does not exist. Filters can help, but they can also hide a relevant page. [encouraging] [short pause] Pause and write a search for your chosen community task. Explain what each word contributes. Then change one term and compare the results instead of opening every link."
+  },
+  {
+    "week": 2,
+    "chapter": 3,
+    "title": "Judge the source and the fit",
+    "text": "[curious] A page can be accurate and still be wrong for your decision. An official library page from another town may describe a real service, but not the one available to your neighbor. Ask who published the information, what evidence supports it, when it was updated, why it was written, and whether it answers your question. For opening hours or eligibility, go to the organization responsible for that service and check the details there. Search-result snippets may be incomplete. [interested] Compare two pages that disagree. [confident] Do not count votes between websites; identify which source is in a position to know, and confirm uncertain details through an independently found contact method."
+  },
+  {
+    "week": 2,
+    "chapter": 4,
+    "title": "Leave a source trail for your future self",
+    "text": "[warmly] Suppose you find a useful service today and need it again next month. [curious] A note saying good website will not be enough. Record the organization, the page title, the web address, the date you checked it, and the particular fact you plan to use. A bookmark helps you return, but it does not freeze the page or prove that the information remains current. In your handout, distinguish a checked fact from your own interpretation. If the page does not answer a question, write needs confirmation rather than filling the gap with a guess. [warmly] This is the digital equivalent of writing the source beside a number in a household notebook."
+  },
+  {
+    "week": 2,
+    "chapter": 5,
+    "title": "Fill a form with the minimum useful information",
+    "text": "[warmly] An online form is a structured request. Read its purpose and required fields before typing. In our course practice form, choose the kind of computer help needed and a fictional contact preference. Review the entries before selecting the final button. On a real service, ask whether a sensitive detail is necessary for the task, and verify the site before entering it. Our practice does not send a real request. [confident] That distinction matters: seeing a confirmation message in a simulator proves that you completed the exercise, not that an organization received anything. [encouraging] Pause, complete the fictional form, and explain what you deliberately left out and why."
+  },
+  {
+    "week": 2,
+    "chapter": 6,
+    "title": "Give your files a home you can recognize",
+    "text": "[warmly] Think of a folder as a labeled place to put related work. Create a practice folder for the community resource task and use a descriptive file name, such as library-help-draft. A file saved on this computer may not appear on another computer. A cloud file belongs to a service and an account, and a synced folder may keep copies in more than one place. Before moving to another device, check the account and the saving or syncing status. [encouraging] Reopen the file from the intended location. [pleased] That simple test catches a common mistake: editing one copy while later opening an older copy somewhere else."
+  },
+  {
+    "week": 2,
+    "chapter": 7,
+    "title": "Choose access by what the partner must do",
+    "text": "[interested] Our partner should suggest clearer wording without rewriting the handout directly. Viewer access usually allows reading. Commenter access, when supported, allows suggestions through comments. Editor access permits changes to the content. Choose the smallest role that fits the task, inspect the recipient carefully, and have the partner verify that the file opens with the expected controls. A link that works for you may still fail for someone else. Also distinguish read-only from encryption. Read-only limits editing; it does not necessarily prevent someone from reading or copying the information. [curious] [short pause] Pause and choose a role for someone who only needs to read the finished handout. [confident] Viewer is the appropriate starting point."
+  },
+  {
+    "week": 2,
+    "chapter": 8,
+    "title": "Separate sync from a recovery copy",
+    "text": "[interested] Sync is convenient because a change can travel between a device and an online service. The same convenience can carry a deletion. Watch the practice file disappear from one location and then the other. [confident] That is why sync alone is not a separate backup. A backup provides another recovery copy under an appropriate plan. Version history may preserve earlier content, while a recycle bin may retain a deleted file for a limited time. Availability and retention depend on the service. Do not test deletion with your only important file. [encouraging] Use the fictional copy and explain which protection would help if the mistake spread through every synced location."
+  },
+  {
+    "week": 2,
+    "chapter": 9,
+    "title": "Recover the right thing and package carefully",
+    "text": "[thoughtful] First identify the problem. If the whole file is missing after deletion, inspect the appropriate trash or recycle bin. If the file exists but its wording changed, inspect version history. Preview the earlier version and coordinate with collaborators before restoring it. You do not want to replace useful work someone just added. Compression is a separate tool: a ZIP file can package several files for transfer and may reduce their size. It is not automatically encryption or a backup plan. [encouraging] After extracting a practice ZIP, open a file to confirm the contents are usable. [confident] Choose the tool that matches the problem rather than trusting a familiar icon."
+  },
+  {
+    "week": 2,
+    "chapter": 10,
+    "title": "Show the evidence behind your choices",
+    "text": "[encouraging] [short pause] Pause and build a small resource folder for your chosen community task. Include a source note, a fictional handout, and a clear file name. Tell a partner which fact you verified, why that source is appropriate, and which permission fits the review task. [curious] Then explain how you would recover a deleted file and how that differs from restoring earlier wording. If an account or sharing feature is unavailable, demonstrate the decision with the course simulator and label it simulated. [enthusiastically] For your next independent task, reuse this sequence: ask a focused question, check the evidence, record a trail, organize the file, and verify access."
+  },
+  {
+    "week": 3,
+    "chapter": 1,
+    "title": "Create for a person and a purpose",
+    "text": "[warmly] Think about a notice, set of directions, or supply list that was easy to use. [curious] What helped you find the next step? [enthusiastically] We will apply those same practical standards to a small resource pack: a handout, a supply workbook, and three slides. Choose a fictional community activity such as a library computer-help session or a neighborhood meeting. Decide who will use the material and what they need to do after reading it. A beautiful page that leaves the reader unsure is unfinished. Keep that reader's task in view as we make choices about words, structure, calculations, pictures, and the final file format."
+  },
+  {
+    "week": 3,
+    "chapter": 2,
+    "title": "Give the document a readable structure",
+    "text": "[warmly] Start the handout with the service and the next action. Use a real heading style for the title and section headings, followed by short paragraphs or a numbered list when order matters. Selecting bold text changes appearance, but does not necessarily identify a heading to assistive technology or a navigation pane. A numbered sequence might say choose a task, visit the learning desk, and ask how to repeat the skill at home. Use link text that names the destination instead of click here. Read the document in order without relying on color or position alone. [curious] Does it still make sense? [pleased] That is a useful first accessibility check."
+  },
+  {
+    "week": 3,
+    "chapter": 3,
+    "title": "Edit without losing useful work",
+    "text": "[warmly] Select a short piece of text before changing it, and check what the selection includes. Common shortcuts such as copy, paste, save, and undo can reduce repeated mouse work; your instructor can show the keys for your computer. [reassuring] Practice on a copy so a mistake is easy to reverse. When reviewing someone else's document, a comment asks a question or suggests an improvement. Tracked changes record proposed edits for review, where the application supports them. They are not the same as silently replacing the text. [encouraging] [short pause] Pause and propose one specific improvement to the handout. Explain the reader's problem it solves, then let the author decide whether to accept it."
+  },
+  {
+    "week": 3,
+    "chapter": 4,
+    "title": "Read a worksheet like a labeled table",
+    "text": "[interested] A workbook can contain several worksheets. Within a sheet, columns usually have letters, rows have numbers, and a cell address combines both. [confident] B2 means column B, row two. Our fictional supply list puts item names in column A and dollar amounts in column B: paper at twelve, folders at eight, and pens at five. Include a heading that explains the units, so twelve is clearly dollars rather than boxes. Enter the values in separate cells instead of putting the whole list into one cell. [encouraging] Before calculating anything, check that each amount sits beside the intended item. A correct formula cannot rescue numbers assigned to the wrong rows."
+  },
+  {
+    "week": 3,
+    "chapter": 5,
+    "title": "Build a formula and challenge it",
+    "text": "[warmly] Select a total cell outside the three input cells and enter equals SUM, followed by the range B2 through B4 in parentheses. The colon means include the cells from the first address through the last. [pleased] The expected total is twenty-five dollars. [curious] Now change paper from twelve to fifteen. [short pause] [excited] The total should become twenty-eight because the formula refers to the cells, not to a permanently typed answer. [thoughtful] If it stays at twenty-five, inspect the formula and range. [curious] Did you type the total manually? Did the range omit a cell? [encouraging] Pause and predict the result before changing a value. Then compare the observed total with your prediction and correct any mismatch."
+  },
+  {
+    "week": 3,
+    "chapter": 6,
+    "title": "Choose a chart that answers a question",
+    "text": "[interested] A chart should help someone see a relationship in the checked data. To compare the three supply costs, select the item labels and their values, then choose a simple bar or column chart. Give it a meaningful title and make the dollar units clear. Check that the labels still match their bars. A large bar should represent the larger value, not merely a brighter color. After changing the paper cost, confirm that the chart follows the updated cells. [curious] If a chart looks surprising, return to the table before decorating it. [encouraging] Keep the table available so a reader can inspect exact amounts and understand the information without relying only on the graphic."
+  },
+  {
+    "week": 3,
+    "chapter": 7,
+    "title": "Make slides and images serve the message",
+    "text": "[enthusiastically] For a three-slide presentation, use the first slide to name the useful task, the second to demonstrate the key steps, and the third to show the next action. Prefer a relevant picture or diagram to a paragraph copied from the handout. Keep text large and explain unfamiliar terms aloud. Cropping removes outer parts of an image from the view; resizing changes its displayed dimensions. [confident] Those actions solve different problems. [encouraging] Preserve the original file before experimenting, and check that a crop has not removed information the viewer needs. If an image carries meaning, provide an equivalent explanation or alternative text in the format you are using."
+  },
+  {
+    "week": 3,
+    "chapter": 8,
+    "title": "Edit a short clip for understanding",
+    "text": "[interested] A useful instructional clip has a clear beginning, an understandable action, and a visible result. Trimming removes unwanted material at the start or end. Splitting allows you to work with sections inside a clip, such as removing a long unrelated interruption. [curious] Watch both sides of an edit: did it cut off the first syllable or remove the step that explains the result? Keep speech intelligible and check captions against the final audio after editing. Captions from an earlier version may drift. You do not need elaborate effects. [encouraging] The goal is for another person to follow the action, pause when needed, and understand what changed."
+  },
+  {
+    "week": 3,
+    "chapter": 9,
+    "title": "Choose a format and inspect what survives",
+    "text": "[warmly] Decide what the next person needs to do. An editable document supports revision. A PDF often preserves a finished layout for viewing or printing. A CSV carries plain table data, but does not preserve a workbook's full formatting and formula behavior. Keep the editable original as well as the export. [encouraging] Reopen the exported file and inspect the page breaks, labels, links, and important values. If you reused someone else's image or wording, check the permission or license and provide the required credit. Finding an image in a search result does not automatically give you permission to reuse it. [confident] Use original or appropriately licensed material for the practice pack."
+  },
+  {
+    "week": 3,
+    "chapter": 10,
+    "title": "Test the pack with another person",
+    "text": "[encouraging] [short pause] Pause and ask a partner to use your resource pack without your explanation first. [curious] Can they identify the next action on the handout? Can they find the total and explain what changed when one cost changed? Can they tell what each slide contributes? Record one point of confusion and revise it. Then reopen the export and repeat the affected check. [pleased] This is useful evidence of learning: the document has structure, the calculation responds correctly, and another reader can act on the result. Carry the same routine into a household budget, a community notice, or another task you choose. Create for a reader, test the result, and keep a recoverable original."
+  },
+  {
+    "week": 4,
+    "chapter": 1,
+    "title": "Coordinate a task people recognize",
+    "text": "[warmly] Think of a group task you have helped organize: a family gathering, a volunteer activity, or a meeting. Confusion often begins when people assume someone else knows what to do. We will coordinate a fictional community computer-help session using a clear message, one shared handout, and an agreed review process. You can connect the example to a group you know, without entering real members' information. The goal is not to send more messages. It is to help the right person take the right next action. By the end, you should be able to choose a channel, request useful feedback, and verify the decision everyone will follow."
+  },
+  {
+    "week": 4,
+    "chapter": 2,
+    "title": "Choose the channel and identity deliberately",
+    "text": "[interested] A live conversation can help resolve an urgent misunderstanding, while a written message can preserve details for someone who responds later. A shared document is useful when several people must work on the same content. Choose the channel by the task, timing, and audience. Check which account you are using before posting or sending. A personal account and an organization account may have different audiences, permissions, and expectations. Do not assume that a private-looking group makes every detail appropriate to share. [short pause] Pause and choose a channel for a partner who cannot meet today but needs to review tomorrow's handout. A clear written request with the shared document gives them a useful starting point."
+  },
+  {
+    "week": 4,
+    "chapter": 3,
+    "title": "Write a message someone can act on",
+    "text": "[warmly] Our subject line is Review the computer-help handout. The message says which section needs attention, what kind of feedback would help, and when a response is useful. For example: please comment on whether the contact section is clear before our next practice session. That is more actionable than please look at this. Use respectful, direct language and explain abbreviations the reader may not know. Attach or link the intended file, then check that it is the correct version. Read the message once from the recipient's point of view. [curious] Could they act without asking what you meant? [encouraging] In this course, draft the message with fictional information; you do not need to send it."
+  },
+  {
+    "week": 4,
+    "chapter": 4,
+    "title": "Check who receives the message",
+    "text": "[thoughtful] Before sending a real email, inspect every recipient field. To usually identifies the main recipients. Cc sends a visible copy to people who need to be informed. Bcc hides those recipients' addresses from the other recipients, but it does not make the message confidential or stop someone from forwarding it. Reply all can send your response to more people than you intended. Check whether everyone needs that response. Timing also matters: a late message with an immediate deadline may be difficult for others to act on. [encouraging] [short pause] Pause and review your fictional draft. Remove unnecessary recipients and give the partner a reasonable response window. [confident] Clear communication includes both the content and its destination."
+  },
+  {
+    "week": 4,
+    "chapter": 5,
+    "title": "Work from one shared copy",
+    "text": "[curious] Imagine three people editing three separate handouts and calling each one final. It becomes difficult to know which instructions to use. [encouraging] Instead, agree where the common copy lives and what each person is responsible for. The owner coordinates the final decision, the writer drafts, and the reviewer suggests improvements. Give each person access appropriate to that task, and verify that the link opens for them. Working together at the same time is synchronous collaboration. Leaving comments for later is asynchronous collaboration. [thoughtful] Neither is automatically better. Choose the arrangement that fits people's schedules and the decision needed, then record the agreed outcome in the shared place."
+  },
+  {
+    "week": 4,
+    "chapter": 6,
+    "title": "Give feedback that leads to a useful change",
+    "text": "[interested] Compare two comments. This is confusing gives the writer little to act on. Add the contact number after the steps so readers can find help identifies a location, a change, and a reason. [warmly] The writer can accept the idea, ask a clarifying question, or explain another choice. Discuss the work rather than judging the person. After making the edit, acknowledge the feedback and check the revised document. Resolve a comment only when the issue has been addressed or an alternative decision is clear. [encouraging] [short pause] Pause and write one useful comment on the fictional handout. Have a partner explain the change they think you are requesting before they make it."
+  },
+  {
+    "week": 4,
+    "chapter": 7,
+    "title": "Join a meeting prepared to participate",
+    "text": "[warmly] Before a practice meeting, select and test the intended speaker and microphone. Check the app's controls rather than assuming the computer's general settings tell the whole story. Mute when appropriate, and use the agreed chat or raise-hand control to contribute. A webinar may give the host more control over who can speak than a small meeting does. Follow the event's instructions and ask before recording. If captions are available and helpful, turn them on; ask for clarification when a term is unfamiliar. [reassuring] If the connection fails, use the agreed backup plan, such as reading the shared notes afterward. [pleased] Preparation reduces the amount of meeting time spent guessing about controls."
+  },
+  {
+    "week": 4,
+    "chapter": 8,
+    "title": "Participate in a community thoughtfully",
+    "text": "[warmly] A community page can be useful for finding an event or asking a question, but members' posts are not automatically verified service information. Read the community's purpose and rules, observe how people ask for help, and contribute respectfully. For eligibility, opening hours, or official requirements, check the responsible organization through its known website or contact method. Keep private details out of a public question. If someone suggests an unfamiliar service, record what needs confirmation before acting. [encouraging] You already use judgment when accepting advice in person. [confident] Bring that same habit online: consider who is speaking, what they can know, and where the claim can be checked independently."
+  },
+  {
+    "week": 4,
+    "chapter": 9,
+    "title": "Review a digital purchase before committing",
+    "text": "[thoughtful] A fictional offer says free trial today, then twelve dollars each month. Before accepting, identify what is being purchased: a physical good, a one-time service, or a continuing subscription. Check the amount due now, future charges, renewal timing, cancellation conditions, and the seller's identity. A small in-app purchase can still cost real money, and several small purchases can add up. A familiar logo or a professional page is not proof that every offer is suitable. [reassuring] Our practice ends with explaining the decision; no purchase or payment details are required. [curious] [short pause] Pause and name the fact you would need if the future price or cancellation method were missing."
+  },
+  {
+    "week": 4,
+    "chapter": 10,
+    "title": "Leave a clear record of the next step",
+    "text": "[encouraging] Complete the fictional coordination task with a partner. Draft the request, choose the recipients and access role, propose a useful comment, and record the final decision in one shared place. Switch roles so both people practice explaining and checking. Then review the subscription example and state what you would verify before committing money. [pleased] Judge success by observable results: the partner knows what to do, can open the right file, and understands the agreed outcome. [warmly] For a group task from your own life, choose one habit to transfer. It might be a clearer subject, fewer recipients, one common copy, or a written decision that prevents the next round of confusion."
+  },
+  {
+    "week": 5,
+    "chapter": 1,
+    "title": "Use judgment, not fear, to stay safer",
+    "text": "[warmly] Think about how you handle an unexpected request in everyday life. You might ask who is asking, why they need something, and how you can check the story. [encouraging] Those habits are valuable online too. In this lesson, we will examine a fictional urgent message, compare different protections for a file, and choose permissions that fit a task. [reassuring] You do not need to identify every kind of attack by name. You need a repeatable decision process: pause, inspect the evidence, verify independently, and choose an action that limits risk. Use fictional examples throughout. There is no reason to open a suspicious link or expose a private account to complete the practice."
+  },
+  {
+    "week": 5,
+    "chapter": 2,
+    "title": "Set up for comfort and control",
+    "text": "[warmly] A workable setup supports attention as well as visibility. Adjust the chair, screen position, text size, and sound to suit the task and your comfort, following the lab's arrangements. Take a screen-free break when needed. [thoughtful] People differ in what they find helpful; do not assume one text size or pace suits everyone. Captions, clear labels, keyboard access, and instructions that do not rely on color can help many learners. These are examples of designing for a wider range of users rather than treating access as an afterthought. [encouraging] [short pause] Pause and choose one control in this course that makes the work easier for you. Explain the benefit in terms of your task."
+  },
+  {
+    "week": 5,
+    "chapter": 3,
+    "title": "Recognize pressure in a message",
+    "text": "[thoughtful] Our fictional message says your service will stop unless you act immediately through a link. [confident] The urgency is a reason to slow down, not proof that the request is genuine. Look at what the sender wants you to do: reveal a password, provide a payment, open an attachment, or follow an unfamiliar link. A convincing name or logo can be copied. Even a message from a familiar account deserves a check when the request is unusual. Avoid trying to prove safety by clicking the link. Instead, describe the claim in plain language. Someone says I must provide information immediately. [reassuring] That helps you separate the pressure from the evidence."
+  },
+  {
+    "week": 5,
+    "chapter": 4,
+    "title": "Verify through a route you already trust",
+    "text": "[confident] Open the organization's known website yourself, use a saved bookmark you trust, or find its contact details independently. Do not use the suspicious message's phone number as your independent check. Ask whether the claimed issue exists and what action, if any, is needed. If you already acted, stop further interaction and contact the appropriate official support channel promptly; in the lab, tell the instructor what happened. The exact recovery steps depend on what was shared. [curious] [short pause] Pause and choose between replying to the message for reassurance and checking through a known route. [reassuring] The known route is stronger because it does not let the original sender supply all the evidence for its own claim."
+  },
+  {
+    "week": 5,
+    "chapter": 5,
+    "title": "Separate editing restrictions from encryption",
+    "text": "[curious] Imagine a document labeled read-only. That may prevent ordinary editing, but the content can still be readable. Encryption addresses a different question: can someone understand the data without the required key or authorized access? A password can protect different actions depending on the application, so do not assume every password prompt means the file is encrypted. [confident] Inspect what the feature actually promises. In our diagram, a readable file becomes protected data that requires a key. That does not remove the need to manage who can access an unlocked device or account. [encouraging] [short pause] Pause and explain which protection fits preventing accidental edits, and which addresses readable data being exposed."
+  },
+  {
+    "week": 5,
+    "chapter": 6,
+    "title": "Treat unknown devices cautiously",
+    "text": "[thoughtful] A USB drive found in a parking lot might look like an ordinary storage device. You cannot determine that it is safe by its appearance or by the label written on it. [confident] Do not plug it into your computer to discover its owner. Give it to authorized staff and follow the organization's procedure. The same general habit applies to unfamiliar attachments or unexpected software prompts: stop and verify the purpose before opening or installing. [reassuring] This is not about avoiding every useful tool. It is about making the source and task clear before granting a device or file a path into your system. Use only the instructor-approved fictional examples for this exercise."
+  },
+  {
+    "week": 5,
+    "chapter": 7,
+    "title": "Grant camera and microphone access for a reason",
+    "text": "[warmly] A video meeting may need a camera and microphone, but a simple text page normally has no reason to use them. When a permission prompt appears, identify which app is asking and what task you are trying to complete. Grant access only when the request fits that task and you trust the application. Deny an unrelated request, then review the setting later if a legitimate feature needs it. After a meeting, check the app's state and review permissions when appropriate. A permission decision is not permanent approval of everything an app might do. [curious] [short pause] Pause and compare our two examples. [encouraging] Explain why a meeting and a text page lead to different choices."
+  },
+  {
+    "week": 5,
+    "chapter": 8,
+    "title": "Protect attention and respond to harmful behavior",
+    "text": "[warmly] Safety also includes the way an online interaction affects your attention and wellbeing. Catfishing uses a false identity to build trust. A friendly conversation does not by itself verify the person's story. Fear of missing out can encourage repeated checking of alerts even when you intended to do something else. [encouraging] Choose notification settings and breaks that support your own goals. If a post or interaction becomes harmful, avoid escalating it. Use the service's reporting or blocking tools when appropriate, and seek help from a trusted person or the relevant support channel. [reassuring] You do not have to solve every problem alone or continue a conversation because someone pressures you to respond."
+  },
+  {
+    "week": 5,
+    "chapter": 9,
+    "title": "Practice the complete decision process",
+    "text": "[interested] Here is a new fictional scenario. A message claiming to represent a community service asks for a private code before it will confirm an appointment. [encouraging] [short pause] Pause the video and state three things: what evidence you have, what remains unverified, and what you would do next. A strong response identifies the unusual request, avoids sharing the code, and checks the appointment through a known contact method. It does not rely only on spelling mistakes or how professional the message looks. Ask a partner to explain a different scenario using the same process. [warmly] If you disagree, discuss the evidence behind each choice rather than guessing what answer the instructor wants."
+  },
+  {
+    "week": 5,
+    "chapter": 10,
+    "title": "Use results to choose your next practice",
+    "text": "[encouraging] Before the post-test, review the skills you can demonstrate: adjust a setting and check it, justify a source, choose file access, test a calculation, and communicate a clear next step. Complete the assessment independently, then use its explanations to identify a useful practice task. [reassuring] A classroom score is one piece of evidence, not a judgment about your ability to learn and not a certification result. Keep the saved report if it helps you plan. Choose one skill to repeat with less help and one situation from your own routine where it would be useful. [pleased] Confidence grows from being able to explain and repeat a successful process, including knowing when to ask for support."
+  },
+  {
+    "week": 6,
+    "chapter": 1,
+    "title": "Build something small enough to understand",
+    "text": "[warmly] Think about a list you already use: contacts, places to visit, or resources for a community activity. [enthusiastically] We will turn a fictional resource list into a small browser app that helps someone find an entry. Your experience with lists gives you a useful starting point for deciding whether the result makes sense. [reassuring] You do not need to become a professional programmer today. You will practice directing a build, checking what it does, and making one controlled improvement. The first version has one page, a search field, a category filter, and readable results. Keep the records fictional so the work can be shared and tested without exposing anyone's private information."
+  },
+  {
+    "week": 6,
+    "chapter": 2,
+    "title": "Distinguish a website, an app, and a service",
+    "text": "[interested] A website can present information for people to read. A web app responds to input, such as filtering our resource list. Software as a service usually provides an ongoing hosted service and may include accounts, stored data, subscriptions, and operational support. [thoughtful] Our one-file practice app is not all of that. It has no real account system, private database, or payment service. This distinction helps you ask for an achievable first version. A convincing sign-in screen does not prove secure authentication exists behind it. [encouraging] Start by describing the useful behavior you can actually test in the browser, then treat hosting, security, and service operations as separate decisions that require more work."
+  },
+  {
+    "week": 6,
+    "chapter": 3,
+    "title": "Understand the three parts of the page",
+    "text": "[interested] HTML describes the content and structure: a heading, a labeled search field, and a list of resources. CSS controls how those parts are arranged and displayed. JavaScript responds to input, such as deciding which records match a search. [warmly] Think of a familiar form: the questions and fields are its structure, their presentation helps you read them, and the rules determine what happens when you use it. The analogy is a starting point, not a complete description of software. [encouraging] Open the supplied starter in the browser and identify a visible example of each part. Changing a heading is different from changing the rule that filters the list."
+  },
+  {
+    "week": 6,
+    "chapter": 4,
+    "title": "Write checks before asking for code",
+    "text": "[confident] Define success in terms someone else can observe. First, searching for library should show the fictional Community library entry. Second, searching for an unmatched term should show a clear no-results message. Third, the controls should work with the keyboard. Add a check for different letter cases and a narrow screen. These are acceptance checks: statements about behavior that help you decide whether the result is usable. Avoid a requirement such as make it amazing, because it does not explain what to test. [encouraging] [short pause] Pause and write three checks for a small app idea of your own. [curious] Ask a partner whether they could carry out each check without guessing what you meant."
+  },
+  {
+    "week": 6,
+    "chapter": 5,
+    "title": "Give the AI a bounded, useful request",
+    "text": "[warmly] A useful prompt describes the user, the task, the controls, the data boundaries, and the checks. For example: build one local HTML page that searches fictional community resources by name and category. Include labeled fields, visible keyboard focus, a no-results message, and no external dependencies. Keep all example records fictional and explain how to run the file. Ask the AI to describe the important parts so you can inspect its work. [confident] Do not put passwords or private API keys into the prompt or the browser code. People can inspect code delivered to their browser. [thoughtful] A longer prompt is not automatically better; each instruction should clarify behavior or a boundary you can verify."
+  },
+  {
+    "week": 6,
+    "chapter": 6,
+    "title": "Open a working version before changing it",
+    "text": "[encouraging] Use the instructor-approved tool if one is available, or begin with the supplied starter. Save the file with its HTML extension and open it in the browser. Confirm that the heading, search field, filter, and results appear. Keep this first working version before asking for changes. [reassuring] If no AI account is available, you can still complete the exercise with a plain-text editor: change the heading and one fictional resource, save the file, and refresh the browser. Be careful that the editor has not silently added a text-file extension. [pleased] The goal is a working result you can explain, not evidence that you used a particular paid service or model."
+  },
+  {
+    "week": 6,
+    "chapter": 7,
+    "title": "Test the happy path and the missing result",
+    "text": "[short pause] [confident] Type library into the search field and compare the result with your first acceptance check. Then enter an unmatched term such as zzz. The page should explain that there are no matching resources rather than appearing broken or showing an old result. [encouraging] Clear the field and try LIBRARY in uppercase. If the intended behavior is a case-insensitive search, it should find the same record. Next combine the search with a category filter and inspect whether both conditions apply. Record expected and actual results separately. A confident statement from the AI is not test evidence. [confident] The evidence is what happened when you carried out a named check on the saved file."
+  },
+  {
+    "week": 6,
+    "chapter": 8,
+    "title": "Test access, screen size, and data assumptions",
+    "text": "[encouraging] Set the mouse aside and move through the controls with the keyboard. [curious] Can you see which control has focus? Can you enter a search and operate the filter? Narrow the browser window and check that labels, results, and buttons remain readable without important content being cut off. Then ask where the data lives. In our starter, fictional records are inside the file. Browser storage, if added later, may remain only in that browser and may be cleared; it is not automatically a shared database or a backup. [confident] Test persistence rather than assuming it. Use the course's existing text-size and accessibility habits as standards for the app you build."
+  },
+  {
+    "week": 6,
+    "chapter": 9,
+    "title": "Request one repair and retest what worked",
+    "text": "[curious] Suppose the uppercase search failed. A useful revision request names the observed problem, the expected behavior, and the check: LIBRARY returns no result, but library returns Community library; make both searches match the same entry and preserve the category filter. Save the revised version under a distinct name. Repeat the failed check, then repeat a check that previously passed. This second step can reveal a regression, where fixing one behavior breaks another. [reassuring] If the new version is worse, return to the saved working version. [encouraging] [short pause] Pause and make one small improvement or repair. Keep a brief test log so a partner can follow what changed and why you trust it."
+  },
+  {
+    "week": 6,
+    "chapter": 10,
+    "title": "Demonstrate the result and name its limits",
+    "text": "[enthusiastically] Show a partner the saved app and carry out your three acceptance checks. Explain one part of the page, one change you made, and one limitation that remains. [pleased] A local fictional prototype can be a successful learning result without being ready to operate a public service. Hosting is a separate choice. A real service handling accounts, private data, or payments needs appropriate security, access controls, support, and testing beyond this exercise. Do not treat a decorative sign-in form as protection. [encouraging] Carry forward the method you practiced: define a small task, give clear instructions, inspect the result, test more than the easiest path, and keep a way back when you revise it."
+  }
+]

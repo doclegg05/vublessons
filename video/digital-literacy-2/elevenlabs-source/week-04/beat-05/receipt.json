@@ -1,0 +1,16 @@
+{
+  "provider": "ElevenLabs MCP",
+  "model": "eleven_multilingual_v2",
+  "voice": "EXAVITQu4vr4xnSDxMaL",
+  "voiceName": "Sarah - Mature, Reassuring, Confident",
+  "speed": 0.9,
+  "stability": 0.65,
+  "similarityBoost": 0.75,
+  "style": 0,
+  "useSpeakerBoost": true,
+  "language": "en",
+  "outputFormat": "mp3_44100_128",
+  "textSha256": "7898bfc1fc0e6c996d26d8504182deb3d9a1774fdffc85275790fd8645ab199a",
+  "sourceSha256": "0e0d387eccf98e628673b3a8a89c8a401681c7d2f421f558f830e086def6d027",
+  "sourceFile": "tts_Draft_20260918_095400.mp3"
+}

@@ -420,12 +420,12 @@ h1, h2, h3, h4, h5 {
 /* Pre-Test: gold outline (matches accent) */
 .btn-primary.btn-pre-test {
     background-color: var(--clr-surface);
-    color: var(--clr-accent);
+    color: var(--clr-heading);
     border: 2px solid var(--clr-accent);
 }
 .btn-primary.btn-pre-test:hover {
     background-color: var(--clr-accent);
-    color: var(--clr-heading);
+    color: var(--clr-on-accent);
     box-shadow: 0 10px 15px -3px rgba(200, 168, 78, 0.3);
 }
 
@@ -1260,15 +1260,6 @@ body.presentation-mode .section-pane.active {
     color: var(--clr-primary-light);
     display: block;
     margin-bottom: 0.25rem;
-}
-
-@supports (-webkit-background-clip: text) or (background-clip: text) {
-    .pres-stat-number {
-        background: linear-gradient(135deg, var(--clr-primary-light), var(--clr-accent));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
 }
 
 @media (forced-colors: active) {

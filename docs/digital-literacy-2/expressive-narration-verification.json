@@ -1,0 +1,382 @@
+{
+  "chapters": 60,
+  "originalTeachingWordsPreserved": true,
+  "voice": "iKrofGyA12WC0e6AhZ8B",
+  "model": "eleven_v3",
+  "stabilityCounts": {
+    "0.5": 10,
+    "0": 50
+  },
+  "spokenWordCount": 6480,
+  "totalVideoSeconds": 2634.978,
+  "primaryTranscriptions": 60,
+  "secondaryTranscriptions": 49,
+  "minimumAlignmentMatch": 0.944954128440367,
+  "pacingFailures": 0,
+  "minimumWordsPerMinute": 128.0,
+  "maximumWordsPerMinute": 181.4,
+  "medianWordsPerMinute": 153.8,
+  "subjectiveListeningAcceptance": "Instructor review remains separate from automated checks",
+  "takes": [
+    {
+      "week": 1,
+      "chapter": "beat-01",
+      "stability": 0.5,
+      "sha256": "78cb421654ee7df1a59ebb5c6bce4871af48c9afdd19077dc346ca5591f2bc74"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-02",
+      "stability": 0,
+      "sha256": "f8aa80e0f86c2f69bc57996201e0772146131a6bf52bac2b70c31424509a206f"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-03",
+      "stability": 0,
+      "sha256": "059d81274f39d87b088706011839d087fd910081009adf434e3aefef7e733e9d"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-04",
+      "stability": 0,
+      "sha256": "d796375e16eea357cb92b16768c6abf90f218a5e1409f5e11f7f94b7d94445ff"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-05",
+      "stability": 0,
+      "sha256": "fba2e17645b2fa098f0c6041455cbcc963ce44107834c543a3a46c936a28c6a9"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-06",
+      "stability": 0,
+      "sha256": "87073623cf383d58f87aba80852dca30b0868ce98c5f2a4bf944700141e3b5e2"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-07",
+      "stability": 0.5,
+      "sha256": "36756f47c53dd89d69e4482aff2e2f16f94ff7692f6a586afb1c4308c6b220ae"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-08",
+      "stability": 0,
+      "sha256": "77136fbeeff9a4967449601353df639ff2d529213f883ef18acb282977f2ef90"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-09",
+      "stability": 0,
+      "sha256": "8db681371f1600daf5c88756a9c5d847a0f72f69e0b46a71cd535ce6bb1f1dce"
+    },
+    {
+      "week": 1,
+      "chapter": "beat-10",
+      "stability": 0,
+      "sha256": "10af7987a5bf99c0e60418a6d6e17b2e5f3770634d443a39e2938db6ab7a4221"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-01",
+      "stability": 0,
+      "sha256": "22ecc66d0f4f99838ebd636069079f12efb37e695eae62cf56d0124fab331593"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-02",
+      "stability": 0,
+      "sha256": "695175fc8cf7bfbb9669b75e519a59b4af069d179d9e35d935beb3d77cbd1e84"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-03",
+      "stability": 0.5,
+      "sha256": "04391deddc1d2617c5e18ba158a227a41d17dc7d622d57d49d400b838bf453b5"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-04",
+      "stability": 0.5,
+      "sha256": "446d824734b8332cfa5023e05d99d16a4d3ea4ef282541b0576edfc106dd950d"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-05",
+      "stability": 0,
+      "sha256": "bd5012b539997c8416143c7536f73c8f3e84899b1f4aeac158f5305b797e273c"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-06",
+      "stability": 0,
+      "sha256": "c93c556a2ee577be43540a75f2b24bc7389b7bf70acf5f5ee7b23d90dfc50f6f"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-07",
+      "stability": 0,
+      "sha256": "a78eb1b7bcde1d19a8acabcfebc19b0a318f3902999180dfd7d4160230fe978e"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-08",
+      "stability": 0,
+      "sha256": "66842f0017ae26aa07000a5e67287783e57699928d7b474bc07a6d492bbd4472"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-09",
+      "stability": 0,
+      "sha256": "587ce1976a7236293703cba9523bdbca9fdc7f88fc9447e7180f3ab1c1f6179d"
+    },
+    {
+      "week": 2,
+      "chapter": "beat-10",
+      "stability": 0,
+      "sha256": "afab33161e655191a26ef4d4a61404709ce079fe8e71c4b649ac3f39f779167f"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-01",
+      "stability": 0.5,
+      "sha256": "be674e95f436fbe667b292bf8cd636f583f6e44e05e4df3e9ce033f30ad0b57a"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-02",
+      "stability": 0,
+      "sha256": "e9a9575384704d4e68a7d2fc4b2b59921b45c9cebe9556da364123afc5ffb383"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-03",
+      "stability": 0,
+      "sha256": "0a1188c776df26eedf1fc71dca04c48b1253cb54db998bfe04df7578afd346a3"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-04",
+      "stability": 0,
+      "sha256": "22ca0a965dc68759c4207f6c37bebe86ef2c9ddcac8df9efba777aca499614d5"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-05",
+      "stability": 0,
+      "sha256": "9595480ea943e78b35f42be28e5e47072223268c9bc37a4b2e2e4873a2e4b22c"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-06",
+      "stability": 0,
+      "sha256": "167e0a01fa9c188347d3e481b3d4ec70281cba75fea32cab678c9c1c27c6a03a"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-07",
+      "stability": 0,
+      "sha256": "23898cdb0dc0c8dcf98a8deda529172768435df0aaacc63acf479205bfb49674"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-08",
+      "stability": 0,
+      "sha256": "63f8931af3f54585252744c1600e22f83ea4d4edc853a3cd3f5f4b150f674ad5"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-09",
+      "stability": 0,
+      "sha256": "87df96ef1f146b79a04b835703d1ada6e93585fa450f3f9a5a24dda3fde4dc5b"
+    },
+    {
+      "week": 3,
+      "chapter": "beat-10",
+      "stability": 0.5,
+      "sha256": "68fb3f67d8ee89a5a332262bc23a3f7c9a0dd26bbc3abd641ed374b807016d3d"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-01",
+      "stability": 0,
+      "sha256": "71842996e4865ebe2481575cd9d70e66e2d8f9fdb265e5dda4559f9b893b2852"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-02",
+      "stability": 0.5,
+      "sha256": "f51234cc4a0f96f5257dcc386a9a73015f2ddc74c59e5d3964c91c30d06fd792"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-03",
+      "stability": 0,
+      "sha256": "fae80e1ab02542e38533202cc48b6beeaba195b8f24f5e9136bc9f07ab6635d0"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-04",
+      "stability": 0,
+      "sha256": "2766fbad7f1920d38da655d71bfe45b1ad2bc22d304b57654da09ef9ead94e79"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-05",
+      "stability": 0,
+      "sha256": "4443d9fec2a122373c2805e13062d57c10ff0156fc8124a6278adaa5d326bb10"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-06",
+      "stability": 0,
+      "sha256": "67a44679f56f1b83f76ea9b64e2c24105d97f54099e4082be81a2c69de9ac36f"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-07",
+      "stability": 0,
+      "sha256": "8f113c56f8def2c2a37b450d5c8b3f96503f575dfc6ee7bbcb7f3a0c2fa567b8"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-08",
+      "stability": 0,
+      "sha256": "02c89cea409bb58d6d5031d281a8ec809a201bfbd4ce483594346be7d1c00b26"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-09",
+      "stability": 0,
+      "sha256": "cb730c47b7ab5328258d979124e3fed2dc386801253af2ba55ee0deea0f28c5f"
+    },
+    {
+      "week": 4,
+      "chapter": "beat-10",
+      "stability": 0,
+      "sha256": "d8153fe2a87dedb961c65fb8ddbfdb3efd7eb3da46b2fd737ec05a0ac7dbdc50"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-01",
+      "stability": 0,
+      "sha256": "d0ccc31229fdf02b4de712ba631cda0a6c8ad0936dd38f711e2d5e935515d3d9"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-02",
+      "stability": 0,
+      "sha256": "5876536ccb4859389e1f609b490a9752b3d4f8cb0dcd3b0a6c69885ed2b8212b"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-03",
+      "stability": 0.5,
+      "sha256": "774f376cf9faa1564fb9ed63386bc180c74d97d78319e53d2e447e78e09196c1"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-04",
+      "stability": 0,
+      "sha256": "a4e5bbd7c2654c2b1fd5b296b714c2c98e7a020feca83b6650ff7958dd742d3e"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-05",
+      "stability": 0,
+      "sha256": "f0facae2d7302ff1955d37dac875d1a5b721727ce933c2aafe6c7218fbdd0cf1"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-06",
+      "stability": 0,
+      "sha256": "bf0121688b4225c04fab1ed6029effda53314c0d1cf24d10ba05c65c869ce9a0"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-07",
+      "stability": 0,
+      "sha256": "50147379550151ab5f92c1acdb1a384ce1a9279836743098754fbe8599e0a899"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-08",
+      "stability": 0,
+      "sha256": "0797672b06e7a92b1a8ceb9562e09267d71a8f3ff0952160b0463af15533da9d"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-09",
+      "stability": 0,
+      "sha256": "12bf769f96ceaab8d025d120a6e0eb202e5281ef903104aeab571669fc82b266"
+    },
+    {
+      "week": 5,
+      "chapter": "beat-10",
+      "stability": 0,
+      "sha256": "3eb4f11f01e60b32f3068c369d5d5a20307a124a504548ba69582af1cc704e4a"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-01",
+      "stability": 0,
+      "sha256": "42663cd88f4af0dcc15dfbaca676c825010b1e9fd229fc405ae60aae210325a2"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-02",
+      "stability": 0,
+      "sha256": "4be36250edc7b821e92002c3d294a07bb18c153a79ac3755f732391921a8cf5d"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-03",
+      "stability": 0,
+      "sha256": "51cc8371bd337d53fd0e289d81c0d3579f494f744f150dac30f29a6078b31562"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-04",
+      "stability": 0,
+      "sha256": "24ebedafdf9b6767b0d93524b274b62e7911e1cdedb972464f09cf1a88fd0f70"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-05",
+      "stability": 0,
+      "sha256": "74a0c8350ed8f92182dba340bc41e25ee4dd620dc585f9c4c9251fde633153aa"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-06",
+      "stability": 0,
+      "sha256": "b02e39ea369f222b0ccf8e393fd15290f333ba6576d3115b5bd7bb2dd2d117b4"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-07",
+      "stability": 0.5,
+      "sha256": "e97de86e9cca6223f31555de3933c2558f0e7a66f6217592fd9f346f0ad2fa7c"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-08",
+      "stability": 0,
+      "sha256": "289a7e70a1eac1a070bcb8c01f3dc5b67183c8d522511a68f2edb307946c224d"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-09",
+      "stability": 0,
+      "sha256": "cb1007697780825114a8cb7686a669017cfe8a63d35fc623a450f57c9bd186fb"
+    },
+    {
+      "week": 6,
+      "chapter": "beat-10",
+      "stability": 0.5,
+      "sha256": "70ce250a04bdbe8fb0bca4e26874b80d4b51c52060540bdb021f37b052ba2413"
+    }
+  ]
+}

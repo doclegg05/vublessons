@@ -9,9 +9,7 @@
   "pages": {
     "/": {},
     "/courses/computer-skills/weeks/week-01/presentation.html": {},
-    "/courses/financial-readiness/financial-readiness.html": {
-      "color-contrast": 1
-    },
+    "/courses/financial-readiness/financial-readiness.html": {},
     "/courses/digital-literacy-1/weeks/week-01/presentation.html": {}
   }
 }

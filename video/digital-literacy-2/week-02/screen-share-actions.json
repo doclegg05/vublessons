@@ -1,0 +1,114 @@
+[
+  {
+    "chapter": 6,
+    "title": "Give your files a home you can recognize",
+    "startSeconds": 210.414,
+    "durationSeconds": 42.974,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 360,
+        "y": 158,
+        "label": "Give the practice handout a recognizable home"
+      },
+      {
+        "at": 4.85,
+        "phrase": "Create a practice folder",
+        "state": 1,
+        "x": 371,
+        "y": 157,
+        "label": "New folder \u2192 Community resources"
+      },
+      {
+        "at": 8.55,
+        "phrase": "use a descriptive file name",
+        "state": 5,
+        "x": 1000,
+        "y": 323,
+        "label": "Create the folder \u2022 open Community resources"
+      },
+      {
+        "at": 10.65,
+        "phrase": "library help draft",
+        "state": 2,
+        "x": 600,
+        "y": 324,
+        "label": "Name the file library-help-draft.txt"
+      },
+      {
+        "at": 14.03,
+        "phrase": "A file saved on this computer",
+        "state": 6,
+        "x": 1000,
+        "y": 409,
+        "label": "Save into Community resources"
+      },
+      {
+        "at": 27.15,
+        "phrase": "check the account",
+        "state": 3,
+        "x": 130,
+        "y": 300,
+        "label": "Before switching devices, check account and sync"
+      },
+      {
+        "at": 31.55,
+        "phrase": "Reopen the file",
+        "state": 4,
+        "x": 490,
+        "y": 281,
+        "label": "Open the saved file from its intended location"
+      }
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Choose access by what the partner must do",
+    "startSeconds": 253.388,
+    "durationSeconds": 52.657,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 730,
+        "y": 364,
+        "label": "Reviewer task: suggest without rewriting"
+      },
+      {
+        "at": 9.57,
+        "phrase": "Commenter access",
+        "state": 1,
+        "x": 902,
+        "y": 364,
+        "label": "Choose Commenter for suggestions"
+      },
+      {
+        "at": 14.89,
+        "phrase": "Editor access",
+        "state": 2,
+        "x": 1070,
+        "y": 364,
+        "label": "Editor can change the content directly"
+      },
+      {
+        "at": 21.75,
+        "phrase": "inspect the recipient carefully",
+        "state": 3,
+        "x": 900,
+        "y": 258,
+        "label": "Check recipient \u2022 save Commenter access"
+      },
+      {
+        "at": 24.03,
+        "phrase": "have the partner verify",
+        "state": 4,
+        "x": 1011,
+        "y": 441,
+        "label": "Verify from the partner\u2019s view"
+      }
+    ]
+  }
+]

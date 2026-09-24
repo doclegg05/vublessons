@@ -1,0 +1,553 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "1b77b9b63a8a899329f6a0a65c934884a2b93b5dff77cea8e0e7e6c7260636e5",
+  "textSha256": "ecda9d5e15434c264049b552312433a2dc515ad16f1260da2ed4184854867d64",
+  "matchRatio": 0.9908256880733946,
+  "words": [
+    {
+      "word": "Before",
+      "start": 0.0,
+      "end": 0.38
+    },
+    {
+      "word": "a",
+      "start": 0.38,
+      "end": 0.54
+    },
+    {
+      "word": "practice",
+      "start": 0.54,
+      "end": 0.88
+    },
+    {
+      "word": "meeting,",
+      "start": 0.88,
+      "end": 1.2
+    },
+    {
+      "word": "select",
+      "start": 1.24,
+      "end": 1.74
+    },
+    {
+      "word": "and",
+      "start": 1.74,
+      "end": 2.0
+    },
+    {
+      "word": "test",
+      "start": 2.0,
+      "end": 2.26
+    },
+    {
+      "word": "the",
+      "start": 2.26,
+      "end": 2.48
+    },
+    {
+      "word": "intended",
+      "start": 2.48,
+      "end": 2.68
+    },
+    {
+      "word": "speaker",
+      "start": 2.68,
+      "end": 3.28
+    },
+    {
+      "word": "and",
+      "start": 3.28,
+      "end": 3.56
+    },
+    {
+      "word": "microphone.",
+      "start": 3.56,
+      "end": 3.88
+    },
+    {
+      "word": "Check",
+      "start": 4.8,
+      "end": 5.0
+    },
+    {
+      "word": "the",
+      "start": 5.0,
+      "end": 5.2
+    },
+    {
+      "word": "app's",
+      "start": 5.2,
+      "end": 5.4
+    },
+    {
+      "word": "controls",
+      "start": 5.4,
+      "end": 5.84
+    },
+    {
+      "word": "rather",
+      "start": 5.84,
+      "end": 6.34
+    },
+    {
+      "word": "than",
+      "start": 6.34,
+      "end": 6.66
+    },
+    {
+      "word": "assuming",
+      "start": 6.66,
+      "end": 6.94
+    },
+    {
+      "word": "the",
+      "start": 6.94,
+      "end": 7.22
+    },
+    {
+      "word": "computer's",
+      "start": 7.22,
+      "end": 7.74
+    },
+    {
+      "word": "general",
+      "start": 7.74,
+      "end": 7.98
+    },
+    {
+      "word": "settings",
+      "start": 7.98,
+      "end": 8.42
+    },
+    {
+      "word": "tell",
+      "start": 8.42,
+      "end": 8.8
+    },
+    {
+      "word": "the",
+      "start": 8.8,
+      "end": 8.96
+    },
+    {
+      "word": "whole",
+      "start": 8.96,
+      "end": 9.1
+    },
+    {
+      "word": "story.",
+      "start": 9.1,
+      "end": 9.54
+    },
+    {
+      "word": "Mute",
+      "start": 10.24,
+      "end": 10.52
+    },
+    {
+      "word": "when",
+      "start": 10.52,
+      "end": 10.68
+    },
+    {
+      "word": "appropriate,",
+      "start": 10.68,
+      "end": 11.04
+    },
+    {
+      "word": "and",
+      "start": 11.04,
+      "end": 11.62
+    },
+    {
+      "word": "use",
+      "start": 11.62,
+      "end": 11.82
+    },
+    {
+      "word": "the",
+      "start": 11.82,
+      "end": 12.02
+    },
+    {
+      "word": "agreed",
+      "start": 12.02,
+      "end": 12.34
+    },
+    {
+      "word": "chat",
+      "start": 12.34,
+      "end": 12.7
+    },
+    {
+      "word": "or",
+      "start": 12.7,
+      "end": 13.2
+    },
+    {
+      "word": "raise-hand",
+      "start": 13.2,
+      "end": 13.84
+    },
+    {
+      "word": "control",
+      "start": 13.84,
+      "end": 14.22
+    },
+    {
+      "word": "to",
+      "start": 14.22,
+      "end": 14.5
+    },
+    {
+      "word": "contribute.",
+      "start": 14.5,
+      "end": 14.92
+    },
+    {
+      "word": "A",
+      "start": 15.72,
+      "end": 15.72
+    },
+    {
+      "word": "webinar",
+      "start": 15.72,
+      "end": 16.02
+    },
+    {
+      "word": "may",
+      "start": 16.02,
+      "end": 16.28
+    },
+    {
+      "word": "give",
+      "start": 16.28,
+      "end": 16.44
+    },
+    {
+      "word": "the",
+      "start": 16.44,
+      "end": 16.58
+    },
+    {
+      "word": "host",
+      "start": 16.58,
+      "end": 16.76
+    },
+    {
+      "word": "more",
+      "start": 16.76,
+      "end": 17.06
+    },
+    {
+      "word": "control",
+      "start": 17.06,
+      "end": 17.42
+    },
+    {
+      "word": "over",
+      "start": 17.42,
+      "end": 17.78
+    },
+    {
+      "word": "who",
+      "start": 17.78,
+      "end": 17.98
+    },
+    {
+      "word": "can",
+      "start": 17.98,
+      "end": 18.12
+    },
+    {
+      "word": "speak",
+      "start": 18.12,
+      "end": 18.44
+    },
+    {
+      "word": "than",
+      "start": 18.44,
+      "end": 18.84
+    },
+    {
+      "word": "a",
+      "start": 18.84,
+      "end": 18.92
+    },
+    {
+      "word": "small",
+      "start": 18.92,
+      "end": 19.16
+    },
+    {
+      "word": "meeting",
+      "start": 19.16,
+      "end": 19.48
+    },
+    {
+      "word": "does.",
+      "start": 19.48,
+      "end": 19.8
+    },
+    {
+      "word": "Follow",
+      "start": 20.44,
+      "end": 20.74
+    },
+    {
+      "word": "the",
+      "start": 20.74,
+      "end": 20.94
+    },
+    {
+      "word": "event's",
+      "start": 20.94,
+      "end": 21.16
+    },
+    {
+      "word": "instructions",
+      "start": 21.16,
+      "end": 21.66
+    },
+    {
+      "word": "and",
+      "start": 21.66,
+      "end": 22.42
+    },
+    {
+      "word": "ask",
+      "start": 22.42,
+      "end": 22.7
+    },
+    {
+      "word": "before",
+      "start": 22.7,
+      "end": 23.02
+    },
+    {
+      "word": "recording.",
+      "start": 23.02,
+      "end": 23.48
+    },
+    {
+      "word": "If",
+      "start": 24.18,
+      "end": 24.22
+    },
+    {
+      "word": "captions",
+      "start": 24.22,
+      "end": 24.68
+    },
+    {
+      "word": "are",
+      "start": 24.68,
+      "end": 24.88
+    },
+    {
+      "word": "available",
+      "start": 24.88,
+      "end": 25.1
+    },
+    {
+      "word": "and",
+      "start": 25.1,
+      "end": 25.48
+    },
+    {
+      "word": "helpful,",
+      "start": 25.48,
+      "end": 25.7
+    },
+    {
+      "word": "turn",
+      "start": 26.3,
+      "end": 26.44
+    },
+    {
+      "word": "them",
+      "start": 26.44,
+      "end": 26.62
+    },
+    {
+      "word": "on;",
+      "start": 26.62,
+      "end": 26.9
+    },
+    {
+      "word": "ask",
+      "start": 26.9,
+      "end": 27.7
+    },
+    {
+      "word": "for",
+      "start": 27.7,
+      "end": 27.94
+    },
+    {
+      "word": "clarification",
+      "start": 27.94,
+      "end": 28.24
+    },
+    {
+      "word": "when",
+      "start": 28.24,
+      "end": 28.9
+    },
+    {
+      "word": "a",
+      "start": 28.9,
+      "end": 29.0
+    },
+    {
+      "word": "term",
+      "start": 29.0,
+      "end": 29.3
+    },
+    {
+      "word": "is",
+      "start": 29.3,
+      "end": 29.6
+    },
+    {
+      "word": "unfamiliar.",
+      "start": 29.6,
+      "end": 30.04
+    },
+    {
+      "word": "If",
+      "start": 31.16,
+      "end": 31.18
+    },
+    {
+      "word": "the",
+      "start": 31.18,
+      "end": 31.32
+    },
+    {
+      "word": "connection",
+      "start": 31.32,
+      "end": 31.52
+    },
+    {
+      "word": "fails,",
+      "start": 31.52,
+      "end": 32.1
+    },
+    {
+      "word": "use",
+      "start": 32.58,
+      "end": 32.82
+    },
+    {
+      "word": "the",
+      "start": 32.82,
+      "end": 33.06
+    },
+    {
+      "word": "agreed",
+      "start": 33.06,
+      "end": 33.3
+    },
+    {
+      "word": "backup",
+      "start": 33.3,
+      "end": 33.66
+    },
+    {
+      "word": "plan,",
+      "start": 33.66,
+      "end": 34.16
+    },
+    {
+      "word": "such",
+      "start": 34.38,
+      "end": 34.56
+    },
+    {
+      "word": "as",
+      "start": 34.56,
+      "end": 34.74
+    },
+    {
+      "word": "reading",
+      "start": 34.74,
+      "end": 35.14
+    },
+    {
+      "word": "the",
+      "start": 35.14,
+      "end": 35.36
+    },
+    {
+      "word": "shared",
+      "start": 35.36,
+      "end": 35.62
+    },
+    {
+      "word": "notes",
+      "start": 35.62,
+      "end": 35.98
+    },
+    {
+      "word": "afterward.",
+      "start": 35.98,
+      "end": 36.42
+    },
+    {
+      "word": "Preparation",
+      "start": 37.02,
+      "end": 37.5
+    },
+    {
+      "word": "reduces",
+      "start": 37.5,
+      "end": 37.78
+    },
+    {
+      "word": "the",
+      "start": 37.78,
+      "end": 38.16
+    },
+    {
+      "word": "amount",
+      "start": 38.16,
+      "end": 38.42
+    },
+    {
+      "word": "of",
+      "start": 38.42,
+      "end": 38.64
+    },
+    {
+      "word": "meeting",
+      "start": 38.64,
+      "end": 38.88
+    },
+    {
+      "word": "time",
+      "start": 38.88,
+      "end": 39.24
+    },
+    {
+      "word": "spent",
+      "start": 39.24,
+      "end": 39.64
+    },
+    {
+      "word": "guessing",
+      "start": 39.64,
+      "end": 40.08
+    },
+    {
+      "word": "about",
+      "start": 40.08,
+      "end": 40.64
+    },
+    {
+      "word": "controls.",
+      "start": 40.64,
+      "end": 40.94
+    }
+  ]
+}

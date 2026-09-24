@@ -1,0 +1,543 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "d12f9c6968709d08a2087c03dfc689634dee3ebb584e6e63c9100abc69946dae",
+  "textSha256": "5bed82398c6296feaa437ea2095ec8fc03ec8f894d82bec2727176285b5fd21e",
+  "matchRatio": 0.9906542056074766,
+  "words": [
+    {
+      "word": "Start",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "the",
+      "start": 0.28,
+      "end": 0.46
+    },
+    {
+      "word": "handout",
+      "start": 0.46,
+      "end": 0.84
+    },
+    {
+      "word": "with",
+      "start": 0.84,
+      "end": 0.98
+    },
+    {
+      "word": "the",
+      "start": 0.98,
+      "end": 1.12
+    },
+    {
+      "word": "service",
+      "start": 1.12,
+      "end": 1.44
+    },
+    {
+      "word": "and",
+      "start": 1.44,
+      "end": 1.68
+    },
+    {
+      "word": "the",
+      "start": 1.68,
+      "end": 1.78
+    },
+    {
+      "word": "next",
+      "start": 1.78,
+      "end": 2.0
+    },
+    {
+      "word": "action.",
+      "start": 2.0,
+      "end": 2.44
+    },
+    {
+      "word": "Use",
+      "start": 2.92,
+      "end": 3.02
+    },
+    {
+      "word": "a",
+      "start": 3.02,
+      "end": 3.14
+    },
+    {
+      "word": "real",
+      "start": 3.14,
+      "end": 3.34
+    },
+    {
+      "word": "heading",
+      "start": 3.34,
+      "end": 3.6
+    },
+    {
+      "word": "style",
+      "start": 3.6,
+      "end": 4.04
+    },
+    {
+      "word": "for",
+      "start": 4.04,
+      "end": 4.32
+    },
+    {
+      "word": "the",
+      "start": 4.32,
+      "end": 4.42
+    },
+    {
+      "word": "title",
+      "start": 4.42,
+      "end": 4.7
+    },
+    {
+      "word": "and",
+      "start": 4.7,
+      "end": 4.9
+    },
+    {
+      "word": "section",
+      "start": 4.9,
+      "end": 5.24
+    },
+    {
+      "word": "headings,",
+      "start": 5.24,
+      "end": 5.86
+    },
+    {
+      "word": "followed",
+      "start": 6.0,
+      "end": 6.32
+    },
+    {
+      "word": "by",
+      "start": 6.32,
+      "end": 6.54
+    },
+    {
+      "word": "short",
+      "start": 6.54,
+      "end": 6.8
+    },
+    {
+      "word": "paragraphs",
+      "start": 6.8,
+      "end": 7.28
+    },
+    {
+      "word": "or",
+      "start": 7.28,
+      "end": 7.66
+    },
+    {
+      "word": "a",
+      "start": 7.66,
+      "end": 7.74
+    },
+    {
+      "word": "numbered",
+      "start": 7.74,
+      "end": 7.98
+    },
+    {
+      "word": "list",
+      "start": 7.98,
+      "end": 8.34
+    },
+    {
+      "word": "when",
+      "start": 8.34,
+      "end": 8.64
+    },
+    {
+      "word": "order",
+      "start": 8.64,
+      "end": 8.9
+    },
+    {
+      "word": "matters.",
+      "start": 8.9,
+      "end": 9.44
+    },
+    {
+      "word": "Selecting",
+      "start": 10.34,
+      "end": 10.9
+    },
+    {
+      "word": "bold",
+      "start": 10.9,
+      "end": 11.1
+    },
+    {
+      "word": "text",
+      "start": 11.1,
+      "end": 11.48
+    },
+    {
+      "word": "changes",
+      "start": 11.48,
+      "end": 12.04
+    },
+    {
+      "word": "appearance,",
+      "start": 12.04,
+      "end": 12.32
+    },
+    {
+      "word": "but",
+      "start": 12.32,
+      "end": 12.9
+    },
+    {
+      "word": "does",
+      "start": 12.9,
+      "end": 13.06
+    },
+    {
+      "word": "not",
+      "start": 13.06,
+      "end": 13.28
+    },
+    {
+      "word": "necessarily",
+      "start": 13.28,
+      "end": 13.76
+    },
+    {
+      "word": "identify",
+      "start": 13.76,
+      "end": 14.6
+    },
+    {
+      "word": "a",
+      "start": 14.6,
+      "end": 14.82
+    },
+    {
+      "word": "heading",
+      "start": 14.82,
+      "end": 15.06
+    },
+    {
+      "word": "to",
+      "start": 15.06,
+      "end": 15.4
+    },
+    {
+      "word": "assistive",
+      "start": 15.4,
+      "end": 15.88
+    },
+    {
+      "word": "technology",
+      "start": 15.88,
+      "end": 16.26
+    },
+    {
+      "word": "or",
+      "start": 16.26,
+      "end": 16.9
+    },
+    {
+      "word": "a",
+      "start": 16.9,
+      "end": 16.94
+    },
+    {
+      "word": "navigation",
+      "start": 16.94,
+      "end": 17.3
+    },
+    {
+      "word": "pane.",
+      "start": 17.3,
+      "end": 17.82
+    },
+    {
+      "word": "A",
+      "start": 18.58,
+      "end": 18.6
+    },
+    {
+      "word": "numbered",
+      "start": 18.6,
+      "end": 18.8
+    },
+    {
+      "word": "sequence",
+      "start": 18.8,
+      "end": 19.26
+    },
+    {
+      "word": "might",
+      "start": 19.26,
+      "end": 19.7
+    },
+    {
+      "word": "say",
+      "start": 19.7,
+      "end": 20.02
+    },
+    {
+      "word": "choose",
+      "start": 20.28,
+      "end": 20.64
+    },
+    {
+      "word": "a",
+      "start": 20.64,
+      "end": 20.84
+    },
+    {
+      "word": "task,",
+      "start": 20.84,
+      "end": 21.12
+    },
+    {
+      "word": "visit",
+      "start": 21.92,
+      "end": 21.92
+    },
+    {
+      "word": "the",
+      "start": 21.92,
+      "end": 22.12
+    },
+    {
+      "word": "learning",
+      "start": 22.12,
+      "end": 22.36
+    },
+    {
+      "word": "desk,",
+      "start": 22.36,
+      "end": 22.72
+    },
+    {
+      "word": "and",
+      "start": 23.22,
+      "end": 23.42
+    },
+    {
+      "word": "ask",
+      "start": 23.42,
+      "end": 24.0
+    },
+    {
+      "word": "how",
+      "start": 24.0,
+      "end": 24.22
+    },
+    {
+      "word": "to",
+      "start": 24.22,
+      "end": 24.32
+    },
+    {
+      "word": "repeat",
+      "start": 24.32,
+      "end": 24.58
+    },
+    {
+      "word": "the",
+      "start": 24.58,
+      "end": 24.78
+    },
+    {
+      "word": "skill",
+      "start": 24.78,
+      "end": 24.98
+    },
+    {
+      "word": "at",
+      "start": 24.98,
+      "end": 25.18
+    },
+    {
+      "word": "home.",
+      "start": 25.18,
+      "end": 25.4
+    },
+    {
+      "word": "Use",
+      "start": 26.04,
+      "end": 26.14
+    },
+    {
+      "word": "link",
+      "start": 26.14,
+      "end": 26.34
+    },
+    {
+      "word": "text",
+      "start": 26.34,
+      "end": 26.7
+    },
+    {
+      "word": "that",
+      "start": 26.7,
+      "end": 27.0
+    },
+    {
+      "word": "names",
+      "start": 27.0,
+      "end": 27.22
+    },
+    {
+      "word": "the",
+      "start": 27.22,
+      "end": 27.56
+    },
+    {
+      "word": "destination",
+      "start": 27.56,
+      "end": 27.94
+    },
+    {
+      "word": "instead",
+      "start": 27.94,
+      "end": 28.56
+    },
+    {
+      "word": "of",
+      "start": 28.56,
+      "end": 28.9
+    },
+    {
+      "word": "click",
+      "start": 28.9,
+      "end": 29.38
+    },
+    {
+      "word": "here.",
+      "start": 29.38,
+      "end": 29.82
+    },
+    {
+      "word": "Read",
+      "start": 30.18,
+      "end": 30.4
+    },
+    {
+      "word": "the",
+      "start": 30.4,
+      "end": 30.54
+    },
+    {
+      "word": "document",
+      "start": 30.54,
+      "end": 30.88
+    },
+    {
+      "word": "in",
+      "start": 30.88,
+      "end": 31.22
+    },
+    {
+      "word": "order",
+      "start": 31.22,
+      "end": 31.48
+    },
+    {
+      "word": "without",
+      "start": 31.48,
+      "end": 31.82
+    },
+    {
+      "word": "relying",
+      "start": 31.82,
+      "end": 32.38
+    },
+    {
+      "word": "on",
+      "start": 32.38,
+      "end": 32.7
+    },
+    {
+      "word": "color",
+      "start": 32.7,
+      "end": 33.0
+    },
+    {
+      "word": "or",
+      "start": 33.0,
+      "end": 33.3
+    },
+    {
+      "word": "position",
+      "start": 33.3,
+      "end": 33.68
+    },
+    {
+      "word": "alone.",
+      "start": 33.68,
+      "end": 34.02
+    },
+    {
+      "word": "Does",
+      "start": 34.66,
+      "end": 34.8
+    },
+    {
+      "word": "it",
+      "start": 34.8,
+      "end": 34.94
+    },
+    {
+      "word": "still",
+      "start": 34.94,
+      "end": 35.14
+    },
+    {
+      "word": "make",
+      "start": 35.14,
+      "end": 35.3
+    },
+    {
+      "word": "sense?",
+      "start": 35.3,
+      "end": 35.58
+    },
+    {
+      "word": "That",
+      "start": 36.26,
+      "end": 36.28
+    },
+    {
+      "word": "is",
+      "start": 36.28,
+      "end": 36.44
+    },
+    {
+      "word": "a",
+      "start": 36.44,
+      "end": 36.6
+    },
+    {
+      "word": "useful",
+      "start": 36.6,
+      "end": 36.86
+    },
+    {
+      "word": "first",
+      "start": 36.86,
+      "end": 37.24
+    },
+    {
+      "word": "accessibility",
+      "start": 37.24,
+      "end": 37.48
+    },
+    {
+      "word": "check.",
+      "start": 37.48,
+      "end": 38.34
+    }
+  ]
+}

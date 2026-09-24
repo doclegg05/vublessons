@@ -1,0 +1,543 @@
+1
+00:00:00,450 --> 00:00:03,210
+Imagine a neighbor asks where they can get
+help using
+
+2
+00:00:03,210 --> 00:00:07,370
+a computer. You may already have a
+familiar library, community
+
+3
+00:00:07,370 --> 00:00:12,090
+center, or veterans' organization in mind.
+Use that experience as
+
+4
+00:00:12,090 --> 00:00:16,410
+a starting point, then verify what is
+available now. Our
+
+5
+00:00:16,410 --> 00:00:20,010
+task is to find a suitable public service,
+record enough
+
+6
+00:00:20,010 --> 00:00:23,930
+evidence to revisit it, and organize a
+fictional handout without
+
+7
+00:00:23,930 --> 00:00:28,490
+exposing private information. You can use
+a different local service
+
+8
+00:00:28,490 --> 00:00:31,810
+that matters to you. The names and details
+in this
+
+9
+00:00:31,810 --> 00:00:35,950
+demonstration are examples, not a claim
+about any particular organization.
+
+10
+00:00:37,390 --> 00:00:40,970
+A useful search ends with a supported
+decision, not just
+
+11
+00:00:40,970 --> 00:00:42,170
+a page that looks impressive.
+
+12
+00:00:44,237 --> 00:00:47,177
+Start with the words that describe your
+task, the kind
+
+13
+00:00:47,177 --> 00:00:51,777
+of service, and the location. Computer
+help library plus your
+
+14
+00:00:51,777 --> 00:00:56,057
+town is more useful than typing help by
+itself. Inspect
+
+15
+00:00:56,057 --> 00:00:59,597
+the result title and the website address
+before opening it.
+
+16
+00:00:59,997 --> 00:01:02,677
+If the results are too broad, add a
+specific service
+
+17
+00:01:02,677 --> 00:01:06,277
+or location. If there are no useful
+results, remove one
+
+18
+00:01:06,277 --> 00:01:10,317
+restriction rather than assuming the
+service does not exist. Filters
+
+19
+00:01:10,317 --> 00:01:12,817
+can help, but they can also hide a
+relevant page.
+
+20
+00:01:13,417 --> 00:01:16,577
+Pause and write a search for your chosen
+community task.
+
+21
+00:01:16,577 --> 00:01:19,957
+Explain what each word contributes. Then
+change one term and
+
+22
+00:01:19,957 --> 00:01:22,457
+compare the results instead of opening
+every link.
+
+23
+00:01:24,262 --> 00:01:27,422
+A page can be accurate and still be wrong
+for
+
+24
+00:01:27,422 --> 00:01:31,682
+your decision. An official library page
+from another town may
+
+25
+00:01:31,682 --> 00:01:34,822
+describe a real service, but not the one
+available to
+
+26
+00:01:34,822 --> 00:01:38,762
+your neighbor. Ask who published the
+information, what evidence
+
+27
+00:01:38,762 --> 00:01:42,402
+supports it, when it was updated, why it
+was written,
+
+28
+00:01:42,982 --> 00:01:47,002
+and whether it answers your question. For
+opening hours or
+
+29
+00:01:47,002 --> 00:01:50,802
+eligibility, go to the organization
+responsible for that service
+
+30
+00:01:50,802 --> 00:01:54,962
+and check the details there. Search-result
+snippets may be incomplete.
+
+31
+00:01:55,822 --> 00:01:59,442
+Compare two pages that disagree. Do not
+count votes between
+
+32
+00:01:59,442 --> 00:02:02,922
+websites; identify which source is in a
+position to know,
+
+33
+00:02:02,922 --> 00:02:07,682
+and confirm uncertain details through an
+independently found contact method.
+
+34
+00:02:09,396 --> 00:02:11,916
+Suppose you find a useful service today
+and need it
+
+35
+00:02:11,916 --> 00:02:15,336
+again next month. A note saying good
+website will not
+
+36
+00:02:15,336 --> 00:02:18,816
+be enough. Record the organization, the
+page title, the web
+
+37
+00:02:18,816 --> 00:02:21,816
+address, the date you checked it, and the
+particular fact
+
+38
+00:02:21,816 --> 00:02:25,136
+you plan to use. A bookmark helps you
+return, but
+
+39
+00:02:25,136 --> 00:02:27,396
+it does not freeze the page or prove that
+the
+
+40
+00:02:27,396 --> 00:02:31,096
+information remains current. In your
+handout, distinguish a checked
+
+41
+00:02:31,096 --> 00:02:34,576
+fact from your own interpretation. If the
+page does not
+
+42
+00:02:34,576 --> 00:02:38,796
+answer a question, write needs
+confirmation rather than filling
+
+43
+00:02:38,796 --> 00:02:41,756
+the gap with a guess. This is the digital
+equivalent
+
+44
+00:02:41,756 --> 00:02:45,096
+of writing the source beside a number in a
+household notebook.
+
+45
+00:02:47,007 --> 00:02:51,327
+An online form is a structured request.
+Read its purpose
+
+46
+00:02:51,327 --> 00:02:55,307
+and required fields before typing. In our
+course practice form,
+
+47
+00:02:55,667 --> 00:02:58,667
+choose the kind of computer help needed
+and a fictional
+
+48
+00:02:58,667 --> 00:03:02,907
+contact preference. Review the entries
+before selecting the final
+
+49
+00:03:02,907 --> 00:03:06,947
+button. On a real service, ask whether a
+sensitive detail
+
+50
+00:03:06,947 --> 00:03:10,487
+is necessary for the task, and verify the
+site before
+
+51
+00:03:10,487 --> 00:03:13,707
+entering it. Our practice does not send a
+real request.
+
+52
+00:03:14,527 --> 00:03:18,287
+That distinction matters: seeing a
+confirmation message in a simulator
+
+53
+00:03:18,287 --> 00:03:22,307
+proves that you completed the exercise,
+not that an organization
+
+54
+00:03:22,307 --> 00:03:26,867
+received anything. Pause, complete the
+fictional form, and explain
+
+55
+00:03:26,867 --> 00:03:29,127
+what you deliberately left out and why.
+
+56
+00:03:30,864 --> 00:03:33,764
+Think of a folder as a labeled place to
+put
+
+57
+00:03:33,764 --> 00:03:37,824
+related work. Create a practice folder for
+the community resource
+
+58
+00:03:37,824 --> 00:03:44,444
+task and use a descriptive file name, such
+as library-help-draft.
+
+59
+00:03:44,444 --> 00:03:47,244
+A file saved on this computer may not
+appear on
+
+60
+00:03:47,244 --> 00:03:51,064
+another computer. A cloud file belongs to
+a service and
+
+61
+00:03:51,064 --> 00:03:54,164
+an account, and a synced folder may keep
+copies in
+
+62
+00:03:54,164 --> 00:03:58,124
+more than one place. Before moving to
+another device, check
+
+63
+00:03:58,124 --> 00:04:02,724
+the account and the saving or syncing
+status. Reopen the
+
+64
+00:04:02,724 --> 00:04:06,764
+file from the intended location. That
+simple test catches a
+
+65
+00:04:06,764 --> 00:04:12,084
+common mistake: editing one copy while
+later opening an older copy somewhere
+else.
+
+66
+00:04:13,838 --> 00:04:17,758
+Our partner should suggest clearer wording
+without rewriting the
+
+67
+00:04:17,758 --> 00:04:23,518
+handout directly. Viewer access usually
+allows reading. Commenter
+
+68
+00:04:23,518 --> 00:04:28,578
+access, when supported, allows suggestions
+through comments. Editor
+
+69
+00:04:28,578 --> 00:04:33,398
+access permits changes to the content.
+Choose the smallest role
+
+70
+00:04:33,398 --> 00:04:37,598
+that fits the task, inspect the recipient
+carefully, and have
+
+71
+00:04:37,598 --> 00:04:40,858
+the partner verify that the file opens
+with the expected
+
+72
+00:04:40,858 --> 00:04:44,818
+controls. A link that works for you may
+still fail
+
+73
+00:04:44,818 --> 00:04:50,698
+for someone else. Also distinguish
+read-only from encryption. Read-only
+
+74
+00:04:50,698 --> 00:04:54,758
+limits editing; it does not necessarily
+prevent someone from reading
+
+75
+00:04:54,758 --> 00:04:59,098
+or copying the information. Pause and
+choose a role for
+
+76
+00:04:59,098 --> 00:05:03,138
+someone who only needs to read the
+finished handout. Viewer
+
+77
+00:05:03,138 --> 00:05:04,738
+is the appropriate starting point.
+
+78
+00:05:06,495 --> 00:05:09,455
+Sync is convenient because a change can
+travel between a
+
+79
+00:05:09,455 --> 00:05:13,355
+device and an online service. The same
+convenience can carry
+
+80
+00:05:13,355 --> 00:05:16,975
+a deletion. Watch the practice file
+disappear from one location
+
+81
+00:05:17,575 --> 00:05:20,875
+and then the other. That is why sync alone
+is
+
+82
+00:05:20,875 --> 00:05:24,815
+not a separate backup. A backup provides
+another recovery copy
+
+83
+00:05:24,815 --> 00:05:28,515
+under an appropriate plan. Version history
+may preserve earlier
+
+84
+00:05:28,515 --> 00:05:31,935
+content, while a recycle bin may retain a
+deleted file
+
+85
+00:05:31,935 --> 00:05:36,335
+for a limited time. Availability and
+retention depend on the
+
+86
+00:05:36,335 --> 00:05:40,515
+service. Do not test deletion with your
+only important file.
+
+87
+00:05:41,375 --> 00:05:44,415
+Use the fictional copy and explain which
+protection would help
+
+88
+00:05:44,415 --> 00:05:47,255
+if the mistake spread through every synced
+location.
+
+89
+00:05:49,144 --> 00:05:52,404
+First identify the problem. If the whole
+file is missing
+
+90
+00:05:52,404 --> 00:05:57,004
+after deletion, inspect the appropriate
+trash or recycle bin. If
+
+91
+00:05:57,004 --> 00:06:00,684
+the file exists but its wording changed,
+inspect version history.
+
+92
+00:06:01,424 --> 00:06:04,604
+Preview the earlier version and coordinate
+with collaborators before
+
+93
+00:06:04,604 --> 00:06:08,004
+restoring it. You do not want to replace
+useful work
+
+94
+00:06:08,004 --> 00:06:11,544
+someone just added. Compression is a
+separate tool: a ZIP
+
+95
+00:06:11,544 --> 00:06:15,024
+file can package several files for
+transfer and may reduce
+
+96
+00:06:15,024 --> 00:06:18,764
+their size. It is not automatically
+encryption or a backup
+
+97
+00:06:18,764 --> 00:06:22,464
+plan. After extracting a practice ZIP,
+open a file to
+
+98
+00:06:22,464 --> 00:06:25,744
+confirm the contents are usable. Choose
+the tool that matches
+
+99
+00:06:25,744 --> 00:06:28,684
+the problem rather than trusting a
+familiar icon.
+
+100
+00:06:30,679 --> 00:06:33,919
+Pause and build a small resource folder
+for your chosen
+
+101
+00:06:33,919 --> 00:06:37,679
+community task. Include a source note, a
+fictional handout, and
+
+102
+00:06:37,679 --> 00:06:40,359
+a clear file name. Tell a partner which
+fact you
+
+103
+00:06:40,359 --> 00:06:44,379
+verified, why that source is appropriate,
+and which permission fits
+
+104
+00:06:44,379 --> 00:06:47,919
+the review task. Then explain how you
+would recover a
+
+105
+00:06:47,919 --> 00:06:51,459
+deleted file and how that differs from
+restoring earlier wording.
+
+106
+00:06:52,039 --> 00:06:55,259
+If an account or sharing feature is
+unavailable, demonstrate the
+
+107
+00:06:55,259 --> 00:06:59,199
+decision with the course simulator and
+label it simulated. For
+
+108
+00:06:59,199 --> 00:07:03,399
+your next independent task, reuse this
+sequence: ask a focused
+
+109
+00:07:03,399 --> 00:07:09,219
+question, check the evidence, record a
+trail, organize the file, and verify
+access.

@@ -1,0 +1,23 @@
+{
+  "flowId": "cX8cTertRAQosbF48GYS",
+  "generationId": "pqXhyGmnLB5ZROnqdL0L",
+  "model": "gemini-omni-1.1-flash",
+  "prompt": "A six-second realistic documentary close-up, over the shoulder of an older adult at a modest West Virginia home workstation, calmly moving the mouse and preparing to demonstrate a task on a laptop. Natural window light and everyday equipment; the laptop display is softly out of focus with no legible writing, the camera remains steady, no cuts, no titles, no logos, no speech or music, no exaggerated gestures; landscape 16:9.",
+  "generatedDurationSeconds": 10.01,
+  "usedDurationSeconds": 7,
+  "cost": {
+    "credits": 6086.90410418311,
+    "price_cents": 100.43391771902131,
+    "cost_fiat_currency": "usd"
+  },
+  "generationUrl": "https://elevenlabs.io/app/image-video/history?modality=video&generationId=pqXhyGmnLB5ZROnqdL0L",
+  "workstation-source.mp4": {
+    "sha256": "8d8e75a5f645756d35e9a4f96caa27e57a7bf15e4a14b8a50f1053c917be45e5",
+    "bytes": 1556367
+  },
+  "workstation.mp4": {
+    "sha256": "0427952743600364b27add6c82938c3fa4faf7b2894be9748a3923009ddb3507",
+    "bytes": 435254
+  },
+  "usage": "Seven-second silent opening in week 1. Task screens are original authored interfaces, not AI-generated UI."
+}

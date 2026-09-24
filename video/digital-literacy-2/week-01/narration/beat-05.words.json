@@ -1,0 +1,553 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "658967897395d3c3b0615885fe5170233845294b28bd6f66b5fc4c786c280709",
+  "textSha256": "cce2c77114a6c47d36ffb65538d8d856e06708dbd18666365482023d92043c98",
+  "matchRatio": 1.0,
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.16
+    },
+    {
+      "word": "slow",
+      "start": 0.16,
+      "end": 0.42
+    },
+    {
+      "word": "computer",
+      "start": 0.42,
+      "end": 0.84
+    },
+    {
+      "word": "and",
+      "start": 0.84,
+      "end": 1.34
+    },
+    {
+      "word": "a",
+      "start": 1.34,
+      "end": 1.46
+    },
+    {
+      "word": "full",
+      "start": 1.46,
+      "end": 1.66
+    },
+    {
+      "word": "computer",
+      "start": 1.66,
+      "end": 2.12
+    },
+    {
+      "word": "are",
+      "start": 2.12,
+      "end": 2.46
+    },
+    {
+      "word": "not",
+      "start": 2.46,
+      "end": 2.68
+    },
+    {
+      "word": "exactly",
+      "start": 2.68,
+      "end": 3.16
+    },
+    {
+      "word": "the",
+      "start": 3.16,
+      "end": 3.4
+    },
+    {
+      "word": "same",
+      "start": 3.4,
+      "end": 3.62
+    },
+    {
+      "word": "problem.",
+      "start": 3.62,
+      "end": 3.94
+    },
+    {
+      "word": "The",
+      "start": 5.0,
+      "end": 5.08
+    },
+    {
+      "word": "processor",
+      "start": 5.08,
+      "end": 5.46
+    },
+    {
+      "word": "carries",
+      "start": 5.46,
+      "end": 5.94
+    },
+    {
+      "word": "out",
+      "start": 5.94,
+      "end": 6.16
+    },
+    {
+      "word": "instructions.",
+      "start": 6.16,
+      "end": 6.6
+    },
+    {
+      "word": "Working",
+      "start": 7.46,
+      "end": 7.72
+    },
+    {
+      "word": "memory",
+      "start": 7.72,
+      "end": 8.0
+    },
+    {
+      "word": "holds",
+      "start": 8.0,
+      "end": 8.4
+    },
+    {
+      "word": "information",
+      "start": 8.4,
+      "end": 8.72
+    },
+    {
+      "word": "in",
+      "start": 8.72,
+      "end": 9.14
+    },
+    {
+      "word": "active",
+      "start": 9.14,
+      "end": 9.46
+    },
+    {
+      "word": "use,",
+      "start": 9.46,
+      "end": 9.84
+    },
+    {
+      "word": "while",
+      "start": 10.32,
+      "end": 10.54
+    },
+    {
+      "word": "storage",
+      "start": 10.54,
+      "end": 10.78
+    },
+    {
+      "word": "keeps",
+      "start": 10.78,
+      "end": 11.32
+    },
+    {
+      "word": "saved",
+      "start": 11.32,
+      "end": 11.68
+    },
+    {
+      "word": "files.",
+      "start": 11.68,
+      "end": 12.0
+    },
+    {
+      "word": "Think",
+      "start": 13.16,
+      "end": 13.34
+    },
+    {
+      "word": "of",
+      "start": 13.34,
+      "end": 13.48
+    },
+    {
+      "word": "a",
+      "start": 13.48,
+      "end": 13.58
+    },
+    {
+      "word": "workbench",
+      "start": 13.58,
+      "end": 14.02
+    },
+    {
+      "word": "and",
+      "start": 14.02,
+      "end": 14.24
+    },
+    {
+      "word": "a",
+      "start": 14.24,
+      "end": 14.34
+    },
+    {
+      "word": "filing",
+      "start": 14.34,
+      "end": 14.56
+    },
+    {
+      "word": "cabinet:",
+      "start": 14.56,
+      "end": 14.92
+    },
+    {
+      "word": "a",
+      "start": 15.56,
+      "end": 15.62
+    },
+    {
+      "word": "crowded",
+      "start": 15.62,
+      "end": 15.86
+    },
+    {
+      "word": "workbench",
+      "start": 15.86,
+      "end": 16.48
+    },
+    {
+      "word": "and",
+      "start": 16.48,
+      "end": 16.7
+    },
+    {
+      "word": "a",
+      "start": 16.7,
+      "end": 16.8
+    },
+    {
+      "word": "full",
+      "start": 16.8,
+      "end": 16.96
+    },
+    {
+      "word": "cabinet",
+      "start": 16.96,
+      "end": 17.28
+    },
+    {
+      "word": "require",
+      "start": 17.28,
+      "end": 17.7
+    },
+    {
+      "word": "different",
+      "start": 17.7,
+      "end": 18.1
+    },
+    {
+      "word": "responses.",
+      "start": 18.1,
+      "end": 18.86
+    },
+    {
+      "word": "Closing",
+      "start": 20.18,
+      "end": 20.18
+    },
+    {
+      "word": "an",
+      "start": 20.18,
+      "end": 20.32
+    },
+    {
+      "word": "unused",
+      "start": 20.32,
+      "end": 20.62
+    },
+    {
+      "word": "app",
+      "start": 20.62,
+      "end": 20.96
+    },
+    {
+      "word": "may",
+      "start": 20.96,
+      "end": 21.22
+    },
+    {
+      "word": "reduce",
+      "start": 21.22,
+      "end": 21.6
+    },
+    {
+      "word": "active",
+      "start": 21.6,
+      "end": 21.98
+    },
+    {
+      "word": "workload;",
+      "start": 21.98,
+      "end": 22.3
+    },
+    {
+      "word": "it",
+      "start": 23.04,
+      "end": 23.14
+    },
+    {
+      "word": "does",
+      "start": 23.14,
+      "end": 23.26
+    },
+    {
+      "word": "not",
+      "start": 23.26,
+      "end": 23.52
+    },
+    {
+      "word": "create",
+      "start": 23.52,
+      "end": 23.9
+    },
+    {
+      "word": "a",
+      "start": 23.9,
+      "end": 24.02
+    },
+    {
+      "word": "reliable",
+      "start": 24.02,
+      "end": 24.42
+    },
+    {
+      "word": "backup",
+      "start": 24.42,
+      "end": 24.74
+    },
+    {
+      "word": "of",
+      "start": 24.74,
+      "end": 25.04
+    },
+    {
+      "word": "your",
+      "start": 25.04,
+      "end": 25.14
+    },
+    {
+      "word": "files.",
+      "start": 25.14,
+      "end": 25.42
+    },
+    {
+      "word": "For",
+      "start": 26.74,
+      "end": 26.94
+    },
+    {
+      "word": "connections,",
+      "start": 26.94,
+      "end": 27.22
+    },
+    {
+      "word": "identify",
+      "start": 27.72,
+      "end": 27.92
+    },
+    {
+      "word": "the",
+      "start": 27.92,
+      "end": 28.34
+    },
+    {
+      "word": "job",
+      "start": 28.34,
+      "end": 28.56
+    },
+    {
+      "word": "before",
+      "start": 28.56,
+      "end": 28.88
+    },
+    {
+      "word": "choosing",
+      "start": 28.88,
+      "end": 29.38
+    },
+    {
+      "word": "the",
+      "start": 29.38,
+      "end": 29.52
+    },
+    {
+      "word": "cable.",
+      "start": 29.52,
+      "end": 29.78
+    },
+    {
+      "word": "A",
+      "start": 30.68,
+      "end": 30.7
+    },
+    {
+      "word": "display",
+      "start": 30.7,
+      "end": 31.0
+    },
+    {
+      "word": "connection",
+      "start": 31.0,
+      "end": 31.3
+    },
+    {
+      "word": "carries",
+      "start": 31.3,
+      "end": 31.88
+    },
+    {
+      "word": "a",
+      "start": 31.88,
+      "end": 32.02
+    },
+    {
+      "word": "picture,",
+      "start": 32.02,
+      "end": 32.3
+    },
+    {
+      "word": "a",
+      "start": 33.04,
+      "end": 33.04
+    },
+    {
+      "word": "network",
+      "start": 33.04,
+      "end": 33.3
+    },
+    {
+      "word": "connection",
+      "start": 33.3,
+      "end": 33.66
+    },
+    {
+      "word": "carries",
+      "start": 33.66,
+      "end": 34.28
+    },
+    {
+      "word": "data,",
+      "start": 34.28,
+      "end": 34.52
+    },
+    {
+      "word": "and",
+      "start": 35.28,
+      "end": 35.34
+    },
+    {
+      "word": "a",
+      "start": 35.34,
+      "end": 35.44
+    },
+    {
+      "word": "USB",
+      "start": 35.44,
+      "end": 35.72
+    },
+    {
+      "word": "connection",
+      "start": 35.72,
+      "end": 36.2
+    },
+    {
+      "word": "may",
+      "start": 36.2,
+      "end": 36.7
+    },
+    {
+      "word": "carry",
+      "start": 36.7,
+      "end": 37.0
+    },
+    {
+      "word": "data",
+      "start": 37.0,
+      "end": 37.34
+    },
+    {
+      "word": "or",
+      "start": 37.34,
+      "end": 37.64
+    },
+    {
+      "word": "power",
+      "start": 37.64,
+      "end": 37.9
+    },
+    {
+      "word": "depending",
+      "start": 37.9,
+      "end": 38.24
+    },
+    {
+      "word": "on",
+      "start": 38.24,
+      "end": 38.66
+    },
+    {
+      "word": "the",
+      "start": 38.66,
+      "end": 38.76
+    },
+    {
+      "word": "equipment.",
+      "start": 38.76,
+      "end": 39.08
+    },
+    {
+      "word": "Match",
+      "start": 40.32,
+      "end": 40.32
+    },
+    {
+      "word": "the",
+      "start": 40.32,
+      "end": 40.54
+    },
+    {
+      "word": "labels",
+      "start": 40.54,
+      "end": 40.82
+    },
+    {
+      "word": "and",
+      "start": 40.82,
+      "end": 41.16
+    },
+    {
+      "word": "ask",
+      "start": 41.16,
+      "end": 41.5
+    },
+    {
+      "word": "before",
+      "start": 41.5,
+      "end": 41.82
+    },
+    {
+      "word": "forcing",
+      "start": 41.82,
+      "end": 42.46
+    },
+    {
+      "word": "an",
+      "start": 42.46,
+      "end": 42.62
+    },
+    {
+      "word": "unfamiliar",
+      "start": 42.62,
+      "end": 42.96
+    },
+    {
+      "word": "connector.",
+      "start": 42.96,
+      "end": 43.52
+    }
+  ]
+}

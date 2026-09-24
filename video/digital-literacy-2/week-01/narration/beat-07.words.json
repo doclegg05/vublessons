@@ -1,0 +1,538 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "e0a71bca854fa13e4e437783b53f5645a3363419f0a0eea616a1e9ca9cb3a5b2",
+  "textSha256": "2074cd2a85c39bff2b08541478b3ff004245d6d096fcf27fd914a50d13808ab3",
+  "matchRatio": 0.9811320754716981,
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.22
+    },
+    {
+      "word": "paper",
+      "start": 0.22,
+      "end": 0.44
+    },
+    {
+      "word": "calendar",
+      "start": 0.44,
+      "end": 0.88
+    },
+    {
+      "word": "works",
+      "start": 0.88,
+      "end": 1.3
+    },
+    {
+      "word": "because",
+      "start": 1.3,
+      "end": 1.7
+    },
+    {
+      "word": "a",
+      "start": 1.7,
+      "end": 1.98
+    },
+    {
+      "word": "short",
+      "start": 1.98,
+      "end": 2.26
+    },
+    {
+      "word": "note",
+      "start": 2.26,
+      "end": 2.56
+    },
+    {
+      "word": "connects",
+      "start": 2.56,
+      "end": 3.04
+    },
+    {
+      "word": "a",
+      "start": 3.04,
+      "end": 3.26
+    },
+    {
+      "word": "time",
+      "start": 3.26,
+      "end": 3.6
+    },
+    {
+      "word": "to",
+      "start": 3.6,
+      "end": 4.12
+    },
+    {
+      "word": "an",
+      "start": 4.12,
+      "end": 4.26
+    },
+    {
+      "word": "action.",
+      "start": 4.26,
+      "end": 4.52
+    },
+    {
+      "word": "A",
+      "start": 5.28,
+      "end": 5.36
+    },
+    {
+      "word": "digital",
+      "start": 5.36,
+      "end": 5.66
+    },
+    {
+      "word": "entry",
+      "start": 5.66,
+      "end": 6.0
+    },
+    {
+      "word": "needs",
+      "start": 6.0,
+      "end": 6.36
+    },
+    {
+      "word": "the",
+      "start": 6.36,
+      "end": 6.66
+    },
+    {
+      "word": "same",
+      "start": 6.66,
+      "end": 6.92
+    },
+    {
+      "word": "meaning.",
+      "start": 6.92,
+      "end": 7.18
+    },
+    {
+      "word": "In",
+      "start": 8.04,
+      "end": 8.12
+    },
+    {
+      "word": "our",
+      "start": 8.12,
+      "end": 8.22
+    },
+    {
+      "word": "fictional",
+      "start": 8.22,
+      "end": 8.46
+    },
+    {
+      "word": "example,",
+      "start": 8.46,
+      "end": 9.1
+    },
+    {
+      "word": "create",
+      "start": 9.5,
+      "end": 9.88
+    },
+    {
+      "word": "Library",
+      "start": 9.88,
+      "end": 10.2
+    },
+    {
+      "word": "practice",
+      "start": 10.2,
+      "end": 10.82
+    },
+    {
+      "word": "from",
+      "start": 10.82,
+      "end": 11.16
+    },
+    {
+      "word": "two",
+      "start": 11.16,
+      "end": 11.46
+    },
+    {
+      "word": "to",
+      "start": 11.46,
+      "end": 11.58
+    },
+    {
+      "word": "three",
+      "start": 11.58,
+      "end": 11.84
+    },
+    {
+      "word": "in",
+      "start": 11.84,
+      "end": 11.96
+    },
+    {
+      "word": "the",
+      "start": 11.96,
+      "end": 12.04
+    },
+    {
+      "word": "afternoon,",
+      "start": 12.04,
+      "end": 12.44
+    },
+    {
+      "word": "with",
+      "start": 13.0,
+      "end": 13.16
+    },
+    {
+      "word": "Room",
+      "start": 13.16,
+      "end": 13.34
+    },
+    {
+      "word": "A",
+      "start": 13.34,
+      "end": 13.66
+    },
+    {
+      "word": "as",
+      "start": 13.66,
+      "end": 13.88
+    },
+    {
+      "word": "the",
+      "start": 13.88,
+      "end": 14.02
+    },
+    {
+      "word": "location.",
+      "start": 14.02,
+      "end": 14.34
+    },
+    {
+      "word": "Check",
+      "start": 15.26,
+      "end": 15.48
+    },
+    {
+      "word": "the",
+      "start": 15.48,
+      "end": 15.66
+    },
+    {
+      "word": "correct",
+      "start": 15.66,
+      "end": 15.96
+    },
+    {
+      "word": "day,",
+      "start": 15.96,
+      "end": 16.28
+    },
+    {
+      "word": "start",
+      "start": 16.86,
+      "end": 17.04
+    },
+    {
+      "word": "time,",
+      "start": 17.04,
+      "end": 17.34
+    },
+    {
+      "word": "end",
+      "start": 17.96,
+      "end": 18.04
+    },
+    {
+      "word": "time,",
+      "start": 18.04,
+      "end": 18.38
+    },
+    {
+      "word": "and",
+      "start": 18.76,
+      "end": 18.88
+    },
+    {
+      "word": "time",
+      "start": 18.88,
+      "end": 19.16
+    },
+    {
+      "word": "zone",
+      "start": 19.16,
+      "end": 19.42
+    },
+    {
+      "word": "when",
+      "start": 19.42,
+      "end": 19.68
+    },
+    {
+      "word": "one",
+      "start": 19.68,
+      "end": 19.86
+    },
+    {
+      "word": "is",
+      "start": 19.86,
+      "end": 19.98
+    },
+    {
+      "word": "shown.",
+      "start": 19.98,
+      "end": 20.24
+    },
+    {
+      "word": "Add",
+      "start": 21.1,
+      "end": 21.3
+    },
+    {
+      "word": "a",
+      "start": 21.3,
+      "end": 21.38
+    },
+    {
+      "word": "reminder",
+      "start": 21.38,
+      "end": 21.64
+    },
+    {
+      "word": "early",
+      "start": 21.64,
+      "end": 22.16
+    },
+    {
+      "word": "enough",
+      "start": 22.16,
+      "end": 22.42
+    },
+    {
+      "word": "to",
+      "start": 22.42,
+      "end": 22.64
+    },
+    {
+      "word": "help",
+      "start": 22.64,
+      "end": 22.82
+    },
+    {
+      "word": "you",
+      "start": 22.82,
+      "end": 22.98
+    },
+    {
+      "word": "prepare.",
+      "start": 22.98,
+      "end": 23.24
+    },
+    {
+      "word": "Day",
+      "start": 24.26,
+      "end": 24.42
+    },
+    {
+      "word": "view",
+      "start": 24.42,
+      "end": 24.62
+    },
+    {
+      "word": "helps",
+      "start": 24.62,
+      "end": 24.96
+    },
+    {
+      "word": "inspect",
+      "start": 24.96,
+      "end": 25.38
+    },
+    {
+      "word": "the",
+      "start": 25.38,
+      "end": 25.64
+    },
+    {
+      "word": "details;",
+      "start": 25.64,
+      "end": 25.96
+    },
+    {
+      "word": "week",
+      "start": 26.74,
+      "end": 26.76
+    },
+    {
+      "word": "view",
+      "start": 26.76,
+      "end": 27.04
+    },
+    {
+      "word": "helps",
+      "start": 27.04,
+      "end": 27.38
+    },
+    {
+      "word": "notice",
+      "start": 27.38,
+      "end": 27.66
+    },
+    {
+      "word": "conflicts;",
+      "start": 27.66,
+      "end": 28.0
+    },
+    {
+      "word": "month",
+      "start": 28.82,
+      "end": 28.96
+    },
+    {
+      "word": "view",
+      "start": 28.96,
+      "end": 29.26
+    },
+    {
+      "word": "gives",
+      "start": 29.26,
+      "end": 29.52
+    },
+    {
+      "word": "a",
+      "start": 29.52,
+      "end": 29.68
+    },
+    {
+      "word": "wider",
+      "start": 29.68,
+      "end": 29.9
+    },
+    {
+      "word": "overview.",
+      "start": 29.9,
+      "end": 30.56
+    },
+    {
+      "word": "Change",
+      "start": 31.3,
+      "end": 31.7
+    },
+    {
+      "word": "the",
+      "start": 31.7,
+      "end": 32.0
+    },
+    {
+      "word": "view",
+      "start": 32.0,
+      "end": 32.16
+    },
+    {
+      "word": "and",
+      "start": 32.16,
+      "end": 32.4
+    },
+    {
+      "word": "find",
+      "start": 32.4,
+      "end": 32.6
+    },
+    {
+      "word": "the",
+      "start": 32.6,
+      "end": 32.78
+    },
+    {
+      "word": "same",
+      "start": 32.78,
+      "end": 32.98
+    },
+    {
+      "word": "appointment",
+      "start": 32.98,
+      "end": 33.38
+    },
+    {
+      "word": "again.",
+      "start": 33.38,
+      "end": 33.74
+    },
+    {
+      "word": "Saving",
+      "start": 34.48,
+      "end": 34.74
+    },
+    {
+      "word": "an",
+      "start": 34.74,
+      "end": 34.96
+    },
+    {
+      "word": "entry",
+      "start": 34.96,
+      "end": 35.16
+    },
+    {
+      "word": "is",
+      "start": 35.16,
+      "end": 35.4
+    },
+    {
+      "word": "only",
+      "start": 35.4,
+      "end": 35.58
+    },
+    {
+      "word": "the",
+      "start": 35.58,
+      "end": 35.76
+    },
+    {
+      "word": "first",
+      "start": 35.76,
+      "end": 36.02
+    },
+    {
+      "word": "step.",
+      "start": 36.02,
+      "end": 36.36
+    },
+    {
+      "word": "Reopening",
+      "start": 37.04,
+      "end": 37.46
+    },
+    {
+      "word": "it",
+      "start": 37.46,
+      "end": 37.72
+    },
+    {
+      "word": "confirms",
+      "start": 37.72,
+      "end": 38.12
+    },
+    {
+      "word": "that",
+      "start": 38.12,
+      "end": 38.5
+    },
+    {
+      "word": "the",
+      "start": 38.5,
+      "end": 38.62
+    },
+    {
+      "word": "details",
+      "start": 38.62,
+      "end": 38.9
+    },
+    {
+      "word": "survived.",
+      "start": 38.9,
+      "end": 39.42
+    }
+  ]
+}

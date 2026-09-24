@@ -1,0 +1,138 @@
+[
+  {
+    "chapter": 2,
+    "title": "Make a webpage readable",
+    "startSeconds": 38.656,
+    "durationSeconds": 46.248,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 660,
+        "y": 308,
+        "label": "Start at 100% \u2022 change only the webpage"
+      },
+      {
+        "at": 12.45,
+        "phrase": "Open the browser menu",
+        "state": 1,
+        "x": 1155,
+        "y": 87,
+        "label": "Open the browser menu"
+      },
+      {
+        "at": 14.09,
+        "phrase": "find Zoom",
+        "state": 2,
+        "x": 1120,
+        "y": 248,
+        "label": "Find Zoom \u2022 choose one step"
+      },
+      {
+        "at": 15.35,
+        "phrase": "increase it one step",
+        "state": 3,
+        "x": 1120,
+        "y": 248,
+        "label": "125% \u2022 the page is larger"
+      },
+      {
+        "at": 28.33,
+        "phrase": "Then check the important part",
+        "state": 4,
+        "x": 166,
+        "y": 395,
+        "label": "Check the search field and button"
+      },
+      {
+        "at": 43.65,
+        "phrase": "restore it before continuing",
+        "state": 5,
+        "x": 1020,
+        "y": 439,
+        "label": "Ctrl + 0 \u2022 restore the original zoom"
+      }
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Make a calendar entry you can act on",
+    "startSeconds": 256.641,
+    "durationSeconds": 41.372,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 140,
+        "y": 154,
+        "label": "Create a fictional appointment"
+      },
+      {
+        "at": 9.95,
+        "phrase": "create Library practice",
+        "state": 1,
+        "x": 137,
+        "y": 154,
+        "label": "New event \u2022 enter a useful title"
+      },
+      {
+        "at": 11.27,
+        "phrase": "from two to three",
+        "state": 2,
+        "x": 550,
+        "y": 284,
+        "label": "Library practice \u2022 2:00\u20133:00 PM"
+      },
+      {
+        "at": 13.61,
+        "phrase": "Room A as the location",
+        "state": 3,
+        "x": 393,
+        "y": 373,
+        "label": "Add Room A \u2022 check day and time zone"
+      },
+      {
+        "at": 21.55,
+        "phrase": "Add a reminder",
+        "state": 4,
+        "x": 776,
+        "y": 373,
+        "label": "Reminder: 30 minutes before"
+      },
+      {
+        "at": 24.71,
+        "phrase": "Day view",
+        "state": 8,
+        "x": 850,
+        "y": 442,
+        "label": "Save \u2022 check the event in Day view"
+      },
+      {
+        "at": 27.19,
+        "phrase": "week view",
+        "state": 5,
+        "x": 960,
+        "y": 153,
+        "label": "Save \u2022 find the same event in Week view"
+      },
+      {
+        "at": 29.27,
+        "phrase": "month view",
+        "state": 6,
+        "x": 1096,
+        "y": 153,
+        "label": "Change the view \u2022 keep the same event"
+      },
+      {
+        "at": 37.49,
+        "phrase": "Reopening it confirms",
+        "state": 7,
+        "x": 269,
+        "y": 346,
+        "label": "Reopen \u2022 verify the saved details"
+      }
+    ]
+  }
+]

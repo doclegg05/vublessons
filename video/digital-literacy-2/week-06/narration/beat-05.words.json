@@ -1,0 +1,568 @@
+{
+  "source": "faster-whisper base.en on final narration wav",
+  "wavSha256": "ea704976fe2cfd57dae1859af5e6d85184ae94e92e960c50a46a4c8e7c36bff1",
+  "textSha256": "48e42c10d2f9428abdce91ac81173a01d0131fe15cf9914c32feba87528cee78",
+  "matchRatio": 0.9910714285714286,
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "useful",
+      "start": 0.12,
+      "end": 0.38
+    },
+    {
+      "word": "prompt",
+      "start": 0.38,
+      "end": 0.8
+    },
+    {
+      "word": "describes",
+      "start": 0.8,
+      "end": 1.28
+    },
+    {
+      "word": "the",
+      "start": 1.28,
+      "end": 1.68
+    },
+    {
+      "word": "user,",
+      "start": 1.68,
+      "end": 1.98
+    },
+    {
+      "word": "the",
+      "start": 2.38,
+      "end": 2.4
+    },
+    {
+      "word": "task,",
+      "start": 2.4,
+      "end": 2.68
+    },
+    {
+      "word": "the",
+      "start": 3.18,
+      "end": 3.2
+    },
+    {
+      "word": "controls,",
+      "start": 3.2,
+      "end": 3.56
+    },
+    {
+      "word": "the",
+      "start": 4.12,
+      "end": 4.26
+    },
+    {
+      "word": "data",
+      "start": 4.26,
+      "end": 4.44
+    },
+    {
+      "word": "boundaries,",
+      "start": 4.44,
+      "end": 4.8
+    },
+    {
+      "word": "and",
+      "start": 5.34,
+      "end": 5.54
+    },
+    {
+      "word": "the",
+      "start": 5.54,
+      "end": 5.7
+    },
+    {
+      "word": "checks.",
+      "start": 5.7,
+      "end": 5.9
+    },
+    {
+      "word": "For",
+      "start": 6.62,
+      "end": 6.72
+    },
+    {
+      "word": "example:",
+      "start": 6.72,
+      "end": 7.02
+    },
+    {
+      "word": "build",
+      "start": 7.42,
+      "end": 7.68
+    },
+    {
+      "word": "one",
+      "start": 7.68,
+      "end": 7.94
+    },
+    {
+      "word": "local",
+      "start": 7.94,
+      "end": 8.32
+    },
+    {
+      "word": "HTML",
+      "start": 8.32,
+      "end": 8.8
+    },
+    {
+      "word": "page",
+      "start": 8.8,
+      "end": 9.3
+    },
+    {
+      "word": "that",
+      "start": 9.3,
+      "end": 9.68
+    },
+    {
+      "word": "searches",
+      "start": 9.68,
+      "end": 9.94
+    },
+    {
+      "word": "fictional",
+      "start": 9.94,
+      "end": 10.4
+    },
+    {
+      "word": "community",
+      "start": 10.4,
+      "end": 11.0
+    },
+    {
+      "word": "resources",
+      "start": 11.0,
+      "end": 11.62
+    },
+    {
+      "word": "by",
+      "start": 11.62,
+      "end": 12.1
+    },
+    {
+      "word": "name",
+      "start": 12.1,
+      "end": 12.36
+    },
+    {
+      "word": "and",
+      "start": 12.36,
+      "end": 12.58
+    },
+    {
+      "word": "category.",
+      "start": 12.58,
+      "end": 13.0
+    },
+    {
+      "word": "Include",
+      "start": 13.62,
+      "end": 13.88
+    },
+    {
+      "word": "labeled",
+      "start": 13.88,
+      "end": 14.3
+    },
+    {
+      "word": "fields,",
+      "start": 14.3,
+      "end": 14.68
+    },
+    {
+      "word": "visible",
+      "start": 15.28,
+      "end": 15.5
+    },
+    {
+      "word": "keyboard",
+      "start": 15.5,
+      "end": 15.86
+    },
+    {
+      "word": "focus,",
+      "start": 15.86,
+      "end": 16.52
+    },
+    {
+      "word": "a",
+      "start": 17.02,
+      "end": 17.06
+    },
+    {
+      "word": "no-results",
+      "start": 17.06,
+      "end": 17.54
+    },
+    {
+      "word": "message,",
+      "start": 17.54,
+      "end": 18.1
+    },
+    {
+      "word": "and",
+      "start": 18.58,
+      "end": 18.62
+    },
+    {
+      "word": "no",
+      "start": 18.62,
+      "end": 18.86
+    },
+    {
+      "word": "external",
+      "start": 18.86,
+      "end": 19.22
+    },
+    {
+      "word": "dependencies.",
+      "start": 19.22,
+      "end": 19.72
+    },
+    {
+      "word": "Keep",
+      "start": 20.56,
+      "end": 20.66
+    },
+    {
+      "word": "all",
+      "start": 20.66,
+      "end": 20.9
+    },
+    {
+      "word": "example",
+      "start": 20.9,
+      "end": 21.32
+    },
+    {
+      "word": "records",
+      "start": 21.32,
+      "end": 21.66
+    },
+    {
+      "word": "fictional",
+      "start": 21.66,
+      "end": 22.28
+    },
+    {
+      "word": "and",
+      "start": 22.28,
+      "end": 22.72
+    },
+    {
+      "word": "explain",
+      "start": 22.72,
+      "end": 23.0
+    },
+    {
+      "word": "how",
+      "start": 23.0,
+      "end": 23.3
+    },
+    {
+      "word": "to",
+      "start": 23.3,
+      "end": 23.4
+    },
+    {
+      "word": "run",
+      "start": 23.4,
+      "end": 23.54
+    },
+    {
+      "word": "the",
+      "start": 23.54,
+      "end": 23.68
+    },
+    {
+      "word": "file.",
+      "start": 23.68,
+      "end": 23.9
+    },
+    {
+      "word": "Ask",
+      "start": 24.32,
+      "end": 24.52
+    },
+    {
+      "word": "the",
+      "start": 24.52,
+      "end": 24.68
+    },
+    {
+      "word": "AI",
+      "start": 24.68,
+      "end": 24.88
+    },
+    {
+      "word": "to",
+      "start": 24.88,
+      "end": 25.24
+    },
+    {
+      "word": "describe",
+      "start": 25.24,
+      "end": 25.52
+    },
+    {
+      "word": "the",
+      "start": 25.52,
+      "end": 25.82
+    },
+    {
+      "word": "important",
+      "start": 25.82,
+      "end": 26.14
+    },
+    {
+      "word": "parts",
+      "start": 26.14,
+      "end": 26.44
+    },
+    {
+      "word": "so",
+      "start": 26.44,
+      "end": 26.92
+    },
+    {
+      "word": "you",
+      "start": 26.92,
+      "end": 27.04
+    },
+    {
+      "word": "can",
+      "start": 27.04,
+      "end": 27.2
+    },
+    {
+      "word": "inspect",
+      "start": 27.2,
+      "end": 27.48
+    },
+    {
+      "word": "its",
+      "start": 27.48,
+      "end": 27.76
+    },
+    {
+      "word": "work.",
+      "start": 28.04,
+      "end": 28.2
+    },
+    {
+      "word": "Do",
+      "start": 28.46,
+      "end": 28.6
+    },
+    {
+      "word": "not",
+      "start": 28.6,
+      "end": 28.9
+    },
+    {
+      "word": "put",
+      "start": 28.9,
+      "end": 29.14
+    },
+    {
+      "word": "passwords",
+      "start": 29.14,
+      "end": 29.66
+    },
+    {
+      "word": "or",
+      "start": 29.66,
+      "end": 30.1
+    },
+    {
+      "word": "private",
+      "start": 30.1,
+      "end": 30.42
+    },
+    {
+      "word": "API",
+      "start": 30.42,
+      "end": 30.8
+    },
+    {
+      "word": "keys",
+      "start": 30.8,
+      "end": 31.24
+    },
+    {
+      "word": "into",
+      "start": 31.24,
+      "end": 31.6
+    },
+    {
+      "word": "the",
+      "start": 31.6,
+      "end": 31.76
+    },
+    {
+      "word": "prompt",
+      "start": 31.76,
+      "end": 32.0
+    },
+    {
+      "word": "or",
+      "start": 32.0,
+      "end": 32.42
+    },
+    {
+      "word": "the",
+      "start": 32.42,
+      "end": 32.54
+    },
+    {
+      "word": "browser",
+      "start": 32.54,
+      "end": 32.7
+    },
+    {
+      "word": "code.",
+      "start": 32.7,
+      "end": 33.18
+    },
+    {
+      "word": "People",
+      "start": 33.56,
+      "end": 33.74
+    },
+    {
+      "word": "can",
+      "start": 33.74,
+      "end": 33.94
+    },
+    {
+      "word": "inspect",
+      "start": 33.94,
+      "end": 34.26
+    },
+    {
+      "word": "code",
+      "start": 34.26,
+      "end": 34.68
+    },
+    {
+      "word": "delivered",
+      "start": 34.68,
+      "end": 35.02
+    },
+    {
+      "word": "to",
+      "start": 35.02,
+      "end": 35.3
+    },
+    {
+      "word": "their",
+      "start": 35.3,
+      "end": 35.44
+    },
+    {
+      "word": "browser.",
+      "start": 35.44,
+      "end": 35.7
+    },
+    {
+      "word": "A",
+      "start": 36.2,
+      "end": 36.3
+    },
+    {
+      "word": "longer",
+      "start": 36.3,
+      "end": 36.52
+    },
+    {
+      "word": "prompt",
+      "start": 36.52,
+      "end": 36.9
+    },
+    {
+      "word": "is",
+      "start": 36.9,
+      "end": 37.16
+    },
+    {
+      "word": "not",
+      "start": 37.16,
+      "end": 37.36
+    },
+    {
+      "word": "automatically",
+      "start": 37.36,
+      "end": 37.82
+    },
+    {
+      "word": "better;",
+      "start": 37.82,
+      "end": 38.26
+    },
+    {
+      "word": "each",
+      "start": 38.62,
+      "end": 38.76
+    },
+    {
+      "word": "instruction",
+      "start": 38.76,
+      "end": 39.16
+    },
+    {
+      "word": "should",
+      "start": 39.16,
+      "end": 39.58
+    },
+    {
+      "word": "clarify",
+      "start": 39.58,
+      "end": 39.88
+    },
+    {
+      "word": "behavior",
+      "start": 39.88,
+      "end": 40.56
+    },
+    {
+      "word": "or",
+      "start": 40.56,
+      "end": 41.06
+    },
+    {
+      "word": "a",
+      "start": 41.06,
+      "end": 41.16
+    },
+    {
+      "word": "boundary",
+      "start": 41.16,
+      "end": 41.42
+    },
+    {
+      "word": "you",
+      "start": 41.42,
+      "end": 41.72
+    },
+    {
+      "word": "can",
+      "start": 41.72,
+      "end": 41.86
+    },
+    {
+      "word": "verify.",
+      "start": 41.86,
+      "end": 42.04
+    }
+  ]
+}

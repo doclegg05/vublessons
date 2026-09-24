@@ -1,0 +1,281 @@
+{
+  "estimate": {
+    "credits": 4872.240000000001,
+    "price_cents": 80.39196000000001,
+    "generations_count": 4,
+    "currency": "usd",
+    "estimated_runtime_seconds": 47
+  },
+  "runs": {
+    "library": {
+      "node_id": "XPFxfQvcgFKJvzv786E2",
+      "session_ids": [
+        "MtE03YJ14hlG6R47CYHb",
+        "A6nsClRE8gmnVVhcXxka",
+        "bFh7colIDZzf8LWAlFcD",
+        "BAhK6jANZR1mh7Was071"
+      ],
+      "started": 4,
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Show a capable older woman and a peer helper at equal eye level at a modest fictional community-library computer-help desk. Laptop with screen oblique and neutral, notebook and bookshelf nearby, subtle wooded Appalachian hills through a window. Calm collaborative interaction, hands resting naturally, readable faces and laptop as focal points; avoid posed handshakes.",
+      "variants": [
+        {
+          "generation_id": "2nVchgpaG5WQhTGJ43Hb",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=2nVchgpaG5WQhTGJ43Hb",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "6Wgbayeg80O8eaYdq3ey",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=6Wgbayeg80O8eaYdq3ey",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "KNRNsRj7KAVdPKO2CmYJ",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=KNRNsRj7KAVdPKO2CmYJ",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "TwRNXSdtOMKZz6Fvk7tA",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=TwRNXSdtOMKZz6Fvk7tA",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        }
+      ],
+      "note": "Single retrieval for asset selection. Unselected pending variation not polled; no generation retry."
+    },
+    "resource-pack": {
+      "node_id": "oPorvIYSHtkW6yZxRgLJ",
+      "session_ids": [
+        "39V0Hrhe3vPrrwJeATCE",
+        "hhFjo3Osju64ot94tW8V",
+        "oXrGy7UAB35y4X81j6p2",
+        "F4uhWJZMx9ER45HkITBX"
+      ],
+      "started": 4,
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Show two older adult learners, an older Black man and an older white woman, jointly reviewing a fictional community-help resource pack at an ordinary library table. One laptop viewed from behind, three loose blank paper drafts, a folder, pens and notebook. They discuss the paper calmly as equal contributors, not teacher correcting pupil. Wooded hills softly visible through a distant window. Paper is blank or softly unfocused, hands naturally resting.",
+      "variants": [
+        {
+          "generation_id": "HOtGJG7foI6PNDGJJWiV",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=HOtGJG7foI6PNDGJJWiV",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "O9Y3Ri6r5zJ0q8NEpHFB",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=O9Y3Ri6r5zJ0q8NEpHFB",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "L3Aaj3ysqjH5h4KgCxb9",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=L3Aaj3ysqjH5h4KgCxb9",
+          "status": "generating",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "R1pEkXmm66TBOeNvm3lx",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=R1pEkXmm66TBOeNvm3lx",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        }
+      ],
+      "note": "Single retrieval for asset selection. Unselected pending variation not polled; no generation retry."
+    },
+    "collaboration": {
+      "node_id": "9tGJY9YooATcsmnpORaU",
+      "session_ids": [
+        "gLx1229NlyClnmRDX09b",
+        "8cYPfpxV4FoM7nAEUUp2",
+        "gaqQ7i1OquXEGUDkt27q",
+        "08RBbb5IKAvflSEXLdWd"
+      ],
+      "started": 4,
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Show three older adults of varied backgrounds planning a small volunteer computer-help session together around one laptop and paper notes in a modest accessible fictional West Virginia community room. Equal participation, relaxed focused expressions, a few simple chairs, window with subtle Appalachian hills. Laptop viewed from the back; paper notes blank/unreadable. Keep faces and three seated bodies complete, hands resting simply. Focus on joint planning, not a corporate pose.",
+      "variants": [
+        {
+          "generation_id": "GI2XuYwgdcrHI6X3atXz",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=GI2XuYwgdcrHI6X3atXz",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "fGNCxXGCoe9BxGTNus4n",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=fGNCxXGCoe9BxGTNus4n",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "RjkRPjci4F10zx2hV5qZ",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=RjkRPjci4F10zx2hV5qZ",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "u4qFMUyYIX8AaINCZhk1",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=u4qFMUyYIX8AaINCZhk1",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        }
+      ],
+      "note": "Single retrieval for asset selection. Unselected pending variation not polled; no generation retry."
+    },
+    "usb": {
+      "node_id": "lU9pIB1d6I5guqSEj8Fr",
+      "session_ids": [
+        "PEmsNk6ndOZweom79NPr",
+        "q6fTBEh1wui2jDzaZeQI",
+        "Q2W8p4ZV5YukOZJJS69k",
+        "vtwMflOjEakeIh8ezEgW"
+      ],
+      "started": 4,
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. Close-up still life of one ordinary unbranded USB-A flash drive resting disconnected on a clean worn wooden learning-lab desk. Laptop edge remains far in background and every port is visibly separate from the drive. USB connector must be geometrically plausible; no cables, hands, inserted drive or glow. Simple generous negative space, reassuring neutral light; tiny wooded-hill window bokeh can suggest a West Virginia classroom without distracting.",
+      "variants": [
+        {
+          "generation_id": "UPfe7mM16lZYxO39BjO6",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=UPfe7mM16lZYxO39BjO6",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "IJFWY5t5ROLPSpiuc8yP",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=IJFWY5t5ROLPSpiuc8yP",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "W86SqRG7zoj133SXJB2r",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=W86SqRG7zoj133SXJB2r",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "sfAfqwYCGmEeXCQnsl3X",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=sfAfqwYCGmEeXCQnsl3X",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        }
+      ],
+      "note": "Single retrieval for asset selection. Unselected pending variation not polled; no generation retry."
+    },
+    "app-planning": {
+      "node_id": "F5fbLmFfIC1YDzqy5GPE",
+      "session_ids": [
+        "N8VXiIGAI55k5NUbhAwb",
+        "PiVz0LqDOQhZT1Cs7THa",
+        "U4AwLw7bLLTbtxFEXr5Y",
+        "a7BelaGDnSB8UCKV8PFR"
+      ],
+      "started": 4,
+      "prompt": "Create a photorealistic editorial photograph for a digital-literacy course for adult learners, including older veterans. Natural documentary photography, believable ordinary West Virginia setting, soft daylight, authentic materials, natural colors, physically plausible anatomy and hardware. Landscape widescreen composition with main subjects comfortably inside frame for crop flexibility. No logos, military insignia, watermarks, readable writing or personal information; no cartoon, miniature, 3D-render, dramatic hacker or luxury-showroom aesthetic. A quiet community app-planning desk in a modest fictional West Virginia home or library room. Ordinary laptop angled away with a neutral blank screen, open blank notebook, pencil, several blank index cards arranged as a simple planning layout. Window looks toward a modest Appalachian town and wooded hills, not dramatic tourism scenery. No people, visible code, graphs, written labels or branding. The physical planning objects are the focal point; everyday wood and soft window light.",
+      "variants": [
+        {
+          "generation_id": "Dwl4fyVw3guRO8TkFYpo",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=Dwl4fyVw3guRO8TkFYpo",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "I5J8J8CEnP13p4sgae9f",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=I5J8J8CEnP13p4sgae9f",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "J0TXuNFJTKUhPHD9frDZ",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=J0TXuNFJTKUhPHD9frDZ",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        },
+        {
+          "generation_id": "3rn6iLUqxn4BjXq50TNH",
+          "generation_url": "https://elevenlabs.io/app/image-video/history?modality=image&generationId=3rn6iLUqxn4BjXq50TNH",
+          "status": "completed",
+          "price": {
+            "credits": 1218.0600000000002,
+            "price_cents": 20.097990000000003,
+            "cost_fiat_currency": "usd"
+          }
+        }
+      ],
+      "note": "Single retrieval for asset selection. Unselected pending variation not polled; no generation retry."
+    }
+  }
+}

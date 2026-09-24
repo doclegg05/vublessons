@@ -1,0 +1,5 @@
+# Keep candidate rasters local; selected originals and contact sheets are retained.
+*-variant-*.png
+/workstation.png
+/safety.png
+*-contact.png

@@ -1,0 +1,98 @@
+[
+  {
+    "chapter": 4,
+    "title": "Verify through a route you already trust",
+    "startSeconds": 128.853,
+    "durationSeconds": 41.14,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 1049,
+        "y": 173,
+        "label": "Do not follow the message\u2019s link"
+      },
+      {
+        "at": 0.45,
+        "phrase": "Open the organization",
+        "state": 1,
+        "x": 1145,
+        "y": 87,
+        "label": "Leave the suspicious message"
+      },
+      {
+        "at": 3.57,
+        "phrase": "use a saved bookmark",
+        "state": 2,
+        "x": 442,
+        "y": 245,
+        "label": "Open a bookmark you already trust"
+      },
+      {
+        "at": 5.51,
+        "phrase": "find its contact details independently",
+        "state": 3,
+        "x": 175,
+        "y": 305,
+        "label": "Use Contact on the known website"
+      },
+      {
+        "at": 12.77,
+        "phrase": "Ask whether the claimed issue exists",
+        "state": 4,
+        "x": 722,
+        "y": 403,
+        "label": "Verify the claim through the independent contact"
+      }
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Grant camera and microphone access for a reason",
+    "startSeconds": 258.845,
+    "durationSeconds": 42.812,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 812,
+        "y": 253,
+        "label": "Which site is asking, and why?"
+      },
+      {
+        "at": 14.31,
+        "phrase": "Grant access only",
+        "state": 1,
+        "x": 966,
+        "y": 384,
+        "label": "Trusted meeting + camera task \u2192 Allow"
+      },
+      {
+        "at": 15.91,
+        "phrase": "request fits that task",
+        "state": 2,
+        "x": 771,
+        "y": 309,
+        "label": "Check the permission that was granted"
+      },
+      {
+        "at": 19.69,
+        "phrase": "Deny an unrelated request",
+        "state": 4,
+        "x": 680,
+        "y": 384,
+        "label": "A text page does not need the camera \u2192 Block"
+      },
+      {
+        "at": 22.07,
+        "phrase": "review the setting later",
+        "state": 5,
+        "x": 762,
+        "y": 310,
+        "label": "Review permissions \u2022 blocked here"
+      }
+    ]
+  }
+]

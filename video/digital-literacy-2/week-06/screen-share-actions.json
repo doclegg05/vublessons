@@ -1,0 +1,114 @@
+[
+  {
+    "chapter": 6,
+    "title": "Open a working version before changing it",
+    "startSeconds": 223.672,
+    "durationSeconds": 42.812,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 530,
+        "y": 263,
+        "label": "Start from the supplied local HTML file"
+      },
+      {
+        "at": 5.85,
+        "phrase": "Save the file",
+        "state": 1,
+        "x": 650,
+        "y": 324,
+        "label": "Save a distinct working version"
+      },
+      {
+        "at": 6.39,
+        "phrase": "with its HTML extension",
+        "state": 2,
+        "x": 1003,
+        "y": 396,
+        "label": "Keep .html \u2022 not .html.txt"
+      },
+      {
+        "at": 8.41,
+        "phrase": "open it in the browser",
+        "state": 3,
+        "x": 981,
+        "y": 397,
+        "label": "Open the file in a browser"
+      },
+      {
+        "at": 10.31,
+        "phrase": "Confirm that the heading",
+        "state": 4,
+        "x": 550,
+        "y": 173,
+        "label": "Check heading, search, category, and results"
+      }
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Test the happy path and the missing result",
+    "startSeconds": 266.484,
+    "durationSeconds": 44.089,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 353,
+        "y": 253,
+        "label": "Test the actual saved app"
+      },
+      {
+        "at": 0.45,
+        "phrase": "Type library",
+        "state": 1,
+        "x": 353,
+        "y": 253,
+        "label": "library \u2192 Community library"
+      },
+      {
+        "at": 5.45,
+        "phrase": "Then enter an unmatched term",
+        "state": 2,
+        "x": 353,
+        "y": 253,
+        "label": "zzz \u2192 No matching resources"
+      },
+      {
+        "at": 15.37,
+        "phrase": "Clear the field",
+        "state": 3,
+        "x": 353,
+        "y": 253,
+        "label": "Clear the search before the next check"
+      },
+      {
+        "at": 16.31,
+        "phrase": "try LIBRARY in uppercase",
+        "state": 4,
+        "x": 353,
+        "y": 253,
+        "label": "LIBRARY \u2192 the same result"
+      },
+      {
+        "at": 25.53,
+        "phrase": "combine the search with a category filter",
+        "state": 5,
+        "x": 931,
+        "y": 253,
+        "label": "Learning + LIBRARY \u2192 match"
+      },
+      {
+        "at": 28.07,
+        "phrase": "both conditions apply",
+        "state": 6,
+        "x": 931,
+        "y": 253,
+        "label": "Community + LIBRARY \u2192 no match"
+      }
+    ]
+  }
+]

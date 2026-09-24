@@ -1,0 +1,1 @@
+In a practice workbook, enter paper at twelve dollars, folders at eight, and pens at five. The total is twenty-five. [short pause] Use a sum formula over all three cells. Change paper to fifteen and check that the total becomes twenty-eight. This tests the formula rather than its appearance.

@@ -14,7 +14,7 @@
       "preTest": "courses/computer-skills/weeks/week-01/pre-test.html",
       "postTest": "courses/computer-skills/weeks/week-08/post-test.html",
       "lessons": [
-        { "n": 1, "title": "VA Online Services", "topic": "VA.gov, MyHealtheVet, eBenefits", "path": "courses/computer-skills/weeks/week-01/presentation.html", "statusKey": "ics:w1" },
+        { "n": 1, "title": "VA Online Services", "topic": "VA.gov, My HealtheVet, Login.gov and ID.me", "path": "courses/computer-skills/weeks/week-01/presentation.html", "statusKey": "ics:w1" },
         { "n": 2, "title": "Windows Tips & Productivity", "topic": "Shortcuts, window management, screenshots", "path": "courses/computer-skills/weeks/week-02/presentation.html", "statusKey": "ics:w2" },
         { "n": 3, "title": "Email Productivity (Gmail)", "topic": "Compose, organize, attachments, safety", "path": "courses/computer-skills/weeks/week-03/presentation.html", "statusKey": "ics:w3" },
         { "n": 4, "title": "Microsoft Word", "topic": "Documents, formatting, printing", "path": "courses/computer-skills/weeks/week-04/presentation.html", "statusKey": "ics:w4" },
@@ -62,6 +62,27 @@
         { "n": 3, "title": "Creating & Communicating", "topic": "Documents, files, printing, email, teamwork", "path": "courses/digital-literacy-1/weeks/week-03/presentation.html", "statusKey": "dl1:w3" },
         { "n": 4, "title": "Citizenship & Safety", "topic": "Identity, privacy, passwords, online safety", "path": "courses/digital-literacy-1/weeks/week-04/presentation.html", "statusKey": "dl1:w4" },
         { "n": 5, "title": "Review & Testing Day", "topic": "Cumulative review game + Post-Test", "path": "courses/digital-literacy-1/weeks/week-05/presentation.html", "statusKey": "dl1:w5" }
+      ]
+    },
+    {
+      "id": "digital-literacy-2",
+      "title": "Digital Literacy — Level 2",
+      "subtitle": "Six practical weeks: IC3 GS6 Level 2 plus building a small web app with AI.",
+      "type": "weeks",
+      "progressKey": "dl2",
+      "category": "Digital Literacy",
+      "emphasis": "Create, collaborate, build",
+      "path": "courses/digital-literacy-2/",
+      "entry": "courses/digital-literacy-2/index.html",
+      "preTest": "courses/digital-literacy-2/assessments/pre-test.html",
+      "postTest": "courses/digital-literacy-2/assessments/post-test.html",
+      "lessons": [
+        { "n": 1, "title": "Make technology work for you", "topic": "Set up a comfortable workspace, organize a calendar, and solve everyday device problems.", "path": "courses/digital-literacy-2/weeks/week-01/presentation.html", "statusKey": "dl2:w1" },
+        { "n": 2, "title": "Find, judge, and organize information", "topic": "Find a reliable community resource and manage a shared file with care.", "path": "courses/digital-literacy-2/weeks/week-02/presentation.html", "statusKey": "dl2:w2" },
+        { "n": 3, "title": "Create something people can use", "topic": "Build a clear resource handout, a small workbook, and a short presentation.", "path": "courses/digital-literacy-2/weeks/week-03/presentation.html", "statusKey": "dl2:w3" },
+        { "n": 4, "title": "Communicate and collaborate with care", "topic": "Choose the right channel, give useful feedback, and make safe online choices.", "path": "courses/digital-literacy-2/weeks/week-04/presentation.html", "statusKey": "dl2:w4" },
+        { "n": 5, "title": "Protect your work and show your skills", "topic": "Practice safe decisions, complete a skills challenge, and measure your growth.", "path": "courses/digital-literacy-2/weeks/week-05/presentation.html", "statusKey": "dl2:w5" },
+        { "n": 6, "title": "Build a small web app with AI", "topic": "Turn a clear need into a tested, accessible prototype using basic vibe coding.", "path": "courses/digital-literacy-2/weeks/week-06/presentation.html", "statusKey": "dl2:w6" }
       ]
     }
   ]

@@ -1,0 +1,962 @@
+[
+  {
+    "week": 1,
+    "chapter": 1,
+    "title": "A workstation that supports your task",
+    "kind": "routine",
+    "photo": "workstation",
+    "steps": [
+      "Choose|Read a page comfortably",
+      "Test|Can I reach the next action?",
+      "Restore|Keep the original setting"
+    ],
+    "layout": "scenario",
+    "idsChecked": 3,
+    "duration": 40.421,
+    "audioId": "beat-01"
+  },
+  {
+    "week": 1,
+    "chapter": 2,
+    "title": "Make a webpage readable",
+    "kind": "zoom",
+    "photo": null,
+    "steps": [
+      "Before|Page zoom: 100%",
+      "Change|Page zoom: 125%",
+      "Check|Find help stays reachable"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 4,
+    "duration": 44.507,
+    "audioId": "beat-02"
+  },
+  {
+    "week": 1,
+    "chapter": 3,
+    "title": "Choose the scope of the change",
+    "kind": "scope",
+    "photo": null,
+    "steps": [
+      "Page zoom|Only this webpage grows",
+      "Display scaling|Apps and system controls grow",
+      "Choose|Make the smallest useful change"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 46.9,
+    "audioId": "beat-03"
+  },
+  {
+    "week": 1,
+    "chapter": 4,
+    "title": "Follow the sound to its destination",
+    "kind": "sound",
+    "photo": null,
+    "steps": [
+      "Destination|Headset selected",
+      "App setting|Check the meeting output too",
+      "Test|Unmute and play a short sample"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 11,
+    "duration": 38.749,
+    "audioId": "beat-04"
+  },
+  {
+    "week": 1,
+    "chapter": 5,
+    "title": "Understand the parts before troubleshooting",
+    "kind": "connections",
+    "photo": null,
+    "steps": [
+      "Processor|Carries out instructions",
+      "Memory|Current work on the workbench",
+      "Storage|Saved file in the cabinet"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 45.228,
+    "audioId": "beat-05"
+  },
+  {
+    "week": 1,
+    "chapter": 6,
+    "title": "Print a useful page, not a surprise",
+    "kind": "print",
+    "photo": null,
+    "steps": [
+      "Preview|Destination \u00b7 range \u00b7 orientation",
+      "Test|Print one page first",
+      "Queue|Check before sending it again"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 47.945,
+    "audioId": "beat-06"
+  },
+  {
+    "week": 1,
+    "chapter": 7,
+    "title": "Make a calendar entry you can act on",
+    "kind": "calendar",
+    "photo": null,
+    "steps": [
+      "Library practice|2:00\u20133:00 \u00b7 Room A",
+      "Reminder|Check timing and permission",
+      "Reopen|Same event in day / week / month"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 44.81,
+    "audioId": "beat-07"
+  },
+  {
+    "week": 1,
+    "chapter": 8,
+    "title": "Share availability with a purpose",
+    "kind": "privacy",
+    "photo": null,
+    "steps": [
+      "Owner|Library practice \u00b7 Room A",
+      "Partner|Busy \u00b7 2:00\u20133:00",
+      "Verify|Inspect the partner view"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 48.013,
+    "audioId": "beat-08"
+  },
+  {
+    "week": 1,
+    "chapter": 9,
+    "title": "Check what the computer does automatically",
+    "kind": "automation",
+    "photo": null,
+    "steps": [
+      "Account|Confirm the active account",
+      "Reminder|Check notification permission",
+      "Help|Match instructions to your version"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 42.905,
+    "audioId": "beat-09"
+  },
+  {
+    "week": 1,
+    "chapter": 10,
+    "title": "Your independent workstation check",
+    "kind": "routine",
+    "photo": "workstation",
+    "steps": [
+      "Choose|Read \u00b7 hear \u00b7 remember",
+      "Explain|Expected result versus actual",
+      "Finish|Save \u00b7 restore \u00b7 sign out"
+    ],
+    "layout": "scenario",
+    "idsChecked": 3,
+    "duration": 44.13,
+    "audioId": "beat-10"
+  },
+  {
+    "week": 2,
+    "chapter": 1,
+    "title": "Find information for a real decision",
+    "kind": "search",
+    "photo": "library",
+    "steps": [
+      "Task|Find community computer help",
+      "Place|Use your West Virginia town",
+      "Evidence|Confirm the details independently"
+    ],
+    "layout": "scenario",
+    "idsChecked": 4,
+    "duration": 43.694,
+    "audioId": "beat-01"
+  },
+  {
+    "week": 2,
+    "chapter": 2,
+    "title": "Turn a broad question into a useful search",
+    "kind": "search",
+    "photo": null,
+    "steps": [
+      "Broad|Computer help",
+      "Refine|Computer help + library + town",
+      "Adjust|Remove a term if too restrictive"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 5,
+    "duration": 49.616,
+    "audioId": "beat-02"
+  },
+  {
+    "week": 2,
+    "chapter": 3,
+    "title": "Judge the source and the fit",
+    "kind": "source-check",
+    "photo": null,
+    "steps": [
+      "Responsibility|Who published this page?",
+      "Fit|Place \u00b7 date \u00b7 purpose",
+      "Conflict|Check the responsible organization"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 42.649,
+    "audioId": "beat-03"
+  },
+  {
+    "week": 2,
+    "chapter": 4,
+    "title": "Leave a source trail for your future self",
+    "kind": "source-trail",
+    "photo": null,
+    "steps": [
+      "Source|Organization \u00b7 title \u00b7 address",
+      "Checked|Date accessed \u00b7 verified fact",
+      "Separate|Source statement \u2260 my interpretation"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 5,
+    "duration": 40.49,
+    "audioId": "beat-04"
+  },
+  {
+    "week": 2,
+    "chapter": 5,
+    "title": "Fill a form with the minimum useful information",
+    "kind": "form",
+    "photo": null,
+    "steps": [
+      "Purpose|Who collects this information?",
+      "Required|Fictional topic and contact route",
+      "Review|Practice only: nothing is sent"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 42.022,
+    "audioId": "beat-05"
+  },
+  {
+    "week": 2,
+    "chapter": 6,
+    "title": "Give your files a home you can recognize",
+    "kind": "files",
+    "photo": null,
+    "steps": [
+      "Folder|Practice resources",
+      "Rename|computer-help-notes.txt",
+      "Reopen|Check location and account"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 43.462,
+    "audioId": "beat-06"
+  },
+  {
+    "week": 2,
+    "chapter": 7,
+    "title": "Choose access by what the partner must do",
+    "kind": "permission",
+    "photo": null,
+    "steps": [
+      "Viewer|Read the shared document",
+      "Commenter|Suggest without rewriting",
+      "Editor|Change the content; test access"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 50.823,
+    "audioId": "beat-07"
+  },
+  {
+    "week": 2,
+    "chapter": 8,
+    "title": "Separate sync from a recovery copy",
+    "kind": "sync",
+    "photo": null,
+    "steps": [
+      "Sync|A deletion may reach both devices",
+      "Backup|Separate earlier recovery copy",
+      "Check|Saving status and recovery options"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 5,
+    "duration": 46.504,
+    "audioId": "beat-08"
+  },
+  {
+    "week": 2,
+    "chapter": 9,
+    "title": "Recover the right thing and package carefully",
+    "kind": "recovery",
+    "photo": null,
+    "steps": [
+      "Recover|Trash or earlier version?",
+      "Package|Create ZIP from approved copies",
+      "Inspect|Extract and open the files"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 44.577,
+    "audioId": "beat-09"
+  },
+  {
+    "week": 2,
+    "chapter": 10,
+    "title": "Show the evidence behind your choices",
+    "kind": "evidence",
+    "photo": "library",
+    "steps": [
+      "Source note|Fact \u00b7 address \u00b7 date checked",
+      "Folder|Recognizable name and location",
+      "Partner|Right access and recovery choice"
+    ],
+    "layout": "scenario",
+    "idsChecked": 0,
+    "duration": 48.518,
+    "audioId": "beat-10"
+  },
+  {
+    "week": 3,
+    "chapter": 1,
+    "title": "Create for a person and a purpose",
+    "kind": "document",
+    "photo": "resource-pack",
+    "steps": [
+      "Audience|Community computer-help reader",
+      "Purpose|A clear next action",
+      "Pack|Handout \u00b7 workbook \u00b7 slides"
+    ],
+    "layout": "scenario",
+    "idsChecked": 3,
+    "duration": 43.3,
+    "audioId": "beat-01"
+  },
+  {
+    "week": 3,
+    "chapter": 2,
+    "title": "Give the document a readable structure",
+    "kind": "document",
+    "photo": null,
+    "steps": [
+      "Heading style|Computer help",
+      "Numbered steps|Choose \u00b7 visit \u00b7 ask",
+      "Useful link|Read the computer-help guide"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 44.089,
+    "audioId": "beat-02"
+  },
+  {
+    "week": 3,
+    "chapter": 3,
+    "title": "Edit without losing useful work",
+    "kind": "editing",
+    "photo": null,
+    "steps": [
+      "Select|Check exactly what is selected",
+      "Preserve|Copy and undo unwanted changes",
+      "Review|Comment \u2260 tracked suggestion"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 44.414,
+    "audioId": "beat-03"
+  },
+  {
+    "week": 3,
+    "chapter": 4,
+    "title": "Read a worksheet like a labeled table",
+    "kind": "sheet",
+    "photo": null,
+    "steps": [
+      "Column A|Item names",
+      "Column B|Cost in dollars",
+      "Cell B2|Paper: 12"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 40.745,
+    "audioId": "beat-04"
+  },
+  {
+    "week": 3,
+    "chapter": 5,
+    "title": "Build a formula and challenge it",
+    "kind": "sheet",
+    "photo": null,
+    "steps": [
+      "Formula|=SUM(B2:B4)",
+      "Challenge|Paper: 12 \u2192 15",
+      "Check|Total: 25 \u2192 28"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 51.868,
+    "audioId": "beat-05"
+  },
+  {
+    "week": 3,
+    "chapter": 6,
+    "title": "Choose a chart that answers a question",
+    "kind": "chart",
+    "photo": null,
+    "steps": [
+      "Source|Paper 15 \u00b7 folders 8 \u00b7 pens 5",
+      "Question|Which supply costs most?",
+      "Check|Title and units match the table"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 41.048,
+    "audioId": "beat-06"
+  },
+  {
+    "week": 3,
+    "chapter": 7,
+    "title": "Make slides and images serve the message",
+    "kind": "slide-design",
+    "photo": null,
+    "steps": [
+      "Slide 1|Purpose and useful image",
+      "Slide 2|One action at a time",
+      "Image edit|Crop removes; resize changes size"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 43.787,
+    "audioId": "beat-07"
+  },
+  {
+    "week": 3,
+    "chapter": 8,
+    "title": "Edit a short clip for understanding",
+    "kind": "media-edit",
+    "photo": null,
+    "steps": [
+      "Preserve|Keep the original clip",
+      "Edit|Trim ends; split unwanted section",
+      "Review|Listen at cuts; recheck captions"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 41.767,
+    "audioId": "beat-08"
+  },
+  {
+    "week": 3,
+    "chapter": 9,
+    "title": "Choose a format and inspect what survives",
+    "kind": "export",
+    "photo": null,
+    "steps": [
+      "DOCX|Editable document structure",
+      "PDF|Inspect the saved page layout",
+      "CSV|Inspect values; record image credit"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 44.669,
+    "audioId": "beat-09"
+  },
+  {
+    "week": 3,
+    "chapter": 10,
+    "title": "Test the pack with another person",
+    "kind": "bundle",
+    "photo": "resource-pack",
+    "steps": [
+      "Reader|Can they find the next action?",
+      "Workbook|Does the total respond?",
+      "Improve|Fix one observed confusion"
+    ],
+    "layout": "scenario",
+    "idsChecked": 3,
+    "duration": 48.913,
+    "audioId": "beat-10"
+  },
+  {
+    "week": 4,
+    "chapter": 1,
+    "title": "Coordinate a task people recognize",
+    "kind": "roles",
+    "photo": "collaboration",
+    "steps": [
+      "Task|Plan a community help session",
+      "Output|One useful handout",
+      "People|Owner \u00b7 writer \u00b7 reviewer"
+    ],
+    "layout": "scenario",
+    "idsChecked": 3,
+    "duration": 44.414,
+    "audioId": "beat-01"
+  },
+  {
+    "week": 4,
+    "chapter": 2,
+    "title": "Choose the channel and identity deliberately",
+    "kind": "identity-channel",
+    "photo": null,
+    "steps": [
+      "Task|Message, shared file or meeting?",
+      "Identity|Training profile is active",
+      "Timing|Enough context for a later reply"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 50.01,
+    "audioId": "beat-02"
+  },
+  {
+    "week": 4,
+    "chapter": 3,
+    "title": "Write a message someone can act on",
+    "kind": "message",
+    "photo": null,
+    "steps": [
+      "Subject|Review the computer-help handout",
+      "Request|Comment on the contact section",
+      "Timing|Reply before our practice session"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 46.109,
+    "audioId": "beat-03"
+  },
+  {
+    "week": 4,
+    "chapter": 4,
+    "title": "Check who receives the message",
+    "kind": "email-fields",
+    "photo": null,
+    "steps": [
+      "To / Cc|Visible recipient list",
+      "Bcc|Other recipients cannot see addresses",
+      "Reply all|Inspect who will receive it"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 51.45,
+    "audioId": "beat-04"
+  },
+  {
+    "week": 4,
+    "chapter": 5,
+    "title": "Work from one shared copy",
+    "kind": "roles",
+    "photo": null,
+    "steps": [
+      "Before|Three competing file copies",
+      "Agree|One shared handout",
+      "Coordinate|Roles, access and response time"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 46.016,
+    "audioId": "beat-05"
+  },
+  {
+    "week": 4,
+    "chapter": 6,
+    "title": "Give feedback that leads to a useful change",
+    "kind": "feedback",
+    "photo": null,
+    "steps": [
+      "Vague|Make this better",
+      "Specific|Add the contact details here",
+      "Resolve|Explain decision after responding"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 2,
+    "duration": 41.93,
+    "audioId": "beat-06"
+  },
+  {
+    "week": 4,
+    "chapter": 7,
+    "title": "Join a meeting prepared to participate",
+    "kind": "meeting",
+    "photo": null,
+    "steps": [
+      "Prepare|Sound test and captions",
+      "Participate|Mute or raise hand as needed",
+      "Choice|Ask before recording; keep notes"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 45.784,
+    "audioId": "beat-07"
+  },
+  {
+    "week": 4,
+    "chapter": 8,
+    "title": "Participate in a community thoughtfully",
+    "kind": "community",
+    "photo": null,
+    "steps": [
+      "Read|Community rules and context",
+      "Verify|Compare claim with official source",
+      "Post|Share only agreed information"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 44.577,
+    "audioId": "beat-08"
+  },
+  {
+    "week": 4,
+    "chapter": 9,
+    "title": "Review a digital purchase before committing",
+    "kind": "commerce",
+    "photo": null,
+    "steps": [
+      "Today|Fictional trial offer",
+      "Renewal|12 dollars each month",
+      "Inspect|Seller \u00b7 cancellation \u00b7 full terms"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 44.414,
+    "audioId": "beat-09"
+  },
+  {
+    "week": 4,
+    "chapter": 10,
+    "title": "Leave a clear record of the next step",
+    "kind": "evidence",
+    "photo": "collaboration",
+    "steps": [
+      "Draft|Clear request and response time",
+      "Shared file|Correct access and revised section",
+      "Record|Decision and next action"
+    ],
+    "layout": "scenario",
+    "idsChecked": 0,
+    "duration": 48.286,
+    "audioId": "beat-10"
+  },
+  {
+    "week": 5,
+    "chapter": 1,
+    "title": "Use judgment, not fear, to stay safer",
+    "kind": "verify",
+    "photo": "safety",
+    "steps": [
+      "Pause|What is being requested?",
+      "Inspect|What evidence do I have?",
+      "Verify|Choose an independent route"
+    ],
+    "layout": "scenario",
+    "idsChecked": 3,
+    "duration": 49.94,
+    "audioId": "beat-01"
+  },
+  {
+    "week": 5,
+    "chapter": 2,
+    "title": "Set up for comfort and control",
+    "kind": "comfort",
+    "photo": "workstation",
+    "steps": [
+      "Comfort|Screen and input within reach",
+      "Access|Captions \u00b7 large text \u00b7 keyboard",
+      "Control|Choose a helpful adjustment"
+    ],
+    "layout": "scenario",
+    "idsChecked": 0,
+    "duration": 45.134,
+    "audioId": "beat-02"
+  },
+  {
+    "week": 5,
+    "chapter": 3,
+    "title": "Recognize pressure in a message",
+    "kind": "phishing",
+    "photo": null,
+    "steps": [
+      "Claim|Your service will stop",
+      "Request|Provide information immediately",
+      "Evidence|A convincing logo is not proof"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 1,
+    "duration": 41.697,
+    "audioId": "beat-03"
+  },
+  {
+    "week": 5,
+    "chapter": 4,
+    "title": "Verify through a route you already trust",
+    "kind": "trusted-route",
+    "photo": null,
+    "steps": [
+      "Message route|Sender supplies its own evidence",
+      "Independent route|Open a known website or bookmark",
+      "Confirm|Ask whether the issue exists"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 50.73,
+    "audioId": "beat-04"
+  },
+  {
+    "week": 5,
+    "chapter": 5,
+    "title": "Separate editing restrictions from encryption",
+    "kind": "encrypt",
+    "photo": null,
+    "steps": [
+      "Read-only|Content remains readable",
+      "Encryption|Key required to read the data",
+      "Limit|Unlocked accounts still need care"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 2,
+    "duration": 46.574,
+    "audioId": "beat-05"
+  },
+  {
+    "week": 5,
+    "chapter": 6,
+    "title": "Treat unknown devices cautiously",
+    "kind": "usb",
+    "photo": "usb",
+    "steps": [
+      "Found|Ordinary appearance proves nothing",
+      "Pause|Keep the drive disconnected",
+      "Procedure|Give it to authorized staff"
+    ],
+    "layout": "scenario",
+    "idsChecked": 3,
+    "duration": 43.625,
+    "audioId": "beat-06"
+  },
+  {
+    "week": 5,
+    "chapter": 7,
+    "title": "Grant camera and microphone access for a reason",
+    "kind": "access",
+    "photo": null,
+    "steps": [
+      "Meeting|Camera or microphone may fit task",
+      "Text page|Camera access is unrelated",
+      "Review|Check app and permission later"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 2,
+    "duration": 42.812,
+    "audioId": "beat-07"
+  },
+  {
+    "week": 5,
+    "chapter": 8,
+    "title": "Protect attention and respond to harmful behavior",
+    "kind": "wellbeing",
+    "photo": null,
+    "steps": [
+      "Identity|A friendly story is not verification",
+      "Attention|Choose notifications and breaks",
+      "Support|Report \u00b7 block \u00b7 trusted help"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 45.228,
+    "audioId": "beat-08"
+  },
+  {
+    "week": 5,
+    "chapter": 9,
+    "title": "Practice the complete decision process",
+    "kind": "decision",
+    "photo": null,
+    "steps": [
+      "Claim|A code is needed for an appointment",
+      "Unverified|Who is actually asking?",
+      "Next step|Do not share; check known contact"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 45.296,
+    "audioId": "beat-09"
+  },
+  {
+    "week": 5,
+    "chapter": 10,
+    "title": "Use results to choose your next practice",
+    "kind": "results",
+    "photo": null,
+    "steps": [
+      "Result|A classroom score, not certification",
+      "Review|Find a skill to practice",
+      "Transfer|Repeat a useful task with less help"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 50.19,
+    "audioId": "beat-10"
+  },
+  {
+    "week": 6,
+    "chapter": 1,
+    "title": "Build something small enough to understand",
+    "kind": "app",
+    "photo": "app-planning",
+    "steps": [
+      "Familiar task|Find a community resource",
+      "Small scope|One page, search and filter",
+      "Safe data|Fictional records only"
+    ],
+    "layout": "scenario",
+    "idsChecked": 1,
+    "duration": 44.183,
+    "audioId": "beat-01"
+  },
+  {
+    "week": 6,
+    "chapter": 2,
+    "title": "Distinguish a website, an app, and a service",
+    "kind": "product-types",
+    "photo": null,
+    "steps": [
+      "Website|Information to read",
+      "Web app|Input \u2192 filtered result",
+      "SaaS|Hosted service and ongoing support"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 49.128,
+    "audioId": "beat-02"
+  },
+  {
+    "week": 6,
+    "chapter": 3,
+    "title": "Understand the three parts of the page",
+    "kind": "parts",
+    "photo": null,
+    "steps": [
+      "HTML|Heading, label and search field",
+      "CSS|Layout and readable focus",
+      "JavaScript|Match records to the search"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 42.022,
+    "audioId": "beat-03"
+  },
+  {
+    "week": 6,
+    "chapter": 4,
+    "title": "Write checks before asking for code",
+    "kind": "acceptance",
+    "photo": null,
+    "steps": [
+      "Search library|Community library appears",
+      "Search zzz|No matching resources",
+      "Keyboard|Every control has visible focus"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 44.507,
+    "audioId": "beat-04"
+  },
+  {
+    "week": 6,
+    "chapter": 5,
+    "title": "Give the AI a bounded, useful request",
+    "kind": "prompt",
+    "photo": null,
+    "steps": [
+      "User and task|Find fictional community resources",
+      "Controls|Labeled search and category filter",
+      "Boundaries|No external dependencies or secrets"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 4,
+    "duration": 47.688,
+    "audioId": "beat-05"
+  },
+  {
+    "week": 6,
+    "chapter": 6,
+    "title": "Open a working version before changing it",
+    "kind": "local-file",
+    "photo": null,
+    "steps": [
+      "Save|resource-finder-v1.html",
+      "Open|Check heading, controls and results",
+      "No account|Edit heading; save and refresh"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 0,
+    "duration": 44.669,
+    "audioId": "beat-06"
+  },
+  {
+    "week": 6,
+    "chapter": 7,
+    "title": "Test the happy path and the missing result",
+    "kind": "app",
+    "photo": null,
+    "steps": [
+      "library|Matching resource shown",
+      "zzz|Clear no-results message",
+      "LIBRARY|Same match; also test category"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 6,
+    "duration": 42.58,
+    "audioId": "beat-07"
+  },
+  {
+    "week": 6,
+    "chapter": 8,
+    "title": "Test access, screen size, and data assumptions",
+    "kind": "keyboard",
+    "photo": null,
+    "steps": [
+      "Keyboard|Tab through visible controls",
+      "Narrow screen|Labels and results remain readable",
+      "Data|Bundled file \u2260 shared database"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 4,
+    "duration": 44.089,
+    "audioId": "beat-08"
+  },
+  {
+    "week": 6,
+    "chapter": 9,
+    "title": "Request one repair and retest what worked",
+    "kind": "versions",
+    "photo": null,
+    "steps": [
+      "Report|LIBRARY fails; library succeeds",
+      "Repair|Match case without losing filter",
+      "Retest|Failed check and a passing check"
+    ],
+    "layout": "demonstration",
+    "idsChecked": 3,
+    "duration": 44.669,
+    "audioId": "beat-09"
+  },
+  {
+    "week": 6,
+    "chapter": 10,
+    "title": "Demonstrate the result and name its limits",
+    "kind": "evidence",
+    "photo": "app-planning",
+    "steps": [
+      "Demonstrate|Run three acceptance checks",
+      "Explain|One part and one revision",
+      "Limit|Local prototype \u2260 public service"
+    ],
+    "layout": "scenario",
+    "idsChecked": 0,
+    "duration": 48.845,
+    "audioId": "beat-10"
+  }
+]

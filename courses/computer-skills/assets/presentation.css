@@ -1,0 +1,96 @@
+/* Accessible shell for the eight legacy Computer Skills slide decks. */
+@media screen {
+  :root { --ics-slide-size: 32px; --ics-sidebar-width: 280px; }
+  html[data-text-size="sm"] { --ics-slide-size: 32px; }
+  html[data-text-size="lg"] { --ics-slide-size: 36px; }
+  html[data-text-size="xl"] { --ics-slide-size: 40px; }
+  html[data-text-size="xxl"] { --ics-slide-size: 44px; }
+  body { display: block; height: auto; min-height: 100vh; overflow: visible; }
+  .container { display: block; height: auto; min-height: 100vh; }
+  .sidebar {
+    display: flex; position: fixed; inset: 0 auto 0 0;
+    width: var(--ics-sidebar-width); height: 100vh; height: 100dvh;
+    padding: 1.25rem; overflow: auto; flex-shrink: 0;
+  }
+  .sidebar > * { flex-shrink: 0; }
+  .sidebar :is(.slide-link, .slide-item, .resource-link, .chapter-header) {
+    min-height: 44px; white-space: normal; overflow-wrap: anywhere;
+    text-overflow: clip; color: #fff;
+  }
+  .sidebar :is(.slide-link, .slide-item).active { background: #C9A227; color: #1B365D; }
+  .sidebar .slide-counter { color: #fff; }
+  .sidebar .slide-list { display: none; }
+  .sidebar .chapter-item.expanded .slide-list { display: block; max-height: none; }
+  :is(.main-content, .main) {
+    margin-left: var(--ics-sidebar-width); width: calc(100% - var(--ics-sidebar-width));
+    min-width: 0; padding: 1.5rem; min-height: 0;
+  }
+  :is(.slides-container, .slide-area) { min-width: 0; width: 100%; padding: 0; overflow: visible; }
+  .slide-container { min-width: 0; max-width: 1200px; min-height: 0; }
+  .slide { min-width: 0; min-height: 0; max-width: 1200px; padding: 2rem; overflow-wrap: anywhere; }
+  /* Fixed inline legacy text sizes must not defeat the shared learner control.
+     Apply a common floor instead of multiplying nested em sizes. */
+  .slide, .slide.slide :where(div, p, li, span, a, button, label, td, th, strong, em, b, i, code, kbd, pre, blockquote, h4, h5, h6) {
+    font-size: var(--ics-slide-size) !important; line-height: 1.6 !important;
+  }
+  .slide :is(h1, h2, .slide-headline) { font-size: calc(var(--ics-slide-size) * 1.35) !important; line-height: 1.2 !important; }
+  .slide h3 { font-size: calc(var(--ics-slide-size) * 1.1) !important; line-height: 1.3 !important; }
+  .slide * { min-width: 0; max-width: 100%; }
+  .slide img, .slide video, .slide iframe { max-width: 100%; }
+  .slide :is(pre, code) { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .slide .course-badge, .slide .course-info { color: #5A6A7A !important; }
+  .ics-table-scroll { max-width: 100%; overflow-x: auto; margin: 1rem 0; }
+  .ics-table-scroll table { width: 100%; min-width: 560px; }
+  .ics-table-scroll:focus-visible { outline: 3px solid #1B365D; outline-offset: 3px; }
+  :is(.nav-buttons, .nav-footer, .nav-controls) {
+    display: flex; flex-wrap: wrap; gap: 1rem; width: 100%; padding: 1.25rem;
+    position: static; min-width: 0;
+  }
+  .nav-btn { min-height: 44px; white-space: normal; }
+  .ics-toolbar {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 0.5rem; margin-left: var(--ics-sidebar-width); padding: 0.6rem 1.5rem;
+    background: #1B365D; color: #fff;
+  }
+  .ics-menu-toggle { display: none; }
+  .ics-course-link { color: #fff; font-size: 1rem; padding: 0.6rem 0; min-height: 44px; }
+  .ics-toolbar .vub-textsize-fab {
+    position: static; right: auto; bottom: auto; z-index: auto; box-shadow: none;
+    background: transparent; border: 0; padding: 0;
+  }
+  .ics-toolbar .vub-textsize-fab button { min-height: 44px; }
+  .ics-toolbar .vub-help-fab { position: static; box-shadow: none; min-height: 44px; }
+  .slide :is(.ribbon-tabs, .taskbar-demo) { flex-wrap: wrap; }
+  .slide .taskbar-time { flex-shrink: 0; }
+  :is(button, a, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid #1B365D; outline-offset: 3px;
+    box-shadow: 0 0 0 6px #fff;
+  }
+  :is(.sidebar, .ics-toolbar) :is(button, a):focus-visible {
+    outline-color: #F5C84C; box-shadow: none;
+  }
+  @media (max-width: 1100px) {
+    .slide :is(.two-column, .three-column, .icon-grid) { grid-template-columns: minmax(0, 1fr); }
+    .slide :is(.completion-stats, .app-card, .shortcut-row, .handout-prompt, .key-point, .card-header) { flex-wrap: wrap; }
+  }
+  @media (max-width: 900px) {
+    .ics-toolbar { margin-left: 0; padding: 0.6rem 0.75rem; }
+    .ics-menu-toggle {
+      display: block; background: #fff; color: #1B365D; border: 0;
+      padding: 0.6rem 0.75rem; border-radius: 6px; min-height: 44px;
+      font: inherit; font-weight: 600;
+    }
+    .ics-course-link { order: 3; width: 100%; }
+    .sidebar { position: relative; inset: auto; width: 100%; height: auto; max-height: 70vh; }
+    .sidebar[hidden] { display: none; }
+    :is(.main-content, .main) { margin-left: 0; width: 100%; padding: 0.75rem; }
+    .slide { padding: 1rem; }
+    .slide :is(.column, .card, .info-box, .highlight-box, .demo-box, .review-card, .title-slide, .completion-message) { padding: 0.75rem; }
+    .slide :is(.two-column, .three-column, .icon-grid) { gap: 1rem; }
+    :is(.nav-buttons, .nav-footer, .nav-controls) { padding: 0.75rem; gap: 0.75rem; }
+    :is(.nav-buttons, .nav-footer, .nav-controls) .slide-counter { order: -1; flex-basis: 100%; text-align: center; }
+    .nav-btn { padding: 0.75rem; flex: 1 1 95px; justify-content: center; }
+    .slide .shortcut-keys { flex-wrap: wrap; }
+  }
+}
+@media print { .ics-toolbar { display: none !important; } }

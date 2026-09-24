@@ -173,9 +173,13 @@
     .print-report { display: none; }
 
     @media print {
-      body * { visibility: hidden; }
-      .print-report, .print-report * { visibility: visible; }
-      .print-report { display: block !important; position: absolute; left: 0; top: 0; width: 100%; background: white; padding: 0.5in; }
+      @page { margin: 0.5in; }
+      body { margin: 0; padding: 0; background: white; }
+      body > :not(.quiz-container), .quiz-container > :not(.print-report) { display: none !important; }
+      .quiz-container { display: block; max-width: none; width: auto; padding: 0; margin: 0; }
+      .print-report { display: block !important; position: static; width: auto; background: white; padding: 0; }
+      .report-info { flex-wrap: wrap; gap: 1rem; }
+      .report-info > div { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
       .report-header { border-bottom: 3px solid #1B365D; padding-bottom: 1rem; margin-bottom: 1.5rem; text-align: center; }
       .report-header h1 { color: #1B365D; font-size: 1.5rem; margin: 0 0 0.25rem 0; }
       .report-header h2 { color: #5A6A7A; font-size: 1rem; font-weight: normal; margin: 0 0 0.5rem 0; }
@@ -221,6 +225,8 @@
       .nav-btn { padding: 0.75rem 1.25rem; font-size: 0.95rem; }
     }
   </style>
+  <link rel="stylesheet" href="/shared/assessment-pairing.css">
+  <script src="/shared/assessment-pairing.js"></script>
 </head>
 <body>
   <header class="quiz-header">
@@ -278,6 +284,8 @@
           <p id="instructorError" role="alert" style="color:var(--danger);margin-top:.5rem" hidden>Please enter your instructor's name to begin.</p>
         </div>
 
+        <section id="assessmentPairing" class="assessment-pairing" aria-label="Choose a pre-test comparison"></section>
+
         <button class="btn-start" id="btnStart">Begin Final Assessment &#x2192;</button>
       </div>
     </div>
@@ -293,8 +301,8 @@
           <li>You can change your answers any time before submitting</li>
         </ul>
         <p class="important">
-          &#x1F389; This is your moment to shine! Your results will be compared to your pre-test to show
-          how much you have improved.
+          &#x1F389; This is your moment to shine! If you confirm your own pre-test attempt, your report will include
+          a comparison of the two scores.
         </p>
       </div>
 
@@ -364,6 +372,7 @@
         <div class="report-score-number" id="reportScore">0%</div>
         <div class="report-score-detail" id="reportScoreDetail">0 of 20 correct</div>
       </div>
+      <p id="reportPairingNote"></p>
       <div class="report-comparison" id="reportComparison" style="display: none;">
         <h3>Course Progress Comparison</h3>
         <div class="report-comparison-scores">
@@ -563,15 +572,7 @@
     }
 
     function init() {
-      try {
-        var saved = localStorage.getItem('vub_dl1_pretest_results');
-        if (saved) {
-          preTestResults = JSON.parse(saved);
-          if (preTestResults && preTestResults.name) participantInput.value = preTestResults.name;
-        }
-      } catch (e) {
-        // Pre-test results unavailable or unreadable — the pre/post comparison simply won't show.
-      }
+      window.assessmentPairing = VUBAssessmentPairing({ preKey: 'vub_dl1_pretest_results', postKey: 'vub_dl1_posttest_results' });
 
       renderQuestions();
       renderQuestionDots();
@@ -662,6 +663,7 @@
         (nameOk ? instructorInput : participantInput).focus();
         return;
       }
+      preTestResults = window.assessmentPairing.getConfirmed();
       startSection.classList.add('hidden');
       quizSection.classList.add('active');
       progressContainer.style.display = 'flex';
@@ -718,6 +720,7 @@
     }
 
     function submitQuiz() {
+      preTestResults = window.assessmentPairing.getConfirmed();
       if (Object.keys(answers).length < questions.length) {
         alert('Please answer all questions before submitting.');
         return;
@@ -764,8 +767,8 @@
       } else {
         comparisonBox.innerHTML =
           '<h3>&#x1F4C8; Your Improvement</h3>' +
-          '<p style="color: var(--gray); text-align: center; margin: 0;">Pre-test results were not found on this computer. ' +
-          'If you took the pre-test on a different workstation, your instructor has your baseline score on file.</p>';
+          '<p style="color: var(--gray); text-align: center; margin: 0;">No pre-test attempt was confirmed as yours. Your post-test score stands on its own. ' +
+          'Your instructor can compare your saved reports.</p>';
         comparisonBox.style.display = 'block';
       }
 
@@ -816,7 +819,8 @@
         score: overallPercentage,
         answers: answers,
         categories: categories,
-        preTestScore: preTestResults ? preTestResults.score : null
+        preTestScore: preTestResults ? preTestResults.score : null,
+        preTestAttempt: preTestResults
       };
       try {
         localStorage.setItem('vub_dl1_posttest_results', JSON.stringify(results));
@@ -837,7 +841,8 @@
         percentage: overallPercentage,
         categories: categories,
         answers: answers,
-        preTestScore: preTestResults ? preTestResults.score : null
+        preTestScore: preTestResults ? preTestResults.score : null,
+        preTestAttempt: preTestResults
       };
     }
 
@@ -882,6 +887,7 @@
       document.getElementById('reportScore').textContent = results.percentage + '%';
       document.getElementById('reportScoreDetail').textContent = results.totalCorrect + ' of ' + results.totalQuestions + ' correct';
 
+      document.getElementById('reportPairingNote').textContent = results.preTestAttempt ? 'Compared with the pre-test you confirmed: ' + results.preTestAttempt.name + ' · ' + (results.preTestAttempt.date || 'date unavailable') + '.' : 'No pre-test comparison: no attempt was confirmed as yours.';
       var reportComparison = document.getElementById('reportComparison');
       if (results.preTestScore !== null && results.preTestScore !== undefined) {
         var improvement = results.percentage - results.preTestScore;

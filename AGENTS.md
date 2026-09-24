@@ -3,11 +3,11 @@
 ## What this repo is
 
 **VUB Learning** — the Veterans Upward Bound course platform for WV Veterans Upward
-Bound. It is a **static site hosting three independent courses**, not a single course.
+Bound. It is a **static site hosting four independent courses**, not a single course.
 
 > **Repo naming:** this repo was renamed `VUB-Financial-Readiness` → **`vublessons`** on
 > 2026-07-28, matching the `package.json` name. It carried the old name from when it held
-> only the Financial Readiness course — which is now **one of three** courses here.
+> only the Financial Readiness course — which is now **one of four** courses here.
 > GitHub redirects the old URL, so stale clones and links keep working, but use
 > `doclegg05/vublessons`. Older `docs/` and `_archive/` references to the previous name
 > are historical and were left as-is.
@@ -23,12 +23,14 @@ Bound. It is a **static site hosting three independent courses**, not a single c
 | `computer-skills` | Intermediate Computer Skills | 8 weeks | `ics` | `courses/computer-skills/index.html` |
 | `financial-readiness` | VUB Financial Readiness | 5 modules | `fr` | `courses/financial-readiness/financial-readiness.html` |
 | `digital-literacy-1` | Digital Literacy — Level 1 (IC3 GS6) | 5 weeks | `dl1` | `courses/digital-literacy-1/index.html` |
+| `digital-literacy-2` | Digital Literacy — Level 2 (IC3 GS6 + web app extension) | 6 weeks | `dl2` | `courses/digital-literacy-2/index.html` |
 
 `courses.json` at the repo root is the **catalog source of truth**. It drives the homepage
 cards and each course console. Adding or renaming a lesson means editing `courses.json`
 *and* the course tree — they are not generated from each other.
 
-Digital Literacy L1 is the first rung of a planned Level 1 → 2 → 3 ladder.
+Digital Literacy L1 and L2 are the first two rungs of the Level 1 → 2 → 3 ladder.
+DL2 authoring and validation: `docs/digital-literacy-2/HANDOFF.md`.
 Design spec: `docs/specs/2026-06-24-digital-literacy-l1-design.md`.
 
 ---
@@ -39,7 +41,7 @@ Design spec: `docs/specs/2026-06-24-digital-literacy-l1-design.md`.
 index.html          # platform homepage (catalog, data-driven from courses.json)
 404.html
 courses.json        # CATALOG — drives homepage + consoles
-courses/            # the three course trees (see table above)
+courses/            # the four course trees (see table above)
 instructors/        # intake form, class rosters, assessment service kit, syllabus overview
 shared/             # cross-course CSS/JS — loaded by every page via /shared/... absolute paths
 assets/             # brand images, seal, flag, self-hosted fonts
@@ -70,7 +72,7 @@ python tools/link-check.py   # internal link integrity (expects 0 broken)
 
 The build is a **copy, not a bundler** — the tree is already deployment-shaped.
 `scripts/build-site.js` copies `PUBLISH` items, asserts a `REQUIRED_FILES` list survived,
-and strips `.mp4`/`.mp3`/`.mov` as a safety net (course video is YouTube-hosted).
+and strips `.mp4`/`.mp3`/`.mov` as a safety net, except the six hash-verified compact DL2 videos listed in `courses/digital-literacy-2/media/manifest.json`.
 If you add a load-bearing top-level file, add it to `PUBLISH`.
 
 **Known failing tests:** the 5 `tests/functional/dl1-sidebar-scroll.spec.js` cases fail on

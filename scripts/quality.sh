@@ -10,13 +10,14 @@
 #   2. tools/link-check.py       — internal links across courses/, instructors/,
 #                                  index.html; exits 1 on any broken link
 #   3. scripts/check-courses.mjs — courses.json <-> courses/ tree drift check
-#   4. Playwright suite          — the full 18-test suite against the built
+#   4. Playwright suite          — the full suite against the built
 #                                  dist/site. Nothing is quarantined: the 5
 #                                  dl1-sidebar-scroll cases were fixed
 #                                  2026-07-28 (see .claude/MEMORY.md) and pass.
 #   5. scripts/a11y-check.mjs    — axe-core WCAG A/AA scan (computed contrast)
-#                                  of the homepage + one lesson page per course
-#                                  in dist/site. Report-only ratchet: fails only
+#                                  of the homepage, course/assessment entries,
+#                                  every lesson entry, and instructor pages.
+#                                  Blocking ratchet: fails only
 #                                  on violations beyond the committed shrink-only
 #                                  allowlist scripts/a11y-baseline.json.
 set -euo pipefail

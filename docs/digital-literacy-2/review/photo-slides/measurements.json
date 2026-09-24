@@ -1,0 +1,86 @@
+[
+  {
+    "name": "print",
+    "device": "desktop",
+    "overflow": false,
+    "slideHeight": 1543.484375
+  },
+  {
+    "name": "recovery",
+    "device": "desktop",
+    "overflow": false,
+    "slideHeight": 1104.484375
+  },
+  {
+    "name": "storyboard",
+    "device": "desktop",
+    "overflow": false,
+    "slideHeight": 1146.828125
+  },
+  {
+    "name": "email",
+    "device": "desktop",
+    "overflow": false,
+    "slideHeight": 1079.609375
+  },
+  {
+    "name": "safety",
+    "device": "desktop",
+    "overflow": false,
+    "slideHeight": 1461.71875
+  },
+  {
+    "name": "comfort",
+    "device": "desktop",
+    "overflow": false,
+    "slideHeight": 1639.96875
+  },
+  {
+    "name": "data-boundaries",
+    "device": "desktop",
+    "overflow": false,
+    "slideHeight": 1192.890625
+  },
+  {
+    "name": "print",
+    "device": "mobile",
+    "overflow": false,
+    "slideHeight": 2360.421875
+  },
+  {
+    "name": "recovery",
+    "device": "mobile",
+    "overflow": false,
+    "slideHeight": 1729.625
+  },
+  {
+    "name": "storyboard",
+    "device": "mobile",
+    "overflow": false,
+    "slideHeight": 2175.03125
+  },
+  {
+    "name": "email",
+    "device": "mobile",
+    "overflow": false,
+    "slideHeight": 1952.21875
+  },
+  {
+    "name": "safety",
+    "device": "mobile",
+    "overflow": false,
+    "slideHeight": 2022
+  },
+  {
+    "name": "comfort",
+    "device": "mobile",
+    "overflow": false,
+    "slideHeight": 2188.21875
+  },
+  {
+    "name": "data-boundaries",
+    "device": "mobile",
+    "overflow": false,
+    "slideHeight": 2407.265625
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Build something small enough to understand",
+    "startSeconds": 0.45
+  },
+  {
+    "title": "Distinguish a website, an app, and a service",
+    "startSeconds": 45.746
+  },
+  {
+    "title": "Understand the three parts of the page",
+    "startSeconds": 91.925
+  },
+  {
+    "title": "Write checks before asking for code",
+    "startSeconds": 133.855
+  },
+  {
+    "title": "Give the AI a bounded, useful request",
+    "startSeconds": 180.103
+  },
+  {
+    "title": "Open a working version before changing it",
+    "startSeconds": 224.122
+  },
+  {
+    "title": "Test the happy path and the missing result",
+    "startSeconds": 266.934
+  },
+  {
+    "title": "Test access, screen size, and data assumptions",
+    "startSeconds": 311.023
+  },
+  {
+    "title": "Request one repair and retest what worked",
+    "startSeconds": 354.81
+  },
+  {
+    "title": "Demonstrate the result and name its limits",
+    "startSeconds": 404.193
+  }
+]

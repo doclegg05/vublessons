@@ -1,0 +1,33 @@
+<item anchor="intro" title="Cloud files: share, sync, and recover" text="Choose who can use a cloud file and recover work when something changes."></item>
+<say lang="en-US" title="Cloud files" text="[Cloud files](#intro) need clear permissions, a sync check, and a recovery plan."/>
+<item layout="cards" anchor="copies" title="Where is your file?"><item anchor="local" title="On this device" text="Available from this computer."/><item anchor="cloud" title="In your cloud account" text="Available from signed-in devices with access."/></item>
+<say lang="en-US" title="Where is your file?" text="[File location](#copies) matters when you change computers. A [local file](#local) stays on that device unless you copy or sync it. A [cloud file](#cloud) is stored by a service under an account. Before leaving a lab computer, check that your latest changes finished uploading."/>
+<item layout="cards" anchor="rights" title="Choose the smallest useful permission"><item anchor="viewer" title="Viewer" text="Read the resource."/><item anchor="commenter" title="Commenter" text="Suggest a change."/><item anchor="editor" title="Editor" text="Change the content."/></item>
+<say lang="en-US" title="Choose permission" text="[Sharing permissions](#rights) control what another person can do. Give a classmate [viewer access](#viewer) to read a finished handout. Use [commenter access](#commenter) for feedback when your service offers it. Give [editor access](#editor) only when that person should change the file. A link does not automatically mean everyone has permission."/><item type="animation" anchor="sync" title="Sync carries changes between devices"><![CDATA[
+export function build(manim) {
+  const {Scene,Text,SurroundingRectangle,VGroup,FadeIn,Indicate,BLUE,GOLD,WHITE}=manim;
+  const scene=new Scene();
+  const a=Text("Laptop",{color:WHITE}).scale(0.6).move_to([-2,1,0]);
+  const b=Text("Cloud",{color:WHITE}).scale(0.6).move_to([2,1,0]);
+  const c=Text("File",{color:GOLD}).scale(0.5).move_to([-2,-1,0]);
+  scene.play(FadeIn(a),FadeIn(b),{run_time:2});
+  scene.play(FadeIn(c),{run_time:2});
+  scene.play(c.animate.move_to([2,-1,0]),{run_time:3});
+  scene.play(Indicate(b),{run_time:2});
+  scene.wait(0.5);
+  return scene;
+}
+]]></item>
+<say lang="en-US" title="Check sync" text="[Sync](#sync) copies a change between a device and the online service. Uploading can take time, and an offline device cannot send its newest changes yet. Look for the service's saved or synced message before switching computers. A sync folder can also copy a deletion, so sync alone is not a separate backup."/>
+<item layout="ol" anchor="share" title="Share a practice handout"><item anchor="select" title="Choose the file" text="Use a fictional class handout."/><item anchor="invite" title="Name the recipient" text="Check the exact address."/><item anchor="permission" title="Set access" text="Choose viewer or commenter."/><item anchor="verify" title="Verify the result" text="Ask the recipient to open it."/></item>
+<say lang="en-US" title="Share a handout" text="[A careful share](#share) begins with [the right file](#select). Use a fictional practice handout. Check [the recipient's address](#invite), because a similar name may belong to someone else. Choose [the permission](#permission) that fits the task. Then [verify access](#verify) with that person. If access fails, inspect the account and permission instead of making the file public."/>
+<item layout="cards" anchor="recovery" title="Two different recovery tools"><item anchor="trash" title="Trash or recycle bin" text="Find a deleted file."/><item anchor="history" title="Version history" text="Find earlier content."/></item>
+<say lang="en-US" title="Recovery tools" text="[Recovery tools](#recovery) solve different problems. If the whole file is missing, check [trash or the recycle bin](#trash). If the file exists but its content changed, inspect [version history](#history). Available versions and retention periods vary by service. Preview an earlier version before restoring it, and coordinate with anyone else editing the file."/>
+<item layout="cards" anchor="question" title="Which permission fits?"><item anchor="task" title="The task" text="A classmate should suggest clearer wording."/><item anchor="choice" title="Your choice" text="Viewer, commenter, or editor?"/></item>
+<say lang="en-US" title="Permission check" text="[This classmate](#question) needs to [suggest wording](#task), while you keep control of the final text. Pause playback and choose [a permission](#choice). When the service supports it, commenter fits this task. Viewer cannot add feedback in the file, and editor allows more changes than this task requires."/>
+<item layout="ol" anchor="cleanup" title="Finish safely on a shared computer"><item anchor="saved" title="Confirm the save" text="Check sync before closing."/><item anchor="localcopy" title="Check local copies" text="Remove your practice downloads if appropriate."/><item anchor="signout" title="Sign out" text="Leave the account, then close the browser."/></item>
+<say lang="en-US" title="Shared computer" text="[Before leaving a shared computer](#cleanup), [confirm the file is saved](#saved). Check [Downloads](#localcopy) for copies you created. Follow the lab's instructions for removing your files. Then [sign out](#signout) of the account and close the browser. Closing a tab alone may leave the account signed in."/>
+<item layout="ol" anchor="practice" title="Try it with a fictional file"><item anchor="practice1" title="Share for feedback" text="Choose a named classmate and limited access."/><item anchor="practice2" title="Find an earlier version" text="Inspect history before restoring."/><item anchor="practice3" title="Explain your choice" text="Tell a partner why the permission fits."/></item>
+<say lang="en-US" title="Your practice" text="[Your practice](#practice) uses a fictional file with no personal records. [Share it for feedback](#practice1), [inspect an earlier version](#practice2), and [explain your permission choice](#practice3). If a feature is unavailable, describe the steps with your instructor. You have a useful routine: check the location, limit access, confirm sync, and know how to recover."/>
+<followup prompt="How do I spot a misleading search result?"/>
+<followup prompt="How do I write helpful feedback on a shared document?"/>
