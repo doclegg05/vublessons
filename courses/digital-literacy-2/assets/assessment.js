@@ -4,6 +4,7 @@
   const version=kind==='post'?3:2;
   const key=`vub:dl2:assessment:v${version}:${kind}`;
   const box=document.querySelector('#questions'), error=document.querySelector('#assessment-error'), results=document.querySelector('#results');
+  let labelTopic=()=>{};
   let questions=[], data={answers:{},learner:'',preScore:'',graded:false,index:0,review:false};
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function save(){try{sessionStorage.setItem(key,JSON.stringify(data));}catch(_){error.textContent='This browser cannot save the draft. You can still finish and print this page; keep it open until then.';}}
@@ -13,7 +14,7 @@
     document.querySelector('#assessment-progress').value=count;
     document.querySelector('#grade').classList.toggle('ready',count===28);
     document.querySelectorAll('[data-topic-index]').forEach((button,i)=>{
-      const group=questions.slice(i*4,i*4+4);button.querySelector('small').textContent=`${group.filter(q=>Number.isInteger(data.answers[q.id])).length} / 4 answered`;
+      const group=questions.slice(i*4,i*4+4);labelTopic(button,i,group.filter(q=>Number.isInteger(data.answers[q.id])).length);
       if(Math.floor(data.index/4)===i)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');
     });
   }
@@ -69,7 +70,9 @@
     const response=await fetch('/courses/digital-literacy-2/assets/questions.json');if(!response.ok)throw new Error('Question file unavailable');const bank=await response.json();questions=bank[kind];if(!Array.isArray(questions)||questions.length!==28)throw new Error('Invalid question bank');
     try{const parsed=JSON.parse(sessionStorage.getItem(key)||'null');if(parsed&&typeof parsed.answers==='object'&&parsed.answers!==null){data={answers:{},learner:typeof parsed.learner==='string'?parsed.learner.slice(0,80):'',preScore:typeof parsed.preScore==='string'?parsed.preScore:'',graded:parsed.graded===true,index:Number.isInteger(parsed.index)&&parsed.index>=0&&parsed.index<28?parsed.index:0,review:parsed.review===true};questions.forEach(q=>{if(Number.isInteger(parsed.answers[q.id])&&parsed.answers[q.id]>=0&&parsed.answers[q.id]<q.options.length)data.answers[q.id]=parsed.answers[q.id];});}}catch(_){}
     const short=['Technology','Citizenship','Information','Creating','Communication','Collaboration','Safety'];
-    document.querySelector('#assessment-topics').innerHTML=questions.filter((_,i)=>i%4===0).map((q,i)=>`<button type="button" data-topic-index="${i}" aria-label="${esc(q.domain)}"><span class="topic-number">${i+1}</span><span>${short[i]}<small>0 / 4 answered</small></span></button>`).join('');
+    // The accessible name keeps the visible short label (WCAG 2.5.3), adds the full domain, and tracks the live count.
+    labelTopic=(button,i,answered)=>{const count=`${answered} / 4 answered`;button.querySelector('small').textContent=count;button.setAttribute('aria-label',`${i+1}. ${short[i]}. ${questions[i*4].domain}. ${count}`);};
+    document.querySelector('#assessment-topics').innerHTML=questions.filter((_,i)=>i%4===0).map((q,i)=>`<button type="button" data-topic-index="${i}" aria-label="${i+1}. ${short[i]}. ${esc(q.domain)}. 0 / 4 answered"><span class="topic-number">${i+1}</span><span>${short[i]}<small>0 / 4 answered</small></span></button>`).join('');
     box.innerHTML=questions.map((q,i)=>`<fieldset id="group-${q.id}" tabindex="-1"><legend><span class="visually-hidden">${esc(q.domain)}</span>${i+1}. ${esc(q.question)}</legend>${q.options.map((o,j)=>`<label><input type="radio" name="${q.id}" value="${j}" ${data.answers[q.id]===j?'checked':''}> <span>${esc(o)}</span></label>`).join('')}</fieldset>`).join('');
     form.elements.learner.value=data.learner;if(form.elements.preScore)form.elements.preScore.value=data.preScore;
     document.querySelector('#grade').disabled=false;document.querySelector('#review-questions').disabled=false;
