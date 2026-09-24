@@ -6,5 +6,5 @@
 @media screen{body .slide :is(p,li,label,.flip-front,.flip-back,.feedback,summary,input,select){font-size:max(32px,var(--fs-slide,32px))!important}}
 @media screen{body .slide .check-options button{font-size:max(32px,var(--fs-slide,32px))!important;line-height:1.6!important}}
 @media print{body .slide .check-options button{font-size:24pt!important;line-height:1.45!important;background:white;color:black}}
-/* Keep the offscreen skip link hidden even in full-page captures; reveal on focus. */
-.skip{visibility:hidden}.skip:focus{visibility:visible}
+/* Skills-challenge worksheet table (week 5). */
+.challenge td{vertical-align:top}.challenge .worksheet-input{min-height:4rem}.rating{margin:0;padding:0;border:0}.rating label{display:block;white-space:nowrap}.procedure li{margin-top:.5em}

@@ -8,40 +8,21 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-Consolidated and healthy. All three courses live and serving 200. Build clean (152 pages), link check 0 broken, **Playwright 18/18 green**.
+Four courses. Digital Literacy Level 2 lives on `codex/digital-literacy-level-2` (`84859da`) and was
+reviewed 2026-09-24; course and video fixes are in PR #18, stacked on PR #17. Full Playwright
+suite 128/128, link check 0 broken. Cohort starts 2026-09-28 per the DL2 syllabus.
 
 ## Last Session
-- **Date**: 2026-07-28
-
-**Asked for:** "merge the VUB-Course and VUB-Financial-Readiness repos without affecting the web version."
-
-**What was actually true:** the merge had already happened in the June 2026 M1–M3 consolidation. `VUB-Course` was a superseded duplicate, unchanged since February, formally marked "archive, never canonical". The platform copy was strictly ahead everywhere (a11y fixes, resources sections, `shared/` integration, 8 extra handouts). So the job was a **retirement**, not a merge — plus a live defect the consolidation had left behind.
-
-**The live defect (main deliverable).** Week 2 of Computer Skills was changed from Video Conferencing to Windows Tips in June, but its assessments were never updated. From June to 2026-07-28 the live site tested veterans on Zoom, VA Video Connect, and telehealth — 3 questions on the pre-test, 3 on the post-test — for a lesson that teaches Windows shortcuts. Rewrote all six from the actual slide content, kept pre/post parallel so gain comparison survives, and updated both printables, both instructor answer keys, the topic lists, and `syllabus-overview.html`. Deleted 3 orphaned Zoom handouts.
-
-**Work completed, in order** (`ad74312` → `b327ea1`):
-| # | Change |
-|---|--------|
-| 1 | Week 2 assessment alignment + orphaned handout removal (live content fix) |
-| 2 | `AGENTS.md` rewritten for the platform — it was a stale copy of the old single-course briefing pointing at a root `css/ js/ weeks/` layout that doesn't exist |
-| 3 | `VUB-Course` retired: Pages disabled, repo archived read-only, local clone removed |
-| 4 | Repo renamed `VUB-Financial-Readiness` → `vublessons`; local folder and remote updated |
-| 5 | 5 long-failing DL1 sidebar-scroll tests fixed → suite 18/18 |
-
-**Decisions:**
-  - Week 2 stays **Windows Tips & Productivity**; the Video Conferencing lesson is retired (preserved in the archived `VUB-Course` repo at `2870359`).
-  - Retire `VUB-Course` rather than merge — nothing in it was newer.
-  - Rename to `vublessons` — initially deferred for deploy risk, then done once preflight showed Netlify links via the GitHub App (repo ID, not name) with no classic webhooks.
-  - Fix the DL1 *tests*, not the page — the feature works; the tests scrolled the wrong element.
-
-- **Where we left off**: Everything green and deployed. `vublessons` is the single source for vublessons.com. All remaining open items are either Windows-only or pre-existing.
-
-### Deploy facts (verified, not inferred)
-vublessons.com is Netlify project `vubcourse` (site id `714b5a28-24ff-4394-9a7c-8c364aa89f4d`), building **`doclegg05/vublessons` branch `main`** — confirmed by the Netlify deploy record's `commit_url`, by `VUB-Course` having had no `netlify.toml`/`package.json`/`scripts/` at all, and by a push landing live in ~20s. `VUB-Course` never fed vublessons.com; it published a *separate* copy via GitHub Pages, now disabled.
-
-The repo rename (2026-07-28) did **not** break the deploy: Netlify links via the GitHub App (tracks repo ID, not name), and there are no classic webhooks on the repo. Verified by a post-rename push producing a fresh deploy.
+- **Date**: 2026-09-24
+- **What we worked on**: Six-agent review of Digital Literacy Level 2 (UI, content x3, functional x2), then fixed the six High findings; then a second six-agent review of the six lesson videos (visual x2, narration x2, playback, encoding), findings only, no fixes yet in `scripts/dl2/` generators plus `course.css` and `assessment.js`. Review reports are in the session scratchpad (`reports/00-DL2-REVIEW-SUMMARY.md` and 01 to 06); summary was delivered to Britt as files.
+- **What we decided**: Course content does not need veteran / VA / telehealth framing unless the topic calls for it (auto-memory holds the detail: `dl2-veteran-framing-not-required`). Decks keep starting keyboard focus inside the current slide; the skip link only had to become focusable. Topic-button accessible names come from a synced `aria-label`, not a hidden span (a hidden span escaped the scrolling row and broke mobile).
+- **Where we left off**: Course fixes and video fixes committed as six commits and opened as PR #18 (https://github.com/doclegg05/vublessons/pull/18), stacked on PR #17 (the DL2 course branch to main). Quality gate passed before push. Six videos re-rendered and re-verified. Remaining course findings (2 mobile Highs from the UI pass, 32 Mediums) not yet actioned. Video narration items need a re-record (listed in HANDOFF.md).
 
 ## Open Items
+- [x] ~~DL2 video review fixes~~ done 2026-09-24: all visual and caption findings fixed in the generators and re-rendered (see HANDOFF.md "Video review fixes"). Still open, need a re-record: pause-prompt timing, fast chapters, week 3 formula cause, week 6 undefined terms, week 5 challenge setup.
+- [ ] Merge PR #17 (DL2 course) then PR #18 (review fixes, stacked on #17).
+- [ ] DL2 UI Highs still open: Text Size widget covers text on `activities/resource-finder.html` at mobile width (page loads no course CSS); syllabus and sources tables overflow at 375px (`.table-scroll` exists, unused).
+- [ ] DL2 Mediums from the 2026-09-24 review (post-test guessability, throwaway knowledge-check distractors, four untested IC3 objective groups, answer key reachable from learner nav, no `<h1>` in decks, undefined terms, thin instructor guide).
 - [x] ~~Disable GitHub Pages on `doclegg05/VUB-Course`~~ — done 2026-07-28. `doclegg05.github.io/VUB-Course/` now 404s.
 - [x] ~~Re-archive `doclegg05/VUB-Course` read-only~~ — done 2026-07-28. Archived, public, content preserved at `2870359` (includes the retired Video Conferencing Week 2).
 ### ⚠️ ON THE WINDOWS MACHINE — two tasks, can't be done from the Mac

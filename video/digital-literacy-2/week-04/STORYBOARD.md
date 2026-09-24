@@ -53,7 +53,7 @@ Scene 1 (0–42.511s): Authored fictional demonstration with chapter-specific ev
 - transition_in: cut
 - scene: email-fields / screen-share
 - photo: none: full-stage authored demonstration
-- worked states: Inspect every recipient before sending; Cc is visible to the recipients; Bcc hides addresses • it is not confidentiality; Reply all: check the entire recipient list; Remove the unnecessary Cc recipient; Keep a clear request and response window • draft only
+- worked states: Inspect every recipient before sending; Cc is visible to the recipients; Bcc hides addresses • it is not confidentiality; Reply all: check the entire recipient list; Remove the class list and the Bcc list; Add a reasonable response window • draft only
 - voiceover: "Before sending a real email, inspect every recipient field. To usually identifies the main recipients. Cc sends a visible copy to people who need to be informed. Bcc hides those recipients' addresses from the other recipients, but it does not make the message confidential or stop someone from forwarding it. Reply all can send your response to more people than you intended. Check whether everyone needs that response. Timing also matters: a late message with an immediate deadline may be difficult for others to act on. Pause and review your fictional draft. Remove unnecessary recipients and give the partner a reasonable response window. Clear communication includes both the content and its destination."
 - blueprint: compose
 
@@ -64,7 +64,7 @@ Scene 1 (0–45.947s): Full-screen task simulation with word-aligned cursor, cli
 - duration: 45.134s
 - status: animated
 - transition_in: cut
-- scene: roles / demonstration
+- scene: consolidate / demonstration
 - photo: none: full-stage authored demonstration
 - worked states: Before|Three competing file copies; Agree|One shared handout; Coordinate|Roles, access and response time
 - voiceover: "Imagine three people editing three separate handouts and calling each one final. It becomes difficult to know which instructions to use. Instead, agree where the common copy lives and what each person is responsible for. The owner coordinates the final decision, the writer drafts, and the reviewer suggests improvements. Give each person access appropriate to that task, and verify that the link opens for them. Working together at the same time is synchronous collaboration. Leaving comments for later is asynchronous collaboration. Neither is automatically better. Choose the arrangement that fits people's schedules and the decision needed, then record the agreed outcome in the shared place."

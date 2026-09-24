@@ -27,7 +27,7 @@ Scene 1 (0–38.656s): Authored fictional demonstration with chapter-specific ev
 - transition_in: cut
 - scene: zoom / screen-share
 - photo: none: full-stage authored demonstration
-- worked states: Start at 100% • change only the webpage; Open the browser menu; Find Zoom • choose one step; 125% • the page is larger; Check the search field and button; Ctrl + 0 • restore the original zoom
+- worked states: Start at 100% • change only the webpage; Open the browser menu; Find Zoom • choose one step; 110% • the page is larger; Check the search field and button; Ctrl + 0 • restore the original zoom
 - voiceover: "Imagine the library page is difficult to read, but the computer's other menus look comfortable. Start with the browser's zoom control because the problem is inside that page. Open the browser menu, find Zoom, and increase it one step. On many Windows browsers, Control and plus also zooms in; Control and zero returns to the default. Watch the page get larger. Then check the important part: can you still find the search field, read the instructions, and reach the button? Larger is useful only if the task still works. Pause the video, try one zoom step on a practice page, and restore it before continuing."
 - blueprint: compose
 

@@ -1070,7 +1070,7 @@
         [
           25,
           "Performance challenge",
-          "Learners demonstrate the core tasks on the worksheet. Instructor records independent, prompted or needs practice."
+          "Learners work the seven challenge rows on the worksheet in pairs; the materials for each row are printed on it. The instructor circulates and marks each row Independent, With prompt or Needs practice. Keep supplies.csv from week 3 open on each workstation."
         ],
         [
           25,
@@ -1253,7 +1253,53 @@
         "Encryption needs a key; passwords can protect opening or editing; read-only does not prove encryption.",
         "Mark each of seven tasks Independent / With prompt / Needs practice; keep performance separate from quiz score.",
         "Result preserved by learner; specific task linked to a domain that needs practice."
-      ]
+      ],
+      "challenge": {
+        "item": 6,
+        "intro": "Work each row with a partner. Type what you did, then leave the rating column for your instructor. This challenge is separate from the post-test score.",
+        "ratings": [
+          "Independent",
+          "With prompt",
+          "Needs practice"
+        ],
+        "tasks": [
+          [
+            "Refine a public-service search",
+            "Search phrase: senior center hours. Narrow it to Beckley and to this year.",
+            "Adds a place and a date term to the search; explains why the narrower phrase gives a more useful list."
+          ],
+          [
+            "Justify a source",
+            "Two fictional results: a county health department page updated this month, and an anonymous forum post from three years ago.",
+            "Chooses the department page and names at least two checks: who wrote it, when, and what evidence it gives."
+          ],
+          [
+            "Create a structured paragraph",
+            "Topic: how to reach the fictional Community library help desk. Include a heading, a three-step bulleted list and one bold warning line.",
+            "Heading, list and bold are applied with the toolbar, not typed with spaces or symbols."
+          ],
+          [
+            "Calculate a three-item total",
+            "Open supplies.csv from week 3. Add a Total cell for paper 12, folders 8 and pens 5.",
+            "A formula such as =SUM(B2:B4) or =B2+B3+B4 shows 25; the cell holds the formula, not a typed number."
+          ],
+          [
+            "Choose sharing access",
+            "A partner needs to suggest wording on your paragraph but must not change it.",
+            "Chooses Commenter and says why Viewer and Editor do not fit the task."
+          ],
+          [
+            "Give useful feedback",
+            "A partner\u2019s handout says Call the library with no phone number or hours.",
+            "Names what is missing, why a reader needs it, and one specific fix."
+          ],
+          [
+            "Name a recovery method",
+            "You deleted a paragraph from the practice file ten minutes ago and saved.",
+            "Names version history, or Undo before closing, and says how to check that the recovered text is back."
+          ]
+        ]
+      }
     },
     {
       "n": 6,
@@ -1366,7 +1412,7 @@
         },
         {
           "title": "No AI account? You can still build",
-          "body": "Edit the supplied HTML in a plain-text editor. Change the heading and one fictional resource, save, then reopen the file. Use the worksheet\u2019s exact edit steps.",
+          "body": "Edit the supplied HTML in a plain-text editor such as Notepad or TextEdit. Change the heading and one fictional resource, save it with the .html name, then reopen the file in your browser. The worksheet lists the exact steps.",
           "kind": "try"
         },
         {
@@ -1458,7 +1504,7 @@
         "Name the app\u2019s user, problem and three acceptance checks. Keep the scope to one page.",
         "Write a prompt naming content, behavior, accessibility and privacy boundaries.",
         "Open the starter. Save a copy as resource-finder-v1.html using a plain-text editor. If working offline, no AI tool is required.",
-        "Find the <h1> heading in the source and replace only its text. In the resources array, change the fictional Community library name to Community Skills Desk. Save as resource-finder-v2.html and reopen.",
+        "Find the <h1> heading in the source and replace only its text. In the resources array, change the fictional Community library name to Community Skills Desk. Save as resource-finder-v2.html, reopen it, and search skills to confirm Community Skills Desk appears.",
         "Ask an approved AI tool for one small improvement, or make the heading/data edit manually. Record exactly what changed.",
         "Test blank input, matching and nonmatching search, mixed case, category filters, keyboard focus and narrow-screen layout. Record expected, actual and pass/fail.",
         "Fix one defect or improve one requirement. Repeat its test and one previously passing test. Keep both versions.",
@@ -1473,6 +1519,26 @@
         "All seven paths tested; honest failures and expected/actual evidence recorded.",
         "Failed path now works or limitation clearly documented; regression check still passes.",
         "HTML structure, CSS appearance, JavaScript behavior; in-page sample data, no protected backend; launch needs further checks."
+      ],
+      "procedures": [
+        [
+          "Save and open your own copy (no AI account needed)",
+          [
+            "Select Download editable HTML above. The file resource-finder-v1.html goes to your Downloads folder.",
+            "Open it in a plain-text editor. On Windows, right-click the file, choose Open with, then Notepad. On a Mac, open TextEdit, choose Format, then Make Plain Text, then open the file.",
+            "Make your edit. Choose File, then Save As. Type resource-finder-v2.html as the name. On Windows, set Save as type to All files so Notepad does not add .txt. On a Mac, untick the box that adds .txt when no extension is given.",
+            "Double-click the saved file to open it in your browser. Search skills. Confirm that Community Skills Desk appears and that the heading changed."
+          ]
+        ],
+        [
+          "Turn AI output into a file you can run",
+          [
+            "Paste your prompt into the approved AI tool. Ask for one complete HTML file, not separate pieces.",
+            "Select the code block the tool gives you and copy it with Ctrl and C (Command and C on a Mac).",
+            "Open a new plain-text document, paste with Ctrl and V (Command and V), and save it as resource-finder-ai.html using the same Save As steps above.",
+            "Open the saved file in your browser. Run the three acceptance checks yourself before trusting anything the AI said about it."
+          ]
+        ]
       ]
     }
   ]

@@ -25,6 +25,59 @@ Video `CHAPTERS` in `video-scenes.py` maps every chapter to a scene and optional
 
 The fourth VUB Learning course teaches IC3 GS6 Level 2 across five two-hour sessions, followed by a two-hour web app building extension. The cohort calendar appears only in `courses/digital-literacy-2/syllabus.html`; presentations and resources can be reused.
 
+## Curriculum review fixes (2026-09-24)
+
+Six High findings from the six-agent review were fixed in the generators, with regression tests in
+`tests/content/dl2-review-fixes.spec.js` and `tests/functional/dl2-review-fixes.spec.js`.
+
+- Every slide's teaching sentence renders as a visible `p.slide-lead` above its simulation. The
+  collapsed "Read the explanation" note is gone; the objectives note opens by default.
+- Week 6 slide 10 checks `skills finds Community Skills Desk`, matching the worksheet rename.
+- Week 6 has a `procedures` key (title, steps) rendered on the worksheet above the test log, plus a
+  Download editable HTML link there.
+- Week 5 has a `challenge` key (`item`, `intro`, `ratings`, `tasks` as task / materials / evidence).
+  `build-pages.py` renders it as a table with a response box and an instructor rating per row, and
+  lists the evidence in the answer key.
+- `course.css` no longer sets `visibility:hidden` on the skip link, which had blocked focus.
+- Assessment topic buttons carry an `aria-label` that includes the visible short label, the full
+  domain, and the live answered count (`labelTopic` in `assessment.js`).
+
+Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
+
+## Video review fixes (2026-09-24)
+
+The six videos were re-rendered (visual-only; narration audio, beats and SCRIPT.md unchanged) after
+a six-agent review. What changed and where:
+
+- `screen-share-scenes.py`: week 1 Month view is a dated 5-row grid; zoom steps to 110%; week 3
+  Navigation lists only real headings; week 4 email puts the reviewer in To with the organizer in Cc
+  and shows the response window in the body; week 6 demo app mirrors `activities/resource-finder.html`
+  (heading, labels, three records, no-results text, Reset). Secondary lines lifted to 26 to 28px.
+- `video-scenes.py`: `.video-note` 28px, `.video-brand` 24px, no SVG text under 24; week 2 source
+  cards differ; week 4 chapter 5 draws three competing copies; week 6 chapter 9 loop no longer
+  overlaps the arrow; smaller fixes in weeks 1 to 3.
+- `build-media.py`: caption cues break at sentence and clause boundaries, never on a function word,
+  two lines max. Cue counts rose from 109 to 113 per video to 124 to 135. Mid-clause endings fell from
+  about 20% to 77 to 89%.
+- Week 5 video poster is `media/week-05-poster.webp`, extracted from the render at 0.5 s.
+- Audio normalized to -18 LUFS / -1.5 dBTP after render with `normalize-loudness.py`
+  (video stream copied, AAC 128k, faststart).
+
+New checks, all run from the repo root:
+
+```sh
+python3 scripts/dl2/check-text-floor.py        # every composition font-size >= 24px
+python3 scripts/dl2/check-captions.py --script video/digital-literacy-2   # cue shape; --strict makes pace warnings fatal
+python3 scripts/dl2/normalize-loudness.py      # after every render, before verify-media.py
+```
+
+Not changed, because they need a re-record: pause-prompt timing, chapters above 165 wpm, the week 3
+formula explanation, undefined terms in week 6, and week 5 not naming the skills challenge.
+
+Working files that are git-ignored and must exist locally before a build: `video/digital-literacy-2/
+week-0N/narration/*.wav` and `generated-screen-share/workstation.mp4`. Copy them from the main
+checkout; `verify-media.py` checks the WAV hashes.
+
 ## Entry points
 
 - Course home: `/courses/digital-literacy-2/index.html`

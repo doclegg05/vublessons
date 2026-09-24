@@ -13,7 +13,7 @@ ART={1:'workstation',2:'research',3:'creation',4:'collaboration',5:'security',6:
 CHAPTERS = {
 1: [
  ('routine','workstation',['Choose|Read a page comfortably','Test|Can I reach the next action?','Restore|Keep the original setting']),
- ('zoom',None,['Before|Page zoom: 100%','Change|Page zoom: 125%','Check|Find help stays reachable']),
+ ('zoom',None,['Before|Page zoom: 100%','Change|Page zoom: 110%','Check|Find help stays reachable']),
  ('scope',None,['Page zoom|Only this webpage grows','Display scaling|Apps and system controls grow','Choose|Make the smallest useful change']),
  ('sound',None,['Destination|Headset selected','App setting|Check the meeting output too','Test|Unmute and play a short sample']),
  ('connections',None,['Processor|Carries out instructions','Memory|Current work on the workbench','Storage|Saved file in the cabinet']),
@@ -49,7 +49,7 @@ CHAPTERS = {
  ('identity-channel',None,['Task|Message, shared file or meeting?','Identity|Training profile is active','Timing|Enough context for a later reply']),
  ('message',None,['Subject|Review the computer-help handout','Request|Comment on the contact section','Timing|Reply before our practice session']),
  ('email-fields',None,['To / Cc|Visible recipient list','Bcc|Other recipients cannot see addresses','Reply all|Inspect who will receive it']),
- ('roles',None,['Before|Three competing file copies','Agree|One shared handout','Coordinate|Roles, access and response time']),
+ ('consolidate',None,['Before|Three competing file copies','Agree|One shared handout','Coordinate|Roles, access and response time']),
  ('feedback',None,['Vague|Make this better','Specific|Add the contact details here','Resolve|Explain decision after responding']),
  ('meeting',None,['Prepare|Sound test and captions','Participate|Mute or raise hand as needed','Choice|Ask before recording; keep notes']),
  ('community',None,['Read|Community rules and context','Verify|Compare claim with official source','Post|Share only agreed information']),
@@ -126,6 +126,8 @@ PATHS={
 'slides':'<rect x="9" y="8" width="48" height="35" rx="3"/><path d="M4 20v31h42M33 43v14M21 60l12-3 12 3M20 20h25M20 29h17"/>',
 'undo':'<path d="M18 22h22a17 17 0 0 1 0 34H18M18 22 30 10M18 22l12 12"/>',
 'filter':'<path d="M4 8h56L38 33v23H26V33z"/>',
+'expand':'<path d="M6 22V6h16M42 6h16v16M58 42v16H42M22 58H6V42M6 6l17 17M58 6 41 23M58 58 41 41M6 58l17-17"/>',
+'image':'<rect x="5" y="9" width="54" height="46" rx="3"/><circle cx="21" cy="24" r="6"/><path d="m5 49 17-17 12 12 9-9 16 16"/>',
 }
 def icon(kind,x,y,size=78,color='#E6C65C',id=''):
  return f'<svg {f"id={id}" if id else ""} x="{x}" y="{y}" width="{size}" height="{size}" viewBox="0 0 64 64" fill="none" stroke="{color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">{PATHS[kind]}</svg>'
@@ -167,7 +169,7 @@ def diagram(kind,i):
    y=30+j*128;v+=f'<g id="access-{j}">'+rect(292,y,444,110)+icon(k,313,y+21,63)+text(label,410,y+65,34)+'</g>'
   note='Give only the access the task needs.'
  elif kind=='recovery':
-  v=tile('bin','Deleted file',20,34,310,180,'trash')+tile('clock','Earlier version',430,34,310,180,'history')+paper(288,257,184,144,'restored')+text('Preview → restore',380,444,32,anchor='middle');note='Coordinate before replacing shared work.'
+  v=tile('bin','Deleted file',20,20,310,172,'trash')+tile('clock','Earlier version',430,20,310,172,'history')+paper(298,222,164,126,'restored')+text('Preview → restore',380,392,32,anchor='middle');note='Coordinate before replacing shared work.'
  elif kind=='document':
   v=rect(65,17,630,396,'#e1efed')+text('Computer help',107,83,37,'#1b365d','doc-title')
   for j,s in enumerate(['Choose a task','Visit the desk','Ask how to repeat']):
@@ -189,6 +191,14 @@ def diagram(kind,i):
  elif kind=='roles':
   for j,t in enumerate(['Owner','Writer','Reviewer']):v+=tile('person',t,18+j*253,30,217,182,f'role-{j}')
   v+=f'<path d="M126 222v42h506v-42M379 222v86" fill="none" stroke="#E6C65C" stroke-width="4"/>'+rect(234,308,292,110,'#0f655f')+icon('file',258,326,67)+text('One copy',422,374,31,anchor='middle');note='Agree where the shared file lives.'
+ elif kind=='consolidate':
+  # Before: three competing "final" copies. After: they converge on one shared handout.
+  for j,(name,who) in enumerate([('Final','Writer · Mon'),('Final 2','Reviewer · Tue'),('Final NEW','Owner · Wed')]):
+   y=20+j*125;v+=f'<g id="copy-{j}">'+rect(15,y,300,105,'#e1efed')+icon('file',26,y+19,66,'#0f655f')+text(name,106,y+45,30,'#1b365d')+text(who,106,y+84,25,'#0f655f')+'</g>'
+  v+='<g id="merge" opacity="0"><path d="M325 72C390 72 400 197 452 197M325 197H452M325 322C390 322 400 197 452 197" fill="none" stroke="#E6C65C" stroke-width="4"/>'+arrow(450,197,478,197)+'</g>'
+  v+=f'<g id="shared-copy" opacity=".35">'+paper(492,40,206,250)+'</g>'
+  v+='<g id="agreed" opacity="0">'+text('One shared handout',595,340,28,anchor='middle')+text('Roles · access · timing',595,384,26,'#E6C65C',anchor='middle')+'</g>'
+  note='Three copies become one shared handout.'
  elif kind=='timing':
   for j,label in enumerate(['Together','Later']):
    y=45+j*201;v+=text(label,20,y+45,33)+rect(210,y,530,135)
@@ -232,8 +242,11 @@ def diagram(kind,i):
   for j,(k,t) in enumerate([('search','Task'),('filter','Controls'),('check','Tests'),('lock','Boundaries')]):v+=tile(k,t,20+(j%2)*380,20+(j//2)*212,340,190,f'prompt-{j}')
   note='Fictional data. No private keys.'
  elif kind=='versions':
-  v=tile('file','Version 1',15,42,265,234,'version-1')+arrow(293,159,455,159)+tile('edit','Version 2',477,42,265,234,'version-2')
-  v+=icon('undo',335,287,89,id='restore')+text('Retest the change',194,406,30,anchor='middle')+text('Retest what worked',574,406,30,anchor='middle');note='Keep both versions and your test log.'
+  # Repair arrow on top; the way-back loop sits alone below it, between the tiles.
+  v=tile('file','Version 1',15,20,265,210,'version-1')+arrow(295,95,465,95)+tile('edit','Version 2',480,20,265,210,'version-2')
+  v+='<g id="restore">'+icon('undo',345,128,70)+text('Way back',380,232,26,anchor='middle')+'</g>'
+  v+='<g id="retest-worked">'+rect(15,252,265,58,'#0f655f')+text('Retest what worked',147,291,27,anchor='middle')+'</g>'
+  v+='<g id="retest-change">'+rect(480,252,265,58,'#0f655f')+text('Retest the change',612,291,27,anchor='middle')+'</g>';note='Keep both versions and your test log.'
  elif kind=='connections':
   for j,(k,t) in enumerate([('computer','Processing'),('grid','Working memory'),('file','Saved storage')]):v+=tile(k,t,15+j*253,40,222,197,f'concept-{j}')
   v+=icon('computer',40,290,78)+arrow(135,330,288,330)+icon('grid',307,290,78)+arrow(400,330,554,330)+icon('file',580,290,78);note='Active work and saved files serve different jobs.'
@@ -263,8 +276,8 @@ def diagram(kind,i):
   note='Match the chart to the checked table.'
  elif kind=='media-edit':
   v=text('Keep the useful explanation',380,54,34,anchor='middle')
-  for j,(t,w,c) in enumerate([('Start',116,'#234b6a'),('Explain',221,'#0f655f'),('Pause',116,'#234b6a'),('Result',221,'#0f655f')]):
-   x=[20,143,371,494][j];v+=rect(x,118,w,126,c)+text(t,x+w/2,192,28,anchor='middle')
+  for j,(t,w) in enumerate([('Start',116),('Explain',221),('Pause',116),('Result',221)]):
+   x=[20,143,371,494][j];v+=rect(x,118,w,126,'#234b6a')+text(t,x+w/2,192,28,anchor='middle')
   for j,(k,t) in enumerate([('undo','Preserve original'),('edit','Check the edit'),('chat','Retest captions')]):v+=f'<g id="concept-{j}">'+icon(k,75+j*247,291,61)+text(t,133+j*247,397,26,anchor='middle')+'</g>'
   note='Trim ends. Split sections. Check speech and captions.'
  elif kind=='email-fields':
@@ -279,7 +292,7 @@ def diagram(kind,i):
   v=rect(22,14,716,425,'#e1efed')+text('My source record',52,61,34,'#1b365d')
   rows=[('Organization','Fictional community library'),('Title / address','Computer help · example.org/help'),('Date accessed','Record the day you checked'),('Verified fact','The source states Room A'),('Interpretation','My conclusion is separate')]
   for j,(label,value) in enumerate(rows):
-   y=95+j*67;v+=f'<g id="concept-{j}">'+text(label,52,y,23,'#0f655f')+text(value,52,y+32,28,'#1b365d')+'</g>'
+   y=96+j*72;v+=f'<g id="concept-{j}">'+text(label,52,y,24,'#0f655f')+text(value,52,y+37,28,'#1b365d')+'</g>'  # row pitch keeps the 24px label box clear of the 28px value box
   note='Fictional example · record evidence you can revisit.'
  elif kind=='usb':
   v=tile('usb','Unknown drive',20,64,214,228,'concept-0')+tile('hand','Do not connect',273,64,214,228,'concept-1')+tile('person','Authorized staff',526,64,214,228,'concept-2')
@@ -287,12 +300,15 @@ def diagram(kind,i):
  elif kind=='automation':
   v=rect(25,25,710,385,'#e1efed')+text('Practice settings',58,77,35,'#1b365d')
   for j,(k,label,value) in enumerate([('person','Active account','Training profile'),('clock','Reminder','Before Library practice'),('search','Help version','Matches this application')]):
-   y=100+j*96;v+=f'<g id="detail-{j}">'+rect(48,y,664,81,'#c4d8de')+icon(k,62,y+14,48,'#0f655f')+text(label,131,y+29,23,'#1b365d')+text(value,131,y+62,29,'#1b365d')+'</g>'
+   y=100+j*100;v+=f'<g id="detail-{j}">'+rect(48,y,664,88,'#c4d8de')+icon(k,62,y+18,50,'#0f655f')+text(label,131,y+33,26,'#1b365d')+text(value,131,y+70,29,'#1b365d')+'</g>'
   note='Check the saved setting, not just the request.'
  elif kind=='source-check':
-  for j,(label,body) in enumerate([('Directory lead','Possible computer help'),('Responsible source','Confirm place and availability')]):
-   x=14+j*385;v+=rect(x,25,350,337,'#e1efed')+rect(x,25,350,53,'#c4d8de')+text(label,x+175,62,29,'#1b365d',anchor='middle')+icon('search' if j==0 else 'person',x+133,107,80,'#0f655f')
-   v+=text('Computer help',x+175,240,28,'#1b365d',anchor='middle')+text('Check current details',x+175,287,24,'#1b365d',anchor='middle')
+  # The two cards must differ: the lead lacks a publisher, a current date and a place.
+  cards=[('Directory lead','lead',['Computer help','Publisher: not named','Updated 2019','Town: not stated']),
+         ('Responsible source','source',['Community library','Publisher: the library','Updated this month','Your town · Room A'])]
+  for j,(label,gid,lines) in enumerate(cards):
+   x=14+j*385;v+=f'<g id="{gid}">'+rect(x,25,350,337,'#e1efed')+rect(x,25,350,53,'#c4d8de')+text(label,x+175,62,29,'#1b365d',anchor='middle')+icon('search' if j==0 else 'person',x+141,92,68,'#0f655f')
+   v+=text(lines[0],x+175,207,29,'#1b365d',anchor='middle')+''.join(text(t,x+175,252+k*44,26,'#1b365d',anchor='middle') for k,t in enumerate(lines[1:]))+'</g>'
   v+=arrow(290,396,473,396);note='A lead becomes useful after independent confirmation.'
  elif kind=='editing':
   v=rect(18,20,456,391,'#e1efed')+text('Computer help',45,73,34,'#1b365d')+rect(43,106,400,60,'#c9a227')+text('Visit the learning desk',56,145,28,'#1b365d')
@@ -300,7 +316,10 @@ def diagram(kind,i):
  elif kind=='slide-design':
   for j,label in enumerate(['Purpose','Action','Result']):
    x=18+j*250;v+=rect(x,30,225,170,'#e1efed')+text(label,x+112,72,30,'#1b365d',anchor='middle')+icon(['person','edit','check'][j],x+75,99,69,'#0f655f')
-  v+=rect(45,253,280,154,'#72978f')+rect(85,277,196,105,'#0f655f')+text('Crop',185,439,28,anchor='middle')+rect(441,268,234,130,'#72978f')+text('Resize proportionally',558,439,27,anchor='middle');note='One message per slide. Preserve the original image.'
+  # Crop: a frame keeps part of the picture. Resize: the same picture, smaller, same shape.
+  v+=rect(45,228,280,150,'#72978f')+icon('image',95,213,180,'#e1efed')+f'<rect x="120" y="258" width="130" height="92" rx="4" fill="none" stroke="#E6C65C" stroke-width="5" stroke-dasharray="14 8"/>'+text('Crop',185,414,28,anchor='middle')
+  v+=rect(441,228,234,150,'#72978f')+f'<rect x="466" y="243" width="184" height="120" rx="4" fill="none" stroke="#b7d1ce" stroke-width="3" stroke-dasharray="10 8"/>'+icon('image',462,236,100,'#e1efed')
+  v+=f'<path d="M644 357 566 327m0 0 11 14m-11-14 18-3" fill="none" stroke="#E6C65C" stroke-width="5" stroke-linecap="round"/>'+text('Resize proportionally',558,414,27,anchor='middle');note='One message per slide. Preserve the original image.'
  elif kind=='identity-channel':
   v=rect(22,22,716,83,'#e1efed')+icon('person',42,35,57,'#0f655f')+text('Active profile: Training',128,74,34,'#1b365d')
   for j,(k,t) in enumerate([('email','Message'),('file','Shared file'),('camera','Meeting')]):v+=tile(k,t,18+j*253,147,217,236)
@@ -313,7 +332,7 @@ def diagram(kind,i):
   v+=text('Readable screen',379,247,31,anchor='middle')+text('Input within reach',379,423,31,anchor='middle')+icon('chat',48,95,76)+text('Captions',88,220,24,anchor='middle')+icon('pause',642,95,76)+text('Breaks',679,220,24,anchor='middle');note='Adapt the setup to your task and comfort.'
  elif kind=='wellbeing':
   v=rect(20,20,340,390,'#e1efed')+text('Notifications',190,74,31,'#1b365d',anchor='middle')
-  for j in range(3):v+=rect(43,110+j*78,294,57,'#c4d8de')+icon('chat',59,122+j*78,31,'#0f655f')+text('Choose alerts',110,149+j*78,23,'#1b365d')
+  for j in range(3):v+=rect(43,110+j*78,294,57,'#c4d8de')+icon('chat',59,122+j*78,31,'#0f655f')+text('Choose alerts',110,149+j*78,24,'#1b365d')
   v+=rect(408,51,330,328)+text('Interaction options',573,105,29,anchor='middle')
   for j,t in enumerate(['Report','Block','Ask trusted support']):v+=rect(430,137+j*70,286,53,'#0f655f')+text(t,573,172+j*70,25,anchor='middle')
   note='Your attention and wellbeing are part of safety.'
@@ -328,10 +347,12 @@ def diagram(kind,i):
    v+=tile(k,label,18+j*253,30,217,226)+text(detail,126+j*253,310,25,anchor='middle')
   v+=rect(20,357,720,69,'#0f655f')+text('Accounts · shared data · support · maintenance',380,400,26,anchor='middle');note='Our local prototype is a smaller task.'
  elif kind=='scope':
+  # What grows carries an expand glyph and a word, not only a fill colour.
   for j,label in enumerate(['Page zoom','Display scaling']):
    x=15+j*385;v+=rect(x,32,350,315,'#e1efed')+rect(x,32,350,45,'#c4d8de')+text(label,x+175,65,29,'#1b365d',anchor='middle')
-   v+=rect(x+23,102,303,62,'#0f655f')+text('Page content',x+175,143,32,anchor='middle')
-   v+=rect(x+23,190,303,105,'#c4d8de')+text('Find help',x+175,253,32,'#1b365d',anchor='middle')
+   v+=rect(x+23,102,303,62,'#0f655f')+text('Page content',x+150,143,31,anchor='middle')+icon('expand',x+280,115,36)
+   if j==0:v+=rect(x+23,190,303,105,'#c4d8de')+text('System controls',x+175,233,30,'#1b365d',anchor='middle')+text('Same size',x+175,274,26,'#1b365d',anchor='middle')
+   else:v+=rect(x+23,190,303,105,'#0f655f')+text('System controls',x+150,233,30,anchor='middle')+text('Grow too',x+150,274,26,'#E6C65C',anchor='middle')+icon('expand',x+280,224,36)
   v+=text('Page only',190,403,32,anchor='middle')+text('Apps + system',575,403,32,anchor='middle');note='Choose the scope that fits the task.'
  elif kind=='files' or kind=='local-file':
   v=rect(20,25,720,379,'#e1efed')+rect(20,25,720,65,'#c4d8de')+text('Practice resources',49,69,33,'#1b365d')
@@ -377,7 +398,7 @@ def scene(n,i,b,words):
  def move(s,props,phrase='',f=.5):events.append(f'tl.to({json.dumps(selector(s))},{json.dumps(dict(duration=.8,ease="power2.out",**props))},{at(phrase,f)});')
  def light(s,phrase='',f=.5):move(s,{'scale':1.06,'transformOrigin':'50% 50%'},phrase,f)
  if kind=='zoom':
-  move('#zoom-content',{'scale':1.14,'transformOrigin':'70px 120px'},'larger' if i else 'one change',.45);change('#zoom-value',{'textContent':'125%'},'larger' if i else 'one change',.45)
+  move('#zoom-content',{'scale':1.1,'transformOrigin':'70px 120px'},'larger' if i else 'one change',.45);change('#zoom-value',{'textContent':'110%'},'larger' if i else 'one change',.45)
   move('#zoom-content',{'scale':1},'restore',.84);change('#zoom-value',{'textContent':'100%'},'restore',.84)
  elif kind=='sound':
   change('#speaker-output',{'opacity':0},'headset',.35);change('#headphones',{'opacity':1},'headset',.35)
@@ -407,6 +428,10 @@ def scene(n,i,b,words):
   for s,p,f in [('#handout','handout',.2),('#workbook','workbook',.28),('#slides','slides',.36)]:move(s,{'y':-10},p,f)
  elif kind=='roles':
   for j,p in enumerate(['owner','writer','reviewer']):light(f'#role-{j}',p,.15+j*.17)
+ elif kind=='consolidate':
+  for j in range(3):move(f'#copy-{j}',{'opacity':.7},'instead agree where',.25)
+  move('#merge',{'opacity':1},'instead agree where',.25);move('#shared-copy',{'opacity':1},'instead agree where',.25);move('#agreed',{'opacity':1},'owner coordinates',.35)
+ elif kind=='source-check':light('#lead','another town',.15);light('#source','organization responsible',.55)
  elif kind=='timing':
   for j in range(3):move(f'#time-0-{j}',{'y':-9},'synchronous collaboration',.22);move(f'#time-1-{j}',{'x':10},'asynchronous collaboration',.5+j*.08)
  elif kind=='feedback':move('#contact',{'opacity':1},'add the contact number',.25);light('#accepted','accept the idea',.55)
@@ -428,7 +453,9 @@ def scene(n,i,b,words):
   for j,p in enumerate(['html','css','javascript']):light(f'#layer-{j}',p,.08+j*.25)
  elif kind=='prompt':
   for j,p in enumerate(['user should do','controls','test','fictional data']):move(f'#prompt-{j} rect',{'fill':'#0f655f'},p,.1+j*.2)
- elif kind=='versions':light('#version-1','first version',.1);light('#version-2','improvement',.28);move('#restore',{'rotation':-20,'transformOrigin':'50% 50%'},'keep both versions',.8)
+ elif kind=='versions':
+  light('#version-1','first version',.1);light('#version-2','revised version',.28)
+  light('#retest-change','repeat the failed check',.45);light('#retest-worked','previously passed',.55);light('#restore','return to the saved',.7)
  if kind=='automation':
   for j in range(3):light(f'#detail-{j}','',.17+j*.25)
  if kind=='keyboard':move('#focus-ring',{'attr':{'x':545,'width':166}},'operate the filter',.4)
@@ -447,7 +474,7 @@ def scene(n,i,b,words):
  if n==1 and index==0:
   photohtml='<div class=photo-window><video id="w1-generated-workstation" class="topic-photo clip" src="assets/workstation-intro.mp4" data-start="0" data-duration="7" data-track-index="0" muted playsinline></video></div>'
  if photo=='safety':
-  photohtml='<div class=photo-window><svg class=topic-photo viewBox="0 0 1376 768" role="img" aria-label="Fictional home verification scenario"><image href="assets/safety.webp" width="1376" height="768"/><polygon points="287,355 361,337 440,540 353,566" fill="#e1efed"/><polygon points="805,174 1137,198 1120,407 779,375" fill="#e1efed"/><g transform="translate(319 376) rotate(-18)"><rect width="40" height="32" rx="4" fill="#1b365d"/><path d="M3 4 L20 19 L37 4" fill="none" stroke="#e6c65c" stroke-width="3"/></g><g transform="translate(812 215) rotate(5)"><text fill="#1b365d" font-size="24">Known contact</text><rect y="24" width="260" height="44" rx="5" fill="#c4d8de"/><text x="12" y="53" fill="#1b365d" font-size="21">Community desk</text><text y="107" fill="#1b365d" font-size="21">Verify independently</text></g></svg></div>'
+  photohtml='<div class=photo-window><svg class=topic-photo viewBox="0 0 1376 768" role="img" aria-label="Fictional home verification scenario"><image href="assets/safety.webp" width="1376" height="768"/><polygon points="287,355 361,337 440,540 353,566" fill="#e1efed"/><polygon points="805,174 1137,198 1120,407 779,375" fill="#e1efed"/><g transform="translate(319 376) rotate(-18)"><rect width="40" height="32" rx="4" fill="#1b365d"/><path d="M3 4 L20 19 L37 4" fill="none" stroke="#e6c65c" stroke-width="3"/></g><g transform="translate(812 215) rotate(5)"><text fill="#1b365d" font-size="26">Known contact</text><rect y="24" width="260" height="44" rx="5" fill="#c4d8de"/><text x="12" y="54" fill="#1b365d" font-size="26">Community desk</text><text y="107" fill="#1b365d" font-size="26">Verify independently</text></g></svg></div>'
  if photo:
   # Full landscape context first, then an unobstructed authored demonstration.
   events.insert(0,f'tl.set("#{cid} .graphic-stage",{{opacity:0}},0);')
@@ -456,7 +483,7 @@ def scene(n,i,b,words):
   events.append(f'tl.to("#{cid} .graphic-stage",{{opacity:1,duration:.5}},{transition});')
  css=CSS
  css+=' .graphic-stage{opacity:'+('0' if photo else '1')+'}'
- css+=' .main-example,.detail-example{position:absolute;inset:0}.graphic-stage{top:160px;height:445px}.video-note{bottom:92px;font-size:25px}.video-brand{bottom:20px;font-size:21px}.video-title{font-size:40px;top:34px}.video-brand img{width:36px;height:36px}'
+ css+=' .main-example,.detail-example{position:absolute;inset:0}.graphic-stage{top:160px;height:445px}.video-note{bottom:92px;font-size:28px}.video-brand{bottom:20px;font-size:24px}.video-title{font-size:40px;top:34px}.video-brand img{width:36px;height:36px}'
  css+=' .gold-divider{left:40px;top:131px;width:1200px;height:3px}.video-title{left:52px;max-width:1160px;background:#102c4b;padding:5px 12px}.graphic-stage{left:105px;width:1070px;top:156px;height:445px}.video-note{left:105px;max-width:1070px;background:#102c4b;padding:5px 12px}.video-brand{left:52px}.photo-window{width:1280px;height:720px;inset:0}.topic-photo{width:100%;height:100%;object-fit:contain}.topic-photo text{font-family:VUB}.video-brand{background:#102c4b;padding:4px 8px}'
  for variant in ["layout-wide","layout-finale"]:
   css=re.sub(r"\."+variant+r" ([^{}]+)\{([^{}]+)\}", lambda m: m[1]+"{"+m[2]+"}" if variant==layout else "", css)
