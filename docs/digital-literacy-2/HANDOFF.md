@@ -44,6 +44,26 @@ Six High findings from the six-agent review were fixed in the generators, with r
 
 Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
 
+## Pre-cohort fixes (2026-09-26)
+
+From the seven-part full review before the 2026-09-28 cohort. Tests: `tests/content/dl2-monday-fixes.spec.js`
+and `tests/functional/dl2-monday-fixes.spec.js`.
+
+- Learner pages no longer link answer keys, lesson plans or the instructor guide. `page()`/`doc()` take
+  `instructor=True` for the guide, lesson plans and every answer key: those pages get `noindex` and an
+  "Instructor materials" rail item. `resources(n, instructor)` adds the plan and answer guide only for
+  lesson plans. Instructors reach the guide from `/instructors/` (new DL2 card).
+- Course home has "Start fresh on this computer" (confirm, then `VubProgress.reset('dl2')` and every
+  `vub:dl2:assessment:*` sessionStorage key).
+- "Clear my assessment" asks first. Enter in the name/score field moves to the questions instead of
+  grading. The name field starts open. Reports show the date graded (`gradedAt`, kept on reload).
+- Worksheets warn before leaving when any answer is typed.
+- Decks: arrow keys work after clicking an in-slide button; focusable scroll regions (`[tabindex="0"]`,
+  such as the calendar) keep their keys; Previous/Next are sticky; the first load writes no hash, so the
+  page no longer jumps down.
+- Contrast: flip-card hover, the selected phishing clue, gold buttons on navy completion slides, gold
+  focus rings on navy/teal. Assessment topic tabs size to their label and the strip scrolls.
+
 ## Video review fixes (2026-09-24)
 
 The six videos were re-rendered (visual-only; narration audio, beats and SCRIPT.md unchanged) after
