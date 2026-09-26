@@ -5,6 +5,13 @@
  document.querySelectorAll('[data-app-route]').forEach(a=>{const u=new URL(a.href);if(!u.hash&&u.pathname.replace(/\.html$/,'').replace(/\/$/,'')===path)a.setAttribute('aria-current','page');});
  const dock=()=>{const slot=document.querySelector('[data-text-dock]'),control=document.querySelector('.vub-textsize-fab');if(slot&&control){slot.append(control);return true;}return false;};
  if(document.querySelector('[data-text-dock]')&&!dock()){const observer=new MutationObserver(()=>{if(dock())observer.disconnect();});observer.observe(document.body,{childList:true});}
+ // Shared lab computers: clear this course's saved lessons and every assessment version in this tab.
+ document.querySelector('#start-fresh')?.addEventListener('click',()=>{
+  if(!confirm('Clear saved lessons and test answers for Digital Literacy Level 2 on this computer? Print or download any results you need first.'))return;
+  window.VubProgress?.reset('dl2');
+  try{Object.keys(sessionStorage).filter(k=>k.startsWith('vub:dl2:assessment:')).forEach(k=>sessionStorage.removeItem(k));}catch(_){}
+  location.reload();
+ });
  if(document.querySelector('.learning-home')){
   const p=window.VubProgress?.getCourseSummary('dl2');
   if(p){document.querySelector('[data-course-count]').textContent=`${p.completed} of 6 lessons viewed to the end`;document.querySelector('[data-course-progress]').value=p.completed;

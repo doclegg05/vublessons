@@ -19,12 +19,12 @@ test('DL2 interactions use keyboard, score checks, and preserve input keys',asyn
 });
 for(const kind of ['pre','post'])test(`DL2 ${kind}: validation, perfect score, refresh, download and clear`,async({page})=>{
  await page.goto(`${base}/assessments/${kind}-test.html`);await expect(page.locator('fieldset')).toHaveCount(28);await page.getByRole('button',{name:'Grade my assessment'}).click();await expect(page.locator('#assessment-error')).toContainText('every question');
- await page.locator('.learner-details summary').click();await page.getByLabel('Learner name or code').fill('<img src=x onerror=alert(1)>');if(kind==='post')await page.getByLabel('Your saved pre-test').fill('14');
+ await expect(page.locator('.learner-details')).toHaveAttribute('open','');await page.getByLabel('Learner name or code').fill('<img src=x onerror=alert(1)>');if(kind==='post')await page.getByLabel('Your saved pre-test').fill('14');
  await page.getByRole('button',{name:'Review all questions',exact:true}).click();
  for(const q of bank[kind])await page.locator(`input[name="${q.id}"][value="${q.answer}"]`).check();await page.reload();await expect(page.locator('input:checked')).toHaveCount(28);await page.getByRole('button',{name:'Grade my assessment'}).click();await expect(page.locator('.score')).toHaveText('28 / 28 · 100%');if(kind==='post')await expect(page.locator('#results')).toContainText('+14 points (+50 percentage points)');await expect(page.locator('#results img')).toHaveCount(1);await expect(page.locator('#results img')).toHaveAttribute('src',/^data:image\/png;base64,/);await expect(page.locator('#results [onerror]')).toHaveCount(0);await page.reload();await expect(page.locator('.score')).toHaveText('28 / 28 · 100%');
  await page.emulateMedia({media:'print'});await expect(page.locator('#assessment-form')).toBeHidden();await expect(page.locator('.result-item')).toHaveCount(28);await page.emulateMedia({media:'screen'});
  const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Download results'}).click();const download=await downloadPromise;const path=await download.path();const html=fs.readFileSync(path,'utf8');expect(html).toContain('28 / 28');expect(html).not.toContain('<script');
- await page.getByRole('button',{name:'Clear my assessment'}).click();await expect(page.locator('input:checked')).toHaveCount(0);await expect(page.locator('#results')).toBeHidden();
+ page.once('dialog',d=>d.accept());await page.getByRole('button',{name:'Clear my assessment'}).click();await expect(page.locator('input:checked')).toHaveCount(0);await expect(page.locator('#results')).toBeHidden();
 });
 test('DL2 incorrect score and domain totals are calculated from choices',async({page})=>{
  await page.goto(`${base}/assessments/post-test.html`);await expect(page.locator('fieldset')).toHaveCount(28);
