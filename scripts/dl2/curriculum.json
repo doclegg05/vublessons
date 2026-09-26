@@ -6,9 +6,11 @@
       "title": "Make technology work for you",
       "summary": "Set up a comfortable workspace, organize a calendar, and solve everyday device problems.",
       "objectives": [
-        "Adjust device and browser settings for a task.",
+        "Adjust device and browser settings for a task, then restore them.",
         "Create a practice appointment and choose what others can see.",
-        "Select a connection and a printer; verify the result."
+        "Pick the right connection and printer, and preview before printing.",
+        "Check what an automatic feature changed before you accept it.",
+        "Ask for help clearly and give useful feedback."
       ],
       "refs": [
         "1.1",
@@ -22,18 +24,28 @@
       "agenda": [
         [
           10,
-          "Welcome and goals",
-          "Ask which everyday task each learner wants to do more independently. Demonstrate text size and lesson navigation."
+          "Warm-up and goals",
+          "Logins; show text size and lesson navigation. Warm-up: hold up an HDMI, a USB and an Ethernet cable and ask what each one did in Level 1. Pairs share slide 2 (one task they do well, one to make easier); learners write worksheet task 1. Read the goals on slide 1 aloud."
         ],
         [
           25,
           "Pre-test",
-          "Open the pre-test before instruction. Allow quiet work; read directions aloud without suggesting answers. Save or print each result."
+          "Slide 3. Learners type their name first, then work quietly; read directions aloud without suggesting answers. Record each score out of 28 on your roster; print page 1 only if a paper copy is needed. Early finishers read slide 4; late finishers may run to minute 38."
         ],
         [
-          20,
-          "Model the setup",
-          "Teach slides on display, sound, browser settings, processing, cables and printing. Think aloud through one change and its check."
+          3,
+          "Introduction: the routine",
+          "Tell: slide 4, Choose, Test, Restore. Play chapter 1. This routine is the Review language for every cycle."
+        ],
+        [
+          12,
+          "Cycle A: reading comfort",
+          "Tell: slide 5. Show: chapter 2, then zoom live in Edge with Ctrl and +; pause chapter 2 at 1:24. Do: slide 6 and worksheet task 2, every learner at their own seat. Review: a partner confirms the page is back to 100%. Then Tell and Show only: chapter 3 (pause at 2:02 for the prediction) and Settings \u203a System \u203a Display \u203a Scale on the projector."
+        ],
+        [
+          10,
+          "Cycle B: hearing and screen",
+          "Tell: slide 7. Show: chapter 4, then choose the sound output live from the speaker icon on the taskbar. Do: worksheet task 3 with a headset, every learner. Review: the slide 20 knowledge check. Point to the monitor brightness buttons; do not change them."
         ],
         [
           10,
@@ -41,19 +53,29 @@
           "Offer a screen-free pause."
         ],
         [
-          15,
-          "Calendar and automation",
-          "Model a fictional appointment, free/busy sharing and an automation check. Play the explainer and pause for a prediction."
+          10,
+          "Cycle C: connections and printing",
+          "Tell: slides 11 and 12 (laser for lots of text, inkjet for color and photos). Show: chapter 6, then Ctrl and P live on page 1 of the worksheet (printer name, Pages 1, Copies 1). Do: worksheet tasks 7 and 4, every learner; do not print. Review: a partner reads back the printer and pages; ask aloud which printer suits 200 flyers. Optional: slide 9 and chapter 5, which Level 1 covered."
         ],
         [
-          30,
-          "Guided lab",
-          "Pairs complete the workstation and calendar worksheet. Partners switch driver and coach roles halfway."
+          15,
+          "Cycle D: calendar",
+          "Tell: slides 13 and 15. Show: chapter 7. Do: worksheet task 5 on the paper form, marked simulated, unless a demonstration account is set up; switch views on slide 15. Then Tell and Show: slide 14 and chapter 8 (pause at 5:36). Do: worksheet task 6, every learner. Review: the slide 21 knowledge check; a partner checks the five fields."
+        ],
+        [
+          8,
+          "Cycle E: automation and help",
+          "Tell: slides 16 and 19 (slide 17 in one sentence). Show: chapter 9, then in Word type teh and a space and undo with Ctrl and Z. Do: worksheet task 8, every learner. Review: a partner gives one specific piece of feedback."
         ],
         [
           10,
-          "Check and transfer",
-          "Use both knowledge checks. Each learner demonstrates one adjustment, explains why it helps and restores the lab setting."
+          "Individual check",
+          "Play chapter 10 (pause at 6:28). Each learner shows you three things: zoom and reset, choose the headset and test it, and preview page 1 on the right printer. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+        ],
+        [
+          7,
+          "Apply and close",
+          "Slides 23 and 24. Home task: on your own device, make one change from today, write down how you undid it, and share it at the start of week 2. Restore lab settings, then select Start fresh on this computer."
         ]
       ],
       "slides": [
@@ -64,7 +86,7 @@
         },
         {
           "title": "Take the pre-test",
-          "body": "This is a starting snapshot. Answer independently, then save or print your results.",
+          "body": "This is a starting snapshot. Type your name first, answer on your own, then let your instructor record your score.",
           "kind": "assessment",
           "href": "pre"
         },
@@ -80,7 +102,7 @@
         },
         {
           "title": "Make text comfortable",
-          "body": "Browser zoom changes a webpage. Display scaling changes the wider desktop. Start with the control that matches your problem.",
+          "body": "Browser zoom changes a webpage, and the browser remembers it for each site. Display scaling changes the whole desktop. Start with the control that matches your problem.",
           "kind": "teach",
           "refs": [
             "1.1"
@@ -93,7 +115,7 @@
         },
         {
           "title": "Sound and screen checks",
-          "body": "Choose the correct speaker or headset before adjusting volume. Brightness changes light output; contrast changes separation between light and dark.",
+          "body": "Choose the correct speaker or headset before adjusting volume. Brightness changes light output; contrast changes separation between light and dark. On a desktop computer, brightness is set with the buttons on the monitor.",
           "kind": "teach",
           "refs": [
             "1.4"
@@ -130,13 +152,13 @@
             ],
             [
               "A keyboard or flash drive",
-              "USB carries data; USB-C also has charging and optional display uses."
+              "USB carries data and power. USB-C can also charge a laptop and, on some devices, connect a display."
             ]
           ]
         },
         {
           "title": "Printer choices",
-          "body": "Laser printers use toner; inkjet printers use liquid ink. Choose for the task and running cost. A default printer is the device an app initially selects.",
+          "body": "Laser printers use toner and cost less per page for lots of text. Inkjet printers use liquid ink and suit color and photos. Windows and your browser may pick the last printer you used, so check the printer name every time.",
           "kind": "teach",
           "refs": [
             "1.5"
@@ -144,7 +166,7 @@
         },
         {
           "title": "Print one page before twenty",
-          "body": "Check the printer name and connection. Open print preview. Select one page, orientation and copies. Send a test page and check the output.",
+          "body": "Check the printer name and connection. Open print preview. Select one page, orientation and copies. When printing is allowed, send one test page and check it.",
           "kind": "steps",
           "items": [
             "Confirm destination",
@@ -178,7 +200,7 @@
         },
         {
           "title": "Automation still needs a check",
-          "body": "A rule can sort mail or repeat a reminder. Autocorrect changes likely mistakes; autocomplete suggests the rest. Review names, addresses and meaning before accepting.",
+          "body": "A mail rule can sort or flag messages automatically. Autocorrect changes likely mistakes; autocomplete suggests the rest. Review names, addresses and meaning before accepting.",
           "kind": "teach",
           "refs": [
             "1.3"
@@ -210,9 +232,9 @@
           "body": "The video is playing silently. What should you check first?",
           "kind": "check",
           "options": [
-            "Buy a new monitor",
-            "Check output device and mute",
-            "Erase the browser history"
+            "Restart the computer",
+            "Check the output device and mute",
+            "Turn the volume all the way up"
           ],
           "answer": 1,
           "why": "The selected output device or mute setting may explain the silence. Change one thing and test."
@@ -222,12 +244,12 @@
           "body": "A partner only needs to know when you are free. Which sharing option best fits?",
           "kind": "check",
           "options": [
-            "Show all event descriptions",
-            "Publish your account password",
+            "Share every event detail",
+            "Make the calendar public",
             "Share free/busy availability"
           ],
           "answer": 2,
-          "why": "Availability answers the scheduling question while limiting event details."
+          "why": "Availability answers the scheduling question while limiting event details. A public calendar can show details to anyone."
         },
         {
           "title": "Lab: your usable workstation",
@@ -242,23 +264,85 @@
       ],
       "lab": [
         "Record one task you want to make easier and one skill you bring.",
-        "Increase webpage text. Record the control used and how to reset it.",
-        "Select the correct audio output; explain brightness versus contrast.",
-        "Match HDMI, Ethernet and USB to three tasks. Check one actual device port.",
-        "Create a fictional library appointment with a reminder. Record the fields you checked.",
+        "Increase webpage text with browser zoom (Ctrl and +). Record the control you used, then reset it with Ctrl and 0.",
+        "Select the headset as the sound output and play a test sound. Record where the brightness control is for your screen, and explain brightness versus contrast.",
+        "Match HDMI, Ethernet and USB to three jobs: an external screen, a wired network and a flash drive. Find one real port on your computer.",
+        "Create a fictional library appointment: title, day, start and end, place and a reminder. If no calendar app is set up, write the same five fields here on paper, as in video chapter 7, and mark it simulated. Reread it and check each field.",
         "Choose a calendar view and a sharing level for a partner who only needs availability. Explain why.",
-        "Preview a one-page handout; record the printer, orientation and page range. Do not print unless the instructor directs it.",
-        "Type a sentence with a name that autocorrect changes. Correct it. Record a useful help search and one piece of partner feedback."
+        "Open print preview (Ctrl and P) for page 1 of this worksheet. Record the printer name, orientation and pages. Set Pages to 1 and Copies to 1. Do not print unless the instructor directs it.",
+        "In Word, type teh and a space; autocorrect changes it to the. Press Ctrl and Z to undo it. Record a useful help search and one piece of partner feedback."
       ],
       "answers": [
         "Accept a personally meaningful goal and existing skill.",
-        "Browser zoom or site text-size control; demonstrate reset.",
-        "Check output and mute; brightness is light output, contrast is light/dark separation.",
-        "HDMI: display; Ethernet: network; USB: suitable peripheral. USB-C capabilities require checking.",
-        "Title, day, start/end, location, reminder; time zone when relevant.",
+        "Browser zoom (Ctrl and +) or the page\u2019s text-size control; demonstrates reset with Ctrl and 0.",
+        "Headset selected and tested; mute checked. Brightness is light output (monitor buttons on a desktop); contrast is light/dark separation.",
+        "External screen: HDMI. Wired network: Ethernet. Flash drive: USB. USB-C features vary by device and cable.",
+        "Title, day, start/end, location, reminder; time zone when relevant. A paper entry marked simulated is acceptable when no calendar account is set up.",
         "Week for conflicts; free/busy for limited detail. Verify service-specific options.",
-        "The selected printer matches the lab destination; one-page preview prevents waste.",
-        "Learner reviews the result rather than trusting suggestions; help search names the app and task."
+        "Printer name matches the lab destination; Pages 1 and Copies 1; orientation recorded; nothing printed without direction.",
+        "Autocorrect changed teh to the and Ctrl and Z restored it; the learner checks suggestions rather than trusting them; the help search names the app and task."
+      ],
+      "outcomes": [
+        "Settings: at a lab workstation with Edge, each learner enlarges a webpage with browser zoom and returns it to 100% (Ctrl and 0), selects the headset as the sound output and confirms it with a test, and names which control (page zoom, display scale or brightness) fits a described reading problem. All three are correct with no more than one prompt, and lab settings are restored.",
+        "Calendar: using a calendar form (a demonstration account or the paper form from video chapter 7), each learner creates a fictional event with title, day, start and end, place and reminder, rereads it to confirm all five, and chooses free/busy sharing for a partner, explaining what the partner will see.",
+        "Connections and printing: given three jobs (external screen, wired network, flash drive), each learner matches HDMI, Ethernet and USB and finds one real port, then opens print preview for page 1 of the worksheet, confirms the printer name, and sets Pages to 1 and Copies to 1 without printing.",
+        "Automation: in Word, each learner triggers an AutoCorrect change (teh to the), undoes it with Ctrl and Z, and says in one sentence what a mail rule and a cloud service do.",
+        "Help: each learner writes a help request that names the app, the task, what they tried and the exact message, and records one specific piece of partner feedback."
+      ],
+      "prep": "Each station: a headset, Microsoft Edge, Microsoft Word, and this lesson and worksheet. At the front: an HDMI, a USB and an Ethernet cable to hold up, and the projector showing Edge. The lab has no calendar account, so worksheet task 5 uses the paper form from video chapter 7 unless you set up a demonstration account. Decide before class whether one test print is allowed. Play video chapters 2 and 7 with captions to check sound. After your own run-through, select Start fresh on this computer at each station. Keep 3\u20135 printed pre-tests in case the network fails. No paid service, real purchase or new learner account is required.",
+      "lab_paths": [
+        [
+          "Zoom a webpage",
+          "Press Ctrl and + to zoom in, Ctrl and - to zoom out, and Ctrl and 0 to reset. Or open the browser menu (\u00b7\u00b7\u00b7 in Edge, \u22ee in Chrome) and use Zoom."
+        ],
+        [
+          "Make everything bigger",
+          "Start \u203a Settings \u203a System \u203a Display. Under Scale & layout, choose a size from Scale."
+        ],
+        [
+          "Make only text bigger",
+          "Start \u203a Settings \u203a Accessibility \u203a Text size. Drag the slider, then select Apply."
+        ],
+        [
+          "Choose the sound output",
+          "Select the speaker icon on the taskbar, then the arrow next to the volume slider, and choose the headset. Or Start \u203a Settings \u203a System \u203a Sound \u203a Output."
+        ],
+        [
+          "Mute or unmute",
+          "Select the speaker icon on the taskbar, then the speaker symbol at the left of the volume slider."
+        ],
+        [
+          "Screen brightness",
+          "Desktop monitor: use the buttons on the monitor. Laptop: select the sound or battery icon on the taskbar to open Quick Settings, then drag Brightness."
+        ],
+        [
+          "Easier-to-read colors",
+          "Start \u203a Settings \u203a Accessibility \u203a Contrast themes. Choose a theme, then select Apply."
+        ],
+        [
+          "Browser downloads and site permissions",
+          "Open Settings from the browser menu (\u00b7\u00b7\u00b7 in Edge, \u22ee in Chrome), then type downloads or permissions in the Search settings box."
+        ],
+        [
+          "Check a printer and its queue",
+          "Start \u203a Settings \u203a Bluetooth & devices \u203a Printers & scanners \u203a Open print queue. Pick your printer from the Printers menu in that window."
+        ],
+        [
+          "Set a default printer",
+          "In Printers & scanners, turn off Let Windows manage my default printer, then select Set as default next to the printer\u2019s name."
+        ],
+        [
+          "Print preview",
+          "Press Ctrl and P. Check Printer, Pages, Copies and Layout before you select Print."
+        ],
+        [
+          "Share free/busy only",
+          "Outlook.com: Calendar \u203a Share \u203a enter the person\u2019s email \u203a Can view when I\u2019m busy. Google Calendar: Settings \u203a Settings for my calendars \u203a your calendar \u203a Share with specific people or groups \u203a See only free/busy (hide details)."
+        ],
+        [
+          "Undo an autocorrect change in Word",
+          "Type teh and a space; Word changes it to the. Press Ctrl and Z right away to undo. Settings: File \u203a Options \u203a Proofing \u203a AutoCorrect Options."
+        ]
       ]
     },
     {
