@@ -19,18 +19,18 @@
     if(write) history.replaceState(null,'','#'+slides[index].id);
     window.VubProgress?.saveSlide('dl2',week,index,slides.length);
     if(focus) { const h=slides[index].querySelector('h2'); h.focus({preventScroll:true}); slides[index].scrollIntoView({block:'start',behavior:'instant'}); }
-    links[index]?.scrollIntoView({block:'nearest',behavior:'instant'});
+    if(focus||write) links[index]?.scrollIntoView({block:'nearest',behavior:'instant'});
   }
   if(slides.length) {
     const saved=window.VubProgress?.get('dl2',week)?.slide;
-    show(hashIndex()>=0?hashIndex():Number.isInteger(saved)?saved:0,false);
+    show(hashIndex()>=0?hashIndex():Number.isInteger(saved)?saved:0,false,false);
     links.forEach(b=>b.addEventListener('click',()=>{show(Number(b.dataset.slide),true); document.querySelector('.sidebar').classList.remove('open'); document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');}));
     document.querySelector('#previous').addEventListener('click',()=>show(index-1,true));
     document.querySelector('#next').addEventListener('click',()=>show(index+1,true));
     document.querySelector('#restart').addEventListener('click',()=>show(0,true));
     window.addEventListener('hashchange',()=>{if(hashIndex()>=0)show(hashIndex(),true,false);});
     document.addEventListener('keydown',e=>{
-      if(e.altKey||e.ctrlKey||e.metaKey||e.shiftKey||e.target.closest('input,textarea,select,button,a,summary,video,[contenteditable]'))return;
+      if(e.altKey||e.ctrlKey||e.metaKey||e.shiftKey||e.target.closest('input,textarea,select,summary,video,[contenteditable],[tabindex="0"]'))return;
       const dest={ArrowRight:index+1,PageDown:index+1,ArrowLeft:index-1,PageUp:index-1,Home:0,End:slides.length-1}[e.key];
       if(dest!==undefined){e.preventDefault();show(dest,true);}
     });
@@ -43,6 +43,8 @@
   document.querySelectorAll('.check-options').forEach(group=>group.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{group.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const ok=b.dataset.correct==='true';group.nextElementSibling.textContent=(ok?'Correct. ':'Try again. ')+(ok?group.dataset.explanation:'Think about the task and choose another answer.');})));
   document.querySelectorAll('[data-print]').forEach(b=>b.addEventListener('click',()=>window.print()));
   document.querySelectorAll('.worksheet-input').forEach(t=>{t.addEventListener('input',()=>{t.nextElementSibling.textContent=t.value;t.style.height='auto';t.style.height=t.scrollHeight+'px';});});
+  const answers=[...document.querySelectorAll('.worksheet-input')];
+  if(answers.length) window.addEventListener('beforeunload',e=>{if(answers.some(t=>t.value.trim())){e.preventDefault();e.returnValue='';}});
   const form=document.querySelector('#practice-form');
   form?.addEventListener('submit',e=>{e.preventDefault();document.querySelector('#form-result').textContent=`Practice complete: ${form.elements.topic.value}; ${form.elements.method.value}. No request was sent. Review your choices or reset to try again.`;});
   form?.addEventListener('reset',()=>document.querySelector('#form-result').textContent='');
