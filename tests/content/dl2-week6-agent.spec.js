@@ -162,3 +162,11 @@ test('Week 6 slides show the real starter page and the agent loop, not the old r
  expect(js).toContain('Show me your plan before you change anything, then list every line you changed.');
  expect(js).not.toMatch(/Computer help desk|Neighborhood center|Find a resource|Build a one-page app/);
 });
+
+test('DL2 course description presents week 6 as guiding an AI agent, not a small AI-built app',()=>{
+ const dl2=JSON.parse(fs.readFileSync('courses.json','utf8')).courses.find(c=>c.id==='digital-literacy-2');
+ expect(dl2.subtitle).toMatch(/AI agent/);expect(dl2.subtitle).not.toMatch(/small web app with AI/);
+ const sources=fs.readFileSync('courses/digital-literacy-2/sources.html','utf8');
+ expect(sources).toMatch(/AI coding agent/);expect(sources).not.toMatch(/app-building/);
+ expect(fs.readFileSync('courses/digital-literacy-2/index.html','utf8')).toMatch(/guide an AI agent/);
+});

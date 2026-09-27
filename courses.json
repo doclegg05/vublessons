@@ -67,7 +67,7 @@
     {
       "id": "digital-literacy-2",
       "title": "Digital Literacy — Level 2",
-      "subtitle": "Six practical weeks: IC3 GS6 Level 2 plus building a small web app with AI.",
+      "subtitle": "Six practical weeks: IC3 GS6 Level 2, plus guiding an AI agent to build and test a web app.",
       "type": "weeks",
       "progressKey": "dl2",
       "category": "Digital Literacy",
