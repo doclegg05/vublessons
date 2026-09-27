@@ -44,6 +44,31 @@ Six High findings from the six-agent review were fixed in the generators, with r
 
 Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
 
+## Week 1: Tell, Show, Do, Review (2026-09-26)
+
+The instructor's teaching method is **Tell, Show, Do, Review** inside the WIPPEA cycle (TEAL Fact Sheet
+No. 8) with Knowles' adult learning principles. Week 1 was reviewed against it by Gemini 3.1 Pro (video;
+video + materials) and Claude; reports and the framework are in `review/week-01-tsdr/`. Tests:
+`tests/content/dl2-week1-tsdr.spec.js`.
+
+- The week 1 `agenda` is now five cycles (A reading comfort, B hearing and screen, C connections and
+  printing, D calendar, E automation and help). Each names its Tell, Show, Do and Review, plays its
+  video chapter as the Show, and gives the video pause points (1:24, 2:02, 5:36, 6:28). Every learner
+  does each task; the lab block and driver/coach swap are gone. Slide order is unchanged, so the
+  instructor jumps to slides 20 and 21 for the in-cycle checks.
+- New optional week keys: `outcomes` (measurable ABCD statements, shown in the lesson plan instead of
+  `objectives`), `prep` (week-specific "Prepare the room") and `lab_paths` (rows of task and Windows 11
+  steps, rendered as a "Lab quick card" on the lesson plan and worksheet). Only week 1 uses them so far.
+  The Week 6 editor sentence now appears only in the week 6 plan.
+- The lab runs Windows 10, but the instructor chose Windows 11 steps for the card. Card steps were
+  checked against Microsoft and Google support pages (`review/week-01-tsdr/windows-click-paths-verified.md`).
+- Content fixes: default printer (browsers pick the last one used), laser vs inkjet use, monitor
+  brightness buttons, USB power, "mail rule" wording, zoom remembered per site, test-print rule,
+  believable knowledge-check options, and worksheet tasks 4, 5 (paper fallback), 7 and 8 ("teh").
+- Still open for week 1: an event-builder practice for task 5; the video re-render (ch5 connector
+  visual, Tuesday vs Monday in ch7, ch4 label order, silent holds after prompts); post-test item 3
+  still says "Leave the rule alone" about a repeating reminder.
+
 ## Pre-cohort fixes (2026-09-26)
 
 From the seven-part full review before the 2026-09-28 cohort. Tests: `tests/content/dl2-monday-fixes.spec.js`
