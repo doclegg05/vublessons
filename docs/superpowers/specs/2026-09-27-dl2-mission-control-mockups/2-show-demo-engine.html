@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DL2: Show demo window</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --page:#070b14; --ink:#e8ecf5; --muted:#9aa6bf; --line:rgba(255,255,255,.1); --spd:1; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:radial-gradient(1200px 600px at 20% -10%, #16213d 0%, transparent 60%), var(--page); color:var(--ink); font-family:Figtree, system-ui, sans-serif; padding:36px 20px 70px; }
+  .wrap { max-width:1280px; margin:0 auto; }
+  header.intro h2 { font-size:32px; font-weight:800; letter-spacing:-.02em; }
+  header.intro p { color:var(--muted); font-size:17px; margin-top:8px; max-width:900px; line-height:1.55; }
+  .explain { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:22px; }
+  .explain div { background:rgba(255,255,255,.035); border:1px solid var(--line); border-radius:14px; padding:13px 15px; font-size:14.5px; line-height:1.5; color:#c9d2e4; }
+  .explain b { display:block; color:#6ff3ff; font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:5px; }
+
+  /* ============ command deck slide ============ */
+  .mock { position:relative; margin-top:26px; width:100%; aspect-ratio:16/9; border-radius:14px; overflow:hidden; container-type:inline-size; isolation:isolate; box-shadow:0 40px 90px -40px rgba(0,0,0,.9); font-family:'Space Grotesk', sans-serif; color:#e9fbff; }
+  .wall { position:absolute; inset:0; z-index:-1; background:radial-gradient(80% 60% at 50% 110%, rgba(0,220,255,.28), transparent 60%), radial-gradient(50% 40% at 85% 10%, rgba(255,60,172,.22), transparent 70%), radial-gradient(40% 40% at 10% 20%, rgba(255,196,0,.12), transparent 70%), #050814; }
+  .grid { position:absolute; left:-50%; right:-50%; bottom:-10%; height:50%; background-image:linear-gradient(rgba(0,229,255,.55) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,.55) 1px, transparent 1px); background-size:4cqw 4cqw; transform:perspective(30cqw) rotateX(62deg); transform-origin:bottom; animation:grid 4s linear infinite; mask-image:linear-gradient(to top,#000 20%,transparent 90%); -webkit-mask-image:linear-gradient(to top,#000 20%,transparent 90%); }
+  @keyframes grid { to { background-position:0 4cqw; } }
+  @property --ang { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+  .edge, .panel { position:absolute; left:3%; right:3%; top:4.5%; bottom:15%; clip-path:polygon(2cqw 0,100% 0,100% calc(100% - 2cqw),calc(100% - 2cqw) 100%,0 100%,0 2cqw); }
+  .edge { background:conic-gradient(from var(--ang),#00e5ff,#ff3cac,#ffc400,#00e5ff); animation:edge 9s linear infinite; }
+  @keyframes edge { to { --ang:360deg; } }
+  .panel { margin:2px; background:linear-gradient(160deg,rgba(6,14,34,.93),rgba(5,9,24,.95)); padding:1.8cqw 2.2cqw; display:flex; flex-direction:column; gap:1.3cqw; }
+  .hud { display:flex; align-items:center; gap:1.1cqw; font-family:'JetBrains Mono', monospace; font-size:1.1cqw; letter-spacing:.12em; color:#6ff3ff; text-transform:uppercase; }
+  .hud img { width:2.2cqw; filter:drop-shadow(0 0 .6cqw rgba(0,229,255,.6)); }
+  .hud .tag { margin-left:auto; color:#021018; background:#ff6fc1; padding:.25cqw .9cqw; font-weight:700; box-shadow:0 0 1.4cqw rgba(255,60,172,.6); }
+  .stage { flex:1; display:grid; grid-template-columns:1fr 27%; gap:2cqw; min-height:0; }
+  .bezel { position:relative; align-self:start; aspect-ratio:16/9; border-radius:.9cqw; padding:.5cqw; background:linear-gradient(180deg,#1b2336,#0b0f1a); box-shadow:0 0 0 1px rgba(0,229,255,.35), 0 0 3cqw -0.5cqw rgba(0,229,255,.45); }
+  .viewport { position:relative; width:100%; height:100%; overflow:hidden; border-radius:.5cqw; background:#000; }
+  .side { display:flex; flex-direction:column; gap:1.1cqw; min-height:0; }
+  .stepno { font-family:'JetBrains Mono', monospace; font-size:1.1cqw; letter-spacing:.16em; color:#ffc400; }
+  .caption { font-size:2.15cqw; font-weight:600; line-height:1.25; min-height:8cqw; }
+  .caption em { font-style:normal; color:#ffc400; }
+  .todo { list-style:none; display:flex; flex-direction:column; gap:.6cqw; font-size:1.35cqw; }
+  .todo li { display:flex; gap:.8cqw; align-items:center; color:#7f93b0; transition:color .3s; }
+  .todo li i { font-style:normal; width:2.2cqw; height:2.2cqw; display:grid; place-items:center; font-family:'JetBrains Mono', monospace; font-size:1cqw; border:1px solid rgba(0,229,255,.35); flex:none; }
+  .todo li.done { color:#bfe9f2; } .todo li.done i { background:rgba(0,229,255,.2); color:#6ff3ff; }
+  .todo li.now { color:#fff; } .todo li.now i { background:#00e5ff; color:#021018; box-shadow:0 0 1.2cqw #00e5ff; }
+  .controls { margin-top:auto; display:flex; gap:.6cqw; flex-wrap:wrap; }
+  .controls button { font-family:'JetBrains Mono', monospace; font-size:1.05cqw; letter-spacing:.08em; color:#d9f7ff; background:rgba(0,229,255,.08); border:1px solid rgba(0,229,255,.4); padding:.6cqw .9cqw; cursor:pointer; clip-path:polygon(.5cqw 0,100% 0,100% calc(100% - .5cqw),calc(100% - .5cqw) 100%,0 100%,0 .5cqw); }
+  .controls button:hover { background:rgba(0,229,255,.2); }
+  .controls button.on { background:#ffc400; color:#1a1305; border-color:#ffc400; }
+  .strip { position:absolute; left:3%; right:3%; bottom:4.5%; height:7%; display:grid; grid-template-columns:repeat(6,1fr) auto; gap:.5cqw; font-family:'JetBrains Mono', monospace; font-size:1.05cqw; letter-spacing:.1em; }
+  .seg { border:1px solid rgba(0,229,255,.35); display:flex; align-items:center; justify-content:center; color:#8fe4f2; background:rgba(4,10,26,.75); text-transform:uppercase; }
+  .seg.done { background:rgba(0,229,255,.2); color:#d4fbff; }
+  .seg.now { background:linear-gradient(90deg,rgba(255,60,172,.55),rgba(255,196,0,.45)); color:#fff; border-color:#ff6fc1; box-shadow:0 0 1.6cqw rgba(255,60,172,.6); }
+  .seg.t { padding:0 1.3cqw; color:#ffc400; border-color:rgba(255,196,0,.5); }
+
+  /* ============ Windows 11 screen (authored at 1280x720) ============ */
+  .screen { position:absolute; left:0; top:0; width:1280px; height:720px; transform-origin:0 0; font-family:'Segoe UI Variable Text','Segoe UI',Figtree,system-ui,sans-serif; color:#1a1a1a; overflow:hidden; --ui:14px; }
+  .bloom { position:absolute; inset:0; background:
+      radial-gradient(38% 55% at 50% 58%, #eaf3ff 0%, #9cc7ff 22%, transparent 55%),
+      radial-gradient(60% 70% at 30% 70%, #1f6fe5 0%, transparent 60%),
+      radial-gradient(60% 70% at 72% 62%, #2c5fd8 0%, transparent 60%),
+      linear-gradient(180deg,#0b2a78,#12409e 60%,#0a2466); }
+  .taskbar { position:absolute; left:0; right:0; bottom:0; height:48px; background:rgba(236,240,247,.9); backdrop-filter:blur(30px); border-top:1px solid rgba(0,0,0,.08); display:flex; align-items:center; justify-content:center; gap:4px; }
+  .tbi { width:40px; height:40px; border-radius:4px; display:grid; place-items:center; position:relative; }
+  .tbi.open::after { content:""; position:absolute; bottom:2px; width:16px; height:3px; border-radius:2px; background:#005fb8; }
+  .tray { position:absolute; right:14px; font-size:12px; text-align:right; line-height:1.35; color:#1a1a1a; }
+  .win { position:absolute; font-size:var(--ui); width:66em; height:632px; left:calc((1280px - 66em) / 2); top:20px; background:#f3f3f3; border:1px solid rgba(0,0,0,.18); border-radius:8px; box-shadow:0 18px 50px rgba(0,0,0,.35); overflow:hidden; transition:font-size calc(600ms * var(--spd)) cubic-bezier(.65,0,.35,1), left calc(600ms * var(--spd)) cubic-bezier(.65,0,.35,1), width calc(600ms * var(--spd)) cubic-bezier(.65,0,.35,1); display:flex; flex-direction:column; }
+  .wtitle { height:2.4em; display:flex; align-items:center; gap:.7em; padding-left:1em; font-size:.86em; flex:none; }
+  .wtitle .ctl { margin-left:auto; display:flex; height:100%; }
+  .wtitle .ctl span { width:3.3em; display:grid; place-items:center; font-size:1em; color:#333; }
+  .wbody { flex:1; display:grid; grid-template-columns:19em 1fr; min-height:0; }
+  .nav { padding:.6em .5em 0 .6em; }
+  .acct { display:flex; align-items:center; gap:.9em; padding:.6em .6em 1em; }
+  .avatar { width:4.2em; height:4.2em; border-radius:50%; background:linear-gradient(135deg,#1b365d,#3b6cc4); color:#fff; display:grid; place-items:center; font-weight:600; font-size:1em; }
+  .acct b { display:block; font-weight:600; font-size:1em; } .acct small { color:#5f5f5f; font-size:.86em; }
+  .search { margin:0 .3em .8em; height:2.35em; border-radius:4px; background:#fbfbfb; border:1px solid #e5e5e5; border-bottom-color:#868686; display:flex; align-items:center; padding:0 .8em; color:#6b6b6b; font-size:.95em; justify-content:space-between; }
+  .navi { height:2.55em; display:flex; align-items:center; gap:1em; padding:0 .8em; border-radius:4px; font-size:.97em; position:relative; margin:.1em .3em; }
+  .navi.sel { background:rgba(0,0,0,.055); }
+  .navi.sel::before { content:""; position:absolute; left:0; top:50%; width:3px; height:1.15em; margin-top:-.575em; border-radius:2px; background:#005fb8; }
+  .navi svg { width:1.15em; height:1.15em; flex:none; }
+  .content { padding:.9em 2.4em 0 1.6em; overflow:hidden; position:relative; }
+  .content h1 { font-size:2em; font-weight:600; letter-spacing:-.01em; margin:.1em 0 .6em; display:flex; gap:.45em; align-items:center; }
+  .content h1 .parent { color:#5f5f5f; font-weight:600; }
+  .content h1 .sep { color:#8a8a8a; font-weight:400; font-size:.7em; }
+  .page { display:none; }
+  .screen[data-page="system"] .p-system, .screen[data-page="display"] .p-display { display:block; animation:pagein calc(350ms * var(--spd)) ease-out; }
+  @keyframes pagein { from { opacity:0; transform:translateY(.6em); } }
+  .card { background:#fbfbfb; border:1px solid #e5e5e5; border-radius:4px; min-height:4.5em; display:flex; align-items:center; gap:1.15em; padding:0 1.1em 0 1.25em; margin-bottom:.3em; }
+  .card .ci { width:1.45em; height:1.45em; flex:none; }
+  .card .ct { flex:1; } .card .ct b { font-weight:400; display:block; font-size:1em; } .card .ct small { color:#5f5f5f; font-size:.86em; }
+  .card .chev { color:#5f5f5f; font-size:1em; }
+  .sect { font-weight:600; font-size:1em; margin:1.1em 0 .55em; }
+  .combo { position:relative; min-width:13em; height:2.3em; background:#fbfbfb; border:1px solid #e5e5e5; border-bottom-color:#868686; border-radius:4px; display:flex; align-items:center; justify-content:space-between; padding:0 .8em; font-size:.95em; gap:1em; }
+  .toggle { display:flex; align-items:center; gap:.8em; font-size:.95em; }
+  .toggle i { width:2.9em; height:1.45em; border-radius:1em; border:1px solid #5f5f5f; position:relative; }
+  .toggle i::after { content:""; position:absolute; left:.25em; top:50%; width:.75em; height:.75em; margin-top:-.375em; border-radius:50%; background:#5f5f5f; }
+  .flyout { position:absolute; right:0; top:2.5em; width:100%; background:#f9f9f9; border:1px solid rgba(0,0,0,.1); border-radius:7px; box-shadow:0 8px 24px rgba(0,0,0,.18); padding:.3em; z-index:5; display:none; }
+  .screen.menu-open .flyout { display:block; animation:fly calc(220ms * var(--spd)) ease-out; }
+  @keyframes fly { from { opacity:0; transform:translateY(-.5em); } }
+  .opt { height:2.3em; display:flex; align-items:center; padding:0 .9em; border-radius:4px; position:relative; font-size:.95em; }
+  .opt.sel { background:rgba(0,0,0,.05); }
+  .opt.sel::before { content:""; position:absolute; left:0; top:50%; width:3px; height:1em; margin-top:-.5em; border-radius:2px; background:#005fb8; }
+  .cursor { position:absolute; left:640px; top:380px; width:22px; height:30px; z-index:50; transition:left calc(750ms * var(--spd)) cubic-bezier(.45,0,.2,1), top calc(750ms * var(--spd)) cubic-bezier(.45,0,.2,1); pointer-events:none; filter:drop-shadow(0 2px 3px rgba(0,0,0,.35)); }
+  .cursor svg { width:100%; height:100%; transition:transform .12s; transform-origin:0 0; }
+  .cursor.press svg { transform:scale(.85); }
+  .ripple { position:absolute; width:14px; height:14px; margin:-7px 0 0 -7px; border-radius:50%; border:3px solid #ffc400; z-index:49; pointer-events:none; animation:rip calc(600ms * var(--spd)) ease-out forwards; }
+  @keyframes rip { to { transform:scale(4.5); opacity:0; } }
+  .spot { position:absolute; z-index:40; border-radius:8px; border:3px solid #00e5ff; box-shadow:0 0 0 4000px rgba(4,8,20,.32), 0 0 22px rgba(0,229,255,.8); pointer-events:none; opacity:0; transition:opacity calc(300ms * var(--spd)), left calc(500ms * var(--spd)), top calc(500ms * var(--spd)), width calc(500ms * var(--spd)), height calc(500ms * var(--spd)); }
+  .spot.on { opacity:1; }
+
+  .ask { margin-top:26px; color:#c9d2e4; font-size:16px; line-height:1.6; border-top:1px solid var(--line); padding-top:18px; }
+  .ask b { color:#fff; }
+  @media (max-width:900px) { .explain { grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="intro">
+    <h2>The "Show" window: a live Windows 11 demo</h2>
+    <p>This is a real Week 1 demo, making text bigger in Settings. It isn't a video or a screenshot. It's a working recreation of Windows 11 with a guided cursor. <b>In class it waits for your clicker, one step per click.</b> This preview plays by itself so you can watch it.</p>
+    <div class="explain">
+      <div><b>Camera zoom</b>The view pushes in on the exact button before the click, so the back row can see it, then pulls back out.</div>
+      <div><b>Spotlight + ripple</b>Everything else dims, and a gold ring pulses where the cursor clicks.</div>
+      <div><b>Big captions</b>The step in plain words, in large type beside the screen. It matches the worksheet line for line.</div>
+      <div><b>Your controls</b>Back, Next, Replay and ½ speed. Or switch to the real computer and repeat it live.</div>
+    </div>
+  </header>
+
+  <div class="mock">
+    <div class="wall"><div class="grid"></div></div>
+    <div class="edge"></div>
+    <div class="panel">
+      <div class="hud"><img src="/files/vub-seal-white.png" alt=""> WK-01 // UNIT A // TEXT TOO SMALL <span class="tag">SHOW</span></div>
+      <div class="stage">
+        <div class="bezel"><div class="viewport" id="vp">
+          <div class="screen" id="scr" data-page="system">
+            <div class="bloom"></div>
+            <!-- Settings window -->
+            <div class="win" id="win">
+              <div class="wtitle">
+                <svg width="16" height="16" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="#5f5f5f" stroke-width="2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="#5f5f5f" stroke-width="2" stroke-linecap="round"/></svg>
+                Settings<div class="ctl"><span>&#8212;</span><span>&#9744;</span><span>&#10005;</span></div>
+              </div>
+              <div class="wbody">
+                <div class="nav">
+                  <div class="acct"><div class="avatar">VL</div><div><b>Veteran Learner</b><small>Local account</small></div></div>
+                  <div class="search">Find a setting <svg width="14" height="14" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" fill="none" stroke="#444" stroke-width="2"/><path d="M15 15l5 5" stroke="#444" stroke-width="2"/></svg></div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z" fill="#4a88d8"/></svg>Home</div>
+                  <div class="navi sel"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="#0f6cbd"/><path d="M9 20h6M12 16v4" stroke="#0f6cbd" stroke-width="2"/></svg>System</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="10" height="12" rx="2" fill="#3a7bd5"/><rect x="15" y="9" width="5" height="9" rx="1.5" fill="#6aa5ef"/></svg>Bluetooth &amp; devices</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5.5 12.5a10 10 0 0 1 13 0M9 16a5 5 0 0 1 6 0" fill="none" stroke="#2b67c6" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="19" r="1.6" fill="#2b67c6"/></svg>Network &amp; internet</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-8 8H6v-6z" fill="#e8883a"/></svg>Personalization</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5" fill="#5b6b82"/><rect x="13" y="3" width="8" height="8" rx="1.5" fill="#5b6b82"/><rect x="3" y="13" width="8" height="8" rx="1.5" fill="#5b6b82"/><rect x="13" y="13" width="8" height="8" rx="1.5" fill="#5b6b82"/></svg>Apps</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#2e9e5b"/><path d="M4 21c1-5 15-5 16 0" fill="#2e9e5b"/></svg>Accounts</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#3a7bd5" stroke-width="2"/><path d="M12 7v5l3 2" stroke="#3a7bd5" stroke-width="2" fill="none"/></svg>Time &amp; language</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="#1f6fd1"/><circle cx="12" cy="7.5" r="1.6" fill="#fff"/><path d="M7.5 10h9M12 10v4l-2.5 4.5M12 14l2.5 4.5" stroke="#fff" stroke-width="1.7" stroke-linecap="round" fill="none"/></svg>Accessibility</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z" fill="#6b7890"/></svg>Privacy &amp; security</div>
+                  <div class="navi"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5" fill="none" stroke="#0f6cbd" stroke-width="2.2" stroke-linecap="round"/></svg>Windows Update</div>
+                </div>
+                <div class="content">
+                  <!-- System page -->
+                  <div class="page p-system">
+                    <h1>System</h1>
+                    <div class="card" id="card-display"><svg class="ci" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.6"/><path d="M9 20h6M12 16v4" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Display</b><small>Monitors, brightness, night light, display profile</small></div><span class="chev">›</span></div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="none" stroke="#1a1a1a" stroke-width="1.6"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Sound</b><small>Volume levels, output, input, sound devices</small></div><span class="chev">›</span></div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z M10 20h4" fill="none" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Notifications</b><small>Alerts from apps and system, do not disturb</small></div><span class="chev">›</span></div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="#1a1a1a" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Focus</b><small>Reduce distractions</small></div><span class="chev">›</span></div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><path d="M12 3v8M7 6.5a7 7 0 1 0 10 0" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round"/></svg><div class="ct"><b>Power</b><small>Sleep, energy recommendations, power mode</small></div><span class="chev">›</span></div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="6" rx="1.5" fill="none" stroke="#1a1a1a" stroke-width="1.6"/><rect x="4" y="13" width="16" height="6" rx="1.5" fill="none" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Storage</b><small>Storage space, drives, configuration rules</small></div><span class="chev">›</span></div>
+                  </div>
+                  <!-- Display page -->
+                  <div class="page p-display">
+                    <h1><span class="parent">System</span><span class="sep">›</span>Display</h1>
+                    <div class="sect">Brightness &amp; color</div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8 6 6 0 0 1-8-8z" fill="none" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Night light</b><small>Use warmer colors to help block blue light</small></div><div class="toggle">Off <i></i></div></div>
+                    <div class="sect">Scale &amp; layout</div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.6"/><path d="M8 15l4-6 4 6" fill="none" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Scale</b><small>Change the size of text, apps, and other items</small></div>
+                      <div class="combo" id="scale-dd"><span id="scale-val">100% (Recommended)</span><span>⌄</span>
+                        <div class="flyout"><div class="opt sel">100% (Recommended)</div><div class="opt" id="opt-125">125%</div><div class="opt">150%</div><div class="opt">175%</div></div>
+                      </div>
+                    </div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.6"/><path d="M7 9h4M7 9v4M17 15h-4M17 15v-4" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Display resolution</b><small>Adjust the resolution to fit your connected display</small></div><div class="combo">1920 × 1080 (Recommended)<span>⌄</span></div></div>
+                    <div class="card"><svg class="ci" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="#1a1a1a" stroke-width="1.6"/><path d="M9 18h6" stroke="#1a1a1a" stroke-width="1.6"/></svg><div class="ct"><b>Display orientation</b></div><div class="combo">Landscape<span>⌄</span></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- taskbar -->
+            <div class="taskbar">
+              <div class="tbi"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="2" y="2" width="9.5" height="9.5" rx="1" fill="#1a8cff"/><rect x="12.5" y="2" width="9.5" height="9.5" rx="1" fill="#1a8cff"/><rect x="2" y="12.5" width="9.5" height="9.5" rx="1" fill="#1a8cff"/><rect x="12.5" y="12.5" width="9.5" height="9.5" rx="1" fill="#1a8cff"/></svg></div>
+              <div class="tbi"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#222" stroke-width="2"/><path d="M15 15l5 5" stroke="#222" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+              <div class="tbi"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M2 7a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="#f4b73e"/><path d="M2 10h20v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="#ffd166"/></svg></div>
+              <div class="tbi"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#1b9de2"/><path d="M6 14c0-5 11-7 12-1-1 3-5 4-8 2" fill="none" stroke="#5fe3a1" stroke-width="3" stroke-linecap="round"/></svg></div>
+              <div class="tbi open"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4" fill="none" stroke="#555" stroke-width="2.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" stroke="#555" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+              <div class="tray">4:52 PM<br>9/28/2026</div>
+            </div>
+            <div class="spot" id="spot"></div>
+            <div class="cursor" id="cur"><svg viewBox="0 0 22 30"><path d="M1.5 1.5 L1.5 23 L7 17.8 L10.8 27 L14.4 25.5 L10.7 16.5 L18 16.5 Z" fill="#fff" stroke="#000" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div></div>
+        <div class="side">
+          <div class="stepno" id="stepno">STEP 1 / 5</div>
+          <div class="caption" id="cap">Settings is open to the <em>System</em> page.</div>
+          <ol class="todo" id="todo">
+            <li><i>1</i>System page</li><li><i>2</i>Click Display</li><li><i>3</i>Open the Scale menu</li><li><i>4</i>Choose 125%</li><li><i>5</i>Check it, then undo</li>
+          </ol>
+          <div class="controls">
+            <button id="bBack">◀ BACK</button><button id="bNext">NEXT ▶</button><button id="bPlay" class="on">AUTO</button><button id="bReplay">↺</button><button id="bSlow">½×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="strip"><div class="seg done">Warm-up</div><div class="seg done">Intro</div><div class="seg now">Present</div><div class="seg">Practice</div><div class="seg">Evaluate</div><div class="seg">Apply</div><div class="seg t">T-11:05</div></div>
+  </div>
+
+  <p class="ask"><b>This same engine covers every "Show" in the course:</b> File Explorer, Edge, Outlook, Word, Excel, Calendar, the Week 6 agent, and more. The same scenes can be saved as MP4 videos for students to rewatch at home. Try the buttons under the steps, and try ½× for slower learners.</p>
+</div>
+
+<script>
+(() => {
+  const W = 1280, H = 720;
+  const vp = document.getElementById('vp'), scr = document.getElementById('scr');
+  const cur = document.getElementById('cur'), spot = document.getElementById('spot');
+  const capEl = document.getElementById('cap'), stepEl = document.getElementById('stepno');
+  const todo = [...document.querySelectorAll('#todo li')];
+  let base = 1, cam = { z: 1, px: W / 2, py: H / 2 }, spd = 1, auto = true, idx = 0, token = 0;
+
+  const steps = [
+    { cap: 'Settings is open to the <em>System</em> page.', state: { page: 'system', menu: false, scale: 100 } },
+    { cap: 'Click <em>Display</em>.', target: '#card-display', state: { page: 'display', menu: false, scale: 100 } },
+    { cap: 'Under Scale &amp; layout, open the <em>Scale</em> menu.', target: '#scale-dd', state: { page: 'display', menu: true, scale: 100 } },
+    { cap: 'Choose <em>125%</em>. Everything gets bigger, right away.', target: '#opt-125', state: { page: 'display', menu: false, scale: 125 } },
+    { cap: 'Check each app. To undo it, choose <em>100%</em> again.', state: { page: 'display', menu: false, scale: 125 } },
+  ];
+
+  const sleep = ms => new Promise(r => setTimeout(r, ms * spd));
+  function applyCam(anim = true) {
+    const s = base * cam.z, bw = vp.clientWidth, bh = vp.clientHeight;
+    let tx = bw / 2 - cam.px * s, ty = bh / 2 - cam.py * s;
+    tx = Math.min(0, Math.max(bw - W * s, tx)); ty = Math.min(0, Math.max(bh - H * s, ty));
+    scr.style.transition = anim ? `transform ${700 * spd}ms cubic-bezier(.65,0,.35,1)` : 'none';
+    scr.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`;
+  }
+  function fit() { base = vp.clientWidth / W; applyCam(false); }
+  new ResizeObserver(fit).observe(vp);
+
+  function pos(el) { let x = 0, y = 0, e = el; while (e && e !== scr) { x += e.offsetLeft; y += e.offsetTop; e = e.offsetParent; } return { x, y, w: el.offsetWidth, h: el.offsetHeight }; }
+  function apply(st) {
+    scr.dataset.page = st.page;
+    scr.classList.toggle('menu-open', st.menu);
+    scr.style.setProperty('--ui', st.scale === 125 ? '17.5px' : '14px');
+    document.getElementById('scale-val').textContent = st.scale === 125 ? '125%' : '100% (Recommended)';
+  }
+  function ui(i) {
+    capEl.innerHTML = steps[i].cap;
+    stepEl.textContent = `STEP ${i + 1} / ${steps.length}`;
+    todo.forEach((li, k) => { li.className = k < i ? 'done' : k === i ? 'now' : ''; });
+  }
+  function spotOn(p) { Object.assign(spot.style, { left: p.x - 6 + 'px', top: p.y - 6 + 'px', width: p.w + 12 + 'px', height: p.h + 12 + 'px' }); spot.classList.add('on'); }
+  function ripple(x, y) { const r = document.createElement('div'); r.className = 'ripple'; r.style.left = x + 'px'; r.style.top = y + 'px'; scr.appendChild(r); setTimeout(() => r.remove(), 900 * spd); }
+  function moveCursor(x, y) { cur.style.left = x + 'px'; cur.style.top = y + 'px'; }
+
+  async function play(i) {
+    const my = ++token;
+    idx = i; ui(i);
+    const st = steps[i];
+    if (!st.target) { cam = { z: 1, px: W / 2, py: H / 2 }; applyCam(); spot.classList.remove('on'); apply(st.state); return; }
+    cam = { z: 1, px: W / 2, py: H / 2 }; applyCam(); await sleep(500); if (my !== token) return;
+    const t = document.querySelector(st.target), p = pos(t), cx = p.x + p.w * (st.target === '#scale-dd' ? .5 : .3), cy = p.y + p.h / 2;
+    moveCursor(cx, cy); await sleep(850); if (my !== token) return;
+    spotOn(p); cam = { z: 2.1, px: cx, py: cy }; applyCam(); await sleep(900); if (my !== token) return;
+    cur.classList.add('press'); ripple(cx, cy); await sleep(160); cur.classList.remove('press');
+    await sleep(220); if (my !== token) return;
+    spot.classList.remove('on'); apply(st.state);
+    if (st.state.scale === 125) { await sleep(300); cam = { z: 1, px: W / 2, py: H / 2 }; applyCam(); await sleep(700); const d = pos(document.getElementById('scale-dd')); moveCursor(d.x + d.w * .5, d.y + d.h / 2); }
+  }
+  function jump(i) { // instant state for Back
+    token++; idx = i; ui(i);
+    apply(steps[i].state); spot.classList.remove('on'); cam = { z: 1, px: W / 2, py: H / 2 }; applyCam();
+  }
+  async function loop() {
+    while (true) {
+      if (!auto) { await new Promise(r => setTimeout(r, 300)); continue; }
+      await sleep(2600);
+      if (!auto) continue;
+      if (idx >= steps.length - 1) { await sleep(1000); jump(0); moveCursor(640, 380); continue; }
+      await play(idx + 1);
+    }
+  }
+  const setAuto = v => { auto = v; document.getElementById('bPlay').classList.toggle('on', v); };
+  document.getElementById('bNext').onclick = () => { setAuto(false); if (idx < steps.length - 1) play(idx + 1); };
+  document.getElementById('bBack').onclick = () => { setAuto(false); if (idx > 0) jump(idx - 1); };
+  document.getElementById('bReplay').onclick = () => { setAuto(false); jump(0); moveCursor(640, 380); };
+  document.getElementById('bPlay').onclick = () => setAuto(!auto);
+  document.getElementById('bSlow').onclick = e => { spd = spd === 1 ? 2 : 1; document.documentElement.style.setProperty('--spd', spd); e.target.classList.toggle('on', spd === 2); };
+  document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') document.getElementById('bNext').click(); if (e.key === 'ArrowLeft') document.getElementById('bBack').click(); });
+
+  fit(); jump(0); loop();
+})();
+</script>
+</body>
+</html>
