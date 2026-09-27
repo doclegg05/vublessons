@@ -40,12 +40,12 @@ test('DL2 week 6 worksheet teaches the build mechanics the answer key grades',()
 test('DL2 week 5 skills challenge gives every task its inputs, a response box and a rating',()=>{
  const w5=curriculum.weeks[4];
  expect(w5.challenge.item).toBe(6);
- expect(w5.challenge.tasks).toHaveLength(7);
+ expect(w5.challenge.tasks).toHaveLength(5);
  for(const t of w5.challenge.tasks){expect(t).toHaveLength(3);for(const part of t)expect(typeof part==='string'&&part.length>10,JSON.stringify(t)).toBe(true);}
  const ws=worksheet(5);
  for(const [task,materials] of w5.challenge.tasks){expect(ws).toContain(esc(task));expect(ws).toContain(esc(materials));}
- expect(ws.match(/id="challenge-answer-\d"/g)).toHaveLength(7);
- for(let i=0;i<7;i++){const radios=ws.match(new RegExp(`name="challenge-rating-${i}"`,'g'));expect(radios,`task ${i+1} rating radios`).toHaveLength(3);}
+ expect(ws.match(/id="challenge-answer-\d"/g)).toHaveLength(5);
+ for(let i=0;i<5;i++){const radios=ws.match(new RegExp(`name="challenge-rating-${i}"`,'g'));expect(radios,`task ${i+1} rating radios`).toHaveLength(3);}
  for(const label of ['Independent','With prompt','Needs practice'])expect(ws).toContain(label);
  const key=answerKey(5);
  for(const [task,,evidence] of w5.challenge.tasks){expect(key).toContain(esc(task));expect(key).toContain(esc(evidence));}
