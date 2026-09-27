@@ -311,3 +311,6 @@ body.deck .skip{position:fixed;top:-100px;left:1rem;z-index:300;background:#fff;
 .deck .slide-body:has(.workshop,.topic-scene) .flip-grid{flex:0 0 auto}
 .deck .slide-body:has(.workshop,.topic-scene) :is(.flip-front,.flip-back){padding:.7rem .9rem}
 .deck .code-sample,.deck pre{font-size:calc(var(--deck-body)*.9);padding:.7rem 1rem;border-radius:8px;background:var(--primary-dark);color:#fff;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+/* Cards that share a slide with another column stack, so their text never squeezes into a sliver. */
+.deck .two-column .key-points.cols-3,.deck .two-column .key-points.cols-2{grid-template-columns:minmax(0,1fr)}
+.deck .two-column .key-points.cols-3 .key-point{flex-direction:row;align-items:center;gap:1rem}
