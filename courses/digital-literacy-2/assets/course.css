@@ -12,3 +12,11 @@
 /* Hidden cell labels are absolutely positioned; the scroll box must contain them or the page scrolls sideways. */
 .table-scroll{position:relative}.test-log .worksheet-input{min-height:3.5rem;min-width:9rem}.test-log th[scope=row],.rubric th[scope=row]{white-space:normal}.video-words{border:2px solid #adc1d2;border-radius:8px;padding:0 1.25rem 1rem;margin:1.5rem 0}.video-words dt{font-weight:700;margin-top:.7em}.video-words dd{margin:0}
 @media print{.test-log .print-answer{min-height:.6in}}
+
+/* Instructor run sheet: one teaching unit per printed page. */
+.run-intro{font-size:1.05rem}.run-objectives li{margin-bottom:.4em}.run-tested{color:#46566d;font-size:.9em;white-space:nowrap}.run-legend{color:#46566d;font-size:.95rem}
+.run-block,.run-unit{margin:2rem 0;padding:1.2rem 1.5rem;border:2px solid #b5c2cf;border-radius:10px}.run-unit{border-color:#1b365d;border-left-width:8px}
+.run-block h2,.run-unit h2{margin-top:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5em 1em;align-items:baseline}.run-time{font-size:1.1rem;font-weight:400;color:#46566d;white-space:nowrap}
+.run-unit h3{margin:1rem 0 .3rem;font-size:1.15rem;color:#1b365d}.run-note{font-weight:400;color:#46566d;font-size:.95rem}
+.run-say{background:#e1efed;padding:.8rem 1rem;border-radius:8px}.run-unit ol li,.run-unit ul li,.run-block ol li{margin-top:.35em}.run-slides{color:#46566d;font-size:.95rem;margin-bottom:0}
+@media print{.run-unit{break-before:page;border:0;border-left:6px solid #1b365d;padding:0 0 0 .3in;margin:0}.run-block{border:1px solid #888;break-inside:avoid;margin:.15in 0;padding:.1in .2in}.run-intro,.run-legend{font-size:11pt}.run-unit h2,.run-block h2{font-size:17pt}.run-unit h3{font-size:13pt}.run-say{background:white;border:1px solid #777}}

@@ -81,9 +81,9 @@ test('Typing P inside a form field does not start present mode',async({page})=>{
 });
 
 test('Interactions still work in present mode',async({page})=>{
- await page.setViewportSize({width:1366,height:768});await page.goto(deck(1)+'#slide-21');await page.keyboard.press('p');
- await page.locator('#slide-21 .check-options button').nth(2).click();
- await expect(page.locator('#slide-21 .feedback')).toContainText('Correct');
+ await page.setViewportSize({width:1366,height:768});await page.goto(deck(1)+'#slide-16');await page.keyboard.press('p');
+ await page.locator('#slide-16 .check-options button').nth(2).click();
+ await expect(page.locator('#slide-16 .feedback')).toContainText('Correct');
 });
 
 test('A slide too tall for the screen is shown one part at a time, words first',async({page})=>{
@@ -138,4 +138,19 @@ test('Present mode passes an accessibility scan',async({page})=>{
   const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
   expect(result.violations.map(v=>({id:v.id,nodes:v.nodes.map(x=>x.target)})),`week ${n} slide ${slide}`).toEqual([]);
  }
+});
+
+// Week 1 is taught from a lean deck (2026-09-27 units rebuild): every slide fits one projector screen whole,
+// so its words and its picture are never shown on separate steps. (On a 4:3 1024×768 projector the calendar
+// simulation, slide 14, is the exception: it shows its words first, then the calendar.)
+for(const [w,h] of [[1280,720],[1366,768]])test(`Week 1 never needs a build step at ${w}×${h}`,async({page})=>{
+ await page.setViewportSize({width:w,height:h});await page.emulateMedia({reducedMotion:'reduce'});
+ await page.goto(deck(1));await page.keyboard.press('p');await expect(page.locator('body')).toHaveClass(/presenting/);
+ const count=await page.locator('.slide').count();const split=[];
+ for(let i=1;i<=count;i++){
+  await page.locator('[data-slide]').nth(i-1).evaluate(b=>b.click());await settle(page);
+  const s=await page.evaluate(()=>{const s=document.querySelector('.slide:not([hidden])');return {id:s.id,layout:s.dataset.layout,steps:s.dataset.steps};});
+  if(s.layout==='build')split.push(`${s.id} (${s.steps} parts)`);
+ }
+ expect(split,split.join(', ')).toEqual([]);
 });

@@ -86,3 +86,6 @@
 /* Short projectors (720 pixels tall): a slimmer bar and edge. */
 @media (max-height:740px){.presenting{--bar:52px}.presenting .slide:not([hidden]){padding-top:8px;padding-bottom:6px}.presenting .bottom-nav button{min-height:40px}}
 @media print{.presenting .present-frame{zoom:1!important;display:block}}
+
+/* Scene artifacts lose their navy card when presenting, so their text must not stay white. */
+.presenting .scene-artifact>h4,.presenting .scene-artifact .artifact-content{color:#16243a}

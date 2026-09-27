@@ -4,7 +4,7 @@ from html import escape as E
 PHOTO_ROOT='/courses/digital-literacy-2/assets/photos/'
 # Explicit placement prevents a week-wide decorative image from invading a demonstration.
 PHOTOS={
- 1:{1:'workstation',2:'workstation',11:'workstation',18:'workstation',22:'workstation'},
+ 1:{1:'workstation',2:'workstation',21:'workstation',22:'workstation'},
  2:{1:'library',2:'library',14:'library',21:'library'},
  3:{1:'resource-pack',2:'resource-pack',15:'resource-pack',21:'resource-pack'},
  4:{1:'collaboration',2:'collaboration',8:'collaboration',14:'workstation',15:'collaboration'},
@@ -89,14 +89,8 @@ def flow(items):return sequence([(str(i+1),x) for i,x in enumerate(items)])
 
 def artifact(n,i,j):
  """Return a topic-specific authored artifact for the current user-selected state."""
- if (n,i)==(1,8):
-  return [fields('Browser settings',[('Home page','Community learning resources'),('Startup','Open the home page')]),fields('Download destination',[('Folder','Resources'),('Test file','resource-guide.pdf')]),fields('Site permissions',[('Text resource page','Camera blocked'),('Reason','No camera needed to read')])][j]
- if (n,i)==(1,9):
-  return [flow(['Instruction: open a file','Processor carries out instructions','File appears in the app']),fields('Current work',[('Memory','Open document and unsaved changes'),('Close app','Unsaved changes can be lost')]),fields('Saved work',[('Storage','resource-guide.docx'),('Close and reopen','Saved file remains')]),fields('Connection check',[('Port shape','Match the connector'),('Capability','Check supported data, video and power')])][j]
- if (n,i)==(1,11):return [flow(['Document','Toner','Printed page']),flow(['Document','Liquid ink','Printed page']),fields('Print destination',[('Selected printer','Training room'),('Before sending','Check the destination')])][j]
- if (n,i)==(1,13):return fields('Library practice · fictional event',[('When','Monday · 2:00–3:00 p.m.'),('Where','Room A'),('Reminder','30 minutes before')],j)
- if (n,i)==(1,16):return [fields('Check the correction',[('Typed name','Maren'),('Autocorrect','Marine — wrong name'),('Recovery','Undo → Maren')],1),fields('Suggestion preview',[('Typed','Please meet at the'),('Suggested','learning desk'),('Your decision','Accept only if this is your meaning')],1),fields('Mail rule test',[('Matches','Subject contains Practice'),('Destination','Practice folder'),('Check','One test message arrived')],2)][j]
- if (n,i)==(1,17):return [fields('This device',[('Account','Training'),('Save status','Saving…')]),fields('Provider',[('Saved file','resource-guide.docx'),('Save status','Saved')]),fields('Second device',[('Connection','Offline'),('Next action','Reconnect and verify the latest copy')])][j]
+ if (n,i)==(1,10):return [flow(['Document','Toner','Printed page']),flow(['Document','Liquid ink','Printed page']),fields('Print destination',[('Selected printer','Training room'),('Before sending','Check the destination')])][j]
+ if (n,i)==(1,17):return [fields('Check the correction',[('Typed name','Maren'),('Autocorrect','Marine — wrong name'),('Recovery','Undo → Maren')],1),fields('Suggestion preview',[('Typed','Please meet at the'),('Suggested','learning desk'),('Your decision','Accept only if this is your meaning')],1),fields('Mail rule test',[('Matches','Subject contains Practice'),('Destination','Practice folder'),('Check','One test message arrived')],2)][j]
  if (n,i)==(1,19):return fields('Help request · app version: practice',[('Task','Print one page'),('Already tried','Selected training-room printer'),('Exact message','Printer unavailable')],j)
  if (n,i)==(2,3):return fields('Fictional search results',[('Query',['help','public library computer help','public library computer help [your town]'][j]),('Result focus',['Many unrelated services','Library computer-help services','Local service: confirm place and contact'][j])])
  if (n,i)==(2,4):return [fields('Phrase filter',[('Exact phrase','“computer help”'),('Hidden alternative','Digital skills support'),('Try next','Remove quotes to compare')]),fields('Domain filter',[('Scope','.gov websites only'),('Still check','Evidence and task fit')]),fields('Date filter',[('Scope','Recent pages only'),('Still check','Details on the source page')])][j]
@@ -161,7 +155,7 @@ def special(n,i):
   ('Missing file',fields('Trash preview',[('File','library-help-v1.docx'),('State','Deleted · preview before restoring'),('Before restoring','Confirm this is the file you need')],1)),
   ('Wrong content',fields('Version history',[('Current version','Contact section missing'),('Earlier version','Contact section present'),('Before replacing','Coordinate with collaborators and preview')],1)),
   ('Restore checked copy',fields('Recovery result',[('File','library-help-v1.docx'),('Verification','Open and check useful content'),('Shared work','Confirm the restored version with partners')],1))])
- if (n,i)==(1,12):
+ if (n,i)==(1,-1):  # the print-preview walkthrough is retired: the instructor shows Ctrl P live (week 1 units)
   states=[]
   checks=['Confirm the training-room printer is the intended destination.','Select page 1 so the test uses only one sheet.','Inspect all page edges; change orientation if useful content is clipped.','Keep copies at 1 for the first test.','Inspect the single printed test before authorizing the remaining pages.']
   for j,(label,value) in enumerate([('Printer','Training room'),('Page range','Page 1 only'),('Layout','Portrait · inspect all edges'),('Copies','1 test copy'),('Test copy','Inspect the printed result')]):
@@ -174,11 +168,6 @@ def special(n,i):
 
 def supplement(n,i):
  """Small explanatory views beside preserved functional course activities."""
- if (n,i)==(1,4):return flow(['Before: text is difficult to read','Change: page zoom to 125%','Check: text and next control are readable','Restore: page zoom to 100%'])
- if (n,i)==(1,5):return fields('Scope of page zoom',[('Browser controls','Stay at their usual size'),('Page content','Text and page controls grow')])
- if (n,i)==(1,6):return fields('Keyboard practice',[('Increase','Ctrl / Command + plus'),('Decrease','Ctrl / Command + minus'),('Reset','Ctrl / Command + zero')])
- if (n,i)==(1,7):return steps_demo('Check the screen too',[(label,panel('Illustrative display comparison',f'<svg class="display-sample display-{mode}" viewBox="0 0 640 180" role="img" aria-label="Illustrative {label} sample: Computer help, choose one task"><rect width="640" height="180" fill="white"/><text x="25" y="65" fill="{"#aaa" if mode=="low" else "#173657"}" font-size="40">Computer help</text><text x="25" y="125" fill="{"#aaa" if mode=="low" else "#173657"}" font-size="36">Choose one useful task.</text></svg>')+field('What to check',hint)) for label,mode,hint in [('Low contrast','low','Faint text is harder to distinguish.'),('Readable contrast','clear','Dark text and a light background separate clearly.'),('Brightness','bright','Adjust your actual screen for the room; this only models the comparison.')]])
- if (n,i)==(1,10):return panel('Connector shape and capability', '<div class="connector-profiles"><figure><svg viewBox="0 0 120 80" aria-hidden="true"><path d="M15 20h90l-10 40H25z"/><path d="M30 30h60v15H30z"/></svg><figcaption>HDMI · display</figcaption></figure><figure><svg viewBox="0 0 120 80" aria-hidden="true"><path d="M30 12h60v48H30zM45 60v10h30V60M39 20v18m9-18v18m9-18v18m9-18v18m9-18v18m9-18v18"/></svg><figcaption>Ethernet · wired network</figcaption></figure><figure><svg viewBox="0 0 120 80" aria-hidden="true"><rect x="15" y="10" width="90" height="24"/><rect x="15" y="48" width="90" height="24" rx="12"/></svg><figcaption>USB-A / USB-C · check supported features</figcaption></figure></div>')
  if (n,i)==(2,5):return steps_demo('Inspect evidence and fit',[
   ('Evidence',fields('Fictional service page',[('Responsible organization','Community Library'),('Evidence','Contact method and service description'),('Still verify','Confirm important details independently')],1)),
   ('Task fit',fields('Does this answer your question?',[('Place','Your community'),('Service','Computer help'),('Next step','Confirm availability and access needs')],0))])

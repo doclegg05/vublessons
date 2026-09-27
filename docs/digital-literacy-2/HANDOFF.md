@@ -44,6 +44,30 @@ Six High findings from the six-agent review were fixed in the generators, with r
 
 Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
 
+## Week 1 rebuilt around teaching units (2026-09-27)
+
+The instructor could not teach from the Week 1 deck: 24 slides, ~2,480 words on screen, an agenda
+that jumped around the deck, and no instructor cue on any slide. Week 1 is now authored as **five
+teaching units** (`W1_UNITS` in `author-content.py`), each one objective taught as pose the problem
+→ Tell → Show (live, on the projector) → Do (every learner, own seat) → Review. The units are the
+single source for:
+- the **deck** (23 slides: 3 or 4 per unit, at most ~6 short lines and one picture each, 32 px text,
+  no Present-mode build steps at 1280×720 or 1366×768, enforced by `dl2-present-mode.spec.js`; on a 4:3
+  1024×768 projector only the calendar simulation, slide 14, shows its words first, then the calendar)
+- the **run sheet** (`weeks/week-01/run-sheet.html`, instructor-only): one printed page per unit
+  with what to say, the exact Windows 10 clicks, the learner task, the review check and the
+  post-test item it serves. `build-pages.py` renders it from `w['runsheet']`.
+- the **lesson plan agenda** (`week1_cycle_row`), so the plan and the run sheet cannot drift.
+
+Weeks 2–6 still use the older slide-list authoring. Rebuild them the same way, one per week, using
+[OBJECTIVES-MAP.md](OBJECTIVES-MAP.md) (each objective against the post-test items it serves).
+Visuals attach by rendered slide number (`workshops.MAP`, `scenes.SCENES`, `photo_scenes`), so a
+re-ordered week needs its maps re-keyed and the number-pinned functional tests updated.
+
+Week 1 specifics: the lab is Windows 10, so the quick card is Windows 10 with Windows 11 notes
+(`lab_os`); no printer, so the print unit stops at the preview; the instructor's own calendar is
+the calendar demo; the video is home viewing only (chapters on slide 21).
+
 ## Present mode for the projector (2026-09-26)
 
 Decks had most slides taller than a projector screen (119 of 137 at 1366×768). Press **P** (or

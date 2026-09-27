@@ -2,13 +2,13 @@ const {test,expect}=require('@playwright/test');
 const base='/courses/digital-literacy-2';
 const open=async(page,w,s)=>{await page.goto(`${base}/weeks/week-${String(w).padStart(2,'0')}/presentation.html#slide-${s}`);return page.locator('.slide:not([hidden]) [data-workshop]').first();};
 test('DL2 workstation models change only the intended view and support keyboard activation',async({page})=>{
- const zoom=await open(page,1,5);const text=zoom.locator('.zoom-page p');const controls=zoom.getByRole('button',{name:'125%',exact:true});
+ const zoom=await open(page,1,7);const text=zoom.locator('.zoom-page p');const controls=zoom.getByRole('button',{name:'125%',exact:true});
  const before=await text.evaluate(x=>parseFloat(getComputedStyle(x).fontSize));await controls.focus();await page.keyboard.press('Enter');await expect.poll(()=>text.evaluate(x=>parseFloat(getComputedStyle(x).fontSize))).toBeGreaterThan(before);await expect(controls).toHaveAttribute('aria-pressed','true');await expect(controls).toHaveCSS('background-color','rgb(27, 54, 93)');await expect(controls).toHaveCSS('color','rgb(255, 255, 255)');
- const sound=await open(page,1,7);await sound.getByRole('button',{name:'Mute: off',exact:true}).click();await sound.getByRole('button',{name:'Run visual sound test'}).click();await expect(sound.locator('[role=status]')).toContainText('No output');await sound.getByRole('button',{name:'Mute: on',exact:true}).click();await sound.getByRole('button',{name:'Speakers',exact:true}).click();await sound.getByRole('button',{name:'Run visual sound test'}).click();await expect(sound.locator('[role=status]')).toContainText('reaches speakers');
+ const sound=await open(page,1,8);await sound.getByRole('button',{name:'Mute: off',exact:true}).click();await sound.getByRole('button',{name:'Run visual sound test'}).click();await expect(sound.locator('[role=status]')).toContainText('No output');await sound.getByRole('button',{name:'Mute: on',exact:true}).click();await sound.getByRole('button',{name:'Speakers',exact:true}).click();await sound.getByRole('button',{name:'Run visual sound test'}).click();await expect(sound.locator('[role=status]')).toContainText('reaches speakers');
 });
 test('DL2 calendar preserves events across distinct views and limits shared details',async({page})=>{
- const root=await open(page,1,15);await expect(root.getByRole('button',{name:'Week',exact:true})).toHaveAttribute('aria-pressed','true');await root.getByRole('button',{name:'Day',exact:true}).click();await expect(root.locator('.calendar-day:visible')).toHaveCount(1);await root.getByRole('button',{name:'Month',exact:true}).click();await expect(root.locator('.month-cell')).toHaveCount(28);await expect(root.locator('.month-map')).toBeVisible();await root.getByRole('button',{name:'List',exact:true}).click();await expect(root.locator('.calendar-day:visible')).toHaveCount(3);
- const privacy=await open(page,1,14);await privacy.getByRole('button',{name:'Event details',exact:true}).click();await expect(privacy.locator('[data-shared-event]')).toContainText('Room A');await privacy.getByRole('button',{name:'Free / busy',exact:true}).click();await expect(privacy.locator('[data-shared-event]')).not.toContainText('Room A');
+ const root=await open(page,1,14);await expect(root.getByRole('button',{name:'Week',exact:true})).toHaveAttribute('aria-pressed','true');await root.getByRole('button',{name:'Day',exact:true}).click();await expect(root.locator('.calendar-day:visible')).toHaveCount(1);await root.getByRole('button',{name:'Month',exact:true}).click();await expect(root.locator('.month-cell')).toHaveCount(28);await expect(root.locator('.month-map')).toBeVisible();await root.getByRole('button',{name:'List',exact:true}).click();await expect(root.locator('.calendar-day:visible')).toHaveCount(3);
+ const privacy=await open(page,1,15);await privacy.getByRole('button',{name:'Event details',exact:true}).click();await expect(privacy.locator('[data-shared-event]')).toContainText('Room A');await privacy.getByRole('button',{name:'Free / busy',exact:true}).click();await expect(privacy.locator('[data-shared-event]')).not.toContainText('Room A');
 });
 test('DL2 sync deletion reaches both locations but leaves a separate recovery copy',async({page})=>{
  const root=await open(page,2,13);await root.getByRole('button',{name:'Delete synced file'}).click();await expect(root.locator('[data-local-file]')).toHaveText('File deleted');await expect(root.locator('[data-cloud-file]')).toHaveText('File deleted');await expect(root.locator('.backup-copy')).toContainText('library-help-v1.docx');await root.getByRole('button',{name:'Restore from backup'}).click();await expect(root.locator('[data-cloud-file]')).toHaveText('library-help-v1.docx');
@@ -31,15 +31,15 @@ test('DL2 app and prompt workshops handle no matches, case, blank tasks and lite
 });
 test('DL2 mobile workshop keeps text controls in flow and model instructions at classroom size',async({page})=>{
  await page.setViewportSize({width:390,height:844});
- for(const [w,s] of [[1,1],[1,15],[3,10],[5,8],[6,7]]){
+ for(const [w,s] of [[1,1],[1,14],[3,10],[5,8],[6,7]]){
   const root=await open(page,w,s);await expect(page.locator('.deck-toolbar .vub-textsize-fab')).toBeVisible();expect(await page.locator('.vub-textsize-fab').evaluate(x=>getComputedStyle(x).position)).toBe('static');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
-  if(w===1&&s===15){const calendar=root.locator('.calendar-surface');await calendar.focus();await page.keyboard.press('ArrowRight');expect(await calendar.evaluate(x=>x.scrollLeft)).toBeGreaterThan(0);await expect(page).toHaveURL(/#slide-15$/);}
+  if(w===1&&s===14){const calendar=root.locator('.calendar-surface');await calendar.focus();await page.keyboard.press('ArrowRight');expect(await calendar.evaluate(x=>x.scrollLeft)).toBeGreaterThan(0);await expect(page).toHaveURL(/#slide-14$/);}
   for(const el of await root.locator('.calendar-event span,.prompt-preview,.demo-sheet td,.formula-bar code').all())expect(await el.evaluate(x=>parseFloat(getComputedStyle(x).fontSize))).toBeGreaterThanOrEqual(32);
  }
 });
 test('DL2 workshop initial and changed states meet automated WCAG A/AA checks',async({page})=>{
  const AxeBuilder=require('@axe-core/playwright').default;
- for(const [w,s,action] of [[1,5,'150%'],[1,15,'Month'],[3,10,'Change paper to $15'],[4,12,'Specific suggestion'],[5,8,'Choose an independent check'],[6,7,'Build the practice prompt']]){
+ for(const [w,s,action] of [[1,7,'150%'],[1,14,'Month'],[3,10,'Change paper to $15'],[4,12,'Specific suggestion'],[5,8,'Choose an independent check'],[6,7,'Build the practice prompt']]){
   const root=await open(page,w,s);
   for(const changed of [false,true]){
    if(changed)await root.getByRole('button',{name:action,exact:true}).click();

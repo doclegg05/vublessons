@@ -5,20 +5,10 @@ E=lambda s:html.escape(str(s),quote=True)
 # Each choice changes the worked example; explanatory prose remains in the source slide.
 # label, artifact headline, artifact content, teaching consequence
 SCENES={
-(1,8):('browser','Choose a browser default',[
- ('Home page','Start with your task','Library resources → browser home','Choose the page you actually use. A default can be changed again.'),
- ('Downloads','Know where the file went','Downloads / resource-guide.pdf','Choose a folder you can find, then check one downloaded file.'),
- ('Permissions','Match access to the task','Text resource page → camera blocked','A text-only page does not need your camera. Review site permissions.')]),
-(1,9):('computer','Follow the work through a computer',[
- ('Processor','Carry out instructions','Instruction → processing → result','The processor performs the requested operations.'),('Memory','Hold current work','Open document + current task','Memory supports work in progress; it is not a substitute for saving.'),('Storage','Keep a saved copy','resource-guide.docx → saved file','Storage keeps files. Check where your work is saved.'),('Connection','Check the capability','Device → matching port → supported feature','A matching shape does not prove the cable supports every feature.')]),
-(1,11):('printer','Choose for the print job',[
+(1,10):('printer','Choose for the print job',[
  ('Laser','Toner-based printing','Document → toner → printed page','Costs less per page for lots of text.'),('Inkjet','Liquid-ink printing','Document → ink → printed page','Cheaper to buy; better for color and photos.'),('Default','Which printer is selected?','Print destination: Training room','Windows or the browser may pick the last printer used. Check the name before sending.')]),
-(1,13):('calendar','Build a usable event',[
- ('When','Library practice','Monday · 2:00–3:00 p.m.','Include the day and both start and end times.'),('Where','Library practice','Room A','A useful location tells you where to go.'),('Reminder','Library practice','Reminder: 30 minutes before','Choose a reminder you will notice. Check time zones for another region.')]),
-(1,16):('automation','Inspect the automatic result',[
+(1,17):('automation','Inspect the automatic result',[
  ('Autocorrect','A change was made','Typed wording → changed wording','Check names and meaning before keeping the correction.'),('Autocomplete','A suggestion is offered','Typed beginning → suggested ending','You decide whether the suggestion matches what you meant.'),('Rule','A repeated action','Matching mail → chosen folder','Test a rule with one item and check that it went to the right place.')]),
-(1,17):('network','Follow a cloud save',[
- ('This device','Your work begins here','Laptop → network → provider','Check which account is signed in before saving.'),('Provider','A computer elsewhere','Provider stores the saved file','The service uses computers reached through a network.'),('Other device','Open the saved version','Provider → network → second device','Check connection and save status before assuming the latest work is there.')]),
 (1,19):('support','Make a useful help request',[
  ('Task','What are you trying to do?','I want to print one page.','Name the goal before describing the problem.'),('Tried','What happened already?','I selected the training-room printer.','Explain what you tried so the next person can help with the next step.'),('Error','What did the app say?','Message: printer unavailable','Record the exact message and app version. Use official help.')]),
 (2,3):('search','Build a search with a purpose',[

@@ -73,13 +73,13 @@ test.describe('presenting a deck',()=>{
  test.use({viewport:{width:1366,height:768}});
 
  test('Arrow keys still change slides after clicking a button inside a slide',async({page})=>{
-  await page.goto(deck(1)+'#slide-21');await page.locator('#slide-21 .check-options button').first().click();
-  await page.keyboard.press('ArrowRight');await expect(page.locator('#slide-22')).toBeVisible();
+  await page.goto(deck(1)+'#slide-16');await page.locator('#slide-16 .check-options button').first().click();
+  await page.keyboard.press('ArrowRight');await expect(page.locator('#slide-17')).toBeVisible();
  });
 
  test('Page Up and Page Down inside the practice calendar do not change slides',async({page})=>{
-  await page.goto(deck(1)+'#slide-15');await page.locator('#slide-15 .calendar-surface').focus();
-  for(const key of ['PageDown','PageUp']){await page.keyboard.press(key);await expect(page.locator('#slide-counter')).toHaveText('Slide 15 of 24');}
+  await page.goto(deck(1)+'#slide-14');await page.locator('#slide-14 .calendar-surface').focus();
+  for(const key of ['PageDown','PageUp']){await page.keyboard.press(key);await expect(page.locator('#slide-counter')).toHaveText('Slide 14 of 23');}
  });
 
  test('Previous and Next stay on screen on a tall slide',async({page})=>{
@@ -98,7 +98,7 @@ test.describe('contrast on the projector',()=>{
  test.beforeEach(async({page})=>page.emulateMedia({reducedMotion:'reduce'}));
 
  test('Flip-card text stays readable while the pointer is over it',async({page})=>{
-  await page.goto(deck(1)+'#slide-10');const card=page.locator('#slide-10 .flip').first();await card.hover();
+  await page.goto(deck(1)+'#slide-12');const card=page.locator('#slide-12 .flip').first();await card.hover();
   const [fg,bg]=await card.locator('.flip-front').evaluate(el=>[getComputedStyle(el).color,getComputedStyle(el).backgroundColor]);
   expect(contrast(fg,bg)).toBeGreaterThanOrEqual(4.5);
  });
