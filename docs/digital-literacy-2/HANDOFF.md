@@ -44,6 +44,25 @@ Six High findings from the six-agent review were fixed in the generators, with r
 
 Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
 
+## Present mode for the projector (2026-09-26)
+
+Decks had most slides taller than a projector screen (119 of 137 at 1366×768). Press **P** (or
+"Present on a projector (P)") to present; **Esc** or P stops. Source: `assets/lesson.js` (present mode block)
+and `assets/present.css`; tests: `tests/functional/dl2-present-mode.spec.js`.
+
+- While presenting, lesson.js moves each slide's text into `.present-copy` and its visuals into
+  `.present-stage` inside `.present-frame`, and restores the original children (and their exact class
+  attributes) on exit. Generated HTML and the learner layout are unchanged.
+- Per slide and screen size it picks side by side, stacked, or a **build** (parts shown in steps, words
+  first, packed so each step holds as much as fits). Next/Previous and the arrow and Page keys step through a
+  build before changing slide; going back lands on the last part.
+- The frame is zoomed down only to 0.75, so 32px slide text never drops below 24px. Screen-relative limits
+  do not scale with zoom, so fit() sets a scale, measures the real bottom, and adjusts.
+- Every slide in all six decks fits at 1024×768, 1280×720, 1366×768 and 1920×1080 (the test steps through
+  every build part). At 1366×768, 103 slides fit on one screen and 34 use 2–3 steps.
+- Full screen is requested on entry; a late full-screen signal from an earlier exit does not end a new
+  presentation (`reachedFullscreen`).
+
 ## Week 1: Tell, Show, Do, Review (2026-09-26)
 
 The instructor's teaching method is **Tell, Show, Do, Review** inside the WIPPEA cycle (TEAL Fact Sheet
