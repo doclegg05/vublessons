@@ -49,9 +49,12 @@ table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.9rem}th,td{p
 .rating{display:grid;gap:.15rem;border:0;padding:0;margin:0;font-size:.85rem}.rating label{white-space:nowrap}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .small{font-size:.85rem;color:var(--gray)}
-@media print{@page{size:letter;margin:.5in}body{padding:0;max-width:none;font-size:11pt}.no-print{display:none!important}
+@media print{@page{size:letter;margin:.5in}body{padding:0;max-width:none;font-size:10.5pt;line-height:1.45}.no-print{display:none!important}
  .header,.part-header,.checkbox,.checkpoint-box,.key,.goal-box,.tip-box,.warning-box,.success-box,.section-title,.checklist li{-webkit-print-color-adjust:exact;print-color-adjust:exact}
- .section,.checklist li,.checkpoint-box,.form-box{break-inside:avoid}.part-header{break-after:avoid}
+ .checklist li,.checkpoint-box,.form-box,.tip-box,.warning-box,.goal-box,.success-box{break-inside:avoid}.part-header{break-inside:avoid}
+ .header{background:var(--va-blue)!important}.goal-box{background:var(--off-white)!important}.checkpoint-box{background:#eef3f8!important}
+ .part-content{padding:.7rem .9rem}.checklist li{padding:.4rem .6rem;margin-bottom:.3rem}.fill-line{margin:.45rem 0}.section{margin-bottom:.7rem}.part-header{margin-top:1rem;padding:.45rem .9rem}
+ .checklist-text .detail{font-size:.83rem}.table-scroll{overflow:visible}table{font-size:9.5pt}tr{break-inside:avoid}thead{display:table-header-group}th,td{padding:.3rem .45rem}.footer{margin-top:1rem}
  .worksheet-input{display:none!important}.print-answer{display:block;min-height:calc(1.9rem * var(--rows,3));padding:.2rem .4rem;line-height:1.9rem;background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(1.9rem - 1px),var(--line) calc(1.9rem - 1px),var(--line) 1.9rem)}
  .vub-textsize-fab{display:none!important}}
 @media screen and (max-width:640px){body{padding:1rem}.header,.part-header{flex-direction:column;align-items:flex-start;gap:.4rem}.header-right{text-align:left}.fill-grid{grid-template-columns:minmax(0,1fr)}.fill-line{flex-wrap:wrap}.fill-line .label{white-space:normal}.fill-line .blank{flex-basis:100%}}
