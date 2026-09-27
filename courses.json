@@ -67,7 +67,7 @@
     {
       "id": "digital-literacy-2",
       "title": "Digital Literacy — Level 2",
-      "subtitle": "Six practical weeks: IC3 GS6 Level 2 plus building a small web app with AI.",
+      "subtitle": "Six practical weeks: IC3 GS6 Level 2, plus guiding an AI agent to build and test a web app.",
       "type": "weeks",
       "progressKey": "dl2",
       "category": "Digital Literacy",
@@ -82,7 +82,7 @@
         { "n": 3, "title": "Create something people can use", "topic": "Build a clear resource handout, a small workbook, and a short presentation.", "path": "courses/digital-literacy-2/weeks/week-03/presentation.html", "statusKey": "dl2:w3" },
         { "n": 4, "title": "Communicate and collaborate with care", "topic": "Choose the right channel, give useful feedback, and make safe online choices.", "path": "courses/digital-literacy-2/weeks/week-04/presentation.html", "statusKey": "dl2:w4" },
         { "n": 5, "title": "Protect your work and show your skills", "topic": "Practice safe decisions, complete a skills challenge, and measure your growth.", "path": "courses/digital-literacy-2/weeks/week-05/presentation.html", "statusKey": "dl2:w5" },
-        { "n": 6, "title": "Build a small web app with AI", "topic": "Turn a clear need into a tested, accessible prototype using basic vibe coding.", "path": "courses/digital-literacy-2/weeks/week-06/presentation.html", "statusKey": "dl2:w6" }
+        { "n": 6, "title": "Guide an AI agent to improve a web app", "topic": "Write a clear request for an AI coding agent, review what it changed, test the result, and learn what running a website as a service takes.", "path": "courses/digital-literacy-2/weeks/week-06/presentation.html", "statusKey": "dl2:w6" }
       ]
     }
   ]

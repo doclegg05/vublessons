@@ -8,3 +8,7 @@
 @media print{body .slide .check-options button{font-size:24pt!important;line-height:1.45!important;background:white;color:black}}
 /* Skills-challenge worksheet table (week 5). */
 .challenge td{vertical-align:top}.challenge .worksheet-input{min-height:4rem}.rating{margin:0;padding:0;border:0}.rating label{display:block;white-space:nowrap}.procedure li{margin-top:.5em}
+/* Week 6 app test logs, extension rubric and the video's word list. */
+/* Hidden cell labels are absolutely positioned; the scroll box must contain them or the page scrolls sideways. */
+.table-scroll{position:relative}.test-log .worksheet-input{min-height:3.5rem;min-width:9rem}.test-log th[scope=row],.rubric th[scope=row]{white-space:normal}.video-words{border:2px solid #adc1d2;border-radius:8px;padding:0 1.25rem 1rem;margin:1.5rem 0}.video-words dt{font-weight:700;margin-top:.7em}.video-words dd{margin:0}
+@media print{.test-log .print-answer{min-height:.6in}}

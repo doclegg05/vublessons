@@ -18,34 +18,31 @@ test('DL2 teaching text is visible on every slide, not only inside a collapsed n
   w.slides.forEach((s,i)=>{const visible=withoutDetails(section(html,i+2));expect(visible,`week ${w.n} slide ${i+2} "${s.title}"`).toContain(esc(s.body));});}
 });
 
-test('DL2 week 6 v2 acceptance check searches for the resource the learner renamed',()=>{
- const w6=curriculum.weeks[5];const html=deck(6);
- expect(w6.lab[3]).toContain('Community Skills Desk');
- const slide10=section(html,10);
- expect(slide10).not.toContain('Check library still matches');
- expect(slide10).toMatch(/skills[^<]*Community Skills Desk/i);
-});
+// Retired 2026-09-26 with the week 6 redesign: 'DL2 week 6 v2 acceptance check searches for the resource
+// the learner renamed'. The rename is gone; slide 10 is now the agent's diff (tests/content/dl2-week6-agent.spec.js).
 
-test('DL2 week 6 worksheet teaches the build mechanics the answer key grades',()=>{
+test('DL2 week 6 worksheet teaches the hand-repair mechanics for version 2',()=>{
  const ws=worksheet(6);
  expect(ws).toContain('download="resource-finder-v1.html"');
+ expect(ws).toContain('download="resource-finder-v2.html"');
  expect(ws).toMatch(/Notepad/);
  expect(ws).toMatch(/TextEdit/);
  expect(ws).toMatch(/All files/i);
  expect(ws).toMatch(/Save As/i);
- expect(ws).toMatch(/paste/i);
+ expect(ws).toMatch(/toLowerCase/);
  expect(ws).toMatch(/\.html/);
+ expect(ws).not.toMatch(/Make Plain Text/);
 });
 
 test('DL2 week 5 skills challenge gives every task its inputs, a response box and a rating',()=>{
  const w5=curriculum.weeks[4];
  expect(w5.challenge.item).toBe(6);
- expect(w5.challenge.tasks).toHaveLength(7);
+ expect(w5.challenge.tasks).toHaveLength(5);
  for(const t of w5.challenge.tasks){expect(t).toHaveLength(3);for(const part of t)expect(typeof part==='string'&&part.length>10,JSON.stringify(t)).toBe(true);}
  const ws=worksheet(5);
  for(const [task,materials] of w5.challenge.tasks){expect(ws).toContain(esc(task));expect(ws).toContain(esc(materials));}
- expect(ws.match(/id="challenge-answer-\d"/g)).toHaveLength(7);
- for(let i=0;i<7;i++){const radios=ws.match(new RegExp(`name="challenge-rating-${i}"`,'g'));expect(radios,`task ${i+1} rating radios`).toHaveLength(3);}
+ expect(ws.match(/id="challenge-answer-\d"/g)).toHaveLength(5);
+ for(let i=0;i<5;i++){const radios=ws.match(new RegExp(`name="challenge-rating-${i}"`,'g'));expect(radios,`task ${i+1} rating radios`).toHaveLength(3);}
  for(const label of ['Independent','With prompt','Needs practice'])expect(ws).toContain(label);
  const key=answerKey(5);
  for(const [task,,evidence] of w5.challenge.tasks){expect(key).toContain(esc(task));expect(key).toContain(esc(evidence));}

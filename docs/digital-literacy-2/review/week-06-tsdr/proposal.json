@@ -1,0 +1,378 @@
+{
+ "objectives": [
+  "Write a clear request and checks for an AI coding agent.",
+  "Predict what the agent will change before it starts.",
+  "Read the change and spot anything you did not ask for.",
+  "Test the result, report a problem and retest after the fix.",
+  "Explain what running a website as a service takes."
+ ],
+ "outcomes": [
+  "Spec: given the starter page and a one-sentence need, each learner writes a plain-English change request that names the one change, who it helps and two things that must stay the same, plus three acceptance checks in the form I do this, I expect that. A partner can run every check without asking what it means.",
+  "Prediction: before the agent runs, each learner writes which part of the page (HTML, CSS or JavaScript) the change needs and one thing that could break, then compares the prediction with the agent's plan and names one match or difference.",
+  "Review: given the before-and-after view of the agent's change (slide 10 or the projector), each learner marks every changed line as asked for or not asked for and finds the one change that breaks a requirement, with no more than one prompt.",
+  "Testing: at their own workstation, each learner runs the five checklist tests (happy path, no match, mixed case, keyboard, narrow screen) on the agent's version, records expected, actual and pass or fail, writes a repair request with steps, expected and actual, and after the repair reruns the failed check and two checks that passed before.",
+  "SaaS: using the resource finder as the example, each learner explains at least four of these six with a reason: where it would be hosted, why visitors sign in (authentication), where saved data lives, where a private API key goes, what it costs, and who maintains it."
+ ],
+ "agenda": [
+  [
+   8,
+   "Warm-up and reconnect",
+   "Reconnect: two learners share the practice step they chose at the end of week 5. Recall: in week 1 you let AutoCorrect change teh to the and checked it before keeping it; in week 5 you kept passwords private. Today a much bigger automatic helper changes a web page, and both rules still apply. Pairs discuss slide 2: where would a wrong change hurt most?"
+  ],
+  [
+   7,
+   "Introduction: goals and the example",
+   "Read the goals on slide 1 aloud. Slide 3 in one minute: SaaS is software you use in a browser while a company runs it. Play chapter 1 (0:00–0:46). Every learner opens slide 9 and selects Open starter app: this is version 1, the page the agent will change. Name the loop on the board: spec, plan, change, review, test, revise."
+  ],
+  [
+   15,
+   "Cycle A: spec and acceptance checks",
+   "Tell: slides 4, 6 and 7 (agent, prompt, spec, acceptance check). Show: chapter 4 (pause at 2:52 so learners can write), then chapter 5 (3:00–3:44); build the class spec live with the slide 7 builder. Do: worksheet tasks 1 and 2, every learner writes their own spec and three checks. Review: a partner reads each check aloud and says whether they could run it without guessing; pick one learner's checks for the demo."
+  ],
+  [
+   10,
+   "Cycle B: predict, then read the plan",
+   "Tell: slides 5 and 8 (HTML, CSS and JavaScript; ask the agent for a plan first). Show: chapter 3 (1:32–2:14); after the predictions, give the class spec to the AI coding agent on the projector in plan mode and read its plan aloud. Do: worksheet task 3, every learner writes a prediction before the plan appears, then compares. Review: show of hands for HTML, CSS or JavaScript; approve the plan only if it matches the spec."
+  ],
+  [
+   12,
+   "Cycle C: the agent changes, you review",
+   "Tell: slides 11 and 10 (one change at a time; a diff shows removed lines with a minus sign and added lines with a plus sign). Show: approve the plan, let the agent make the change, then show the before-and-after on the projector; chapter 6 (3:44–4:01) shows keeping a working version first. If the live run is slow or fails, use the prepared version on slide 10. Do: worksheet task 4, every learner marks each changed line on slide 10 as asked for or not asked for. Review: partners compare; ask which change nobody asked for and which check would catch it."
+  ],
+  [
+   10,
+   "Break",
+   "Screen-free pause. Leave version 1 and the worksheet open."
+  ],
+  [
+   15,
+   "Cycle D: test with the checklist",
+   "Tell: slide 17 (happy path, no match, mixed case, keyboard, narrow screen). Show: chapter 7 (4:27–5:11) and chapter 8 (5:11–5:55), then test the live agent's page on the projector while the class calls out each check. Do: worksheet task 5, every learner opens the agent's version (resource-finder-agent.html) at their own seat and records expected, actual and pass or fail in the App test log. Review: the slide 20 knowledge check; a learner who found a failing check reads out their evidence."
+  ],
+  [
+   13,
+   "Cycle E: repair and retest",
+   "Tell: slides 18 and 12 (regression; a repair request names the steps, expected, actual and what to keep). Show: chapter 9 (pause at 6:37), then paste one learner's repair request into the agent and read its one-line diff together. Do: worksheet tasks 6 and 7, every learner writes a repair request, then opens the repaired version (resource-finder-agent-fixed.html) and repeats the failed check and two checks that passed before. Review: a partner confirms that nothing that passed before now fails."
+  ],
+  [
+   13,
+   "Cycle F: what makes it SaaS",
+   "Tell: slides 3, 13, 14, 15 and 19 (SaaS, where data lives, API key, authentication, hosting, cost and upkeep). Show: chapter 2 (0:46–1:32) and chapter 10 (6:44–7:31), then press Ctrl and U on the agent's page to show that anyone can read a page's code. Do: worksheet task 8, every learner fills in the SaaS table for the finder. Review: the slide 21 knowledge check; two learners each explain one trade-off."
+  ],
+  [
+   10,
+   "Individual check",
+   "Each learner shows you three things: one acceptance check and its result, the change the spec did not ask for, and one SaaS trade-off with a reason. Score the extension rubric (0, 1 or 2 per row) and mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+  ],
+  [
+   7,
+   "Apply and close",
+   "Slides 22 to 24. Home task: choose one website you already use that runs as a service, such as web email. Write where your data lives, how you sign in, and one check you would run after the company changes the site. Keep it with your worksheet. Then select Start fresh on this computer at each station."
+  ]
+ ],
+ "lab": [
+  "Write a change request (a spec) for the agent in plain English. The need: visitors type a kind of help, like learning, not a name. Say the one change, who it helps, and two things that must stay the same. The slide 7 builder can make a first draft.",
+  "Write three acceptance checks in the form I type or press this, I expect to see that. Make one check about the new change and one about something that already works and must not break.",
+  "Before the agent runs, predict: which part will it change (HTML, CSS or JavaScript), about how many lines, and one thing that could break. Then read the agent's plan on the projector and write one way it matches or differs from your prediction.",
+  "Open slide 10 and read the agent's change (the diff). A line with a minus sign was removed; a line with a plus sign was added. Mark each changed line asked for or not asked for, and write down the change that breaks what the spec said to keep.",
+  "Open the agent's version (resource-finder-agent.html) at your own seat. Run the five checks in the App test log: happy path (learning, then library), no match (zzz), mixed case (LIBRARY, then Learning), keyboard only, and narrow screen (zoom to 400%). Record expected, actual and pass or fail.",
+  "Write a repair request the agent could act on: the steps, what you expected, what actually happened, and what must stay the same.",
+  "Open the repaired version (resource-finder-agent-fixed.html). Repeat the check that failed, then two checks that passed before. Record the results and say whether you accept the repair.",
+  "Suppose the finder became a SaaS website where many people save favorite resources. Write where it would be hosted, why visitors would sign in, where saved favorites would live, where a private API key for a map service would go, and what it would cost and who would keep it running."
+ ],
+ "answers": [
+  "One change: the search box also finds resources by category, so learning shows every Learning resource. Who: a visitor who knows the kind of help but not the name. Must stay the same (any two): capital and small letters match alike (LIBRARY finds Community library); the no-match message; keyboard use; the narrow-screen layout; only resource-finder.html changes; no outside code, personal data or sign-in. A strong spec also asks for a plan first.",
+  "For example: I type learning, I expect Community library and Practice Workbook Workshop (2 fictional resources found). I type LIBRARY, I expect Community library (1 found). I type zzz, I expect No matching resources. Try a different word or reset the filters. Accept any checks a partner can run without guessing.",
+  "JavaScript, the rule that decides which resources match (one or two lines), and perhaps the hint text in the search box (HTML). Could break: capital-letter matching, the no-match message or the Category list. A good plan names resource-finder.html only and the matching rule. Accept any reasoned prediction; the comparison matters more than being right.",
+  "Asked for: the search also looks at the category (r.category added). Not asked for but harmless: the hint now says Try library or learning. Not asked for and harmful: .toLowerCase() was removed from the line that reads the search box, so capital letters no longer match. Learners may say it in plain words: it stopped ignoring capital letters.",
+  "Version 2 results: learning, 2 fictional resources found (Community library, Practice Workbook Workshop), pass. library, 1 found (Community library), pass. zzz, No matching resources. Try a different word or reset the filters., pass. LIBRARY and Learning, No matching resources instead of 1 and 2 found, fail (a regression: version 1 finds LIBRARY). Keyboard: Tab reaches the link, search box, Category and Reset filters, each with a thick outline, pass. Narrow screen at 400%: one column, no sideways scrolling, pass; the round Text size button can cover part of the page in every version, which is a course issue, not the agent's change.",
+  "Steps: open resource-finder-agent.html and type LIBRARY. Expected: Community library (1 found), as in version 1. Actual: No matching resources; Learning also finds nothing while learning finds 2. Request: make capital and small letters match the same resources again; keep the new category search and everything else the same; show the change before applying it.",
+  "LIBRARY: 1 found (Community library), pass. Learning: 2 found, pass. Passed before and still pass: learning (2 found), library (1 found), zzz (no-match message), keyboard outline. Accept the repair because the failed check now passes and no earlier check broke. If the instructor's live repair differs, it is retested the same way.",
+  "Hosted: on a web server or hosting service so anyone with the address can use it (today it is one file on the course site with fixed data). Sign-in: so each person sees only their own favorites; the server must check it, because a sign-in picture is not security. Saved data: in a database on the server, not in this page or one browser. API key: on the server only, since anyone can read a page's code with Ctrl and U. Cost and upkeep: hosting, web address, map service and AI agent fees; someone must update listings, fix problems, back up data, help users and review every agent change. Accept four of six with a reason."
+ ],
+ "slide_changes": [
+  {
+   "title": "Solve one small problem",
+   "body": "Our fictional resource finder works. Visitors want to type a kind of help, like learning, and see every match. Today an AI coding agent makes that change. You decide what to ask for, check what it did and test it."
+  },
+  {
+   "title": "Website, web app, and SaaS",
+   "body": "A website shows pages. A web app responds when you type or click. SaaS (software as a service) is software you use in a browser while a company hosts it, keeps the data, secures it and updates it, usually for a fee."
+  },
+  {
+   "title": "Vibe coding starts with clear instructions",
+   "body": "An AI coding agent is a program that reads your files, plans a change, edits the code and can run checks, all from a plain-English request. The loop: spec, plan, change, review, test, revise. You approve each step and own the result."
+  },
+  {
+   "title": "Three parts of a browser app",
+   "body": "HTML is the content and structure. CSS is the look and layout. JavaScript is the behavior, such as deciding which resources match a search. Before the agent starts, predict which part our change needs."
+  },
+  {
+   "title": "Write acceptance checks first",
+   "body": "An acceptance check is a test anyone can run: I type or press this, I expect to see that. Write them before the agent starts. Include one check for the new change and one for something that must keep working.",
+   "items": [
+    "Name the one change",
+    "Write three I do, I expect checks",
+    "Add one check that must not break"
+   ]
+  },
+  {
+   "title": "A prompt with useful boundaries",
+   "body": "A prompt is what you type to the agent. A spec is a careful prompt: Let the search box also find resources by category. Keep capital-letter matching, the no-match message and keyboard use. Change only this file. Show your plan first."
+  },
+  {
+   "title": "Ask the AI to explain its work",
+   "body": "Before the agent edits anything, ask for its plan: which file, what it will change and how it will check the result. Compare the plan with your spec and your prediction. Approve it only when they match."
+  },
+  {
+   "title": "Start with a working reference",
+   "body": "This is version 1, before the agent. Open the starter app and run three quick checks: library, LIBRARY and zzz. Keep this version as the way back if a change goes wrong."
+  },
+  {
+   "title": "No AI account? You can still build",
+   "body": "A diff shows exactly what changed. A line with a minus sign was removed; a line with a plus sign was added. You need no AI account to review one. Mark each changed line: asked for, or not asked for?"
+  },
+  {
+   "title": "Make one change at a time",
+   "body": "Keep version 1. Ask for one change. Read the diff. Run every check. If a check fails, ask for a repair or go back to version 1."
+  },
+  {
+   "title": "A useful revision request",
+   "body": "LIBRARY and Learning now find nothing, but library and learning work. Make capital and small letters match the same resources again. Keep the new category search and everything else the same."
+  },
+  {
+   "title": "Where does the data live?",
+   "body": "In our finder, the resource list lives inside the page file. Browser storage keeps data in one browser on one computer, and it can be cleared. A SaaS keeps shared data in a database on its server, behind sign-in and access rules."
+  },
+  {
+   "title": "Keep secrets out of browser code",
+   "body": "An API key is a secret code that lets your app use another company's service, such as maps, and bills you for it. Anyone can read a page's code (Ctrl and U), so private keys stay on the server."
+  },
+  {
+   "title": "A mock sign-in is not security",
+   "body": "Authentication means proving who you are, usually by signing in. A sign-in box drawn on a page protects nothing. A real SaaS checks who you are on its server, then decides what each person may see."
+  },
+  {
+   "title": "Watch: prompt, test, revise",
+   "body": "Play one chapter at a time as your instructor directs. Pause at 2:52 to write checks and at 6:37 to write a repair request. Replay any chapter; captions and a transcript are available."
+  },
+  {
+   "title": "Test more than the happy path",
+   "body": "The happy path is the normal use you expect to work. Also test no match (zzz), mixed case (LIBRARY, Learning), keyboard only and a narrow screen. Record expected, actual and pass or fail.",
+   "items": [
+    "Happy path and no match",
+    "Mixed case",
+    "Keyboard and narrow screen"
+   ]
+  },
+  {
+   "title": "Fix what you can demonstrate",
+   "body": "A regression is something that used to work and broke after a change. Report the steps, what you expected and what happened. After the repair, repeat the failed check and two checks that passed before."
+  },
+  {
+   "title": "Hosting is a separate decision",
+   "body": "Hosting means putting the page on a web server so anyone with the address can use it. Running it as a service also means costs, backups, updates, support and a person who reviews every agent change."
+  },
+  {
+   "title": "Knowledge check: AI confidence",
+   "body": "The agent reports: Done. All checks pass. What should you do next?",
+   "options": [
+    "Accept it, since the agent ran the checks",
+    "Read the change and run our checks yourself",
+    "Ask the agent to confirm the checks again"
+   ],
+   "answer": 1,
+   "why": "An agent's report is a claim, not evidence. Read the diff and run the acceptance checks on the saved page yourself. Asking again only repeats the claim."
+  },
+  {
+   "title": "Knowledge check: a secret key",
+   "body": "Your finder will show a map from a paid service that needs a private API key. Where should the key go?",
+   "options": [
+    "In a hidden comment in the page",
+    "In a separate script file",
+    "On the server, never in the page"
+   ],
+   "answer": 2,
+   "why": "Anyone can open a page's code, including comments and script files. A private key stays on the server, which calls the map service for the page. Some services also give public keys made for browsers."
+  },
+  {
+   "title": "Lab: build, test, explain",
+   "body": "Show your partner your spec, your checks, the change nobody asked for, your test log and your retest. Explain one thing a real SaaS version would need."
+  },
+  {
+   "title": "You can direct a build and judge it",
+   "body": "Keep the loop: spec, plan, change, review, test, revise. Tools will change. Clear requests, careful review and your own tests stay useful."
+  }
+ ],
+ "prep": "Each station: Microsoft Edge, headphones, this lesson and worksheet (typed, or printed for anyone who prefers paper), and Notepad as the plain-text editor for the optional hand repair. Learners need no account and no AI access: they open three practice pages on the course site, resource-finder.html (version 1), resource-finder-agent.html (version 2, the prepared agent result with one planted defect) and resource-finder-agent-fixed.html (version 3). At the front: your own computer on the projector with an AI coding agent signed in to your account, a practice folder holding copies of resource-finder.html and resource-finder-agent.html under version control, the terminal text enlarged, and the agent set to ask before every edit. Never show a sign-in page, key or bill on screen. Rehearse the whole demo with the class spec the week before and record it as a backup; the prepared pages are the fallback if the agent is slow, offline or does something unexpected. Print slide 10's diff and the App test log for anyone who wants paper. Play video chapters 4, 7 and 9 with captions to check sound. After your run-through, select Start fresh on this computer at each station. No paid service, purchase or learner account is required.",
+ "lab_paths": [
+  [
+   "Put two pages side by side",
+   "Press Ctrl and N to open a second Edge window and open the other version there. Press the Windows logo key and the Left arrow, then choose the other window for the right side. Or hover over the Maximize button and pick a layout."
+  ],
+  [
+   "See a page's code",
+   "Press Ctrl and U. The code opens in a new tab; you can read it but not change it. Close that tab when you are done."
+  ],
+  [
+   "Find a word on a page or in its code",
+   "Press Ctrl and F and type the word. Matches are highlighted. Press Ctrl and G to jump to the next one."
+  ],
+  [
+   "Reload a page",
+   "Press F5, or Ctrl and R."
+  ],
+  [
+   "Test with the keyboard only",
+   "Press Tab to move to the next control and Shift and Tab to go back. Each control should show a thick outline. On Category, press the Up or Down arrow to change the choice. On Reset filters, press Enter."
+  ],
+  [
+   "Test a narrow screen",
+   "Press Ctrl and + until the zoom reaches 400%. The page should become one column you can read without scrolling sideways. Press Ctrl and 0 to go back to 100%."
+  ],
+  [
+   "Show file name extensions",
+   "In File Explorer, select View › Show › File name extensions. Names now end in .html or .txt, so you can spot a wrong save."
+  ],
+  [
+   "Find a downloaded file",
+   "Press Ctrl and J to open Downloads in Edge. Downloaded files are in the Downloads folder in File Explorer."
+  ],
+  [
+   "Open an HTML file in Notepad",
+   "In File Explorer, right-click the file, select Open with, then Notepad. If Notepad is not listed, select Choose another app."
+  ],
+  [
+   "Save a web page from Notepad",
+   "Choose File › Save as. Type a name ending in .html. Set Save as type to All files, then select Save. Or type the whole name in quotation marks, such as \"resource-finder-v3.html\"."
+  ]
+ ],
+ "other_changes": [
+  {
+   "file": "scripts/dl2/author-content.py (week 6 add() header, lines 149–151)",
+   "change": "Title: 'Guide an AI agent to improve a web app'. Summary: 'Write a clear request for an AI coding agent, review what it changed, test the result, and learn what running a website as a service takes.' refs: ['Extension: agentic engineering basics and SaaS']. Replace objectives, agenda, lab, answers with this proposal and add outcomes, prep and lab_paths.",
+   "why": "The stated goal is agentic engineering a SaaS website. The current title promises a learner build and uses 'vibe coding', which is never defined (CP-11).",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/author-content.py (week 6 slide titles, applied after slide_changes, which are keyed by the current titles)",
+   "change": "Rename only these titles; keep order and kinds. 'Vibe coding starts with clear instructions' → 'An AI coding agent works in a loop'. 'A prompt with useful boundaries' → 'Write a spec the agent can follow'. 'Ask the AI to explain its work' → 'Ask the agent for a plan first'. 'No AI account? You can still build' → 'Review the change: read the diff'. 'A useful revision request' → 'Write a useful repair request'. 'Fix what you can demonstrate' → 'Report the bug; check for a regression'. 'Lab: build, test, explain' → 'Lab: spec, review, test, explain'. 'You can direct a build and judge it' → 'You can direct an agent and judge its work'. Keep 'Start with a working reference' (tests/functional/dl2.spec.js clicks it) and every other title.",
+   "why": "The old titles describe the vibe-coding build. Titles name the step of the agent loop each slide teaches.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/author-content.py (week 6 procedures, lines 177–187)",
+   "change": "Replace with exactly: procedures=[['Open the three versions (no account needed)',['Version 1, before the agent: go to slide 9 and select Open starter app, or select Open version 1 above.','Version 2, the agent’s result: select Open the agent’s version above. This is resource-finder-agent.html.','Version 3, after the repair: select Open the repaired version above only when your instructor says so. This is resource-finder-agent-fixed.html.','To compare two versions, open each in its own window (Ctrl and N). Press the Windows logo key and the Left arrow on one window, then pick the other for the right side.']],['Check the change yourself (no AI account needed)',['On version 2, press Ctrl and U. The page’s code opens in a new tab. You can read it but not change it.','Press Ctrl and F and type toLowerCase. Count how many places are highlighted. Do the same on version 1.','If the counts differ, find that line in the diff on slide 10. Ask: did our spec ask for this change?']],['Optional: repair version 2 by hand',['Under the agent’s version, select Download editable HTML. The file resource-finder-v2.html goes to your Downloads folder (Ctrl and J shows it).','In File Explorer, right-click the file, select Open with, then Notepad. On a Mac, first choose TextEdit › Settings › Open and Save and turn on Display HTML files as HTML code instead of formatted text, then open the file in TextEdit.','Press Ctrl and F (Command and F on a Mac) and type trim(). On that line, type .toLowerCase() right after trim() so it reads trim().toLowerCase();','Choose File, then Save As. Type resource-finder-v3.html. On Windows, set Save as type to All files so Notepad does not add .txt. On a Mac, choose Use .html if TextEdit asks.','Double-click the saved file to open it in your browser. Retest LIBRARY, Learning and zzz, then one check that passed before.']]]",
+   "why": "Removes the rename that broke the course's own library tests (CP-04), gives the no-AI path a real defect to fix (CP-05), corrects the Mac steps per Apple's TextEdit guide (CP-06), and keeps the words the existing worksheet test expects (Notepad, TextEdit, All files, Save As).",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "courses/digital-literacy-2/activities/resource-finder-agent.html (new)",
+   "change": "Build by copying activities/resource-finder.html (after the reformat below) and making exactly these edits, nothing else. (1) <title>: 'Fictional community resource finder · version 2 (agent result)'. (2) The requested feature, in render(): the text the search looks at becomes (r.name+' '+r.category+' '+r.description) instead of (r.name+' '+r.description), so learning finds every Learning resource. (3) A harmless unrequested change of the kind agents often make: the search box placeholder becomes 'Try library or learning'. (4) The planted defect, in render(): const query=search.value.trim(); with .toLowerCase() removed, so typed capitals are no longer lowered while the resource text still is. (5) After the 'What this prototype does' paragraph (below the controls, so the layout does not shift): <p><strong>Version 2.</strong> Changed by an AI coding agent. Review and test it before you trust it.</p>. Results verified on a prototype in Chromium: blank 3 found; library 1 (Community library); learning 2 (Community library, Practice Workbook Workshop), where version 1 says No matching resources; zzz 'No matching resources. Try a different word or reset the filters.'; LIBRARY, Library and Learning 'No matching resources' (the defect; version 1 finds LIBRARY); Learning category + library 1; Community + library none; focus outline 4px on every control; no sideways scroll at 320px. How learners find it: (a) Review: slide 10's diff shows the minus/plus pair for the query line, the only change that breaks a requirement in the spec; (b) Ctrl and U, then Ctrl and F for toLowerCase highlights 1 place in version 2 and 2 in version 1; (c) Test: the mixed-case check (LIBRARY, or typing Learning as it is written on screen) fails. The defect is the same one video chapter 9 and slide 18 already describe.",
+   "why": "A live agent is unpredictable and will often get this right. The prepared result guarantees a realistic, findable defect for every learner's Review and Test, and it is the whole Show if the live run fails.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "courses/digital-literacy-2/activities/resource-finder-agent-fixed.html (new)",
+   "change": "Copy of resource-finder-agent.html with three edits: const query=search.value.trim().toLowerCase(); restored; <title> ends 'version 3 (after the repair)'; the version line reads '<strong>Version 3.</strong> The agent repaired the capital-letter search. Retest it before you trust it.' Verified: LIBRARY 1, Library 1, Learning 2, learning 2, library 1, zzz no-match message. The version 2 → 3 diff is one line, which the instructor shows in cycle E.",
+   "why": "Every learner needs the repaired page to do the regression retest (task 7) at their own seat, whatever the live agent produced.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "courses/digital-literacy-2/activities/resource-finder.html",
+   "change": "Keep the page and its behavior. Reformat only the script so each statement of render() and the event wiring sits on its own line, and keep const resources at the top level. Then build the two new pages from it.",
+   "why": "render() is one 677-character line (line 12), so any agent diff on the projector would show that whole line (CP-15). One statement per line makes the change a short, readable diff. Existing tests (dl2.spec.js, dl2-video-chapters.spec.js, dl2-review-fixes.spec.js) still pass.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "shared/text-size.js (or a data-text-dock header on the three activity pages)",
+   "change": "When the Text size widget floats on a page without [data-text-dock] and the viewport is under 520px wide, dock it at the top instead of fixed bottom-right, or add a header slot with data-text-dock to the three activity pages.",
+   "why": "AX-07, confirmed again: the 112×82 button covers the search box at 320×600 on version 1 and at 480×600 on version 2. Without the fix, the narrow-screen check can show a false failure that differs between versions only because of page length.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/build-pages.py (line 92, week 6 worksheet block)",
+   "change": "Buttons: Open version 1 (activities/resource-finder.html); Download editable HTML (keep download=\"resource-finder-v1.html\"); Open the agent’s version (activities/resource-finder-agent.html); Download editable HTML (download=\"resource-finder-v2.html\"); Open the repaired version (activities/resource-finder-agent-fixed.html). App test log columns: Check | What to do | Expected | Actual | Pass or fail; rows: Happy path, new | type learning; Happy path, still works | type library; No match | type zzz; Mixed case | type LIBRARY, then Learning; Keyboard only | Tab through every control; Narrow screen | zoom to 400%. Add a 'Retest after the repair' table with rows: The check that failed; Passed before: learning; Passed before: zzz. Replace the rubric list with a table (Criterion | 0 | 1 | 2 | Score) and a Total __ / 8 line: Spec and checks: 0 no clear change or no checks; 1 a change and checks, but a check is vague or nothing says what must stay the same; 2 one clear change, what must stay the same, and three checks a partner can run. Prediction and review: 0 no prediction and no marked diff; 1 predicts or marks the diff with help; 2 predicts the part that will change and, alone, finds the change the spec did not ask for. Testing and retest: 0 fewer than three checks run; 1 checks run but expected and actual not both recorded, or the failure missed; 2 all five checks recorded with expected, actual and pass or fail, the failure reported, and the failed check plus two others retested. SaaS trade-offs: 0 cannot say what would change; 1 names two or three of hosting, sign-in, data, API key, cost and upkeep; 2 explains at least four, each with a reason. Render the same rubric table in the week 6 answer key. Render the procedures before the tasks or link to them from tasks 4, 5 and 7.",
+   "why": "The test log must match the new checklist; the rubric had no level descriptors or score lines and the answer guide had no rubric (AS-20); the procedures were printed after the tasks that need them (CP-15).",
+   "effort": "medium",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/build-pages.py (lines 97, 119, 120, 122)",
+   "change": "Line 97 week 6 sentence → ' For week 6, the instructor runs an AI coding agent on the projector; learners need no account or AI access. Supply a plain-text editor for the optional hand repair.' Line 119 week 6 evidence ' Prototype and test log.' → ' Spec, change review and test log.' Line 120: heading '+ Web App Building' → '+ AI Agent and SaaS Basics'; 'The final week supports either an approved AI tool or a supplied starter app with no AI account required.' → 'In the final week the instructor demonstrates an AI coding agent; learners write the request, review the change and test it, with no account or AI access of their own.' Line 122: 'Download the starter HTML for the account-free week 6 path.' → 'Rehearse the week 6 agent demo and open the three practice pages (versions 1, 2 and 3).'",
+   "why": "The plan, syllabus and instructor guide still describe the old learner-build design and an unnamed 'approved AI tool'. Keeps 'plain-text editor', which tests/content/dl2-week1-tsdr.spec.js checks on the week 6 plan.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/workshops.py (lines 41–44, 'parts' and 'app'; 'prompt') and courses/digital-literacy-2/assets/workshop.js (line 55)",
+   "change": "'parts': code shows <h1>Community resource finder</h1> and <label for=\"search\">Search fictional resources</label>; mini-app heading 'Community resource finder'; rows 'Community library' and 'Community Makers Group'. 'app': rows 'Community library · Learning', 'Community Makers Group · Community', 'Practice Workbook Workshop · Learning' (keep its case-insensitive filter; it models version 1). 'prompt': default task 'Let the search box also find resources by category'; checkboxes 'Keep capital and small letters matching the same resources.', 'Keep keyboard use and the visible outline.', 'Keep the no-match message.'; hint 'Nothing is sent to an AI service. Read the request aloud: could the agent misunderstand any part?'. workshop.js output: 'Change request for the AI coding agent: {task}.\\n{requirements}\\nChange only resource-finder.html. Use fictional data. Add no outside code, secrets or sign-in. Show me your plan before you change anything, then list every line you changed.'",
+   "why": "Slides 5 and 10 showed <h1>Find a resource</h1>, which is not in the starter (CP-15); the simulation used records the starter lacks (CP-25); the prompt builder wrote a whole-app build prompt, not a change request.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/photo_scenes.py (week 6)",
+   "change": "PURPOSE[6] 'Direct an agent, then check its work'. EVIDENCE[6] [('Spec','One change + checks you can run'),('Review','What changed? Was it asked for?'),('Test log','Expected ↔ actual, then retest')]. artifact (6,3) third panel fields('Software as a service',[('You','Sign in from any browser'),('The company','Hosts it, keeps the data, updates it')]). (6,4) fields('Agent loop',[('Spec','Let search also find the category'),('Plan and change','The agent says what it will edit, then edits'),('Review and test','Read the diff; run your checks')],j). (6,8) [fields('Agent plan · file',[('File','resource-finder.html only')]),fields('Agent plan · change',[('Part','JavaScript: the rule that picks matches'),('Change','Also look at the category')]),fields('Agent plan · checks',[('Run','learning · LIBRARY · zzz · Tab · narrow window')])][j]. (6,10) [fields('What we asked for',[('Change','Search also finds the category'),('Keep','Capital letters, no-match message, keyboard')]),panel('What the agent changed','<pre><del>- const query=search.value.trim().toLowerCase();</del>\\n<ins>+ const query=search.value.trim();</ins>\\n<del>- (r.name+' '+r.description)</del>\\n<ins>+ (r.name+' '+r.category+' '+r.description)</ins>\\n<del>- placeholder=\"Try library\"</del>\\n<ins>+ placeholder=\"Try library or learning\"</ins></pre>'),fields('Your review',[('Asked for?','Mark each changed line'),('Not asked for?','Circle it and say if it matters'),('Then test','Which check would catch it?')])][j]. (6,11) fields('One change, a way back',[('Save','Keep version 1: resource-finder.html'),('Compare','Read the diff: what changed, what stayed'),('Retest','Every check; go back to version 1 if one fails')],j). (6,12) panel('Repair request',field('Observed','LIBRARY and Learning find nothing; library and learning work')+field('Request','Match capital and small letters the same again',j>0)+field('Keep','The new category search and everything else',j>1)), removing the focus-practice button. (6,18) fields('Bug report',[('Steps','Open version 2; type LIBRARY'),('Expected','Community library (1 found), as in version 1'),('Actual','No matching resources: a regression')],j). (6,19) fields('From practice page to SaaS',[('Hosting','A web server anyone can reach'),('Sign-in and data','Accounts; a database on the server'),('Cost and upkeep','Fees, backups, updates, support, a named owner')],j). supplement (6,6) fields('Acceptance checks for our change',[('New','learning shows Community library and Practice Workbook Workshop'),('Still works','LIBRARY shows Community library'),('No match','zzz shows the no-match message')]). supplement (6,9) fields('Version 1 · before the agent',[('Page','resource-finder.html'),('Quick checks','library · LIBRARY · zzz')]). supplement (6,17) steps_demo('Record evidence for every check',[...]) with rows ('Happy path','Type learning','Community library and Practice Workbook Workshop'), ('No match','Type zzz','The no-match message'), ('Mixed case','Type LIBRARY, then Learning','Same results as library and learning'), ('Keyboard','Tab to every control; Enter on Reset filters','A thick outline on each; everything works'), ('Narrow screen','Zoom to 400% (Ctrl and +)','One column; nothing cut off') and Observed 'Test version 2 (resource-finder-agent.html); write what actually happens'.",
+   "why": "The scenes still show the rename, the focus-outline repair (the starter already has a 4px outline, so that bug cannot be reproduced) and 'Only the heading changes in v2' (CP-24). They must show the agent loop, the real diff and the new checklist. Diff lines carry minus and plus signs so meaning does not rely on color.",
+   "effort": "medium",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/scenes.py (week 6 entries (6,4), (6,8), (6,10), (6,11), (6,12), (6,14), (6,18), (6,19))",
+   "change": "(6,4) ('Spec','You say what to change','One change + what must stay the same','Plain English, one change at a time.'), ('Agent','It plans, then edits the code','Plan → change → report','Read the plan before it edits anything.'), ('Review','You check its work','Diff + your own tests','The agent’s report is a claim; your tests are the evidence.'). (6,8) ('File','Which file will it change?','resource-finder.html only','A good plan says where it will work.'), ('Change','What will it change?','JavaScript: the matching rule','Compare the plan with your spec and prediction.'), ('Checks','How will it check?','learning · LIBRARY · zzz · Tab','Approve only a plan you can check.'). (6,10) ('Asked','What we asked for','Search also finds the category','Start from the spec, not the code.'), ('Changed','What the agent changed','− removed line · + added line','A minus sign means removed; a plus sign means added.'), ('Review','Asked for, or not?','Mark every changed line','A change nobody asked for needs a reason or a repair.'). (6,11) ('Save','Keep version 1','v1 → one proposed change','Start from a saved working version.'), ('Compare','Read the diff','What changed? What stayed?','Check that the change matches the request.'), ('Retest','Run every check','Pass → keep / fail → repair or restore v1','Go back to version 1 if no repair works.'). (6,12) ('Problem','Capital letters stopped matching','LIBRARY → nothing; library → 1 found','Name the exact problem you saw.'), ('Request','Match capital and small letters again','LIBRARY → Community library','Ask for a result you can test.'), ('Keep','Keep the new category search','learning → 2 found','Name what must keep working, then retest it.'). (6,14) third flow 'Community library / Practice Workbook Workshop'. (6,18) ('Steps','Type LIBRARY in version 2','Open version 2 → type LIBRARY','List the actions that show the problem.'), ('Expected','Find Community library','Expected: 1 found, as in version 1','Say what should happen.'), ('Actual','No matching resources','A regression: it worked before the change','After the repair, repeat this check and two that passed.'). (6,19) ('Local','A page with fixed data','One file, no accounts, nothing saved','Today’s finder has no sign-in and saves nothing.'), ('Hosted','Reachable online','Web server → visitors','Hosting makes it reachable; a service keeps it running.'), ('Maintain','Someone owns it','Costs · backups · updates · support','Every agent change still needs a person to review it.').",
+   "why": "Scene text must match the new slide bodies and the prepared files; it also fixes 'Community Library' capitals and 'Learning Desk', which is not in the starter.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "tests/content/dl2-review-fixes.spec.js, tests/functional/dl2-review-fixes.spec.js, tests/content/dl2-monday-fixes.spec.js, tests/functional/dl2.spec.js",
+   "change": "Retire 'DL2 week 6 v2 acceptance check searches for the resource the learner renamed' and 'DL2 week 6 manual edit still passes the v2 search check'. Add: slide 10 of week 6 contains 'toLowerCase' in its diff; lab has no 'Community Skills Desk'; resource-finder-agent.html gives library 1, learning 2 and LIBRARY 'No matching resources' (guards the planted defect against an accidental fix); resource-finder-agent-fixed.html gives LIBRARY 1 and Learning 2; the worksheet links all three pages and download=\"resource-finder-v2.html\"; the answer key shows the rubric. Add both new pages to learnerPages and to the axe list.",
+   "why": "Two current tests assert the rename the redesign removes. The planted defect must stay planted, and the new pages must meet the same accessibility checks.",
+   "effort": "medium",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/build-pages.py (week 6 video-transcript page)",
+   "change": "Add a 'Words in this video' box above the transcript: agent, prompt, spec, acceptance check, happy path, diff, regression, hosting, SaaS (software as a service), API key, authentication, each with the one-line definition used on the slides.",
+   "why": "VM-07: the narration uses SaaS, authentication, API keys, hosting and happy path without defining them. This fixes it for Monday without a re-record.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "video/digital-literacy-2/teaching-scripts/week-06.txt; video/digital-literacy-2/week-06/narration/beat-05.txt and beat-06.txt; scripts/dl2/video-scenes.py and scripts/dl2/screen-share-scenes.py (week 6); media/week-06-chapters.json; rebuild media",
+   "change": "Re-record chapter 5 as 'Write a spec the agent can follow' (a change request to an existing page, what must stay the same, 'show me your plan first'; keep the API-key sentence). Re-record chapter 6 as 'Review the agent's change before you accept it' with a screen demo: plan, approve, the diff with minus and plus lines, the missing toLowerCase, and the way back. Add one spoken definition each for agent (ch1), SaaS and authentication (ch2), API key (ch5), diff (ch6), happy path (ch7) and hosting (ch10). Hold 3–5 seconds of silence after the prompts at 2:52 and 6:37, and hold each screen-demo label at least 2.5 seconds (VM-06).",
+   "why": "The video was made for the vibe-coding framing. Chapters 1–4 and 7–10 still fit; chapter 5 models a whole-app build prompt and chapter 6 teaches the Notepad path. No chapter shows an agent, a plan or a diff.",
+   "effort": "large",
+   "before_next_session": false
+  },
+  {
+   "file": "docs/digital-literacy-2/HANDOFF.md",
+   "change": "Record the week 6 redesign, the three practice pages, and that resource-finder-agent.html contains a deliberate defect (missing .toLowerCase() on the query) that must not be fixed.",
+   "why": "Prevents a well-meaning fix or a code-review tool from removing the planted defect.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "Pre-test and post-test (scripts/dl2/author-assessments.py)",
+   "change": "No change.",
+   "why": "Week 6 is a VUB extension outside the 28-point GS6 assessment; it is scored only with the 8-point rubric.",
+   "effort": "small",
+   "before_next_session": false
+  }
+ ],
+ "instructor_notes": [
+  "Rehearse the exact demo the week before with the tool you will use (for example, Claude Code). Put the practice folder under git so git diff shows the change and git restore gives you a way back. Record the rehearsal as a backup video.",
+  "Keep the agent from acting on its own. In Claude Code, recent versions start in auto mode: start with claude --permission-mode plan, read the plan aloud, then approve with 'Yes, manually approve edits' so each edit waits for you. Press Esc to stop it at any time.",
+  "A live agent is unpredictable. If it gets the change right, say so, then switch to the prepared version: 'Another run of the same request produced this one.' If it is slow, fails or wanders, stop it and use slide 10 and the prepared pages; nothing in the lesson depends on the live run.",
+  "Keep learners in the thinking seat. They write the spec and checks before they see the agent's plan, and they test at their own seat. Do not let the agent's 'all checks pass' stand in for their tests; that is slide 20's point.",
+  "Never show a sign-in page, key or bill on the projector, and enlarge the terminal font before class. Write these terms on the board and point to each as it comes up: agent, prompt, spec, acceptance check, happy path, diff, regression, hosting, SaaS, API key, authentication."
+ ]
+}

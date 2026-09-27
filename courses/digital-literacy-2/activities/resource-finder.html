@@ -8,7 +8,35 @@ const resources=[
  {name:'Community Makers Group',category:'Community',description:'Fictional peer group for trying small projects together.'},
  {name:'Practice Workbook Workshop',category:'Learning',description:'Fictional guided practice with tables, formulas and charts.'}
 ];
-const search=document.querySelector('#search'),category=document.querySelector('#category'),results=document.querySelector('#results'),status=document.querySelector('#status');
-function render(){const query=search.value.trim().toLowerCase();const matches=resources.filter(r=>(category.value==='all'||r.category===category.value)&&(r.name+' '+r.description).toLowerCase().includes(query));results.replaceChildren();for(const r of matches){const article=document.createElement('article'),heading=document.createElement('h2'),p=document.createElement('p');heading.textContent=r.name;p.textContent=r.category+' · '+r.description;article.append(heading,p);results.append(article);}status.textContent=matches.length?`${matches.length} fictional resource${matches.length===1?'':'s'} found.`:'No matching resources. Try a different word or reset the filters.';}
-search.addEventListener('input',render);category.addEventListener('change',render);document.querySelector('#reset').addEventListener('click',()=>{search.value='';category.value='all';render();search.focus();});render();
+const search=document.querySelector('#search');
+const category=document.querySelector('#category');
+const results=document.querySelector('#results');
+const status=document.querySelector('#status');
+function render(){
+  const query=search.value.trim().toLowerCase();
+  const matches=resources.filter(r=>
+    (category.value==='all'||r.category===category.value)&&
+    (r.name+' '+r.description).toLowerCase().includes(query)
+  );
+  results.replaceChildren();
+  for(const r of matches){
+    const article=document.createElement('article'),heading=document.createElement('h2'),p=document.createElement('p');
+    heading.textContent=r.name;
+    p.textContent=r.category+' · '+r.description;
+    article.append(heading,p);
+    results.append(article);
+  }
+  status.textContent=matches.length
+    ?`${matches.length} fictional resource${matches.length===1?'':'s'} found.`
+    :'No matching resources. Try a different word or reset the filters.';
+}
+search.addEventListener('input',render);
+category.addEventListener('change',render);
+document.querySelector('#reset').addEventListener('click',()=>{
+  search.value='';
+  category.value='all';
+  render();
+  search.focus();
+});
+render();
 </script><script src="/shared/text-size.js"></script></body></html>

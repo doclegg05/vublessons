@@ -350,9 +350,11 @@
       "title": "Find, judge, and organize information",
       "summary": "Find a reliable community resource and manage a shared file with care.",
       "objectives": [
-        "Refine a search and justify a source choice.",
-        "Complete a fictional online form and check its confirmation.",
-        "Organize files, set access and explain a recovery path."
+        "Write a clear search and narrow it with one filter.",
+        "Judge whether a source fits your question, and record where you found it.",
+        "Fill in an online form with only what is needed, and read the confirmation.",
+        "Save a file with a clear name in a folder you can find, and pack it in a ZIP file.",
+        "Choose who can view, comment or edit, and pick the right way to get a file back."
       ],
       "refs": [
         "3.1",
@@ -364,39 +366,59 @@
       ],
       "agenda": [
         [
-          10,
-          "Reconnect",
-          "Ask learners to demonstrate last week\u2019s check-one-change routine."
+          7,
+          "Warm-up and goals",
+          "Logins. Reconnect: pairs share last week's home task (one change and how they undid it). Recall Level 1: ask what made a search clear, and where they saved their Level 1 file and what they called it. Read the goals on slide 1 aloud."
         ],
         [
-          20,
-          "Search demonstration",
-          "Teach keywords, filters and source evaluation with the supplied fictional source comparison."
+          3,
+          "Introduction: the neighbor's question",
+          "Tell: slide 2 and chapter 1, a neighbor needs computer help. Learners write worksheet task 1, using library computer help or a service they need."
         ],
         [
-          20,
-          "Research lab",
-          "Learners locate a public library service from an official source and record evidence. No account or application is needed."
+          12,
+          "Cycle A: search",
+          "Tell: slides 3 and 4 (no plus signs; quotation marks; site:gov; a date filter). Show: chapter 2 from slide 14, pausing at 1:17 so learners say a search aloud; then live in Edge, search help, then public library computer help and a town, then one refinement, and Tools \u203a Any time on google.com. Do: worksheet task 2, every learner at their own seat. Review: a partner reads the refined search and says what changed; scan for plus signs and searches that are too narrow."
+        ],
+        [
+          16,
+          "Cycle B: judge and record a source",
+          "Tell: slides 5 and 7; say that an AI summary at the top of the results is not the source. Show: chapter 3 and chapter 4, then live, open a library's own page, find who runs it and when it was updated, and copy the address with Ctrl and L, then Ctrl and C. Do: worksheet tasks 3 and 4, every learner, using slide 8 as the checklist. Review: the slide 19 knowledge check; a partner checks the five source fields. Slide 6 is optional."
+        ],
+        [
+          8,
+          "Cycle C: online form",
+          "Tell: slide 9. Show: chapter 5, pausing at 3:29 before chapter 6 starts; then on slide 10 select Review practice request with one choice blank to show the message Please select an item in the list. Do: worksheet task 5 on slide 10, every learner. Review: ask whether anyone received a request (no); a partner reads the confirmation aloud."
         ],
         [
           10,
           "Break",
-          "Pause away from screens."
+          "Offer a screen-free pause."
         ],
         [
-          20,
-          "Files demonstration",
-          "Teach forms, central storage, sync, access, compression and version history. Play the cloud-file explainer."
+          14,
+          "Cycle D: folders and file names",
+          "Tell: slides 11 and 12. Show: chapter 6, then live, Windows logo key and E \u203a Documents \u203a New \u203a Folder named Community resources; in Word, File \u203a Save As \u203a Browse into that folder as library-help-v1.docx; close Word and reopen the file from the folder. Say the video calls it library-help-draft and ours adds a version number. Do: worksheet task 6, every learner. Review: a partner reopens the file from the folder."
         ],
         [
-          30,
-          "Files lab",
-          "Use the practice form and sharing simulator, then organize a fictional folder. Complete the worksheet."
+          14,
+          "Cycle E: sharing and protection",
+          "Tell: slides 15 and 16. Show: chapter 7, pausing at 5:02 before the answer so learners choose the role; then on the projector only, a real Share box from your own account with a fictional file if you have one, and in Word File \u203a Info \u203a Protect Document, pointing to Always Open Read-Only and Encrypt with Password without setting them. Do: worksheet task 7 on slide 15, marked simulated, every learner. Review: the slide 20 knowledge check; ask who owns the file after it is shared."
+        ],
+        [
+          18,
+          "Cycle F: sync, ZIP and recovery",
+          "Tell: slides 13, 17 and 18. Show: chapter 8 (optional pause at 5:47) and the slide 13 delete; chapter 9; then live, right-click the folder \u203a Show more options \u203a Send to \u203a Compressed (zipped) folder, Extract All, then delete a file and restore it from the Recycle Bin. Version history uses slide 18, marked simulated. Do: worksheet task 8, every learner. Review: a partner asks missing file or wrong wording, and the learner names the tool that fixes it."
         ],
         [
           10,
-          "Evidence check",
-          "Ask each learner to justify a source and a permission. Use the knowledge checks."
+          "Individual check",
+          "Play chapter 10 and pause at 6:35 to ask what the folder should hold; play on to compare. Each learner shows you three things: the five-field source note, the file reopened from Community resources, and a file restored from the Recycle Bin, and names the role for a reviewer. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+        ],
+        [
+          8,
+          "Apply and close",
+          "Slides 21, 22 and 23. Home task: search for one service you need, write the five-field source note, and keep it in a named folder on your own device or on paper; share it at the start of week 3. Print or save the worksheet, delete the Community resources folder and ZIP from Documents, then select Start fresh on this computer. Remind learners of next week\u2019s date from the syllabus, especially if it falls on a holiday."
         ]
       ],
       "slides": [
@@ -407,7 +429,7 @@
         },
         {
           "title": "Write a useful search",
-          "body": "Include the service, place and audience. Try: public library computer help near your town. Remove words that distract from the task.",
+          "body": "Include the service, the provider and the place. Try: public library computer help and your town's name. Plus signs are not needed between words. Remove words that distract from the task.",
           "kind": "teach",
           "refs": [
             "3.1"
@@ -415,7 +437,7 @@
         },
         {
           "title": "Refine without hiding useful results",
-          "body": "Use the search tool\u2019s date or content filters when they fit. Quotation marks can narrow an exact phrase. A site: filter narrows a domain, but does not prove accuracy.",
+          "body": "Quotation marks find an exact phrase. site: limits results to one website or kind of website, such as site:gov; it does not prove a page is accurate. A date filter shows recent pages. Each filter can also hide a useful page.",
           "kind": "teach",
           "refs": [
             "3.1"
@@ -451,7 +473,7 @@
         },
         {
           "title": "Accuracy and relevance differ",
-          "body": "A correct article about a library in another state may not answer a local question. A recent page can still be biased or wrong. Check more than one signal.",
+          "body": "A correct page about another state's library may not answer a local question. A recent page can still be biased or wrong. A summary or AI answer at the top of the results is not the source; open the organization's own page.",
           "kind": "teach",
           "refs": [
             "3.2"
@@ -484,7 +506,7 @@
         },
         {
           "title": "Name files so you can find them",
-          "body": "Use a clear subject and version: library-resource-v1.docx. Put related files in one folder. Avoid names such as final-final-new.",
+          "body": "Use a clear subject and version: library-help-v1.docx. Keep related files in one folder, such as Community resources. Avoid names such as final-final-new.",
           "kind": "teach",
           "refs": [
             "4.2"
@@ -492,7 +514,7 @@
         },
         {
           "title": "Central storage needs clear access",
-          "body": "A shared drive keeps a common copy in one place. The service, account or organization controls access and retention. A shared link does not transfer ownership.",
+          "body": "A shared drive keeps one common copy in one place. The service, account or organization controls who can open it and how long it is kept. Sharing a link does not make someone the owner.",
           "kind": "teach",
           "refs": [
             "3.3",
@@ -501,7 +523,7 @@
         },
         {
           "title": "Sync, backup, and recovery",
-          "body": "Sync carries changes, including some deletions, between locations. A separate backup provides another recovery path. Version history may recover earlier content.",
+          "body": "Sync copies changes, including deletions, between your computer and an online service. A backup is a separate copy kept somewhere else. Version history, kept by services such as OneDrive and Google Docs, may bring back earlier wording.",
           "kind": "teach",
           "refs": [
             "4.2"
@@ -514,7 +536,7 @@
         },
         {
           "title": "Choose who can change the file",
-          "body": "A viewer reads. A commenter suggests, where supported. An editor changes content. Limit access to the named people who need it.",
+          "body": "A viewer reads. A commenter suggests, where the service offers it. An editor changes content. Google Drive says Viewer, Commenter and Editor; OneDrive says Can view and Can edit. Give each named person the least access the task needs.",
           "kind": "permissions",
           "refs": [
             "4.2",
@@ -523,7 +545,7 @@
         },
         {
           "title": "Read-only is not encryption",
-          "body": "Read-only and editing restrictions limit changes. Encryption protects readable content with a key. Password-to-open and password-to-edit can protect different things.",
+          "body": "Read-only stops changes, but the file can still be read and copied. Encryption scrambles the content so only someone with the password or key can read it. A password to open and a password to modify protect different things.",
           "kind": "teach",
           "refs": [
             "4.2",
@@ -532,7 +554,7 @@
         },
         {
           "title": "Compression packages files",
-          "body": "A ZIP archive can bundle files and sometimes reduce size. Extract it before editing. Images and video may already be compressed. A ZIP file is not automatically encrypted.",
+          "body": "A ZIP file bundles several files into one and can make them smaller to send. Extract it before editing. Photos and video are often already compressed. A ZIP file is not encryption or a backup.",
           "kind": "teach",
           "refs": [
             "4.2"
@@ -540,7 +562,7 @@
         },
         {
           "title": "Recover the right thing",
-          "body": "Deleted file? Check trash or recycle bin. Wrong content? Inspect version history. Preview first and coordinate with collaborators before restoring.",
+          "body": "Missing file? Check the Recycle Bin or the service's recycle bin. Wrong wording? Use version history, which needs a service such as OneDrive or Google Docs. Preview first and tell collaborators before restoring.",
           "kind": "teach",
           "refs": [
             "4.2"
@@ -551,12 +573,12 @@
           "body": "Which action best checks a surprising service claim?",
           "kind": "check",
           "options": [
-            "Trust the first result",
-            "Count the page\u2019s colors",
-            "Verify it with the responsible organization"
+            "Trust it because it is the top search result",
+            "Trust it because several websites repeat it",
+            "Confirm it with the organization that runs it"
           ],
           "answer": 2,
-          "why": "A responsible primary source and corroborating evidence are stronger than ranking or appearance."
+          "why": "Ranking and repetition do not prove a claim. The organization that runs the service is in a position to know, so confirm through its own website or phone number."
         },
         {
           "title": "Knowledge check: read-only",
@@ -572,7 +594,7 @@
         },
         {
           "title": "Lab: build a resource folder",
-          "body": "Find one useful source, record the evidence, organize a fictional file and demonstrate a limited share.",
+          "body": "Do each worksheet task in its cycle. Save your file in the Community resources folder. Mark sharing and version history as simulated.",
           "kind": "lab"
         },
         {
@@ -582,24 +604,90 @@
         }
       ],
       "lab": [
-        "Write a focused question about a local public service.",
-        "Record an initial search and one refinement or filter. Explain its effect.",
-        "Record a source title, organization, URL, access date and useful detail.",
-        "Judge the source\u2019s accuracy, perspective, bias, credibility and relevance. Name one check still needed.",
-        "Complete the fictional practice form. Record a validation message and the confirmation.",
-        "Create a folder and clear filename. Describe who controls a cloud copy.",
-        "Choose permissions for a reader, a reviewer and a coauthor. Demonstrate one in the simulator.",
-        "Explain when to use version history, a recycle bin or a backup. Explain why ZIP and read-only do not prove encryption."
+        "Write a question about a local public service you or a neighbor might need, such as computer help at a public library. Name the service and the town.",
+        "In Edge, search for that service and record your search. Then refine it one way: a phrase in quotation marks, site:gov, or Tools \u203a Any time on google.com. Record what changed. Plus signs are not needed.",
+        "Open one result that answers your question. Record the page title, the organization, the web address (Ctrl and L, Ctrl and C, then Ctrl and V here), today's date and the one detail you will use.",
+        "For that page, answer the five source questions from slide 5 in a few words each: who made it, what evidence it gives, why it was published, whether it is current, and whether it fits your question. Name one detail to confirm with the organization.",
+        "On slide 10, select Review practice request with one choice left blank, and write the message you see. Then choose a topic and a contact method, submit, and copy the confirmation. Say what the confirmation does not prove.",
+        "Open File Explorer (Windows logo key and E) \u203a Documents. Make a folder named Community resources. In Word, type your task 1 question and task 3 source note, and save the file in that folder as library-help-v1.docx. Close Word, reopen the file from the folder, and say who controls a copy kept in a cloud drive.",
+        "On slide 15, choose access for three people: one who only reads, one who suggests wording, and one who writes the handout with you. Record each role and why, and mark it simulated. Say what read-only does and does not do.",
+        "Right-click Community resources \u203a Show more options \u203a Send to \u203a Compressed (zipped) folder. Right-click the ZIP file \u203a Extract All, then open the extracted file. Delete that file and restore it from the Recycle Bin. On slide 18, choose the route for wrong wording and mark it simulated."
       ],
       "answers": [
-        "Question identifies a service and location.",
-        "Refinement narrows the actual need without treating ranking as proof.",
-        "All five source fields are recorded; details use no personal records.",
-        "Evidence-based judgments, including an uncertainty or direct verification step.",
-        "Missing required choice is corrected; confirmation does not claim a real request was sent.",
-        "Meaningful name and folder; account/service or organization controls access.",
-        "Viewer, commenter when available, editor; named recipients and least useful access.",
-        "History: earlier content; trash: deleted file; backup: separate recovery copy. ZIP bundles; read-only restricts editing."
+        "The question names a service and a town, for example: Where can I get computer help at a public library in [town]?",
+        "The first search names the service and place, with no plus signs. One refinement is used (quotation marks, site:gov or a date range) and its effect is stated, such as fewer, more local or more recent results. Ranking is not treated as proof.",
+        "All five fields: page title, organization, full web address, date checked and one specific detail. No personal records.",
+        "Who made it (credibility), what evidence it gives (accuracy), why it was published (perspective and bias), whether it is current, and whether it fits the question (relevance), each tied to something on the page. One detail, such as hours or eligibility, to confirm through the organization's own contact.",
+        "Message: Please select an item in the list. Confirmation: Practice complete \u2026 No request was sent. It shows the exercise was done, not that anyone received a request.",
+        "Documents \u203a Community resources holds library-help-v1.docx, reopened from that folder. The service and account (or the organization) control a cloud copy; the person who shares a file stays the owner.",
+        "Reader: Viewer. Reviewer: Commenter, or the nearest option the service offers. Co-writer: Editor. Named people and the least access each task needs, marked simulated. Read-only stops changes but the file can still be read and copied; it is not encryption.",
+        "The ZIP file holds the folder and the extracted file opens. The deleted file is back in its folder from the Recycle Bin. Wrong wording: version history (simulated; it needs a service such as OneDrive or Google Docs). Missing file: the Recycle Bin or the service's recycle bin. Backup: a separate copy for when every synced copy is gone. A ZIP packages files; it is not encryption or a backup."
+      ],
+      "lab_paths": [
+        [
+          "Search from the address bar",
+          "Press Ctrl and L, type your words and press Enter. Edge searches with Bing. Plus signs are not needed between words."
+        ],
+        [
+          "Search for an exact phrase",
+          "Put the phrase in quotation marks, for example \"computer help\". Remove the quotation marks if you get too few results."
+        ],
+        [
+          "Search one kind of website",
+          "Type site: and the site or ending with no space, then your words, for example site:gov library computer help."
+        ],
+        [
+          "Show only recent results",
+          "Go to google.com and search. Below the search box, select Tools, then Any time, and choose a range such as Past year."
+        ],
+        [
+          "Find a word on a long page",
+          "Press Ctrl and F, then type the word you want to find on the page."
+        ],
+        [
+          "Copy a web address into your notes",
+          "Press Ctrl and L to select the address, then Ctrl and C to copy it. Click in your notes and press Ctrl and V to paste."
+        ],
+        [
+          "Make a new folder",
+          "Press the Windows logo key and E to open File Explorer. Open Documents, select New \u203a Folder, type the name and press Enter. Or press Ctrl and Shift and N."
+        ],
+        [
+          "Save a Word file into that folder",
+          "In Word, select File \u203a Save As \u203a Browse. Open Documents \u203a Community resources, type the File name, then select Save."
+        ],
+        [
+          "Rename a file",
+          "In File Explorer, select the file and press F2, or right-click it and select Rename. Type the new name and press Enter."
+        ],
+        [
+          "Make a ZIP file",
+          "Right-click the folder, then select Show more options \u203a Send to \u203a Compressed (zipped) folder. The ZIP file appears next to the folder."
+        ],
+        [
+          "Open the files in a ZIP",
+          "Right-click the ZIP file, select Extract All, then follow the steps. Open the files from the new folder, not from inside the ZIP."
+        ],
+        [
+          "Get back a deleted file",
+          "Open the Recycle Bin on the desktop, right-click the file and select Restore. It returns to its folder. Shift and Delete skips the Recycle Bin."
+        ],
+        [
+          "Protect a Word file (instructor shows)",
+          "File \u203a Info \u203a Protect Document. Always Open Read-Only limits changes; Encrypt with Password asks for a password to open. Word cannot recover a lost password."
+        ],
+        [
+          "Share or see earlier versions (instructor shows; needs an account)",
+          "OneDrive: select the file \u203a Share, then choose Can view or Can edit; right-click the file \u203a Version history. Google Drive: Share \u203a Viewer, Commenter or Editor; in a Google Doc, select Last edit at the top right to see versions."
+        ]
+      ],
+      "prep": "Each station: Microsoft Edge, Microsoft Word (Notepad works if Word is missing; save as library-help-v1.txt), File Explorer with a local Documents folder that is not signed in to OneDrive, headphones, and this lesson and worksheet. At the front: the projector showing Edge, File Explorer and Word, and one real West Virginia public library page for the search and source demonstrations, checked the day before. The lab has no cloud account for learners, so sharing (worksheet task 7) and version history (task 8) use the slide 15 and slide 18 practice, marked simulated; if you have your own OneDrive or Google account, you may show the Share box and version history on the projector with a fictional file only. No printing is needed; decide whether learners may print their worksheet or should save it as a PDF before closing. Play video chapters 2, 6 and 7 with captions to check sound, and mark the pause points 1:17, 3:29, 5:02 and 6:35. After your own run-through, delete your practice folder and ZIP from Documents and select Start fresh on this computer at each station. No paid service, real purchase or new learner account is required.",
+      "outcomes": [
+        "Search: in Microsoft Edge at a lab workstation, given a local service need, each learner writes a search that names the service, the provider and the place, then applies one refinement (quotation marks, site: or a date range) and says in one sentence what it changed. Correct with no more than one prompt, and no plus signs.",
+        "Sources: for one result from that search, each learner records the five source fields (title, organization, web address, date checked and the detail used), answers the five source questions from slide 5, and names one detail to confirm with the organization that runs the service. All five fields are present and each judgment points to something on the page.",
+        "Forms: using the practice form on slide 10 with fictional details, each learner submits once with a required choice missing, reads the message, completes the form, and explains that the confirmation does not mean anyone received a request.",
+        "Files: in File Explorer at a lab workstation, each learner makes a folder named Community resources, saves a Word file in it as library-help-v1.docx, reopens it from that folder, compresses the folder to a ZIP file, extracts it and opens the extracted copy. All steps done, with nothing saved in the wrong place.",
+        "Access and recovery: using the permission practice on slide 15 (simulated), each learner chooses Viewer, Commenter or Editor for a reader, a reviewer and a co-writer, giving each the least access the task needs; restores a deleted practice file from the Recycle Bin; says when version history is the right tool instead; and says that read-only stops changes but is not encryption. All correct with no more than one prompt."
       ]
     },
     {
@@ -607,9 +695,11 @@
       "title": "Create something people can use",
       "summary": "Build a clear resource handout, a small workbook, and a short presentation.",
       "objectives": [
-        "Structure a document for reading and revision.",
-        "Use a formula and format a small workbook.",
-        "Adapt a presentation and media for an audience and credit reused work."
+        "Give a handout real headings, numbered steps and a clear link.",
+        "Use shortcuts and Track Changes to edit safely and let the owner decide.",
+        "Add costs with a SUM formula and check that the total updates.",
+        "Make three matching slides with a cropped, described and credited photo.",
+        "Save a PDF, check it, and choose the right file type for the next person."
       ],
       "refs": [
         "4.1",
@@ -620,38 +710,53 @@
       "agenda": [
         [
           10,
-          "Retrieve",
-          "Review last week\u2019s source trail and folder choices."
+          "Warm-up: reconnect",
+          "Reconnect: two or three learners share last week's home task or one improvement. Recall Level 1, where you typed a short Word document and saved it with a clear name, and week 2 slide 11 (clear file names, one folder). Every learner opens File Explorer, goes to Documents and makes a folder named Resource pack; every file tonight goes there. Learners open the worksheet from slide 21."
         ],
         [
-          20,
-          "Document model",
-          "Demonstrate heading styles, lists, shortcuts, track changes and a reviewed export."
+          5,
+          "Introduction",
+          "Slides 1 and 2. Read the goals on slide 1 aloud and say tonight uses Word, then Excel, then PowerPoint, one at a time. Play chapter 1 from slide 15's chapter list. Ask slide 2's question; learners write worksheet task 1."
         ],
         [
-          20,
-          "Document lab",
-          "Learners create a one-page fictional community resource handout; partners suggest and review one edit."
+          16,
+          "Cycle A: a handout with structure",
+          "Tell: slides 3, 5 and 7 (real headings, one clear paragraph, link text that names the destination). Show: chapter 2, then live in Word: Home \u203a Styles \u203a Heading 1, Home \u203a Numbering, and View \u203a Navigation Pane. Do: worksheet task 2, every learner at their own seat. Review: a partner confirms both headings appear in the Navigation pane and the steps are numbered; re-model for anyone who used bold."
+        ],
+        [
+          13,
+          "Cycle B: edit and review",
+          "Tell: slides 4 and 6. Show: chapter 3; pause at 1:58 and ask each learner to name one change that would help the reader. Then live in Word: Ctrl and K for a link, Ctrl and C, V and Z, File \u203a Save As into Resource pack, and Review \u203a Track Changes with Accept and Reject. Do: worksheet task 3, then task 4 by swapping seats, every learner; the owner makes the final choice. Review: the slide 20 knowledge check."
         ],
         [
           10,
           "Break",
-          "Offer a posture and screen break."
+          "Offer a screen-free break. Learners minimize Word; they will need it again in cycle E."
         ],
         [
-          20,
-          "Workbook and media model",
-          "Demonstrate the supplied CSV, SUM, units, a simple chart, cropping, trimming and captions. Play the explainer."
+          19,
+          "Cycle C: a total that recalculates",
+          "Tell: slides 8, 9 and 10. Show: chapter 4, then chapter 5; pause at 2:59, before the narrator gives the totals, and have learners write what B5 will show now and after paper becomes 15. Play to 3:12 to check, then stop; skip the 3:25 prompt, which comes after the answer. Type the formula live in Excel and say each key: equals, SUM, open bracket, B2, colon, B4, close bracket, Enter. Do: worksheet task 5, every learner, saved as an Excel workbook. Review: the slide 19 knowledge check; a partner reads the formula bar. Then Tell and Show only: slide 11 and chapter 6, with Insert \u203a Recommended Charts on the projector (optional for fast finishers)."
         ],
         [
-          30,
-          "Creation lab",
-          "Learners finish the workbook and three-slide presentation using worksheet requirements."
+          17,
+          "Cycle D: slides and a picture",
+          "Tell: slides 12, 13 and 16 (one theme, crop versus resize, credit the creator). Show: chapter 7, then live in PowerPoint: Blank Presentation, a theme on the Design tab, New Slide, Insert \u203a Pictures \u203a This Device, Picture Format \u203a Crop, and right-click \u203a View Alt Text. Do: worksheet tasks 6 and 7, every learner, with the practice photo. Review: a partner reads the alt text aloud without looking at the photo and checks the credit line."
+        ],
+        [
+          12,
+          "Cycle E: video edits and export",
+          "Tell and Show: slide 14 and chapter 8; every learner tries Trim and Remove a middle section on slide 14 and says what each removes (the Windows video editor needs an account, so we practice here). Tell: slides 17 and 18. Show: chapter 9, then in Word: File \u203a Save a Copy \u203a Browse \u203a PDF into Resource pack, and open the PDF from File Explorer. Do: worksheet task 8, every learner. Review: ask aloud which format suits a neighbor, a co-editor and a tool that needs rows."
         ],
         [
           10,
-          "Show and explain",
-          "Peer review for readability, accuracy, credit and appropriate file format. Use knowledge checks."
+          "Individual check",
+          "Play chapter 10 (pause at 6:28); partners try each other's PDF without help. Each learner shows you three things: both headings in the Navigation pane, B5 showing =SUM(B2:B4) and 28, and the PDF opened from Resource pack with a working link. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+        ],
+        [
+          8,
+          "Apply and close",
+          "Slides 22 and 23. Home task: on any computer, make one real notice with a heading and numbered steps, or a three-line list with a SUM total, and share one improvement at the start of week 4. Save or print the worksheet. Learners copy Resource pack to a flash drive if they want to keep it, then delete it; select Start fresh on this computer."
         ]
       ],
       "slides": [
@@ -662,7 +767,7 @@
         },
         {
           "title": "A document needs structure",
-          "body": "Use a descriptive title, real heading styles, short sections and a list of steps. Bold alone does not create a heading for assistive technology.",
+          "body": "Use a descriptive title, real heading styles, short sections and a numbered list of steps. Bold text only looks like a heading. Screen readers (software that reads the screen aloud) and Word's Navigation pane find real headings, not bold.",
           "kind": "teach",
           "refs": [
             "4.1"
@@ -670,7 +775,7 @@
         },
         {
           "title": "Keyboard shortcuts with a purpose",
-          "body": "Ctrl+C copies; Ctrl+V pastes; Ctrl+Z undoes; Ctrl+S saves. On a Mac, use Command. Practice selecting only the text you want to change.",
+          "body": "Ctrl+C copies; Ctrl+V pastes; Ctrl+Z undoes; Ctrl+S saves; Ctrl+K adds a link. Select only the text you want to change first. On a Mac at home, use Command instead of Ctrl.",
           "kind": "teach",
           "refs": [
             "4.1"
@@ -687,7 +792,7 @@
         },
         {
           "title": "Track a proposed change",
-          "body": "Turn on Track Changes or Suggesting in your editor. Make one edit. The reviewer accepts or rejects it; a comment can explain why.",
+          "body": "In Word, select Review \u203a Track Changes, then make one edit. It shows as a suggestion. The document's owner selects Accept or Reject; a comment can explain why. Google Docs calls this Suggesting.",
           "kind": "teach",
           "refs": [
             "4.1"
@@ -695,7 +800,7 @@
         },
         {
           "title": "Prepare a handout someone can read",
-          "body": "Use real headings, readable type and meaningful link text. Add useful alternative text to informative images. Do not rely on color alone.",
+          "body": "Use real headings, readable type and link text that names the destination. Give each informative picture alternative text (alt text): a short description that screen-reading software reads aloud. Right-click the picture and choose View Alt Text. Do not rely on color alone.",
           "kind": "teach",
           "refs": [
             "4.1",
@@ -712,7 +817,7 @@
         },
         {
           "title": "Build a fictional supply budget",
-          "body": "Enter Paper: 12, Folders: 8, Pens: 5 in a cost column. In a total cell, use =SUM(B2:B4). The expected total is 25.",
+          "body": "Open supplies.csv in Excel. Click B5 and type =SUM(B2:B4). The equals sign starts a formula, and the colon means through: B2 through B4. Press Enter. B5 shows 25.",
           "kind": "spreadsheet",
           "refs": [
             "4.1"
@@ -720,12 +825,12 @@
         },
         {
           "title": "Check the formula, not just the appearance",
-          "body": "Change the paper cost to 15. The total should become 28. If it does not, check the cell range and whether values were entered as text.",
+          "body": "Predict first: what will B5 show if paper costs 15? Then type 15 in B2 and press Enter. The total should become 28. If it stays at 25, check the range and whether a number was typed as text.",
           "kind": "try"
         },
         {
           "title": "A chart answers a question",
-          "body": "A bar chart can compare costs. Use a title and labels with units. Keep a readable data table so the numbers are available without interpreting color.",
+          "body": "A bar chart can compare costs. In Excel, select A1:B4, then Insert \u203a Recommended Charts. Give it a title with units, and keep the table so no one has to judge by color.",
           "kind": "teach",
           "refs": [
             "4.1"
@@ -733,7 +838,7 @@
         },
         {
           "title": "Three slides; one useful message",
-          "body": "Slide 1: the need. Slide 2: the steps. Slide 3: where to get help. Use one consistent theme and enough contrast for the room.",
+          "body": "Slide 1: the need. Slide 2: the steps. Slide 3: where to get help. Pick one theme on the Design tab so all three match, and keep text large enough for the back of the room.",
           "kind": "teach",
           "refs": [
             "4.1",
@@ -743,7 +848,7 @@
         },
         {
           "title": "Crop, resize, and preserve the original",
-          "body": "Crop removes outer areas. Resize changes dimensions. Save a copy before editing. Do not stretch an image or remove a creator\u2019s credit.",
+          "body": "Crop trims the outer edges. Resize changes the size. In PowerPoint, select the picture, then Picture Format \u203a Crop. To resize without stretching, hold Shift and drag a corner. The photo file on your computer does not change. Keep the creator's credit.",
           "kind": "teach",
           "refs": [
             "4.1"
@@ -751,7 +856,7 @@
         },
         {
           "title": "Basic video editing",
-          "body": "Trim an unwanted start or end. Split to remove a middle section. Arrange clips, balance speech volume and add accurate captions. Check the exported result.",
+          "body": "Trim removes unwanted material at the start or end. Split lets you remove a middle section. Keep speech clear and check that captions still match. The Windows video editor, Clipchamp, needs a Microsoft account, so practice on this slide.",
           "kind": "teach",
           "refs": [
             "4.1"
@@ -772,7 +877,7 @@
         },
         {
           "title": "Choose a format for the next person",
-          "body": "An editable document supports revision. PDF preserves a finished layout. CSV carries simple table data but loses formatting and formulas.",
+          "body": "An editable document supports revision. PDF keeps a finished layout. CSV keeps plain values only: saving a workbook as CSV drops its formulas and formatting.",
           "kind": "flip",
           "cards": [
             [
@@ -794,39 +899,40 @@
         },
         {
           "title": "Inspect the export",
-          "body": "Open the exported file. Check headings, page breaks, links and missing content. Verify the filename and folder. The export is a separate artifact to test.",
+          "body": "Open the PDF from its folder, not from Word. Check headings, page breaks, links and missing content. Check the file name and folder. The PDF is a separate file, so test it on its own.",
           "kind": "teach",
           "refs": [
+            "4.2",
             "4.4"
           ]
         },
         {
           "title": "Knowledge check: a changing total",
-          "body": "Which formula adds values from B2 through B4?",
+          "body": "Which formula adds the values in B2, B3 and B4?",
           "kind": "check",
           "options": [
+            "=SUM(B2,B4)",
             "=SUM(B2:B4)",
-            "=B2+B4",
-            "=SUM(A1:A2)"
+            "SUM(B2:B4)"
           ],
-          "answer": 0,
-          "why": "B2:B4 includes B2, B3 and B4. Check by changing one input."
+          "answer": 1,
+          "why": "The equals sign starts a formula, and the colon means through, so B2:B4 adds B2, B3 and B4. A comma adds only the cells it lists. Without the equals sign, Excel treats it as text."
         },
         {
           "title": "Knowledge check: a proposed edit",
-          "body": "You want the owner to decide whether to keep your wording. What should you use?",
+          "body": "You want to reword one step in a partner's handout and let the owner keep or undo your wording with one click. What should you use?",
           "kind": "check",
           "options": [
-            "Delete their document",
-            "Track Changes or Suggesting",
-            "Make a screenshot"
+            "Type over the step",
+            "Turn on Track Changes",
+            "Email a changed copy"
           ],
           "answer": 1,
-          "why": "Tracked or suggested edits preserve the review decision for the owner."
+          "why": "Track Changes shows your edit as a suggestion, and the owner selects Accept or Reject. Typing over hides what changed; a changed copy makes the owner compare by eye."
         },
         {
           "title": "Lab: your resource pack",
-          "body": "Create a handout, a checked workbook and a three-slide explanation. Use the supplied original image or an appropriately licensed alternative.",
+          "body": "Open the worksheet now and keep it open. Do each task right after its demonstration. Save every file in your Resource pack folder in Documents.",
           "kind": "lab"
         },
         {
@@ -836,24 +942,90 @@
         }
       ],
       "lab": [
-        "Identify the audience and action for a fictional computer-help handout.",
-        "Create a document with a title, two heading styles, a short paragraph, a numbered list and a meaningful link.",
-        "Use copy, paste and undo; record one place a shortcut helped.",
-        "Suggest or track one partner edit, then accept or reject it with a reason.",
-        "Open supplies.csv in a spreadsheet. Add =SUM(B2:B4); verify 25, then change paper to 15 and verify 28.",
-        "Build three slides: need, steps, help. Use one theme, readable type, useful image alt text and a data table or labeled chart.",
-        "Crop a copy of the supplied original image. Describe trimming, splitting and captions for a short video. Record any source and license.",
-        "Export the handout to PDF and reopen it. Record two checks, and explain when editable format or CSV would be better."
+        "Who will read a computer-help handout, and what should they do after reading it? Write one sentence that names the reader and the next action.",
+        "In Word, open a blank document and type these lines, one per line: Computer help at the library / Who it helps / Anyone who wants to practice one computer task. / Steps / Choose one task. / Visit the learning desk. / Ask how to repeat it at home. Make the first line Heading 1, and Who it helps and Steps Heading 2 (Home \u203a Styles). Select the three steps and choose Home \u203a Numbering. Open View \u203a Navigation Pane and check that both headings are listed.",
+        "Add a last line: Read the computer-help guide. Select it, press Ctrl and K, type https://example.org/help in the Address box and select OK. Select the words learning desk, press Ctrl and C, click at the end of the last line, press Ctrl and V, then Ctrl and Z to undo. Save the file as resource-handout in your Resource pack folder. Record the shortcut that helped most.",
+        "Swap seats with your partner. In their handout, select Review \u203a Track Changes and change one word to make a step clearer. Swap back. Find your partner's change, select Review \u203a Accept or Reject, and write your reason.",
+        "Download supplies.csv (button below) and open it in Excel. Type Total in A5. Click B5, type =SUM(B2:B4) and press Enter; B5 should show 25. Before you change anything, write what B5 will show if paper costs 15. Click B2, type 15 and press Enter, then check B5. Save with File \u203a Save As as an Excel Workbook named supplies in your Resource pack folder.",
+        "In PowerPoint, choose Blank Presentation and pick one theme on the Design tab. Make three slides titled Need computer help? / Steps / Where to get help. Paste the three steps from your handout on slide 2, and type Visit the learning desk on slide 3. Check the words can be read from the back of the room. Save as resource-slides in your Resource pack folder.",
+        "Download the practice photo (button below). On slide 1, choose Insert \u203a Pictures \u203a This Device and insert it. Select Picture Format \u203a Crop, drag the black handles in so the two people and the handout fill the picture, and press Esc. Right-click the photo, choose View Alt Text, and write one sentence about what it shows. Type this credit in the subtitle box: Photo: VUB practice photo, used with permission. Save.",
+        "In Word, save the handout as a PDF: File \u203a Save a Copy (or Save As) \u203a Browse, open Resource pack, set Save as type to PDF and select Save. Open Resource pack in File Explorer and double-click the PDF. Check the headings, numbered steps and link. Write which format fits a neighbor who only reads it, a partner who must edit it, and a tool that needs plain rows."
       ],
       "answers": [
-        "A specific neighbor/audience and a clear next action.",
-        "Semantic heading styles, concise task-focused copy and descriptive link.",
-        "Demonstrates selection and successful undo without losing work.",
-        "Revision remains reviewable; accepts/rejects deliberately.",
-        "Correct range, numeric cells and recalculated 28.",
-        "One message per slide, consistent theme, non-color cues and useful text alternatives.",
-        "Original preserved; crop differs from resize; trim removes edges, split isolates middle, captions convey speech.",
-        "Checks content/links/layout; editable supports revision, CSV carries plain data."
+        "Names a specific reader (for example, a neighbor who wants computer help) and one next action (for example, visit the learning desk).",
+        "The first line uses Heading 1, and Who it helps and Steps use Heading 2, not bold; the three steps are numbered; both headings appear in the Navigation pane.",
+        "The link text names the destination and the link opens; paste and undo worked with no lost text; resource-handout is in the Resource pack folder; one useful shortcut is named.",
+        "The edit appeared as a tracked change before the owner selected Accept or Reject; the reason names what the reader needs. Only the owner makes the final choice.",
+        "B5 shows =SUM(B2:B4) in the formula bar and 25; a written prediction came before the change; B5 shows 28 after B2 becomes 15; saved as supplies.xlsx. Saving as CSV would keep the number but drop the formula.",
+        "Three slides in the order need, steps, help; one theme on all three; text readable from the back of the room; the steps match the handout.",
+        "The photo is cropped in PowerPoint and the photo file itself is unchanged; the alt text says in one sentence what the photo shows; the credit line names the source and the permission.",
+        "The PDF is in Resource pack and opens; the checks name headings, steps and a working link; a reader gets the PDF, an editor the Word document, and a tool that needs rows gets CSV."
+      ],
+      "lab_paths": [
+        [
+          "Make the Resource pack folder",
+          "Open File Explorer and go to Documents. Select New \u203a Folder, type Resource pack and press Enter."
+        ],
+        [
+          "Save a file into Resource pack",
+          "File \u203a Save As \u203a Browse. Open Documents \u203a Resource pack, type the file name and select Save. After that, Ctrl and S saves your changes."
+        ],
+        [
+          "Apply a heading and check it",
+          "Select the line, then on the Home tab choose Heading 1 or Heading 2 in the Styles gallery. To check, select View \u203a Navigation Pane (or press Ctrl and F) and look under Headings."
+        ],
+        [
+          "Make a numbered list",
+          "Select the lines, then select Home \u203a Numbering."
+        ],
+        [
+          "Add a link",
+          "Select the link text and press Ctrl and K (or Insert \u203a Link). Type the web address in the Address box and select OK."
+        ],
+        [
+          "Copy, paste and undo",
+          "Select the words. Ctrl and C copies, Ctrl and V pastes, and Ctrl and Z undoes the last change."
+        ],
+        [
+          "Track a change, then decide",
+          "Review \u203a Track Changes (or Ctrl and Shift and E), then make your edit. To decide, select the change and choose Review \u203a Accept or Reject."
+        ],
+        [
+          "Open supplies.csv in Excel",
+          "In Edge, press Ctrl and J and select Open file under supplies.csv. Or in Excel: File \u203a Open \u203a Browse \u203a Downloads, choose Text Files in the file-type list, and double-click supplies.csv."
+        ],
+        [
+          "Add a total with SUM",
+          "Click B5. Type =SUM(B2:B4) and press Enter. Start with the equals sign, and type a colon between B2 and B4."
+        ],
+        [
+          "Keep the formula when you save",
+          "File \u203a Save As \u203a Browse. In Save as type, choose Excel Workbook (*.xlsx), then select Save. Saving as CSV keeps only the values."
+        ],
+        [
+          "Start slides with one theme",
+          "Open PowerPoint and select Blank Presentation. On the Design tab, select a theme. Home \u203a New Slide adds a slide."
+        ],
+        [
+          "Insert and crop a picture",
+          "Insert \u203a Pictures \u203a This Device, choose the photo and select Insert. Select Picture Format \u203a Crop, drag the black handles inward, then press Esc."
+        ],
+        [
+          "Add alt text",
+          "Right-click the picture and choose View Alt Text (or Picture Format \u203a Alt Text). Type one or two sentences that say what the picture shows."
+        ],
+        [
+          "Save the handout as a PDF",
+          "In Word, File \u203a Save a Copy (or Save As) \u203a Browse. Open Resource pack, set Save as type to PDF and select Save. Double-click the PDF in File Explorer to open it."
+        ]
+      ],
+      "prep": "Each station: Microsoft Word, Excel and PowerPoint that open without a sign-in, Microsoft Edge, headphones, and this lesson and worksheet. Before class, check that Word and Excel can save to Documents on This PC, not only OneDrive, and that Edge can download supplies.csv and the practice photo from the worksheet; if downloads are blocked, copy both files into Documents on each station. No account is needed: the tracked edit is done by swapping seats, and video editing is practiced on slide 14 because Clipchamp needs a Microsoft account. Nothing needs printing; learners may print the worksheet. At the front: Word, Excel and PowerPoint ready on the projector. Play video chapters 2 and 5 with captions to check sound, and practice the pause at 2:59. Keep a roster for the individual check. If this class falls on a federal holiday, confirm the building and lab are open. After your own run-through, delete your Resource pack folder and downloads, then select Start fresh on this computer at each station.",
+      "outcomes": [
+        "Handout: in Word at a lab workstation, each learner types the given handout lines, applies Heading 1 and Heading 2 styles, makes the steps a numbered list, and confirms that both headings appear in the Navigation pane. All correct with no more than one prompt, and no heading made with bold alone.",
+        "Editing and review: in their own handout, each learner adds a link whose text names the destination (Ctrl and K), copies, pastes and undoes one phrase, and saves the file in the Resource pack folder; then, at a partner's seat, turns on Track Changes and makes one edit, and back at their own seat accepts or rejects the partner's edit with a stated reason.",
+        "Workbook: given supplies.csv in Excel, each learner types =SUM(B2:B4) in B5 and presses Enter, confirms 25, writes a prediction before changing paper to 15, confirms 28, and saves the file as an Excel workbook so the formula is kept. All steps correct with no more than one prompt.",
+        "Slides and media: in PowerPoint, each learner builds three slides (need, steps, help) with one theme, inserts the practice photo, crops it without changing the photo file, adds alt text that says what the photo shows and a credit line, and says in one sentence what trimming and splitting remove from a video clip.",
+        "Export: each learner saves the handout as a PDF in the Resource pack folder, opens it from File Explorer, checks the headings, numbered steps and link, and names the right format for a reader (PDF), a co-editor (Word document) and a tool that needs plain rows (CSV)."
       ]
     },
     {
@@ -861,9 +1033,11 @@
       "title": "Communicate and collaborate with care",
       "summary": "Choose the right channel, give useful feedback, and make safe online choices.",
       "objectives": [
-        "Choose a communication channel and write a clear email.",
-        "Collaborate using comments, coauthoring and version history.",
-        "Explain online purchases, subscriptions and digital identities."
+        "Choose a channel and an account that fit the message.",
+        "Write a clear email and choose who receives it.",
+        "Give, answer and resolve feedback on one shared copy.",
+        "Take part in an online meeting or community with care.",
+        "Check a purchase, subscription or payment before you agree."
       ],
       "refs": [
         "2.1",
@@ -877,38 +1051,53 @@
       "agenda": [
         [
           10,
-          "Reconnect",
-          "Share one improvement from the resource-pack review."
+          "Warm-up: reconnect",
+          "Logins; show text size and lesson navigation. Reconnect: two or three learners share last week\u2019s home task. Recall from Level 1 week 3: what is the difference between Reply, Reply all and Forward, and has a Reply all ever gone wrong for you? Recall from week 2: which access lets a partner suggest wording without changing it (Commenter)? Learners click through the slide 1 feedback practice."
         ],
         [
-          20,
-          "Communication model",
-          "Demonstrate audience, timing, identity, email fields and channel choice."
+          5,
+          "Introduction",
+          "Read the five goals on slide 1 aloud. Play chapter 1. Ask each pair to name one group task they have helped organize (a family gathering, a post or club event, a volunteer shift) and one thing that went wrong with the messages. Write two answers on the board; each cycle comes back to them."
         ],
         [
-          20,
-          "Message lab",
-          "Pairs draft a fictional request and revise for clarity and inclusive language."
+          18,
+          "Cycle A: channel, account and a clear email",
+          "Tell: slides 2, 3 and 4; on slide 3, say what a password manager and multifactor authentication are. Show: chapter 2, pausing at 1:29 so pairs choose a channel before the narrator answers; then chapter 3 and the slide 4 practice draft, reading each field aloud. Do: worksheet tasks 1 and 2, every learner at their own seat; the email is a practice draft typed in the worksheet box, and nothing is sent. Review: a partner reads the draft as the recipient and says what they would do and by when; if they cannot, the writer fixes the request."
+        ],
+        [
+          12,
+          "Cycle B: recipients, timing and respectful wording",
+          "Tell: slides 5, 6 and 7. Show: chapter 4 (screen demo), pausing at 2:54 to ask which recipients to remove before the demo removes them; read the next line aloud. Use the slide 5 and 6 practice views, and rewrite \u201cPls RSVP ASAP\u201d aloud as a model. If you have a demonstration account, show Cc, Bcc and Schedule send in Outlook.com on the projector; otherwise say the slides are simulated. Do: worksheet tasks 3 and 4, every learner. Review: ask aloud who receives Sam\u2019s Reply all (you and Alex, not the Bcc list) and check each learner\u2019s To, Cc and Bcc lines."
         ],
         [
           10,
           "Break",
-          "Pause away from screens."
+          "Offer a screen-free pause."
         ],
         [
-          20,
-          "Collaboration and commerce",
-          "Demonstrate coauthoring, comments, meeting controls and purchase review; play the explainer."
+          18,
+          "Cycle C: one shared copy and useful feedback",
+          "Tell: slides 10, 11, 12 and 13 (Word with OneDrive and Google Docs are common shared-file tools; version history needs a file saved online). Show: chapter 5, then chapter 6 (pause at 4:22), then live in Word: type the two-step handout, select step 2, Review \u203a New Comment, reply, make the change and resolve it. Do: worksheet task 5 as a pair decision, then task 6 in Word, every learner: swap seats to comment on a partner\u2019s handout, swap back to reply and resolve. Review: the slide 19 knowledge check; the partner confirms the comment names the place, the change and the reason."
         ],
         [
-          30,
-          "Team lab",
-          "Complete the shared-document role play and fictional subscription comparison. Switch roles."
+          12,
+          "Cycle D: meetings, webinars and communities",
+          "Tell: slide 14, then use the sidebar to jump back to slides 8 and 9. Show: chapter 7 and chapter 8; then test a headset microphone live in Start \u203a Settings \u203a System \u203a Sound. Do: worksheet task 7, every learner: use the slide 14 practice meeting, test the headset microphone if it has one, and write the habits. Review: ask aloud how to ask a question in a webinar where the host has muted everyone (Q&A or chat); check that each list includes asking before recording."
         ],
         [
-          10,
-          "Check and reflect",
-          "Use knowledge checks and ask each learner to describe one helpful feedback habit."
+          15,
+          "Cycle E: purchases, subscriptions and payments",
+          "Tell: slides 16, 17 and 18 (name the streaming examples; explain credit card, digital wallet and person-to-person app). Show: chapter 9, pausing at 6:35 to ask which missing fact would stop you, then the slide 17 practice checkout. Do: worksheet task 8, every learner, with paper or the Windows Calculator. Review: the slide 20 knowledge check; ask aloud what to do if a caller says to send $300 by Zelle today to keep your benefits (hang up and call the agency at a number you already know)."
+        ],
+        [
+          12,
+          "Individual check",
+          "Play chapter 10 if time allows. Using slide 21, each learner shows you three things: the To, Cc and Bcc lines from task 3 and who a Reply all reaches, the answered and resolved comment in Word, and the one-year cost of offer A with a payment choice and reason. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+        ],
+        [
+          8,
+          "Apply and close",
+          "Slides 22 and 23. Home task: before week 5, find one subscription or regular charge you pay (a card statement or a phone\u2019s app store), write down when it renews and how to cancel it, and share one fact at the start of week 5. No amounts or account numbers are needed. Close Word without saving, restore lab settings, then select Start fresh on this computer."
         ]
       ],
       "slides": [
@@ -922,7 +1111,7 @@
         },
         {
           "title": "Personal and professional identities",
-          "body": "Use the account and tone appropriate to the role. Check the active account before posting. Separate credentials; use a trusted password manager and multifactor authentication where available.",
+          "body": "Use the account and tone that fit your role, and check which account is active before you post or send. Use a different password for each account. A password manager is an app that stores them safely. Multifactor authentication (MFA) adds a second check, such as a text code.",
           "kind": "teach",
           "refs": [
             "2.1"
@@ -938,7 +1127,7 @@
         },
         {
           "title": "To, Cc, and Bcc",
-          "body": "To names the main recipient. Cc keeps others visibly informed. Bcc hides that recipient list from other recipients; it does not encrypt the message.",
+          "body": "To names the person who should act. Cc sends a copy that everyone can see. Bcc hides those addresses from the others; it does not encrypt the message or stop forwarding. Reply all goes to the sender and everyone in To and Cc, so check who needs your answer.",
           "kind": "teach",
           "refs": [
             "5.1"
@@ -946,7 +1135,7 @@
         },
         {
           "title": "Timing changes how a message lands",
-          "body": "Check urgency and working hours. State when a response is needed. Scheduled send can help, but verify its settings and your wording first.",
+          "body": "Say when you need a reply, and consider urgency and the reader\u2019s working hours. Scheduled send lets you write now and choose when the message goes out, such as 9 a.m. tomorrow. It will not fix unclear wording, so check the message and the time first.",
           "kind": "teach",
           "refs": [
             "2.2"
@@ -979,7 +1168,7 @@
         },
         {
           "title": "Collaborate on one shared copy",
-          "body": "Assign an owner, writer and reviewer. Agree on where the file lives and what finished means. Clear roles reduce conflicting edits.",
+          "body": "Working together lets each person add what they know and catch mistakes. Assign an owner, writer and reviewer. Agree where the one shared file lives, such as OneDrive or Google Drive, and what finished means. Clear roles reduce conflicting edits.",
           "kind": "teach",
           "refs": [
             "6.1"
@@ -992,11 +1181,11 @@
           "cards": [
             [
               "Write together during class",
-              "Synchronous coauthoring: coordinate who edits which section."
+              "Synchronous coauthoring in one shared Word or Google Docs file: agree who edits which section."
             ],
             [
               "Review after class",
-              "Asynchronous comments: include enough context for the writer."
+              "Asynchronous comments in the same file, or an email: include enough context for the writer."
             ]
           ],
           "refs": [
@@ -1014,7 +1203,7 @@
         },
         {
           "title": "Acknowledge and resolve",
-          "body": "Read a comment, ask if unclear, make or decline the change with a reason, then resolve it. Use version history if a useful edit is lost.",
+          "body": "Read a comment, ask if unclear, make or decline the change with a reason, then resolve it. A resolved comment is hidden, not deleted. For a file saved online, such as in OneDrive, version history can bring back a lost edit.",
           "kind": "teach",
           "refs": [
             "6.1"
@@ -1022,7 +1211,7 @@
         },
         {
           "title": "Meetings and webinars",
-          "body": "Test sound. Mute when not speaking. Use raise-hand or chat as directed. Ask before recording. A webinar usually gives hosts more control than a small meeting.",
+          "body": "Test sound before you join. Mute when not speaking. Use raise hand or chat as the host asks, and turn on captions if they help. Ask before recording. In a webinar the host controls who can speak, so ask questions in Q&A or chat.",
           "kind": "teach",
           "refs": [
             "6.2"
@@ -1035,7 +1224,7 @@
         },
         {
           "title": "Goods, services, and subscriptions",
-          "body": "Goods are products; services provide work or access. Streaming delivers media over a connection. A subscription can renew until canceled.",
+          "body": "Goods are products; services provide work or access. Streaming plays video or music over the internet as you watch or listen: Netflix, YouTube and Spotify are examples, and hoopla is free with a West Virginia library card. A subscription can keep renewing until you cancel it.",
           "kind": "teach",
           "refs": [
             "5.2"
@@ -1043,7 +1232,7 @@
         },
         {
           "title": "Review a digital payment",
-          "body": "A payment service sends an authorized payment request. Check seller, total, recurring terms, delivery and refund information. A familiar logo alone does not verify a seller.",
+          "body": "Know how you pay. A credit card lets you dispute a wrong charge. A digital wallet, such as Apple Pay or Google Pay, pays with a card you saved. Money sent with Zelle, Venmo or Cash App is hard to get back, so pay only people you know. Check the seller, total and refund terms first.",
           "kind": "teach",
           "refs": [
             "5.2"
@@ -1051,7 +1240,7 @@
         },
         {
           "title": "Small in-app purchases add up",
-          "body": "A download may be free while features cost money. Review purchase controls and receipts. Do not authorize a real purchase during this activity.",
+          "body": "A free app may sell extras, and a saved card makes each one a single tap. Turn on a password or approval for purchases, and check your receipts. Deleting an app does not cancel its subscription. Do not buy anything during this activity.",
           "kind": "teach",
           "refs": [
             "5.2"
@@ -1062,28 +1251,28 @@
           "body": "Which comment best supports revision?",
           "kind": "check",
           "options": [
-            "This is bad.",
-            "I dislike everything.",
-            "Add the contact number after the steps so readers can find help."
+            "Nice work! The handout looks good to me as it is.",
+            "In step 2, name the room so readers know where to go.",
+            "Step 2 is confusing and needs to be much clearer."
           ],
-          "answer": 2,
-          "why": "It identifies a specific change and explains its value to readers."
+          "answer": 1,
+          "why": "It names the place (step 2), the change (name the room) and the reason (readers can find it). Praise alone or a vague complaint gives the writer nothing to act on."
         },
         {
           "title": "Knowledge check: a trial offer",
           "body": "Before starting a free trial, what should you check?",
           "kind": "check",
           "options": [
-            "Renewal price, renewal timing and cancellation terms",
-            "Only the button color",
-            "Whether the site has animations"
+            "Only that the first seven days cost nothing",
+            "The renewal price, renewal date and how to cancel",
+            "That deleting the app later will stop the charges"
           ],
-          "answer": 0,
-          "why": "The full terms determine whether the trial becomes a recurring charge."
+          "answer": 1,
+          "why": "A free trial usually becomes a paid plan unless you cancel the way the seller says. Deleting the app does not cancel the subscription."
         },
         {
           "title": "Lab: coordinate a small team",
-          "body": "Draft a fictional message, review a partner\u2019s document and compare the supplied fictional offers.",
+          "body": "Show your instructor three things: your To, Cc and Bcc choices, a comment you answered and resolved, and your offer comparison with a way to pay.",
           "kind": "lab"
         },
         {
@@ -1093,24 +1282,82 @@
         }
       ],
       "lab": [
-        "Choose a channel for a detailed nonurgent request and for an urgent lab problem. Explain the difference.",
-        "Draft an email to a fictional library helper: subject, request, context and close. Do not send it.",
-        "Explain To, Cc and Bcc. Choose an appropriate time and account for your message.",
-        "Revise one sentence to remove an assumption or unexplained abbreviation.",
-        "Assign owner, writer and reviewer roles. Choose live coauthoring or later comments and justify access.",
-        "Write a specific comment on the resource handout. Respond, revise and record the decision.",
-        "List four meeting or webinar habits, including recording consent.",
-        "Compare fictional offer A: $5 monthly, cancel before renewal; offer B: $48 yearly, renews annually. Calculate one year of A ($60) and list questions before authorizing either."
+        "Choose a channel for each message and explain the difference: (a) a detailed request that your partner can answer tomorrow; (b) an urgent problem in this room right now.",
+        "In the box below, write a practice email to a fictional helper, Alex, asking for comments on the computer-help handout. Include To, a specific subject, a greeting, one clear request, when you need a reply, and a courteous close. Nothing is sent.",
+        "You are sending a notice about a fictional Saturday computer-help session. Alex runs the session, Sam organizes it and should see the notice, and 20 volunteers should not see one another\u2019s addresses. Write who goes in To, Cc and Bcc. If Sam clicks Reply all, who receives it? Choose a time to schedule the notice, and say whether it should come from your personal account or the volunteer group\u2019s account.",
+        "Rewrite this message so anyone can follow it: \u201cPls turn on MFA ASAP. Even older folks can manage it.\u201d Spell out each abbreviation, give a clear time, and remove the assumption about age.",
+        "With your partner, choose who is owner, writer and reviewer for the handout. Say where the one shared copy would live and what access each person needs (viewer, commenter or editor). Would you edit together now (synchronous) or leave comments for later (asynchronous)? Explain why. This is a decision; no file is shared.",
+        "In Word, type the title \u201cHow to get computer help\u201d and two steps: 1. Choose a task. 2. Visit the learning desk. Swap seats: on your partner\u2019s handout, select one step, choose Review, then New Comment, and write a comment that names the place, the change and the reason. Swap back: reply to the comment on your handout, make or decline the change, then resolve it. Record your comment and your decision here. Leave Word open for the final check.",
+        "Open slide 14. In the practice meeting, unmute, raise your hand, lower it, then mute again. If your headset has a microphone, test it (see the quick card row Test your headset microphone). Then list four meeting or webinar habits, including asking before recording, and one detail you would confirm with the organization itself before trusting a community post.",
+        "Compare two fictional offers for a streaming TV service. Offer A: $5 a month, cancel any time before it renews. Offer B: $48 a year, paid now, renews every year. What does A cost for 12 months? For 3 months? Write two questions to ask before paying. Which would you use to pay a website you have not used before: a credit card, a debit card, a digital wallet or a person-to-person app such as Zelle? Explain why. Do not open a real store."
       ],
       "answers": [
-        "Email for detailed nonurgent context; direct instructor conversation for urgent local issue.",
-        "Specific subject, clear request, sufficient context, correct recipient and courteous close.",
-        "To primary; Cc visible others; Bcc concealed recipient list, not encryption. Work hours/urgency and right identity.",
-        "Respectful specific language with no age/culture/ability assumptions.",
-        "Roles and permission fit; synchronous together or asynchronous across time.",
-        "Specific change plus reason; reviewer decision recorded.",
-        "Audio test, mute/raise hand, useful chat, consent before recording.",
-        "$60 versus $48 nominal year; also compare needs, features, refunds, renewal and cancellation. No real transaction."
+        "(a) A written message, such as email, with the details and a link to the shared handout, so the partner can answer later. (b) Tell the instructor in person now, because it is urgent and here. A phone call or text suits an urgent problem outside the room.",
+        "To: Alex. A subject that names the task (for example, Please review the computer-help handout); a greeting; one clear request; a reply-by time (for example, by Thursday at 3 p.m.); a courteous close. A partner reading it can say what to do and by when. The worksheet draft counts as a simulated email.",
+        "To: Alex. Cc: Sam. Bcc: the 20 volunteers, so their addresses stay hidden. Sam\u2019s Reply all goes to you and Alex only; Bcc recipients do not receive a Reply all. Schedule it for working hours, such as 9 a.m. on a weekday. Send it from the volunteer group\u2019s account. Bcc does not encrypt the message or stop forwarding.",
+        "For example: \u201cPlease turn on multifactor authentication (MFA), a second sign-in check such as a text code, by Friday. I am happy to help if you would like.\u201d Both abbreviations are spelled out or removed, a clear time replaces ASAP, and nothing assumes age or ability.",
+        "Owner coordinates and sets access (editor); writer edits (editor); reviewer comments (commenter). One agreed copy, for example in OneDrive or Google Drive. Synchronous when everyone can work at the same time; asynchronous comments when schedules differ. A decision with a reason is enough; real sharing needs an account.",
+        "The comment names a place, a change and a reason (for example, In step 2, add the desk\u2019s opening hours so readers know when to go). The writer replies, makes or declines the change with a reason, and resolves the comment only after that. The comment shows the station\u2019s Word user name, not the reviewer\u2019s.",
+        "The practice meeting is used correctly, and the microphone test shows sound if the headset has a microphone. Habits: test sound first, mute when not speaking, use raise hand, chat or Q&A as the host asks, turn on captions if helpful, ask before recording. In a webinar, attendees usually cannot unmute. Community check: hours, eligibility or cost, confirmed through the organization\u2019s official website or phone number.",
+        "A: $60 for 12 months and $15 for 3 months. B: $48 whether you keep it 3 or 12 months, so B is cheaper only if you keep it 10 months or more. Questions: when does it renew and at what price, how do I cancel, are there refunds, what is included, who is the seller? Payment: a credit card, or a digital wallet that uses one, because a wrong or unauthorized charge can be disputed. A person-to-person app is for people you know; money sent is hard to get back. No real purchase or payment details."
+      ],
+      "lab_paths": [
+        [
+          "Check which account you are using",
+          "In Edge, select your profile picture at the top of the window. The menu shows the name and email of the account that is signed in. Select Manage profile settings to see more."
+        ],
+        [
+          "Add Cc or Bcc to an email",
+          "Outlook.com: in a new message, select Cc or Bcc on the right side of the To line. New Outlook app: Options \u203a Show fields \u203a Show Bcc. Gmail: in a new message, select Cc or Bcc on the To line."
+        ],
+        [
+          "Reply or Reply all",
+          "Reply goes only to the sender. Reply all goes to the sender and everyone on the To and Cc lines, never to Bcc. Check the list before you select Send."
+        ],
+        [
+          "Schedule an email",
+          "Outlook.com or new Outlook: select the arrow next to Send, then Schedule send, and pick a time. Gmail: select the arrow next to Send, then Schedule send. Check the time zone."
+        ],
+        [
+          "Add a comment in Word",
+          "Select the words, then Review \u203a New Comment (or press Ctrl, Alt and M). Type your comment. If you see a Post button, select it (or press Ctrl and Enter)."
+        ],
+        [
+          "Reply to and resolve a comment in Word",
+          "Select the comment and type in its Reply box, then post it. When the change is made, select More thread actions (\u00b7\u00b7\u00b7) \u203a Resolve thread. If the comment shows a Resolve button instead, select it."
+        ],
+        [
+          "Share a Word file to write together (needs OneDrive)",
+          "Select Share at the top right, above the ribbon. Save the file to OneDrive if asked, enter the person\u2019s email, choose whether they can edit or only view, then select Send. Lab computers have no OneDrive account."
+        ],
+        [
+          "See earlier versions of a Word file",
+          "Only for files saved in OneDrive or SharePoint. Microsoft 365: select the file name at the top of the window, then Version history. Word 2021 and earlier: File \u203a History."
+        ],
+        [
+          "Test your headset microphone",
+          "Start \u203a Settings \u203a System \u203a Sound. Under Input, choose the headset, then select the arrow at the right of its name. Select Start test and speak, then Stop test."
+        ],
+        [
+          "Mute and raise your hand in a meeting",
+          "Microsoft Teams: Ctrl, Shift and M mutes or unmutes; Ctrl, Shift and K raises or lowers your hand. Zoom: Alt and A mutes or unmutes; Alt and Y raises or lowers your hand."
+        ],
+        [
+          "Turn on meeting captions",
+          "Microsoft Teams: More (\u00b7\u00b7\u00b7) \u203a Language and speech \u203a Show live captions. Zoom: select Show captions on the toolbar, or More \u203a Show captions. The host can turn captions off."
+        ],
+        [
+          "Cancel a subscription",
+          "Microsoft: in Edge go to account.microsoft.com/services, sign in, select Manage next to the subscription, then Cancel. Google Play: go to play.google.com/store/account/subscriptions, select Manage, then Cancel subscription. Deleting an app does not cancel it."
+        ]
+      ],
+      "prep": "Each station: Microsoft Edge, Microsoft Word, a headset (with a microphone if you have them), this lesson and worksheet, and scrap paper or the Windows Calculator for task 8. At the front: the projector showing Edge and Word, and a board for the warm-up answers. Learners have no email, meeting or cloud account, so the email in tasks 2 and 3 is a practice draft in the worksheet, the comments in task 6 happen in a local Word document by swapping seats, and slide 14 stands in for a real meeting; mark this evidence simulated. Show Cc, Bcc, Schedule send, sharing a Word file or version history live only from a demonstration account, never your personal inbox; otherwise use the practice views on slides 4, 5, 6, 11, 13 and 14. No purchase, payment detail or real store page is used. Before class, open a blank Word document and check that Review \u203a New Comment, Reply and Resolve work. Play chapters 2, 4 and 6 with captions to check sound and rehearse the pauses at 1:29 and 2:54. Keep 3\u20135 printed worksheets in case the network fails. After your own run-through, close Word without saving and select Start fresh on this computer at each station.",
+      "outcomes": [
+        "Channel and account: given two fictional messages (a detailed request a partner can answer tomorrow and an urgent problem in the room), each learner chooses a suitable channel for each and explains why, and names the account a volunteer notice should come from. Both choices fit the urgency and the audience.",
+        "Email: in the worksheet, each learner writes a practice email with a specific subject, one clear request, a reply-by time and a courteous close; places three fictional recipients correctly in To, Cc and Bcc and says who a Reply all reaches; and rewrites a sentence to spell out abbreviations and remove an assumption about age. All parts are correct with no more than one prompt, and nothing is sent.",
+        "Feedback: in a practice handout in Word, each learner adds a comment to a partner\u2019s handout that names the place, the change and the reason, then replies to the comment on their own handout, makes or declines the change with a reason, and resolves it. Each learner also chooses live coauthoring or later comments for a given schedule and names the access each role needs.",
+        "Meetings and communities: using the slide 14 practice meeting, each learner unmutes, raises and lowers a hand and mutes again, tests a headset microphone in Windows Settings when one is available, and lists four meeting or webinar habits, including asking before recording, plus one detail to confirm with an organization before trusting a community post.",
+        "Purchases and payments: given two fictional streaming offers, each learner works out what each costs for 12 months and for 3 months, writes two questions to ask before paying, and chooses a way to pay a new website with a reason, explaining why person-to-person apps are only for people they know. The arithmetic is correct and the reason matches the payment protections taught."
       ]
     },
     {
@@ -1118,9 +1365,10 @@
       "title": "Protect your work and show your skills",
       "summary": "Practice safe decisions, complete a skills challenge, and measure your growth.",
       "objectives": [
-        "Explain device, file and account protections.",
-        "Recognize manipulation and choose a safe next step.",
-        "Demonstrate core tasks and complete the parallel post-test."
+        "Set up your computer so it is comfortable and easy to use.",
+        "Spot a scam or a fake identity and check it a safer way.",
+        "Protect your devices and files with updates, permissions, locking and passwords.",
+        "Show five skills from this course, then take the post-test."
       ],
       "refs": [
         "7.1",
@@ -1132,39 +1380,54 @@
       ],
       "agenda": [
         [
-          10,
-          "Retrieve and preview",
-          "Ask learners to name a source check, a file permission and a useful feedback habit."
+          6,
+          "Warm-up and reconnect",
+          "Reconnect: two or three learners share last week\u2019s home task. Recall from earlier weeks: what does two-step verification add to a password (week 4), and does read-only keep a file secret (week 2)? Pairs share slide 2: one habit that protects their work and one that makes the computer comfortable. Ask who has had an urgent text or email demanding action, without sharing private details."
         ],
         [
-          20,
-          "Safety model",
-          "Teach ergonomics, universal design, manipulation, encryption, unknown media and camera permissions."
+          3,
+          "Introduction: pause, inspect, verify",
+          "Read the four goals on slide 1 aloud and say how the day runs: safety habits first, then the skills challenge and the post-test. Play chapter 1: pause, inspect the evidence, verify independently. This routine is the Review question for every cycle."
         ],
         [
-          15,
-          "Scenario practice",
-          "Use the flip cards and explainer. Learners state the evidence and safest next step."
+          8,
+          "Cycle A: comfort, access and attention",
+          "Tell: slides 3, 4 and 5 (screen about an arm\u2019s length away with the top at or slightly below eye level; universal design; FOMO). Show: chapter 2, pausing at 1:23 so each learner picks one control; then on the projector, Magnifier (Windows logo key and +, close with Windows logo key and Esc) and the Notifications page in Settings. Do: worksheet tasks 1 and 2, every learner at their own seat. Review: a partner says what changed and why it helps; settings are put back."
+        ],
+        [
+          14,
+          "Cycle B: scams and fake identities",
+          "Tell: slide 8 (phishing is a fake message pretending to be a trusted organization), then slides 6 and 7. Show: chapter 3, then chapter 4; pause at 2:43 and take a show of hands, reply or known route, before the answer plays. Play chapter 8. Live: point to a link on any webpage without clicking and read where it goes. Do: every learner inspects the subject, sender and link on slide 8, then writes worksheet tasks 3 and 4. Review: play chapter 9 and pause at 6:13; each learner tells a partner the evidence, what is unverified and the next step before the answer plays. Flip slide 9 card 3."
+        ],
+        [
+          14,
+          "Cycle C: protect devices and files",
+          "Tell: slides 12 and 13, then slides 10 and 11 (a password to open encrypts a Word file; read-only only limits changes; Word cannot recover a lost password). Show: chapter 6, chapter 7 (pause at 4:55), then chapter 5 (pause at 3:36). Live: Edge Settings, search permissions, open Camera; then lock the screen with Windows logo key and L. Do: slide 9 cards 1, 2 and 4, then worksheet tasks 5 and 6, every learner, looking only. Review: the slide 16 and slide 17 knowledge checks; re-teach any choice that more than two learners miss."
+        ],
+        [
+          2,
+          "Introduce the challenge",
+          "Play chapter 10, then show slide 15 and worksheet task 7. Say: five rows from weeks 2 to 4, done on your own; the quick card is allowed; a spoken prompt from anyone counts as With prompt."
+        ],
+        [
+          25,
+          "Individual check: skills challenge",
+          "Every learner works the five rows of worksheet task 7 alone at their own seat; partners do not help. From minute 8, visit each learner once, about a minute each, and rate all five rows on the paper roster; come back once to anyone not finished. Check row 3 in the formula bar before the file is closed."
         ],
         [
           10,
           "Break",
-          "Take a screen-free break."
-        ],
-        [
-          25,
-          "Performance challenge",
-          "Learners work the seven challenge rows on the worksheet in pairs; the materials for each row are printed on it. The instructor circulates and marks each row Independent, With prompt or Needs practice. Keep supplies.csv from week 3 open on each workstation."
+          "Screen-free break. Finish any challenge ratings on the roster."
         ],
         [
           25,
           "Post-test",
-          "Complete the parallel assessment independently. Enter the saved pre-test score only if the learner wants a comparison. Print or save results."
+          "Slide 18. Learners type their name first and work alone; read directions aloud without suggesting answers. A learner may enter the week 1 score from your roster for a comparison. Record each score out of 28; print page 1 only if a paper copy is needed. Late finishers may run to minute 110."
         ],
         [
-          15,
-          "Review and next steps",
-          "Discuss explanations after submission. Choose a practice priority without treating the classroom score as certification."
+          13,
+          "Apply and close",
+          "Slide 19: each learner reads the domain scores, completes worksheet task 8 and chooses one practice task; discuss the two or three items the class missed most. Slide 20. Home task: at home, check for updates or turn on two-step verification for one account, and share it at the start of week 6. Restore lab settings, then select Start fresh on this computer."
         ]
       ],
       "slides": [
@@ -1175,7 +1438,7 @@
         },
         {
           "title": "A comfortable workstation",
-          "body": "Place the screen where you can read without strain. Support your posture, take breaks and adjust input devices to your needs. Ask for help with persistent discomfort.",
+          "body": "Set the screen about an arm\u2019s length away, with the top at or slightly below eye level. Keep the keyboard and mouse close. Change position and take short breaks, and ask for help with discomfort that does not go away.",
           "kind": "teach",
           "refs": [
             "7.1"
@@ -1183,7 +1446,7 @@
         },
         {
           "title": "Universal design helps more people",
-          "body": "Captions, readable controls and flexible input methods make tools usable in more situations. Keyboard access helps people who cannot use a mouse.",
+          "body": "Universal design means building tools that more people can use without special changes. Captions help in a noisy room or with hearing loss. Keyboard access helps people who cannot use a mouse, and clear text labels help people who cannot tell some colors apart.",
           "kind": "teach",
           "refs": [
             "7.1"
@@ -1191,7 +1454,7 @@
         },
         {
           "title": "Protect attention and wellbeing",
-          "body": "Frequent alerts and comparison can create pressure. FOMO means fear of missing out. Adjust notifications and choose a stopping point.",
+          "body": "FOMO means fear of missing out: the pull to keep checking so you do not miss anything. Choose which alerts you really need. Do not disturb can quiet the rest while you finish a task.",
           "kind": "teach",
           "refs": [
             "7.2"
@@ -1199,7 +1462,7 @@
         },
         {
           "title": "An online identity can be invented",
-          "body": "Catfishing uses a false identity to build trust. Pressure for money, secrecy or personal information is a reason to pause and verify independently.",
+          "body": "Catfishing is using a fake identity to build trust, sometimes with stolen photos of real service members. Pressure for money, secrecy or personal information is a reason to pause and verify another way. Never send money or gift cards to someone you have not met in person.",
           "kind": "teach",
           "refs": [
             "7.2"
@@ -1215,10 +1478,11 @@
         },
         {
           "title": "An urgent message is not proof",
-          "body": "Unexpected threats or rewards may be phishing. Avoid the supplied link. Contact the organization through a known website or number.",
+          "body": "Phishing is a fake message posing as a trusted organization. Warning signs: pressure to act now, a mismatched sender or link, a request for a password or money. Check through the real website or a number you trust. Typed a password already? Change it and turn on two-step verification.",
           "kind": "teach",
           "refs": [
-            "7.1"
+            "7.1",
+            "2.1"
           ]
         },
         {
@@ -1228,21 +1492,25 @@
           "cards": [
             [
               "An unknown USB drive is on the desk",
-              "Do not connect it. Give it to the instructor or authorized support."
+              "Do not connect it, even to find the owner. Give it to the instructor or lab staff."
             ],
             [
               "A calculator site asks for camera access",
               "Deny it unless the task has a clear, trusted need."
             ],
             [
-              "A message demands payment to keep benefits",
-              "Pause. Verify through the organization\u2019s known contact; do not use the message\u2019s link."
+              "A message says you must pay a fee to keep your VA benefits",
+              "Do not pay or use its link. VA says it never charges fees to apply for benefits and never threatens you by email. Call a number from VA.gov or your benefit letter."
+            ],
+            [
+              "Your home computer still runs Windows 10",
+              "Free security updates ended October 2025. Enroll in Extended Security Updates (until October 2027) or move to a supported device, then check Windows Update."
             ]
           ]
         },
         {
           "title": "Encryption protects readable data",
-          "body": "Encryption scrambles data so a key is needed to read it. Device encryption can protect a lost powered-off device; an unlocked signed-in session still needs protection.",
+          "body": "Encryption scrambles data so only someone with the key can read it. Device encryption (BitLocker in Windows, FileVault on a Mac) protects a lost computer that is turned off. A signed-in computer is open to anyone at the keyboard, so press Windows logo key and L when you step away.",
           "kind": "teach",
           "refs": [
             "7.3"
@@ -1250,15 +1518,16 @@
         },
         {
           "title": "Passwords protect different actions",
-          "body": "Some file passwords control opening; others restrict editing. Check which protection is enabled and how recovery works. Avoid storing the password beside the protected file.",
+          "body": "In Word, Encrypt with Password sets a password to open and encrypts the file. Always Open Read-Only and Restrict Editing only limit changes; anyone can still read the text. Word cannot recover a lost password, so keep it somewhere safe, away from the file.",
           "kind": "teach",
           "refs": [
-            "7.4"
+            "7.4",
+            "4.2"
           ]
         },
         {
           "title": "Unknown devices can carry risk",
-          "body": "Portable storage may contain malicious software. Use approved devices and follow lab procedures. Do not plug in unknown media to find its owner.",
+          "body": "An unknown USB drive can carry malware: software made to harm a computer or steal information. Do not plug it in to find its owner; give it to lab staff. Keep Windows and your browser updated, because updates fix known security holes.",
           "kind": "teach",
           "refs": [
             "7.3"
@@ -1266,7 +1535,7 @@
         },
         {
           "title": "Control camera and microphone access",
-          "body": "Allow access only when the task needs it and you trust the app. Review permissions after a meeting. Block requests unrelated to what you are doing.",
+          "body": "Allow the camera or microphone only when the task needs it and you trust the site. A permission can stay on after a call, so review it in your browser\u2019s site permissions. Block requests unrelated to what you are doing.",
           "kind": "teach",
           "refs": [
             "7.3"
@@ -1279,7 +1548,7 @@
         },
         {
           "title": "Practice the whole routine",
-          "body": "Find a source, create a useful file, limit access and explain a recovery choice. Use fictional information.",
+          "body": "Skills challenge: on your own, show five skills from this course. Refine a search, build a structured paragraph, total four costs, bring back deleted text and write useful feedback. Leave your work on screen for your instructor.",
           "kind": "lab"
         },
         {
@@ -1287,28 +1556,28 @@
           "body": "What is encryption designed to do?",
           "kind": "check",
           "options": [
-            "Make a file smaller",
-            "Require a key to read scrambled data",
-            "Make every message trustworthy"
+            "Shrink a file so it takes less space",
+            "Keep data unreadable without the key",
+            "Let people read a file but not change it"
           ],
           "answer": 1,
-          "why": "Encryption protects readability. It does not make the source trustworthy or replace access controls."
+          "why": "Encryption keeps data unreadable without the key. Shrinking a file is compression, and read-only only limits changes. Encryption also does not prove a sender or website is honest."
         },
         {
           "title": "Knowledge check: camera access",
-          "body": "A simple text webpage asks to use your camera. What is a sensible response?",
+          "body": "After a video visit, your browser still lets the clinic\u2019s website use your camera and microphone. What is a sensible next step?",
           "kind": "check",
           "options": [
-            "Always allow every request",
-            "Share your password instead",
-            "Deny access when it is not needed for the task"
+            "Leave it; permissions end when the call ends",
+            "Review the permission and block it if not needed",
+            "Block the camera for every website on this computer"
           ],
-          "answer": 2,
-          "why": "Permission should fit a clear purpose. An unrelated request can be denied."
+          "answer": 1,
+          "why": "A site permission can stay on after the call. Review it in your browser\u2019s site permissions and block it if you no longer need it. Blocking every site would also stop the video visits you need."
         },
         {
           "title": "Take the post-test",
-          "body": "Complete the questions independently. Save or print the graded results, including explanations and your practice priorities.",
+          "body": "Type your name first, then answer on your own. When you finish, print page 1 of your results or save it as a PDF, and give your score out of 28 to your instructor.",
           "kind": "assessment",
           "href": "post"
         },
@@ -1319,28 +1588,28 @@
         }
       ],
       "lab": [
-        "Adjust one workstation feature and explain the need it addresses.",
-        "Define universal design and name two useful examples.",
-        "For an urgent suspicious message, write an independent verification plan.",
-        "Explain catfishing, FOMO and a constructive response to harmful posts.",
-        "Choose responses to unknown USB media and an unnecessary camera request.",
-        "Explain device encryption, a file password and editing restrictions without treating them as identical.",
-        "Performance challenge: refine a public-service search; justify a source; create a structured paragraph; calculate a three-item total; choose sharing access; give useful feedback; name a recovery method.",
-        "Save or print your post-test results. Identify one strength and one next practice task."
+        "Adjust one thing at your station so you can read without leaning in: chair height, screen distance (about an arm\u2019s length) or text size. Or try Magnifier: press Windows logo key and +, then Windows logo key and Esc to close it. Write what you changed and what got easier, then put it back.",
+        "Play the first 10 seconds of the slide 14 video with the sound muted and read the captions. Then press Tab a few times and watch the outline move from control to control. Name two design features that help more people, and who each one helps.",
+        "On slide 8, select the subject, the sender and the link to inspect each one. Write two warning signs, the independent check you would use instead (a real website or a number you already trust), and what you would do if you had already typed your password.",
+        "Name the risk and one safe next step for each: (a) a new online friend asks you to keep a money request secret; (b) you stay up late scrolling because you do not want to miss anything; (c) someone posts something hurtful about you in a public group.",
+        "Say your choice for each card on slide 9 before you flip it. Then look without changing anything: in Edge, open Settings from the \u00b7\u00b7\u00b7 menu, search permissions and open Camera; in Windows 10, open Start \u203a Settings \u203a Update & Security \u203a Windows Update (Windows 11: Start \u203a Settings \u203a Windows Update). Write one thing each page shows.",
+        "In Word, open a blank document and select File \u203a Info \u203a Protect Document. Write which option asks for a password to open and encrypts the file, and which only limits changes. Do not set a password. Then write what device encryption protects and what you do before you step away from a signed-in computer.",
+        "Skills challenge, on your own: refine a search, build a structured paragraph, total four costs with a formula, bring back deleted text and write useful feedback. Leave your work on screen for your instructor.",
+        "Take the post-test on your own. Print page 1 of your results or save it as a PDF, and write your score out of 28. Name one strength and one skill to practice next."
       ],
       "answers": [
-        "An appropriate comfort adjustment and observable benefit; avoid diagnostic claims.",
-        "Usability for diverse people/situations; captions and keyboard controls are examples.",
-        "Do not use supplied link; find official contact independently.",
-        "False identity; fear of missing out; document/report/block/seek support as appropriate.",
-        "Do not connect unknown media; deny permissions without a task-related need.",
-        "Encryption needs a key; passwords can protect opening or editing; read-only does not prove encryption.",
-        "Mark each of seven tasks Independent / With prompt / Needs practice; keep performance separate from quiz score.",
-        "Result preserved by learner; specific task linked to a domain that needs practice."
+        "A specific change (chair, screen about an arm\u2019s length away with the top at or slightly below eye level, text size or Magnifier) and a benefit the learner can see; no medical claims. Settings restored.",
+        "Universal design makes tools usable by more people without special changes. Examples: captions (noisy room, hearing loss), keyboard access (cannot use a mouse), clear text labels that do not rely on color.",
+        "Signs: pressure to act now, a sender or link that does not match the organization (account-check.example), a request for a password. Check: the real website from a bookmark or typed address, or a number from a card or letter, never the message\u2019s link or number. If a password was typed: change it on the real site, turn on two-step verification and tell the instructor.",
+        "(a) Possible catfishing: send no money and keep no secrets; verify another way. (b) Fear of missing out: set a stopping point or quiet alerts with Do not disturb. (c) Do not reply in anger; keep screenshots if safe; report or block; talk to someone you trust.",
+        "USB: do not connect; give it to staff. Camera: deny when the task does not need it. Benefits fee: do not pay or use the link; VA never charges a fee to apply; call a number from VA.gov. Windows 10: free security updates ended October 2025; use Extended Security Updates or a supported device. One real detail from each page; nothing changed or installed.",
+        "Encrypt with Password sets a password to open and encrypts the file; Word cannot recover a lost password. Always Open Read-Only and Restrict Editing only limit changes; the text is still readable. Device encryption protects a lost or stolen computer that is turned off; lock the screen with Windows logo key and L before stepping away.",
+        "Rate each row Independent, With prompt or Needs practice on the paper roster, using the evidence list below. The quick card counts as Independent; any spoken prompt is With prompt. Keep this separate from the post-test score.",
+        "Page 1 printed or saved; score out of 28 on the roster; a named strength and a specific next task tied to a results domain."
       ],
       "challenge": {
         "item": 6,
-        "intro": "Work each row with a partner. Type what you did, then leave the rating column for your instructor. This challenge is separate from the post-test score.",
+        "intro": "Work on your own at your computer. Do each row, write what you did, and leave your work on screen. Your instructor rates each row. The quick card counts as Independent; a spoken prompt from anyone counts as With prompt. This challenge is separate from the post-test score.",
         "ratings": [
           "Independent",
           "With prompt",
@@ -1348,111 +1617,184 @@
         ],
         "tasks": [
           [
-            "Refine a public-service search",
-            "Search phrase: senior center hours. Narrow it to Beckley and to this year.",
-            "Adds a place and a date term to the search; explains why the narrower phrase gives a more useful list."
+            "Refine a search",
+            "In Edge, search senior center hours. Change the search so it finds this year\u2019s hours for the senior center in Beckley, West Virginia.",
+            "Adds a place (Beckley WV) and a time (the current year) to the search box, and says why the narrower search gives a more useful list."
           ],
           [
-            "Justify a source",
-            "Two fictional results: a county health department page updated this month, and an anonymous forum post from three years ago.",
-            "Chooses the department page and names at least two checks: who wrote it, when, and what evidence it gives."
+            "Build a structured paragraph",
+            "In Word, explain how to reach the fictional Community library help desk: a title in the Heading 1 style, a numbered list of three steps and one warning line in bold. Save it in Documents as help-desk.docx.",
+            "The title uses Heading 1, the steps are a Word numbered list (select one number and all three highlight), and the warning line is bold."
           ],
           [
-            "Create a structured paragraph",
-            "Topic: how to reach the fictional Community library help desk. Include a heading, a three-step bulleted list and one bold warning line.",
-            "Heading, list and bold are applied with the toolbar, not typed with spaces or symbols."
+            "Total four costs",
+            "Select Practice workbook data at the end of this worksheet to download a fresh supplies.csv and open it in Excel. Type Tape in A5 and 4 in B5. In B6, total all four costs with a formula.",
+            "B6 shows 29 and the formula bar shows =SUM(B2:B5) or =B2+B3+B4+B5, not a typed number. Check before the file is closed: a .csv file keeps the result, not the formula."
           ],
           [
-            "Calculate a three-item total",
-            "Open supplies.csv from week 3. Add a Total cell for paper 12, folders 8 and pens 5.",
-            "A formula such as =SUM(B2:B4) or =B2+B3+B4 shows 25; the cell holds the formula, not a typed number."
+            "Bring back deleted text",
+            "In help-desk.docx, delete the bold warning line and press Ctrl and S to save. Then bring the line back.",
+            "Presses Ctrl and Z (or Undo) while the file is still open and the line returns; says Undo is lost once the file closes, and that version history works for files saved in OneDrive."
           ],
           [
-            "Choose sharing access",
-            "A partner needs to suggest wording on your paragraph but must not change it.",
-            "Chooses Commenter and says why Viewer and Editor do not fit the task."
-          ],
-          [
-            "Give useful feedback",
-            "A partner\u2019s handout says Call the library with no phone number or hours.",
-            "Names what is missing, why a reader needs it, and one specific fix."
-          ],
-          [
-            "Name a recovery method",
-            "You deleted a paragraph from the practice file ten minutes ago and saved.",
-            "Names version history, or Undo before closing, and says how to check that the recovered text is back."
+            "Write useful feedback",
+            "A partner\u2019s flyer says: Free computer class, Monday at 6, community center. It gives no a.m. or p.m., no date and no room.",
+            "Names at least two missing details (a.m. or p.m., the date, the room), why a reader needs them, and one specific, polite fix."
           ]
         ]
-      }
+      },
+      "lab_paths": [
+        [
+          "Zoom in with Magnifier",
+          "Press Windows logo key and + to zoom in. Press Windows logo key and Esc to close Magnifier."
+        ],
+        [
+          "Quiet your notifications",
+          "Start \u203a Settings \u203a System \u203a Notifications. Turn off apps you do not need. For a quiet hour, open the notification center and select the bell with zZ to turn on Do not disturb."
+        ],
+        [
+          "See where a link really goes",
+          "Point to the link without clicking and read the web address that appears. If it does not match the organization\u2019s real website, do not open it."
+        ],
+        [
+          "Report a phishing email",
+          "Outlook.com: select the message, then Report \u203a Report phishing. Gmail: open the message, select More (\u22ee) next to Reply, then Report phishing."
+        ],
+        [
+          "Turn on two-step verification (at home)",
+          "Microsoft account: go to account.microsoft.com/security, select Manage how I sign in, then under Additional security, Two-step verification, select Turn on."
+        ],
+        [
+          "Check for Windows updates",
+          "Start \u203a Settings \u203a Windows Update \u203a Check for updates. If updates are listed, select Download & install. Windows 10: Start \u203a Settings \u203a Update & Security \u203a Windows Update."
+        ],
+        [
+          "Review which websites can use your camera",
+          "In Edge, open Settings from the \u00b7\u00b7\u00b7 menu and type permissions in the Search settings box. Open Camera to see which sites are allowed; select a site to change it to Block."
+        ],
+        [
+          "Lock the computer when you step away",
+          "Press Windows logo key and L. Sign in again when you come back."
+        ],
+        [
+          "Require a password to open a Word file",
+          "File \u203a Info \u203a Protect Document \u203a Encrypt with Password. Type the password twice, then save. Word cannot recover a lost password."
+        ],
+        [
+          "Stop changes but not reading",
+          "File \u203a Info \u203a Protect Document \u203a Always Open Read-Only, or Review \u203a Restrict Editing. Anyone can still read and copy the text."
+        ],
+        [
+          "Check device encryption",
+          "Start \u203a Settings \u203a Privacy & security \u203a Device encryption. If it is missing, the computer may not support it or you may be signed in as a standard user."
+        ],
+        [
+          "Bring back something you just deleted",
+          "Press Ctrl and Z right away. It works after you save, until you close the file. For a file saved in OneDrive, select the file name at the top, then Version history."
+        ],
+        [
+          "Total a column in Excel",
+          "Select the empty cell under the numbers, type =SUM(B2:B5) and press Enter. Select the cell again to see the formula in the formula bar."
+        ]
+      ],
+      "prep": "Each station: Microsoft Edge, Word and Excel, and this lesson and worksheet; check that a downloaded .csv file opens in Excel. At the front: the projector with Edge, Word and Windows Settings, and a USB drive to hold up for slide 12 (never plug it in). Print a paper roster with each learner code, five challenge columns, the week 1 pre-test score and a post-test column, and bring the week 1 scores. The lab needs no accounts: the phishing message, camera prompt and file protections are course simulations or look-only steps, and two-step verification is a home task. Ask IT before class whether the lab\u2019s Windows 10 computers get Extended Security Updates, because learners will ask. Check that Windows Update, Edge site permissions and Word\u2019s Protect Document menu open under a learner login. Play chapters 4 and 7 with captions to check sound. After your own run-through, delete any help-desk.docx and supplies files you created and select Start fresh on this computer at each station. Keep 3\u20135 printed post-tests in case the network fails. No paid service, real purchase or new learner account is required.",
+      "outcomes": [
+        "Comfort and access: at a lab workstation, each learner makes one comfort change (chair, screen distance, text size or Magnifier) and says what it made easier, then names two universal design features and who each one helps. The change is visible, and lab settings are restored afterwards.",
+        "Scams: given the fictional message on slide 8, each learner names two warning signs and an independent check that does not use the message\u2019s link or number, says what to do after typing a password, and gives a safe next step for a catfishing request, fear of missing out and a hurtful post, with no more than one prompt.",
+        "Devices and files: using slide 9, Edge settings, Windows Update and Word\u2019s Protect Document menu without changing anything, each learner chooses safe responses to an unknown USB drive and an unneeded camera request, says why updates matter, tells a password to open (encryption) apart from read-only, and says what device encryption protects and when to lock the screen. Both knowledge checks are answered correctly.",
+        "Skills challenge and post-test: working alone, each learner completes the five challenge rows (refined search, structured paragraph, formula total, undo recovery, useful feedback), each rated Independent, With prompt or Needs practice, then completes the 28-question post-test and records the score and one next practice task."
+      ]
     },
     {
       "n": 6,
-      "title": "Build a small web app with AI",
-      "summary": "Turn a clear need into a tested, accessible prototype using basic vibe coding.",
+      "title": "Guide an AI agent to improve a web app",
+      "summary": "Write a clear request for an AI coding agent, review what it changed, test the result, and learn what running a website as a service takes.",
       "objectives": [
-        "Describe a small app and write a bounded AI prompt.",
-        "Explain HTML, CSS, JavaScript and browser storage.",
-        "Test a prototype, revise one behavior and explain what a hosted service still needs."
+        "Write a clear request and checks for an AI coding agent.",
+        "Predict what the agent will change before it starts.",
+        "Read the change and spot anything you did not ask for.",
+        "Test the result, report a problem and retest after the fix.",
+        "Explain what running a website as a service takes."
       ],
       "refs": [
-        "Extension: basic web app and SaaS prototyping"
+        "Extension: agentic engineering basics and SaaS"
       ],
       "agenda": [
         [
+          8,
+          "Warm-up and reconnect",
+          "Reconnect: two learners share the practice step they chose at the end of week 5. Recall: in week 1 you let AutoCorrect change teh to the and checked it before keeping it; in week 5 you kept passwords private. Today a much bigger automatic helper changes a web page, and both rules still apply. Pairs discuss slide 2: where would a wrong change hurt most?"
+        ],
+        [
+          7,
+          "Introduction: goals and the example",
+          "Read the goals on slide 1 aloud. Slide 3 in one minute: SaaS is software you use in a browser while a company runs it. Play chapter 1 (0:00\u20130:46). Every learner opens slide 9 and selects Open starter app: this is version 1, the page the agent will change. Name the loop on the board: spec, plan, change, review, test, revise."
+        ],
+        [
+          15,
+          "Cycle A: spec and acceptance checks",
+          "Tell: slides 4, 6 and 7 (agent, prompt, spec, acceptance check). Show: chapter 4 (pause at 2:52 so learners can write), then chapter 5 (3:00\u20133:44); build the class spec live with the slide 7 builder. Do: worksheet tasks 1 and 2, every learner writes their own spec and three checks. Review: a partner reads each check aloud and says whether they could run it without guessing; pick one learner's checks for the demo."
+        ],
+        [
           10,
-          "Choose the problem",
-          "Introduce a fictional community-resource finder and agree on three observable requirements."
+          "Cycle B: predict, then read the plan",
+          "Tell: slides 5 and 8 (HTML, CSS and JavaScript; ask the agent for a plan first). Show: chapter 3 (1:32\u20132:14); after the predictions, give the class spec to the AI coding agent on the projector in plan mode and read its plan aloud. Do: worksheet task 3, every learner writes a prediction before the plan appears, then compares. Review: show of hands for HTML, CSS or JavaScript; approve the plan only if it matches the spec."
         ],
         [
-          20,
-          "Model a first build",
-          "Explain website versus web app versus SaaS. Demonstrate the supplied starter and a bounded AI prompt; no paid account is required."
-        ],
-        [
-          20,
-          "Build round one",
-          "Learners use an approved AI tool or edit the supplied starter. Save a first version before changes."
+          12,
+          "Cycle C: the agent changes, you review",
+          "Tell: slides 11 and 10 (one change at a time; a diff shows removed lines with a minus sign and added lines with a plus sign). Show: approve the plan, let the agent make the change, then show the before-and-after on the projector; chapter 6 (3:44\u20134:01) shows keeping a working version first. If the live run is slow or fails, use the prepared version on slide 10. Do: worksheet task 4, every learner marks each changed line on slide 10 as asked for or not asked for. Review: partners compare; ask which change nobody asked for and which check would catch it."
         ],
         [
           10,
           "Break",
-          "Pause away from screens."
+          "Screen-free pause. Leave version 1 and the worksheet open."
         ],
         [
           15,
-          "Test demonstration",
-          "Play the explainer; show keyboard, empty-result, narrow-screen and privacy checks."
+          "Cycle D: test with the checklist",
+          "Tell: slide 17 (happy path, no match, mixed case, keyboard, narrow screen). Show: chapter 7 (4:27\u20135:11) and chapter 8 (5:11\u20135:55), then test the live agent's page on the projector while the class calls out each check. Do: worksheet task 5, every learner opens the agent's version (resource-finder-agent.html) at their own seat and records expected, actual and pass or fail in the App test log. Review: the slide 20 knowledge check; a learner who found a failing check reads out their evidence."
         ],
         [
-          30,
-          "Improve and retest",
-          "Pairs swap tester/builder roles, fix one observed defect and record evidence."
+          13,
+          "Cycle E: repair and retest",
+          "Tell: slides 18 and 12 (regression; a repair request names the steps, expected, actual and what to keep). Show: chapter 9 (pause at 6:37), then paste one learner's repair request into the agent and read its one-line diff together. Do: worksheet tasks 6 and 7, every learner writes a repair request, then opens the repaired version (resource-finder-agent-fixed.html) and repeats the failed check and two checks that passed before. Review: a partner confirms that nothing that passed before now fails."
         ],
         [
-          15,
-          "Demo and reflection",
-          "Demonstrate three acceptance checks and complete the extension rubric. Discuss hosting requirements without deploying."
+          13,
+          "Cycle F: what makes it SaaS",
+          "Tell: slides 3, 13, 14, 15 and 19 (SaaS, where data lives, API key, authentication, hosting, cost and upkeep). Show: chapter 2 (0:46\u20131:32) and chapter 10 (6:44\u20137:31), then press Ctrl and U on the agent's page to show that anyone can read a page's code. Do: worksheet task 8, every learner fills in the SaaS table for the finder. Review: the slide 21 knowledge check; two learners each explain one trade-off."
+        ],
+        [
+          10,
+          "Individual check",
+          "Each learner shows you three things: one acceptance check and its result, the change the spec did not ask for, and one SaaS trade-off with a reason. Score the extension rubric (0, 1 or 2 per row) and mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+        ],
+        [
+          7,
+          "Apply and close",
+          "Slides 22 to 24. Home task: choose one website you already use that runs as a service, such as web email. Write where your data lives, how you sign in, and one check you would run after the company changes the site. Keep it with your worksheet. Then select Start fresh on this computer at each station."
         ]
       ],
       "slides": [
         {
           "title": "Solve one small problem",
-          "body": "Build a finder for fictional community resources. A visitor should be able to search, filter and understand the results.",
+          "body": "Our fictional resource finder works. Visitors want to type a kind of help, like learning, and see every match. Today an AI coding agent makes that change. You decide what to ask for, check what it did and test it.",
           "kind": "discussion"
         },
         {
           "title": "Website, web app, and SaaS",
-          "body": "A website presents pages. A web app adds interactive tasks. SaaS is software operated as an ongoing online service; it may need accounts, shared storage, support and maintenance.",
+          "body": "A website shows pages. A web app responds when you type or click. SaaS (software as a service) is software you use in a browser while a company hosts it, keeps the data, secures it and updates it, usually for a fee.",
           "kind": "teach"
         },
         {
-          "title": "Vibe coding starts with clear instructions",
-          "body": "Describe the result you want in ordinary language, ask AI to produce code, then inspect and test what it gives you. You are responsible for the result.",
+          "title": "An AI coding agent works in a loop",
+          "body": "An AI coding agent is a program that reads your files, plans a change, edits the code and can run checks, all from a plain-English request. The loop: spec, plan, change, review, test, revise. You approve each step and own the result.",
           "kind": "teach"
         },
         {
           "title": "Three parts of a browser app",
-          "body": "HTML gives content structure. CSS controls appearance. JavaScript responds to input. A server can add shared data and protected operations.",
+          "body": "HTML is the content and structure. CSS is the look and layout. JavaScript is the behavior, such as deciding which resources match a search. Before the agent starts, predict which part our change needs.",
           "kind": "flip",
           "cards": [
             [
@@ -1471,157 +1813,288 @@
         },
         {
           "title": "Write acceptance checks first",
-          "body": "Search finds the named fictional service. The keyboard reaches every control. An unmatched search explains that no results were found.",
+          "body": "An acceptance check is a test anyone can run: I type or press this, I expect to see that. Write them before the agent starts. Include one check for the new change and one for something that must keep working.",
           "kind": "steps",
           "items": [
-            "Name one user task",
-            "Write three observable checks",
-            "Use fictional data"
+            "Name the one change",
+            "Write three I do, I expect checks",
+            "Add one check that must not break"
           ]
         },
         {
-          "title": "A prompt with useful boundaries",
-          "body": "Build one HTML file for a fictional resource finder. Include a labeled search field, category filter and readable results. Use semantic buttons, visible focus and no external dependencies. Do not collect personal data.",
+          "title": "Write a spec the agent can follow",
+          "body": "A prompt is what you type to the agent. A spec is a careful prompt: Let the search box also find resources by category. Keep capital-letter matching, the no-match message and keyboard use. Change only this file. Show your plan first.",
           "kind": "prompt"
         },
         {
-          "title": "Ask the AI to explain its work",
-          "body": "Ask where the data lives, what each file does, and how to test the three requirements. Treat the explanation as a claim to verify against behavior.",
+          "title": "Ask the agent for a plan first",
+          "body": "Before the agent edits anything, ask for its plan: which file, what it will change and how it will check the result. Compare the plan with your spec and your prediction. Approve it only when they match.",
           "kind": "teach"
         },
         {
           "title": "Start with a working reference",
-          "body": "Open the supplied starter app and complete all three checks. Download the editable HTML file and save a copy before making a change.",
+          "body": "This is version 1, before the agent. Open the starter app and run three quick checks: library, LIBRARY and zzz. Keep this version as the way back if a change goes wrong.",
           "kind": "starter"
         },
         {
-          "title": "No AI account? You can still build",
-          "body": "Edit the supplied HTML in a plain-text editor such as Notepad or TextEdit. Change the heading and one fictional resource, save it with the .html name, then reopen the file in your browser. The worksheet lists the exact steps.",
+          "title": "Review the change: read the diff",
+          "body": "A diff shows exactly what changed. A line with a minus sign was removed; a line with a plus sign was added. You need no AI account to review one. Mark each changed line: asked for, or not asked for?",
           "kind": "try"
         },
         {
           "title": "Make one change at a time",
-          "body": "Save version 1. Ask for a small change. Review the difference. Test again. Restore version 1 if the change breaks a requirement.",
+          "body": "Keep version 1. Ask for one change. Read the diff. Run every check. If a check fails, ask for a repair or go back to version 1.",
           "kind": "teach"
         },
         {
-          "title": "A useful revision request",
-          "body": "The filter works with a mouse but the focus is hard to see. Add a clear focus outline to all controls. Keep existing search behavior and fictional data.",
+          "title": "Write a useful repair request",
+          "body": "LIBRARY and Learning now find nothing, but library and learning work. Make capital and small letters match the same resources again. Keep the new category search and everything else the same.",
           "kind": "teach"
         },
         {
           "title": "Where does the data live?",
-          "body": "A JavaScript array is bundled with the page. Browser storage belongs to that browser and can be cleared. A shared database supports cross-device data and requires access controls.",
+          "body": "In our finder, the resource list lives inside the page file. Browser storage keeps data in one browser on one computer, and it can be cleared. A SaaS keeps shared data in a database on its server, behind sign-in and access rules.",
           "kind": "teach"
         },
         {
           "title": "Keep secrets out of browser code",
-          "body": "Anything shipped to a browser can be inspected. Do not put API keys, passwords or private records in HTML or JavaScript. Use fictional records for this prototype.",
+          "body": "An API key is a secret code that lets your app use another company's service, such as maps, and bills you for it. Anyone can read a page's code (Ctrl and U), so private keys stay on the server.",
           "kind": "teach"
         },
         {
           "title": "A mock sign-in is not security",
-          "body": "A login-looking screen does not protect data by itself. Real accounts need server-side authorization, safe credential handling and tested access rules.",
+          "body": "Authentication means proving who you are, usually by signing in. A sign-in box drawn on a page protects nothing. A real SaaS checks who you are on its server, then decides what each person may see.",
           "kind": "teach"
         },
         {
           "title": "Watch: prompt, test, revise",
-          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "body": "Play one chapter at a time as your instructor directs. Pause at 2:52 to write checks and at 6:37 to write a repair request. Replay any chapter; captions and a transcript are available.",
           "kind": "video"
         },
         {
           "title": "Test more than the happy path",
-          "body": "Try blank search, no match, mixed-case search, category changes, narrow screen and keyboard-only use. Record expected and actual results.",
+          "body": "The happy path is the normal use you expect to work. Also test no match (zzz), mixed case (LIBRARY, Learning), keyboard only and a narrow screen. Record expected, actual and pass or fail.",
           "kind": "steps",
           "items": [
-            "Normal task",
-            "Empty and unexpected input",
-            "Keyboard and small screen"
+            "Happy path and no match",
+            "Mixed case",
+            "Keyboard and narrow screen"
           ]
         },
         {
-          "title": "Fix what you can demonstrate",
-          "body": "Describe steps, expected result and actual result. Ask for a focused correction. Repeat the failed test and a previously passing test.",
+          "title": "Report the bug; check for a regression",
+          "body": "A regression is something that used to work and broke after a change. Report the steps, what you expected and what happened. After the repair, repeat the failed check and two checks that passed before.",
           "kind": "teach"
         },
         {
           "title": "Hosting is a separate decision",
-          "body": "A local file is visible on your computer. Hosting makes it reachable online. Before a real launch, review content rights, access, data handling, costs, backups and who maintains it.",
+          "body": "Hosting means putting the page on a web server so anyone with the address can use it. Running it as a service also means costs, backups, updates, support and a person who reviews every agent change.",
           "kind": "teach"
         },
         {
           "title": "Knowledge check: AI confidence",
-          "body": "The AI says the app is fully tested. What should you do?",
+          "body": "The agent reports: Done. All checks pass. What should you do next?",
           "kind": "check",
           "options": [
-            "Run the acceptance checks yourself",
-            "Skip testing",
-            "Add real personal records immediately"
+            "Accept it, since the agent ran the checks",
+            "Read the change and run our checks yourself",
+            "Ask the agent to confirm the checks again"
           ],
-          "answer": 0,
-          "why": "An AI statement does not replace observed behavior and recorded results."
+          "answer": 1,
+          "why": "An agent's report is a claim, not evidence. Read the diff and run the acceptance checks on the saved page yourself. Asking again only repeats the claim."
         },
         {
           "title": "Knowledge check: a secret key",
-          "body": "Where should a private API key go in a browser prototype?",
+          "body": "Your finder will show a map from a paid service that needs a private API key. Where should the key go?",
           "kind": "check",
           "options": [
-            "In a hidden HTML comment",
-            "In a public JavaScript variable",
-            "Nowhere in the browser code"
+            "In a hidden comment in the page",
+            "In a separate script file",
+            "On the server, never in the page"
           ],
           "answer": 2,
-          "why": "Browser code is inspectable. Protected secrets belong in an appropriate server-side design."
+          "why": "Anyone can open a page's code, including comments and script files. A private key stays on the server, which calls the map service for the page. Some services also give public keys made for browsers."
         },
         {
-          "title": "Lab: build, test, explain",
-          "body": "Demonstrate your app, one revision and your test log. Explain one limitation before this could become a real service.",
+          "title": "Lab: spec, review, test, explain",
+          "body": "Show your partner your spec, your checks, the change nobody asked for, your test log and your retest. Explain one thing a real SaaS version would need.",
           "kind": "lab"
         },
         {
-          "title": "You can direct a build and judge it",
-          "body": "Keep the prompt, source file, test log and next step. Clear requirements and careful checks remain useful as tools change.",
+          "title": "You can direct an agent and judge its work",
+          "body": "Keep the loop: spec, plan, change, review, test, revise. Tools will change. Clear requests, careful review and your own tests stay useful.",
           "kind": "summary"
         }
       ],
       "lab": [
-        "Name the app\u2019s user, problem and three acceptance checks. Keep the scope to one page.",
-        "Write a prompt naming content, behavior, accessibility and privacy boundaries.",
-        "Open the starter. Save a copy as resource-finder-v1.html using a plain-text editor. If working offline, no AI tool is required.",
-        "Find the <h1> heading in the source and replace only its text. In the resources array, change the fictional Community library name to Community Skills Desk. Save as resource-finder-v2.html, reopen it, and search skills to confirm Community Skills Desk appears.",
-        "Ask an approved AI tool for one small improvement, or make the heading/data edit manually. Record exactly what changed.",
-        "Test blank input, matching and nonmatching search, mixed case, category filters, keyboard focus and narrow-screen layout. Record expected, actual and pass/fail.",
-        "Fix one defect or improve one requirement. Repeat its test and one previously passing test. Keep both versions.",
-        "Demonstrate the app. Explain HTML/CSS/JavaScript, where data lives, and why a public SaaS service needs additional design and maintenance."
+        "Write a change request (a spec) for the agent in plain English. The need: visitors type a kind of help, like learning, not a name. Say the one change, who it helps, and two things that must stay the same. The slide 7 builder can make a first draft.",
+        "Write three acceptance checks in the form I type or press this, I expect to see that. Make one check about the new change and one about something that already works and must not break.",
+        "Before the agent runs, predict: which part will it change (HTML, CSS or JavaScript), about how many lines, and one thing that could break. Then read the agent's plan on the projector and write one way it matches or differs from your prediction.",
+        "Open slide 10 and read the agent's change (the diff). A line with a minus sign was removed; a line with a plus sign was added. Mark each changed line asked for or not asked for, and write down the change that breaks what the spec said to keep.",
+        "Open the agent's version (resource-finder-agent.html) at your own seat. Run the five checks in the App test log: happy path (learning, then library), no match (zzz), mixed case (LIBRARY, then Learning), keyboard only, and narrow screen (zoom to 400%). Record expected, actual and pass or fail.",
+        "Write a repair request the agent could act on: the steps, what you expected, what actually happened, and what must stay the same.",
+        "Open the repaired version (resource-finder-agent-fixed.html). Repeat the check that failed, then two checks that passed before. Record the results and say whether you accept the repair.",
+        "Suppose the finder became a SaaS website where many people save favorite resources. Write where it would be hosted, why visitors would sign in, where saved favorites would live, where a private API key for a map service would go, and what it would cost and who would keep it running."
       ],
       "answers": [
-        "One specific user task and three observable outcomes.",
-        "Bounded one-file app; no personal data, secrets, payments or external dependencies.",
-        "Both original and working copy retained; .html extension, not rich text or .txt.",
-        "Heading changes visibly; new fictional name appears and is searchable. Quotes, commas and tags stay intact.",
-        "Revision small enough to explain; no unsupported claims about AI correctness.",
-        "All seven paths tested; honest failures and expected/actual evidence recorded.",
-        "Failed path now works or limitation clearly documented; regression check still passes.",
-        "HTML structure, CSS appearance, JavaScript behavior; in-page sample data, no protected backend; launch needs further checks."
+        "One change: the search box also finds resources by category, so learning shows every Learning resource. Who: a visitor who knows the kind of help but not the name. Must stay the same (any two): capital and small letters match alike (LIBRARY finds Community library); the no-match message; keyboard use; the narrow-screen layout; only resource-finder.html changes; no outside code, personal data or sign-in. A strong spec also asks for a plan first.",
+        "For example: I type learning, I expect Community library and Practice Workbook Workshop (2 fictional resources found). I type LIBRARY, I expect Community library (1 found). I type zzz, I expect No matching resources. Try a different word or reset the filters. Accept any checks a partner can run without guessing.",
+        "JavaScript, the rule that decides which resources match (one or two lines), and perhaps the hint text in the search box (HTML). Could break: capital-letter matching, the no-match message or the Category list. A good plan names resource-finder.html only and the matching rule. Accept any reasoned prediction; the comparison matters more than being right.",
+        "Asked for: the search also looks at the category (r.category added). Not asked for but harmless: the hint now says Try library or learning. Not asked for and harmful: .toLowerCase() was removed from the line that reads the search box, so capital letters no longer match. Learners may say it in plain words: it stopped ignoring capital letters.",
+        "Version 2 results: learning, 2 fictional resources found (Community library, Practice Workbook Workshop), pass. library, 1 found (Community library), pass. zzz, No matching resources. Try a different word or reset the filters., pass. LIBRARY and Learning, No matching resources instead of 1 and 2 found, fail (a regression: version 1 finds LIBRARY). Keyboard: Tab reaches the link, search box, Category and Reset filters, each with a thick outline, pass. Narrow screen at 400%: one column, no sideways scrolling, pass; the round Text size button can cover part of the page in every version, which is a course issue, not the agent's change.",
+        "Steps: open resource-finder-agent.html and type LIBRARY. Expected: Community library (1 found), as in version 1. Actual: No matching resources; Learning also finds nothing while learning finds 2. Request: make capital and small letters match the same resources again; keep the new category search and everything else the same; show the change before applying it.",
+        "LIBRARY: 1 found (Community library), pass. Learning: 2 found, pass. Passed before and still pass: learning (2 found), library (1 found), zzz (no-match message), keyboard outline. Accept the repair because the failed check now passes and no earlier check broke. If the instructor's live repair differs, it is retested the same way.",
+        "Hosted: on a web server or hosting service so anyone with the address can use it (today it is one file on the course site with fixed data). Sign-in: so each person sees only their own favorites; the server must check it, because a sign-in picture is not security. Saved data: in a database on the server, not in this page or one browser. API key: on the server only, since anyone can read a page's code with Ctrl and U. Cost and upkeep: hosting, web address, map service and AI agent fees; someone must update listings, fix problems, back up data, help users and review every agent change. Accept four of six with a reason."
       ],
       "procedures": [
         [
-          "Save and open your own copy (no AI account needed)",
+          "Open the three versions (no account needed)",
           [
-            "Select Download editable HTML above. The file resource-finder-v1.html goes to your Downloads folder.",
-            "Open it in a plain-text editor. On Windows, right-click the file, choose Open with, then Notepad. On a Mac, open TextEdit, choose Format, then Make Plain Text, then open the file.",
-            "Make your edit. Choose File, then Save As. Type resource-finder-v2.html as the name. On Windows, set Save as type to All files so Notepad does not add .txt. On a Mac, untick the box that adds .txt when no extension is given.",
-            "Double-click the saved file to open it in your browser. Search skills. Confirm that Community Skills Desk appears and that the heading changed."
+            "Version 1, before the agent: go to slide 9 and select Open starter app, or select Open version 1 above.",
+            "Version 2, the agent\u2019s result: select Open the agent\u2019s version above. This is resource-finder-agent.html.",
+            "Version 3, after the repair: select Open the repaired version above only when your instructor says so. This is resource-finder-agent-fixed.html.",
+            "To compare two versions, open each in its own window (Ctrl and N). Press the Windows logo key and the Left arrow on one window, then pick the other for the right side."
           ]
         ],
         [
-          "Turn AI output into a file you can run",
+          "Check the change yourself (no AI account needed)",
           [
-            "Paste your prompt into the approved AI tool. Ask for one complete HTML file, not separate pieces.",
-            "Select the code block the tool gives you and copy it with Ctrl and C (Command and C on a Mac).",
-            "Open a new plain-text document, paste with Ctrl and V (Command and V), and save it as resource-finder-ai.html using the same Save As steps above.",
-            "Open the saved file in your browser. Run the three acceptance checks yourself before trusting anything the AI said about it."
+            "On version 2, press Ctrl and U. The page\u2019s code opens in a new tab. You can read it but not change it.",
+            "Press Ctrl and F and type toLowerCase. Count how many places are highlighted. Do the same on version 1.",
+            "If the counts differ, find that line in the diff on slide 10. Ask: did our spec ask for this change?"
           ]
+        ],
+        [
+          "Optional: repair version 2 by hand",
+          [
+            "Under the agent\u2019s version, select Download editable HTML. The file resource-finder-v2.html goes to your Downloads folder (Ctrl and J shows it).",
+            "In File Explorer, right-click the file, select Open with, then Notepad. On a Mac, first choose TextEdit \u203a Settings \u203a Open and Save and turn on Display HTML files as HTML code instead of formatted text, then open the file in TextEdit.",
+            "Press Ctrl and F (Command and F on a Mac) and type trim(). On that line, type .toLowerCase() right after trim() so it reads trim().toLowerCase();",
+            "Choose File, then Save As. Type resource-finder-v3.html. On Windows, set Save as type to All files so Notepad does not add .txt. On a Mac, choose Use .html if TextEdit asks.",
+            "Double-click the saved file to open it in your browser. Retest LIBRARY, Learning and zzz, then one check that passed before."
+          ]
+        ]
+      ],
+      "lab_paths": [
+        [
+          "Put two pages side by side",
+          "Press Ctrl and N to open a second Edge window and open the other version there. Press the Windows logo key and the Left arrow, then choose the other window for the right side. Or hover over the Maximize button and pick a layout."
+        ],
+        [
+          "See a page's code",
+          "Press Ctrl and U. The code opens in a new tab; you can read it but not change it. Close that tab when you are done."
+        ],
+        [
+          "Find a word on a page or in its code",
+          "Press Ctrl and F and type the word. Matches are highlighted. Press Ctrl and G to jump to the next one."
+        ],
+        [
+          "Reload a page",
+          "Press F5, or Ctrl and R."
+        ],
+        [
+          "Test with the keyboard only",
+          "Press Tab to move to the next control and Shift and Tab to go back. Each control should show a thick outline. On Category, press the Up or Down arrow to change the choice. On Reset filters, press Enter."
+        ],
+        [
+          "Test a narrow screen",
+          "Press Ctrl and + until the zoom reaches 400%. The page should become one column you can read without scrolling sideways. Press Ctrl and 0 to go back to 100%."
+        ],
+        [
+          "Show file name extensions",
+          "In File Explorer, select View \u203a Show \u203a File name extensions. Names now end in .html or .txt, so you can spot a wrong save."
+        ],
+        [
+          "Find a downloaded file",
+          "Press Ctrl and J to open Downloads in Edge. Downloaded files are in the Downloads folder in File Explorer."
+        ],
+        [
+          "Open an HTML file in Notepad",
+          "In File Explorer, right-click the file, select Open with, then Notepad. If Notepad is not listed, select Choose another app."
+        ],
+        [
+          "Save a web page from Notepad",
+          "Choose File \u203a Save as. Type a name ending in .html. Set Save as type to All files, then select Save. Or type the whole name in quotation marks, such as \"resource-finder-v3.html\"."
+        ]
+      ],
+      "prep": "Each station: Microsoft Edge, headphones, this lesson and worksheet (typed, or printed for anyone who prefers paper), and Notepad as the plain-text editor for the optional hand repair. Learners need no account and no AI access: they open three practice pages on the course site, resource-finder.html (version 1), resource-finder-agent.html (version 2, the prepared agent result with one planted defect) and resource-finder-agent-fixed.html (version 3). At the front: your own computer on the projector with an AI coding agent signed in to your account, a practice folder holding copies of resource-finder.html and resource-finder-agent.html under version control, the terminal text enlarged, and the agent set to ask before every edit. Never show a sign-in page, key or bill on screen. Rehearse the whole demo with the class spec the week before and record it as a backup; the prepared pages are the fallback if the agent is slow, offline or does something unexpected. Print slide 10's diff and the App test log for anyone who wants paper. Play video chapters 4, 7 and 9 with captions to check sound. After your run-through, select Start fresh on this computer at each station. No paid service, purchase or learner account is required.",
+      "outcomes": [
+        "Spec: given the starter page and a one-sentence need, each learner writes a plain-English change request that names the one change, who it helps and two things that must stay the same, plus three acceptance checks in the form I do this, I expect that. A partner can run every check without asking what it means.",
+        "Prediction: before the agent runs, each learner writes which part of the page (HTML, CSS or JavaScript) the change needs and one thing that could break, then compares the prediction with the agent's plan and names one match or difference.",
+        "Review: given the before-and-after view of the agent's change (slide 10 or the projector), each learner marks every changed line as asked for or not asked for and finds the one change that breaks a requirement, with no more than one prompt.",
+        "Testing: at their own workstation, each learner runs the five checklist tests (happy path, no match, mixed case, keyboard, narrow screen) on the agent's version, records expected, actual and pass or fail, writes a repair request with steps, expected and actual, and after the repair reruns the failed check and two checks that passed before.",
+        "SaaS: using the resource finder as the example, each learner explains at least four of these six with a reason: where it would be hosted, why visitors sign in (authentication), where saved data lives, where a private API key goes, what it costs, and who maintains it."
+      ],
+      "rubric": [
+        [
+          "Spec and checks",
+          "No clear change or no checks",
+          "A change and checks, but a check is vague or nothing says what must stay the same",
+          "One clear change, what must stay the same, and three checks a partner can run"
+        ],
+        [
+          "Prediction and review",
+          "No prediction and no marked diff",
+          "Predicts or marks the diff with help",
+          "Predicts the part that will change and, alone, finds the change the spec did not ask for"
+        ],
+        [
+          "Testing and retest",
+          "Fewer than three checks run",
+          "Checks run but expected and actual not both recorded, or the failure missed",
+          "All five checks recorded with expected, actual and pass or fail, the failure reported, and the failed check plus two others retested"
+        ],
+        [
+          "SaaS trade-offs",
+          "Cannot say what would change",
+          "Names two or three of hosting, sign-in, data, API key, cost and upkeep",
+          "Explains at least four, each with a reason"
+        ]
+      ],
+      "glossary": [
+        [
+          "Agent",
+          "An AI coding agent is a program that reads your files, plans a change, edits the code and can run checks, all from a plain-English request. You approve each step and own the result."
+        ],
+        [
+          "Prompt",
+          "What you type to the agent."
+        ],
+        [
+          "Spec",
+          "A careful prompt: the one change, what must stay the same, and how you will check it."
+        ],
+        [
+          "Acceptance check",
+          "A test anyone can run: I type or press this, I expect to see that."
+        ],
+        [
+          "Happy path",
+          "The normal use you expect to work."
+        ],
+        [
+          "Diff",
+          "A view of exactly what changed. A line with a minus sign was removed; a line with a plus sign was added."
+        ],
+        [
+          "Regression",
+          "Something that used to work and broke after a change."
+        ],
+        [
+          "Hosting",
+          "Putting the page on a web server so anyone with the address can use it."
+        ],
+        [
+          "SaaS (software as a service)",
+          "Software you use in a browser while a company hosts it, keeps the data, secures it and updates it, usually for a fee."
+        ],
+        [
+          "API key",
+          "A secret code that lets your app use another company's service, such as maps, and bills you for it."
+        ],
+        [
+          "Authentication",
+          "Proving who you are, usually by signing in. A real service checks it on its server."
         ]
       ]
     }

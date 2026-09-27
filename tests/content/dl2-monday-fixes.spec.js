@@ -4,7 +4,7 @@ const {test,expect}=require('@playwright/test');const fs=require('fs');
 const read=p=>fs.readFileSync(p,'utf8');
 const course='courses/digital-literacy-2';
 const weeks=[1,2,3,4,5,6].map(n=>`weeks/week-0${n}`);
-const learnerPages=['index.html','syllabus.html','sources.html','activities/resource-finder.html',
+const learnerPages=['index.html','syllabus.html','sources.html','activities/resource-finder.html','activities/resource-finder-agent.html','activities/resource-finder-agent-fixed.html',
  'assessments/pre-test.html','assessments/post-test.html','assessments/pre-test-printable.html','assessments/post-test-printable.html',
  ...weeks.flatMap(w=>[`${w}/presentation.html`,`${w}/worksheet.html`,`${w}/video-transcript.html`])];
 const instructorPages=['instructor-guide.html','assessments/pre-test-answer-key.html','assessments/post-test-answer-key.html',
