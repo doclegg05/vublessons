@@ -616,7 +616,329 @@
             22
           ]
         }
-      ]
+      ],
+      "worksheet": [
+        {
+          "title": "Before we start",
+          "timing": "3 min",
+          "kind": "WARM-UP",
+          "blocks": [
+            [
+              "grid",
+              [
+                "One task I want to make easier:",
+                "One skill I bring:"
+              ]
+            ],
+            [
+              "tip",
+              "Everything on this sheet uses fictional information. Work at your own seat; a partner checks your result."
+            ]
+          ]
+        },
+        {
+          "title": "Part A: Readable text",
+          "timing": "5 min",
+          "kind": "GUIDED",
+          "blocks": [
+            [
+              "section",
+              "Step 1 \u2014 Zoom this lesson",
+              [
+                [
+                  "Press Ctrl and + until the text is comfortable",
+                  "Watch the zoom bubble at the top of Edge: 110%, 125%, 150%."
+                ],
+                [
+                  "Find and select the Next slide button",
+                  "It grew too. Zoom changes the whole webpage, not just the words."
+                ],
+                [
+                  "Press Ctrl and 0 to reset",
+                  "The page goes back to 100%. Edge remembers the zoom for each website separately."
+                ]
+              ]
+            ],
+            [
+              "fill",
+              "The zoom I used:",
+              "%"
+            ],
+            [
+              "section",
+              "Step 2 \u2014 Choose the right control",
+              [
+                [
+                  "Decide which control fixes each problem",
+                  "Browser zoom fixes one webpage. Display scaling (Start \u203a Settings \u203a System \u203a Display \u203a Scale and layout) makes every app bigger. Look only; do not change the lab computer."
+                ]
+              ]
+            ],
+            [
+              "grid",
+              [
+                "One webpage is too small. I use:",
+                "Word and my email are too small too. I use:"
+              ]
+            ],
+            [
+              "checkpoint",
+              [
+                "My partner saw the page back at 100%",
+                "I can say which control fixes \u201ceverything is too small\u201d"
+              ]
+            ]
+          ]
+        },
+        {
+          "title": "Part B: Sound in the right place",
+          "timing": "4 min",
+          "kind": "GUIDED",
+          "blocks": [
+            [
+              "section",
+              "Step 1 \u2014 Send the sound to your headset",
+              [
+                [
+                  "Put on the headset",
+                  ""
+                ],
+                [
+                  "Select the speaker icon at the right end of the taskbar",
+                  "Then select the device name above the volume slider and choose the headset."
+                ],
+                [
+                  "Play the first ten seconds of the Week 1 video (slide 21)",
+                  "Hear it in the headset? Then choose the speakers again."
+                ]
+              ]
+            ],
+            [
+              "grid",
+              [
+                "Three checks, in order: 1.",
+                "2.",
+                "3.",
+                "Brightness control on my screen is:"
+              ]
+            ],
+            [
+              "checkpoint",
+              [
+                "I heard the test sound in the headset, then put the speakers back"
+              ]
+            ]
+          ]
+        },
+        {
+          "title": "Part C: One good page",
+          "timing": "6 min",
+          "kind": "GUIDED",
+          "blocks": [
+            [
+              "section",
+              "Step 1 \u2014 Open print preview",
+              [
+                [
+                  "Press Ctrl and P while page 1 of this worksheet is open",
+                  "There is no printer today. The preview is the whole job."
+                ],
+                [
+                  "Read the printer name",
+                  "Windows and Edge often pick the last printer someone used."
+                ],
+                [
+                  "Set Pages to 1 and Copies to 1, then select Cancel",
+                  "One test sheet, never twenty."
+                ]
+              ]
+            ],
+            [
+              "form",
+              [
+                "Printer name:",
+                "Orientation (portrait or landscape):",
+                "Number of pages in the preview:"
+              ]
+            ],
+            [
+              "section",
+              "Step 2 \u2014 Match the cable to the job",
+              [
+                [
+                  "Write HDMI, Ethernet or USB next to each job",
+                  "Then find one real port on your computer. Read the label; do not force a connector."
+                ]
+              ]
+            ],
+            [
+              "form",
+              [
+                "An external screen:",
+                "A wired network:",
+                "A keyboard or flash drive:",
+                "One real port I found:"
+              ]
+            ],
+            [
+              "checkpoint",
+              [
+                "My partner read back my printer name and page setting",
+                "The last line spills to page 2: I fix the layout, preview again, then print one page"
+              ]
+            ]
+          ]
+        },
+        {
+          "title": "Part D: A calendar you can trust",
+          "timing": "8 min",
+          "kind": "ON PAPER",
+          "blocks": [
+            [
+              "section",
+              "Step 1 \u2014 Write the entry",
+              [
+                [
+                  "Fill in the fictional appointment below",
+                  "The lab has no calendar account, so this entry is on paper, marked simulated. Use all five fields, a reminder and a weekly repeat."
+                ]
+              ]
+            ],
+            [
+              "form",
+              [
+                "Title:",
+                "Day:",
+                "Start:",
+                "End:",
+                "Place:",
+                "Reminder (how long before):",
+                "Repeat (how often):"
+              ]
+            ],
+            [
+              "section",
+              "Step 2 \u2014 Use the slide simulations",
+              [
+                [
+                  "On slide 14, choose Week view",
+                  "Write what it shows that Day view does not."
+                ],
+                [
+                  "On slide 15, choose Free / busy",
+                  "Write what your partner sees."
+                ]
+              ]
+            ],
+            [
+              "grid",
+              [
+                "Week view shows me:",
+                "With free/busy my partner sees:"
+              ]
+            ],
+            [
+              "fill",
+              "A Monday reminder keeps showing on Tuesday. I fix:",
+              ""
+            ],
+            [
+              "checkpoint",
+              [
+                "My partner checked all five fields on my entry"
+              ]
+            ]
+          ]
+        },
+        {
+          "title": "Part E: Check it, then ask well",
+          "timing": "6 min",
+          "kind": "GUIDED",
+          "blocks": [
+            [
+              "section",
+              "Step 1 \u2014 Undo an automatic change",
+              [
+                [
+                  "In Word, type teh and a space",
+                  "AutoCorrect changes it to the."
+                ],
+                [
+                  "Press Ctrl and Z right away",
+                  "teh is back. Undo reverses the last change."
+                ]
+              ]
+            ],
+            [
+              "fill",
+              "What Word changed:",
+              "\u2192"
+            ],
+            [
+              "section",
+              "Step 2 \u2014 Write a help request a helper can act on",
+              [
+                [
+                  "The screen only says: folder unavailable",
+                  "Write the four parts below. Pretend you were opening your Community resources folder in File Explorer."
+                ]
+              ]
+            ],
+            [
+              "form",
+              [
+                "App and version:",
+                "What I was trying to do:",
+                "What I already tried:",
+                "The exact message on the screen:"
+              ]
+            ],
+            [
+              "fill",
+              "My partner\u2019s one suggestion:",
+              ""
+            ],
+            [
+              "checkpoint",
+              [
+                "My request has all four parts"
+              ]
+            ]
+          ]
+        },
+        {
+          "title": "Show me three things",
+          "timing": "8 min",
+          "kind": "INDEPENDENT",
+          "blocks": [
+            [
+              "section",
+              "Show your instructor, at your own seat",
+              [
+                [
+                  "Zoom this page and reset it",
+                  ""
+                ],
+                [
+                  "Choose the headset and play the test sound",
+                  ""
+                ],
+                [
+                  "Open print preview for page 1: Pages 1, Copies 1",
+                  ""
+                ]
+              ]
+            ],
+            [
+              "form",
+              [
+                "Instructor rating (Independent / With prompt / Needs practice):"
+              ]
+            ]
+          ]
+        }
+      ],
+      "home": "On your own device this week, make one change from today, write down how you undid it, and tell us at the start of week 2."
     },
     {
       "n": 2,

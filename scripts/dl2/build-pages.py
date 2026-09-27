@@ -4,6 +4,7 @@ from workshops import for_slide,workshop
 import learning
 import scenes as slide_scenes
 import photo_scenes
+import handout
 from pathlib import Path
 ROOT=Path('courses/digital-literacy-2'); BASE='/courses/digital-literacy-2'
 C=json.loads(Path('scripts/dl2/curriculum.json').read_text()); W=C['weeks']; Q=json.loads((ROOT/'assets/questions.json').read_text())
@@ -229,15 +230,44 @@ for w in W:
   sections+=f'<section class="slide slide-kind-{k} {extra} {"has-workshop" if demo else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><div class="slide-body">{content}</div></section>'
  body=f'<a class="skip" href="#main">Skip to content</a><aside class="sidebar" id="lesson-sidebar" aria-label="Lesson navigation"><a class="logo" href="{BASE}/index.html"><img src="/assets/vub-seal-white.png" alt=""><h2>VUB Digital Literacy</h2><p>Level 2 · IC3 GS6 Aligned</p></a><div class="week-indicator"><span class="week-num">Week {n}</span><span class="week-title">{e(w["title"])}</span></div><nav aria-label="Slides">{nav}</nav><nav class="resources" aria-label="Week resources">{resources(n)}</nav><div class="progress-section"><progress id="lesson-progress" value="1" max="{len(slides)}" aria-label="Lesson progress"></progress><p class="progress-text" id="progress-text"></p></div></aside><main class="main-content" id="main"><div class="ics-toolbar"><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="lesson-sidebar">Show lesson navigation</button><a href="{BASE}/index.html">Digital Literacy Level 2 home</a><div class="toolbar-right"><div data-text-dock></div><button type="button" id="restart">Start over</button><button type="button" id="present" aria-keyshortcuts="P">Present (P)</button></div></div><div class="slides-container">{sections}</div><div class="nav-footer"><button type="button" class="nav-btn" id="previous">← Previous</button><span id="slide-counter" role="status"></span><button type="button" class="nav-btn" id="next">Next →</button><button type="button" class="nav-btn" id="present-exit" aria-keyshortcuts="Escape">Exit (Esc)</button></div></main>'
  write(folder+'/presentation.html',page(w['title'],body,'lesson',n))
- worksheet='<p>'+e(w['summary'])+'</p><p>Name or learner code: ____________________</p><p>Use fictional information. Work at your own workstation; a partner can check your result. Record what you actually observed. Type below or print a blank copy. Typed worksheet responses stay on this page only; print before closing.</p>'
- if n==6:worksheet+=practice_versions()+''.join(f'<h2>{e(t)}</h2><ol class="procedure">'+''.join('<li>'+e(x)+'</li>' for x in steps)+'</ol>' for t,steps in w['procedures'])
- for i,prompt in enumerate(w['lab']):worksheet+=f'<section class="question"><h2>{i+1}. {e(prompt)}</h2>'+(challenge_table(w['challenge']) if w.get('challenge',{}).get('item')==i else f'<label class="visually-hidden" for="answer-{i}">Response to activity {i+1}</label><textarea class="worksheet-input" id="answer-{i}"></textarea><div class="print-answer"></div>')+'</section>'
- if n==5:worksheet+='<div class="actions">'+link('assets/supplies.csv','Practice workbook data (fresh supplies.csv)','button secondary')+'</div>'
- if n==3:worksheet+='<div class="actions">'+link('assets/supplies.csv','Practice workbook data','button secondary')+link('assets/practice-photo.jpg','Practice photo (JPG)','button secondary')+'</div>'
- if n==6:worksheet+=test_log('log','App test log','Open the agent’s version (resource-finder-agent.html). For each check, write what you expect before you try it, then what actually happened, then pass or fail.',APP_TESTS)+test_log('retest','Retest after the repair','Open the repaired version (resource-finder-agent-fixed.html). Repeat the check that failed, then two checks that passed before.',RETESTS)
- if w.get('rubric'):worksheet+=rubric_table(w['rubric'])
- worksheet+=lab_card(w.get('lab_paths'),w.get('lab_os','Windows 11'))
- write(folder+'/worksheet.html',doc(f'Week {n} activity worksheet',worksheet))
+ # ── Worksheet: a printable lab sheet in the Level 1 style (scripts/dl2/handout.py) ──────────────
+ def blocks(items,prefix):
+  out='';k=0
+  for blk in items:
+   kind=blk[0]
+   if kind=='section':out+=handout.section(blk[1],blk[2])
+   elif kind=='fill':out+=handout.fill(blk[1],blk[2])
+   elif kind=='grid':out+=handout.fill_grid(blk[1])
+   elif kind=='form':out+=handout.form_box(blk[1])
+   elif kind=='write':out+=handout.write(f'{prefix}-{k}',blk[1],blk[2]);k+=1
+   elif kind=='tip':out+=handout.tip(e(blk[1]))
+   elif kind=='warning':out+=handout.tip(e(blk[1]),'warning')
+   elif kind=='checkpoint':out+=handout.checkpoint(blk[1])
+   elif kind=='html':out+=blk[1]
+  return out
+ def quick_card(rows,os):
+  if not rows:return ''
+  note=' Windows 11 differences are in brackets.' if os!='Windows 11' else ''
+  return f'<h2 class="section-title" style="margin-top:1.4rem">Lab quick card: {e(os)}</h2><p class="small">Click-by-click steps for this week’s tasks in {e(os)} with Microsoft Edge.{note} If your screen looks different, ask your instructor.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Lab quick card"><table class="card-table"><thead><tr><th scope="col">To do this</th><th scope="col">Steps</th></tr></thead><tbody>'+''.join(f'<tr><td>{e(t)}</td><td>{e(st)}</td></tr>' for t,st in rows)+'</tbody></table></div>'
+ sheet=handout.header('Worksheet',f'Week {n}: {w["title"]}',w['summary'],f'Week {n} | VUB Digital Literacy — Level 2',['Fictional practice data','Work at your own seat'])+handout.name_field()
+ sheet+=handout.goal_box('Today you will',w['objectives'])
+ if w.get('worksheet'):
+  for j,pt in enumerate(w['worksheet']):sheet+=handout.part(pt['title'],pt['timing'],pt['kind'],blocks(pt['blocks'],f'answer-{j}'))
+ else:
+  if n==6:sheet+=handout.part('Before the tasks: the three versions','','SETUP',practice_versions()+''.join(f'<h3 class="section-title">{e(t)}</h3><ol class="procedure">'+''.join('<li>'+e(x)+'</li>' for x in steps)+'</ol>' for t,steps in w['procedures']))
+  for i,prompt in enumerate(w['lab']):
+   first,_,rest=prompt.partition('. ')
+   inner=handout.section('',[(first.rstrip('.')+'.' if not first.endswith(('.','?','!')) else first,e(rest))])
+   inner+=challenge_table(w['challenge']) if w.get('challenge',{}).get('item')==i else handout.write(f'answer-{i}','Your answer',4)
+   sheet+=handout.part(f'Task {i+1}','','TASK',inner)
+  if n==6:sheet+=handout.part('App test log','','RECORD',test_log('log','App test log','Open the agent’s version (resource-finder-agent.html). For each check, write what you expect before you try it, then what actually happened, then pass or fail.',APP_TESTS)+test_log('retest','Retest after the repair','Open the repaired version (resource-finder-agent-fixed.html). Repeat the check that failed, then two checks that passed before.',RETESTS))
+  if w.get('rubric'):sheet+=handout.part('Extension rubric','','INSTRUCTOR',rubric_table(w['rubric']))
+  if n==5:sheet+='<div class="actions">'+link('assets/supplies.csv','Practice workbook data (fresh supplies.csv)','button secondary')+'</div>'
+  if n==3:sheet+='<div class="actions">'+link('assets/supplies.csv','Practice workbook data','button secondary')+link('assets/practice-photo.jpg','Practice photo (JPG)','button secondary')+'</div>'
+ sheet+=handout.success('You can now',w.get('home','Keep this sheet. It is your record of what you practiced today.'),w['objectives'])
+ sheet+=quick_card(w.get('lab_paths'),w.get('lab_os','Windows 11'))
+ sheet+=handout.footer('Veterans Upward Bound — West Virginia',f'Digital Literacy Level 2 | Week {n}: {w["title"]}')
+ write(folder+'/worksheet.html',handout.page(f'Week {n} worksheet',sheet,BASE,[f'{BASE}/assets/lesson.js']))
  key='<p>Instructor guide. Accept equivalent evidence-based answers. These activities evaluate demonstrated skills, not speed.</p>'+''.join(f'<section class="question"><h2>{i+1}. {e(w["lab"][i])}</h2><p class="answer-model">{e(a)}</p>'+(challenge_key(w['challenge']) if w.get('challenge',{}).get('item')==i else '')+'</section>' for i,a in enumerate(w['answers']))
  if w.get('rubric'):key+=rubric_table(w['rubric'])
  write(folder+'/answer-key.html',doc(f'Week {n} worksheet answer guide',key,True))

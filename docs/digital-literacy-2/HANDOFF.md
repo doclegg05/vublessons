@@ -44,6 +44,20 @@ Six High findings from the six-agent review were fixed in the generators, with r
 
 Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
 
+## Worksheets as printable lab sheets (2026-09-28)
+
+The worksheets were textareas under 32 px prompts. They are now documents in the Level 1 lab-sheet
+style, rendered by `scripts/dl2/handout.py` (header band, name line, goal box, numbered parts with
+checklist steps, write-in lines, tips, a partner checkpoint, a success box, the quick card, footer)
+at normal document type (15 px on screen, 11 pt on paper), the same on screen and in print.
+- **Week 1** is hand-written as `W1_WORKSHEET` in `author-content.py`: one part per teaching unit,
+  paper-only (fill lines and forms; no typed boxes).
+- **Weeks 2–6** are generated from their `lab` tasks: one part per task with a ruled write-in area
+  (still a `.worksheet-input`, so typing, printing typed answers and the leave-page warning work),
+  plus week 6's versions, procedures, test logs and rubric, and week 5's challenge table.
+- Worksheet pages load only the handout's own stylesheet plus `lesson.js` and `text-size.js`.
+  The answer keys, lesson plans and run sheet still use the older `course.css` document style.
+
 ## Deck redesign: the Level 1 slide language (2026-09-28)
 
 The instructor rejected the DL2 decks as "a blank sheet of paper with text on it" and asked for the

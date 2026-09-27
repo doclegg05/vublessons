@@ -40,7 +40,8 @@ test.describe('shared lab computers',()=>{
  });
 
  test('A worksheet with typed answers warns before the page is left',async({page})=>{
-  await page.goto(`${base}/weeks/week-01/worksheet.html`);
+  // Week 1's sheet is paper only (write-in lines); week 2 has typed answer areas.
+  await page.goto(`${base}/weeks/week-02/worksheet.html`);
   const leaving=()=>page.evaluate(()=>{const ev=new Event('beforeunload',{cancelable:true});window.dispatchEvent(ev);return ev.defaultPrevented;});
   expect(await leaving()).toBe(false);
   await page.locator('#answer-0').fill('Zoomed to 125% and checked the page');expect(await leaving()).toBe(true);

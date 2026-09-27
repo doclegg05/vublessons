@@ -86,7 +86,7 @@ test('Week 6 worksheet opens all three versions and gives the procedures before 
  expect(ws).toContain('href="/courses/digital-literacy-2/activities/resource-finder.html" download="resource-finder-v1.html"');
  expect(ws).toContain('href="/courses/digital-literacy-2/activities/resource-finder-agent.html" download="resource-finder-v2.html"');
  for(const label of ['Open version 1','Open the agent’s version','Open the repaired version'])expect(ws).toContain(`>${label}</a>`);
- const firstTask=ws.indexOf('<h2>1. ');
+ const firstTask=ws.indexOf('>Task 1<');expect(firstTask).toBeGreaterThan(0);
  for(const [title,steps] of w6.procedures){
   expect(ws.indexOf(esc(title))).toBeGreaterThan(0);expect(ws.indexOf(esc(title))).toBeLessThan(firstTask);
   for(const step of steps)expect(ws).toContain(esc(step));

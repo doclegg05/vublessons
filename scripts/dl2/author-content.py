@@ -98,6 +98,49 @@ for u in W1_UNITS:W1_SLIDES+=u['slides']
 W1_SLIDES+=[slide('Show me three things','Zoom this page and reset it. Choose the headset and play the test sound. Open print preview for page 1 of the worksheet: Pages 1, Copies 1.','lab'),
  slide('Watch: every task again, at home','The video shows each task from today. Choose a chapter to replay one skill. It pauses after each practice prompt.','video'),
  slide('Keep the routine','Choose one setting, test it, and know the way back. Home task: make one change on your own device and write down how you undid it.','summary')]
+
+# The Week 1 worksheet: one part per unit, in the Level 1 lab-sheet style (steps, write-in lines, partner check).
+def sec(title,*items):return ('section',title,list(items))
+W1_WORKSHEET=[
+ dict(title='Before we start',timing='3 min',kind='WARM-UP',blocks=[
+  ('grid',['One task I want to make easier:','One skill I bring:']),
+  ('tip','Everything on this sheet uses fictional information. Work at your own seat; a partner checks your result.')]),
+ dict(title='Part A: Readable text',timing='5 min',kind='GUIDED',blocks=[
+  sec('Step 1 — Zoom this lesson',('Press Ctrl and + until the text is comfortable','Watch the zoom bubble at the top of Edge: 110%, 125%, 150%.'),('Find and select the Next slide button','It grew too. Zoom changes the whole webpage, not just the words.'),('Press Ctrl and 0 to reset','The page goes back to 100%. Edge remembers the zoom for each website separately.')),
+  ('fill','The zoom I used:','%'),
+  sec('Step 2 — Choose the right control',('Decide which control fixes each problem','Browser zoom fixes one webpage. Display scaling (Start › Settings › System › Display › Scale and layout) makes every app bigger. Look only; do not change the lab computer.')),
+  ('grid',['One webpage is too small. I use:','Word and my email are too small too. I use:']),
+  ('checkpoint',['My partner saw the page back at 100%','I can say which control fixes “everything is too small”'])]),
+ dict(title='Part B: Sound in the right place',timing='4 min',kind='GUIDED',blocks=[
+  sec('Step 1 — Send the sound to your headset',('Put on the headset',''),('Select the speaker icon at the right end of the taskbar','Then select the device name above the volume slider and choose the headset.'),('Play the first ten seconds of the Week 1 video (slide 21)','Hear it in the headset? Then choose the speakers again.')),
+  ('grid',['Three checks, in order: 1.','2.','3.','Brightness control on my screen is:']),
+  ('checkpoint',['I heard the test sound in the headset, then put the speakers back'])]),
+ dict(title='Part C: One good page',timing='6 min',kind='GUIDED',blocks=[
+  sec('Step 1 — Open print preview',('Press Ctrl and P while page 1 of this worksheet is open','There is no printer today. The preview is the whole job.'),('Read the printer name','Windows and Edge often pick the last printer someone used.'),('Set Pages to 1 and Copies to 1, then select Cancel','One test sheet, never twenty.')),
+  ('form',['Printer name:','Orientation (portrait or landscape):','Number of pages in the preview:']),
+  sec('Step 2 — Match the cable to the job',('Write HDMI, Ethernet or USB next to each job','Then find one real port on your computer. Read the label; do not force a connector.')),
+  ('form',['An external screen:','A wired network:','A keyboard or flash drive:','One real port I found:']),
+  ('checkpoint',['My partner read back my printer name and page setting','The last line spills to page 2: I fix the layout, preview again, then print one page'])]),
+ dict(title='Part D: A calendar you can trust',timing='8 min',kind='ON PAPER',blocks=[
+  sec('Step 1 — Write the entry',('Fill in the fictional appointment below','The lab has no calendar account, so this entry is on paper, marked simulated. Use all five fields, a reminder and a weekly repeat.')),
+  ('form',['Title:','Day:','Start:','End:','Place:','Reminder (how long before):','Repeat (how often):']),
+  sec('Step 2 — Use the slide simulations',('On slide 14, choose Week view','Write what it shows that Day view does not.'),('On slide 15, choose Free / busy','Write what your partner sees.')),
+  ('grid',['Week view shows me:','With free/busy my partner sees:']),
+  ('fill','A Monday reminder keeps showing on Tuesday. I fix:',''),
+  ('checkpoint',['My partner checked all five fields on my entry'])]),
+ dict(title='Part E: Check it, then ask well',timing='6 min',kind='GUIDED',blocks=[
+  sec('Step 1 — Undo an automatic change',('In Word, type teh and a space','AutoCorrect changes it to the.'),('Press Ctrl and Z right away','teh is back. Undo reverses the last change.')),
+  ('fill','What Word changed:','→'),
+  sec('Step 2 — Write a help request a helper can act on',('The screen only says: folder unavailable','Write the four parts below. Pretend you were opening your Community resources folder in File Explorer.')),
+  ('form',['App and version:','What I was trying to do:','What I already tried:','The exact message on the screen:']),
+  ('fill','My partner’s one suggestion:',''),
+  ('checkpoint',['My request has all four parts'])]),
+ dict(title='Show me three things',timing='8 min',kind='INDEPENDENT',blocks=[
+  sec('Show your instructor, at your own seat',('Zoom this page and reset it',''),('Choose the headset and play the test sound',''),('Open print preview for page 1: Pages 1, Copies 1','')),
+  ('form',['Instructor rating (Independent / With prompt / Needs practice):'])]),
+]
+W1_HOME='On your own device this week, make one change from today, write down how you undid it, and tell us at the start of week 2.'
+
 def week1_runsheet():
  out=[]
  for x in W1_ORDER:
@@ -145,7 +188,7 @@ add(1,'Make technology work for you','Set up a comfortable workspace, organize a
   ["Set a repeat and a reminder", "Open the event. Outlook.com: Repeat › Weekly; Remind me › 30 minutes. Google Calendar: Does not repeat › Weekly; Notification › 30 minutes. Save, then find the next occurrence."],
   ["Share free/busy only", "Outlook.com: Calendar › Share › enter the person’s email › Can view when I’m busy. Google Calendar: Settings › Settings for my calendars › your calendar › Share with specific people or groups › See only free/busy (hide details)."],
   ["Undo an AutoCorrect change in Word", "Type teh and a space; Word changes it to the. Press Ctrl and Z right away to undo. Settings: File › Options › Proofing › AutoCorrect Options."]],
- runsheet=week1_runsheet())
+ runsheet=week1_runsheet(),worksheet=W1_WORKSHEET,home=W1_HOME)
 add(2,'Find, judge, and organize information','Find a reliable community resource and manage a shared file with care.',
  ["Write a clear search and narrow it with one filter.", "Judge whether a source fits your question, and record where you found it.", "Fill in an online form with only what is needed, and read the confirmation.", "Save a file with a clear name in a folder you can find, and pack it in a ZIP file.", "Choose who can view, comment or edit, and pick the right way to get a file back."],
  ['3.1','3.2','3.3','4.2','4.3.1','7.4'],
