@@ -1,0 +1,88 @@
+/* Present mode: one slide fills a classroom projector. lesson.js adds .presenting to <body>, moves each
+   slide's text into .present-copy and its visuals into .present-stage inside .present-frame, and scales the
+   frame down only as far as body text stays at 24px or more. Leaving present mode restores the slide. */
+.presenting{--bar:56px;overflow:hidden;background:#e8eef3}
+.presenting .topbar,.presenting .brand-line,.presenting .skip,.presenting .menu-toggle,.presenting .sidebar,.presenting .deck-toolbar,.presenting #lesson-progress,.presenting .deck-main>.muted,.presenting .footer,.presenting .vub-textsize-fab{display:none!important}
+.presenting .deck-layout{display:block}
+.presenting .deck-main{max-width:none;margin:0;padding:0;background:transparent}
+.presenting .slide:not([hidden]){box-sizing:border-box;height:calc(100vh - var(--bar));min-height:0;margin:0;border:0;border-radius:0;box-shadow:none;padding:clamp(10px,2.2vh,32px) clamp(24px,3.5vw,64px);overflow:hidden;display:flex;flex-direction:column}
+.presenting .slide h2[tabindex="-1"]:focus{outline:none}
+
+.presenting .present-frame{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"title title" "copy stage";column-gap:clamp(24px,3vw,56px);row-gap:clamp(8px,1.6vh,18px);align-items:start;width:100%;transform-origin:top left}
+.presenting .present-frame.no-stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "copy"}
+.presenting .present-frame.no-copy{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "stage"}
+.presenting .present-frame>h2{grid-area:title;margin:0;max-width:none;font-size:clamp(34px,5vh,54px);line-height:1.12}
+.presenting .present-copy{grid-area:copy;display:flex;flex-direction:column;gap:clamp(10px,1.8vh,20px);min-width:0}
+.presenting .present-stage{grid-area:stage;display:flex;flex-direction:column;gap:clamp(10px,1.8vh,20px);min-width:0}
+.presenting .present-copy>*,.presenting .present-stage>*{margin-top:0;margin-bottom:0}
+
+/* Projected text: same 32px body size, tighter lines so a slide fits one screen. */
+.presenting .present-frame :is(p,li,label,summary){line-height:1.38}
+.presenting .present-copy>p{color:#304a62;max-width:none}
+.presenting :is(.slide-kind-summary,.slide-kind-complete,.slide-kind-video) .present-copy>p{color:white}
+.presenting .present-frame :is(ul,ol){margin-top:0;margin-bottom:0}
+.presenting .present-frame li+li{margin-top:.25em}
+
+/* Visuals share the screen with the words. */
+.presenting .scenario-photo img{max-height:32vh;min-height:0}
+.presenting .scenario-photo figcaption{padding:6px 14px}
+.presenting .present-stage video{width:100%;max-height:calc(100vh - var(--bar) - 190px);background:#0d1b2a}
+.presenting .concept-note>summary{margin-bottom:.2em}
+
+/* A compact bar keeps Previous, the slide count, Next and Exit on screen. */
+.presenting .bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:20;height:var(--bar);box-sizing:border-box;margin:0;padding:8px clamp(16px,3vw,48px);background:#102c4b;border:0;display:flex;align-items:center;gap:16px}
+.presenting .bottom-nav button{min-height:44px;padding:6px 18px;font-size:18px}
+.presenting .bottom-nav #slide-counter{color:white;font-size:18px;margin-right:auto;order:0}
+.presenting .bottom-nav #previous{order:1}.presenting .bottom-nav #next{order:2}.presenting .bottom-nav #present-exit{order:3}
+.presenting .bottom-nav :focus-visible{outline-color:#f3d66b}
+#present-exit{display:none}
+.presenting #present-exit{display:inline-flex;background:transparent;color:white;border:2px solid #e6c65c}
+/* Stacked: words above, visuals full width below. Build: one part at a time (words, then each visual). */
+.presenting .present-frame.stacked,.presenting .present-frame.build{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "copy" "stage"}
+.presenting .present-frame .build-hidden{display:none!important}
+
+/* Labels meant for learners at their own seats; the presenter narrates these. */
+.presenting .scene-label,.presenting .simulation-label,.presenting .scenario-photo figcaption{display:none}
+
+/* A wide example panel puts the question and its lesson beside the practice window. */
+.presenting .topic-scene{container-type:inline-size}
+.presenting .scene-artifact>svg{display:none}
+@container (min-width:860px){
+ .presenting .scene-state:not([hidden]):has(>.scene-artifact){display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);grid-template-rows:auto 1fr;grid-template-areas:"question artifact" "lesson artifact";column-gap:28px;align-items:start}
+ .presenting .scene-artifact{display:contents}
+ .presenting .scene-artifact>h4{grid-area:question;margin:0}
+ .presenting .scene-artifact>.artifact-content{grid-area:artifact}
+ .presenting .scene-state>.scene-consequence{grid-area:lesson;align-self:start;margin-top:16px!important}
+ .presenting .authored-window{margin:0}
+}
+/* In a build, a visual shown on its own keeps a smaller title so the visual gets the room. */
+.presenting .present-frame.visual-part>h2{font-size:clamp(24px,3.2vh,34px)}
+/* Summary and completion blocks: picture beside the words. */
+.presenting .illustrated-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:start}
+.presenting .illustrated-copy>*{margin:0;min-width:0}
+/* Example panels: tighter spacing around the heading, choices and lesson line. */
+.presenting .topic-scene>h3{margin:0 0 6px}
+.presenting .topic-scene .scene-choices{margin:0 0 10px}
+.presenting .scene-consequence{padding:12px 18px!important}
+/* Projected words wrap between words, never inside one. */
+.presenting .slide{overflow-wrap:break-word}
+/* Example panels use the full width; photos are capped so they never fill the screen alone. */
+.presenting .scene-body{grid-template-columns:minmax(0,1fr)}
+.presenting .present-stage .scenario-photo{max-width:min(100%,calc((100vh - var(--bar)) * .9))}
+/* When a visual has the full width, practice windows put their buttons and lesson beside the window,
+   and the chart example puts the chart beside its data. */
+.presenting .present-stage{container-type:inline-size}
+@container (min-width:900px){
+ .presenting .workshop{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);grid-template-areas:"heading heading" "window controls" "window outcome";column-gap:28px;align-items:start}
+ .presenting .workshop>.work-heading{grid-area:heading}
+ .presenting .workshop>.work-window{grid-area:window;margin:0}
+ .presenting .workshop>.work-controls{grid-area:controls;align-self:start}
+ .presenting .workshop>.work-outcome{grid-area:outcome;align-self:start}
+ .presenting .topic-scene:has(>.chart-data){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;align-items:start}
+ .presenting .topic-scene:has(>.chart-data)>:is(h3,.scene-choices){grid-column:1/-1}
+ .presenting .topic-scene:has(>.chart-data)>figure{grid-column:1;grid-row:3/span 2;margin:0}
+ .presenting .topic-scene:has(>.chart-data)>:not(h3,.scene-choices,figure){grid-column:2}
+}
+/* Short projectors (720 pixels tall): a slimmer bar and edge. */
+@media (max-height:740px){.presenting{--bar:52px}.presenting .slide:not([hidden]){padding-top:8px;padding-bottom:6px}.presenting .bottom-nav button{min-height:40px}}
+@media print{.presenting .present-frame{zoom:1!important;display:block}}
