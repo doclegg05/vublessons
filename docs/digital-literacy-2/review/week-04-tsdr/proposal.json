@@ -1,0 +1,275 @@
+{
+  "objectives": [
+    "Choose a channel and an account that fit the message.",
+    "Write a clear email and choose who receives it.",
+    "Give, answer and resolve feedback on one shared copy.",
+    "Take part in an online meeting or community with care.",
+    "Check a purchase, subscription or payment before you agree."
+  ],
+  "outcomes": [
+    "Channel and account: given two fictional messages (a detailed request a partner can answer tomorrow and an urgent problem in the room), each learner chooses a suitable channel for each and explains why, and names the account a volunteer notice should come from. Both choices fit the urgency and the audience.",
+    "Email: in the worksheet, each learner writes a practice email with a specific subject, one clear request, a reply-by time and a courteous close; places three fictional recipients correctly in To, Cc and Bcc and says who a Reply all reaches; and rewrites a sentence to spell out abbreviations and remove an assumption about age. All parts are correct with no more than one prompt, and nothing is sent.",
+    "Feedback: in a practice handout in Word, each learner adds a comment to a partner’s handout that names the place, the change and the reason, then replies to the comment on their own handout, makes or declines the change with a reason, and resolves it. Each learner also chooses live coauthoring or later comments for a given schedule and names the access each role needs.",
+    "Meetings and communities: using the slide 14 practice meeting, each learner unmutes, raises and lowers a hand and mutes again, tests a headset microphone in Windows Settings when one is available, and lists four meeting or webinar habits, including asking before recording, plus one detail to confirm with an organization before trusting a community post.",
+    "Purchases and payments: given two fictional streaming offers, each learner works out what each costs for 12 months and for 3 months, writes two questions to ask before paying, and chooses a way to pay a new website with a reason, explaining why person-to-person apps are only for people they know. The arithmetic is correct and the reason matches the payment protections taught."
+  ],
+  "agenda": [
+    [
+      10,
+      "Warm-up: reconnect",
+      "Logins; show text size and lesson navigation. Reconnect: two or three learners share last week’s home task. Recall from Level 1 week 3: what is the difference between Reply, Reply all and Forward, and has a Reply all ever gone wrong for you? Recall from week 2: which access lets a partner suggest wording without changing it (Commenter)? Learners click through the slide 1 feedback practice."
+    ],
+    [
+      5,
+      "Introduction",
+      "Read the five goals on slide 1 aloud. Play chapter 1. Ask each pair to name one group task they have helped organize (a family gathering, a post or club event, a volunteer shift) and one thing that went wrong with the messages. Write two answers on the board; each cycle comes back to them."
+    ],
+    [
+      18,
+      "Cycle A: channel, account and a clear email",
+      "Tell: slides 2, 3 and 4; on slide 3, say what a password manager and multifactor authentication are. Show: chapter 2, pausing at 1:29 so pairs choose a channel before the narrator answers; then chapter 3 and the slide 4 practice draft, reading each field aloud. Do: worksheet tasks 1 and 2, every learner at their own seat; the email is a practice draft typed in the worksheet box, and nothing is sent. Review: a partner reads the draft as the recipient and says what they would do and by when; if they cannot, the writer fixes the request."
+    ],
+    [
+      12,
+      "Cycle B: recipients, timing and respectful wording",
+      "Tell: slides 5, 6 and 7. Show: chapter 4 (screen demo), pausing at 2:54 to ask which recipients to remove before the demo removes them; read the next line aloud. Use the slide 5 and 6 practice views, and rewrite “Pls RSVP ASAP” aloud as a model. If you have a demonstration account, show Cc, Bcc and Schedule send in Outlook.com on the projector; otherwise say the slides are simulated. Do: worksheet tasks 3 and 4, every learner. Review: ask aloud who receives Sam’s Reply all (you and Alex, not the Bcc list) and check each learner’s To, Cc and Bcc lines."
+    ],
+    [
+      10,
+      "Break",
+      "Offer a screen-free pause."
+    ],
+    [
+      18,
+      "Cycle C: one shared copy and useful feedback",
+      "Tell: slides 10, 11, 12 and 13 (Word with OneDrive and Google Docs are common shared-file tools; version history needs a file saved online). Show: chapter 5, then chapter 6 (pause at 4:22), then live in Word: type the two-step handout, select step 2, Review › New Comment, reply, make the change and resolve it. Do: worksheet task 5 as a pair decision, then task 6 in Word, every learner: swap seats to comment on a partner’s handout, swap back to reply and resolve. Review: the slide 19 knowledge check; the partner confirms the comment names the place, the change and the reason."
+    ],
+    [
+      12,
+      "Cycle D: meetings, webinars and communities",
+      "Tell: slide 14, then use the sidebar to jump back to slides 8 and 9. Show: chapter 7 and chapter 8; then test a headset microphone live in Start › Settings › System › Sound. Do: worksheet task 7, every learner: use the slide 14 practice meeting, test the headset microphone if it has one, and write the habits. Review: ask aloud how to ask a question in a webinar where the host has muted everyone (Q&A or chat); check that each list includes asking before recording."
+    ],
+    [
+      15,
+      "Cycle E: purchases, subscriptions and payments",
+      "Tell: slides 16, 17 and 18 (name the streaming examples; explain credit card, digital wallet and person-to-person app). Show: chapter 9, pausing at 6:35 to ask which missing fact would stop you, then the slide 17 practice checkout. Do: worksheet task 8, every learner, with paper or the Windows Calculator. Review: the slide 20 knowledge check; ask aloud what to do if a caller says to send $300 by Zelle today to keep your benefits (hang up and call the agency at a number you already know)."
+    ],
+    [
+      12,
+      "Individual check",
+      "Play chapter 10 if time allows. Using slide 21, each learner shows you three things: the To, Cc and Bcc lines from task 3 and who a Reply all reaches, the answered and resolved comment in Word, and the one-year cost of offer A with a payment choice and reason. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+    ],
+    [
+      8,
+      "Apply and close",
+      "Slides 22 and 23. Home task: before week 5, find one subscription or regular charge you pay (a card statement or a phone’s app store), write down when it renews and how to cancel it, and share one fact at the start of week 5. No amounts or account numbers are needed. Close Word without saving, restore lab settings, then select Start fresh on this computer."
+    ]
+  ],
+  "lab": [
+    "Choose a channel for each message and explain the difference: (a) a detailed request that your partner can answer tomorrow; (b) an urgent problem in this room right now.",
+    "In the box below, write a practice email to a fictional helper, Alex, asking for comments on the computer-help handout. Include To, a specific subject, a greeting, one clear request, when you need a reply, and a courteous close. Nothing is sent.",
+    "You are sending a notice about a fictional Saturday computer-help session. Alex runs the session, Sam organizes it and should see the notice, and 20 volunteers should not see one another’s addresses. Write who goes in To, Cc and Bcc. If Sam clicks Reply all, who receives it? Choose a time to schedule the notice, and say whether it should come from your personal account or the volunteer group’s account.",
+    "Rewrite this message so anyone can follow it: “Pls turn on MFA ASAP. Even older folks can manage it.” Spell out each abbreviation, give a clear time, and remove the assumption about age.",
+    "With your partner, choose who is owner, writer and reviewer for the handout. Say where the one shared copy would live and what access each person needs (viewer, commenter or editor). Would you edit together now (synchronous) or leave comments for later (asynchronous)? Explain why. This is a decision; no file is shared.",
+    "In Word, type the title “How to get computer help” and two steps: 1. Choose a task. 2. Visit the learning desk. Swap seats: on your partner’s handout, select one step, choose Review, then New Comment, and write a comment that names the place, the change and the reason. Swap back: reply to the comment on your handout, make or decline the change, then resolve it. Record your comment and your decision here. Leave Word open for the final check.",
+    "Open slide 14. In the practice meeting, unmute, raise your hand, lower it, then mute again. If your headset has a microphone, test it (see the quick card row Test your headset microphone). Then list four meeting or webinar habits, including asking before recording, and one detail you would confirm with the organization itself before trusting a community post.",
+    "Compare two fictional offers for a streaming TV service. Offer A: $5 a month, cancel any time before it renews. Offer B: $48 a year, paid now, renews every year. What does A cost for 12 months? For 3 months? Write two questions to ask before paying. Which would you use to pay a website you have not used before: a credit card, a debit card, a digital wallet or a person-to-person app such as Zelle? Explain why. Do not open a real store."
+  ],
+  "answers": [
+    "(a) A written message, such as email, with the details and a link to the shared handout, so the partner can answer later. (b) Tell the instructor in person now, because it is urgent and here. A phone call or text suits an urgent problem outside the room.",
+    "To: Alex. A subject that names the task (for example, Please review the computer-help handout); a greeting; one clear request; a reply-by time (for example, by Thursday at 3 p.m.); a courteous close. A partner reading it can say what to do and by when. The worksheet draft counts as a simulated email.",
+    "To: Alex. Cc: Sam. Bcc: the 20 volunteers, so their addresses stay hidden. Sam’s Reply all goes to you and Alex only; Bcc recipients do not receive a Reply all. Schedule it for working hours, such as 9 a.m. on a weekday. Send it from the volunteer group’s account. Bcc does not encrypt the message or stop forwarding.",
+    "For example: “Please turn on multifactor authentication (MFA), a second sign-in check such as a text code, by Friday. I am happy to help if you would like.” Both abbreviations are spelled out or removed, a clear time replaces ASAP, and nothing assumes age or ability.",
+    "Owner coordinates and sets access (editor); writer edits (editor); reviewer comments (commenter). One agreed copy, for example in OneDrive or Google Drive. Synchronous when everyone can work at the same time; asynchronous comments when schedules differ. A decision with a reason is enough; real sharing needs an account.",
+    "The comment names a place, a change and a reason (for example, In step 2, add the desk’s opening hours so readers know when to go). The writer replies, makes or declines the change with a reason, and resolves the comment only after that. The comment shows the station’s Word user name, not the reviewer’s.",
+    "The practice meeting is used correctly, and the microphone test shows sound if the headset has a microphone. Habits: test sound first, mute when not speaking, use raise hand, chat or Q&A as the host asks, turn on captions if helpful, ask before recording. In a webinar, attendees usually cannot unmute. Community check: hours, eligibility or cost, confirmed through the organization’s official website or phone number.",
+    "A: $60 for 12 months and $15 for 3 months. B: $48 whether you keep it 3 or 12 months, so B is cheaper only if you keep it 10 months or more. Questions: when does it renew and at what price, how do I cancel, are there refunds, what is included, who is the seller? Payment: a credit card, or a digital wallet that uses one, because a wrong or unauthorized charge can be disputed. A person-to-person app is for people you know; money sent is hard to get back. No real purchase or payment details."
+  ],
+  "slide_changes": [
+    {
+      "title": "Personal and professional identities",
+      "body": "Use the account and tone that fit your role, and check which account is active before you post or send. Use a different password for each account. A password manager is an app that stores them safely. Multifactor authentication (MFA) adds a second check, such as a text code."
+    },
+    {
+      "title": "To, Cc, and Bcc",
+      "body": "To names the person who should act. Cc sends a copy that everyone can see. Bcc hides those addresses from the others; it does not encrypt the message or stop forwarding. Reply all goes to the sender and everyone in To and Cc, so check who needs your answer."
+    },
+    {
+      "title": "Timing changes how a message lands",
+      "body": "Say when you need a reply, and consider urgency and the reader’s working hours. Scheduled send lets you write now and choose when the message goes out, such as 9 a.m. tomorrow. It will not fix unclear wording, so check the message and the time first."
+    },
+    {
+      "title": "Collaborate on one shared copy",
+      "body": "Working together lets each person add what they know and catch mistakes. Assign an owner, writer and reviewer. Agree where the one shared file lives, such as OneDrive or Google Drive, and what finished means. Clear roles reduce conflicting edits."
+    },
+    {
+      "title": "Live editing or later feedback?",
+      "cards": [
+        [
+          "Write together during class",
+          "Synchronous coauthoring in one shared Word or Google Docs file: agree who edits which section."
+        ],
+        [
+          "Review after class",
+          "Asynchronous comments in the same file, or an email: include enough context for the writer."
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledge and resolve",
+      "body": "Read a comment, ask if unclear, make or decline the change with a reason, then resolve it. A resolved comment is hidden, not deleted. For a file saved online, such as in OneDrive, version history can bring back a lost edit."
+    },
+    {
+      "title": "Meetings and webinars",
+      "body": "Test sound before you join. Mute when not speaking. Use raise hand or chat as the host asks, and turn on captions if they help. Ask before recording. In a webinar the host controls who can speak, so ask questions in Q&A or chat."
+    },
+    {
+      "title": "Goods, services, and subscriptions",
+      "body": "Goods are products; services provide work or access. Streaming plays video or music over the internet as you watch or listen: Netflix, YouTube and Spotify are examples, and hoopla is free with a West Virginia library card. A subscription can keep renewing until you cancel it."
+    },
+    {
+      "title": "Review a digital payment",
+      "body": "Know how you pay. A credit card lets you dispute a wrong charge. A digital wallet, such as Apple Pay or Google Pay, pays with a card you saved. Money sent with Zelle, Venmo or Cash App is hard to get back, so pay only people you know. Check the seller, total and refund terms first."
+    },
+    {
+      "title": "Small in-app purchases add up",
+      "body": "A free app may sell extras, and a saved card makes each one a single tap. Turn on a password or approval for purchases, and check your receipts. Deleting an app does not cancel its subscription. Do not buy anything during this activity."
+    },
+    {
+      "title": "Knowledge check: useful feedback",
+      "body": "Which comment best supports revision?",
+      "options": [
+        "Nice work! The handout looks good to me as it is.",
+        "In step 2, name the room so readers know where to go.",
+        "Step 2 is confusing and needs to be much clearer."
+      ],
+      "answer": 1,
+      "why": "It names the place (step 2), the change (name the room) and the reason (readers can find it). Praise alone or a vague complaint gives the writer nothing to act on."
+    },
+    {
+      "title": "Knowledge check: a trial offer",
+      "body": "Before starting a free trial, what should you check?",
+      "options": [
+        "Only that the first seven days cost nothing",
+        "The renewal price, renewal date and how to cancel",
+        "That deleting the app later will stop the charges"
+      ],
+      "answer": 1,
+      "why": "A free trial usually becomes a paid plan unless you cancel the way the seller says. Deleting the app does not cancel the subscription."
+    },
+    {
+      "title": "Lab: coordinate a small team",
+      "body": "Show your instructor three things: your To, Cc and Bcc choices, a comment you answered and resolved, and your offer comparison with a way to pay."
+    }
+  ],
+  "prep": "Each station: Microsoft Edge, Microsoft Word, a headset (with a microphone if you have them), this lesson and worksheet, and scrap paper or the Windows Calculator for task 8. At the front: the projector showing Edge and Word, and a board for the warm-up answers. Learners have no email, meeting or cloud account, so the email in tasks 2 and 3 is a practice draft in the worksheet, the comments in task 6 happen in a local Word document by swapping seats, and slide 14 stands in for a real meeting; mark this evidence simulated. Show Cc, Bcc, Schedule send, sharing a Word file or version history live only from a demonstration account, never your personal inbox; otherwise use the practice views on slides 4, 5, 6, 11, 13 and 14. No purchase, payment detail or real store page is used. Before class, open a blank Word document and check that Review › New Comment, Reply and Resolve work. Play chapters 2, 4 and 6 with captions to check sound and rehearse the pauses at 1:29 and 2:54. Keep 3–5 printed worksheets in case the network fails. After your own run-through, close Word without saving and select Start fresh on this computer at each station.",
+  "lab_paths": [
+    [
+      "Check which account you are using",
+      "In Edge, select your profile picture at the top of the window. The menu shows the name and email of the account that is signed in. Select Manage profile settings to see more."
+    ],
+    [
+      "Add Cc or Bcc to an email",
+      "Outlook.com: in a new message, select Cc or Bcc on the right side of the To line. New Outlook app: Options › Show fields › Show Bcc. Gmail: in a new message, select Cc or Bcc on the To line."
+    ],
+    [
+      "Reply or Reply all",
+      "Reply goes only to the sender. Reply all goes to the sender and everyone on the To and Cc lines, never to Bcc. Check the list before you select Send."
+    ],
+    [
+      "Schedule an email",
+      "Outlook.com or new Outlook: select the arrow next to Send, then Schedule send, and pick a time. Gmail: select the arrow next to Send, then Schedule send. Check the time zone."
+    ],
+    [
+      "Add a comment in Word",
+      "Select the words, then Review › New Comment (or press Ctrl, Alt and M). Type your comment. If you see a Post button, select it (or press Ctrl and Enter)."
+    ],
+    [
+      "Reply to and resolve a comment in Word",
+      "Select the comment and type in its Reply box, then post it. When the change is made, select More thread actions (···) › Resolve thread. If the comment shows a Resolve button instead, select it."
+    ],
+    [
+      "Share a Word file to write together (needs OneDrive)",
+      "Select Share at the top right, above the ribbon. Save the file to OneDrive if asked, enter the person’s email, choose whether they can edit or only view, then select Send. Lab computers have no OneDrive account."
+    ],
+    [
+      "See earlier versions of a Word file",
+      "Only for files saved in OneDrive or SharePoint. Microsoft 365: select the file name at the top of the window, then Version history. Word 2021 and earlier: File › History."
+    ],
+    [
+      "Test your headset microphone",
+      "Start › Settings › System › Sound. Under Input, choose the headset, then select the arrow at the right of its name. Select Start test and speak, then Stop test."
+    ],
+    [
+      "Mute and raise your hand in a meeting",
+      "Microsoft Teams: Ctrl, Shift and M mutes or unmutes; Ctrl, Shift and K raises or lowers your hand. Zoom: Alt and A mutes or unmutes; Alt and Y raises or lowers your hand."
+    ],
+    [
+      "Turn on meeting captions",
+      "Microsoft Teams: More (···) › Language and speech › Show live captions. Zoom: select Show captions on the toolbar, or More › Show captions. The host can turn captions off."
+    ],
+    [
+      "Cancel a subscription",
+      "Microsoft: in Edge go to account.microsoft.com/services, sign in, select Manage next to the subscription, then Cancel. Google Play: go to play.google.com/store/account/subscriptions, select Manage, then Cancel subscription. Deleting an app does not cancel it."
+    ]
+  ],
+  "other_changes": [
+    {
+      "file": "scripts/dl2/scenes.py (4,16) and scripts/dl2/photo_scenes.py (4,16)",
+      "change": "In the Subscription choice, replace the consequence “Streaming delivers media over a connection; check any renewal terms.” with “Streaming examples: Netflix, YouTube, Spotify; hoopla is free with a WV library card. Check renewal terms.” Keep the two fields in photo_scenes.py.",
+      "why": "IC3 5.2.4 asks learners to identify streaming services; the slide scene still names none after the body is fixed.",
+      "effort": "small",
+      "before_next_session": true
+    },
+    {
+      "file": "scripts/dl2/scenes.py (4,17) and scripts/dl2/photo_scenes.py (4,17)",
+      "change": "Add a fourth choice to the practice checkout: ('Method','How are you paying?','Credit card · digital wallet · payment app','A card charge can be disputed. Money sent by a payment app is hard to get back; pay only people you know.'), and a matching fourth row ('Method','Card, wallet or payment app?') in photo_scenes.py.",
+      "why": "Gives the payment-method distinction (IC3 5.2.2) a Show that matches worksheet task 8 and the slide 17 body.",
+      "effort": "small",
+      "before_next_session": true
+    },
+    {
+      "file": "scripts/dl2/photo_scenes.py (4,18) and scripts/dl2/scenes.py (4,18)",
+      "change": "Change the Controls value to “Password or approval for purchases + receipts” and add “Deleting an app does not cancel a subscription.” to the Controls consequence.",
+      "why": "IC3 5.2.3 asks for the security concerns of in-app purchases; the scene only says “review purchase settings”.",
+      "effort": "small",
+      "before_next_session": false
+    },
+    {
+      "file": "scripts/dl2/build-pages.py (plan template, “Facilitation and access”)",
+      "change": "No new edit: keep the shared text already in the uncommitted working tree (“Every learner works at their own workstation; a partner coaches but does not take over.”) and its per-cycle video note. Week 4’s own prep key replaces the generic PREP text.",
+      "why": "The old template (“Pair a driver and coach, then switch.”) contradicted the cycle agendas. The working-tree change fixes it for all six plans; no week 4 edit is needed beyond the prep key.",
+      "effort": "small",
+      "before_next_session": true
+    },
+    {
+      "file": "courses/digital-literacy-2/assets/workshop.js (meeting-mic and hand branches)",
+      "change": "Keep static button names (“Microphone”, “Raise hand”) and let aria-pressed carry the state, or keep the changing label and drop aria-pressed (review finding AX-13).",
+      "why": "Slide 14 is now the Do for task 7. Today a screen reader hears “Mute microphone, pressed” when the microphone is on, which is the opposite of what a learner expects.",
+      "effort": "small",
+      "before_next_session": true
+    },
+    {
+      "file": "scripts/dl2/author-assessments.py (Collaboration 6.1 feedback pair; Collaboration 6.2 pair)",
+      "change": "Rewrite the post version of the feedback pair with a new situation (for example, a flyer missing the bus stop), since it repeats the slide 13 contact-number example. Re-pair the 6.2 item so pre and post test the same subskill (recording consent or muting, not one of each). Consider a 5.2 pair on person-to-person payments for the next cohort.",
+      "why": "Review findings AS-08 and AS-09: the post-test should test transfer, not recall of the week 4 slide. Must be done before the 26 October post-test.",
+      "effort": "small",
+      "before_next_session": false
+    },
+    {
+      "file": "video/digital-literacy-2/week-04 (scripts/dl2/video-scenes.py, scripts/dl2/screen-share-scenes.py, narration beats 2, 4, 6 and 9)",
+      "change": "At the next re-render: add a 5–10 second silent hold with a “Pause here” card after the prompts at 1:29, 2:54, 4:22 and 6:35; hold the chapter 4 demo on the full recipient list until after the hold; add one chapter 9 line and visual on paying by card, wallet or person-to-person app, with one streaming example; type the chapter 6 comment in rather than swapping it; re-record chapter 6 below 150 words per minute; re-encode the audio to AAC 128k like the other weeks.",
+      "why": "The chapter 2 answer follows the prompt in 0.8 seconds and the chapter 4 demo removes the recipients 0.9 seconds after its prompt. Chapter 6 runs at 177.6 words per minute, the fastest in the week. Week 4 kept 185 kbps audio (review findings VM-01, VM-02, VM-17).",
+      "effort": "large",
+      "before_next_session": false
+    }
+  ],
+  "instructor_notes": [
+    "Pause the video by hand at 1:29 (chapter 2; the answer starts 0.8 seconds later), 2:54 (chapter 4; the demo removes the extra recipients about a second later), 4:22 (chapter 6) and 6:35 (chapter 9; chapter 10 starts 2 seconds later). Keep a hand on the pause key.",
+    "The slides and the video order community differently. After slide 14, use the sidebar to jump back to slides 8 and 9, then play chapter 8. Slide 15 is the chapter menu for replays, not a block to play straight through.",
+    "The seat swap in task 6 is how learners practise asynchronous comments without accounts. The comment will show the station’s Word user name, not the reviewer’s; say so before they start. If Resolve is greyed out, the title bar may say Compatibility Mode; start a new blank document.",
+    "Level 1 week 3 already taught Reply, Reply all, Forward, Bcc and inclusive language. Ask what learners remember before each Tell, and keep the Tell short where they already know it.",
+    "Handle payments with care. Many learners use Zelle or Venmo with family, which is fine. The point is that money sent to a stranger is hard to get back, and anyone who demands payment by app, gift card or wire is a scammer. Never ask anyone to share real balances or account details.",
+    "If you run long, make task 5 an oral pair decision and skip the live microphone test in Cycle D. Do not cut the Do in Cycle C or Cycle E. On the Windows 10 lab PCs the microphone page may look slightly different from the Windows 11 quick card."
+  ]
+}

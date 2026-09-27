@@ -1,0 +1,321 @@
+{
+ "objectives": [
+  "Give a handout real headings, numbered steps and a clear link.",
+  "Use shortcuts and Track Changes to edit safely and let the owner decide.",
+  "Add costs with a SUM formula and check that the total updates.",
+  "Make three matching slides with a cropped, described and credited photo.",
+  "Save a PDF, check it, and choose the right file type for the next person."
+ ],
+ "outcomes": [
+  "Handout: in Word at a lab workstation, each learner types the given handout lines, applies Heading 1 and Heading 2 styles, makes the steps a numbered list, and confirms that both headings appear in the Navigation pane. All correct with no more than one prompt, and no heading made with bold alone.",
+  "Editing and review: in their own handout, each learner adds a link whose text names the destination (Ctrl and K), copies, pastes and undoes one phrase, and saves the file in the Resource pack folder; then, at a partner's seat, turns on Track Changes and makes one edit, and back at their own seat accepts or rejects the partner's edit with a stated reason.",
+  "Workbook: given supplies.csv in Excel, each learner types =SUM(B2:B4) in B5 and presses Enter, confirms 25, writes a prediction before changing paper to 15, confirms 28, and saves the file as an Excel workbook so the formula is kept. All steps correct with no more than one prompt.",
+  "Slides and media: in PowerPoint, each learner builds three slides (need, steps, help) with one theme, inserts the practice photo, crops it without changing the photo file, adds alt text that says what the photo shows and a credit line, and says in one sentence what trimming and splitting remove from a video clip.",
+  "Export: each learner saves the handout as a PDF in the Resource pack folder, opens it from File Explorer, checks the headings, numbered steps and link, and names the right format for a reader (PDF), a co-editor (Word document) and a tool that needs plain rows (CSV)."
+ ],
+ "agenda": [
+  [
+   10,
+   "Warm-up: reconnect",
+   "Reconnect: two or three learners share last week's home task or one improvement. Recall Level 1, where you typed a short Word document and saved it with a clear name, and week 2 slide 11 (clear file names, one folder). Every learner opens File Explorer, goes to Documents and makes a folder named Resource pack; every file tonight goes there. Learners open the worksheet from slide 21."
+  ],
+  [
+   5,
+   "Introduction",
+   "Slides 1 and 2. Read the goals on slide 1 aloud and say tonight uses Word, then Excel, then PowerPoint, one at a time. Play chapter 1 from slide 15's chapter list. Ask slide 2's question; learners write worksheet task 1."
+  ],
+  [
+   16,
+   "Cycle A: a handout with structure",
+   "Tell: slides 3, 5 and 7 (real headings, one clear paragraph, link text that names the destination). Show: chapter 2, then live in Word: Home › Styles › Heading 1, Home › Numbering, and View › Navigation Pane. Do: worksheet task 2, every learner at their own seat. Review: a partner confirms both headings appear in the Navigation pane and the steps are numbered; re-model for anyone who used bold."
+  ],
+  [
+   13,
+   "Cycle B: edit and review",
+   "Tell: slides 4 and 6. Show: chapter 3; pause at 1:58 and ask each learner to name one change that would help the reader. Then live in Word: Ctrl and K for a link, Ctrl and C, V and Z, File › Save As into Resource pack, and Review › Track Changes with Accept and Reject. Do: worksheet task 3, then task 4 by swapping seats, every learner; the owner makes the final choice. Review: the slide 20 knowledge check."
+  ],
+  [
+   10,
+   "Break",
+   "Offer a screen-free break. Learners minimize Word; they will need it again in cycle E."
+  ],
+  [
+   19,
+   "Cycle C: a total that recalculates",
+   "Tell: slides 8, 9 and 10. Show: chapter 4, then chapter 5; pause at 2:59, before the narrator gives the totals, and have learners write what B5 will show now and after paper becomes 15. Play to 3:12 to check, then stop; skip the 3:25 prompt, which comes after the answer. Type the formula live in Excel and say each key: equals, SUM, open bracket, B2, colon, B4, close bracket, Enter. Do: worksheet task 5, every learner, saved as an Excel workbook. Review: the slide 19 knowledge check; a partner reads the formula bar. Then Tell and Show only: slide 11 and chapter 6, with Insert › Recommended Charts on the projector (optional for fast finishers)."
+  ],
+  [
+   17,
+   "Cycle D: slides and a picture",
+   "Tell: slides 12, 13 and 16 (one theme, crop versus resize, credit the creator). Show: chapter 7, then live in PowerPoint: Blank Presentation, a theme on the Design tab, New Slide, Insert › Pictures › This Device, Picture Format › Crop, and right-click › View Alt Text. Do: worksheet tasks 6 and 7, every learner, with the practice photo. Review: a partner reads the alt text aloud without looking at the photo and checks the credit line."
+  ],
+  [
+   12,
+   "Cycle E: video edits and export",
+   "Tell and Show: slide 14 and chapter 8; every learner tries Trim and Remove a middle section on slide 14 and says what each removes (the Windows video editor needs an account, so we practice here). Tell: slides 17 and 18. Show: chapter 9, then in Word: File › Save a Copy › Browse › PDF into Resource pack, and open the PDF from File Explorer. Do: worksheet task 8, every learner. Review: ask aloud which format suits a neighbor, a co-editor and a tool that needs rows."
+  ],
+  [
+   10,
+   "Individual check",
+   "Play chapter 10 (pause at 6:28); partners try each other's PDF without help. Each learner shows you three things: both headings in the Navigation pane, B5 showing =SUM(B2:B4) and 28, and the PDF opened from Resource pack with a working link. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+  ],
+  [
+   8,
+   "Apply and close",
+   "Slides 22 and 23. Home task: on any computer, make one real notice with a heading and numbered steps, or a three-line list with a SUM total, and share one improvement at the start of week 4. Save or print the worksheet. Learners copy Resource pack to a flash drive if they want to keep it, then delete it; select Start fresh on this computer."
+  ]
+ ],
+ "lab": [
+  "Who will read a computer-help handout, and what should they do after reading it? Write one sentence that names the reader and the next action.",
+  "In Word, open a blank document and type these lines, one per line: Computer help at the library / Who it helps / Anyone who wants to practice one computer task. / Steps / Choose one task. / Visit the learning desk. / Ask how to repeat it at home. Make the first line Heading 1, and Who it helps and Steps Heading 2 (Home › Styles). Select the three steps and choose Home › Numbering. Open View › Navigation Pane and check that both headings are listed.",
+  "Add a last line: Read the computer-help guide. Select it, press Ctrl and K, type https://example.org/help in the Address box and select OK. Select the words learning desk, press Ctrl and C, click at the end of the last line, press Ctrl and V, then Ctrl and Z to undo. Save the file as resource-handout in your Resource pack folder. Record the shortcut that helped most.",
+  "Swap seats with your partner. In their handout, select Review › Track Changes and change one word to make a step clearer. Swap back. Find your partner's change, select Review › Accept or Reject, and write your reason.",
+  "Download supplies.csv (button below) and open it in Excel. Type Total in A5. Click B5, type =SUM(B2:B4) and press Enter; B5 should show 25. Before you change anything, write what B5 will show if paper costs 15. Click B2, type 15 and press Enter, then check B5. Save with File › Save As as an Excel Workbook named supplies in your Resource pack folder.",
+  "In PowerPoint, choose Blank Presentation and pick one theme on the Design tab. Make three slides titled Need computer help? / Steps / Where to get help. Paste the three steps from your handout on slide 2, and type Visit the learning desk on slide 3. Check the words can be read from the back of the room. Save as resource-slides in your Resource pack folder.",
+  "Download the practice photo (button below). On slide 1, choose Insert › Pictures › This Device and insert it. Select Picture Format › Crop, drag the black handles in so the two people and the handout fill the picture, and press Esc. Right-click the photo, choose View Alt Text, and write one sentence about what it shows. Type this credit in the subtitle box: Photo: VUB practice photo, used with permission. Save.",
+  "In Word, save the handout as a PDF: File › Save a Copy (or Save As) › Browse, open Resource pack, set Save as type to PDF and select Save. Open Resource pack in File Explorer and double-click the PDF. Check the headings, numbered steps and link. Write which format fits a neighbor who only reads it, a partner who must edit it, and a tool that needs plain rows."
+ ],
+ "answers": [
+  "Names a specific reader (for example, a neighbor who wants computer help) and one next action (for example, visit the learning desk).",
+  "The first line uses Heading 1, and Who it helps and Steps use Heading 2, not bold; the three steps are numbered; both headings appear in the Navigation pane.",
+  "The link text names the destination and the link opens; paste and undo worked with no lost text; resource-handout is in the Resource pack folder; one useful shortcut is named.",
+  "The edit appeared as a tracked change before the owner selected Accept or Reject; the reason names what the reader needs. Only the owner makes the final choice.",
+  "B5 shows =SUM(B2:B4) in the formula bar and 25; a written prediction came before the change; B5 shows 28 after B2 becomes 15; saved as supplies.xlsx. Saving as CSV would keep the number but drop the formula.",
+  "Three slides in the order need, steps, help; one theme on all three; text readable from the back of the room; the steps match the handout.",
+  "The photo is cropped in PowerPoint and the photo file itself is unchanged; the alt text says in one sentence what the photo shows; the credit line names the source and the permission.",
+  "The PDF is in Resource pack and opens; the checks name headings, steps and a working link; a reader gets the PDF, an editor the Word document, and a tool that needs rows gets CSV."
+ ],
+ "slide_changes": [
+  {
+   "title": "A document needs structure",
+   "body": "Use a descriptive title, real heading styles, short sections and a numbered list of steps. Bold text only looks like a heading. Screen readers (software that reads the screen aloud) and Word's Navigation pane find real headings, not bold."
+  },
+  {
+   "title": "Keyboard shortcuts with a purpose",
+   "body": "Ctrl+C copies; Ctrl+V pastes; Ctrl+Z undoes; Ctrl+S saves; Ctrl+K adds a link. Select only the text you want to change first. On a Mac at home, use Command instead of Ctrl."
+  },
+  {
+   "title": "Track a proposed change",
+   "body": "In Word, select Review › Track Changes, then make one edit. It shows as a suggestion. The document's owner selects Accept or Reject; a comment can explain why. Google Docs calls this Suggesting."
+  },
+  {
+   "title": "Prepare a handout someone can read",
+   "body": "Use real headings, readable type and link text that names the destination. Give each informative picture alternative text (alt text): a short description that screen-reading software reads aloud. Right-click the picture and choose View Alt Text. Do not rely on color alone."
+  },
+  {
+   "title": "Build a fictional supply budget",
+   "body": "Open supplies.csv in Excel. Click B5 and type =SUM(B2:B4). The equals sign starts a formula, and the colon means through: B2 through B4. Press Enter. B5 shows 25."
+  },
+  {
+   "title": "Check the formula, not just the appearance",
+   "body": "Predict first: what will B5 show if paper costs 15? Then type 15 in B2 and press Enter. The total should become 28. If it stays at 25, check the range and whether a number was typed as text."
+  },
+  {
+   "title": "A chart answers a question",
+   "body": "A bar chart can compare costs. In Excel, select A1:B4, then Insert › Recommended Charts. Give it a title with units, and keep the table so no one has to judge by color."
+  },
+  {
+   "title": "Three slides; one useful message",
+   "body": "Slide 1: the need. Slide 2: the steps. Slide 3: where to get help. Pick one theme on the Design tab so all three match, and keep text large enough for the back of the room."
+  },
+  {
+   "title": "Crop, resize, and preserve the original",
+   "body": "Crop trims the outer edges. Resize changes the size. In PowerPoint, select the picture, then Picture Format › Crop. To resize without stretching, hold Shift and drag a corner. The photo file on your computer does not change. Keep the creator's credit."
+  },
+  {
+   "title": "Basic video editing",
+   "body": "Trim removes unwanted material at the start or end. Split lets you remove a middle section. Keep speech clear and check that captions still match. The Windows video editor, Clipchamp, needs a Microsoft account, so practice on this slide."
+  },
+  {
+   "title": "Choose a format for the next person",
+   "body": "An editable document supports revision. PDF keeps a finished layout. CSV keeps plain values only: saving a workbook as CSV drops its formulas and formatting."
+  },
+  {
+   "title": "Inspect the export",
+   "body": "Open the PDF from its folder, not from Word. Check headings, page breaks, links and missing content. Check the file name and folder. The PDF is a separate file, so test it on its own.",
+   "refs": [
+    "4.2",
+    "4.4"
+   ]
+  },
+  {
+   "title": "Knowledge check: a changing total",
+   "body": "Which formula adds the values in B2, B3 and B4?",
+   "options": [
+    "=SUM(B2,B4)",
+    "=SUM(B2:B4)",
+    "SUM(B2:B4)"
+   ],
+   "answer": 1,
+   "why": "The equals sign starts a formula, and the colon means through, so B2:B4 adds B2, B3 and B4. A comma adds only the cells it lists. Without the equals sign, Excel treats it as text."
+  },
+  {
+   "title": "Knowledge check: a proposed edit",
+   "body": "You want to reword one step in a partner's handout and let the owner keep or undo your wording with one click. What should you use?",
+   "options": [
+    "Type over the step",
+    "Turn on Track Changes",
+    "Email a changed copy"
+   ],
+   "answer": 1,
+   "why": "Track Changes shows your edit as a suggestion, and the owner selects Accept or Reject. Typing over hides what changed; a changed copy makes the owner compare by eye."
+  },
+  {
+   "title": "Lab: your resource pack",
+   "body": "Open the worksheet now and keep it open. Do each task right after its demonstration. Save every file in your Resource pack folder in Documents."
+  }
+ ],
+ "prep": "Each station: Microsoft Word, Excel and PowerPoint that open without a sign-in, Microsoft Edge, headphones, and this lesson and worksheet. Before class, check that Word and Excel can save to Documents on This PC, not only OneDrive, and that Edge can download supplies.csv and the practice photo from the worksheet; if downloads are blocked, copy both files into Documents on each station. No account is needed: the tracked edit is done by swapping seats, and video editing is practiced on slide 14 because Clipchamp needs a Microsoft account. Nothing needs printing; learners may print the worksheet. At the front: Word, Excel and PowerPoint ready on the projector. Play video chapters 2 and 5 with captions to check sound, and practice the pause at 2:59. Keep a roster for the individual check. If this class falls on a federal holiday, confirm the building and lab are open. After your own run-through, delete your Resource pack folder and downloads, then select Start fresh on this computer at each station.",
+ "lab_paths": [
+  [
+   "Make the Resource pack folder",
+   "Open File Explorer and go to Documents. Select New › Folder, type Resource pack and press Enter."
+  ],
+  [
+   "Save a file into Resource pack",
+   "File › Save As › Browse. Open Documents › Resource pack, type the file name and select Save. After that, Ctrl and S saves your changes."
+  ],
+  [
+   "Apply a heading and check it",
+   "Select the line, then on the Home tab choose Heading 1 or Heading 2 in the Styles gallery. To check, select View › Navigation Pane (or press Ctrl and F) and look under Headings."
+  ],
+  [
+   "Make a numbered list",
+   "Select the lines, then select Home › Numbering."
+  ],
+  [
+   "Add a link",
+   "Select the link text and press Ctrl and K (or Insert › Link). Type the web address in the Address box and select OK."
+  ],
+  [
+   "Copy, paste and undo",
+   "Select the words. Ctrl and C copies, Ctrl and V pastes, and Ctrl and Z undoes the last change."
+  ],
+  [
+   "Track a change, then decide",
+   "Review › Track Changes (or Ctrl and Shift and E), then make your edit. To decide, select the change and choose Review › Accept or Reject."
+  ],
+  [
+   "Open supplies.csv in Excel",
+   "In Edge, press Ctrl and J and select Open file under supplies.csv. Or in Excel: File › Open › Browse › Downloads, choose Text Files in the file-type list, and double-click supplies.csv."
+  ],
+  [
+   "Add a total with SUM",
+   "Click B5. Type =SUM(B2:B4) and press Enter. Start with the equals sign, and type a colon between B2 and B4."
+  ],
+  [
+   "Keep the formula when you save",
+   "File › Save As › Browse. In Save as type, choose Excel Workbook (*.xlsx), then select Save. Saving as CSV keeps only the values."
+  ],
+  [
+   "Start slides with one theme",
+   "Open PowerPoint and select Blank Presentation. On the Design tab, select a theme. Home › New Slide adds a slide."
+  ],
+  [
+   "Insert and crop a picture",
+   "Insert › Pictures › This Device, choose the photo and select Insert. Select Picture Format › Crop, drag the black handles inward, then press Esc."
+  ],
+  [
+   "Add alt text",
+   "Right-click the picture and choose View Alt Text (or Picture Format › Alt Text). Type one or two sentences that say what the picture shows."
+  ],
+  [
+   "Save the handout as a PDF",
+   "In Word, File › Save a Copy (or Save As) › Browse. Open Resource pack, set Save as type to PDF and select Save. Double-click the PDF in File Explorer to open it."
+  ]
+ ],
+ "other_changes": [
+  {
+   "file": "courses/digital-literacy-2/assets/practice-photo.jpg (new)",
+   "change": "Add a JPG made from assets/photos/resource-pack.webp at 1376 x 768 (ffmpeg -i resource-pack.webp -q:v 3 practice-photo.jpg). A ready copy is at scratchpad/video-eval/week-03-practice-photo.jpg (119 KB). Suggested alt text: Two people at a library table read a printed handout together.",
+   "why": "The current practice image is an SVG of abstract shapes: Paint and Photos cannot crop it and it has nothing to describe for alt text. This photo is the same one slide 12 shows as slide 1 of the model presentation, so the Show matches the Do.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/build-pages.py (line 91, the n==3 worksheet actions)",
+   "change": "Replace the link to assets/community-resource.svg ('Original practice image') with assets/practice-photo.jpg, labelled 'Practice photo (JPG)'. Keep the supplies.csv button.",
+   "why": "Worksheet task 7 names the practice photo; learners need a raster file PowerPoint, Paint and Photos all open.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/scenes.py (crop(), about line 161)",
+   "change": "Point the slide 13 crop-lab image at /courses/digital-literacy-2/assets/practice-photo.jpg with width 1376, height 768 and alt 'Two people at a library table read a printed handout together.'",
+   "why": "The current alt text ('community resource information') describes information the SVG does not contain, and the Show should use the same picture as the Do.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/build-pages.py (lesson-plan 'Facilitation and access' and worksheet intro; all weeks)",
+   "change": "Replace 'Pair a driver and coach, then switch.' with 'Every learner does each task at their own seat; a partner coaches but never takes over.' In the worksheet intro, replace 'Work with a partner, take turns' with 'Do each task yourself; a partner checks'.",
+   "why": "The generated plan still contradicts the 'every learner' Do in the new agendas (the week 1 test checks only the agenda).",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/build-pages.py ('Using the chaptered video' paragraph; all weeks)",
+   "change": "Replace 'Use relevant chapters during the demonstration phases, within the existing time allocation...' with 'Play each chapter as the Show inside its cycle. Pause at the times named in the agenda, before the narrator gives an answer.'",
+   "why": "The generic paragraph describes the old block plan and conflicts with the cycle agenda printed above it.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/author-content.py (week 3 slide 'Inspect the export')",
+   "change": "Change refs from ['4.4'] to ['4.2','4.4'].",
+   "why": "Week 3 claims objective group 4.2 but no slide carries it (earlier review CP-10). The new plan practices 4.2.1 by saving every file into one named folder.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/build-pages.py (syllabus 'Materials and access')",
+   "change": "Name the apps: 'Word, Excel and PowerPoint (or similar), a PDF viewer such as Microsoft Edge, and a plain-text editor.'",
+   "why": "Week 3 needs a presentation app and a PDF viewer, which no course list names (CP-17, IR-07).",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/author-content.py (week 2 agenda, apply-and-close row)",
+   "change": "Add: 'Remind learners that class meets on Monday, October 12, although it is a federal holiday.'",
+   "why": "Learners may assume a holiday closure; week 2 (October 5) is the last class before it.",
+   "effort": "small",
+   "before_next_session": true
+  },
+  {
+   "file": "scripts/dl2/author-content.py (week 5 challenge row 4 and the 'Performance challenge' agenda row)",
+   "change": "Replace 'Open supplies.csv from week 3' and 'Keep supplies.csv from week 3 open on each workstation' with 'Download a fresh supplies.csv (button below)'.",
+   "why": "In week 3, learners now change paper to 15 and save supplies.xlsx, then delete their folder; the week 5 row expects the original values and a total of 25.",
+   "effort": "small",
+   "before_next_session": false
+  },
+  {
+   "file": "scripts/dl2/author-assessments.py (post-test item 14)",
+   "change": "Use new numbers and items rather than the week 3 slide 10 wording (12 to 15, total 28).",
+   "why": "Post-14 repeats slide 10 almost word for word (earlier review AS-08), so it tests recall of the slide, not the skill.",
+   "effort": "small",
+   "before_next_session": false
+  },
+  {
+   "file": "video/digital-literacy-2/week-03 (SCRIPT.md, narration beat 5) and scripts/dl2/screen-share-scenes.py (chapter 5 states)",
+   "change": "Re-record chapter 5 in this order: select B5, type an equals sign, SUM, the range with a colon, press Enter, check 25, pause to predict with a 5-second hold on the Predict card, change paper to 15, observe 28. Remove the stray 'Supplies' label beside row 5 (screen-share-scenes.py line 189).",
+   "why": "The narration gives 25 at 3:01 and 28 at 3:07, then asks learners to predict at 3:22; the Predict card shows for 0.76 s; typing '=', ':' and Enter are never said (VM-03, VM-12).",
+   "effort": "large",
+   "before_next_session": false
+  },
+  {
+   "file": "scripts/dl2/screen-share-scenes.py (chapter 2) and scripts/dl2/video-scenes.py (chapters 4 and 9)",
+   "change": "Chapter 2: relabel 'Open Styles → choose Heading 1' as 'Home › Styles › Heading 1', show a Styles-gallery control instead of a 'Normal text' drop-down, and hold each label at least 2.5 s. Chapter 4: remove 'Total 25' and '=SUM(B2:B4)' from the table visual. Chapter 9: split 'CSV · Inspect values; record image credit' into a CSV beat and a credit beat. Re-render.",
+   "why": "The Heading 1 step shows for 0.86 s under a label that does not match the control (VM-06); chapter 4 reveals the formula and total before chapter 5 teaches them; the chapter 9 caption mixes two ideas.",
+   "effort": "medium",
+   "before_next_session": false
+  }
+ ],
+ "instructor_notes": [
+  "Play chapter 5 only to 2:59 first. Ask for two written predictions, then play to 3:12. Skip the 3:25 prompt, because the video has already given the answer.",
+  "Type the formula live and say each key: equals, SUM, open bracket, B2, colon, B4, close bracket, Enter. The video never tells learners to type = or : or to press Enter.",
+  "Use one app per cycle: Word in A and B, Excel in C, PowerPoint in D, then Word and File Explorer in E. Minimize each app when its cycle ends.",
+  "Swapping seats is the account-free way to track a partner's edit. Say who sits where before you start; the owner always makes the final Accept or Reject.",
+  "If you run late, cut in this order: the chart Show in cycle C, then slides 2 and 3 of task 6 (keep slide 1 with the cropped, described photo). Never cut the formula Do or the PDF check.",
+  "October 12 is a federal holiday. Remind learners on October 5 that class still meets, and confirm the lab is open."
+ ]
+}
