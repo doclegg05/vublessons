@@ -19,11 +19,29 @@ test('Week 1 agenda teaches each skill group as its own Tell, Show, Do, Review c
  expect(all).toMatch(/every learner/i);
 });
 
-test('Week 1 plays each video chapter inside its cycle and names the pause points',()=>{
+test('Week 1 teaches live; the video is home viewing, and every unit is on the run sheet',()=>{
  const all=w1.agenda.map(a=>a[2]).join(' ');
- for(let ch=1;ch<=10;ch++)expect(all,`chapter ${ch} is scheduled`).toMatch(new RegExp(`\\bchapters? (?:\\d+(?:[–-]| and ))?${ch}\\b|\\bchapters? ${ch}(?:[–-]| and )\\d+`));
- for(const t of ['1:24','2:02','5:36','6:28'])expect(all,`pause at ${t}`).toContain(t);
- expect(all).not.toMatch(/Play the explainer/);
+ for(const [,phase,action] of w1.agenda.filter(([,p])=>/^Cycle/.test(p)))expect(action,`${phase} plays no video`).not.toMatch(/chapter \d|Play the explainer|Play chapter/);
+ expect(w1.agenda.at(-1)[2]).toMatch(/video/i);
+ // Units are the single source: five, each with the Tell, Show, Do, Review parts, in the agenda order.
+ const units=w1.runsheet.filter(x=>x.kind==='unit');
+ expect(units.map(u=>u.letter)).toEqual(['A','B','C','D','E']);
+ expect(w1.runsheet.reduce((n,x)=>n+x.minutes,0)).toBe(120);
+ const run=text(read(`${dir}/run-sheet.html`));
+ for(const u of units){
+  for(const key of ['problem','do'])expect(u[key].length).toBeGreaterThan(20);
+  for(const key of ['tell','show','review'])expect(u[key].length).toBeGreaterThan(0);
+  expect(u.show.length,`unit ${u.letter} shows real clicks`).toBeGreaterThanOrEqual(3);
+  for(const step of u.show)expect(run).toContain(step);
+  expect(u.do).toMatch(/every learner/);
+  const row=w1.agenda.find(([,p])=>p.startsWith(`Cycle ${u.letter}`));
+  expect(row[0]).toBe(u.minutes);
+  for(const s of u.slides)expect(w1.slides.map(x=>x.title)).toContain(s);
+ }
+ // The post-test items that belong to week 1 are each the target of a unit.
+ const tested=units.flatMap(u=>u.tested);
+ for(const item of ['post 1','post 2','post 3','post 4','post 8'])expect(tested).toContain(item);
+ expect(run).toMatch(/Pose the problem/);
 });
 
 test('Week 1 pre-test step records each score instead of printing full reports',()=>{
@@ -40,11 +58,13 @@ test('Week 1 lesson plan states measurable ABCD outcomes, including the two that
 });
 
 test('Week 1 worksheet tasks give learners everything they need to finish them',()=>{
- const [,,,t4,t5,,t7,t8]=w1.lab;
- for(const job of ['external screen','wired network','flash drive'])expect(t4).toContain(job);
- expect(t5).toMatch(/paper/i);expect(t5).toMatch(/simulated/i);
- expect(t7).toMatch(/page 1 of this worksheet/i);expect(t7).toMatch(/Ctrl and P/);
- expect(t8).toMatch(/\bteh\b/);expect(t8).toMatch(/Ctrl and Z/);
+ // Tasks follow the units: 2 zoom, 3 sound, 4 print preview, 5 cables, 6 paper calendar, 7 views and sharing, 8 undo and help.
+ const [,,,print,cables,calendar,,help]=w1.lab;
+ for(const job of ['external screen','wired network','flash drive'])expect(cables).toContain(job);
+ expect(calendar).toMatch(/paper/i);expect(calendar).toMatch(/simulated/i);
+ expect(print).toMatch(/page 1 of this worksheet/i);expect(print).toMatch(/Ctrl and P/);
+ expect(help).toMatch(/\bteh\b/);expect(help).toMatch(/Ctrl and Z/);
+ expect(w1.lab).toHaveLength(8);
 });
 
 test('Week 1 slides say how printers, screens and connectors really behave',()=>{
@@ -62,11 +82,12 @@ test('Week 1 knowledge checks offer believable wrong answers',()=>{
  for(const silly of ['Buy a new monitor','Erase the browser history','Publish your account password'])expect(options).not.toContain(silly);
 });
 
-test('Week 1 lab quick card gives Windows 11 steps on the lesson plan and the worksheet',()=>{
+test('Week 1 lab quick card gives Windows 10 steps, with Windows 11 notes, on the lesson plan and the worksheet',()=>{
+ expect(w1.lab_os).toBe('Windows 10');
  expect(w1.lab_paths.length).toBeGreaterThanOrEqual(8);
  for(const row of w1.lab_paths)expect(row).toHaveLength(2);
  for(const page of [plan,worksheet]){const plain=text(page);
-  expect(plain).toMatch(/Windows 11/);
+  expect(plain).toMatch(/Lab quick card: Windows 10/);expect(plain).toMatch(/Windows 11/);
   for(const [task,steps] of w1.lab_paths){expect(plain).toContain(task);expect(plain).toContain(steps);}}
 });
 

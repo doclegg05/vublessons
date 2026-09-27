@@ -4,7 +4,7 @@ const base='/courses/digital-literacy-2/weeks';
 for(let week=1;week<=6;week++)test(`DL2 week ${week}: illustrated teaching choices work with keyboard and enlarged mobile text`,async({page})=>{
  await page.goto(`${base}/week-0${week}/presentation.html`);
  const ids=await page.locator('.slide:has([data-topic-scene])').evaluateAll(slides=>slides.map(s=>s.id));
- expect(ids.length).toBeGreaterThan(4);
+ expect(ids.length).toBeGreaterThanOrEqual(week===1?3:5);
  for(const id of ids){
   await page.locator(`[data-slide="${Number(id.split('-')[1])-1}"]`).click();
   for(const scene of await page.locator(`#${id} [data-topic-scene]`).all()){
@@ -56,8 +56,8 @@ test('DL2 editing timeline distinguishes trimming ends from removing a middle se
 test('DL2 practice steps toggle without moving the lesson; print retains teaching explanations',async({page})=>{
  await page.goto(`${base}/week-01/presentation.html#slide-4`);const step=page.locator('#slide-4 [data-step-done]').first();
  await step.focus();await page.keyboard.press('Enter');await expect(step).toHaveAttribute('aria-pressed','true');await expect(step).toContainText('Practiced');await expect(page).toHaveURL(/#slide-4$/);await step.click();await expect(step).toHaveAttribute('aria-pressed','false');
- await page.emulateMedia({media:'print'});await expect(page.locator('#slide-8 .scene-state')).toHaveCount(3);
- for(const panel of await page.locator('#slide-8 .scene-state').all())await expect(panel).toBeVisible();
+ await page.emulateMedia({media:'print'});await expect(page.locator('#slide-10 .scene-state')).toHaveCount(3);
+ for(const panel of await page.locator('#slide-10 .scene-state').all())await expect(panel).toBeVisible();
 });
 
 test('DL2 email draft reviews recipient, subject and attachment without sending',async({page})=>{

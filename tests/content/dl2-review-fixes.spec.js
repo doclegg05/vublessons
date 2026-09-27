@@ -15,7 +15,9 @@ const withoutDetails=html=>html.replace(/<details[\s\S]*?<\/details>/g,'');
 
 test('DL2 teaching text is visible on every slide, not only inside a collapsed note',()=>{
  for(const w of curriculum.weeks){const html=deck(w.n);
-  w.slides.forEach((s,i)=>{const visible=withoutDetails(section(html,i+2));expect(visible,`week ${w.n} slide ${i+2} "${s.title}"`).toContain(esc(s.body));});}
+  // The teaching sentence is on the slide, outside any collapsed note. Text-only slides show it one
+  // sentence per card (2026-09-28 deck redesign), so check sentence by sentence.
+  w.slides.forEach((s,i)=>{const visible=withoutDetails(section(html,i+2));for(const part of s.body.split(/(?<=[.!?])\s+(?=[A-Z“"(])/))expect(visible,`week ${w.n} slide ${i+2} "${s.title}"`).toContain(esc(part));});}
 });
 
 // Retired 2026-09-26 with the week 6 redesign: 'DL2 week 6 v2 acceptance check searches for the resource

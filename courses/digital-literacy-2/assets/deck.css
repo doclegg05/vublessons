@@ -1,0 +1,316 @@
+/* DL2 slide deck: the same shell and slide language as the Digital Literacy Level 1 and Computer Skills
+   decks. A fixed navy sidebar with the seal and week badge, one white slide card that fills the screen
+   and never scrolls, and slides built from cards, callouts and numbered tiles. Present mode (P) hides
+   the chrome and goes full screen; the slide itself does not change. Loaded last on lesson pages. */
+:root{
+ --primary:#1B365D;--primary-dark:#0D1B2A;--accent:#C9A227;--accent-light:#E6C65C;--red:#B31942;
+ --light:#fff;--off-white:#F5F7FA;--gray:#54626F;--ink:#16243A;--success:#1E7F44;--va-blue:#003F72;--teal:#0f655f;--teal-soft:#e1efed;
+ --sidebar-w:280px;--toolbar-h:58px;--footer-h:68px;
+ --deck-body:clamp(17px,1.45vw,22px);--deck-h2:clamp(26px,2.55vw,38px);
+}
+html[data-text-size="lg"]{--deck-body:clamp(20px,1.7vw,26px);--deck-h2:clamp(28px,2.8vw,42px)}
+html[data-text-size="xl"]{--deck-body:clamp(24px,2.2vw,32px);--deck-h2:clamp(30px,3vw,46px)}
+html[data-text-size="xxl"]{--deck-body:clamp(28px,2.6vw,40px);--deck-h2:clamp(32px,3.2vw,50px)}
+
+html.deck-page,html.deck-page body{height:100%;overflow:hidden}
+body.deck{margin:0;display:flex;background:var(--off-white);color:var(--ink);font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:var(--deck-body);line-height:1.5}
+body.deck .skip{position:fixed;top:-100px;left:1rem;z-index:300;background:#fff;padding:.5em}body.deck .skip:focus{top:1rem}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────────────────────── */
+.deck .sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar-w);height:100vh;height:100dvh;overflow-y:auto;z-index:100;display:flex;flex-direction:column;padding:1.25rem 1.1rem;background-color:var(--primary-dark);background-image:linear-gradient(180deg,var(--primary-dark) 0%,var(--primary) 100%);color:#fff;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) rgba(0,0,0,.15)}
+.deck .sidebar>*{flex-shrink:0}
+.deck .logo{display:block;text-align:center;padding:.3rem .5rem 1.1rem;margin-bottom:1.1rem;border-bottom:1px solid rgba(255,255,255,.2);color:inherit;text-decoration:none;border-radius:8px}
+.deck .logo:hover{background:rgba(255,255,255,.07)}
+.deck .logo img{display:block;width:56px;height:56px;margin:0 auto .5rem;object-fit:contain}
+.deck .logo h2{margin:0 0 .15rem;font-size:1rem;font-weight:600;color:var(--accent)}
+.deck .logo p{margin:0;font-size:.75rem;opacity:.85}
+.deck .week-indicator{background:var(--va-blue);border-radius:8px;padding:.7rem 1rem;margin-bottom:1.1rem;text-align:center}
+.deck .week-indicator .week-num{display:block;font-size:1.45rem;font-weight:700;line-height:1.2}
+.deck .week-indicator .week-title{display:block;font-size:.85rem;opacity:.92}
+.deck .chapter{margin-bottom:.9rem}
+.deck .chapter-title{font-size:.68rem;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin:0 0 .35rem;padding-left:.5rem}
+.deck .chapter-slides{display:flex;flex-direction:column;gap:2px}
+.deck .slide-link{display:flex;align-items:center;gap:.45rem;width:100%;min-height:36px;padding:.45rem .7rem;margin:0;border:0;border-radius:6px;background:none;color:#fff;opacity:1;font:inherit;font-size:.85rem;font-weight:500;line-height:1.3;text-align:left;cursor:pointer}
+.deck .slide-link:hover{background:rgba(255,255,255,.1)}
+.deck .slide-link[aria-current="true"]{background:var(--accent);color:var(--primary);font-weight:700}
+.deck .slide-link.seen:not([aria-current="true"])::before{content:'✓';color:#7fd49a;font-weight:700}
+.deck .resources{margin-top:.6rem;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.15)}
+.deck .resources a{display:block;padding:.4rem .7rem;margin-bottom:.15rem;border-radius:6px;color:rgba(255,255,255,.88);font-size:.8rem;text-decoration:none}
+.deck .resources a::before{content:'↓ ';opacity:.6}
+.deck .resources a:hover{background:rgba(255,255,255,.1);color:#fff}
+.deck .progress-section{margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.2)}
+.deck #lesson-progress{display:block;width:100%;height:8px;margin:0 0 .4rem;border:0;border-radius:4px;background:rgba(255,255,255,.2);overflow:hidden;accent-color:var(--accent)}
+.deck #lesson-progress::-webkit-progress-bar{background:rgba(255,255,255,.2);border-radius:4px}
+.deck #lesson-progress::-webkit-progress-value{background:linear-gradient(90deg,var(--va-blue),var(--accent));border-radius:4px}
+.deck #lesson-progress::-moz-progress-bar{background:linear-gradient(90deg,var(--va-blue),var(--accent))}
+.deck .progress-text{margin:0;font-size:.75rem;text-align:center;opacity:.85}
+.deck .sidebar :is(a,button):focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* ── Main column: toolbar, slide, footer ─────────────────────────────────────────────────── */
+.deck .main-content{flex:1;min-width:0;margin-left:var(--sidebar-w);width:calc(100vw - var(--sidebar-w));height:100vh;height:100dvh;display:flex;flex-direction:column}
+.deck .ics-toolbar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;min-height:var(--toolbar-h);padding:.5rem 1.5rem;background:var(--primary);color:#fff}
+.deck .ics-toolbar a{color:#fff;font-size:1rem}
+.deck .ics-toolbar .toolbar-right{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.deck .ics-toolbar .vub-textsize-fab{position:static;box-shadow:none;background:transparent;border:0;padding:0}
+.deck .ics-toolbar button,.deck .ics-toolbar .button{min-height:44px;padding:.45em 1em;border-radius:8px;border:2px solid transparent;font:inherit;font-weight:700;font-size:1rem;cursor:pointer}
+.deck #present{background:var(--accent);color:var(--primary)}
+.deck #present:hover{background:var(--accent-light)}
+.deck #restart{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.deck #restart:hover{background:rgba(255,255,255,.12)}
+.deck .menu-toggle{display:none}
+.deck .slides-container{flex:1;min-height:0;padding:clamp(10px,1.6vh,18px) clamp(14px,2vw,28px);display:flex;justify-content:center;align-items:stretch;overflow:hidden}
+.deck .slide{display:none;position:relative;box-sizing:border-box;width:100%;max-width:1180px;height:100%;min-height:0;margin:0;padding:clamp(18px,2.6vh,30px) clamp(24px,3vw,44px);background:var(--light);border:0;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.1);overflow:hidden;overflow-wrap:anywhere}
+.deck .slide:not([hidden]){display:block}
+.deck .slide-body{width:100%;display:flex;flex-direction:column}
+.deck .slide-body>:is(.key-points,.step-list,.two-column,.flip-grid,.check-options,.workshop,.topic-scene){flex:1}
+.deck .title-slide .slide-body,.deck .summary-slide .slide-body{justify-content:center}
+.deck .summary-slide .slide-body{justify-content:flex-start;gap:clamp(12px,2.5vh,28px)}
+.deck .summary-slide .evidence-board{margin-top:0}
+.deck .summary-slide .evidence-board figure{padding:1.3rem 1.3rem}
+.deck .summary-slide .evidence-board svg{width:2.8em;height:2.8em}
+.deck .nav-footer{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:var(--footer-h);padding:.8rem 2rem;background:var(--light);border-top:1px solid #e6e9ee}
+.deck .nav-btn{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.7rem 1.5rem;border:0;border-radius:8px;font:inherit;font-size:1rem;font-weight:600;cursor:pointer}
+.deck #previous{background:var(--off-white);color:var(--primary)}.deck #previous:hover{background:#e8e8e8}
+.deck #next{background:var(--va-blue);color:#fff}.deck #next:hover{background:#002F5A}
+.deck .nav-btn:disabled{opacity:.5;cursor:not-allowed}
+.deck #slide-counter{font-size:.95rem;color:var(--gray);font-weight:500}
+.deck #present-exit{display:none}
+.deck .main-content :is(a,button):focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* ── Slide typography and layout ─────────────────────────────────────────────────────────── */
+.deck .slide :is(p,li,label,summary,button,td,th,dt,dd,span,div,input,select,textarea,figcaption,strong,em,small,output,legend,a){font-size:var(--deck-body);line-height:1.5}
+.deck .slide :is(.small,.tag,.window-bar,.simulation-label,.scene-label,.flip-hint,.video-caption,.work-heading .simulation-label){font-size:calc(var(--deck-body)*.82)}
+.deck .slide h2{margin:0;font-size:var(--deck-h2);line-height:1.15;color:var(--primary);font-weight:700;letter-spacing:-.2px;max-width:none}
+.deck .slide h2[tabindex="-1"]:focus{outline:none}
+.deck .slide h3{margin:0 0 .5rem;font-size:calc(var(--deck-body)*1.2);line-height:1.25;color:var(--va-blue)}
+.deck .slide h4{margin:0 0 .3rem;font-size:calc(var(--deck-body)*1.05);line-height:1.3;color:var(--primary)}
+.deck .slide-header{margin-bottom:clamp(10px,1.8vh,20px)}
+.deck .slide-subtitle{margin:.3rem 0 0;font-size:calc(var(--deck-body)*1.12);line-height:1.45;color:#46566d;max-width:none}
+.deck .slide-content{color:#333}
+.deck .slide p{margin:0 0 .6em;max-width:none}.deck .slide p:last-child{margin-bottom:0}
+.deck .slide ul,.deck .slide ol{margin:0;padding-left:1.4em}.deck .slide li+li{margin-top:.35em}
+
+/* Cards, callouts and tiles (the DL1 vocabulary). */
+.deck .key-points{display:grid;gap:clamp(8px,1.4vh,14px);align-content:stretch;grid-auto-rows:minmax(0,1fr)}
+.deck .key-points.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.deck .key-points.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.deck .key-point{display:flex;align-items:center;gap:1rem;padding:clamp(12px,2vh,22px) 1.3rem;background:var(--off-white);border-radius:10px;border-left:4px solid var(--va-blue)}
+.deck .key-points.cols-3 .key-point{flex-direction:column;align-items:flex-start;justify-content:center;gap:.8rem}
+.deck .key-point-icon{flex:0 0 auto;width:2.4em;height:2.4em;display:grid;place-items:center;border-radius:10px;background:var(--light);color:var(--va-blue);box-shadow:inset 0 0 0 2px #dbe3ec}
+.deck .key-point-icon svg{width:1.5em;height:1.5em}
+.deck .key-point-text{line-height:1.45}
+.deck .key-point-text strong{display:block;color:var(--primary);margin-bottom:.15em}
+.deck .info-box{padding:.9rem 1.2rem;background:var(--off-white);border-left:4px solid var(--va-blue);border-radius:0 8px 8px 0;margin:clamp(8px,1.4vh,14px) 0 0}
+.deck .info-box.gold{border-left-color:var(--accent);background:#fbf6e6}
+.deck .info-box.success{border-left-color:var(--success);background:rgba(30,127,68,.1)}
+.deck .info-box-title{display:block;font-weight:700;color:var(--primary);margin-bottom:.25em}
+.deck .two-column{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.8vw,24px);align-items:start}
+.deck .two-column>.key-points{height:100%}
+.deck .two-column.wide-right{grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
+.deck .column{padding:1rem 1.2rem;background:var(--off-white);border-radius:10px}
+.deck .demo-box{padding:1.3rem 1.6rem;border-radius:12px;background:linear-gradient(135deg,var(--va-blue) 0%,#002F5A 100%);color:#fff;text-align:center}
+.deck .demo-box h3,.deck .demo-box p{color:#fff}.deck .demo-box p{opacity:.92}
+.deck .handout-prompt{display:flex;align-items:center;gap:1rem;padding:.9rem 1.3rem;border-radius:8px;background:linear-gradient(135deg,var(--accent) 0%,#D4AF37 100%);color:var(--primary);font-weight:600;margin-bottom:clamp(10px,1.6vh,18px)}
+.deck .handout-prompt-icon{flex:0 0 auto;width:2.2em;height:2.2em;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.55)}
+.deck .handout-prompt-icon svg{width:1.4em;height:1.4em;color:var(--primary)}
+.deck .button,.deck .slide .button,.deck .slide button.cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.6em 1.4em;border-radius:8px;background:var(--accent);color:var(--primary);font-weight:700;text-decoration:none;border:0}
+.deck .slide .button.secondary{background:var(--off-white);color:var(--primary);border:2px solid var(--primary)}
+.deck .slide .button:hover{background:var(--accent-light)}
+.deck .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:.6rem 0 0}
+
+/* Numbered step tiles; the Mark practiced toggle lives inside each tile. */
+.deck .step-list{list-style:none;margin:0;padding:0;display:grid;gap:clamp(8px,1.4vh,14px);counter-reset:step;align-content:stretch;grid-auto-rows:minmax(0,1fr)}
+.deck .step-list.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.deck .step-list li{counter-increment:step;position:relative;margin:0;padding:0;border:0;display:flex}
+.deck .step-list li::before{content:none}
+.deck .step-list li>button{display:flex;align-items:center;gap:1rem;width:100%;min-height:64px;flex:1;padding:.8rem 1.1rem .8rem 4.2rem;position:relative;text-align:left;background:var(--off-white);color:var(--ink);border:2px solid transparent;border-radius:10px;font:inherit;cursor:pointer}
+.deck .step-list li>button::before{content:counter(step);position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:2.4rem;height:2.4rem;display:grid;place-items:center;border-radius:50%;background:var(--va-blue);color:#fff;font-weight:700;font-size:1.1rem}
+.deck .step-list li>button>span:first-child{flex:1;font-weight:600;color:var(--primary)}
+.deck .step-list li>button .step-state{flex:0 0 auto;font-size:calc(var(--deck-body)*.78);font-weight:600;color:var(--va-blue)!important;padding:.2em .6em;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px #c9d6e3}
+.deck .step-list li>button[aria-pressed="true"]{border-color:var(--success);background:rgba(30,127,68,.08)}
+.deck .step-list li>button[aria-pressed="true"]::before{background:var(--success);content:'✓'}
+.deck .step-list.cols-3 li>button{flex-direction:column;align-items:flex-start;padding:3.4rem 1rem 1rem 1.1rem;min-height:0}
+.deck .step-list.cols-3 li>button::before{top:1rem;left:1rem;transform:none}
+
+/* Knowledge check. */
+.deck .knowledge-check{padding:1rem 1.3rem;background:var(--off-white);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;margin-bottom:clamp(8px,1.4vh,14px)}
+.deck .kc-question{margin:0;font-weight:600;color:var(--primary);font-size:calc(var(--deck-body)*1.12)}
+.deck .check-options{display:grid;gap:.6rem}
+.deck .check-options button{display:flex;align-items:center;gap:.9rem;min-height:52px;padding:.6rem 1rem;text-align:left;background:#fff;color:var(--ink);border:2px solid #cfd8e3;border-radius:10px;font:inherit;cursor:pointer}
+.deck .check-options button::before{content:none}
+.deck .kc-letter{flex:0 0 auto;width:2em;height:2em;display:grid;place-items:center;border-radius:50%;background:var(--va-blue);color:#fff;font-weight:700}
+.deck .check-options button:hover{border-color:var(--va-blue)}
+.deck .check-options button[aria-pressed="true"]{border-color:var(--accent);background:#fbf6e6}
+.deck .feedback{margin:.7rem 0 0;padding:.7rem 1rem;border-radius:0 8px 8px 0;background:rgba(30,127,68,.1);border-left:4px solid var(--success);color:#1e4620;min-height:0}
+.deck .feedback:empty{display:none}
+
+/* Flip cards. */
+.deck .flip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;align-content:stretch}
+.deck .flip{height:100%}
+.deck .flip{perspective:900px;min-height:150px;padding:0;border:0;background:transparent;color:var(--ink);text-align:left;display:block;font:inherit;cursor:pointer}
+.deck .flip:hover{background:transparent}
+.deck .flip-inner{display:grid;position:relative;min-height:150px;height:100%;transform-style:preserve-3d;transition:transform .45s ease-out}
+.deck .flip[aria-expanded="true"] .flip-inner{transform:rotateY(180deg)}
+.deck .flip-front,.deck .flip-back{grid-area:1/1;padding:1.1rem 1.2rem;display:flex;flex-direction:column;justify-content:center;border-radius:12px;backface-visibility:hidden;line-height:1.4}
+.deck .flip-front{background:var(--off-white);border:2px solid var(--va-blue);color:var(--primary);font-weight:700}
+.deck .flip-back{transform:rotateY(180deg);background:linear-gradient(135deg,var(--va-blue),#002F5A);color:#fff;border:2px solid transparent}
+.deck .flip:hover .flip-front{background:#e8eff5}
+.deck .flip-hint{display:block;margin-top:.7rem;font-weight:400;opacity:.8}
+
+/* Title, summary and completion slides. */
+.deck .slide.title-slide,.deck .slide.summary-slide{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff}
+.deck .title-slide h2,.deck .summary-slide h2{color:#fff}
+.deck .title-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center}
+.deck .title-copy{text-align:left}
+.deck .title-copy .seal{width:clamp(64px,9vh,96px);height:auto;margin-bottom:.8rem}
+.deck .title-copy h2{font-size:calc(var(--deck-h2)*1.25);margin-bottom:.5rem}
+.deck .title-copy .slide-subtitle{color:var(--accent-light);font-size:calc(var(--deck-body)*1.2);margin-bottom:1rem}
+.deck .title-copy .course-info{color:rgba(255,255,255,.8);font-size:calc(var(--deck-body)*.9)}
+.deck .title-panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:1.1rem 1.3rem}
+.deck .title-panel h3{color:var(--accent);font-size:calc(var(--deck-body)*.85);letter-spacing:1px;text-transform:uppercase;margin-bottom:.6rem}
+.deck .title-panel ol{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+.deck .title-panel li{display:flex;gap:.7rem;align-items:flex-start;margin:0;line-height:1.35}
+.deck .title-panel li::before{content:'✓';flex:0 0 1.6em;height:1.6em;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:var(--primary);font-weight:700;font-size:.85em}
+.deck .summary-slide .slide-subtitle{color:rgba(255,255,255,.92)}
+.deck .summary-slide .evidence-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
+.deck .summary-slide .evidence-board figure{margin:0;padding:1rem 1.1rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;text-align:left}
+.deck .summary-slide .evidence-board svg{width:2.2em;height:2.2em;color:var(--accent-light);margin-bottom:.4rem}
+.deck .summary-slide .evidence-board figcaption strong{display:block;color:var(--accent-light)}
+.deck .summary-slide .evidence-board figcaption span{color:#fff}
+.deck .summary-slide .scenario-photo{display:none}
+.deck .completion-slide .slide-body{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.deck .completion-slide .button{background:var(--va-blue);color:#fff}.deck .completion-slide .button:hover{background:#002F5A}
+.deck .completion-badge{width:clamp(110px,18vh,150px);height:clamp(110px,18vh,150px);border-radius:50%;display:grid;place-items:center;margin-bottom:1.2rem;background:linear-gradient(135deg,var(--va-blue) 0%,#002F5A 100%);box-shadow:0 10px 30px rgba(0,63,114,.3)}
+.deck .completion-badge img{width:68%;height:68%;object-fit:contain}
+.deck .completion-slide h2{font-size:calc(var(--deck-h2)*1.15);margin-bottom:.6rem}
+.deck .completion-slide p{max-width:34em;color:#46566d;font-size:calc(var(--deck-body)*1.08)}
+.deck .completion-slide .actions{justify-content:center;margin-top:1rem}
+
+/* Photos and evidence rows inherited from the illustrated app. */
+.deck .scenario-photo{margin:0}
+.deck .scenario-photo .photo-frame{border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.deck .scenario-photo img{display:block;width:100%;height:auto;max-height:36vh;object-fit:cover}
+.deck .scenario-photo figcaption{display:none}
+.deck .evidence-sequence{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.deck .evidence-sequence li{display:grid;grid-template-columns:minmax(6em,.5fr) minmax(0,1.5fr);gap:.8rem;align-items:baseline;margin:0;padding:.55rem .9rem;background:var(--off-white);border-radius:8px}
+.deck .evidence-sequence strong{color:var(--va-blue)}
+.deck .evidence-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}
+.deck .evidence-board figure{margin:0;padding:.9rem 1rem;background:var(--off-white);border-radius:10px}
+.deck .evidence-board svg{width:2em;height:2em;color:var(--va-blue);margin-bottom:.3rem}
+.deck .evidence-board figcaption strong{display:block;color:var(--primary)}
+.deck .concept-note{margin:0}
+.deck .concept-note>summary{cursor:pointer;color:var(--primary);font-weight:600}
+
+/* Practice windows and example panels (workshop.css, slide-scenes.css) inside the card. */
+.deck .workshop{margin:0;padding:0;background:transparent;border:0;box-shadow:none}
+.deck .work-heading{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:.5rem}
+.deck .work-heading h3{margin:0}
+.deck .simulation-label,.deck .scene-label{display:inline-block;padding:.15em .6em;border-radius:999px;background:#e3ecf5;color:#0A3161!important;font-weight:600}
+.deck .work-window{margin:0;border:2px solid #cfd8e3;border-radius:12px;overflow:hidden;background:#fff}
+.deck .window-bar{background:var(--primary);color:#fff;padding:.35rem .9rem;font-weight:600}
+.deck .window-content{padding:.9rem 1.1rem;font-size:var(--deck-body)}
+.deck .work-controls{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.deck .work-controls button,.deck .scene-choices button,.deck .browser-tools button{min-height:44px;padding:.45em 1em;border-radius:8px;border:2px solid var(--va-blue);background:#fff;color:var(--va-blue);font:inherit;font-weight:600;cursor:pointer}
+.deck .work-controls button[aria-pressed="true"],.deck .scene-choices button[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:#fff}
+.deck .work-outcome{margin:.5rem 0 0;padding:.6rem 1rem;border-left:4px solid var(--teal);background:var(--teal-soft);border-radius:0 8px 8px 0;color:var(--ink)}
+.deck .topic-scene{margin:0;padding:0;background:transparent;border:0}
+.deck .topic-scene>h3{margin-bottom:.4rem}
+.deck .scene-choices{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 .6rem}
+.deck .scene-body{display:block}
+.deck .scene-state:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr);gap:.6rem;align-items:start}
+.deck .scene-artifact .authored-window{margin-top:.4rem}
+.deck .scene-artifact .authored-content{padding:.6rem .8rem}
+.deck .scene-artifact{padding:1rem 1.1rem;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border-radius:12px;display:grid;grid-template-columns:2.6em minmax(0,1fr);gap:.8rem;align-items:start;min-height:0}
+.deck .scene-artifact>svg{width:2.4em;height:2.4em;color:var(--accent-light)}
+.deck .scene-artifact h4{color:#fff;grid-column:2}
+.deck .artifact-content{grid-column:1/-1;font-size:var(--deck-body);line-height:1.4;white-space:pre-line}
+.deck .scene-artifact .evidence-sequence li{background:rgba(255,255,255,.1);color:#fff}
+.deck .scene-artifact .evidence-sequence strong{color:var(--accent-light)}
+.deck .scene-consequence{margin:0;padding:.8rem 1rem;background:var(--off-white);border-left:4px solid var(--accent);border-radius:0 8px 8px 0}
+.deck .authored-window{margin:0;border:2px solid #cfd8e3;border-radius:12px;overflow:hidden;background:#fff}
+.deck .authored-title{background:var(--primary);color:#fff;padding:.35rem .9rem;font-weight:600}
+.deck .authored-content{padding:.8rem 1rem}
+.deck .calendar-surface{max-height:38vh}
+.deck video{width:100%;max-height:52vh;background:var(--primary-dark);border-radius:12px}
+.deck .video-chapters{margin:0}
+.deck .video-chapters summary{font-weight:600;color:var(--primary);cursor:pointer}
+.deck .video-chapters nav>p{color:#46566d;font-size:calc(var(--deck-body)*.82);margin:.2rem 0 .3rem}
+.deck .video-chapters ol{padding-left:0;list-style:none;display:grid;gap:.1rem;margin-top:.2rem}
+.deck .video-chapters li,.deck .video-chapters li+li{margin:0}
+.deck .video-chapters button{display:flex;gap:.6rem;align-items:baseline;width:100%;padding:.22em .6em;border:0;border-radius:6px;background:transparent;color:var(--ink);font:inherit;font-size:calc(var(--deck-body)*.88);text-align:left;cursor:pointer}
+.deck .video-chapters button:hover{background:var(--off-white)}
+.deck .video-chapters time{color:#0A3161;font-weight:700;font-variant-numeric:tabular-nums}
+.deck .interactive-calc{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.deck .exercise label{display:block;margin:.5rem 0 .2rem;font-weight:600}
+.deck .exercise select,.deck .exercise input{min-height:44px;padding:.4em .6em;border:2px solid #cfd8e3;border-radius:8px;font:inherit}
+.deck .sim-status{margin:.6rem 0 0;padding:.6rem 1rem;background:var(--off-white);border-radius:8px}
+.deck .print-answer,.deck .worksheet-input{display:none}
+
+/* ── Present mode: full screen, no chrome, same slide ────────────────────────────────────── */
+.presenting .sidebar,.presenting .ics-toolbar,.presenting .menu-toggle{display:none!important}
+.presenting .main-content{margin-left:0;width:100vw}
+.presenting .slides-container{padding:clamp(8px,1.4vh,16px) clamp(12px,1.8vw,24px);background:#0D1B2A}
+.presenting .slide{max-width:none;border-radius:12px}
+.presenting .nav-footer{min-height:56px;padding:.5rem 1.5rem;background:var(--primary-dark);border-top:0}
+.presenting #previous{background:rgba(255,255,255,.12);color:#fff}
+.presenting #slide-counter{color:#fff}
+.presenting #present-exit{display:inline-flex;background:transparent;color:#fff;border:2px solid var(--accent-light);order:3}
+.presenting .nav-footer :focus-visible{outline-color:var(--accent-light)}
+
+/* ── Small screens: the sidebar becomes a menu; the deck may scroll ──────────────────────── */
+@media (max-width:900px){
+ html.deck-page,html.deck-page body{height:auto;overflow:auto}
+ body.deck{display:block}
+ .deck .sidebar{position:fixed;inset:var(--toolbar-h) auto 0 0;width:min(320px,88vw);transform:translateX(-100%);visibility:hidden;transition:transform .2s ease,visibility 0s .2s;z-index:150}
+ .deck .sidebar.open{transform:none;visibility:visible;transition:transform .2s ease}
+ .deck .main-content{margin-left:0;width:100%;height:auto;min-height:100vh}
+ .deck .menu-toggle{display:inline-flex;align-items:center;min-height:44px;padding:.45em .9em;border-radius:8px;border:0;background:#fff;color:var(--primary);font:inherit;font-weight:600;cursor:pointer}
+ .deck .slides-container{padding:.75rem;overflow:visible;align-items:flex-start}
+ .deck .slide{height:auto;padding:1.1rem;border-radius:10px;overflow:visible}
+ .deck .slide-body{zoom:1!important}
+ .deck .two-column,.deck .two-column.wide-right,.deck .key-points.cols-2,.deck .step-list.cols-3,.deck .title-grid,.deck .scene-state:not([hidden]),.deck .summary-slide .evidence-board,.deck .evidence-board{grid-template-columns:minmax(0,1fr)}
+ .deck .nav-footer{padding:.6rem;gap:.4rem;flex-wrap:wrap;justify-content:center}
+ .deck .nav-btn{flex:1 1 0;justify-content:center;padding:.55rem .35rem}
+ .deck #slide-counter{order:-1;flex:0 0 100%;text-align:center}
+ .deck .scenario-photo img{max-height:none}
+}
+@media (prefers-reduced-motion:reduce){.deck .flip-inner{transition:none}.deck .sidebar{transition:none}}
+@media print{
+ .deck .sidebar,.deck .ics-toolbar,.deck .nav-footer,.deck .menu-toggle,.deck .skip{display:none!important}
+ html.deck-page,html.deck-page body{height:auto;overflow:visible}
+ body.deck{display:block;background:#fff}
+ .deck .main-content{margin:0;width:auto;height:auto}
+ .deck .slides-container{display:block;padding:0;overflow:visible}
+ .deck .slide,.deck .slide[hidden]{display:block!important;height:auto;max-width:none;box-shadow:none;border-radius:0;padding:.3in;break-after:page;overflow:visible;animation:none}
+ .deck .slide-body{zoom:1!important}
+ .deck .slide.title-slide,.deck .slide.summary-slide{background:#fff;color:#000}
+ .deck .title-slide h2,.deck .summary-slide h2{color:#000}
+}
+
+.deck .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.deck .table-scroll{overflow-x:auto}
+
+/* Example panels: tighter rows so a dense example still reads at projector size. */
+.deck .has-workshop .slide-header{margin-bottom:clamp(6px,1.2vh,12px)}
+.deck .scene-artifact{padding:.7rem 1rem;grid-template-columns:minmax(0,1fr);gap:.5rem}
+.deck .scene-artifact>svg{display:none}
+.deck .scene-artifact h4{grid-column:1}
+.deck .authored-content{padding:.5rem .8rem}
+.deck .visual-field{padding:8px 10px;gap:12px}
+.deck .file-row{padding:10px 14px;gap:12px}
+.deck .file-browser .folder-trail{padding:8px 14px}
+.deck .scene-consequence{padding:.5rem .9rem}
+.deck .scene-choices{margin-bottom:.4rem}
+.deck .authored-window h4,.deck .artifact-content h4{margin-bottom:.2rem}
+.deck .artifact-content p{margin:0 0 .3em}
+.deck .crop-lab[data-mode=resize] .image-edit-frame{max-width:384px}
+.deck .has-workshop .slide-subtitle{font-size:var(--deck-body)}
+.deck .scene-choices button,.deck .work-controls button{min-height:40px;padding:.35em .9em}
+.deck .topic-scene>h3{font-size:calc(var(--deck-body)*1.05);margin-bottom:.3rem}
+/* A flip row that shares its slide with a practice window keeps its cards short. */
+.deck .slide-body:has(.workshop,.topic-scene) .flip,.deck .slide-body:has(.workshop,.topic-scene) .flip-inner{min-height:0}
+.deck .slide-body:has(.workshop,.topic-scene) .flip-grid{flex:0 0 auto}
+.deck .slide-body:has(.workshop,.topic-scene) :is(.flip-front,.flip-back){padding:.7rem .9rem}
+.deck .code-sample,.deck pre{font-size:calc(var(--deck-body)*.9);padding:.7rem 1rem;border-radius:8px;background:var(--primary-dark);color:#fff;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+/* Cards that share a slide with another column stack, so their text never squeezes into a sliver. */
+.deck .two-column .key-points.cols-3,.deck .two-column .key-points.cols-2{grid-template-columns:minmax(0,1fr)}
+.deck .two-column .key-points.cols-3 .key-point{flex-direction:row;align-items:center;gap:1rem}

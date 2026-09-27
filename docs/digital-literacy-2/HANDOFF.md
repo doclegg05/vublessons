@@ -44,6 +44,71 @@ Six High findings from the six-agent review were fixed in the generators, with r
 
 Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
 
+## Worksheets as printable lab sheets (2026-09-28)
+
+The worksheets were textareas under 32 px prompts. They are now documents in the Level 1 lab-sheet
+style, rendered by `scripts/dl2/handout.py` (header band, name line, goal box, numbered parts with
+checklist steps, write-in lines, tips, a partner checkpoint, a success box, the quick card, footer)
+at normal document type (15 px on screen, 11 pt on paper), the same on screen and in print.
+- **Week 1** is hand-written as `W1_WORKSHEET` in `author-content.py`: one part per teaching unit,
+  paper-only (fill lines and forms; no typed boxes).
+- **Weeks 2–6** are generated from their `lab` tasks: one part per task with a ruled write-in area
+  (still a `.worksheet-input`, so typing, printing typed answers and the leave-page warning work),
+  plus week 6's versions, procedures, test logs and rubric, and week 5's challenge table.
+- Worksheet pages load only the handout's own stylesheet plus `lesson.js` and `text-size.js`.
+  The answer keys, lesson plans and run sheet still use the older `course.css` document style.
+
+## Deck redesign: the Level 1 slide language (2026-09-28)
+
+The instructor rejected the DL2 decks as "a blank sheet of paper with text on it" and asked for the
+look of the Digital Literacy Level 1 and Computer Skills decks. Every DL2 deck now uses the same
+shell and slide vocabulary, from one stylesheet, `assets/deck.css`, and the templates in
+`build-pages.py`:
+- **Shell:** fixed navy sidebar (seal, "VUB Digital Literacy · Level 2", week badge, slide groups
+  with gold headings and ✓ on slides already seen, resources, progress), a navy toolbar (course
+  home, text size, Start over, Present), one white slide card, and a Previous / counter / Next
+  footer. The page never scrolls: html and body are fixed height.
+- **Slides:** headline + subtitle; content in icon-point cards (`.key-points`, one per sentence of a
+  text-only slide), navy callouts, numbered step tiles (`.step-list`), lettered knowledge-check
+  answers, flip cards, and two-column layouts for photo + points and video + chapters. Title and
+  summary slides are navy gradient; the completion slide has the seal badge.
+- **Fit:** `lesson.js` scales `.slide-body` with CSS `zoom` so every slide is one screen: up to 1.55×
+  on sparse slides (the body then fills the card), down to 0.5× on dense ones, and refits on
+  resize, on load, and after a click only if the slide overflows. There are no more "words first,
+  then picture" build steps; Present (P) only hides the chrome and goes full screen.
+- **Type:** body text is `--deck-body` (about 20 px at 1366 px wide; 28–40 px at the XXL text
+  size), headings `--deck-h2`. The old 32 px slide floor is gone; `dl2-present-mode.spec.js` now
+  requires every slide to fit with body text ≥ 13 px after scaling at 1024×768, 1280×720, 1366×768
+  and 1920×1080, and Week 1 never to scale below 0.85 on a 16:9 projector.
+- Lesson pages load `brand.css`, `workshop.css`, `slide-scenes.css` and `deck.css` only
+  (`course.css`, `learning-app.css` and the retired `present.css` are for documents and the home).
+- Still dense (they scale to about 0.7): the multi-column example panels on weeks 2–5 (for example
+  week 2 slide 17, week 4 slides 17–18). Simplify those panels when rebuilding each week.
+
+## Week 1 rebuilt around teaching units (2026-09-27)
+
+The instructor could not teach from the Week 1 deck: 24 slides, ~2,480 words on screen, an agenda
+that jumped around the deck, and no instructor cue on any slide. Week 1 is now authored as **five
+teaching units** (`W1_UNITS` in `author-content.py`), each one objective taught as pose the problem
+→ Tell → Show (live, on the projector) → Do (every learner, own seat) → Review. The units are the
+single source for:
+- the **deck** (23 slides: 3 or 4 per unit, at most ~6 short lines and one picture each, 32 px text,
+  no Present-mode build steps at 1280×720 or 1366×768, enforced by `dl2-present-mode.spec.js`; on a 4:3
+  1024×768 projector only the calendar simulation, slide 14, shows its words first, then the calendar)
+- the **run sheet** (`weeks/week-01/run-sheet.html`, instructor-only): one printed page per unit
+  with what to say, the exact Windows 10 clicks, the learner task, the review check and the
+  post-test item it serves. `build-pages.py` renders it from `w['runsheet']`.
+- the **lesson plan agenda** (`week1_cycle_row`), so the plan and the run sheet cannot drift.
+
+Weeks 2–6 still use the older slide-list authoring. Rebuild them the same way, one per week, using
+[OBJECTIVES-MAP.md](OBJECTIVES-MAP.md) (each objective against the post-test items it serves).
+Visuals attach by rendered slide number (`workshops.MAP`, `scenes.SCENES`, `photo_scenes`), so a
+re-ordered week needs its maps re-keyed and the number-pinned functional tests updated.
+
+Week 1 specifics: the lab is Windows 10, so the quick card is Windows 10 with Windows 11 notes
+(`lab_os`); no printer, so the print unit stops at the preview; the instructor's own calendar is
+the calendar demo; the video is home viewing only (chapters on slide 21).
+
 ## Present mode for the projector (2026-09-26)
 
 Decks had most slides taller than a projector screen (119 of 137 at 1366×768). Press **P** (or

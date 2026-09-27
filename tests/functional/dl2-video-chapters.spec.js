@@ -27,7 +27,8 @@ test('DL2 lesson and transcript chapters fit enlarged mobile text and retain nat
    await page.locator('[data-slide]').filter({hasText:/Watch:/}).click();
   }
   await page.evaluate(()=>document.documentElement.setAttribute('data-text-size','xxl'));
-  await page.locator('.video-chapters summary').click();
+  // The deck opens the chapter list by default; open it here only when it is closed.
+  if(!(await page.locator('.video-chapters').evaluate(d=>d.open)))await page.locator('.video-chapters summary').click();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   expect(await page.locator('[data-video-seek]').evaluateAll(buttons=>buttons.every(b=>b.getBoundingClientRect().right<=innerWidth&&b.scrollWidth<=b.clientWidth+1))).toBe(true);
   await page.locator('[data-video-seek]').last().click();
