@@ -62,7 +62,7 @@ test('DL2 enlarged text remains readable and every mobile lesson fits',async({pa
    if(i>0)await page.locator('#next').click();
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
   }
-  const font=await page.locator('.slide:not([hidden]) p').first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize));expect(font).toBeGreaterThanOrEqual(44);
+  const font=await page.locator('.slide:not([hidden]) p').first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize));expect(font).toBeGreaterThanOrEqual(28);
  }
 });
 test('DL2 assessment fetch failure gives a recovery message',async({page})=>{
@@ -73,6 +73,6 @@ test('DL2 worksheet typed answers appear in print',async({page})=>{
 });
 test('DL2 knowledge-check choices keep the classroom type floor at every text size',async({page})=>{
  await page.goto(`${base}/weeks/week-03/presentation.html`);await page.locator('[data-slide]').filter({hasText:/Knowledge check/}).first().click();const choice=page.locator('.slide:not([hidden]) .check-options button').first();
- for(const size of ['sm','','lg','xl','xxl']){await page.evaluate(s=>{s?document.documentElement.setAttribute('data-text-size',s):document.documentElement.removeAttribute('data-text-size')},size);expect(await choice.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(size==='xxl'?44:32);}
- await page.emulateMedia({media:'print'});expect(await choice.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(32);
+ for(const size of ['sm','','lg','xl','xxl']){await page.evaluate(s=>{s?document.documentElement.setAttribute('data-text-size',s):document.documentElement.removeAttribute('data-text-size')},size);expect(await choice.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(size==='xxl'?28:17);}
+ await page.emulateMedia({media:'print'});expect(await choice.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(17);
 });

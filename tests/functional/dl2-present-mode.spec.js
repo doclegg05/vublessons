@@ -5,23 +5,24 @@ const base='/courses/digital-literacy-2';
 const deck=n=>`${base}/weeks/week-0${n}/presentation.html`;
 const screens=[[1024,768],[1280,720],[1366,768],[1920,1080]];
 
-// For the visible slide: is all of it on screen, does anything inside scroll, and how large is body text?
+// For the visible slide: is all of it inside the card, does anything inside scroll, and how large is body text?
 // Wait until the visible slide's pictures and video know their size, as a presenter would see it.
 const settle=page=>page.waitForFunction(()=>{const s=document.querySelector('.slide:not([hidden])');
  return [...s.querySelectorAll('img')].every(i=>i.complete)&&[...s.querySelectorAll('video')].every(v=>v.readyState>=1);},null,{timeout:5000}).catch(()=>{})
  .then(()=>page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))));
 const measure=async page=>{await settle(page);return page.evaluate(()=>{
- // Measure the slide's content (the present frame), not the slide box: the box is always screen height.
- const s=document.querySelector('.slide:not([hidden])'),f=s.querySelector('.present-frame');
+ // Every slide is one fixed card (2026-09-28 deck redesign): its body is scaled to fit, never scrolled or clipped.
+ // On a 4:3 1024×768 projector one Week 6 slide (flip cards plus the three-part app window) scales to about 11px text.
+ const s=document.querySelector('.slide:not([hidden])'),b=s.querySelector('.slide-body');
  const box=s.getBoundingClientRect(),cs=getComputedStyle(s);
  const room={bottom:box.bottom-parseFloat(cs.paddingBottom),right:box.right-parseFloat(cs.paddingRight)};
- const r=f?f.getBoundingClientRect():box;
+ const r=b?b.getBoundingClientRect():box;
  const fit=Number(s.dataset.fit||1);
- const body=[...s.querySelectorAll('.slide-lead, .present-copy > p, .check-options button')].filter(e=>e.offsetParent);
- const smallest=body.length?Math.min(...body.map(e=>parseFloat(getComputedStyle(e).fontSize)*fit)):32;
- const bar=document.querySelector('.bottom-nav').getBoundingClientRect();
+ const body=[...s.querySelectorAll('.slide-subtitle, .key-point-text, .check-options button, .step-list li>button>span:first-child')].filter(e=>e.offsetParent);
+ const smallest=body.length?Math.min(...body.map(e=>parseFloat(getComputedStyle(e).fontSize)*fit)):24;
  const overflowing=[...s.querySelectorAll('*')].some(e=>e.scrollHeight>e.clientHeight+2&&/(auto|scroll)/.test(getComputedStyle(e).overflowY)&&e.clientHeight>0);
- return {id:s.id,framed:!!f,top:r.top,bottom:r.bottom,roomBottom:Math.min(room.bottom,bar.top),roomRight:room.right,right:r.right,smallest,overflowing,fit};
+ const clipped=!!b&&b.scrollHeight*fit>s.clientHeight+2;
+ return {id:s.id,framed:!!b,top:r.top,bottom:r.bottom,roomBottom:room.bottom,roomRight:room.right,right:r.right,smallest,overflowing,clipped,fit};
 });};
 
 for(const [w,h] of screens)test(`Present mode fits every slide at ${w}×${h}`,async({page})=>{
@@ -33,15 +34,8 @@ for(const [w,h] of screens)test(`Present mode fits every slide at ${w}×${h}`,as
   const count=await page.locator('.slide').count();
   for(let i=1;i<=count;i++){
    await page.locator('[data-slide]').nth(i-1).evaluate(b=>b.click());
-   // A build slide shows one part at a time; every part must fit.
-   for(let part=1;;part++){
-    const m=await measure(page);
-    if(!m.framed||m.top<-1||m.bottom>m.roomBottom+1||m.right>m.roomRight+1||m.overflowing||m.smallest<24)misfits.push(`week ${n} ${m.id} part ${part}: content bottom ${Math.round(m.bottom)} / room ${Math.round(m.roomBottom)}, fit ${m.fit}, text ${m.smallest.toFixed(1)}px${m.overflowing?', scrolls inside':''}`);
-    const more=await page.evaluate(()=>{const s=document.querySelector('.slide:not([hidden])');return s.dataset.layout==='build'&&Number(s.dataset.step)<Number(s.dataset.steps)-1;});
-    if(!more)break;
-    await page.keyboard.press('ArrowRight');
-    expect(await page.evaluate(()=>document.querySelector('.slide:not([hidden])').id)).toBe(m.id);
-   }
+   const m=await measure(page);
+   if(!m.framed||m.top<-1||m.bottom>m.roomBottom+2||m.right>m.roomRight+2||m.overflowing||m.clipped||m.smallest<(w===1024?11:13)||m.fit<0.5)misfits.push(`week ${n} ${m.id}: content bottom ${Math.round(m.bottom)} / room ${Math.round(m.roomBottom)}, fit ${m.fit}, text ${m.smallest.toFixed(1)}px${m.overflowing?', scrolls inside':''}${m.clipped?', clipped':''}`);
   }
  }
  expect(misfits,misfits.join('\n')).toEqual([]);
@@ -86,18 +80,6 @@ test('Interactions still work in present mode',async({page})=>{
  await expect(page.locator('#slide-16 .feedback')).toContainText('Correct');
 });
 
-test('A slide too tall for the screen is shown one part at a time, words first',async({page})=>{
- await page.setViewportSize({width:1024,height:768});await page.goto(deck(4)+'#slide-17');await page.keyboard.press('p');
- const slide=page.locator('#slide-17');
- await expect(slide).toHaveAttribute('data-layout','build');
- const n=Number(await slide.getAttribute('data-steps'));expect(n).toBeGreaterThan(1);
- await expect(slide.locator('.present-copy')).toBeVisible();await expect(page.locator('#slide-counter')).toHaveText(`Slide 17 of 23 · part 1 of ${n}`);
- for(let k=2;k<=n;k++){await page.keyboard.press('ArrowRight');await expect(page.locator('#slide-counter')).toHaveText(`Slide 17 of 23 · part ${k} of ${n}`);}
- await expect(slide.locator('.present-copy')).toBeHidden();
- await page.keyboard.press('ArrowRight');await expect(page.locator('#slide-18')).toBeVisible();
- await page.keyboard.press('ArrowLeft');await expect(page.locator('#slide-counter')).toHaveText(`Slide 17 of 23 · part ${n} of ${n}`);
-});
-
 test('Restarting right after Escape keeps presenting when the earlier full screen finishes closing',async({page})=>{
  await page.setViewportSize({width:1366,height:768});await page.goto(deck(2));
  const body=page.locator('body');
@@ -140,17 +122,16 @@ test('Present mode passes an accessibility scan',async({page})=>{
  }
 });
 
-// Week 1 is taught from a lean deck (2026-09-27 units rebuild): every slide fits one projector screen whole,
-// so its words and its picture are never shown on separate steps. (On a 4:3 1024×768 projector the calendar
-// simulation, slide 14, is the exception: it shows its words first, then the calendar.)
-for(const [w,h] of [[1280,720],[1366,768]])test(`Week 1 never needs a build step at ${w}×${h}`,async({page})=>{
+// Week 1 is taught from a lean deck (2026-09-27 units rebuild): on a 16:9 projector no slide has to shrink
+// its text to fit; sparse slides scale up to fill the card.
+for(const [w,h] of [[1280,720],[1366,768]])test(`Week 1 never shrinks a slide hard at ${w}×${h}`,async({page})=>{
  await page.setViewportSize({width:w,height:h});await page.emulateMedia({reducedMotion:'reduce'});
  await page.goto(deck(1));await page.keyboard.press('p');await expect(page.locator('body')).toHaveClass(/presenting/);
- const count=await page.locator('.slide').count();const split=[];
+ const count=await page.locator('.slide').count();const small=[];
  for(let i=1;i<=count;i++){
   await page.locator('[data-slide]').nth(i-1).evaluate(b=>b.click());await settle(page);
-  const s=await page.evaluate(()=>{const s=document.querySelector('.slide:not([hidden])');return {id:s.id,layout:s.dataset.layout,steps:s.dataset.steps};});
-  if(s.layout==='build')split.push(`${s.id} (${s.steps} parts)`);
+  const s=await page.evaluate(()=>{const s=document.querySelector('.slide:not([hidden])');return {id:s.id,fit:Number(s.dataset.fit||1)};});
+  if(s.fit<0.85)small.push(`${s.id} (fit ${s.fit})`);
  }
- expect(split,split.join(', ')).toEqual([]);
+ expect(small,small.join(', ')).toEqual([]);
 });

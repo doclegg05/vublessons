@@ -104,7 +104,7 @@ test.describe('contrast on the projector',()=>{
  });
 
  test('A selected phishing clue stays readable',async({page})=>{
-  await page.goto(deck(5)+'#slide-1');const clue=page.locator('#slide-1 .message-preview button').first();await clue.click();await page.mouse.move(0,0);
+  await page.goto(deck(5)+'#slide-8');const clue=page.locator('#slide-8 .message-preview button').first();await clue.click();await page.mouse.move(0,0);
   await expect(clue).toHaveAttribute('aria-pressed','true');
   const [fg,bg]=await clue.evaluate(el=>[getComputedStyle(el).color,getComputedStyle(el).backgroundColor]);
   expect(contrast(fg,bg)).toBeGreaterThanOrEqual(4.5);

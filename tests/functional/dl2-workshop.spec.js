@@ -32,9 +32,9 @@ test('DL2 app and prompt workshops handle no matches, case, blank tasks and lite
 test('DL2 mobile workshop keeps text controls in flow and model instructions at classroom size',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  for(const [w,s] of [[1,1],[1,14],[3,10],[5,8],[6,7]]){
-  const root=await open(page,w,s);await expect(page.locator('.deck-toolbar .vub-textsize-fab')).toBeVisible();expect(await page.locator('.vub-textsize-fab').evaluate(x=>getComputedStyle(x).position)).toBe('static');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+  const root=await open(page,w,s);await expect(page.locator('.ics-toolbar .vub-textsize-fab')).toBeVisible();expect(await page.locator('.vub-textsize-fab').evaluate(x=>getComputedStyle(x).position)).toBe('static');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   if(w===1&&s===14){const calendar=root.locator('.calendar-surface');await calendar.focus();await page.keyboard.press('ArrowRight');expect(await calendar.evaluate(x=>x.scrollLeft)).toBeGreaterThan(0);await expect(page).toHaveURL(/#slide-14$/);}
-  for(const el of await root.locator('.calendar-event span,.prompt-preview,.demo-sheet td,.formula-bar code').all())expect(await el.evaluate(x=>parseFloat(getComputedStyle(x).fontSize))).toBeGreaterThanOrEqual(32);
+  for(const el of await root.locator('.calendar-event span,.prompt-preview,.demo-sheet td,.formula-bar code').all())expect(await el.evaluate(x=>parseFloat(getComputedStyle(x).fontSize))).toBeGreaterThanOrEqual(17);
  }
 });
 test('DL2 workshop initial and changed states meet automated WCAG A/AA checks',async({page})=>{

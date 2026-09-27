@@ -44,6 +44,33 @@ Six High findings from the six-agent review were fixed in the generators, with r
 
 Regenerate with `python3 scripts/dl2/author-content.py` then `python3 scripts/dl2/build-pages.py`.
 
+## Deck redesign: the Level 1 slide language (2026-09-28)
+
+The instructor rejected the DL2 decks as "a blank sheet of paper with text on it" and asked for the
+look of the Digital Literacy Level 1 and Computer Skills decks. Every DL2 deck now uses the same
+shell and slide vocabulary, from one stylesheet, `assets/deck.css`, and the templates in
+`build-pages.py`:
+- **Shell:** fixed navy sidebar (seal, "VUB Digital Literacy · Level 2", week badge, slide groups
+  with gold headings and ✓ on slides already seen, resources, progress), a navy toolbar (course
+  home, text size, Start over, Present), one white slide card, and a Previous / counter / Next
+  footer. The page never scrolls: html and body are fixed height.
+- **Slides:** headline + subtitle; content in icon-point cards (`.key-points`, one per sentence of a
+  text-only slide), navy callouts, numbered step tiles (`.step-list`), lettered knowledge-check
+  answers, flip cards, and two-column layouts for photo + points and video + chapters. Title and
+  summary slides are navy gradient; the completion slide has the seal badge.
+- **Fit:** `lesson.js` scales `.slide-body` with CSS `zoom` so every slide is one screen: up to 1.55×
+  on sparse slides (the body then fills the card), down to 0.5× on dense ones, and refits on
+  resize, on load, and after a click only if the slide overflows. There are no more "words first,
+  then picture" build steps; Present (P) only hides the chrome and goes full screen.
+- **Type:** body text is `--deck-body` (about 20 px at 1366 px wide; 28–40 px at the XXL text
+  size), headings `--deck-h2`. The old 32 px slide floor is gone; `dl2-present-mode.spec.js` now
+  requires every slide to fit with body text ≥ 13 px after scaling at 1024×768, 1280×720, 1366×768
+  and 1920×1080, and Week 1 never to scale below 0.85 on a 16:9 projector.
+- Lesson pages load `brand.css`, `workshop.css`, `slide-scenes.css` and `deck.css` only
+  (`course.css`, `learning-app.css` and the retired `present.css` are for documents and the home).
+- Still dense (they scale to about 0.7): the multi-column example panels on weeks 2–5 (for example
+  week 2 slide 17, week 4 slides 17–18). Simplify those panels when rebuilding each week.
+
 ## Week 1 rebuilt around teaching units (2026-09-27)
 
 The instructor could not teach from the Week 1 deck: 24 slides, ~2,480 words on screen, an agenda

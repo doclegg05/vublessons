@@ -23,12 +23,12 @@ def page(title,body,cls='doc',week=None,script='lesson.js',instructor=False):
   body+=f'<template id="report-brand"><img class="report-seal" src="data:image/png;base64,{seal}" alt="WV Veterans Upward Bound seal"></template>'
  if cls!='lesson':body=learning.frame(body,instructor)
  return f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning.">{'<meta name="robots" content="noindex">' if instructor else ''}<title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css"><link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/learning-app.css">{f'<link rel="stylesheet" href="{BASE}/assets/slide-scenes.css"><link rel="stylesheet" href="{BASE}/assets/present.css">' if cls=="lesson" else ""}{('<style id="result-report-style">'+(ROOT/'assets/results-report.css').read_text()+'</style>') if script=='assessment.js' else ''}</head>
-<body class="{cls}" {f'data-week="{week}"' if week else ''}>
+<html lang="en"{' class="deck-page"' if cls=="lesson" else ''}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(title)} — practical VUB Digital Literacy Level 2 learning.">{'<meta name="robots" content="noindex">' if instructor else ''}<title>{e(title)} | VUB Learning</title><link rel="stylesheet" href="/shared/brand.css">{f'<link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/slide-scenes.css"><link rel="stylesheet" href="{BASE}/assets/deck.css">' if cls=="lesson" else f'<link rel="stylesheet" href="{BASE}/assets/course.css"><link rel="stylesheet" href="{BASE}/assets/workshop.css"><link rel="stylesheet" href="{BASE}/assets/learning-app.css">'}{('<style id="result-report-style">'+(ROOT/'assets/results-report.css').read_text()+'</style>') if script=='assessment.js' else ''}</head>
+<body class="{cls}{' deck' if cls=='lesson' else ''}" {f'data-week="{week}"' if week else ''}>
 {learning.CONTRACT}
-<a class="skip" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/"><img src="/assets/vub-seal-white.png" alt=""><span>VUB Learning</span></a><span class="course-name">Digital Literacy · Level 2</span>{link('index.html','Course home')}</header><div class="brand-line"></div>
+{'' if cls=='lesson' else '<a class="skip" href="#main">Skip to content</a><header class="topbar"><a class="brand" href="/"><img src="/assets/vub-seal-white.png" alt=""><span>VUB Learning</span></a><span class="course-name">Digital Literacy · Level 2</span>'+link('index.html','Course home')+'</header><div class="brand-line"></div>'}
 {body}
-<footer class="footer">WV Veterans Upward Bound · Build technology confidence through practice.</footer>
+{'' if cls=='lesson' else '<footer class="footer">WV Veterans Upward Bound · Build technology confidence through practice.</footer>'}
 <script src="/shared/progress.js"></script><script src="/shared/text-size.js"></script><script src="{BASE}/assets/{script}"></script><script src="{BASE}/assets/workshop.js"></script><script src="{BASE}/assets/learning-app.js"></script>{f'<script src="{BASE}/assets/slide-scenes.js"></script>' if cls=="lesson" else ""}</body></html>'''
 def chapters(n,video_id):
  p=Path(f'video/digital-literacy-2/week-{n:02}/narration/beats.json')
@@ -97,7 +97,7 @@ def exercise(s,n,i):
  k=s['kind']; prefix=f'w{n}s{i}'
  if k=='steps': return '<ol class="step-list interactive-steps">'+''.join('<li><button type="button" data-step-done aria-pressed="false"><span>'+e(x)+'</span><span class="step-state">Mark practiced</span></button></li>' for x in s['items'])+'</ol>'
  if k=='flip':return '<div class="flip-grid">'+''.join(f'<button class="flip" type="button" aria-expanded="false" aria-label="{e(a)}: reveal explanation"><span class="flip-inner"><span class="flip-front" aria-hidden="false">{e(a)}<span class="flip-hint">Select to reveal</span></span><span class="flip-back" aria-hidden="true">{e(b)}<span class="flip-hint">Select to turn back</span></span></span></button>' for a,b in s['cards'])+'</div>'
- if k=='check':return f'<div class="check-options" data-explanation="{e(s["why"])}">'+''.join(f'<button type="button" aria-pressed="false" data-correct="{str(j==s["answer"]).lower()}">{e(o)}</button>' for j,o in enumerate(s['options']))+'</div><p class="feedback" role="status"></p>'
+ if k=='check':return f'<div class="check-options" data-explanation="{e(s["why"])}">'+''.join(f'<button type="button" aria-pressed="false" data-correct="{str(j==s["answer"]).lower()}"><span class="kc-letter" aria-hidden="true">{"ABC"[j]}</span>{e(o)}</button>' for j,o in enumerate(s['options']))+'</div><p class="feedback" role="status"></p>'
  if k=='video':return f'<video poster="{(photo_scenes.PHOTO_ROOT+photo_scenes.PHOTOS[n][1]+".webp") if n!=5 else BASE+"/media/week-05-poster.webp"}" id="lesson-video" tabindex="0" controls preload="metadata" playsinline aria-label="Week {n} explainer"><source src="{BASE}/media/week-{n:02}.mp4" type="video/mp4"><track kind="captions" src="{BASE}/media/week-{n:02}.vtt" srclang="en" label="English" default></video><p class="video-caption">Captions are available in the player. {link(f"weeks/week-{n:02}/video-transcript.html","Read the full transcript")}.</p>'+chapters(n,"lesson-video")
  if k=='lab':return link(f'weeks/week-{n:02}/worksheet.html','Open the activity worksheet','button')
  if k=='assessment':return link(f'assessments/{s["href"]}-test.html','Open the '+s['href']+'-test','button')
@@ -106,27 +106,128 @@ def exercise(s,n,i):
  if k=='spreadsheet':return '<div class="interactive-calc"><label for="paper-cost">Paper cost ($)</label><input id="paper-cost" type="number" min="0" step="1" value="12"><output id="budget-total" for="paper-cost" aria-live="polite">Total: $25.00</output></div><p class="small">Folders: $8 · Pens: $5. In a spreadsheet, enter the formula yourself.</p>'+link('assets/supplies.csv','Download the practice CSV','button secondary')
  if k=='starter':return '<div class="actions">'+link('activities/resource-finder.html','Open starter app','button')+f'<a class="button secondary" href="{BASE}/activities/resource-finder.html" download="resource-finder-v1.html">Download editable HTML</a></div>'
  return ''
+# ── Deck templates: the same slide language as the Level 1 and Computer Skills decks ────────────────
+import re as _re
+ICONS={
+ 'zoom':'<circle cx="26" cy="26" r="15"/><path d="m37 37 15 15M20 26h12M26 20v12"/>',
+ 'sound':'<path d="M8 24h11l14-11v38L19 40H8zM42 22a12 12 0 0 1 0 20M49 15a21 21 0 0 1 0 34"/>',
+ 'print':'<path d="M18 22V8h28v14M14 22h36a4 4 0 0 1 4 4v18H10V26a4 4 0 0 1 4-4zM18 36h28v18H18z"/>',
+ 'calendar':'<rect x="8" y="12" width="48" height="44" rx="4"/><path d="M8 26h48M20 6v12M44 6v12M18 38h8m10 0h8M18 48h8"/>',
+ 'help':'<circle cx="32" cy="32" r="26"/><path d="M24 25a8 8 0 1 1 11 7c-2 1-3 3-3 5v2M32 47v1"/>',
+ 'undo':'<path d="M20 22h20a14 14 0 0 1 0 28H24M20 22l10-10M20 22l10 10"/>',
+ 'settings':'<circle cx="32" cy="32" r="9"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8M12 12l6 6M46 46l6 6M12 52l6-6M46 18l6-6"/>',
+ 'screen':'<rect x="6" y="10" width="52" height="34" rx="3"/><path d="M32 44v12M20 56h24"/>',
+ 'file':'<path d="M14 6h24l12 12v40H14zM38 6v12h12M22 30h20M22 40h20M22 50h12"/>',
+ 'folder':'<path d="M6 18h20l6 7h26v29H6zM6 18v-8h18l6 7"/>',
+ 'message':'<rect x="6" y="12" width="52" height="40" rx="4"/><path d="m8 16 24 19 24-19"/>',
+ 'person':'<circle cx="32" cy="18" r="11"/><path d="M10 58v-9a22 22 0 0 1 44 0v9"/>',
+ 'people':'<circle cx="22" cy="20" r="9"/><circle cx="44" cy="24" r="7"/><path d="M4 56v-6a18 18 0 0 1 36 0v6M40 56v-5a14 14 0 0 1 20 0v5"/>',
+ 'check':'<circle cx="32" cy="32" r="26"/><path d="m18 33 9 9 19-20"/>',
+ 'cloud':'<path d="M17 50a13 13 0 0 1-2-26 18 18 0 0 1 35-2 14 14 0 0 1 1 28z"/>',
+ 'lock':'<rect x="12" y="28" width="40" height="30" rx="4"/><path d="M20 28V18a12 12 0 0 1 24 0v10M32 40v8"/>',
+ 'shield':'<path d="M32 4 54 14v16c0 15-11 25-22 30C21 55 10 45 10 30V14zM22 32l8 8 14-16"/>',
+ 'search':'<circle cx="27" cy="27" r="18"/><path d="m40 40 18 18"/>',
+ 'star':'<path d="m32 6 8 17 18 2-13 13 3 18-16-9-16 9 3-18L6 25l18-2z"/>',
+ 'link':'<path d="M26 38a10 10 0 0 0 14 0l10-10a10 10 0 0 0-14-14l-4 4M38 26a10 10 0 0 0-14 0L14 36a10 10 0 0 0 14 14l4-4"/>',
+ 'chart':'<path d="M8 56h48M14 48V30M28 48V18M42 48V26M56 48V12"/>',
+ 'photo':'<rect x="6" y="12" width="52" height="40" rx="3"/><circle cx="22" cy="26" r="5"/><path d="m6 46 16-14 12 10 8-7 16 15"/>',
+ 'video':'<rect x="6" y="14" width="38" height="36" rx="3"/><path d="m44 26 14-8v28l-14-8z"/>',
+ 'money':'<circle cx="32" cy="32" r="26"/><path d="M32 16v32M40 24c0-4-4-6-8-6s-8 2-8 6 4 6 8 6 8 2 8 6-4 6-8 6-8-2-8-6"/>',
+ 'keyboard':'<rect x="4" y="18" width="56" height="30" rx="3"/><path d="M12 28h4m6 0h4m6 0h4m6 0h4m6 0h4M12 38h4m6 0h20m6 0h4"/>',
+ 'usb':'<rect x="20" y="24" width="24" height="34" rx="3"/><path d="M26 24V8h12v16M30 12v8M34 12v8"/>',
+ 'wifi':'<path d="M6 24a38 38 0 0 1 52 0M14 34a26 26 0 0 1 36 0M22 44a14 14 0 0 1 20 0"/><circle cx="32" cy="52" r="3"/>',
+ 'lightbulb':'<path d="M22 44a16 16 0 1 1 20 0v6H22zM26 58h12"/>',
+ 'hand':'<path d="M16 34V16a4 4 0 0 1 8 0v14V9a4 4 0 0 1 8 0v20V8a4 4 0 0 1 8 0v22V14a4 4 0 0 1 8 0v26c0 12-6 18-18 18-6 0-11-4-15-9L6 40a5 5 0 0 1 7-7l6 7"/>',
+ 'app':'<rect x="8" y="8" width="48" height="48" rx="6"/><path d="M8 20h48M16 14h4M24 14h4"/>',
+ 'spark':'<path d="M32 6v12M32 46v12M6 32h12M46 32h12M14 14l8 8M42 42l8 8M14 50l8-8M42 22l8-8"/>',
+}
+KEY_ICONS=[(r'zoom|magnif|text size|readable|larger|bigger|display scal',r'zoom'),(r'sound|speaker|headset|headphone|volume|mute|audio',r'sound'),(r'print|printer|preview|toner|ink',r'print'),(r'calendar|appointment|event|reminder|week view|schedule',r'calendar'),(r'help|support|ask |request',r'help'),(r'undo|autocorrect|automatic|autocomplete|rule',r'undo'),(r'setting|scale|adjust|brightness|contrast',r'settings'),(r'password|encrypt|lock|secure|private|permission',r'lock'),(r'phish|scam|safe|verify|protect|catfish|trust',r'shield'),(r'search|find|filter|result',r'search'),(r'cloud|sync|online|account|service',r'cloud'),(r'email|message|send|recipient|subject|bcc|reply',r'message'),(r'partner|neighbor|reviewer|people|team|meeting|collaborat|share',r'people'),(r'folder|zip|save|file name|recycle',r'folder'),(r'file|document|handout|pdf|word|draft|version',r'file'),(r'chart|spreadsheet|formula|sum|total|cell',r'chart'),(r'photo|image|crop|picture',r'photo'),(r'video|clip|trim|caption',r'video'),(r'purchase|subscription|pay|price|cost|\$|money|trial',r'money'),(r'keyboard|shortcut|tab key|ctrl',r'keyboard'),(r'usb|drive|cable|hdmi|ethernet|port|connect',r'usb'),(r'network|wi-?fi|internet',r'wifi'),(r'app|website|browser|page|html|agent|spec|code',r'app'),(r'check|test|confirm|inspect|review|evidence',r'check')]
+def icon(kind,cls='key-point-icon'):
+ return f'<span class="{cls}" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">{ICONS.get(kind,ICONS["spark"])}</svg></span>'
+def pick_icon(text,used):
+ t=text.lower()
+ for pat,k in KEY_ICONS:
+  if _re.search(pat,t) and k not in used:return k
+ for pat,k in KEY_ICONS:
+  if _re.search(pat,t):return k
+ return 'spark'
+def sentences(body):
+ parts=[x.strip() for x in _re.split(r'(?<=[.!?])\s+(?=[A-Z“"(])',body) if x.strip()]
+ return parts or [body]
+def key_points(body,kind_hint=''):
+ """The teaching sentences as icon cards, the way the Level 1 decks present ideas."""
+ items=sentences(body);used=[];out=''
+ for t in items:
+  k=pick_icon(t+' '+kind_hint,used);used.append(k)
+  out+=f'<div class="key-point">{icon(k)}<div class="key-point-text">{e(t)}</div></div>'
+ cols=' cols-3' if len(items)==3 else ' cols-2' if len(items)>=4 else ''
+ return f'<div class="key-points{cols}">{out}</div>'
+def header(s,i,sub=True):
+ return f'<div class="slide-header"><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2>'+(f'<p class="slide-subtitle">{e(s["body"])}</p>' if sub else '')+'</div>'
+def two(left,right,wide=False):return f'<div class="two-column{" wide-right" if wide else ""}">{left}{right}</div>'
+def chapters_for(w,slides):
+ """Sidebar groups. Week 1 groups by teaching unit; other weeks by start, lesson and wrap-up."""
+ titles=[s['title'] for s in slides];groups=[]
+ units=[x for x in w.get('runsheet',[]) if x['kind']=='unit']
+ if units:
+  first=titles.index(units[0]['slides'][0]);groups.append(('Start here',list(range(first))))
+  for u in units:groups.append((f'{u["letter"]} · {u["name"]}',[titles.index(t) for t in u['slides']]))
+  last=max(groups[-1][1]);groups.append(('Wrap-up',list(range(last+1,len(slides)))))
+  return groups
+ wrap=len(slides)
+ while wrap>1 and slides[wrap-1]['kind'] in ('lab','video','summary','complete','assessment'):wrap-=1
+ first=0
+ while first<wrap and slides[first]['kind'] in ('objectives','discussion','assessment'):first+=1
+ return [('Start here',list(range(first))),('Lesson',list(range(first,wrap))),('Wrap-up',list(range(wrap,len(slides))))]
 for w in W:
  n=w['n']; folder=f'weeks/week-{n:02}'
  slides=[dict(title=f'Week {n}: '+w['title'],body=w['summary'],kind='objectives')]+w['slides']+[dict(title='You completed this lesson',body='Name one thing you can now do and one next practice step. Revisit any slide when you need it.',kind='complete')]
- nav=''.join(f'<button class="slide-link" type="button" data-slide="{i}" aria-current="false">{i+1}. {e(s["title"])}</button>' for i,s in enumerate(slides))
+ nav=''.join(f'<div class="chapter" role="group" aria-labelledby="ch-{n}-{g}"><div class="chapter-title" id="ch-{n}-{g}">{e(label)}</div><div class="chapter-slides">'+''.join(f'<button class="slide-link" type="button" data-slide="{i}" aria-current="false">{e(slides[i]["title"])}</button>' for i in idx)+'</div></div>' for g,(label,idx) in enumerate(chapters_for(w,slides)))
  sections=''
  for i,s in enumerate(slides):
-  more=ul(w['objectives']) if s['kind']=='objectives' else exercise(s,n,i)
-  if s['kind']=='complete':more='<div class="actions">'+link(f'weeks/week-{n+1:02}/presentation.html','Continue to next week','button')+'</div>' if n<6 else link('index.html','Return to your course','button')
+  k=s['kind'];extra=''
   demo=photo_scenes.special(n,i+1) or for_slide(n,i+1) or slide_scenes.feature(n,i+1)
-  if s['kind']=='objectives':
-   demo=photo_scenes.sequence(photo_scenes.EVIDENCE[n]) if n in [1,2] else workshop({3:'sheet',4:'feedback',5:'phishing',6:'app'}[n])
-   more='<details class="concept-note" open><summary>What you will learn</summary>'+more+'</details>'
-  if demo:
-   content=('' if (n,i+1)==(5,3) else photo_scenes.photo(n,i+1,compact=s['kind']!='objectives'))+('' if s['kind']=='objectives' else f'<p class="slide-lead">{e(s["body"])}</p>')+demo+more
-  else:
-   art=slide_scenes.supporting(s,n,i+1)
-   content=(f'<div class="illustrated-copy">{art}<div><p>{e(s["body"])}</p>{more}</div></div>' if art else f'<p>{e(s["body"])}</p>'+more)
-  content+=photo_scenes.supplement(n,i+1)
-  sections+=f'<section class="slide slide-kind-{s["kind"]} {"has-workshop" if demo else ""} {"summary" if s["kind"] in ["summary","complete"] else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2>{content}</section>'
-
- body=f'<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="lesson-sidebar">Show lesson navigation</button><div class="deck-layout"><aside class="sidebar" id="lesson-sidebar" aria-label="Lesson navigation"><h2>Week {n} · Lesson contents</h2><nav aria-label="Slides">{nav}</nav><nav class="resources" aria-label="Week resources">{resources(n)}</nav></aside><main class="deck-main" id="main"><div class="deck-toolbar"><p>Week {n} · {e(w["title"])}</p><button type="button" class="secondary" id="restart">Start from first slide</button><button type="button" class="secondary" id="present" aria-keyshortcuts="P">Present on a projector (P)</button></div><progress id="lesson-progress" value="1" max="{len(slides)}" aria-label="Lesson progress"></progress>{sections}<div class="bottom-nav"><button type="button" id="previous">Previous slide</button><span id="slide-counter" role="status"></span><button type="button" id="next">Next slide</button><button type="button" id="present-exit" aria-keyshortcuts="Escape">Exit presenting (Esc)</button></div><p class="muted small">Use arrow keys, Page Up / Page Down, Home / End outside a control. Swipe horizontally on touch screens. Press P to present on a projector and Esc to stop. Your slide position is saved in this browser.</p></main></div>'
+  photo=photo_scenes.photo(n,i+1,True) if (n,i+1)!=(5,3) else ''
+  if k=='objectives':
+   extra='title-slide'
+   content=f'<div class="title-grid"><div class="title-copy"><img class="seal" src="/assets/vub-seal-white.png" alt=""><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2><p class="slide-subtitle">{e(s["body"])}</p><p class="course-info">Week {n} of 6 · VUB Digital Literacy — Level 2</p></div><div class="title-panel"><h3>Today you will be able to</h3><ol>'+''.join(f'<li>{e(o)}</li>' for o in w['objectives'])+'</ol></div></div>'
+  elif k=='complete':
+   extra='completion-slide'
+   cta=('<div class="actions">'+link(f'weeks/week-{n+1:02}/presentation.html','Continue to next week','button')+'</div>') if n<6 else '<div class="actions">'+link('index.html','Return to your course','button')+'</div>'
+   content=f'<div class="completion-badge" aria-hidden="true"><img src="/assets/vub-seal-white.png" alt=""></div><h2 id="title-{i+1}" tabindex="-1">{e(s["title"])}</h2><p>{e(s["body"])}</p>{cta}'
+  elif k=='summary':
+   extra='summary-slide'
+   content=header(s,i)+photo_scenes.evidence_board(n)
+  elif k=='discussion':
+   content=header(s,i,False)+two(photo,key_points(s['body'],'partner'),True)
+  elif k=='assessment':
+   content=header(s,i)+two(f'<div class="demo-box"><h3>{"Before we begin" if s["href"]=="pre" else "Show what you know"}</h3><p>28 questions · about 25 minutes · no time limit</p><div class="actions" style="justify-content:center">'+link(f'assessments/{s["href"]}-test.html','Open the '+s['href']+'-test','button')+'</div></div>',key_points('Complete your own assessment. Use the feedback to choose what to practice. Print or save your results.','check'))
+  elif k=='steps':
+   short=len(s['items'])<=3 and max(len(x) for x in s['items'])<=44
+   content=header(s,i)+'<ol class="step-list interactive-steps'+(' cols-3' if short else '')+'">'+''.join('<li><button type="button" data-step-done aria-pressed="false"><span>'+e(x)+'</span><span class="step-state">Mark practiced</span></button></li>' for x in s['items'])+'</ol>'
+   # One panel beside the steps: the illustrated record if there is one, else the practice window.
+   content+=photo_scenes.supplement(n,i+1) or demo or ''
+  elif k=='flip':
+   content=header(s,i)+exercise(s,n,i)+(demo or '')
+  elif k=='check':
+   content=header(s,i,False)+f'<div class="knowledge-check"><p class="kc-question">{e(s["body"])}</p></div>'+exercise(s,n,i)+(photo_scenes.supplement(n,i+1) or demo or '')
+  elif k=='video':
+   content=header(s,i)+two('<div>'+exercise(s,n,i).replace('<details class="video-chapters">','<details class="video-chapters" open>').split('<details')[0]+'</div>','<div class="column"><details'+exercise(s,n,i).split('<details')[1].replace('class="video-chapters"','class="video-chapters" open',1)+'</div>',True)
+  elif k=='lab':
+   content=header(s,i)+two(f'<div class="demo-box"><h3>Your worksheet</h3><p>Work at your own seat. A partner checks your result.</p><div class="actions" style="justify-content:center">'+exercise(s,n,i)+'</div></div>',photo_scenes.evidence_board(n))
+  elif k=='try':
+   content=header(s,i,False)+f'<div class="handout-prompt">{icon("hand","handout-prompt-icon")}<div class="handout-prompt-text">{e(s["body"])}</div></div>'+(demo or key_points(s['body']))
+  elif k in ('form','permissions','spreadsheet','starter','prompt'):
+   content=header(s,i)+(two(f'<div class="column">{exercise(s,n,i)}</div>',demo) if demo and exercise(s,n,i) else (demo or f'<div class="column">{exercise(s,n,i)}</div>' or key_points(s['body'])))
+  else:  # teach
+   if demo and photo:content=header(s,i)+two(photo,demo,True)
+   elif demo:content=header(s,i)+demo
+   elif photo:content=header(s,i,False)+two(photo,key_points(s['body'],s['title']),True)
+   else:content=header(s,i,False)+key_points(s['body'],s['title'])
+  # One picture per slide: the illustrated side panel joins only slides that have no practice window or example.
+  if k not in ('objectives','complete','try','steps','check') and not demo:content+=photo_scenes.supplement(n,i+1)
+  sections+=f'<section class="slide slide-kind-{k} {extra} {"has-workshop" if demo else ""}" id="slide-{i+1}" aria-labelledby="title-{i+1}"><div class="slide-body">{content}</div></section>'
+ body=f'<a class="skip" href="#main">Skip to content</a><aside class="sidebar" id="lesson-sidebar" aria-label="Lesson navigation"><a class="logo" href="{BASE}/index.html"><img src="/assets/vub-seal-white.png" alt=""><h2>VUB Digital Literacy</h2><p>Level 2 · IC3 GS6 Aligned</p></a><div class="week-indicator"><span class="week-num">Week {n}</span><span class="week-title">{e(w["title"])}</span></div><nav aria-label="Slides">{nav}</nav><nav class="resources" aria-label="Week resources">{resources(n)}</nav><div class="progress-section"><progress id="lesson-progress" value="1" max="{len(slides)}" aria-label="Lesson progress"></progress><p class="progress-text" id="progress-text"></p></div></aside><main class="main-content" id="main"><div class="ics-toolbar"><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="lesson-sidebar">Show lesson navigation</button><a href="{BASE}/index.html">Digital Literacy Level 2 home</a><div class="toolbar-right"><div data-text-dock></div><button type="button" id="restart">Start over</button><button type="button" id="present" aria-keyshortcuts="P">Present (P)</button></div></div><div class="slides-container">{sections}</div><div class="nav-footer"><button type="button" class="nav-btn" id="previous">← Previous</button><span id="slide-counter" role="status"></span><button type="button" class="nav-btn" id="next">Next →</button><button type="button" class="nav-btn" id="present-exit" aria-keyshortcuts="Escape">Exit (Esc)</button></div></main>'
  write(folder+'/presentation.html',page(w['title'],body,'lesson',n))
  worksheet='<p>'+e(w['summary'])+'</p><p>Name or learner code: ____________________</p><p>Use fictional information. Work at your own workstation; a partner can check your result. Record what you actually observed. Type below or print a blank copy. Typed worksheet responses stay on this page only; print before closing.</p>'
  if n==6:worksheet+=practice_versions()+''.join(f'<h2>{e(t)}</h2><ol class="procedure">'+''.join('<li>'+e(x)+'</li>' for x in steps)+'</ol>' for t,steps in w['procedures'])
