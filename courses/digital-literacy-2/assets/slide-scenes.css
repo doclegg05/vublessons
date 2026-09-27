@@ -111,3 +111,6 @@
 /* Completion and summary slides are navy, so their buttons use the gold action style. */
 .lesson .slide-kind-summary .button,.lesson .slide-kind-complete .button{background:var(--app-gold);border-color:var(--app-gold);color:#102c4b}
 .lesson .slide-kind-summary .button:hover,.lesson .slide-kind-complete .button:hover{background:#f2ce61;border-color:#f2ce61}
+/* Week 6 diff: one block per changed line. The minus or plus sign stays at the left edge when a line wraps;
+   meaning comes from the sign, the tint only supports it. */
+.authored-content pre.diff{white-space:normal}.authored-content pre.diff del,.authored-content pre.diff ins{display:block;white-space:pre-wrap;text-decoration:none;padding:2px 10px 2px 1.3em;text-indent:-1em;border-radius:4px}.authored-content pre.diff del{background:#fbeef1}.authored-content pre.diff ins{background:#e7f4ed}.authored-content pre.diff del+ins{margin-bottom:12px}

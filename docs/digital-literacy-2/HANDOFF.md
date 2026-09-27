@@ -23,7 +23,7 @@ The approved September visual refinement is mapped in `PHOTOGRAPHIC-VISUAL-PLAN.
 
 Video `CHAPTERS` in `video-scenes.py` maps every chapter to a scene and optional scenario photo. `python3 scripts/dl2/build-media.py --visual-only` rebuilds compositions while preserving audio/caption metadata; do not run `author-media.py` for this visual-only path. The production CLI pin advanced from HyperFrames 0.8.48 to 0.8.58 and passed strict source validation. Use the current production pin for subsequent exports. See `VALIDATION.md` for the actual delivery-verification status rather than inferring it from source generation.
 
-The fourth VUB Learning course teaches IC3 GS6 Level 2 across five two-hour sessions, followed by a two-hour web app building extension. The cohort calendar appears only in `courses/digital-literacy-2/syllabus.html`; presentations and resources can be reused.
+The fourth VUB Learning course teaches IC3 GS6 Level 2 across five two-hour sessions, followed by a two-hour extension on directing an AI coding agent and SaaS basics. The cohort calendar appears only in `courses/digital-literacy-2/syllabus.html`; presentations and resources can be reused.
 
 ## Curriculum review fixes (2026-09-24)
 
@@ -89,6 +89,58 @@ and `tests/functional/dl2-monday-fixes.spec.js`.
 - Contrast: flip-card hover, the selected phishing clue, gold buttons on navy completion slides, gold
   focus rings on navy/teal. Assessment topic tabs size to their label and the strip scrolls.
 
+## Week 6 redesign: an instructor-led AI coding agent demo (2026-09-26)
+
+Week 6 now teaches the basics of agentic engineering a SaaS website. The instructor runs an AI coding agent
+on the projector; learners need no account or AI access. They write the spec and acceptance checks, predict
+the change, review the agent's diff, test with a five-check log, write a repair request, retest, and learn
+SaaS basics (hosting, sign-in, data, API keys, cost and upkeep) through the same resource finder. Six Tell,
+Show, Do, Review cycles; slide order, count and kinds are unchanged. Tests:
+`tests/content/dl2-week6-agent.spec.js`, `tests/functional/dl2-week6-agent.spec.js` and week 6 in
+`tests/content/dl2-weeks-tsdr.spec.js`.
+
+**Three practice pages** in `courses/digital-literacy-2/activities/` (hand-authored, not generated):
+
+- `resource-finder.html`: version 1, the starter. Its script is now one statement per line so a live
+  agent's diff is short on the projector. Behaviour and the top-level `const resources` are unchanged.
+- `resource-finder-agent.html`: version 2, the prepared "agent result". It adds the requested category
+  search, a harmless unrequested placeholder change and a Version 2 line, and it contains a
+  **deliberate defect: the query line is `const query=search.value.trim();` without `.toLowerCase()`, so
+  LIBRARY and Learning find nothing. Do not fix it.** Slide 10's diff, the Ctrl+F `toLowerCase` count
+  (1 in version 2, 2 in versions 1 and 3), task 5's mixed-case check, the answer guide and video chapter 9
+  all depend on it, and tests fail if it is repaired.
+- `resource-finder-agent-fixed.html`: version 3, the one-line repair used for the retest.
+
+If version 1 changes, re-derive versions 2 and 3 with exactly those edits and keep slide 10's diff
+(`photo_scenes.py` (6,10)) matching the real lines; a content test compares them.
+
+New optional week keys: `rubric` (criterion plus 0/1/2 descriptors; a table on the worksheet and in the
+answer guide, with a Total line) and `glossary` (term and definition; the "Words in this video" box above
+the week 6 transcript). The worksheet shows the version buttons and procedures before the tasks, then the
+App test log and a Retest table with typed cells.
+
+**Still open**
+
+- Video re-record (not done): chapter 5 as "Write a spec the agent can follow"; chapter 6 as "Review the
+  agent's change before you accept it" with a screen demo of plan, approve, the diff with the missing
+  `toLowerCase`, and the way back; one spoken definition each for agent (ch1), SaaS and authentication
+  (ch2), API key (ch5), diff (ch6), happy path (ch7) and hosting (ch10); 3–5 s of silence after the prompts
+  at 2:52 and 6:37; screen-demo labels held at least 2.5 s. Until then the chapter titles still describe the
+  old build ("Give the AI a bounded, useful request") and the transcript's word list covers the terms.
+- The floating Text size button can cover the search box on narrow screens (AX-07). The proposed
+  `shared/text-size.js` change was skipped because it is platform-wide; the answer guide tells the
+  instructor this is not the agent's change.
+- Positioning text left as it was: the `courses.json` DL2 subtitle ("building a small web app with AI") and
+  `sources.html` ("app-building week").
+
+**Instructor demo notes** (tool names belong here and in prep, not in learner text): rehearse the exact demo
+the week before with the tool you will use (for example Claude Code) and record it as a backup. Keep the
+practice folder under git so `git diff` shows the change and `git restore` is the way back. Start in plan
+mode (`claude --permission-mode plan`), read the plan aloud, then approve with manual edit approval so each
+edit waits; Esc stops the agent. If the live run gets the change right, say so and switch to the prepared
+version 2 ("another run of the same request produced this one"). Never show a sign-in page, key or bill;
+enlarge the terminal font.
+
 ## Video review fixes (2026-09-24)
 
 The six videos were re-rendered (visual-only; narration audio, beats and SCRIPT.md unchanged) after
@@ -135,7 +187,7 @@ checkout; `verify-media.py` checks the WAV hashes.
 
 ## Included
 
-Six presentations contain 137 slides in total, including title and completion slides. Each week has a two-hour lesson plan, eight worksheet tasks, an answer guide, two knowledge checks, a narrated video, captions and a transcript. The week 6 resource finder is a working, downloadable HTML/CSS/JavaScript example with fictional data and an account-free manual editing path.
+Six presentations contain 137 slides in total, including title and completion slides. Each week has a two-hour lesson plan, eight worksheet tasks, an answer guide, two knowledge checks, a narrated video, captions and a transcript. Week 6 has three practice pages (the resource finder before the agent, the agent's result with one planted defect, and the repair), each a working, downloadable HTML/CSS/JavaScript example with fictional data; learners need no account or AI access.
 
 The parallel pre/post tests each contain 28 original questions, four per GS6 domain. Results include the score, domain breakdown, every response with feedback, optional pre/post growth comparison, browser Print / Save as PDF, and a standalone HTML download. Paper tests and answer keys accompany both versions. The week 6 app uses a separate eight-point rubric. These are classroom assessments, not Certiport exam questions or certification predictions.
 

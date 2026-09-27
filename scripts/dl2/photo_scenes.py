@@ -11,14 +11,14 @@ PHOTOS={
  5:{1:'safety',2:'safety',3:'workstation',8:'safety',9:'usb',12:'usb',14:'safety',20:'safety'},
  6:{1:'app-planning',2:'app-planning',16:'app-planning',22:'collaboration',24:'collaboration'}
 }
-PURPOSE={1:'Make a familiar task easier',2:'Find useful help in your community',3:'Create something a neighbor can use',4:'Plan together and leave a clear next step',5:'Pause, verify and protect your work',6:'Turn a small local problem into a working app'}
+PURPOSE={1:'Make a familiar task easier',2:'Find useful help in your community',3:'Create something a neighbor can use',4:'Plan together and leave a clear next step',5:'Pause, verify and protect your work',6:'Direct an agent, then check its work'}
 EVIDENCE={
  1:[('Choose','One setting for your task'),('Test','Read, hear or find the result'),('Restore','Keep a way back')],
  2:[('Source','Organization + evidence'),('Folder','A name you can find'),('Access','The right role + recovery')],
  3:[('Handout','A clear next action'),('Workbook','A total that recalculates'),('Export','Open and inspect the saved copy')],
  4:[('Request','Who does what, and when?'),('Review','A specific change + a reason'),('Decision','One agreed shared copy')],
  5:[('Evidence','What can you confirm?'),('Protection','Access that matches the task'),('Practice','Choose one skill to repeat')],
- 6:[('Saved app','A working recoverable copy'),('Test log','Expected result ↔ observed result'),('Limitation','Local prototype, fictional data')]
+ 6:[('Spec','One change + checks you can run'),('Review','What changed? Was it asked for?'),('Test log','Expected ↔ actual, then retest')]
 }
 
 def photo(n,i,compact=False):
@@ -136,17 +136,18 @@ def artifact(n,i,j):
  if (n,i)==(5,7):return fields('Fictional conversation controls',[('Pause','Do not escalate the exchange'),('Record','Preserve relevant evidence when safe'),('Support','Report · block · trusted support')],j)
  if (n,i)==(5,11):return fields('Choose the protected action',[('Open','A password is required to read'),('Edit','Content may be readable but changes restricted'),('Recovery','Word cannot recover a lost password')],j)
  if (n,i)==(5,12):return fields('Disconnected device',[('Found','Unfamiliar USB drive'),('Pause','Do not connect it'),('Procedure','Ask authorized lab staff')],j)
- if (n,i)==(6,3):return [fields('Resource website',[('Content','Community library · Learning'),('Purpose','Read information')]),fields('Resource web app',[('Search','library'),('Result','Community library · Learning')]),fields('Software as a service',[('Users','Ongoing hosted service'),('Responsibilities','Access · shared data · support · maintenance')])][j]
- if (n,i)==(6,4):return fields('Direct and inspect the build',[('Task','Find a fictional community resource'),('Proposed code','AI output requires review'),('Observed result','Compare behavior with your acceptance checks')],j)
- if (n,i)==(6,8):return [panel('Bundled fictional data','<pre>name: "Community library"\ncategory: "Learning"</pre>'),fields('Starter files',[('Open','resource-finder-v1.html'),('Inspect','HTML · CSS · JavaScript')]),fields('Test evidence',[('Query','LIBRARY'),('Expected','Community library'),('Observed','Compare with actual result')])][j]
- if (n,i)==(6,10):return [fields('Preserve the original',[('Original','resource-finder-v1.html'),('Working copy','resource-finder-v2.html')]),panel('One heading change','<pre><del>&lt;h1&gt;Find a resource&lt;/h1&gt;</del>\n<ins>&lt;h1&gt;Community resources&lt;/h1&gt;</ins></pre>'),fields('Open and test',[('File','resource-finder-v2.html'),('Heading','Community resources'),('Search','skills finds Community Skills Desk')])][j]
- if (n,i)==(6,11):return fields('One change, recoverable versions',[('Save','Keep resource-finder-v1.html'),('Compare','Only the heading changes in v2'),('Retest','Search still works; restore v1 if needed')],j)
- if (n,i)==(6,12):return panel('Visible keyboard focus',field('Observed problem','Focus is hard to see')+'<button type="button" class="focus-practice">Practice focus: press Tab</button>'+field('Repair requirement','A visible outline; search behavior preserved',j>0))
+ if (n,i)==(6,3):return [fields('Resource website',[('Content','Community library · Learning'),('Purpose','Read information')]),fields('Resource web app',[('Search','library'),('Result','Community library · Learning')]),fields('Software as a service',[('You','Sign in from any browser'),('The company','Hosts it, keeps the data, updates it')])][j]
+ if (n,i)==(6,4):return fields('Agent loop',[('Spec','Let search also find the category'),('Plan and change','The agent says what it will edit, then edits'),('Review and test','Read the diff; run your checks')],j)
+ if (n,i)==(6,8):return [fields('Agent plan · file',[('File','resource-finder.html only')]),fields('Agent plan · change',[('Part','JavaScript: the rule that picks matches'),('Change','Also look at the category')]),fields('Agent plan · checks',[('Run','learning · LIBRARY · zzz · Tab · narrow window')])][j]
+ # The diff matches the real version 1 → version 2 change (activities/resource-finder-agent.html).
+ if (n,i)==(6,10):return [fields('What we asked for',[('Change','Search also finds the category'),('Keep','Capital letters, no-match message, keyboard')]),panel('The diff · resource-finder.html','<pre class="diff"><del>- const query=search.value.trim().toLowerCase();</del>\n<ins>+ const query=search.value.trim();</ins>\n<del>- (r.name+\' \'+r.description)</del>\n<ins>+ (r.name+\' \'+r.category+\' \'+r.description)</ins>\n<del>- placeholder="Try library"</del>\n<ins>+ placeholder="Try library or learning"</ins></pre>'),fields('Your review',[('Asked for?','Mark each changed line'),('Not asked for?','Circle it and say if it matters'),('Then test','Which check would catch it?')])][j]
+ if (n,i)==(6,11):return fields('One change, a way back',[('Save','Keep version 1: resource-finder.html'),('Compare','Read the diff: what changed, what stayed'),('Retest','Every check; go back to version 1 if one fails')],j)
+ if (n,i)==(6,12):return panel('Repair request',field('Observed','LIBRARY and Learning find nothing; library and learning work')+field('Request','Match capital and small letters the same again',j>0)+field('Keep','The new category search and everything else',j>1))
  if (n,i)==(6,13):return fields('Data boundary',[('Bundled file','Anyone with the file can inspect records'),('One browser','Local storage is not synchronized; can be cleared'),('Shared service','Requires access rules and authorized devices')],j)
  if (n,i)==(6,14):return panel('Safe practice source','<pre>name: "Community library"\ncategory: "Learning"</pre>'+field(['Inspect','Exclude','Practice'][j],['Bundled code and data are visible','No secrets or private records in browser code','Use fictional records only'][j],True))
  if (n,i)==(6,15):return fields('Screen versus security',[('Decorative form','A sign-in picture does not protect data'),('Server boundary','Identity → authorization → allowed data'),('This prototype','No real accounts or passwords collected')],j)
- if (n,i)==(6,18):return fields('Explicitly broken demonstration',[('Steps','Search for LIBRARY'),('Expected','Community library'),('Actual','No match — reproduce and repair the bug')],j)
- if (n,i)==(6,19):return fields('A separate launch decision',[('Local','Saved HTML on your own device'),('Hosted','Visitors can reach published files'),('Maintain','Ownership · rights · costs · access · backups')],j)
+ if (n,i)==(6,18):return fields('Bug report',[('Steps','Open version 2; type LIBRARY'),('Expected','Community library (1 found), as in version 1'),('Actual','No matching resources: a regression')],j)
+ if (n,i)==(6,19):return fields('From practice page to SaaS',[('Hosting','A web server anyone can reach'),('Sign-in and data','Accounts; a database on the server'),('Cost and upkeep','Fees, backups, updates, support, a named owner')],j)
  return ''
 
 def steps_demo(title,states):
@@ -201,9 +202,9 @@ def supplement(n,i):
  if (n,i)==(5,9):return photo(n,i,True)
  if (n,i)==(5,13):return fields('Compare the task',[('Video meeting','Camera may support participation'),('Text resource page','Reading does not need a camera')])
  if (n,i)==(5,19):return panel('Fictional practice report · not certification', '<div class="sample-score"><strong>Safety practice · 2 of 4</strong><div class="sample-score-track" aria-hidden="true"><span></span></div></div>'+flow(['Review: recognizing message pressure','Practice: use an independent contact route','Explain: what evidence supports your choice']))
- if (n,i)==(6,6):return fields('Observable acceptance checks',[('Match','library finds Community library'),('Keyboard','Tab reaches controls with a visible outline'),('Empty result','zzz shows a useful no-match message')])
- if (n,i)==(6,9):return fields('Working reference',[('Filename','resource-finder-v1.html'),('Test states','Match · no match · mixed case')])
- if (n,i)==(6,17):return steps_demo('Record evidence for every test',[(label,fields('Test log · compare with the working app',[('Action',action),('Expected',result),('Observed','Try it in the supplied starter; record what actually happens')])) for label,action,result in [('Blank','Clear the search','All matching-category resources'),('No match','Search zzz','Useful empty-result message'),('Mixed case','Search LIBRARY','Community library'),('Category','Combine category with search','Only records satisfying both filters'),('Narrow screen','Resize the starter window','Controls and content remain usable'),('Keyboard','Tab and activate controls','Visible focus and usable actions')]])
+ if (n,i)==(6,6):return fields('Acceptance checks for our change',[('New','learning shows Community library and Practice Workbook Workshop'),('Still works','LIBRARY shows Community library'),('No match','zzz shows the no-match message')])
+ if (n,i)==(6,9):return fields('Version 1 · before the agent',[('Page','resource-finder.html'),('Quick checks','library · LIBRARY · zzz')])
+ if (n,i)==(6,17):return steps_demo('Record evidence for every check',[(label,fields('Test log · the agent’s version',[('Action',action),('Expected',result),('Observed','Test version 2 (resource-finder-agent.html); write what actually happens')])) for label,action,result in [('Happy path','Type learning','Community library and Practice Workbook Workshop'),('No match','Type zzz','The no-match message'),('Mixed case','Type LIBRARY, then Learning','Same results as library and learning'),('Keyboard','Tab to every control; Enter on Reset filters','A thick outline on each; everything works'),('Narrow screen','Zoom to 400% (Ctrl and +)','One column; nothing cut off')]])
  return ''
 
 

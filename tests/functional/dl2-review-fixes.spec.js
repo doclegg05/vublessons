@@ -33,12 +33,10 @@ test('DL2 assessment topic buttons expose their visible text and answered count 
  await expect(buttons.nth(3)).toHaveAccessibleName(/Creating/);
 });
 
-test('DL2 week 6 manual edit still passes the v2 search check',async({page})=>{
+// Retired 2026-09-26 with the week 6 redesign: 'DL2 week 6 manual edit still passes the v2 search check'.
+// Learners no longer rename a record; the three practice pages are checked in
+// tests/functional/dl2-week6-agent.spec.js. The top-level resources array stays for dl2-video-chapters.
+test('DL2 week 6 starter keeps its data in a top-level resources array',async({page})=>{
  await page.goto(base+'/activities/resource-finder.html');
- // The worksheet edit: rename the first fictional record, then run the v2 check from slide 10.
- await page.evaluate(()=>{resources[0].name='Community Skills Desk';});
- await page.locator('#search').fill('skills');
- await expect(page.locator('#results')).toContainText('Community Skills Desk');
- await page.locator('#search').fill('library');
- await expect(page.locator('#results')).not.toContainText('Community Skills Desk');
+ expect(await page.evaluate(()=>resources[0].name)).toBe('Community library');
 });

@@ -1707,72 +1707,94 @@
     },
     {
       "n": 6,
-      "title": "Build a small web app with AI",
-      "summary": "Turn a clear need into a tested, accessible prototype using basic vibe coding.",
+      "title": "Guide an AI agent to improve a web app",
+      "summary": "Write a clear request for an AI coding agent, review what it changed, test the result, and learn what running a website as a service takes.",
       "objectives": [
-        "Describe a small app and write a bounded AI prompt.",
-        "Explain HTML, CSS, JavaScript and browser storage.",
-        "Test a prototype, revise one behavior and explain what a hosted service still needs."
+        "Write a clear request and checks for an AI coding agent.",
+        "Predict what the agent will change before it starts.",
+        "Read the change and spot anything you did not ask for.",
+        "Test the result, report a problem and retest after the fix.",
+        "Explain what running a website as a service takes."
       ],
       "refs": [
-        "Extension: basic web app and SaaS prototyping"
+        "Extension: agentic engineering basics and SaaS"
       ],
       "agenda": [
         [
+          8,
+          "Warm-up and reconnect",
+          "Reconnect: two learners share the practice step they chose at the end of week 5. Recall: in week 1 you let AutoCorrect change teh to the and checked it before keeping it; in week 5 you kept passwords private. Today a much bigger automatic helper changes a web page, and both rules still apply. Pairs discuss slide 2: where would a wrong change hurt most?"
+        ],
+        [
+          7,
+          "Introduction: goals and the example",
+          "Read the goals on slide 1 aloud. Slide 3 in one minute: SaaS is software you use in a browser while a company runs it. Play chapter 1 (0:00\u20130:46). Every learner opens slide 9 and selects Open starter app: this is version 1, the page the agent will change. Name the loop on the board: spec, plan, change, review, test, revise."
+        ],
+        [
+          15,
+          "Cycle A: spec and acceptance checks",
+          "Tell: slides 4, 6 and 7 (agent, prompt, spec, acceptance check). Show: chapter 4 (pause at 2:52 so learners can write), then chapter 5 (3:00\u20133:44); build the class spec live with the slide 7 builder. Do: worksheet tasks 1 and 2, every learner writes their own spec and three checks. Review: a partner reads each check aloud and says whether they could run it without guessing; pick one learner's checks for the demo."
+        ],
+        [
           10,
-          "Choose the problem",
-          "Introduce a fictional community-resource finder and agree on three observable requirements."
+          "Cycle B: predict, then read the plan",
+          "Tell: slides 5 and 8 (HTML, CSS and JavaScript; ask the agent for a plan first). Show: chapter 3 (1:32\u20132:14); after the predictions, give the class spec to the AI coding agent on the projector in plan mode and read its plan aloud. Do: worksheet task 3, every learner writes a prediction before the plan appears, then compares. Review: show of hands for HTML, CSS or JavaScript; approve the plan only if it matches the spec."
         ],
         [
-          20,
-          "Model a first build",
-          "Explain website versus web app versus SaaS. Demonstrate the supplied starter and a bounded AI prompt; no paid account is required."
-        ],
-        [
-          20,
-          "Build round one",
-          "Learners use an approved AI tool or edit the supplied starter. Save a first version before changes."
+          12,
+          "Cycle C: the agent changes, you review",
+          "Tell: slides 11 and 10 (one change at a time; a diff shows removed lines with a minus sign and added lines with a plus sign). Show: approve the plan, let the agent make the change, then show the before-and-after on the projector; chapter 6 (3:44\u20134:01) shows keeping a working version first. If the live run is slow or fails, use the prepared version on slide 10. Do: worksheet task 4, every learner marks each changed line on slide 10 as asked for or not asked for. Review: partners compare; ask which change nobody asked for and which check would catch it."
         ],
         [
           10,
           "Break",
-          "Pause away from screens."
+          "Screen-free pause. Leave version 1 and the worksheet open."
         ],
         [
           15,
-          "Test demonstration",
-          "Play the explainer; show keyboard, empty-result, narrow-screen and privacy checks."
+          "Cycle D: test with the checklist",
+          "Tell: slide 17 (happy path, no match, mixed case, keyboard, narrow screen). Show: chapter 7 (4:27\u20135:11) and chapter 8 (5:11\u20135:55), then test the live agent's page on the projector while the class calls out each check. Do: worksheet task 5, every learner opens the agent's version (resource-finder-agent.html) at their own seat and records expected, actual and pass or fail in the App test log. Review: the slide 20 knowledge check; a learner who found a failing check reads out their evidence."
         ],
         [
-          30,
-          "Improve and retest",
-          "Pairs swap tester/builder roles, fix one observed defect and record evidence."
+          13,
+          "Cycle E: repair and retest",
+          "Tell: slides 18 and 12 (regression; a repair request names the steps, expected, actual and what to keep). Show: chapter 9 (pause at 6:37), then paste one learner's repair request into the agent and read its one-line diff together. Do: worksheet tasks 6 and 7, every learner writes a repair request, then opens the repaired version (resource-finder-agent-fixed.html) and repeats the failed check and two checks that passed before. Review: a partner confirms that nothing that passed before now fails."
         ],
         [
-          15,
-          "Demo and reflection",
-          "Demonstrate three acceptance checks and complete the extension rubric. Discuss hosting requirements without deploying."
+          13,
+          "Cycle F: what makes it SaaS",
+          "Tell: slides 3, 13, 14, 15 and 19 (SaaS, where data lives, API key, authentication, hosting, cost and upkeep). Show: chapter 2 (0:46\u20131:32) and chapter 10 (6:44\u20137:31), then press Ctrl and U on the agent's page to show that anyone can read a page's code. Do: worksheet task 8, every learner fills in the SaaS table for the finder. Review: the slide 21 knowledge check; two learners each explain one trade-off."
+        ],
+        [
+          10,
+          "Individual check",
+          "Each learner shows you three things: one acceptance check and its result, the change the spec did not ask for, and one SaaS trade-off with a reason. Score the extension rubric (0, 1 or 2 per row) and mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+        ],
+        [
+          7,
+          "Apply and close",
+          "Slides 22 to 24. Home task: choose one website you already use that runs as a service, such as web email. Write where your data lives, how you sign in, and one check you would run after the company changes the site. Keep it with your worksheet. Then select Start fresh on this computer at each station."
         ]
       ],
       "slides": [
         {
           "title": "Solve one small problem",
-          "body": "Build a finder for fictional community resources. A visitor should be able to search, filter and understand the results.",
+          "body": "Our fictional resource finder works. Visitors want to type a kind of help, like learning, and see every match. Today an AI coding agent makes that change. You decide what to ask for, check what it did and test it.",
           "kind": "discussion"
         },
         {
           "title": "Website, web app, and SaaS",
-          "body": "A website presents pages. A web app adds interactive tasks. SaaS is software operated as an ongoing online service; it may need accounts, shared storage, support and maintenance.",
+          "body": "A website shows pages. A web app responds when you type or click. SaaS (software as a service) is software you use in a browser while a company hosts it, keeps the data, secures it and updates it, usually for a fee.",
           "kind": "teach"
         },
         {
-          "title": "Vibe coding starts with clear instructions",
-          "body": "Describe the result you want in ordinary language, ask AI to produce code, then inspect and test what it gives you. You are responsible for the result.",
+          "title": "An AI coding agent works in a loop",
+          "body": "An AI coding agent is a program that reads your files, plans a change, edits the code and can run checks, all from a plain-English request. The loop: spec, plan, change, review, test, revise. You approve each step and own the result.",
           "kind": "teach"
         },
         {
           "title": "Three parts of a browser app",
-          "body": "HTML gives content structure. CSS controls appearance. JavaScript responds to input. A server can add shared data and protected operations.",
+          "body": "HTML is the content and structure. CSS is the look and layout. JavaScript is the behavior, such as deciding which resources match a search. Before the agent starts, predict which part our change needs.",
           "kind": "flip",
           "cards": [
             [
@@ -1791,157 +1813,288 @@
         },
         {
           "title": "Write acceptance checks first",
-          "body": "Search finds the named fictional service. The keyboard reaches every control. An unmatched search explains that no results were found.",
+          "body": "An acceptance check is a test anyone can run: I type or press this, I expect to see that. Write them before the agent starts. Include one check for the new change and one for something that must keep working.",
           "kind": "steps",
           "items": [
-            "Name one user task",
-            "Write three observable checks",
-            "Use fictional data"
+            "Name the one change",
+            "Write three I do, I expect checks",
+            "Add one check that must not break"
           ]
         },
         {
-          "title": "A prompt with useful boundaries",
-          "body": "Build one HTML file for a fictional resource finder. Include a labeled search field, category filter and readable results. Use semantic buttons, visible focus and no external dependencies. Do not collect personal data.",
+          "title": "Write a spec the agent can follow",
+          "body": "A prompt is what you type to the agent. A spec is a careful prompt: Let the search box also find resources by category. Keep capital-letter matching, the no-match message and keyboard use. Change only this file. Show your plan first.",
           "kind": "prompt"
         },
         {
-          "title": "Ask the AI to explain its work",
-          "body": "Ask where the data lives, what each file does, and how to test the three requirements. Treat the explanation as a claim to verify against behavior.",
+          "title": "Ask the agent for a plan first",
+          "body": "Before the agent edits anything, ask for its plan: which file, what it will change and how it will check the result. Compare the plan with your spec and your prediction. Approve it only when they match.",
           "kind": "teach"
         },
         {
           "title": "Start with a working reference",
-          "body": "Open the supplied starter app and complete all three checks. Download the editable HTML file and save a copy before making a change.",
+          "body": "This is version 1, before the agent. Open the starter app and run three quick checks: library, LIBRARY and zzz. Keep this version as the way back if a change goes wrong.",
           "kind": "starter"
         },
         {
-          "title": "No AI account? You can still build",
-          "body": "Edit the supplied HTML in a plain-text editor such as Notepad or TextEdit. Change the heading and one fictional resource, save it with the .html name, then reopen the file in your browser. The worksheet lists the exact steps.",
+          "title": "Review the change: read the diff",
+          "body": "A diff shows exactly what changed. A line with a minus sign was removed; a line with a plus sign was added. You need no AI account to review one. Mark each changed line: asked for, or not asked for?",
           "kind": "try"
         },
         {
           "title": "Make one change at a time",
-          "body": "Save version 1. Ask for a small change. Review the difference. Test again. Restore version 1 if the change breaks a requirement.",
+          "body": "Keep version 1. Ask for one change. Read the diff. Run every check. If a check fails, ask for a repair or go back to version 1.",
           "kind": "teach"
         },
         {
-          "title": "A useful revision request",
-          "body": "The filter works with a mouse but the focus is hard to see. Add a clear focus outline to all controls. Keep existing search behavior and fictional data.",
+          "title": "Write a useful repair request",
+          "body": "LIBRARY and Learning now find nothing, but library and learning work. Make capital and small letters match the same resources again. Keep the new category search and everything else the same.",
           "kind": "teach"
         },
         {
           "title": "Where does the data live?",
-          "body": "A JavaScript array is bundled with the page. Browser storage belongs to that browser and can be cleared. A shared database supports cross-device data and requires access controls.",
+          "body": "In our finder, the resource list lives inside the page file. Browser storage keeps data in one browser on one computer, and it can be cleared. A SaaS keeps shared data in a database on its server, behind sign-in and access rules.",
           "kind": "teach"
         },
         {
           "title": "Keep secrets out of browser code",
-          "body": "Anything shipped to a browser can be inspected. Do not put API keys, passwords or private records in HTML or JavaScript. Use fictional records for this prototype.",
+          "body": "An API key is a secret code that lets your app use another company's service, such as maps, and bills you for it. Anyone can read a page's code (Ctrl and U), so private keys stay on the server.",
           "kind": "teach"
         },
         {
           "title": "A mock sign-in is not security",
-          "body": "A login-looking screen does not protect data by itself. Real accounts need server-side authorization, safe credential handling and tested access rules.",
+          "body": "Authentication means proving who you are, usually by signing in. A sign-in box drawn on a page protects nothing. A real SaaS checks who you are on its server, then decides what each person may see.",
           "kind": "teach"
         },
         {
           "title": "Watch: prompt, test, revise",
-          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "body": "Play one chapter at a time as your instructor directs. Pause at 2:52 to write checks and at 6:37 to write a repair request. Replay any chapter; captions and a transcript are available.",
           "kind": "video"
         },
         {
           "title": "Test more than the happy path",
-          "body": "Try blank search, no match, mixed-case search, category changes, narrow screen and keyboard-only use. Record expected and actual results.",
+          "body": "The happy path is the normal use you expect to work. Also test no match (zzz), mixed case (LIBRARY, Learning), keyboard only and a narrow screen. Record expected, actual and pass or fail.",
           "kind": "steps",
           "items": [
-            "Normal task",
-            "Empty and unexpected input",
-            "Keyboard and small screen"
+            "Happy path and no match",
+            "Mixed case",
+            "Keyboard and narrow screen"
           ]
         },
         {
-          "title": "Fix what you can demonstrate",
-          "body": "Describe steps, expected result and actual result. Ask for a focused correction. Repeat the failed test and a previously passing test.",
+          "title": "Report the bug; check for a regression",
+          "body": "A regression is something that used to work and broke after a change. Report the steps, what you expected and what happened. After the repair, repeat the failed check and two checks that passed before.",
           "kind": "teach"
         },
         {
           "title": "Hosting is a separate decision",
-          "body": "A local file is visible on your computer. Hosting makes it reachable online. Before a real launch, review content rights, access, data handling, costs, backups and who maintains it.",
+          "body": "Hosting means putting the page on a web server so anyone with the address can use it. Running it as a service also means costs, backups, updates, support and a person who reviews every agent change.",
           "kind": "teach"
         },
         {
           "title": "Knowledge check: AI confidence",
-          "body": "The AI says the app is fully tested. What should you do?",
+          "body": "The agent reports: Done. All checks pass. What should you do next?",
           "kind": "check",
           "options": [
-            "Run the acceptance checks yourself",
-            "Skip testing",
-            "Add real personal records immediately"
+            "Accept it, since the agent ran the checks",
+            "Read the change and run our checks yourself",
+            "Ask the agent to confirm the checks again"
           ],
-          "answer": 0,
-          "why": "An AI statement does not replace observed behavior and recorded results."
+          "answer": 1,
+          "why": "An agent's report is a claim, not evidence. Read the diff and run the acceptance checks on the saved page yourself. Asking again only repeats the claim."
         },
         {
           "title": "Knowledge check: a secret key",
-          "body": "Where should a private API key go in a browser prototype?",
+          "body": "Your finder will show a map from a paid service that needs a private API key. Where should the key go?",
           "kind": "check",
           "options": [
-            "In a hidden HTML comment",
-            "In a public JavaScript variable",
-            "Nowhere in the browser code"
+            "In a hidden comment in the page",
+            "In a separate script file",
+            "On the server, never in the page"
           ],
           "answer": 2,
-          "why": "Browser code is inspectable. Protected secrets belong in an appropriate server-side design."
+          "why": "Anyone can open a page's code, including comments and script files. A private key stays on the server, which calls the map service for the page. Some services also give public keys made for browsers."
         },
         {
-          "title": "Lab: build, test, explain",
-          "body": "Demonstrate your app, one revision and your test log. Explain one limitation before this could become a real service.",
+          "title": "Lab: spec, review, test, explain",
+          "body": "Show your partner your spec, your checks, the change nobody asked for, your test log and your retest. Explain one thing a real SaaS version would need.",
           "kind": "lab"
         },
         {
-          "title": "You can direct a build and judge it",
-          "body": "Keep the prompt, source file, test log and next step. Clear requirements and careful checks remain useful as tools change.",
+          "title": "You can direct an agent and judge its work",
+          "body": "Keep the loop: spec, plan, change, review, test, revise. Tools will change. Clear requests, careful review and your own tests stay useful.",
           "kind": "summary"
         }
       ],
       "lab": [
-        "Name the app\u2019s user, problem and three acceptance checks. Keep the scope to one page.",
-        "Write a prompt naming content, behavior, accessibility and privacy boundaries.",
-        "Open the starter. Save a copy as resource-finder-v1.html using a plain-text editor. If working offline, no AI tool is required.",
-        "Find the <h1> heading in the source and replace only its text. In the resources array, change the fictional Community library name to Community Skills Desk. Save as resource-finder-v2.html, reopen it, and search skills to confirm Community Skills Desk appears.",
-        "Ask an approved AI tool for one small improvement, or make the heading/data edit manually. Record exactly what changed.",
-        "Test blank input, matching and nonmatching search, mixed case, category filters, keyboard focus and narrow-screen layout. Record expected, actual and pass/fail.",
-        "Fix one defect or improve one requirement. Repeat its test and one previously passing test. Keep both versions.",
-        "Demonstrate the app. Explain HTML/CSS/JavaScript, where data lives, and why a public SaaS service needs additional design and maintenance."
+        "Write a change request (a spec) for the agent in plain English. The need: visitors type a kind of help, like learning, not a name. Say the one change, who it helps, and two things that must stay the same. The slide 7 builder can make a first draft.",
+        "Write three acceptance checks in the form I type or press this, I expect to see that. Make one check about the new change and one about something that already works and must not break.",
+        "Before the agent runs, predict: which part will it change (HTML, CSS or JavaScript), about how many lines, and one thing that could break. Then read the agent's plan on the projector and write one way it matches or differs from your prediction.",
+        "Open slide 10 and read the agent's change (the diff). A line with a minus sign was removed; a line with a plus sign was added. Mark each changed line asked for or not asked for, and write down the change that breaks what the spec said to keep.",
+        "Open the agent's version (resource-finder-agent.html) at your own seat. Run the five checks in the App test log: happy path (learning, then library), no match (zzz), mixed case (LIBRARY, then Learning), keyboard only, and narrow screen (zoom to 400%). Record expected, actual and pass or fail.",
+        "Write a repair request the agent could act on: the steps, what you expected, what actually happened, and what must stay the same.",
+        "Open the repaired version (resource-finder-agent-fixed.html). Repeat the check that failed, then two checks that passed before. Record the results and say whether you accept the repair.",
+        "Suppose the finder became a SaaS website where many people save favorite resources. Write where it would be hosted, why visitors would sign in, where saved favorites would live, where a private API key for a map service would go, and what it would cost and who would keep it running."
       ],
       "answers": [
-        "One specific user task and three observable outcomes.",
-        "Bounded one-file app; no personal data, secrets, payments or external dependencies.",
-        "Both original and working copy retained; .html extension, not rich text or .txt.",
-        "Heading changes visibly; new fictional name appears and is searchable. Quotes, commas and tags stay intact.",
-        "Revision small enough to explain; no unsupported claims about AI correctness.",
-        "All seven paths tested; honest failures and expected/actual evidence recorded.",
-        "Failed path now works or limitation clearly documented; regression check still passes.",
-        "HTML structure, CSS appearance, JavaScript behavior; in-page sample data, no protected backend; launch needs further checks."
+        "One change: the search box also finds resources by category, so learning shows every Learning resource. Who: a visitor who knows the kind of help but not the name. Must stay the same (any two): capital and small letters match alike (LIBRARY finds Community library); the no-match message; keyboard use; the narrow-screen layout; only resource-finder.html changes; no outside code, personal data or sign-in. A strong spec also asks for a plan first.",
+        "For example: I type learning, I expect Community library and Practice Workbook Workshop (2 fictional resources found). I type LIBRARY, I expect Community library (1 found). I type zzz, I expect No matching resources. Try a different word or reset the filters. Accept any checks a partner can run without guessing.",
+        "JavaScript, the rule that decides which resources match (one or two lines), and perhaps the hint text in the search box (HTML). Could break: capital-letter matching, the no-match message or the Category list. A good plan names resource-finder.html only and the matching rule. Accept any reasoned prediction; the comparison matters more than being right.",
+        "Asked for: the search also looks at the category (r.category added). Not asked for but harmless: the hint now says Try library or learning. Not asked for and harmful: .toLowerCase() was removed from the line that reads the search box, so capital letters no longer match. Learners may say it in plain words: it stopped ignoring capital letters.",
+        "Version 2 results: learning, 2 fictional resources found (Community library, Practice Workbook Workshop), pass. library, 1 found (Community library), pass. zzz, No matching resources. Try a different word or reset the filters., pass. LIBRARY and Learning, No matching resources instead of 1 and 2 found, fail (a regression: version 1 finds LIBRARY). Keyboard: Tab reaches the link, search box, Category and Reset filters, each with a thick outline, pass. Narrow screen at 400%: one column, no sideways scrolling, pass; the round Text size button can cover part of the page in every version, which is a course issue, not the agent's change.",
+        "Steps: open resource-finder-agent.html and type LIBRARY. Expected: Community library (1 found), as in version 1. Actual: No matching resources; Learning also finds nothing while learning finds 2. Request: make capital and small letters match the same resources again; keep the new category search and everything else the same; show the change before applying it.",
+        "LIBRARY: 1 found (Community library), pass. Learning: 2 found, pass. Passed before and still pass: learning (2 found), library (1 found), zzz (no-match message), keyboard outline. Accept the repair because the failed check now passes and no earlier check broke. If the instructor's live repair differs, it is retested the same way.",
+        "Hosted: on a web server or hosting service so anyone with the address can use it (today it is one file on the course site with fixed data). Sign-in: so each person sees only their own favorites; the server must check it, because a sign-in picture is not security. Saved data: in a database on the server, not in this page or one browser. API key: on the server only, since anyone can read a page's code with Ctrl and U. Cost and upkeep: hosting, web address, map service and AI agent fees; someone must update listings, fix problems, back up data, help users and review every agent change. Accept four of six with a reason."
       ],
       "procedures": [
         [
-          "Save and open your own copy (no AI account needed)",
+          "Open the three versions (no account needed)",
           [
-            "Select Download editable HTML above. The file resource-finder-v1.html goes to your Downloads folder.",
-            "Open it in a plain-text editor. On Windows, right-click the file, choose Open with, then Notepad. On a Mac, open TextEdit, choose Format, then Make Plain Text, then open the file.",
-            "Make your edit. Choose File, then Save As. Type resource-finder-v2.html as the name. On Windows, set Save as type to All files so Notepad does not add .txt. On a Mac, untick the box that adds .txt when no extension is given.",
-            "Double-click the saved file to open it in your browser. Search skills. Confirm that Community Skills Desk appears and that the heading changed."
+            "Version 1, before the agent: go to slide 9 and select Open starter app, or select Open version 1 above.",
+            "Version 2, the agent\u2019s result: select Open the agent\u2019s version above. This is resource-finder-agent.html.",
+            "Version 3, after the repair: select Open the repaired version above only when your instructor says so. This is resource-finder-agent-fixed.html.",
+            "To compare two versions, open each in its own window (Ctrl and N). Press the Windows logo key and the Left arrow on one window, then pick the other for the right side."
           ]
         ],
         [
-          "Turn AI output into a file you can run",
+          "Check the change yourself (no AI account needed)",
           [
-            "Paste your prompt into the approved AI tool. Ask for one complete HTML file, not separate pieces.",
-            "Select the code block the tool gives you and copy it with Ctrl and C (Command and C on a Mac).",
-            "Open a new plain-text document, paste with Ctrl and V (Command and V), and save it as resource-finder-ai.html using the same Save As steps above.",
-            "Open the saved file in your browser. Run the three acceptance checks yourself before trusting anything the AI said about it."
+            "On version 2, press Ctrl and U. The page\u2019s code opens in a new tab. You can read it but not change it.",
+            "Press Ctrl and F and type toLowerCase. Count how many places are highlighted. Do the same on version 1.",
+            "If the counts differ, find that line in the diff on slide 10. Ask: did our spec ask for this change?"
           ]
+        ],
+        [
+          "Optional: repair version 2 by hand",
+          [
+            "Under the agent\u2019s version, select Download editable HTML. The file resource-finder-v2.html goes to your Downloads folder (Ctrl and J shows it).",
+            "In File Explorer, right-click the file, select Open with, then Notepad. On a Mac, first choose TextEdit \u203a Settings \u203a Open and Save and turn on Display HTML files as HTML code instead of formatted text, then open the file in TextEdit.",
+            "Press Ctrl and F (Command and F on a Mac) and type trim(). On that line, type .toLowerCase() right after trim() so it reads trim().toLowerCase();",
+            "Choose File, then Save As. Type resource-finder-v3.html. On Windows, set Save as type to All files so Notepad does not add .txt. On a Mac, choose Use .html if TextEdit asks.",
+            "Double-click the saved file to open it in your browser. Retest LIBRARY, Learning and zzz, then one check that passed before."
+          ]
+        ]
+      ],
+      "lab_paths": [
+        [
+          "Put two pages side by side",
+          "Press Ctrl and N to open a second Edge window and open the other version there. Press the Windows logo key and the Left arrow, then choose the other window for the right side. Or hover over the Maximize button and pick a layout."
+        ],
+        [
+          "See a page's code",
+          "Press Ctrl and U. The code opens in a new tab; you can read it but not change it. Close that tab when you are done."
+        ],
+        [
+          "Find a word on a page or in its code",
+          "Press Ctrl and F and type the word. Matches are highlighted. Press Ctrl and G to jump to the next one."
+        ],
+        [
+          "Reload a page",
+          "Press F5, or Ctrl and R."
+        ],
+        [
+          "Test with the keyboard only",
+          "Press Tab to move to the next control and Shift and Tab to go back. Each control should show a thick outline. On Category, press the Up or Down arrow to change the choice. On Reset filters, press Enter."
+        ],
+        [
+          "Test a narrow screen",
+          "Press Ctrl and + until the zoom reaches 400%. The page should become one column you can read without scrolling sideways. Press Ctrl and 0 to go back to 100%."
+        ],
+        [
+          "Show file name extensions",
+          "In File Explorer, select View \u203a Show \u203a File name extensions. Names now end in .html or .txt, so you can spot a wrong save."
+        ],
+        [
+          "Find a downloaded file",
+          "Press Ctrl and J to open Downloads in Edge. Downloaded files are in the Downloads folder in File Explorer."
+        ],
+        [
+          "Open an HTML file in Notepad",
+          "In File Explorer, right-click the file, select Open with, then Notepad. If Notepad is not listed, select Choose another app."
+        ],
+        [
+          "Save a web page from Notepad",
+          "Choose File \u203a Save as. Type a name ending in .html. Set Save as type to All files, then select Save. Or type the whole name in quotation marks, such as \"resource-finder-v3.html\"."
+        ]
+      ],
+      "prep": "Each station: Microsoft Edge, headphones, this lesson and worksheet (typed, or printed for anyone who prefers paper), and Notepad as the plain-text editor for the optional hand repair. Learners need no account and no AI access: they open three practice pages on the course site, resource-finder.html (version 1), resource-finder-agent.html (version 2, the prepared agent result with one planted defect) and resource-finder-agent-fixed.html (version 3). At the front: your own computer on the projector with an AI coding agent signed in to your account, a practice folder holding copies of resource-finder.html and resource-finder-agent.html under version control, the terminal text enlarged, and the agent set to ask before every edit. Never show a sign-in page, key or bill on screen. Rehearse the whole demo with the class spec the week before and record it as a backup; the prepared pages are the fallback if the agent is slow, offline or does something unexpected. Print slide 10's diff and the App test log for anyone who wants paper. Play video chapters 4, 7 and 9 with captions to check sound. After your run-through, select Start fresh on this computer at each station. No paid service, purchase or learner account is required.",
+      "outcomes": [
+        "Spec: given the starter page and a one-sentence need, each learner writes a plain-English change request that names the one change, who it helps and two things that must stay the same, plus three acceptance checks in the form I do this, I expect that. A partner can run every check without asking what it means.",
+        "Prediction: before the agent runs, each learner writes which part of the page (HTML, CSS or JavaScript) the change needs and one thing that could break, then compares the prediction with the agent's plan and names one match or difference.",
+        "Review: given the before-and-after view of the agent's change (slide 10 or the projector), each learner marks every changed line as asked for or not asked for and finds the one change that breaks a requirement, with no more than one prompt.",
+        "Testing: at their own workstation, each learner runs the five checklist tests (happy path, no match, mixed case, keyboard, narrow screen) on the agent's version, records expected, actual and pass or fail, writes a repair request with steps, expected and actual, and after the repair reruns the failed check and two checks that passed before.",
+        "SaaS: using the resource finder as the example, each learner explains at least four of these six with a reason: where it would be hosted, why visitors sign in (authentication), where saved data lives, where a private API key goes, what it costs, and who maintains it."
+      ],
+      "rubric": [
+        [
+          "Spec and checks",
+          "No clear change or no checks",
+          "A change and checks, but a check is vague or nothing says what must stay the same",
+          "One clear change, what must stay the same, and three checks a partner can run"
+        ],
+        [
+          "Prediction and review",
+          "No prediction and no marked diff",
+          "Predicts or marks the diff with help",
+          "Predicts the part that will change and, alone, finds the change the spec did not ask for"
+        ],
+        [
+          "Testing and retest",
+          "Fewer than three checks run",
+          "Checks run but expected and actual not both recorded, or the failure missed",
+          "All five checks recorded with expected, actual and pass or fail, the failure reported, and the failed check plus two others retested"
+        ],
+        [
+          "SaaS trade-offs",
+          "Cannot say what would change",
+          "Names two or three of hosting, sign-in, data, API key, cost and upkeep",
+          "Explains at least four, each with a reason"
+        ]
+      ],
+      "glossary": [
+        [
+          "Agent",
+          "An AI coding agent is a program that reads your files, plans a change, edits the code and can run checks, all from a plain-English request. You approve each step and own the result."
+        ],
+        [
+          "Prompt",
+          "What you type to the agent."
+        ],
+        [
+          "Spec",
+          "A careful prompt: the one change, what must stay the same, and how you will check it."
+        ],
+        [
+          "Acceptance check",
+          "A test anyone can run: I type or press this, I expect to see that."
+        ],
+        [
+          "Happy path",
+          "The normal use you expect to work."
+        ],
+        [
+          "Diff",
+          "A view of exactly what changed. A line with a minus sign was removed; a line with a plus sign was added."
+        ],
+        [
+          "Regression",
+          "Something that used to work and broke after a change."
+        ],
+        [
+          "Hosting",
+          "Putting the page on a web server so anyone with the address can use it."
+        ],
+        [
+          "SaaS (software as a service)",
+          "Software you use in a browser while a company hosts it, keeps the data, secures it and updates it, usually for a fee."
+        ],
+        [
+          "API key",
+          "A secret code that lets your app use another company's service, such as maps, and bills you for it."
+        ],
+        [
+          "Authentication",
+          "Proving who you are, usually by signing in. A real service checks it on its server."
         ]
       ]
     }
