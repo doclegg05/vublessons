@@ -84,3 +84,16 @@ kbd { font-family:"Source Sans 3", sans-serif; font-weight:700; font-size:.92em;
 .home { margin-top:10pt; display:flex; align-items:center; gap:9pt; background:var(--navy); color:#fff; border-radius:6pt; padding:9pt 11pt; font-size:11pt; }
 .home b { color:#e6c65c; letter-spacing:.12em; font-size:8pt; }
 .home .ln { flex:1; border-bottom:1pt solid rgba(255,255,255,.7); height:10pt; }
+
+/* ---------------- answer keys and printable paper tests (Task 7) ---------------- */
+.doc-h1{font-family:"Playfair Display",serif;color:var(--navy);font-size:20pt;margin:14pt 0 4pt}
+.doc-sub{color:#4a5874}
+table.key{width:100%;border-collapse:collapse;font-size:10.5pt}
+table.key th{text-align:left;border-bottom:2pt solid var(--navy);font-size:8.5pt;letter-spacing:.1em;text-transform:uppercase;color:#5b6883}
+table.key td{border-bottom:1px solid var(--rule);padding:5pt 4pt;vertical-align:top}
+.pq{break-inside:avoid;margin:10pt 0;padding:8pt 10pt;border:1px solid var(--rule);border-radius:6pt}
+.pq h2{font-size:12pt;margin:0 0 6pt;font-weight:600}
+.pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:4pt 14pt}
+.bubble{font-size:15pt;margin-right:4pt}
+.namerow{display:grid;grid-template-columns:2fr 1fr;gap:24pt;margin:12pt 0}
+.namerow span{border-bottom:1px solid var(--ink)}
