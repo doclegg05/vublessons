@@ -7,14 +7,14 @@
  * later tasks for answer keys, printable tests and worksheets. */
 @page { size: letter; margin: 0.5in; }
 .paper-doc { --navy:#1B365D; --gold:#C9A227; --red:#B31942; --ink:#15213A; --rule:#E3E8F1; font-family:"Source Sans 3", "Segoe UI", sans-serif; color:var(--ink); background:#fff; max-width:8.5in; margin:0 auto; padding:0.5in; font-size:12pt; line-height:1.4; }
-.letterhead { position:relative; display:grid; grid-template-columns:auto 1fr auto; gap:14pt; align-items:center; padding-top:10pt; }
+.letterhead { position:relative; display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:14pt; align-items:center; padding-top:10pt; }
 .lh-bar { position:absolute; left:-0.5in; right:-0.5in; top:-0.5in; height:7pt; background:linear-gradient(90deg,var(--navy) 0 60%, var(--gold) 60% 80%, var(--red) 80%); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 .lh-seal { width:62pt; height:62pt; }
-.lh-state { font-size:8.5pt; letter-spacing:.34em; font-weight:700; color:#8a6d12; }
-.lh-name { font-family:"Playfair Display", Georgia, serif; font-weight:800; font-size:24pt; line-height:1.02; color:var(--navy); }
+.lh-state { font-size:8.5pt; letter-spacing:.34em; font-weight:700; color:#8a6d12; white-space:nowrap; }
+.lh-name { font-family:"Playfair Display", Georgia, serif; font-weight:800; font-size:22pt; line-height:1.02; color:var(--navy); white-space:nowrap; }
 .lh-trio { font-size:9pt; font-style:italic; color:#4a5874; margin-top:3pt; }
-.lh-meta { margin:0; font-size:8.5pt; line-height:1.5; border-left:2pt solid var(--gold); padding-left:9pt; }
-.lh-meta div { display:flex; gap:6pt; } .lh-meta dt { font-weight:700; color:var(--navy); min-width:52pt; } .lh-meta dd { margin:0; }
+.lh-meta { margin:0; font-size:8pt; line-height:1.5; border-left:2pt solid var(--gold); padding-left:9pt; width:95pt; }
+.lh-meta div { margin-top:1pt; } .lh-meta dt { font-weight:700; color:var(--navy); display:inline; } .lh-meta dt::after { content:" "; } .lh-meta dd { margin:0; display:inline; white-space:normal; }
 .lh-rule { grid-column:1 / -1; height:5pt; border-top:2pt solid var(--navy); border-bottom:1pt solid var(--gold); margin-top:4pt; }
 @media print { .no-print { display:none !important; } }
 
@@ -92,8 +92,9 @@ table.key{width:100%;border-collapse:collapse;font-size:10.5pt}
 table.key th{text-align:left;border-bottom:2pt solid var(--navy);font-size:8.5pt;letter-spacing:.1em;text-transform:uppercase;color:#5b6883}
 table.key td{border-bottom:1px solid var(--rule);padding:5pt 4pt;vertical-align:top}
 .pq{break-inside:avoid;margin:10pt 0;padding:8pt 10pt;border:1px solid var(--rule);border-radius:6pt}
-.pq h2{font-size:12pt;margin:0 0 6pt;font-weight:600}
+.pq h2{font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-size:13pt;margin:0 0 6pt}
 .pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:4pt 14pt}
+.pq-opt{font-size:12.5pt}
 .bubble{font-size:15pt;margin-right:4pt}
-.namerow{display:grid;grid-template-columns:2fr 1fr;gap:24pt;margin:12pt 0}
-.namerow span{border-bottom:1px solid var(--ink)}
+[data-dl2-doc] .namerow{display:grid;grid-template-columns:2fr 1fr;gap:24pt;margin:12pt 0}
+[data-dl2-doc] .namerow span{border-bottom:1px solid var(--ink)}
