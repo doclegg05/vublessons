@@ -121,6 +121,9 @@
       answers: st.answers.map(function (a) { return a || '-'; }).join(',')
     };
     var report = { form: FORM, label: LABEL, items: ITEMS, result: result, name: st.name, started: started, submitted: submitted, recordId: rid };
+    /* Queue the copy before the answers are cleared and before it is sent: if the tab closes
+     * mid-send, the next visit's flush still delivers it. It leaves the outbox once sent. */
+    enqueueOutbox(payload);
     clear();
     renderResult(report, payload);
   }
@@ -152,9 +155,9 @@
       if (go.dataset.go === 'print') { if (pdfUrl) global.open(pdfUrl, '_blank'); else global.print(); }
     });
     send(payload).then(function () {
+      dequeueOutbox(payload['record-id']);
       root.querySelector('.copy-status').textContent = '✓ A copy was sent to Britt.';
     }).catch(function () {
-      enqueueOutbox(payload);
       root.querySelector('.copy-status').textContent = 'Saved on this computer. Tell Britt.';
     });
   }

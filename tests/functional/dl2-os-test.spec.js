@@ -312,3 +312,31 @@ test('arrow keys change the answer only when focus is on the options', async ({ 
   await page.keyboard.press('c');
   await expect(page.locator('.opt[data-letter="C"]')).toHaveAttribute('aria-checked', 'true');
 });
+
+// Final review minor: the copy goes into the outbox BEFORE it is sent, so closing the tab mid-send can't lose it.
+test('outbox holds the copy as soon as the test is submitted, while the send is still in flight', async ({ page }) => {
+  await page.route('**/', route => {
+    if (route.request().method() !== 'POST') return route.continue();
+    // Never answer: the POST stays in flight, as if the tab were closed mid-send.
+  });
+  await start(page, 'Ray Hill');
+  await answerAll(page);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Yes, submit' }).click();
+  await expect(page.locator('.copy-status')).toHaveText('Sending a copy to Britt…');
+  const box = await page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox') || '[]'));
+  expect(box).toHaveLength(1);
+  expect(box[0]).toMatchObject({ 'form-name': 'dl2-pretest', student: 'Ray Hill', score: '20/20' });
+  expect(box[0]['record-id']).toMatch(/^DL2-PRE-\d{8}-\d{4}-RH$/);
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
+});
+
+test('outbox is empty again once the copy reaches Britt', async ({ page }) => {
+  await page.route('**/', r => (r.request().method() === 'POST' ? r.fulfill({ status: 200, body: 'ok' }) : r.continue()));
+  await start(page, 'Ray Hill');
+  await answerAll(page);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Yes, submit' }).click();
+  await expect(page.locator('.copy-status')).toContainText('A copy was sent to Britt');
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox') || '[]'))).toEqual([]);
+});
