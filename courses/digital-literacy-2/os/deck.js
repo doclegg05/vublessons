@@ -29,6 +29,26 @@
   function safeGet(key) { try { return sessionStorage.getItem(key); } catch (e) { return null; } }
   function safeSet(key, value) { try { sessionStorage.setItem(key, value); } catch (e) { /* storage blocked */ } }
 
+  /* Course-home progress. Like the older decks (assets/lesson.js), each slide is recorded through
+   * shared/progress.js as VubProgress.saveSlide('dl2', week, slide, total); the course home reads
+   * it (courses.json statusKey dl2:wN) for "Resume at slide N" and "viewed to the end". progress.js
+   * reads localStorage without a guard when it loads, so it is loaded here, and only when storage
+   * works: a locked-down lab browser skips progress rather than logging an error. */
+  var WEEK = Number((/\/weeks\/week-(\d+)\//.exec(location.pathname) || [])[1]) || 0;
+  function saveProgress() {
+    if (!WEEK || !global.VubProgress) return;
+    try { global.VubProgress.saveSlide('dl2', WEEK, index, slides.length); } catch (e) { /* storage blocked */ }
+  }
+  function loadProgress() {
+    if (!WEEK) return;
+    if (global.VubProgress) { saveProgress(); return; }
+    try { localStorage.getItem('vub:progress:v1'); } catch (e) { return; }
+    var s = document.createElement('script');
+    s.src = '/shared/progress.js';
+    s.onload = saveProgress;
+    document.head.appendChild(s);
+  }
+
   function parts(slide) { return Array.prototype.slice.call(slide.querySelectorAll('.build')); }
   function shown(slide) { return Number(slide.dataset.step || 0); }
   function setStep(slide, n) {
@@ -96,6 +116,7 @@
     if (next.dataset.minutes && timer.slide !== next) { setTimer(Number(next.dataset.minutes)); timer.slide = next; }
     renderChrome();
     safeSet(storeKey, String(index));
+    saveProgress();
     if (history.replaceState) history.replaceState(null, '', '#' + (index + 1));
     document.dispatchEvent(new CustomEvent('dl2:slide', { detail: { index: index, slide: next } }));
   }
@@ -206,6 +227,7 @@
     var start = fromHash > 0 ? fromHash - 1 : (saved >= 0 ? saved : 0);
     index = 0;
     go(isNaN(start) ? 0 : start, 'forward');
+    loadProgress();
     document.addEventListener('keydown', onKey);
     onSwipe();
   }

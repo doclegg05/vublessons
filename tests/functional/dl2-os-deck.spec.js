@@ -142,3 +142,29 @@ test('returning to a Do slide keeps its running timer', async ({ page }) => {
   await page.clock.runFor(1000);
   await expect(page.locator('.strip .t')).toHaveText('T-00:52');
 });
+
+// Final review minor: the old decks recorded each slide through shared/progress.js (VubProgress.saveSlide
+// ('dl2', week, slide, total)), which the course home reads for courses.json's statusKey dl2:w1. The Mission
+// Control deck records Week 1 the same way.
+test('opening the Week 1 deck shows on the course home, and the last slide marks it viewed', async ({ page }) => {
+  const DECK = '/courses/digital-literacy-2/weeks/week-01/presentation.html', HOME = '/courses/digital-literacy-2/index.html';
+  await page.goto(HOME);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await expect(page.locator('[data-week-status="1"]')).toHaveText('Ready to begin');
+  await page.goto(DECK);
+  await expect(page.locator('.strip .count')).toHaveText('1 / 28');
+  await expect.poll(() => page.evaluate(() => {
+    const p = JSON.parse(localStorage.getItem('vub:progress:v1') || '{}');
+    return p.dl2 && p.dl2['1'] && [p.dl2['1'].slide, p.dl2['1'].total];
+  })).toEqual([0, 28]);
+  await page.goto(HOME);
+  await expect(page.locator('[data-week-status="1"]')).toHaveText('Resume at slide 1');
+  await expect(page.locator('.continue-course')).toHaveText('Continue week 1');
+  await page.goto(DECK);
+  await page.keyboard.press('End');
+  await expect(page.locator('.strip .count')).toHaveText('28 / 28');
+  await page.goto(HOME);
+  await expect(page.locator('[data-week-status="1"]')).toHaveText('Lesson viewed to the end');
+  await expect(page.locator('[data-course-count]')).toHaveText('1 of 6 lessons viewed to the end');
+});
