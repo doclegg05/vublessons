@@ -80,7 +80,13 @@
       screen = fresh;
       for (var k = 0; k <= i; k++) applyState(screen, def.steps[k].state);
       var start = def.start || [640, 400], last = null;
-      for (var j = i; j >= 0 && !last; j--) last = def.steps[j].target ? point(def.steps[j]) : null;
+      for (var j = i; j >= 0 && !last; j--) {
+        var s = def.steps[j];
+        if (!s.target) continue;
+        var el = screen.querySelector(s.target);
+        if (!el || el.offsetParent === null || el.getClientRects().length === 0) continue;
+        last = point(s);
+      }
       place(last ? last.x : start[0], last ? last.y : start[1], false);
       cam = { z: 1, px: W / 2, py: H / 2 }; fit();
     }

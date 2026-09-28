@@ -57,3 +57,27 @@ test('half speed button reports its state in words', async ({ page }) => {
   await slow.click();
   await expect(slow).toHaveAttribute('aria-pressed', 'true');
 });
+
+// Fixture for the cursor-resting-point bug: step 2 clicks #b1, and that click's own state
+// (cls:{gone:true}) hides #b1 via the inline <style> below. render() must not rest the cursor
+// on a target that its own state just hid; it should fall back to an earlier visible target or,
+// as here (step 1 has no target), to def.start.
+const goneHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}">
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="deck.css"><link rel="stylesheet" href="win11.css"></head>
+<body class="dl2-os"><div class="demo" data-demo="t-gone" style="width:1200px"></div>
+<script src="demo.js"></script>
+<script>DL2Demo.define({ id:'t-gone', title:'Test', start:[900,500],
+ scene:'<style>.screen.gone #b1{display:none}</style><div class="w11-wall"></div><button id="b1" style="position:absolute;left:100px;top:100px;width:200px;height:60px">One</button>',
+ steps:[{cap:'Start here.',check:'Start'},{cap:'Click <em>One</em>.',check:'Click One',target:'#b1',action:'click',state:{cls:{gone:true}}}]});</script>
+</body></html>`;
+
+test('cursor rests on a visible fallback when its target is hidden by its own state', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(BASE + 'fonts.css');
+  await page.setContent(goneHtml, { waitUntil: 'load' });
+  await page.locator('[data-act="next"]').click();
+  await expect(page.locator('.screen')).toHaveClass(/gone/, { timeout: 1000 });
+  const pos = await page.locator('.demo-cursor').evaluate(function (el) { return { left: el.style.left, top: el.style.top }; });
+  expect(pos.left === '0px' && pos.top === '0px').toBe(false);
+  expect(pos).toEqual({ left: '900px', top: '500px' });
+});

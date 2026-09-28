@@ -98,7 +98,7 @@
 .demo-todo li { display:flex; gap:.8cqw; align-items:center; color:#7f93b0; }
 .demo-todo li i { font-style:normal; width:2.4cqw; height:2.4cqw; display:grid; place-items:center; font-family:"DL2 JetBrains Mono", monospace; font-size:1.1cqw; border:1px solid rgba(0,229,255,.35); flex:none; }
 .demo-todo li.done { color:#bfe9f2; } .demo-todo li.done i { background:rgba(0,229,255,.2); color:#6ff3ff; }
-.demo-todo li.done i::after { content:"✓"; margin-left:.2em; }
+.demo-todo li.done span::after { content:" ✓"; color:#6ff3ff; }
 .demo-todo li.now { color:#fff; } .demo-todo li.now i { background:#00e5ff; color:#021018; box-shadow:0 0 1.2cqw #00e5ff; }
 .demo-controls { margin-top:auto; display:flex; gap:.6cqw; flex-wrap:wrap; padding-top:1.2cqw; }
 .demo-controls button { font-family:"DL2 JetBrains Mono", monospace; font-size:1.2cqw; color:#d9f7ff; background:rgba(0,229,255,.08); border:1px solid rgba(0,229,255,.4); padding:.6cqw .9cqw; cursor:pointer; }
