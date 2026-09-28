@@ -77,6 +77,7 @@
     to = Math.max(0, Math.min(slides.length - 1, to));
     var old = slides[index], next = slides[to];
     if (old !== next) {
+      old.querySelectorAll('video, audio').forEach(function (media) { media.pause(); });
       old.classList.remove('is-active');
       old.classList.add('is-leaving');
       old.setAttribute('aria-hidden', 'true');
@@ -93,8 +94,12 @@
     if (stepper) stepper.reset();
     renderChrome();
     safeSet(storeKey, String(index));
+    if (deck.dataset.deckVersion) safeSet(storeKey + ':version', deck.dataset.deckVersion);
     saveProgress();
-    if (history.replaceState) history.replaceState(null, '', '#' + (index + 1));
+    if (history.replaceState) {
+      var url = new URL(location.href); url.hash = String(index + 1);
+      history.replaceState(null, '', url.pathname + url.search + url.hash);
+    }
     document.dispatchEvent(new CustomEvent('dl2:slide', { detail: { index: index, slide: next } }));
   }
 
@@ -119,8 +124,15 @@
     else if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(function () {});
   }
 
+  // Native media controls have their own arrows, Space, Home/End and fullscreen keys.
+  // composedPath also catches events retargeted from the browser's control shadow tree.
+  function inMedia(e) {
+    return (e.composedPath ? e.composedPath() : [e.target]).some(function (node) {
+      return node && node.tagName && (node.matches('video, audio') || node.closest('video, audio'));
+    });
+  }
   function onKey(e) {
-    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || inMedia(e)) { typed = ''; return; }
     var t = e.target, tag = t && t.tagName;
     if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (t && t.isContentEditable)) return;
     var onControl = tag === 'BUTTON' || tag === 'A';
@@ -139,8 +151,9 @@
 
   function onSwipe() {
     var x0 = null;
-    deck.addEventListener('pointerdown', function (e) { if (e.pointerType === 'touch') x0 = e.clientX; });
+    deck.addEventListener('pointerdown', function (e) { x0 = e.pointerType === 'touch' && !inMedia(e) ? e.clientX : null; });
     deck.addEventListener('pointerup', function (e) {
+      if (inMedia(e)) { x0 = null; return; }
       if (x0 === null) return;
       var dx = e.clientX - x0; x0 = null;
       if (dx < -60) next(); else if (dx > 60) prev();
@@ -195,6 +208,14 @@
     });
   }
 
+  function hashIndex() {
+    var match = /^#(?:slide-|resume-\d+-)?(\d+)$/.exec(location.hash);
+    return match && Number(match[1]) > 0 ? Number(match[1]) - 1 : null;
+  }
+  function migratePosition(old) {
+    // Before opening-v1 Week 1 was title, pre-test, then teaching; other weeks gained one slide.
+    return WEEK === 1 ? (old === 0 ? 2 : old === 1 ? 0 : old + 1) : old + 1;
+  }
   function init() {
     deck = document.querySelector('.deck');
     if (!deck) return;
@@ -203,14 +224,34 @@
     slides.forEach(function (s) { s.setAttribute('aria-hidden', 'true'); s.inert = true; setStep(s, 0); });
     tagStages();
     buildChrome();
-    var fromHash = parseInt((location.hash || '').slice(1), 10);
+    var fromHash = hashIndex();
     var saved = parseInt(safeGet(storeKey) || '', 10);
-    var start = fromHash > 0 ? fromHash - 1 : (saved >= 0 ? saved : 0);
+    var start = fromHash !== null ? fromHash : (saved >= 0 ? saved : 0);
+    if (deck.dataset.deckVersion === 'opening-v1') {
+      var resumeTotal = Number((/^#resume-(\d+)-/.exec(location.hash) || [])[1]);
+      var legacyTotal = WEEK === 1 ? 27 : 23;
+      if (resumeTotal && resumeTotal !== slides.length) {
+        // Course-home resume links identify the old layout; older legacy decks restart safely.
+        start = resumeTotal === legacyTotal ? migratePosition(start) : 0;
+      } else if (!resumeTotal && safeGet(storeKey + ':version') !== 'opening-v1' && saved >= 0 &&
+          fromHash === null) {
+        start = migratePosition(saved);
+      }
+    }
     index = 0;
     go(isNaN(start) ? 0 : start, 'forward');
     loadProgress();
     document.addEventListener('keydown', onKey);
     onSwipe();
+    document.querySelectorAll('[data-opening-next]').forEach(function (button) {
+      button.addEventListener('click', function () { next(); });
+    });
+    window.addEventListener('hashchange', function () {
+      var target = hashIndex(); go(target === null ? 0 : target, 'forward');
+    });
+    window.addEventListener('pagehide', function () {
+      deck.querySelectorAll('video, audio').forEach(function (media) { media.pause(); });
+    });
   }
 
   global.DL2Deck = {

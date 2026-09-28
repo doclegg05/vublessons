@@ -9,7 +9,7 @@
  document.querySelector('#start-fresh')?.addEventListener('click',()=>{
   if(!confirm('Clear saved lessons and test answers for Digital Literacy Level 2 on this computer? Print or download any results you need first.'))return;
   window.VubProgress?.reset('dl2');
-  try{Object.keys(sessionStorage).filter(k=>k.startsWith('vub:dl2:assessment:')).forEach(k=>sessionStorage.removeItem(k));}catch(_){}
+  try{Object.keys(sessionStorage).filter(k=>k.startsWith('vub:dl2:assessment:')||k.startsWith('dl2os:slide:')||k.startsWith('dl2-mission-paper:')).forEach(k=>sessionStorage.removeItem(k));}catch(_){}
   // Mission Control pre/post tests keep answers in progress here (os/test.js). The outbox (dl2os:outbox) is kept:
   // it holds submitted copies that have not reached Britt yet.
   try{['dl2os:test:pre','dl2os:test:post'].forEach(k=>localStorage.removeItem(k));}catch(_){}
@@ -18,7 +18,7 @@
  if(document.querySelector('.learning-home')){
   const p=window.VubProgress?.getCourseSummary('dl2');
   if(p){document.querySelector('[data-course-count]').textContent=`${p.completed} of 6 lessons viewed to the end`;document.querySelector('[data-course-progress]').value=p.completed;
-   if(p.lastWeek&&Number(p.lastWeek)>=1&&Number(p.lastWeek)<=6){const n=Number(p.lastWeek),state=window.VubProgress.get('dl2',n),a=document.querySelector('.continue-course');a.href=`/courses/digital-literacy-2/weeks/week-${String(n).padStart(2,'0')}/presentation.html`;a.textContent=`Continue week ${n}`;document.querySelector('[data-continue-caption]').textContent=`Your place is saved: week ${n}, slide ${(state?.slide||0)+1}.`;}
+   if(p.lastWeek&&Number(p.lastWeek)>=1&&Number(p.lastWeek)<=6){const n=Number(p.lastWeek),state=window.VubProgress.get('dl2',n),a=document.querySelector('.continue-course');a.href=`/courses/digital-literacy-2/weeks/week-${String(n).padStart(2,'0')}/presentation.html#${state?.total && state.total !== (n===1?28:24) ? `resume-${state.total}-` : ""}${(state?.slide||0)+1}`;a.textContent=`Continue week ${n}`;document.querySelector('[data-continue-caption]').textContent=`Your place is saved: week ${n}, slide ${(state?.slide||0)+1}.`;}
   }
  }
 })();

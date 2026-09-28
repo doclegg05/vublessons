@@ -46,7 +46,7 @@ test('full run: skip one, review, submit, grade, send copy', async ({ page }) =>
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
   await expect(page.locator('.result-score')).toContainText('18 of 20');
-  await expect(page.locator('.copy-status')).toContainText('Netlify accepted your results for Britt');
+  await expect(page.locator('.copy-status')).toContainText('Your results were submitted for Britt');
   expect(posts).toHaveLength(1);
   const body = new URLSearchParams(posts[0]);
   expect(body.get('form-name')).toBe('dl2-pretest');
@@ -337,7 +337,7 @@ test('outbox is empty again once the copy reaches Britt', async ({ page }) => {
   await answerAll(page);
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
-  await expect(page.locator('.copy-status')).toContainText('Netlify accepted your results for Britt');
+  await expect(page.locator('.copy-status')).toContainText('Your results were submitted for Britt');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox') || '[]'))).toEqual([]);
 });
 
@@ -373,6 +373,31 @@ test('blocked storage plus a failed submission never claims a saved retry copy',
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
   await expect(page.locator('.copy-status')).toContainText('could not save a retry copy');
-  await expect(page.locator('.copy-status')).not.toContainText('Netlify accepted');
+  await expect(page.locator('.copy-status')).not.toContainText('Your results were submitted');
   await expect(page.getByRole('button', { name: 'Download graded PDF' })).toBeEnabled();
 });
+
+for (const form of ['pre', 'post']) {
+  test(`${form}: submission messages use learner language and preserve form delivery`, async ({ page }) => {
+    let fail = true; const posts = [];
+    await page.route('**/', async route => {
+      if (route.request().method() !== 'POST') return route.continue();
+      posts.push(route.request().postData());
+      return fail ? route.abort() : route.fulfill({ status: 200, body: 'ok' });
+    });
+    await page.goto(`/courses/digital-literacy-2/assessments/${form}-test.html`);
+    await page.getByLabel('Your full name').fill('Synthetic Copy Check');
+    await page.getByRole('button', { name: `Start the ${form}-test` }).click();
+    await answerAll(page, i => Items[form][i].answer);
+    await page.getByRole('button', { name: 'Submit my test' }).click();
+    await page.getByRole('button', { name: 'Yes, submit' }).click();
+    await expect(page.locator('.copy-status')).toContainText('Not sent yet');
+    await expect(page.locator('main')).not.toContainText(/Netlify/i);
+    await expect(page.locator('main')).toContainText('Submitted answers and scores are stored for your instructor.');
+    fail = false;
+    await page.getByRole('button', { name: 'Retry submission to instructor' }).click();
+    await expect(page.locator('.copy-status')).toContainText('Your results were submitted for Britt.');
+    expect(new URLSearchParams(posts.at(-1)).get('form-name')).toBe(`dl2-${form}test`);
+    await expect(page.getByRole('button', { name: 'Download graded PDF' })).toBeEnabled();
+  });
+}

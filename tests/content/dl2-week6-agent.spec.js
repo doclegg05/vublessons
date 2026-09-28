@@ -33,7 +33,7 @@ test('Week 6 slide titles name each step of the agent loop; order, count and kin
 });
 
 test('Week 6 slide 10 shows the agent’s diff, with minus and plus signs, where toLowerCase disappears',()=>{
- const s=section(week('presentation.html'),10);
+ const s=section(week('practice.html'),10);
  expect(s).toContain('Review the change: read the diff');
  expect(s).toContain('<del>- const query=search.value.trim().toLowerCase();</del>');
  expect(s).toContain('<ins>+ const query=search.value.trim();</ins>');
@@ -43,7 +43,7 @@ test('Week 6 slide 10 shows the agent’s diff, with minus and plus signs, where
 });
 
 test('Slide 10’s diff lines are real lines of versions 1 and 2',()=>{
- const s=text(section(week('presentation.html'),10));
+ const s=text(section(week('practice.html'),10));
  const pairs=changed(v1(),v2()).map(([a,b])=>[a.trim(),b.trim()]);
  expect(pairs).toHaveLength(2);
  expect(pairs[0]).toEqual(['const query=search.value.trim().toLowerCase();','const query=search.value.trim();']);
@@ -86,10 +86,10 @@ test('Week 6 worksheet opens all three versions and gives the procedures before 
  expect(ws).toContain('href="/courses/digital-literacy-2/activities/resource-finder.html" download="resource-finder-v1.html"');
  expect(ws).toContain('href="/courses/digital-literacy-2/activities/resource-finder-agent.html" download="resource-finder-v2.html"');
  for(const label of ['Open version 1','Open the agent’s version','Open the repaired version'])expect(ws).toContain(`>${label}</a>`);
- const firstTask=ws.indexOf('<h2>1. ');
+ const firstTask=ws.indexOf('<section class="mission"');
  for(const [title,steps] of w6.procedures){
   expect(ws.indexOf(esc(title))).toBeGreaterThan(0);expect(ws.indexOf(esc(title))).toBeLessThan(firstTask);
-  for(const step of steps)expect(ws).toContain(esc(step));
+  for(const step of steps)expect(ws).toContain(esc(step.replace(/[Ss]lide (\d+)/g,'practice library exercise $1')));
  }
  expect(w6.procedures.map(p=>p[0])).toEqual(['Open the three versions (no account needed)','Check the change yourself (no AI account needed)','Optional: repair version 2 by hand']);
  expect(text(ws)).not.toMatch(/Community Skills Desk|resource-finder-ai\.html|approved AI tool/);
@@ -97,14 +97,14 @@ test('Week 6 worksheet opens all three versions and gives the procedures before 
 
 test('Week 6 worksheet logs the five checks and the retest, with a typed box for each result',()=>{
  const ws=week('worksheet.html'),plain=text(ws);
- expect(plain).toMatch(/App test log Open the agent’s version \(resource-finder-agent\.html\)\. [^.]*\. Check What to do Expected Actual Pass or fail/);
- expect(plain).toMatch(/Retest after the repair [^]*? Check What to do Expected Actual Pass or fail/);
- for(const [check,todo] of [['Happy path, new','type learning'],['Happy path, still works','type library'],['No match','type zzz'],['Mixed case','type LIBRARY, then Learning'],['Keyboard only','Tab through every control'],['Narrow screen','zoom to 400%']])expect(plain).toContain(`${check} ${todo}`);
- expect(plain).toContain('Retest after the repair');
- for(const row of ['The check that failed','Passed before: learning','Passed before: zzz'])expect(plain).toContain(row);
+ expect(plain).toContain('Version 2 app test log Check / input Expected Actual Pass or fail');
+ expect(plain).toContain('Version 3 retest log Check / input Expected Actual Pass or fail');
+ for(const [check,todo] of [['New category','learning'],['Existing name','library'],['No match','zzz'],['Mixed case','LIBRARY, then Learning'],['Keyboard only','Tab through controls'],['Narrow screen','Zoom to 400%']])expect(plain).toContain(`${check} ${todo}`);
+ expect(plain).toContain('Version 3 retest log');
+ for(const row of ['Mixed case','New category','No match'])expect(plain).toContain(row);
  expect(ws.match(/<textarea class="worksheet-input" id="log-\d+-\d"/g)).toHaveLength(18);
- expect(ws.match(/<textarea class="worksheet-input" id="retest-\d+-\d"/g)).toHaveLength(9);
- expect(ws.indexOf('<h2>App test log</h2>')).toBeGreaterThan(ws.indexOf('<h2>8. '));
+ expect(ws.match(/<textarea class="worksheet-input" id="retest-\d+-\d"/g)).toHaveLength(18);
+ expect(ws.indexOf('<h2>Version 2 app test log</h2>')).toBeGreaterThan(ws.indexOf('id="m6C"'));
 });
 
 test('Week 6 rubric scores four criteria 0, 1 or 2 with descriptors, on the worksheet and the answer guide',()=>{
@@ -136,7 +136,7 @@ test('Week 6 transcript defines the words the video uses, above the transcript',
 
 test('Week 6 plan, syllabus and instructor guide describe the instructor-led agent demo',()=>{
  const plan=text(week('lesson-plan.html'));
- expect(plan).toContain('For week 6, the instructor runs an AI coding agent on the projector; learners need no account or AI access. Supply a plain-text editor for the optional hand repair.');
+ expect(plan).toContain('An instructor-led live AI run is optional; the prepared versions provide the complete account-free route.');
  expect(plan).not.toMatch(/approved AI tool/);
  const syllabus=text(read(`${course}/syllabus.html`));
  expect(syllabus).toContain('IC3 Digital Literacy GS6 Level 2 + AI Agent and SaaS Basics');
@@ -149,7 +149,7 @@ test('Week 6 plan, syllabus and instructor guide describe the instructor-led age
 });
 
 test('Week 6 slides show the real starter page and the agent loop, not the old rename or focus repair',()=>{
- const deck=week('presentation.html');
+ const deck=week('practice.html');
  for(const stale of ['Community Skills Desk','Find a resource','Learning desk','Learning Desk','Computer help desk','Neighborhood center','Community Library','Only the heading changes','focus-practice','Focus is hard to see','resource-finder-v2.html','vibe coding'])expect(deck,stale).not.toContain(stale);
  expect(deck).toContain('&lt;h1&gt;Community resource finder&lt;/h1&gt;');
  for(const row of ['Community library · Learning','Community Makers Group · Community','Practice Workbook Workshop · Learning'])expect(deck).toContain(row);

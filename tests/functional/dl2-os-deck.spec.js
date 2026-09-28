@@ -104,15 +104,15 @@ test('a fresh open starts at slide 1; the same tab keeps its place', async ({ pa
   await page.evaluate(() => { localStorage.setItem('dl2os:slide:' + location.pathname, '19'); });
   const deck = await context.newPage(); // a fresh browser tab
   await deck.goto(DECK);
-  await expect(deck.locator('.strip .count')).toHaveText('1 / 27');
+  await expect(deck.locator('.strip .count')).toHaveText('1 / 28');
   await deck.keyboard.press('5');
   await deck.keyboard.press('Enter');
-  await expect(deck.locator('.strip .count')).toHaveText('5 / 27');
+  await expect(deck.locator('.strip .count')).toHaveText('5 / 28');
   await deck.goto(DECK); // no #N: same tab, so it resumes
-  await expect(deck.locator('.strip .count')).toHaveText('5 / 27');
+  await expect(deck.locator('.strip .count')).toHaveText('5 / 28');
   const fresh = await context.newPage(); // another new tab starts a new session
   await fresh.goto(DECK);
-  await expect(fresh.locator('.strip .count')).toHaveText('1 / 27');
+  await expect(fresh.locator('.strip .count')).toHaveText('1 / 28');
 });
 
 // Final review minor: the old decks recorded each slide through shared/progress.js (VubProgress.saveSlide
@@ -125,17 +125,17 @@ test('opening the Week 1 deck shows on the course home, and the last slide marks
   await page.reload();
   await expect(page.locator('[data-week-status="1"]')).toHaveText('Ready to begin');
   await page.goto(DECK);
-  await expect(page.locator('.strip .count')).toHaveText('1 / 27');
+  await expect(page.locator('.strip .count')).toHaveText('1 / 28');
   await expect.poll(() => page.evaluate(() => {
     const p = JSON.parse(localStorage.getItem('vub:progress:v1') || '{}');
     return p.dl2 && p.dl2['1'] && [p.dl2['1'].slide, p.dl2['1'].total];
-  })).toEqual([0, 27]);
+  })).toEqual([0, 28]);
   await page.goto(HOME);
   await expect(page.locator('[data-week-status="1"]')).toHaveText('Resume at slide 1');
   await expect(page.locator('.continue-course')).toHaveText('Continue week 1');
   await page.goto(DECK);
   await page.keyboard.press('End');
-  await expect(page.locator('.strip .count')).toHaveText('27 / 27');
+  await expect(page.locator('.strip .count')).toHaveText('28 / 28');
   await page.goto(HOME);
   await expect(page.locator('[data-week-status="1"]')).toHaveText('Lesson viewed to the end');
   await expect(page.locator('[data-course-count]')).toHaveText('1 of 6 lessons viewed to the end');

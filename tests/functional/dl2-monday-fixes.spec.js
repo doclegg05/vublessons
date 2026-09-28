@@ -1,7 +1,8 @@
+// Mission Control extension: legacy simulation checks now exercise the retained practice library.
 // Browser regressions from the 2026-09-26 DL2 full review (fixes before the 2026-09-28 cohort).
 const {test,expect}=require('@playwright/test');
 const base='/courses/digital-literacy-2';
-const deck=n=>`${base}/weeks/week-0${n}/presentation.html`;
+const deck=n=>`${base}/weeks/week-0${n}/practice.html`;
 
 // WCAG relative-luminance contrast between two computed CSS colours.
 const contrast=(a,b)=>{const lum=c=>{const [r,g,bl]=c.match(/[\d.]+/g).slice(0,3).map(Number).map(v=>{v/=255;return v<=0.03928?v/12.92:((v+0.055)/1.055)**2.4;});return 0.2126*r+0.7152*g+0.0722*bl;};
@@ -24,7 +25,7 @@ test.describe('shared lab computers',()=>{
  // Narrowed 2026-09-28 (Mission Control, Task 11): the old pre-test grading is gone. The new pre-test keeps answers in
  // progress (not results) on the computer, so Start fresh must clear those, but keep any unsent copy meant for Britt.
  test('Start fresh clears the previous learner\'s lessons and test answers after confirmation',async({page})=>{
-  await page.goto(deck(3)+'#slide-8');await expect(page.locator('#slide-8')).toBeVisible();
+  await page.goto(base+'/weeks/week-03/presentation.html#8');await expect(page.locator('#slide-8')).toBeVisible();
   await page.goto(base+'/assessments/pre-test.html');
   await page.getByLabel('Your full name').fill('Alice Example');await page.getByRole('button',{name:'Start the pre-test'}).click();
   await page.locator('.opt[data-letter="A"]').click();
@@ -109,7 +110,7 @@ test.describe('contrast on the projector',()=>{
   await page.goto(deck(2));const [tabRing,tabBg]=await ring(page.locator('.slide-link').nth(3));
   expect(contrast(tabRing,tabBg),'chapter tab').toBeGreaterThanOrEqual(3);
   await page.goto(base+'/index.html');
-  // The hero button reads "Continue week 2" here, because this test already opened week 2.
+  // The hero button reads "Begin week 1" here, because this test already opened week 2.
   for(const [name,target] of [['pre-test',page.getByRole('link',{name:'Take the pre-test',exact:true})],['post-test',page.getByRole('link',{name:'Take the post-test',exact:true})],['continue',page.locator('.continue-course')]]){
    const [r,bg]=await ring(target);expect(contrast(r,bg),name).toBeGreaterThanOrEqual(3);}
  });

@@ -1,3 +1,7 @@
+# Current opening order — draft PR #28
+
+Week 1: pre-test directions and a labeled new-tab link (slide 1), approved captioned Brad video (slide 2), then existing lesson. Weeks 2–6: approved captioned Brad video (slide 1), then existing lesson. Totals are 28 / 24 / 24 / 24 / 24 / 24. The scoped generator, media-controls behavior, saved-position migration, 120-minute pacing, and Week 6 video alignment limitation are documented in `MISSION-CONTROL-WEEKS-2-6.md`. Production media from PR #29 is already live; the design/placement change remains preview-only.
+
 # Digital Literacy Level 2 course
 
 ## Narration refresh — approved September 28, 2026
@@ -16,7 +20,7 @@ and `--model small.en`, then `import-elevenlabs-narration.py --profile brad-refr
 media Python environment for transcription, import and alignment.
 
 For this scope, run `refresh-video-chapters.py` instead of the broad page generator.
-It updates existing chapter times and content-hash media URL versions, including
+Then run `python3 scripts/dl2/mission-control/build.py` to refresh opening-player hashes and practice-library times from the approved manifest and chapter JSON. The chapter refresher updates existing chapter times and content-hash media URL versions, including
 the Week 1 archived presentation,
 and preserves the Mission Control deck and assessment release. Caption grouping
 shares up to 0.6 seconds of display time between neighboring phrases for readability,
@@ -37,11 +41,13 @@ for validation evidence and the retained pacing observations.
 
 ## Mission Control (Sep 2026)
 
-Week 1 and the pre/post tests run on the Mission Control system in
-`courses/digital-literacy-2/os/`. Weeks 2–6 still use the generated
-learning-app pages described in the sections below. The "Present mode" and
-"Week 1: Tell, Show, Do, Review" sections below now describe weeks 2–6 and
-the legacy Week 1 deck only.
+All six main presentations now use the Mission Control deck engine. Week 1 now opens with the pre-test and video; its teaching units are preserved. Weeks 2–6 each have four Tell/Show/Do/Review missions, a protected eight-minute break, and a 120-minute plan. The older detailed interactive simulations remain available in each week's `practice.html` library; they do not change main lesson progress. Existing video/transcript pages and media are unchanged.
+
+**Weeks 2–6 authoring:** edit `scripts/dl2/mission-control/content.py` (teaching sequence), `visuals.py` (original task diagrams), and `build.py` (rendering and matched paper materials), then run `python3 scripts/dl2/mission-control/build.py` from the repository root. Detailed task/answer/quick-card content comes from `scripts/dl2/curriculum.json`. The canonical practice-library templates are in `scripts/dl2/mission-control/practice/`. Do not edit the generated week files directly.
+
+Shared extension files: `os/missions.css`, `missions.js`, `mission-paper.css`, `mission-paper.js`, and `mission-practice.css`. All changes are scoped away from Week 1. Each week includes `presentation`, `worksheet`, `answer-key`, `lesson-plan`, `run-sheet`, `instructor-notes`, and `practice` pages. Dates are excluded from these reusable materials.
+
+**Current assessment copy:** `os/test.js` is canonical. Both forms describe submission to the instructor without naming a hosting provider. A successful HTTP response means submitted for Britt, not confirmed inbox receipt. Failure/retry, saved-PDF backup, data disclosure, hidden form registration and server/email logic remain intact.
 
 **Files map** (paths under `courses/digital-literacy-2/`)
 
@@ -54,20 +60,20 @@ the legacy Week 1 deck only.
 | `os/pdf.js`, `os/vendor/` | Graded results PDF on the letterhead (pdf-lib + fontkit, self-hosted). `clean()` keeps every drawn string WinAnsi-safe for the standard-font fallback. |
 | `os/paper.css`, `os/paper.js`, `os/keys.js` | Letterhead paper system. `keys.js` renders the answer keys and printable tests from the item bank. |
 | `os/fonts.css`, `os/fonts/`, `os/img/` | Self-hosted fonts and the seal (no CDN). |
-| `weeks/week-01/presentation.html` | The 27-slide Week 1 deck (five units, WIPPEA phases). |
+| `weeks/week-01/presentation.html` | The 28-slide Week 1 deck (five units, WIPPEA phases). |
 | `weeks/week-01/worksheet.html`, `answer-key.html`, `run-sheet.html` | Letterhead Missions 1A–1E, their key, and the one-page landscape run sheet. |
 | `weeks/week-01/files/` | Class files: `Community Supper Flyer.docx` (Mission 1C) and `sound-test.html` (Mission 1B). Rebuild the flyer with `python3 docs/digital-literacy-2/class-files/make-community-supper-flyer.py`. Its docstring has the page math: exactly one line spills at Normal margins, and it fits at Narrow. |
 | `weeks/week-01/presentation-legacy.html` | The previous generated Week 1 deck, kept for reference. |
 | `assessments/pre-test.html`, `post-test.html` + `-answer-key`, `-printable` | 20-question tests, keys and paper backups. Keep these URLs stable. |
 
-**Do not run `scripts/dl2/build-pages.py` or `learning.py` as they are.**
+**The legacy `scripts/dl2/build-pages.py` now refuses to run. Do not run `learning.py` to regenerate the course.**
 They regenerate `weeks/week-01/presentation.html`, `worksheet.html`,
 `answer-key.html`, the assessment keys, `syllabus.html`, `sources.html` and the
 lesson plans from `curriculum.json`. That would overwrite the Mission Control
-files and the 20-question wording. Teach the generator to skip these files first.
+files and the 20-question wording. The scoped Mission Control generator writes the Week 1 deck from its explicit template and Weeks 2–6 materials; it does not write assessments, syllabus or the hand-authored Week 1 paper materials.
 
 **Add a slide.** Add a `<section class="slide" data-phase="…" data-stage="…" data-unit="…">`
-in `presentation.html`. Phases: warm-up, intro, present, practice, evaluate,
+in `scripts/dl2/mission-control/week-01.html` for Week 1, then run the scoped generator. Phases: warm-up, intro, present, practice, evaluate,
 apply. Stages: tell, show, do, review. Put teaching words in the slide and
 presenter words in `<aside class="notes">`. Mark reveal-one-at-a-time parts
 `class="build"`. The current classroom version has no timer or scheduled break. On a dense

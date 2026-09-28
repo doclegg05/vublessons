@@ -15,9 +15,9 @@ test.beforeEach(async ({ page }) => {
 test('Week 1 deck moves on with blocked storage and reduced motion', async ({ page }) => {
   const errors = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto('/courses/digital-literacy-2/weeks/week-01/presentation.html');
-  await expect(page.locator('.strip .count')).toHaveText('1 / 27');
+  await expect(page.locator('.strip .count')).toHaveText('1 / 28');
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('.strip .count')).toHaveText('2 / 27');
+  await expect(page.locator('.strip .count')).toHaveText('2 / 28');
   expect(errors).toEqual([]);
 });
 
@@ -34,6 +34,6 @@ test('pre-test runs from name to graded result with blocked storage', async ({ p
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
   await expect(page.locator('.result-score')).toContainText('20 of 20');
-  await expect(page.locator('.copy-status')).toContainText('Netlify accepted your results for Britt');
+  await expect(page.locator('.copy-status')).toContainText('Your results were submitted for Britt');
   expect(errors).toEqual([]);
 });

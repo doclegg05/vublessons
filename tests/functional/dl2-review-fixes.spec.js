@@ -1,3 +1,4 @@
+// Mission Control extension: legacy simulation checks now exercise the retained practice library.
 // Browser regressions from the 2026-09-24 DL2 curriculum review.
 const {test,expect}=require('@playwright/test');
 const base='/courses/digital-literacy-2';
@@ -5,7 +6,7 @@ const base='/courses/digital-literacy-2';
 // Decks start keyboard focus inside the current slide (the deck's own bypass), so the skip link
 // is reached by tabbing backwards there; on document pages it is the first Tab stop.
 // Narrowed 2026-09-28 (Mission Control, Task 11): the generated-deck case uses week 2, since week 1's deck was replaced.
-for(const path of ['/assessments/pre-test.html','/weeks/week-02/presentation.html']){
+for(const path of ['/assessments/pre-test.html','/weeks/week-02/practice.html']){
  test(`DL2 skip link is keyboard-reachable, visible when focused, and jumps to main content on ${path}`,async({page})=>{
   await page.goto(base+path);
   const skip=page.locator('a.skip');

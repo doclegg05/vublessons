@@ -1,3 +1,4 @@
+// Mission Control extension: legacy simulation checks now exercise the retained practice library.
 // Week 6 redesign (2026-09-26): the three practice pages behave as the lesson says, in a browser.
 // Version 1 is the starter, version 2 is the agent's result with one planted defect (the typed search
 // is no longer lowered, so capital letters stop matching) and version 3 is the repair.
@@ -53,7 +54,7 @@ for(const file of ['resource-finder.html','resource-finder-agent.html','resource
  });
 
 test('Week 6 slide 10 shows the diff when a learner chooses what the agent changed',async({page})=>{
- await page.goto(`${base}/weeks/week-06/presentation.html`);
+ await page.goto(`${base}/weeks/week-06/practice.html`);
  await page.locator('[data-slide="9"]').click();
  const slide=page.locator('#slide-10');await expect(slide).toBeVisible();
  await slide.getByRole('button',{name:'Changed',exact:true}).click();
@@ -73,7 +74,7 @@ test('Week 6 worksheet and answer guide fit a phone screen; the log tables scrol
 
 test('Week 6 worksheet test log takes typed results and prints them',async({page})=>{
  await page.goto(`${base}/weeks/week-06/worksheet.html`);
- const actual=page.getByLabel('Actual result: Mixed case');
+ const actual=page.getByLabel('Actual result: Mixed case', {exact:true}).first();
  await actual.fill('No matching resources for LIBRARY');
  await page.emulateMedia({media:'print'});
  await expect(page.locator('#log-3-1 + .print-answer')).toHaveText('No matching resources for LIBRARY');

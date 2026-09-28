@@ -19,13 +19,13 @@
     document.querySelector('#previous').disabled=index===0;
     document.querySelector('#next').disabled=index===slides.length-1;
     if(write) history.replaceState(null,'','#'+slides[index].id);
-    window.VubProgress?.saveSlide('dl2',week,index,slides.length);
+    if (!document.body.classList.contains('mission-library')) window.VubProgress?.saveSlide('dl2',week,index,slides.length);
     if(focus) { const h=slides[index].querySelector('h2'); h.focus({preventScroll:true}); slides[index].scrollIntoView({block:'start',behavior:'instant'}); }
     if(focus||write) links[index]?.scrollIntoView({block:'nearest',behavior:'instant'});
     fit();
   }
   if(slides.length) {
-    const saved=window.VubProgress?.get('dl2',week)?.slide;
+    const saved=document.body.classList.contains('mission-library') ? undefined : window.VubProgress?.get('dl2',week)?.slide;
     show(hashIndex()>=0?hashIndex():Number.isInteger(saved)?saved:0,false,false);
     links.forEach(b=>b.addEventListener('click',()=>{show(Number(b.dataset.slide),true); document.querySelector('.sidebar').classList.remove('open'); document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');}));
     const go=d=>{if(stepWithin(d))return;const from=index;show(index+d,true);if(d<0&&index!==from)stepWithin('last');};
@@ -49,6 +49,7 @@
     const STAGE='figure.scenario-photo,.topic-scene,.workshop,.authored-window,.flip-grid,video,.video-caption,.video-chapters,.step-list,.evidence-sequence,form.exercise,div.exercise,.interactive-calc';
     const MIN_FIT=0.75, original=new Map();
     let reachedFullscreen=false; // this presentation actually went full screen
+    let fullscreenGeneration=0, fullscreenExit=Promise.resolve();
     const presenting=()=>document.body.classList.contains('presenting');
     function frame(s){
       if(original.has(s))return;
@@ -130,15 +131,25 @@
       s.dataset.step=k;fit();s.querySelector('h2').focus({preventScroll:true});return true;
     };
     function present(on){
+      const generation=++fullscreenGeneration;
+      reachedFullscreen=false;
       document.body.classList.toggle('presenting',on);
       slides.forEach(on?frame:unframe);
       if(on){
         reachedFullscreen=false;
         window.scrollTo(0,0);
-        document.documentElement.requestFullscreen?.().catch(()=>{});
+        // Finish an earlier exit before requesting a new entry. Its late change event
+        // must not mark this generation as having reached fullscreen.
+        fullscreenExit.then(()=>{
+          if(generation!==fullscreenGeneration||!presenting())return;
+          return document.documentElement.requestFullscreen?.().then(()=>{
+            if(generation===fullscreenGeneration&&presenting())reachedFullscreen=!!document.fullscreenElement;
+            else if(!presenting()&&document.fullscreenElement)document.exitFullscreen?.().catch(()=>{});
+          }).catch(()=>{});
+        });
         fit();slides[index].querySelector('h2').focus({preventScroll:true});
       } else {
-        if(document.fullscreenElement)document.exitFullscreen?.().catch(()=>{});
+        if(document.fullscreenElement)fullscreenExit=document.exitFullscreen().catch(()=>{});
         document.querySelector('#present')?.focus({preventScroll:true});
       }
     }
@@ -153,7 +164,7 @@
     // present mode was already turned off (P pressed twice quickly), leave full screen too.
     // A late signal from an earlier exit must not end a presentation that has just restarted.
     document.addEventListener('fullscreenchange',()=>{
-      if(document.fullscreenElement){if(presenting())reachedFullscreen=true;else document.exitFullscreen?.().catch(()=>{});}
+      if(document.fullscreenElement){if(!presenting())fullscreenExit=document.exitFullscreen().catch(()=>{});}
       else if(presenting()&&reachedFullscreen)present(false);
     });
     window.addEventListener('resize',fit);

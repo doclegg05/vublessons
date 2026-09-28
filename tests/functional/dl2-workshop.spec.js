@@ -1,6 +1,7 @@
+// Mission Control extension: legacy simulation checks now exercise the retained practice library.
 const {test,expect}=require('@playwright/test');
 const base='/courses/digital-literacy-2';
-const open=async(page,w,s)=>{await page.goto(`${base}/weeks/week-${String(w).padStart(2,'0')}/presentation.html#slide-${s}`);return page.locator('.slide:not([hidden]) [data-workshop]').first();};
+const open=async(page,w,s)=>{await page.goto(`${base}/weeks/week-${String(w).padStart(2,'0')}/practice.html#slide-${s}`);return page.locator('.slide:not([hidden]) [data-workshop]').first();};
 // Restored 2026-09-28 (final review). These two drove workshops on the replaced week 1 deck (display zoom, sound output,
 // calendar views, shared-calendar privacy), which no live week has now. The shared assets/workshop.js behaviors they
 // checked are still used on weeks 3-5, so they are retargeted there: keyboard-activated choice buttons that change only
