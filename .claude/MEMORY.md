@@ -8,16 +8,18 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-Four courses, all on `main` and live. Digital Literacy Level 2 merged 2026-09-24 (PR #17) with the review fixes (PR #18). Full Playwright
-suite 128/128, link check 0 broken. Cohort starts 2026-09-28 per the DL2 syllabus.
+DL2 "Mission Control" redesign (Week 1 + 20-question pre/post tests) built on branch `feat/dl2-mission-control` (45 commits, not pushed, NOT live). Full Playwright suite 292/292. `main`/live still serves the old DL2 Week 1 deck and 28-question tests. PR #24 (old Week 1 rebuild) is superseded.
 
 ## Last Session
-- **Date**: 2026-09-24
-- **What we worked on**: Two six-agent reviews of Digital Literacy Level 2 (course pages and assessments; then the six lesson videos), then fix passes for both: the six High course findings in the `scripts/dl2/` generators plus `course.css` and `assessment.js`, and every visual and caption video finding in `screen-share-scenes.py`, `video-scenes.py` and `build-media.py`, with all six videos re-rendered, normalized and re-verified. Review reports were delivered to Britt as files (session scratchpad, not in the repo). Merged as PRs #17 (course), #18 (fixes) and #19 (memory); live on vublessons.com.
-- **What we decided**: Course content does not need veteran / VA / telehealth framing unless the topic calls for it (auto-memory holds the detail: `dl2-veteran-framing-not-required`). Decks keep starting keyboard focus inside the current slide; the skip link only had to become focusable. Topic-button accessible names come from a synced `aria-label`, not a hidden span (a hidden span escaped the scrolling row and broke mobile).
-- **Where we left off**: PR #17 (course) and PR #18 (review fixes) both merged to main and deployed. Quality gate passed before push. Six videos re-rendered and re-verified. Remaining course findings (2 mobile Highs from the UI pass, 32 Mediums) not yet actioned. Video narration items need a re-record (listed in HANDOFF.md).
+- **Date**: 2026-09-27 → 2026-09-28 (overnight)
+- **What we worked on**: Brainstormed and approved a fresh DL2 design (spec `docs/superpowers/specs/2026-09-27-dl2-mission-control-design.md`, mockups beside it), wrote the plan (`docs/superpowers/plans/2026-09-27-dl2-mission-control.md`), and built it with reviewed subagent tasks: `courses/digital-literacy-2/os/` engine (deck, Windows 11 Show demos, test flow + Netlify copy + offline outbox, letterhead PDF via vendored pdf-lib, keys/printables), the 28-slide Week 1 deck, missions 1A–1E, run sheet, answer key, class files (flyer .docx, sound test).
+- **What we decided**: Command Deck teaching slides + dusk New River Gorge for openers/break/finale; clean-light test screen; letterhead = VUB seal, WEST VIRGINIA / Veterans Upward Bound, TRIO line, course, cohort, Britt Legg, date & time, New River CTC; results PDF saved on the PC + copy to Netlify Forms; demos match Windows 11 + Microsoft 365 desktop (new Outlook); presenter uses the room's Windows PC. Scope is DL2 only: no homepage/shared changes.
+- **Where we left off**: Branch complete and verified. Britt to review, then: enable Netlify form detection, push + PR + merge to deploy, send one test submission, test-print worksheets from lab Edge. Old deck kept at `weeks/week-01/presentation-legacy.html`.
 
 ## Open Items
+- [ ] **DL2 Mission Control go-live (before 4:30 PM 2026-09-28):** enable Netlify form detection → push `feat/dl2-mission-control`, PR, merge → confirm forms `dl2-pretest`/`dl2-posttest` listed + email notifications on → one test submission → test print.
+- [ ] DL2 Weeks 2–6 in the Mission Control system (Week 2 by Oct 4, then weekly); Week 6 needs its own brainstorm (agent-built app + domains/hosting/back-end roadblocks).
+- [ ] Don't run `scripts/dl2/build-pages.py` — it would overwrite the new Week 1 and test files (see HANDOFF.md).
 - [x] ~~DL2 video review fixes~~ done 2026-09-24: all visual and caption findings fixed in the generators and re-rendered (see HANDOFF.md "Video review fixes"). Still open, need a re-record: pause-prompt timing, fast chapters, week 3 formula cause, week 6 undefined terms, week 5 challenge setup.
 - [x] ~~Merge PR #17 then PR #18~~ both merged to main 2026-09-24; Netlify deployed the DL2 course and the review fixes to vublessons.com.
 - [ ] DL2 UI Highs still open: Text Size widget covers text on `activities/resource-finder.html` at mobile width (page loads no course CSS); syllabus and sources tables overflow at 375px (`.table-scroll` exists, unused).
@@ -58,6 +60,8 @@ Britt asked to be reminded of both (2026-07-28).
 ## Key Decisions Log
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-09-27 | DL2 rebuilt fresh as "Mission Control" (hand-written HTML + small os/ engine), not the old scripts/dl2 generators | Britt disliked the generated version; hand-authored slides allow build steps, OS transitions and coded Windows demos |
+| 2026-09-27 | DL2 pre/post = 20 parallel items (item N same skill), one item bank feeds test, keys, printables, PDF | Britt asked for 20; single source keeps pre/post aligned |
 | 2026-07-28 | Keep Windows Tips as Week 2; rewrite the 6 Video Conferencing test questions | Windows was the deployed canonical curriculum; the tests were the thing out of sync, not the lesson |
 | 2026-07-28 | Delete the 3 Zoom/telehealth handouts | Orphaned under a Windows lesson after the topic swap; nothing else linked them |
 | 2026-07-28 | Retire `VUB-Course` instead of merging | Platform copy was strictly ahead (a11y fixes, resources sections, shared/ integration); only Week 2 differed, and that was a deliberate curriculum change |
