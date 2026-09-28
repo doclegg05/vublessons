@@ -147,3 +147,28 @@ body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-i
 @media (prefers-reduced-motion: reduce) {
   .slide[data-scene="gorge"] .opener .chip { opacity:1; transform:none; }
 }
+
+/* ================= Deck layout helpers (added with the Week 1 deck) ================= */
+/* A hidden slide hides everything in it, even demo parts that set visibility:visible (win11 ticks). */
+.slide:not(.is-active):not(.is-leaving) * { visibility:hidden !important; }
+/* Show slides inside a 16:9 deck: a wider side column, a compact checklist and one row of controls,
+ * so a 7-step demo fits under the HUD at 1920×1080 without the caption overlapping the list. The demo
+ * is as tall as the bezel, so the controls line up with the bezel's bottom edge. */
+.deck .slide[data-stage="show"] .demo { grid-template-columns:1fr 29%; flex:none; height:auto; }
+.slide[data-stage="show"] .demo-cap { flex:none; }
+.slide[data-stage="show"] .demo-todo { gap:.4cqw; }
+.dl2-os .deck .slide[data-stage="show"] .demo-todo li { line-height:1.2 !important; }
+.slide[data-stage="show"] .demo-todo li i { width:2cqw; height:2cqw; }
+.slide[data-stage="show"] .demo-controls { flex-wrap:nowrap; gap:.5cqw; }
+.slide[data-stage="show"] .demo-controls button { padding:.6cqw .7cqw; }
+/* Steps centered as a block in a centered panel; four steps in two columns when a slide needs the room. */
+.panel.center .steps { width:fit-content; margin-inline:auto; text-align:left; }
+.dl2-os .deck .slide .steps + h2 { margin-top:2.4cqw; }
+.steps.cols { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(2,auto); grid-auto-flow:column; column-gap:3cqw; }
+/* Do slide with a long Point B; a countdown on a gorge slide. */
+.sab.b-wide { grid-template-columns:1fr auto 1.6fr; }
+.slide[data-scene="gorge"] .opener .timer { display:inline-block; margin-top:2.4cqw; padding:1.2cqw 2.4cqw; background:rgba(40,16,50,.45); }
+.dl2-os .deck .slide[data-scene="gorge"] .opener .timer b { font-size:calc(5cqw * var(--ts)) !important; }
+/* Review: the "why" card carries a gold rule; emphasis in body text is gold and upright, like h1 em. */
+.answer.why { border-left-color:var(--c-gold); }
+.dl2-os .deck .slide p em, .dl2-os .deck .slide li em { font-style:normal; color:var(--c-gold); }
