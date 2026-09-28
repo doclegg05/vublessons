@@ -1,6 +1,9 @@
 # Graded PDF attachment delivery
 
-Status: implemented and locally tested; **not enabled or verified in production**.
+Status: **enabled and verified in production on September 28, 2026**.
+Both synthetic pre/post PDF attachments were received in the instructor Gmail inbox
+and opened in its PDF viewer. Two pages, names, versions, record IDs, seven domains
+and all twenty graded answers matched. Scores were 20/20 and 19/20.
 The existing production Forms notifications and student PDF/USB backup continue working.
 Britt confirmed receipt of both field-only test emails on September 28, 2026.
 
@@ -27,10 +30,13 @@ suppressed. An instructor/operator must reconcile against the provider before re
 The original data remains available in Netlify Forms, including submissions needing
 manual spam review. Netlify's acceptance does not mean an email reached an inbox.
 
-## Missing setup
+## Configuration / credential rotation
 
 Britt selected his instructor Gmail account with a dedicated Google app password.
-No app password has been supplied. No account, subscription or credential was created.
+Britt entered the app password privately in Netlify. It is marked secret and populated
+only for Production. Britt approved the current plan’s combined Builds, Functions and
+Runtime scope. No paid upgrade was made. `DL2_PDF_EMAIL_ENABLED=true` is active only
+for Production. The steps below describe setup or future credential replacement.
 
 1. Sign in to `britt.legg76@gmail.com` at https://myaccount.google.com/apppasswords .
    Create an app password named **VUB graded PDF reports**. Google requires 2-Step
@@ -65,13 +71,15 @@ stay enabled as a separate fallback.
    the stored Forms record and event-function state. Check Spam if necessary.
 5. Confirm a real PDF **attachment** arrives in Britt's inbox, opens, and matches the
    name, test/version, score, seven domains, twenty graded answers and record ID.
-6. Confirm repeat delivery of the same event creates no additional attachment email.
+6. Verify duplicate suppression with the server tests and an accepted production receipt;
+   do not create extra student submissions just to repeat a send.
 7. Record the provider receipt and Britt's inbox confirmation. Do not claim activation
    complete merely because a local mocked mail request or Netlify HTTP POST succeeded.
 
 The student screen continues to state only that Netlify accepted the result. It does not
-promise attachment receipt. The instructor guide describes the pending attachment setup and operational handling
-of missing mail. Change its status only after the live attachment test passes.
+promise attachment receipt. The instructor guide describes active attachments and operational handling of missing
+mail. A submission held in Forms Spam must be reviewed and verified before it triggers
+the attachment service.
 
 ## Recovery
 
@@ -90,7 +98,20 @@ over silently assuming a timeout meant no send.
   ambiguous provider failures, record conflicts and the production activation gate.
 - Twenty-nine existing assessment/PDF browser tests passed after renderer reuse.
 - Both local synthetic PDFs parse as two pages; text and branded visual layout checked.
-- No real attachment email has yet been sent; credential/setup is still required.
+- Production deployment `6aba8863d0bacca862087c6d`, code `d09dc1f`, activated the gate.
+- Confirmed synthetic records: `DL2-PRE-20260928-1132-SP-9e1b9137` and
+  `DL2-POST-20260928-1132-SP-3e427b08`. Both Forms payloads matched the browser,
+  delivery receipts were `accepted`, and both PDFs were opened in Gmail.
+- The synthetic post-test initially went to Forms Spam. Verifying that exact synthetic
+  record triggered its PDF email successfully. Check both Forms views for missing mail.
+- Two earlier synthetic records at 11:28 ET were saved while the activation flag was
+  absent; no attachment send was attempted for them. The connector reported success
+  without persisting the flag. A direct API write using default plan scopes followed by
+  a production rebuild corrected it. No app password was read or copied into code.
+- Live student PDF downloads, mobile results, six phase buttons at two projector sizes,
+  and all six videos with captions and keyboard chapter navigation passed.
+- Duplicate/concurrent delivery suppression passed local tests; no live event was
+  deliberately replayed. Provider acceptance and inbox receipt were checked separately.
 
 Sources: https://docs.netlify.com/build/functions/trigger-on-events/
 https://docs.netlify.com/manage/forms/notifications/
