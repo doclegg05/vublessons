@@ -34,6 +34,6 @@ test('pre-test runs from name to graded result with blocked storage', async ({ p
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
   await expect(page.locator('.result-score')).toContainText('20 of 20');
-  await expect(page.locator('.copy-status')).toContainText('Netlify accepted your results for Britt');
+  await expect(page.locator('.copy-status')).toContainText('Your results were submitted for Britt');
   expect(errors).toEqual([]);
 });

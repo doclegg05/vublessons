@@ -1,9 +1,10 @@
+// Mission Control extension: legacy simulation checks now exercise the retained practice library.
 const {test,expect}=require('@playwright/test');
 const AxeBuilder=require('@axe-core/playwright').default;
 const base='/courses/digital-literacy-2/weeks';
 // Narrowed 2026-09-28 (Mission Control, Task 11): weeks 2–6. Week 1's replaced deck has no [data-topic-scene] slides.
 for(let week=2;week<=6;week++)test(`DL2 week ${week}: illustrated teaching choices work with keyboard and enlarged mobile text`,async({page})=>{
- await page.goto(`${base}/week-0${week}/presentation.html`);
+ await page.goto(`${base}/week-0${week}/practice.html`);
  const ids=await page.locator('.slide:has([data-topic-scene])').evaluateAll(slides=>slides.map(s=>s.id));
  expect(ids.length).toBeGreaterThan(4);
  for(const id of ids){
@@ -28,7 +29,7 @@ for(let week=2;week<=6;week++)test(`DL2 week ${week}: illustrated teaching choic
  }
 });
 test('DL2 chart keeps bars, labels, order and data table aligned',async({page})=>{
- await page.goto(`${base}/week-03/presentation.html#slide-11`);
+ await page.goto(`${base}/week-03/practice.html#slide-11`);
  const lab=page.locator('[data-chart-lab]');
  await lab.getByRole('button',{name:'Paper becomes $15',exact:true}).click();
  await expect(lab.locator('[data-chart-paper]')).toHaveText('15');await expect(lab.locator('[data-item="Paper"] b')).toHaveText('$15');
@@ -40,7 +41,7 @@ test('DL2 chart keeps bars, labels, order and data table aligned',async({page})=
  const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(axe.violations).toEqual([]);
 });
 test('DL2 crop and resize demonstrate distinct reversible edits',async({page})=>{
- await page.goto(`${base}/week-03/presentation.html#slide-13`);await page.emulateMedia({reducedMotion:'reduce'});
+ await page.goto(`${base}/week-03/practice.html#slide-13`);await page.emulateMedia({reducedMotion:'reduce'});
  const lab=page.locator('[data-crop-lab]');const frame=lab.locator('.image-edit-frame');const original=(await frame.boundingBox()).width;
  await lab.getByRole('button',{name:'Crop the edges',exact:true}).click();await expect(frame).toHaveCSS('clip-path','inset(15% 18%)');expect((await frame.boundingBox()).width).toBe(original);
  await lab.getByRole('button',{name:'Resize proportionally',exact:true}).click();await expect(frame).toHaveCSS('clip-path','none');expect((await frame.boundingBox()).width).toBeLessThan(original);
@@ -48,7 +49,7 @@ test('DL2 crop and resize demonstrate distinct reversible edits',async({page})=>
  const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(axe.violations).toEqual([]);
 });
 test('DL2 editing timeline distinguishes trimming ends from removing a middle section',async({page})=>{
- await page.goto(`${base}/week-03/presentation.html#slide-14`);const lab=page.locator('[data-trim-lab]');
+ await page.goto(`${base}/week-03/practice.html#slide-14`);const lab=page.locator('[data-trim-lab]');
  await lab.getByRole('button',{name:'Trim the start and end'}).click();await expect(lab.locator('.clip-removed')).toHaveCount(2);await expect(lab.locator('[data-trim-note]')).toContainText('14 seconds');
  await lab.getByRole('button',{name:'Remove a middle section'}).click();await expect(lab.locator('.clip-removed')).toHaveCount(1);await expect(lab.locator('[data-clip="middle"]')).toHaveClass(/clip-removed/);await expect(lab.locator('[data-trim-note]')).toContainText('17 seconds');
  await lab.getByRole('button',{name:'Original clip'}).click();await expect(lab.locator('.clip-removed')).toHaveCount(0);
@@ -58,7 +59,7 @@ test('DL2 editing timeline distinguishes trimming ends from removing a middle se
 // teaching explanations'. It drove the replaced week 1 deck's slide 4 [data-step-done] and slide 8 scene states.
 
 test('DL2 email draft reviews recipient, subject and attachment without sending',async({page})=>{
- await page.goto(`${base}/week-04/presentation.html#slide-4`);
+ await page.goto(`${base}/week-04/practice.html#slide-4`);
  const scene=page.locator('#slide-4 [data-topic-scene]');
  await expect(scene).toContainText('Build an actionable email draft');
  await expect(scene.locator('.scene-state:visible')).toContainText('Alex');
@@ -70,7 +71,7 @@ test('DL2 email draft reviews recipient, subject and attachment without sending'
  await expect(scene.getByRole('button',{name:'Send',exact:true})).toHaveCount(0);
 });
 test('DL2 recovery distinguishes missing file from wrong content before restoration',async({page})=>{
- await page.goto(`${base}/week-02/presentation.html#slide-18`);
+ await page.goto(`${base}/week-02/practice.html#slide-18`);
  const scene=page.locator('#slide-18 [data-topic-scene]');
  await expect(scene.locator('.scene-state:visible')).toContainText('Trash preview');
  await scene.getByRole('button',{name:'Wrong content',exact:true}).click();
@@ -82,7 +83,7 @@ test('DL2 recovery distinguishes missing file from wrong content before restorat
  await expect(scene.locator('.scene-state:visible')).toContainText('Deleted');
 });
 test('DL2 live supply input and illustrated worksheet stay synchronized including zero',async({page})=>{
- await page.goto(`${base}/week-03/presentation.html#slide-9`);
+ await page.goto(`${base}/week-03/practice.html#slide-9`);
  const input=page.locator('#paper-cost');
  for(const [value,total] of [['15','28.00'],['0','13.00'],['12','25.00']]){
   await input.fill(value);

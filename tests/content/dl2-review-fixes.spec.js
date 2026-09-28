@@ -4,7 +4,7 @@ const {test,expect}=require('@playwright/test');const fs=require('fs');
 const read=p=>fs.readFileSync(p,'utf8');
 const curriculum=JSON.parse(read('scripts/dl2/curriculum.json'));
 const course='courses/digital-literacy-2';
-const deck=n=>read(`${course}/weeks/week-0${n}/presentation.html`);
+const deck=n=>read(`${course}/weeks/week-0${n}/practice.html`);
 const worksheet=n=>read(`${course}/weeks/week-0${n}/worksheet.html`);
 const answerKey=n=>read(`${course}/weeks/week-0${n}/answer-key.html`);
 // Python html.escape(quote=True) escaping, so curriculum text can be matched in rendered HTML.

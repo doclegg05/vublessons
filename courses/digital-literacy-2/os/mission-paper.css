@@ -1,0 +1,24 @@
+body.mission-paper { margin:0; background:#e9edf4; color:#15213a; }
+.mission-paper * { box-sizing:border-box; }
+.mission-paper .paper-actions { display:flex; gap:16px; flex-wrap:wrap; padding:20px; justify-content:center; font:18px 'Segoe UI',sans-serif; }
+.mission-paper a { color:#174979; text-underline-offset:3px; }
+.mission-paper button { padding:10px 16px; border:1px solid #1b365d; background:#1b365d; color:#fff; border-radius:6px; font:inherit; cursor:pointer; }
+.mission-paper :focus-visible { outline:3px solid #975f00; outline-offset:3px; }
+.mission-paper .mission { break-before:page; }
+.mission-paper .mission:first-of-type { break-before:auto; }
+.mission-paper li { margin:12px 0; }
+.mission-paper textarea { display:block; width:100%; font:inherit; min-height:80px; border:1px solid #667c94; border-radius:4px; padding:8px; margin:6px 0 18px; }
+.mission-paper .mission-ab { display:grid; grid-template-columns:1fr 1fr; gap:16px; background:#f4f6fa; padding:12px; }
+.mission-paper .mission-ab p { margin:6px 0; }
+.mission-paper .table-scroll { overflow-x:auto; }
+.mission-paper .table-scroll table { min-width:600px; }
+.mission-paper .table-scroll textarea { min-width:140px; }
+.mission-paper .print-answer { display:none; white-space:pre-wrap; overflow-wrap:anywhere; }
+.mission-paper .quick-card dt { font-weight:700; margin-top:16px; }
+.mission-paper .quick-card dd { margin:6px 0 12px; }
+.mission-paper .resource-links { display:flex; gap:16px; flex-wrap:wrap; }
+@media(max-width:700px) { .mission-paper .paper-doc { width:100%; padding:22px; font-size:18px; overflow-wrap:anywhere; } .mission-paper .letterhead { grid-template-columns:auto 1fr; } .mission-paper .lh-meta { grid-column:1/-1; width:auto; font-size:12px; } .mission-paper .lh-name { white-space:normal; font-size:22px; } .mission-paper .lh-state { white-space:normal; } .mission-paper .lh-bar { left:-22px; right:-22px; top:-22px; } .mission-paper .mission-ab { grid-template-columns:1fr; } }
+@media print { body.mission-paper { background:white; } .mission-paper .paper-doc { padding:0; max-width:none; } .mission-paper textarea { display:none!important; } .mission-paper .print-answer { display:block; min-height:45px; border-bottom:1px solid #708199; margin:8px 0 16px; } .mission-paper .table-scroll { overflow:visible; } .mission-paper .table-scroll table { min-width:0; table-layout:fixed; } .mission-paper .table-scroll label { font-size:8pt; } .mission-paper a { color:inherit; } .mission-paper .letterhead { break-inside:avoid; } .mission-paper h2,.mission-paper h3 { break-after:avoid; } .mission-paper .lh-bar { left:0; right:0; top:0; } }
+@page run-sheet { size:letter landscape; margin:.4in; }
+@media print { .run-sheet { page:run-sheet; } .run-sheet .paper-doc { font-size:10pt; line-height:1.2; } .run-sheet .paper-doc h1 { margin:10pt 0; font-size:18pt; } .run-sheet .paper-doc table { margin-top:8pt; font-size:10pt; } .run-sheet .paper-doc th,.run-sheet .paper-doc td { padding:4pt; } .run-sheet .paper-doc>p { margin:8pt 0; } }
+@media print { .mission-paper tr,.mission-paper fieldset { break-inside:avoid; } }

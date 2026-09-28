@@ -141,7 +141,7 @@
     var filename = 'DL2-' + report.label.replace('-', '') + '-' + last + '-' + report.recordId.split('-').slice(2, 4).join('-') + '-' + report.recordId.split('-').pop().replace(/[^A-Za-z0-9]/g, '') + '.pdf';
     root.innerHTML = top() + '<main class="test-card result" id="main"><h1 tabindex="-1">Thank you, ' + esc(report.name) + '!</h1>' +
       '<p class="result-score">' + r.correct + ' of 20 correct</p><p class="pdf-status" role="status">Making your results PDF…</p>' +
-      '<section class="record-path" aria-labelledby="send-heading"><h2 id="send-heading">1. Submit results to Britt</h2><p class="copy-status" role="status">Sending a copy to Britt…</p><div class="test-nav"><button type="button" data-go="send" disabled>Submit to instructor</button></div><p>Netlify stores your answers and score. This does not save the PDF to your flash drive.</p></section>' +
+      '<section class="record-path" aria-labelledby="send-heading"><h2 id="send-heading">1. Submit results to Britt</h2><p class="copy-status" role="status">Sending a copy to Britt…</p><div class="test-nav"><button type="button" data-go="send" disabled>Submit to instructor</button></div><p>Submitted answers and scores are stored for your instructor. This does not save the PDF to your flash drive.</p></section>' +
       '<section class="record-path usb-backup" aria-labelledby="usb-heading"><h2 id="usb-heading">2. Save your PDF to Britt’s flash drive</h2><ol><li>Plug in the flash drive Britt supplied.</li><li>Select <strong>Download graded PDF</strong>. If Save As opens, choose the flash drive. If the browser saves automatically, open Downloads and copy the PDF to the flash drive.</li><li>Open the PDF <strong>from the flash drive</strong>. Check your name, test type and score.</li><li>Close the PDF, safely eject the drive, and return it to Britt.</li></ol><p>Saving the PDF does not submit your answers. You can save it even while the online copy is waiting to send.</p><div class="test-nav"><button type="button" data-go="pdf" disabled>Download graded PDF</button><button type="button" class="primary" data-go="print" disabled>Print my results</button></div></section>' +
       '<div class="html-report" hidden></div></main>';
     root.querySelector('main h1').focus();
@@ -168,7 +168,7 @@
       button.disabled = true;
       root.querySelector('.copy-status').textContent = 'Sending a copy to Britt…';
       deliver(payload, queued).then(function () {
-        root.querySelector('.copy-status').textContent = '✓ Netlify accepted your results for Britt. Keep your PDF as a backup.';
+        root.querySelector('.copy-status').textContent = '✓ Your results were submitted for Britt. Keep your PDF as a backup.';
         button.textContent = 'Submitted to instructor';
       }).catch(function () {
         button.disabled = false;

@@ -1,4 +1,5 @@
 """Render the reusable course and its print materials from one curriculum source."""
+raise SystemExit("This legacy generator would overwrite Mission Control and the live 20-question tests. Use python3 scripts/dl2/mission-control/build.py for Weeks 2–6. Edit os/test.js and os/items.js directly for the current assessments.")
 import json,html,base64
 from workshops import for_slide,workshop
 import learning

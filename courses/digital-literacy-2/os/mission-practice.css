@@ -1,0 +1,9 @@
+/* Keep the detailed practice simulations in the familiar Mission Control family. */
+@import url('/courses/digital-literacy-2/os/fonts.css');
+body.mission-library { --primary:#1b365d; --accent:#ffc400; font-family:'DL2 Space Grotesk','Segoe UI',sans-serif; }
+.mission-library .deck-toolbar>a { color:#1b365d; font-weight:700; text-decoration:underline; padding:12px; border:2px solid #1b365d; border-radius:6px; }
+.mission-library .topbar { background:#06142d; color:#e9fbff; }
+.mission-library .sidebar { background:#0c203d; color:#e9fbff; }
+.mission-library .sidebar a,.mission-library .sidebar button,.mission-library .sidebar h2 { color:#e9fbff; }
+.mission-library .sidebar .slide-link { background:#102b4c; }
+.mission-library .sidebar .slide-link[aria-current=true] { color:#041222; background:#ffc400; }

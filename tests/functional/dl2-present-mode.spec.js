@@ -1,8 +1,9 @@
+// Mission Control extension: legacy simulation checks now exercise the retained practice library.
 // Present mode fits every DL2 slide on a classroom projector (2026-09-26 projector fix).
 // Source: courses/digital-literacy-2/assets/lesson.js and assets/present.css.
 const {test,expect}=require('@playwright/test');
 const base='/courses/digital-literacy-2';
-const deck=n=>`${base}/weeks/week-0${n}/presentation.html`;
+const deck=n=>`${base}/weeks/week-0${n}/practice.html`;
 const screens=[[1024,768],[1280,720],[1366,768],[1920,1080]];
 
 // For the visible slide: is all of it on screen, does anything inside scroll, and how large is body text?

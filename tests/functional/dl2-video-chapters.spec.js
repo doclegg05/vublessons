@@ -22,9 +22,9 @@ test('DL2 teaching videos expose ten accurate, keyboard-operated chapters withou
 // (the Mission Control deck has no video slide). The week 1 video transcript is unchanged and still checked.
 test('DL2 lesson and transcript chapters fit enlarged mobile text and retain native video keys',async({page})=>{
  await page.setViewportSize({width:390,height:844});
- for(const [route,week] of [['presentation','week-02'],['video-transcript','week-01']]){
+ for(const [route,week] of [['practice','week-02'],['video-transcript','week-01']]){
   await page.goto(`${base}/weeks/${week}/${route}.html`);
-  if(route==='presentation'){
+  if(route==='practice'){
    await page.getByRole('button',{name:'Show lesson navigation'}).click();
    await page.locator('[data-slide]').filter({hasText:/Watch:/}).click();
   }
@@ -33,7 +33,7 @@ test('DL2 lesson and transcript chapters fit enlarged mobile text and retain nat
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   expect(await page.locator('[data-video-seek]').evaluateAll(buttons=>buttons.every(b=>b.getBoundingClientRect().right<=innerWidth&&b.scrollWidth<=b.clientWidth+1))).toBe(true);
   await page.locator('[data-video-seek]').last().click();
-  const active=route==='presentation'?await page.locator('.slide:not([hidden])').getAttribute('id'):null;
+  const active=route==='practice'?await page.locator('.slide:not([hidden])').getAttribute('id'):null;
   await page.keyboard.press('ArrowLeft');
   if(active)expect(await page.locator('.slide:not([hidden])').getAttribute('id')).toBe(active);
   expect(await page.locator('video').evaluate(v=>v.paused)).toBe(true);
