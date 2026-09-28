@@ -1,0 +1,168 @@
+/* DL2 pre/post-test screen: ported from mockup 3's ".scr.light" ("B · Clean light") as a
+ * real full-page layout — navy top bar, 20-segment progress ticks, a centered white card
+ * with big A–D answer tiles, and a red primary action. Selected/answered/current state is
+ * always shown in words as well as color (never rely on color alone). All tap targets are
+ * at least 44px tall for lab-PC mice and touch. */
+html, body { margin:0; }
+body.dl2-test-page {
+  min-height:100vh;
+  font-family:"Source Sans 3", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color:#0f1c33;
+  background:linear-gradient(180deg,#eef2f9,#e4eaf5);
+}
+[data-dl2-test] { display:block; min-height:100vh; padding-bottom:40px; }
+[data-dl2-test] * { box-sizing:border-box; }
+
+/* "Skip to the test" link: off-screen until it receives keyboard focus. */
+.skip { position:fixed; top:-100px; left:12px; z-index:1000; background:#fff; color:#1b365d; font-weight:700; padding:.6em 1em; border-radius:8px; }
+.skip:focus { top:12px; }
+
+/* Text-size control lives in the fixed top-right corner of the navy header. */
+.test-textsize { position:fixed; top:14px; right:16px; z-index:10; }
+.vub-appbar .vub-textsize { display:flex; gap:8px; }
+.vub-appbar .vub-textsize button {
+  min-width:44px; min-height:44px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.7);
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  font:inherit;
+  font-weight:700;
+  font-size:16px;
+  cursor:pointer;
+}
+.vub-appbar .vub-textsize button:hover { background:rgba(255,255,255,.24); }
+.vub-appbar .vub-textsize button:focus-visible { outline:3px solid #c9a227; outline-offset:2px; }
+/* shared/text-size.js injects a live-status span into this host; it's for assistive tech
+ * only (announcing the current size), so hide it visually like its own floating-button
+ * version does, rather than rendering unstyled dark text over the navy header. */
+.vub-appbar .vub-textsize .status { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+
+/* ---- navy top bar ---- */
+.test-top {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  background:#1b365d;
+  color:#fff;
+  padding:14px 150px 14px 20px;
+  min-height:64px;
+}
+.test-top img { flex:none; width:44px; height:44px; }
+.test-top .ttl { font-weight:700; font-size:22px; line-height:1.3; }
+.test-top .ttl small { display:block; font-weight:400; font-size:16px; opacity:.85; margin-top:2px; }
+.test-top .q-count { margin-left:auto; font-weight:700; font-size:20px; white-space:nowrap; }
+
+/* ---- 20-segment progress ticks ---- */
+.ticks { display:grid; grid-template-columns:repeat(20,1fr); gap:4px; padding:14px 20px 0; max-width:980px; margin:0 auto; }
+.ticks i { display:block; height:8px; border-radius:4px; background:#cfd8e8; }
+.ticks i.a { background:#1b365d; }
+.ticks i.c { background:#c9a227; }
+
+/* ---- the white test card ---- */
+.test-card {
+  max-width:980px;
+  margin:24px auto 0;
+  background:#fff;
+  border:1px solid #d6deec;
+  border-radius:16px;
+  box-shadow:0 20px 50px -22px rgba(15,28,51,.25);
+  padding:40px 48px;
+}
+.test-card h1 { margin:0 0 16px; font-size:32px; line-height:1.25; color:#1b365d; }
+.test-card > p { font-size:19px; line-height:1.6; margin:0 0 14px; }
+.test-card.start, .test-card.result { text-align:center; }
+.test-card.start p, .test-card.result p { text-align:left; }
+.test-card.result { text-align:center; }
+
+/* question text and answer tiles */
+.test-card h1.q { font-size:26px; line-height:1.4; font-weight:700; color:#0f1c33; text-align:left; margin:0 0 28px; }
+.opts { display:flex; flex-direction:column; gap:14px; margin:0 0 32px; }
+.opt {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  width:100%;
+  min-height:64px;
+  padding:14px 22px;
+  border:2px solid #d6deec;
+  border-radius:14px;
+  background:#fafcff;
+  font:inherit;
+  font-size:22px;
+  line-height:1.35;
+  color:#0f1c33;
+  text-align:left;
+  cursor:pointer;
+}
+.opt:hover { border-color:#94a8c8; }
+.opt b { flex:none; width:40px; height:40px; border-radius:10px; background:#e8eef8; color:#1b365d; display:grid; place-items:center; font-weight:700; font-size:20px; }
+.opt > span:not(.pick) { flex:1; }
+.opt .pick { display:none; align-items:center; gap:8px; margin-left:auto; font-weight:700; font-size:18px; color:#1b365d; white-space:nowrap; }
+.opt.sel { border-color:#1b365d; background:#eef3fb; }
+.opt.sel b { background:#1b365d; color:#fff; }
+.opt.sel .pick { display:flex; }
+.opt:focus-visible, .review-row:focus-visible, .test-nav button:focus-visible { outline:3px solid #1b365d; outline-offset:3px; }
+
+/* ---- Back / Next / Submit nav bar ---- */
+.test-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.test-nav button {
+  font:inherit;
+  font-size:20px;
+  font-weight:700;
+  min-height:52px;
+  padding:12px 28px;
+  border-radius:12px;
+  border:2px solid #1b365d;
+  background:#fff;
+  color:#1b365d;
+  cursor:pointer;
+}
+.test-nav button:hover:not(:disabled) { background:#eef3fb; }
+.test-nav button:disabled { opacity:.5; cursor:default; }
+.test-nav button.primary { background:#b31942; border-color:#b31942; color:#fff; }
+.test-nav button.primary:hover:not(:disabled) { background:#98123a; }
+
+/* ---- start screen fields ---- */
+.test-card.start label { display:block; font-weight:700; font-size:20px; margin:20px 0 8px; }
+.test-card.start input#name { font:inherit; font-size:22px; padding:14px 16px; width:100%; max-width:420px; min-height:52px; border:2px solid #94a8c8; border-radius:10px; }
+.test-card.start input#name:focus-visible { outline:3px solid #1b365d; outline-offset:2px; }
+.field-error { color:#a3142f; font-weight:700; font-size:18px; margin:10px 0 0; text-align:left; }
+
+/* ---- review screen ---- */
+.review { display:flex; flex-direction:column; gap:10px; margin:20px 0 28px; }
+.review-row {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  width:100%;
+  min-height:56px;
+  padding:14px 18px;
+  border:2px solid #d6deec;
+  border-radius:12px;
+  background:#fafcff;
+  font:inherit;
+  font-size:18px;
+  color:#0f1c33;
+  text-align:left;
+  cursor:pointer;
+}
+.review-row:hover { border-color:#94a8c8; }
+.review-row b { flex:none; width:32px; height:32px; border-radius:8px; background:#e8eef8; color:#1b365d; display:grid; place-items:center; font-weight:700; }
+.review-row span { flex:1; }
+.review-row em { flex:none; font-style:normal; font-weight:700; color:#1d6b3a; }
+.review-row.skipped { background:#fdf3f5; border-color:#e2a3b1; }
+.review-row.skipped em { color:#a3142f; }
+
+/* ---- submit confirmation dialog ---- */
+dialog.confirm { border:none; border-radius:16px; padding:32px 36px; max-width:520px; box-shadow:0 30px 70px -20px rgba(15,28,51,.5); }
+dialog.confirm::backdrop { background:rgba(15,28,51,.55); }
+dialog.confirm h2 { margin:0 0 12px; font-size:24px; color:#1b365d; }
+dialog.confirm p { margin:0 0 24px; font-size:18px; }
+dialog.confirm .test-nav button { min-width:140px; }
+
+/* ---- results screen ---- */
+.result-score { font-family:"Playfair Display", Georgia, serif; font-weight:800; font-size:40px; color:#1b365d; margin:8px 0; }
+.pdf-status, .copy-status { font-size:18px; color:#2a3752; margin:8px 0; }
+.html-report { margin-top:24px; text-align:left; }
+.html-report .paper-doc { box-shadow:0 10px 30px -14px rgba(15,28,51,.3); }
