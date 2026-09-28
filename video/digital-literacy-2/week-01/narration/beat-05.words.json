@@ -1,32 +1,32 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "658967897395d3c3b0615885fe5170233845294b28bd6f66b5fc4c786c280709",
+  "wavSha256": "e6ebfbb51d4a732de3b74ab0c89697b134c4ace72f014e0ecd95d69a926ec48c",
   "textSha256": "cce2c77114a6c47d36ffb65538d8d856e06708dbd18666365482023d92043c98",
   "matchRatio": 1.0,
   "words": [
     {
       "word": "A",
       "start": 0.0,
-      "end": 0.16
+      "end": 0.18
     },
     {
       "word": "slow",
-      "start": 0.16,
-      "end": 0.42
+      "start": 0.18,
+      "end": 0.4
     },
     {
       "word": "computer",
-      "start": 0.42,
-      "end": 0.84
+      "start": 0.4,
+      "end": 0.76
     },
     {
       "word": "and",
-      "start": 0.84,
-      "end": 1.34
+      "start": 0.76,
+      "end": 1.36
     },
     {
       "word": "a",
-      "start": 1.34,
+      "start": 1.36,
       "end": 1.46
     },
     {
@@ -37,517 +37,517 @@
     {
       "word": "computer",
       "start": 1.66,
-      "end": 2.12
+      "end": 2.1
     },
     {
       "word": "are",
-      "start": 2.12,
-      "end": 2.46
+      "start": 2.1,
+      "end": 2.82
     },
     {
       "word": "not",
-      "start": 2.46,
-      "end": 2.68
+      "start": 2.82,
+      "end": 3.0
     },
     {
       "word": "exactly",
-      "start": 2.68,
-      "end": 3.16
+      "start": 3.0,
+      "end": 3.56
     },
     {
       "word": "the",
-      "start": 3.16,
-      "end": 3.4
+      "start": 3.56,
+      "end": 4.1
     },
     {
       "word": "same",
-      "start": 3.4,
-      "end": 3.62
+      "start": 4.1,
+      "end": 4.38
     },
     {
       "word": "problem.",
-      "start": 3.62,
-      "end": 3.94
+      "start": 4.38,
+      "end": 4.68
     },
     {
       "word": "The",
-      "start": 5.0,
-      "end": 5.08
+      "start": 5.96,
+      "end": 6.24
     },
     {
       "word": "processor",
-      "start": 5.08,
-      "end": 5.46
-    },
-    {
-      "word": "carries",
-      "start": 5.46,
-      "end": 5.94
-    },
-    {
-      "word": "out",
-      "start": 5.94,
-      "end": 6.16
-    },
-    {
-      "word": "instructions.",
-      "start": 6.16,
+      "start": 6.24,
       "end": 6.6
     },
     {
+      "word": "carries",
+      "start": 6.6,
+      "end": 7.02
+    },
+    {
+      "word": "out",
+      "start": 7.02,
+      "end": 7.18
+    },
+    {
+      "word": "instructions.",
+      "start": 7.18,
+      "end": 7.54
+    },
+    {
       "word": "Working",
-      "start": 7.46,
-      "end": 7.72
+      "start": 8.34,
+      "end": 8.56
     },
     {
       "word": "memory",
-      "start": 7.72,
-      "end": 8.0
+      "start": 8.56,
+      "end": 8.86
     },
     {
       "word": "holds",
-      "start": 8.0,
-      "end": 8.4
+      "start": 8.86,
+      "end": 9.26
     },
     {
       "word": "information",
-      "start": 8.4,
-      "end": 8.72
+      "start": 9.26,
+      "end": 9.72
     },
     {
       "word": "in",
-      "start": 8.72,
-      "end": 9.14
+      "start": 9.72,
+      "end": 10.12
     },
     {
       "word": "active",
-      "start": 9.14,
-      "end": 9.46
+      "start": 10.12,
+      "end": 10.4
     },
     {
       "word": "use,",
-      "start": 9.46,
-      "end": 9.84
+      "start": 10.4,
+      "end": 10.68
     },
     {
       "word": "while",
-      "start": 10.32,
-      "end": 10.54
-    },
-    {
-      "word": "storage",
-      "start": 10.54,
-      "end": 10.78
-    },
-    {
-      "word": "keeps",
-      "start": 10.78,
+      "start": 11.1,
       "end": 11.32
     },
     {
-      "word": "saved",
+      "word": "storage",
       "start": 11.32,
       "end": 11.68
     },
     {
-      "word": "files.",
+      "word": "keeps",
       "start": 11.68,
-      "end": 12.0
+      "end": 12.02
+    },
+    {
+      "word": "saved",
+      "start": 12.02,
+      "end": 12.42
+    },
+    {
+      "word": "files.",
+      "start": 12.42,
+      "end": 12.7
     },
     {
       "word": "Think",
-      "start": 13.16,
-      "end": 13.34
+      "start": 13.62,
+      "end": 13.74
     },
     {
       "word": "of",
-      "start": 13.34,
-      "end": 13.48
+      "start": 13.74,
+      "end": 13.9
     },
     {
       "word": "a",
-      "start": 13.48,
-      "end": 13.58
+      "start": 13.9,
+      "end": 13.92
     },
     {
       "word": "workbench",
-      "start": 13.58,
-      "end": 14.02
-    },
-    {
-      "word": "and",
-      "start": 14.02,
-      "end": 14.24
-    },
-    {
-      "word": "a",
-      "start": 14.24,
+      "start": 13.92,
       "end": 14.34
     },
     {
-      "word": "filing",
+      "word": "and",
       "start": 14.34,
-      "end": 14.56
+      "end": 14.62
+    },
+    {
+      "word": "a",
+      "start": 14.62,
+      "end": 14.7
+    },
+    {
+      "word": "filing",
+      "start": 14.7,
+      "end": 14.96
     },
     {
       "word": "cabinet:",
-      "start": 14.56,
-      "end": 14.92
+      "start": 14.96,
+      "end": 15.3
     },
     {
       "word": "a",
-      "start": 15.56,
-      "end": 15.62
+      "start": 16.04,
+      "end": 16.1
     },
     {
       "word": "crowded",
-      "start": 15.62,
-      "end": 15.86
+      "start": 16.1,
+      "end": 16.32
     },
     {
       "word": "workbench",
-      "start": 15.86,
-      "end": 16.48
-    },
-    {
-      "word": "and",
-      "start": 16.48,
-      "end": 16.7
-    },
-    {
-      "word": "a",
-      "start": 16.7,
-      "end": 16.8
-    },
-    {
-      "word": "full",
-      "start": 16.8,
+      "start": 16.32,
       "end": 16.96
     },
     {
-      "word": "cabinet",
+      "word": "and",
       "start": 16.96,
-      "end": 17.28
+      "end": 17.3
+    },
+    {
+      "word": "a",
+      "start": 17.3,
+      "end": 17.42
+    },
+    {
+      "word": "full",
+      "start": 17.42,
+      "end": 17.62
+    },
+    {
+      "word": "cabinet",
+      "start": 17.62,
+      "end": 18.0
     },
     {
       "word": "require",
-      "start": 17.28,
-      "end": 17.7
+      "start": 18.0,
+      "end": 18.54
     },
     {
       "word": "different",
-      "start": 17.7,
-      "end": 18.1
+      "start": 18.54,
+      "end": 19.16
     },
     {
       "word": "responses.",
-      "start": 18.1,
-      "end": 18.86
+      "start": 19.16,
+      "end": 19.8
     },
     {
       "word": "Closing",
-      "start": 20.18,
-      "end": 20.18
+      "start": 20.66,
+      "end": 21.08
     },
     {
       "word": "an",
-      "start": 20.18,
-      "end": 20.32
+      "start": 21.08,
+      "end": 21.26
     },
     {
       "word": "unused",
-      "start": 20.32,
-      "end": 20.62
+      "start": 21.26,
+      "end": 21.56
     },
     {
       "word": "app",
-      "start": 20.62,
-      "end": 20.96
+      "start": 21.56,
+      "end": 21.92
     },
     {
       "word": "may",
-      "start": 20.96,
-      "end": 21.22
+      "start": 21.92,
+      "end": 22.22
     },
     {
       "word": "reduce",
-      "start": 21.22,
-      "end": 21.6
+      "start": 22.22,
+      "end": 22.58
     },
     {
       "word": "active",
-      "start": 21.6,
-      "end": 21.98
+      "start": 22.58,
+      "end": 22.94
     },
     {
       "word": "workload;",
-      "start": 21.98,
-      "end": 22.3
-    },
-    {
-      "word": "it",
-      "start": 23.04,
-      "end": 23.14
-    },
-    {
-      "word": "does",
-      "start": 23.14,
+      "start": 22.94,
       "end": 23.26
     },
     {
+      "word": "it",
+      "start": 24.0,
+      "end": 24.12
+    },
+    {
+      "word": "does",
+      "start": 24.12,
+      "end": 24.2
+    },
+    {
       "word": "not",
-      "start": 23.26,
-      "end": 23.52
+      "start": 24.2,
+      "end": 24.44
     },
     {
       "word": "create",
-      "start": 23.52,
-      "end": 23.9
+      "start": 24.44,
+      "end": 24.84
     },
     {
       "word": "a",
-      "start": 23.9,
-      "end": 24.02
+      "start": 24.84,
+      "end": 25.06
     },
     {
       "word": "reliable",
-      "start": 24.02,
-      "end": 24.42
-    },
-    {
-      "word": "backup",
-      "start": 24.42,
-      "end": 24.74
-    },
-    {
-      "word": "of",
-      "start": 24.74,
-      "end": 25.04
-    },
-    {
-      "word": "your",
-      "start": 25.04,
-      "end": 25.14
-    },
-    {
-      "word": "files.",
-      "start": 25.14,
+      "start": 25.06,
       "end": 25.42
     },
     {
+      "word": "backup",
+      "start": 25.42,
+      "end": 25.86
+    },
+    {
+      "word": "of",
+      "start": 25.86,
+      "end": 26.24
+    },
+    {
+      "word": "your",
+      "start": 26.24,
+      "end": 26.36
+    },
+    {
+      "word": "files.",
+      "start": 26.36,
+      "end": 26.64
+    },
+    {
       "word": "For",
-      "start": 26.74,
-      "end": 26.94
+      "start": 27.5,
+      "end": 28.2
     },
     {
       "word": "connections,",
-      "start": 26.94,
-      "end": 27.22
+      "start": 28.2,
+      "end": 28.48
     },
     {
       "word": "identify",
-      "start": 27.72,
-      "end": 27.92
+      "start": 29.02,
+      "end": 29.36
     },
     {
       "word": "the",
-      "start": 27.92,
-      "end": 28.34
+      "start": 29.36,
+      "end": 29.8
     },
     {
       "word": "job",
-      "start": 28.34,
-      "end": 28.56
+      "start": 29.8,
+      "end": 30.02
     },
     {
       "word": "before",
-      "start": 28.56,
-      "end": 28.88
+      "start": 30.02,
+      "end": 30.42
     },
     {
       "word": "choosing",
-      "start": 28.88,
-      "end": 29.38
+      "start": 30.42,
+      "end": 30.98
     },
     {
       "word": "the",
-      "start": 29.38,
-      "end": 29.52
+      "start": 30.98,
+      "end": 31.12
     },
     {
       "word": "cable.",
-      "start": 29.52,
-      "end": 29.78
+      "start": 31.12,
+      "end": 31.34
     },
     {
       "word": "A",
-      "start": 30.68,
-      "end": 30.7
+      "start": 32.22,
+      "end": 32.22
     },
     {
       "word": "display",
-      "start": 30.7,
-      "end": 31.0
+      "start": 32.22,
+      "end": 32.5
     },
     {
       "word": "connection",
-      "start": 31.0,
-      "end": 31.3
+      "start": 32.5,
+      "end": 32.8
     },
     {
       "word": "carries",
-      "start": 31.3,
-      "end": 31.88
+      "start": 32.8,
+      "end": 33.36
     },
     {
       "word": "a",
-      "start": 31.88,
-      "end": 32.02
+      "start": 33.36,
+      "end": 33.52
     },
     {
       "word": "picture,",
-      "start": 32.02,
-      "end": 32.3
+      "start": 33.52,
+      "end": 33.78
     },
     {
       "word": "a",
-      "start": 33.04,
-      "end": 33.04
+      "start": 34.56,
+      "end": 34.58
     },
     {
       "word": "network",
-      "start": 33.04,
-      "end": 33.3
+      "start": 34.58,
+      "end": 34.82
     },
     {
       "word": "connection",
-      "start": 33.3,
-      "end": 33.66
+      "start": 34.82,
+      "end": 35.16
     },
     {
       "word": "carries",
-      "start": 33.66,
-      "end": 34.28
+      "start": 35.16,
+      "end": 35.78
     },
     {
       "word": "data,",
-      "start": 34.28,
-      "end": 34.52
+      "start": 35.78,
+      "end": 36.0
     },
     {
       "word": "and",
-      "start": 35.28,
-      "end": 35.34
+      "start": 36.74,
+      "end": 36.74
     },
     {
       "word": "a",
-      "start": 35.34,
-      "end": 35.44
+      "start": 36.74,
+      "end": 36.86
     },
     {
       "word": "USB",
-      "start": 35.44,
-      "end": 35.72
+      "start": 36.86,
+      "end": 37.14
     },
     {
       "word": "connection",
-      "start": 35.72,
-      "end": 36.2
+      "start": 37.14,
+      "end": 37.58
     },
     {
       "word": "may",
-      "start": 36.2,
-      "end": 36.7
+      "start": 37.58,
+      "end": 38.1
     },
     {
       "word": "carry",
-      "start": 36.7,
-      "end": 37.0
+      "start": 38.1,
+      "end": 38.36
     },
     {
       "word": "data",
-      "start": 37.0,
-      "end": 37.34
+      "start": 38.36,
+      "end": 38.74
     },
     {
       "word": "or",
-      "start": 37.34,
-      "end": 37.64
+      "start": 38.74,
+      "end": 39.06
     },
     {
       "word": "power",
-      "start": 37.64,
-      "end": 37.9
+      "start": 39.06,
+      "end": 39.48
     },
     {
       "word": "depending",
-      "start": 37.9,
-      "end": 38.24
+      "start": 39.48,
+      "end": 39.88
     },
     {
       "word": "on",
-      "start": 38.24,
-      "end": 38.66
-    },
-    {
-      "word": "the",
-      "start": 38.66,
-      "end": 38.76
-    },
-    {
-      "word": "equipment.",
-      "start": 38.76,
-      "end": 39.08
-    },
-    {
-      "word": "Match",
-      "start": 40.32,
+      "start": 39.88,
       "end": 40.32
     },
     {
       "word": "the",
       "start": 40.32,
-      "end": 40.54
+      "end": 40.42
+    },
+    {
+      "word": "equipment.",
+      "start": 40.42,
+      "end": 40.72
+    },
+    {
+      "word": "Match",
+      "start": 42.04,
+      "end": 42.04
+    },
+    {
+      "word": "the",
+      "start": 42.04,
+      "end": 42.24
     },
     {
       "word": "labels",
-      "start": 40.54,
-      "end": 40.82
+      "start": 42.24,
+      "end": 42.5
     },
     {
       "word": "and",
-      "start": 40.82,
-      "end": 41.16
+      "start": 42.5,
+      "end": 42.98
     },
     {
       "word": "ask",
-      "start": 41.16,
-      "end": 41.5
+      "start": 42.98,
+      "end": 43.34
     },
     {
       "word": "before",
-      "start": 41.5,
-      "end": 41.82
+      "start": 43.34,
+      "end": 43.7
     },
     {
       "word": "forcing",
-      "start": 41.82,
-      "end": 42.46
+      "start": 43.7,
+      "end": 44.36
     },
     {
       "word": "an",
-      "start": 42.46,
-      "end": 42.62
+      "start": 44.36,
+      "end": 44.5
     },
     {
       "word": "unfamiliar",
-      "start": 42.62,
-      "end": 42.96
+      "start": 44.5,
+      "end": 44.9
     },
     {
       "word": "connector.",
-      "start": 42.96,
-      "end": 43.52
+      "start": 44.9,
+      "end": 45.42
     }
   ]
 }

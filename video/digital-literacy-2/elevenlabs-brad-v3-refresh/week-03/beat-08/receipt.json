@@ -1,0 +1,19 @@
+{
+  "provider": "ElevenLabs MCP",
+  "model": "eleven_v3",
+  "voice": "Dslrhjl3ZpzrctukrQSN",
+  "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
+  "speed": 0.95,
+  "stability": 0.5,
+  "similarityBoost": 0.8,
+  "style": 0,
+  "useSpeakerBoost": false,
+  "language": "en",
+  "outputFormat": "mp3_44100_128",
+  "cleanup": "ElevenLabs Voice Isolator",
+  "originalSha256": "f77c5d1d6b75f034df976802f5891ffa1b526717bf79cdca272031f07ff66dbe",
+  "textSha256": "d9f768e03e9a5971db33158696310d2df3b973bf46cffe8c9ca444fc9a25545d",
+  "promptSha256": "28e3119523b91cb722ee8ee61e3a66a1072198f217ce0e81b39da023c3e7af02",
+  "sourceSha256": "7df2f0a6aea6c6399b6485d186afe43fe451565203ddcdeb40f2ce150e029950",
+  "sourceFile": "isolated.mp3"
+}

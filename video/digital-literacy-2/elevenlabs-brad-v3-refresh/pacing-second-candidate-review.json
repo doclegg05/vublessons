@@ -1,0 +1,27 @@
+[
+  {
+    "week": "week-01",
+    "chapter": "beat-03",
+    "sha256": "7d7cddd9bd6bd334d6229be4adc254c495d790e9bfd4d9f58f7d7fc55a132faf",
+    "durationSeconds": 45.2789375,
+    "wordsPerMinute": 141.78777936209303,
+    "matchRatio": 0.9813084112149533,
+    "differences": [
+      {
+        "expected": "Page zoom",
+        "recognized": "PageZoom"
+      }
+    ],
+    "recognized": "Now, suppose the browser tabs and the rest of the desktop are also hard to see. PageZoom will not solve every part of that problem. System text size changes text in supported areas. Display scaling changes the size of text, apps, and other interface elements more broadly. The exact controls depend on your computer. Ask the instructor before changing a shared workstation's system settings. This is like choosing between a magnifying glass for one page and a more comfortable arrangement for the whole desk. Which would you try first if only one website is too small? Browser zoom, because it matches the scope of the problem."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-04",
+    "sha256": "218c0afbbd4a21931b8c98d32dbf6beee0266a93823902499cf3dd8bf8f25524",
+    "durationSeconds": 43.51425,
+    "wordsPerMinute": 150.29559282304075,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Picture a radio connected to headphones. Turning up the radio does not make the room speaker play if the sound is still going to the headphones. A computer can work the same way. First, check whether the sound is muted. Then, inspect the selected output device, speakers, a monitor, or a headset. Choose the device you intend to hear, begin at a comfortable volume, and play a short test. If that test works but a meeting does not, check the meeting app's own audio choice next. Change one setting at a time. This gives you evidence about what fixed the problem instead of leaving you with several unexplained changes."
+  }
+]

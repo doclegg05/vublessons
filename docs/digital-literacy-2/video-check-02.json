@@ -22,17 +22,17 @@
     "warningCount": 0,
     "infoCount": 0,
     "findings": [],
-    "duration": 431.619,
+    "duration": 442.996,
     "samples": [
-      23.979,
-      71.937,
-      119.894,
-      167.852,
-      215.81,
-      263.767,
-      311.725,
-      359.683,
-      407.64
+      24.611,
+      73.833,
+      123.054,
+      172.276,
+      221.498,
+      270.72,
+      319.942,
+      369.163,
+      418.385
     ],
     "transitionSamples": [],
     "transitionSamplesDropped": 0,
@@ -57,11 +57,11 @@
     "findings": [],
     "enabled": true,
     "samples": [
-      23.979,
-      119.894,
-      215.81,
-      311.725,
-      407.64
+      24.611,
+      123.054,
+      221.498,
+      319.942,
+      418.385
     ],
     "checked": 56,
     "passed": 56
@@ -77,8 +77,8 @@
     "findingFiles": []
   },
   "_meta": {
-    "version": "0.8.58",
-    "latestVersion": "0.8.65",
-    "updateAvailable": true
+    "version": "0.8.82",
+    "latestVersion": "0.8.82",
+    "updateAvailable": false
   }
 }

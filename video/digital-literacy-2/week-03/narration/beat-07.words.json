@@ -1,17 +1,17 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "344c840b766b056ae03247fe141ade12496557424f284c6a78e6e57cc924c3e6",
+  "wavSha256": "ce794a0b31f47316fd5820190c847025f8f546316f7119889d000ed80e6194ad",
   "textSha256": "c5a96cf5fa441e947ea90e2ecb35753d78521d294c1ad2ea79da0703146113aa",
-  "matchRatio": 0.9904761904761905,
+  "matchRatio": 0.9809523809523809,
   "words": [
     {
       "word": "For",
       "start": 0.0,
-      "end": 0.16
+      "end": 0.18
     },
     {
       "word": "a",
-      "start": 0.16,
+      "start": 0.18,
       "end": 0.3
     },
     {
@@ -22,512 +22,512 @@
     {
       "word": "presentation,",
       "start": 0.96,
-      "end": 1.38
+      "end": 1.32
     },
     {
       "word": "use",
-      "start": 1.94,
-      "end": 2.04
+      "start": 2.3,
+      "end": 2.4
     },
     {
       "word": "the",
-      "start": 2.04,
-      "end": 2.26
+      "start": 2.4,
+      "end": 2.6
     },
     {
       "word": "first",
-      "start": 2.26,
-      "end": 2.5
+      "start": 2.6,
+      "end": 2.82
     },
     {
       "word": "slide",
-      "start": 2.5,
-      "end": 2.84
+      "start": 2.82,
+      "end": 3.14
     },
     {
       "word": "to",
-      "start": 2.84,
-      "end": 3.1
+      "start": 3.14,
+      "end": 3.34
     },
     {
       "word": "name",
-      "start": 3.1,
-      "end": 3.32
+      "start": 3.34,
+      "end": 3.56
     },
     {
       "word": "the",
-      "start": 3.32,
-      "end": 3.54
+      "start": 3.56,
+      "end": 3.74
     },
     {
       "word": "useful",
-      "start": 3.54,
-      "end": 3.76
+      "start": 3.74,
+      "end": 3.94
     },
     {
       "word": "task,",
-      "start": 3.76,
-      "end": 4.18
+      "start": 3.94,
+      "end": 4.32
     },
     {
       "word": "the",
-      "start": 4.88,
-      "end": 4.94
+      "start": 5.08,
+      "end": 5.18
     },
     {
       "word": "second",
-      "start": 4.94,
-      "end": 5.3
+      "start": 5.18,
+      "end": 5.58
     },
     {
       "word": "to",
-      "start": 5.3,
-      "end": 5.56
+      "start": 5.58,
+      "end": 5.8
     },
     {
       "word": "demonstrate",
-      "start": 5.56,
-      "end": 5.86
+      "start": 5.8,
+      "end": 6.16
     },
     {
       "word": "the",
-      "start": 5.86,
-      "end": 6.2
+      "start": 6.16,
+      "end": 6.5
     },
     {
       "word": "key",
-      "start": 6.2,
-      "end": 6.36
-    },
-    {
-      "word": "steps,",
-      "start": 6.36,
+      "start": 6.5,
       "end": 6.68
     },
     {
+      "word": "steps,",
+      "start": 6.68,
+      "end": 6.98
+    },
+    {
       "word": "and",
-      "start": 7.26,
-      "end": 7.44
+      "start": 7.72,
+      "end": 7.84
     },
     {
       "word": "the",
-      "start": 7.44,
-      "end": 7.56
+      "start": 7.84,
+      "end": 7.94
     },
     {
       "word": "third",
-      "start": 7.56,
-      "end": 7.86
+      "start": 7.94,
+      "end": 8.22
     },
     {
       "word": "to",
-      "start": 7.86,
-      "end": 8.36
+      "start": 8.22,
+      "end": 8.6
     },
     {
       "word": "show",
-      "start": 8.36,
-      "end": 8.54
+      "start": 8.6,
+      "end": 8.78
     },
     {
       "word": "the",
-      "start": 8.54,
-      "end": 8.7
+      "start": 8.78,
+      "end": 8.96
     },
     {
       "word": "next",
-      "start": 8.7,
-      "end": 8.92
+      "start": 8.96,
+      "end": 9.16
     },
     {
       "word": "action.",
-      "start": 8.92,
-      "end": 9.36
+      "start": 9.16,
+      "end": 9.58
     },
     {
       "word": "Prefer",
-      "start": 10.1,
-      "end": 10.44
-    },
-    {
-      "word": "a",
-      "start": 10.44,
-      "end": 10.66
-    },
-    {
-      "word": "relevant",
-      "start": 10.66,
+      "start": 10.64,
       "end": 10.96
     },
     {
-      "word": "picture",
+      "word": "a",
       "start": 10.96,
-      "end": 11.48
+      "end": 11.1
+    },
+    {
+      "word": "relevant",
+      "start": 11.1,
+      "end": 11.38
+    },
+    {
+      "word": "picture",
+      "start": 11.38,
+      "end": 11.84
     },
     {
       "word": "or",
-      "start": 11.48,
-      "end": 11.74
+      "start": 11.84,
+      "end": 12.12
     },
     {
       "word": "diagram",
-      "start": 11.74,
-      "end": 12.16
+      "start": 12.12,
+      "end": 12.58
     },
     {
       "word": "to",
-      "start": 12.16,
-      "end": 12.6
+      "start": 12.58,
+      "end": 12.92
     },
     {
       "word": "a",
-      "start": 12.6,
-      "end": 12.72
+      "start": 12.92,
+      "end": 13.04
     },
     {
       "word": "paragraph",
-      "start": 12.72,
-      "end": 13.02
+      "start": 13.04,
+      "end": 13.4
     },
     {
       "word": "copied",
-      "start": 13.02,
-      "end": 13.46
+      "start": 13.4,
+      "end": 13.86
     },
     {
       "word": "from",
-      "start": 13.46,
-      "end": 13.78
+      "start": 13.86,
+      "end": 14.22
     },
     {
       "word": "the",
-      "start": 13.78,
-      "end": 13.92
+      "start": 14.22,
+      "end": 14.34
     },
     {
       "word": "handout.",
-      "start": 13.92,
-      "end": 14.32
+      "start": 14.34,
+      "end": 14.74
     },
     {
       "word": "Keep",
-      "start": 15.14,
-      "end": 15.38
+      "start": 15.72,
+      "end": 15.84
     },
     {
       "word": "text",
-      "start": 15.38,
-      "end": 15.74
+      "start": 15.84,
+      "end": 16.08
     },
     {
       "word": "large",
-      "start": 15.74,
-      "end": 16.28
+      "start": 16.08,
+      "end": 16.52
     },
     {
       "word": "and",
-      "start": 16.28,
-      "end": 16.8
+      "start": 16.52,
+      "end": 16.94
     },
     {
       "word": "explain",
-      "start": 16.8,
-      "end": 17.12
+      "start": 16.94,
+      "end": 17.24
     },
     {
       "word": "unfamiliar",
-      "start": 17.12,
-      "end": 17.72
+      "start": 17.24,
+      "end": 17.86
     },
     {
       "word": "terms",
-      "start": 17.72,
-      "end": 18.3
+      "start": 17.86,
+      "end": 18.52
     },
     {
       "word": "aloud.",
-      "start": 18.3,
-      "end": 18.6
+      "start": 18.52,
+      "end": 20.2
     },
     {
       "word": "Cropping",
-      "start": 19.56,
-      "end": 19.92
+      "start": 20.2,
+      "end": 20.54
     },
     {
       "word": "removes",
-      "start": 19.92,
-      "end": 20.24
+      "start": 20.54,
+      "end": 20.8
     },
     {
       "word": "outer",
-      "start": 20.24,
-      "end": 20.66
+      "start": 20.8,
+      "end": 21.24
     },
     {
       "word": "parts",
-      "start": 20.66,
-      "end": 21.04
-    },
-    {
-      "word": "of",
-      "start": 21.04,
-      "end": 21.26
-    },
-    {
-      "word": "an",
-      "start": 21.26,
-      "end": 21.36
-    },
-    {
-      "word": "image",
-      "start": 21.36,
+      "start": 21.24,
       "end": 21.6
     },
     {
-      "word": "from",
+      "word": "of",
       "start": 21.6,
+      "end": 21.82
+    },
+    {
+      "word": "an",
+      "start": 21.82,
       "end": 21.88
     },
     {
-      "word": "the",
+      "word": "image",
       "start": 21.88,
-      "end": 22.04
+      "end": 22.1
+    },
+    {
+      "word": "from",
+      "start": 22.1,
+      "end": 22.36
+    },
+    {
+      "word": "the",
+      "start": 22.36,
+      "end": 22.5
     },
     {
       "word": "view;",
-      "start": 22.04,
-      "end": 22.22
+      "start": 22.5,
+      "end": 22.66
     },
     {
       "word": "resizing",
-      "start": 22.98,
-      "end": 23.24
+      "start": 23.68,
+      "end": 23.96
     },
     {
       "word": "changes",
-      "start": 23.24,
-      "end": 23.88
+      "start": 23.96,
+      "end": 24.54
     },
     {
       "word": "its",
-      "start": 23.88,
-      "end": 24.16
+      "start": 24.54,
+      "end": 24.76
     },
     {
       "word": "displayed",
-      "start": 24.16,
-      "end": 24.58
+      "start": 24.76,
+      "end": 25.14
     },
     {
       "word": "dimensions.",
-      "start": 24.58,
-      "end": 24.96
+      "start": 25.14,
+      "end": 25.52
     },
     {
       "word": "Those",
-      "start": 26.16,
-      "end": 26.26
+      "start": 26.94,
+      "end": 27.02
     },
     {
       "word": "actions",
-      "start": 26.26,
-      "end": 26.68
+      "start": 27.02,
+      "end": 27.4
     },
     {
       "word": "solve",
-      "start": 26.68,
-      "end": 27.22
+      "start": 27.4,
+      "end": 27.76
     },
     {
       "word": "different",
-      "start": 27.22,
-      "end": 27.62
+      "start": 27.76,
+      "end": 28.14
     },
     {
       "word": "problems.",
-      "start": 27.62,
-      "end": 27.96
+      "start": 28.48,
+      "end": 28.68
     },
     {
       "word": "Preserve",
-      "start": 28.86,
-      "end": 29.34
+      "start": 29.52,
+      "end": 29.94
     },
     {
       "word": "the",
-      "start": 29.34,
-      "end": 29.56
+      "start": 29.94,
+      "end": 30.12
     },
     {
       "word": "original",
-      "start": 29.56,
-      "end": 29.74
+      "start": 30.12,
+      "end": 30.3
     },
     {
       "word": "file",
-      "start": 29.74,
-      "end": 30.24
+      "start": 30.3,
+      "end": 30.8
     },
     {
       "word": "before",
-      "start": 30.24,
-      "end": 30.52
+      "start": 30.8,
+      "end": 31.14
     },
     {
       "word": "experimenting,",
-      "start": 30.52,
-      "end": 31.26
+      "start": 31.14,
+      "end": 31.88
     },
     {
       "word": "and",
-      "start": 31.26,
-      "end": 31.7
+      "start": 32.66,
+      "end": 32.72
     },
     {
       "word": "check",
-      "start": 31.7,
-      "end": 31.94
+      "start": 32.72,
+      "end": 32.94
     },
     {
       "word": "that",
-      "start": 31.94,
-      "end": 32.22
+      "start": 32.94,
+      "end": 33.14
     },
     {
       "word": "a",
-      "start": 32.22,
-      "end": 32.28
+      "start": 33.14,
+      "end": 33.2
     },
     {
       "word": "crop",
-      "start": 32.28,
-      "end": 32.54
+      "start": 33.2,
+      "end": 33.46
     },
     {
       "word": "has",
-      "start": 32.54,
-      "end": 32.84
+      "start": 33.46,
+      "end": 33.7
     },
     {
       "word": "not",
-      "start": 32.84,
-      "end": 33.08
+      "start": 33.7,
+      "end": 33.88
     },
     {
       "word": "removed",
-      "start": 33.08,
-      "end": 33.4
+      "start": 33.88,
+      "end": 34.18
     },
     {
       "word": "information",
-      "start": 33.4,
-      "end": 34.02
+      "start": 34.18,
+      "end": 34.88
     },
     {
       "word": "the",
-      "start": 34.02,
-      "end": 34.26
+      "start": 34.88,
+      "end": 35.08
     },
     {
       "word": "viewer",
-      "start": 34.26,
-      "end": 34.42
+      "start": 35.08,
+      "end": 35.22
     },
     {
       "word": "needs.",
-      "start": 34.42,
-      "end": 34.74
+      "start": 35.22,
+      "end": 35.58
     },
     {
       "word": "If",
-      "start": 35.66,
-      "end": 35.8
-    },
-    {
-      "word": "an",
-      "start": 35.8,
-      "end": 35.92
-    },
-    {
-      "word": "image",
-      "start": 35.92,
-      "end": 36.16
-    },
-    {
-      "word": "carries",
-      "start": 36.16,
-      "end": 36.58
-    },
-    {
-      "word": "meaning,",
-      "start": 36.58,
+      "start": 36.78,
       "end": 36.94
     },
     {
-      "word": "provide",
+      "word": "an",
+      "start": 36.94,
+      "end": 37.04
+    },
+    {
+      "word": "image",
+      "start": 37.04,
+      "end": 37.26
+    },
+    {
+      "word": "carries",
       "start": 37.26,
-      "end": 37.56
+      "end": 37.64
+    },
+    {
+      "word": "meaning,",
+      "start": 37.64,
+      "end": 37.98
+    },
+    {
+      "word": "provide",
+      "start": 38.64,
+      "end": 38.94
     },
     {
       "word": "an",
-      "start": 37.56,
-      "end": 37.88
+      "start": 38.94,
+      "end": 39.18
     },
     {
       "word": "equivalent",
-      "start": 37.88,
-      "end": 38.22
+      "start": 39.18,
+      "end": 39.54
     },
     {
       "word": "explanation",
-      "start": 38.38,
-      "end": 39.06
+      "start": 39.54,
+      "end": 40.22
     },
     {
       "word": "or",
-      "start": 39.06,
-      "end": 39.5
+      "start": 40.22,
+      "end": 40.76
     },
     {
       "word": "alternative",
-      "start": 39.5,
-      "end": 40.06
+      "start": 40.76,
+      "end": 41.06
     },
     {
       "word": "text",
-      "start": 40.06,
-      "end": 40.48
+      "start": 41.06,
+      "end": 41.52
     },
     {
       "word": "in",
-      "start": 40.48,
-      "end": 40.9
+      "start": 41.52,
+      "end": 41.86
     },
     {
       "word": "the",
-      "start": 40.9,
-      "end": 41.0
+      "start": 41.86,
+      "end": 41.94
     },
     {
       "word": "format",
-      "start": 41.0,
-      "end": 41.26
+      "start": 41.94,
+      "end": 42.3
     },
     {
       "word": "you",
-      "start": 41.26,
-      "end": 41.5
+      "start": 42.3,
+      "end": 42.52
     },
     {
       "word": "are",
-      "start": 41.5,
-      "end": 41.62
+      "start": 42.52,
+      "end": 42.66
     },
     {
       "word": "using.",
-      "start": 41.62,
-      "end": 41.86
+      "start": 42.66,
+      "end": 42.96
     }
   ]
 }
