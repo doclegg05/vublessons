@@ -14,10 +14,10 @@ const contrast=(a,b)=>{const lum=c=>{const [r,g,bl]=c.match(/[\d.]+/g).slice(0,3
 //  - 'Graded results show the learner name typed without opening a disclosure, and the date graded' (old results report)
 //  - 'Pressing Enter after typing a name moves on to the first question instead of grading' (old name field)
 //  - 'Pressing Enter in the name field keeps the review-all view' (old review-all view)
-//  - 'Arrow keys still change slides after clicking a button inside a slide' (old week 1 slide 21)
-//  - 'Page Up and Page Down inside the practice calendar do not change slides' (old week 1 slide 15)
-//  - 'Previous and Next stay on screen on a tall slide' (old week 1 slide 7)
-//  - 'Flip-card text stays readable while the pointer is over it' (old week 1 slide 10)
+// Restored 2026-09-28 (final review), retargeted to the weeks 2-6 decks that still use the shared assets/lesson.js
+// engine and components: 'Arrow keys still change slides after clicking a button inside a slide', 'Page Up and Page
+// Down inside a focused lesson widget do not change slides' (was the old week 1 practice calendar), 'Previous and Next
+// stay on screen on a tall slide' and 'Flip-card text stays readable while the pointer is over it'.
 //  - 'Assessment topic labels fit their tabs on a tablet-width screen' (old topic tabs)
 
 test.describe('shared lab computers',()=>{
@@ -46,6 +46,27 @@ test.describe('shared lab computers',()=>{
 test.describe('presenting a deck',()=>{
  test.use({viewport:{width:1366,height:768}});
 
+ test('Arrow keys still change slides after clicking a button inside a slide',async({page})=>{
+  await page.goto(deck(2)+'#slide-19');await page.locator('#slide-19 .check-options button').first().click();
+  await page.keyboard.press('ArrowRight');await expect(page.locator('#slide-20')).toBeVisible();
+ });
+
+ // The old week 1 practice calendar was a focusable (tabindex="0") scroller. The same lesson.js guard covers the
+ // lesson video (tabindex="0") on week 2 and the change-request text box in week 6's prompt workshop.
+ test('Page Up and Page Down inside a focused lesson widget do not change slides',async({page})=>{
+  await page.goto(deck(2)+'#slide-14');const video=page.locator('#slide-14 video');await video.focus();await expect(video).toBeFocused();
+  for(const key of ['PageDown','PageUp']){await page.keyboard.press(key);await expect(page.locator('#slide-counter')).toHaveText(/^Slide 14 of \d+$/);}
+  await page.goto(deck(6)+'#slide-7');const box=page.locator('#slide-7 [data-prompt-task]');await box.focus();
+  for(const key of ['PageDown','PageUp']){await page.keyboard.press(key);await expect(page.locator('#slide-counter')).toHaveText(/^Slide 7 of \d+$/);}
+ });
+
+ test('Previous and Next stay on screen on a tall slide',async({page})=>{
+  await page.goto(deck(2));await page.locator('[data-slide="4"]').click();await expect(page.locator('#slide-5')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollHeight),'slide 5 is taller than the screen').toBeGreaterThan(768);
+  const box=await page.locator('#next').boundingBox();expect(box.y+box.height).toBeLessThanOrEqual(768);expect(box.y).toBeGreaterThanOrEqual(0);
+  const prev=await page.locator('#previous').boundingBox();expect(prev.y+prev.height).toBeLessThanOrEqual(768);expect(prev.y).toBeGreaterThanOrEqual(0);
+ });
+
  test('Opening a deck without a slide address does not jump down the page',async({page})=>{
   await page.goto(deck(3));await page.waitForTimeout(900);
   expect(await page.evaluate(()=>scrollY)).toBe(0);
@@ -55,6 +76,12 @@ test.describe('presenting a deck',()=>{
 test.describe('contrast on the projector',()=>{
  test.use({viewport:{width:1366,height:768}});
  test.beforeEach(async({page})=>page.emulateMedia({reducedMotion:'reduce'}));
+
+ test('Flip-card text stays readable while the pointer is over it',async({page})=>{
+  await page.goto(deck(2)+'#slide-6');const card=page.locator('#slide-6 .flip').first();await card.hover();
+  const [fg,bg]=await card.locator('.flip-front').evaluate(el=>[getComputedStyle(el).color,getComputedStyle(el).backgroundColor]);
+  expect(contrast(fg,bg)).toBeGreaterThanOrEqual(4.5);
+ });
 
  test('A selected phishing clue stays readable',async({page})=>{
   await page.goto(deck(5)+'#slide-1');const clue=page.locator('#slide-1 .message-preview button').first();await clue.click();await page.mouse.move(0,0);

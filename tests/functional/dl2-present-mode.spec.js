@@ -49,9 +49,31 @@ for(const [w,h] of screens)test(`Present mode fits every slide at ${w}×${h}`,as
  expect(misfits,misfits.join('\n')).toEqual([]);
 });
 
-// Retired 2026-09-28 (Mission Control, Task 11): 'Present mode turns on with P or the Present button and off with
-// Escape or P' and 'Interactions still work in present mode'. Both drove the replaced week 1 deck (its Present button,
-// sidebar and slide 21 check). The Mission Control deck has no present mode; see dl2-os-deck.spec.js.
+// Restored 2026-09-28 (final review): these two ran on the replaced week 1 deck and were retired in Task 11. Present
+// mode lives in the shared assets/lesson.js engine that weeks 2-6 still use, so they now run on week 2.
+test('Present mode turns on with P or the Present button and off with Escape or P',async({page})=>{
+ await page.setViewportSize({width:1366,height:768});await page.goto(deck(2));
+ const body=page.locator('body');
+ await expect(body).not.toHaveClass(/presenting/);await expect(page.locator('.sidebar')).toBeVisible();
+ await page.getByRole('button',{name:/Present/}).click();await expect(body).toHaveClass(/presenting/);
+ await expect(page.locator('.sidebar')).toBeHidden();await expect(page.locator('.topbar')).toBeHidden();
+ // Slide 3 fits in one part, so the next key moves straight to slide 4.
+ await page.locator('[data-slide="2"]').evaluate(b=>b.click());await page.keyboard.press('ArrowRight');await expect(page.locator('#slide-4')).toBeVisible();
+ await page.keyboard.press('Escape');await expect(body).not.toHaveClass(/presenting/);await expect(page.locator('.sidebar')).toBeVisible();
+ await expect.poll(()=>page.evaluate(()=>!!document.fullscreenElement)).toBe(false);
+ // Let the switch to full screen finish before the second press, as a person would.
+ const settled=()=>page.waitForFunction(()=>!!document.fullscreenElement,null,{timeout:2000}).catch(()=>{})
+  .then(()=>page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))));
+ await page.keyboard.press('p');await expect(body).toHaveClass(/presenting/);await settled();
+ await page.keyboard.press('p');await expect(body).not.toHaveClass(/presenting/);
+ await expect.poll(()=>page.evaluate(()=>!!document.fullscreenElement)).toBe(false);
+});
+
+test('Interactions still work in present mode',async({page})=>{
+ await page.setViewportSize({width:1366,height:768});await page.goto(deck(2)+'#slide-19');await page.keyboard.press('p');
+ await page.locator('#slide-19 .check-options button').nth(2).click();
+ await expect(page.locator('#slide-19 .feedback')).toContainText('Correct');
+});
 
 test('Leaving present mode puts every slide back exactly as it was',async({page})=>{
  await page.setViewportSize({width:1366,height:768});await page.goto(deck(3));

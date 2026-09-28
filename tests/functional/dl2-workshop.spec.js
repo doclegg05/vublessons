@@ -1,10 +1,37 @@
 const {test,expect}=require('@playwright/test');
 const base='/courses/digital-literacy-2';
 const open=async(page,w,s)=>{await page.goto(`${base}/weeks/week-${String(w).padStart(2,'0')}/presentation.html#slide-${s}`);return page.locator('.slide:not([hidden]) [data-workshop]').first();};
-// Retired 2026-09-28 (Mission Control, Task 11), both driving workshops on the replaced week 1 deck:
-// 'DL2 workstation models change only the intended view and support keyboard activation' (old slides 5 and 7) and
-// 'DL2 calendar preserves events across distinct views and limits shared details' (old slides 14 and 15). The new
-// deck teaches these with Windows 11 demos (tests/functional/dl2-os-week1-demos.spec.js).
+// Restored 2026-09-28 (final review). These two drove workshops on the replaced week 1 deck (display zoom, sound output,
+// calendar views, shared-calendar privacy), which no live week has now. The shared assets/workshop.js behaviors they
+// checked are still used on weeks 3-5, so they are retargeted there: keyboard-activated choice buttons that change only
+// their own view and show the pressed state, toggle buttons that say their state in words, view switches that keep the
+// content, and a protection choice that hides details.
+test('DL2 workstation models change only the intended view and support keyboard activation',async({page})=>{
+ const doc=await open(page,3,3);const page3=doc.locator('[data-document]');const outline=page.locator('#slide-3 .authored-window');
+ const outlineBefore=await outline.innerHTML();
+ const structured=doc.getByRole('button',{name:'Heading + steps',exact:true});
+ await expect(doc.getByRole('button',{name:'Plain paragraphs',exact:true})).toHaveAttribute('aria-pressed','true');await expect(page3).not.toHaveClass(/structured/);
+ await structured.focus();await page.keyboard.press('Enter');
+ await expect(page3).toHaveClass(/structured/);await expect(structured).toHaveAttribute('aria-pressed','true');await expect(doc.getByRole('button',{name:'Plain paragraphs',exact:true})).toHaveAttribute('aria-pressed','false');
+ await expect(structured).toHaveCSS('background-color','rgb(27, 54, 93)');await expect(structured).toHaveCSS('color','rgb(255, 255, 255)');
+ expect(await outline.innerHTML(),'the rest of the slide is unchanged').toBe(outlineBefore);
+ const meeting=await open(page,4,14);const mic=meeting.getByRole('button',{name:'Unmute microphone',exact:true});
+ await mic.click();await expect(meeting.getByRole('button',{name:'Mute microphone',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expect(meeting.locator('[data-mic-state]')).toHaveText('Microphone on (model)');await expect(meeting.locator('[role=status]')).toContainText('microphone is on');
+ await meeting.getByRole('button',{name:'Mute microphone',exact:true}).click();await expect(meeting.locator('[data-mic-state]')).toHaveText('Microphone muted');await expect(meeting.locator('[role=status]')).toContainText('is muted');
+ await meeting.getByRole('button',{name:'Raise hand',exact:true}).click();await expect(meeting.getByRole('button',{name:'Lower hand',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expect(meeting.locator('[data-mic-state]'),'raising a hand leaves the microphone alone').toHaveText('Microphone muted');
+});
+test('DL2 workshop views keep their content across switches and a protection choice limits shared details',async({page})=>{
+ const exp=await open(page,3,17);await expect(exp.getByRole('button',{name:'Editable document',exact:true})).toHaveAttribute('aria-pressed','true');
+ await exp.getByRole('button',{name:'PDF',exact:true}).click();await expect(exp.locator('[data-extension]')).toHaveText('PDF');
+ await exp.getByRole('button',{name:'CSV',exact:true}).click();await expect(exp.locator('[data-extension]')).toHaveText('CSV');await expect(exp.locator('[data-export-copy]')).toContainText('Formatting and formulas are not preserved');
+ await exp.getByRole('button',{name:'Editable document',exact:true}).click();await expect(exp.locator('[data-extension]')).toHaveText('DOCX');await expect(exp.locator('[data-export-title]')).toHaveText('Keep revising together');
+ const enc=await open(page,5,10);const file=enc.locator('[data-file-text]');
+ await expect(enc.getByRole('button',{name:'Original data',exact:true})).toHaveAttribute('aria-pressed','true');await expect(file).toContainText('Room A');
+ await enc.getByRole('button',{name:'Encrypted',exact:true}).click();await expect(file).not.toContainText('Room A');await expect(enc.locator('[data-protection]')).toHaveText('Encrypted file');
+ await enc.getByRole('button',{name:'Read-only',exact:true}).click();await expect(file).toContainText('Room A');await expect(enc.locator('[data-protection]')).toHaveText('Read-only file');
+});
 test('DL2 sync deletion reaches both locations but leaves a separate recovery copy',async({page})=>{
  const root=await open(page,2,13);await root.getByRole('button',{name:'Delete synced file'}).click();await expect(root.locator('[data-local-file]')).toHaveText('File deleted');await expect(root.locator('[data-cloud-file]')).toHaveText('File deleted');await expect(root.locator('.backup-copy')).toContainText('library-help-v1.docx');await root.getByRole('button',{name:'Restore from backup'}).click();await expect(root.locator('[data-cloud-file]')).toHaveText('library-help-v1.docx');
 });
