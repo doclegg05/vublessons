@@ -1,0 +1,5 @@
+{
+  "model": "small.en",
+  "sha256": "806e2341810fd20174e589ec8411d7abe96ff793b5355b607138b8717b14bfad",
+  "recognized": "Use the instructor-approved tool if one is available, or begin with a supplied starter. Save the file with its HTML extension and open it in the browser. Confirm that the heading, search field, filter, and results appear. Keep this first working version before asking for changes. If no AI account is available, you can still complete the exercise with a plain text editor. Change the heading and one fictional resource, save the file, and refresh the browser. Be careful that the editor has not silently added a text file extension. The goal is a working result you can explain, not evidence that you used a particular paid service or model."
+}

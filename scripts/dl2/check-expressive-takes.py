@@ -15,17 +15,21 @@ from faster_whisper import WhisperModel
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--watch', action='store_true')
+parser.add_argument('--profile', choices=['expressive', 'brad-refresh'], default='expressive')
+parser.add_argument('--model', default='base.en', choices=['base.en', 'small.en'])
 args = parser.parse_args()
 root = Path('video/digital-literacy-2')
-local = Path.home() / 'Desktop/vub-expressive-narration'
-model = WhisperModel('base.en', device='cpu', compute_type='int8', cpu_threads=4)
+local = Path.home() / ('Desktop/vub-brad-narration-refresh' if args.profile == 'brad-refresh' else 'Desktop/vub-expressive-narration')
+model = WhisperModel(args.model, device='cpu', compute_type='int8', cpu_threads=4)
 jobs = [(w, b) for w in sorted(root.glob('week-*'))
         for b in json.loads((w / 'narration/beats.json').read_text())]
 norm = lambda text: re.sub(r'[^a-z0-9]', '', text.lower())
-report = root / 'elevenlabs-britt-v3-expressive/transcription-checks.json'
+report = root / ('elevenlabs-brad-v3-refresh' if args.profile == 'brad-refresh' else 'elevenlabs-britt-v3-expressive') / 'transcription-checks.json'
+if args.model != 'base.en':
+  report = report.with_name('transcription-checks-' + args.model + '.json')
 results = json.loads(report.read_text()) if report.exists() else []
 done = {(r['week'], r['chapter']): r for r in results}
-deadline = time.monotonic() + 1800
+deadline = time.monotonic() + 3600
 while True:
   for week, beat in jobs:
     key = (week.name, beat['id'])

@@ -1,0 +1,6 @@
+{
+  "reason": "Both recognizers reported heading in one fictional resource instead of authored heading and one fictional resource. Replacement recognition retains and.",
+  "replacement": "beat-06",
+  "originalSha256": "3b451b330516a193a07091398d398e20fa8869a74104da44c28fae47ea636cef",
+  "sourceSha256": "d12ea2ff154889eb9962381922db389c4ceb08dd0272752682b9c38b69e327ed"
+}

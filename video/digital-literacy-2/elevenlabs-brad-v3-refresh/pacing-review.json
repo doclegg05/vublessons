@@ -1,0 +1,295 @@
+{
+  "advisoryBandWpm": [
+    135,
+    145
+  ],
+  "advisoryIsMandatory": false,
+  "thresholdsChanged": false,
+  "audioTimeStretched": false,
+  "targetedChapters": [
+    {
+      "week": 1,
+      "chapter": 3,
+      "title": "Choose the scope of the change",
+      "beforeWpm": 165.6,
+      "afterWpm": 141.8,
+      "sceneWindowWpm": 137.1,
+      "pauseTags": "long",
+      "requestedSpeed": 0.85
+    },
+    {
+      "week": 1,
+      "chapter": 4,
+      "title": "Follow the sound to its destination",
+      "beforeWpm": 171.8,
+      "afterWpm": 150.3,
+      "sceneWindowWpm": 145.1,
+      "pauseTags": "long",
+      "requestedSpeed": 0.85
+    },
+    {
+      "week": 2,
+      "chapter": 2,
+      "title": "Turn a broad question into a useful search",
+      "beforeWpm": 168.1,
+      "afterWpm": 144.4,
+      "sceneWindowWpm": 139.6,
+      "pauseTags": "short",
+      "requestedSpeed": 0.85
+    },
+    {
+      "week": 6,
+      "chapter": 6,
+      "title": "Open a working version before changing it",
+      "beforeWpm": 166.0,
+      "afterWpm": 138.5,
+      "sceneWindowWpm": 134.1,
+      "pauseTags": "short",
+      "requestedSpeed": 0.85
+    }
+  ],
+  "note": "Measured take rates include naturally generated pauses; scene-window rates also include existing entry/closing visual holds. Remaining house-style warnings are retained in the AV sync audit.",
+  "finalAudit": {
+    "failures": 0,
+    "houseStyleWarnings": 45,
+    "warningsByWeek": {
+      "week-01": [
+        {
+          "beat": "beat-01",
+          "detail": "156 wpm outside house band 135\u2013145",
+          "wpm": 156
+        },
+        {
+          "beat": "beat-02",
+          "detail": "155 wpm outside house band 135\u2013145",
+          "wpm": 155
+        },
+        {
+          "beat": "beat-04",
+          "detail": "150 wpm outside house band 135\u2013145",
+          "wpm": 150
+        },
+        {
+          "beat": "beat-07",
+          "detail": "158 wpm outside house band 135\u2013145",
+          "wpm": 158
+        },
+        {
+          "beat": "beat-09",
+          "detail": "156 wpm outside house band 135\u2013145",
+          "wpm": 156
+        },
+        {
+          "beat": "beat-10",
+          "detail": "160 wpm outside house band 135\u2013145",
+          "wpm": 160
+        }
+      ],
+      "week-02": [
+        {
+          "beat": "beat-01",
+          "detail": "163 wpm outside house band 135\u2013145",
+          "wpm": 163
+        },
+        {
+          "beat": "beat-04",
+          "detail": "162 wpm outside house band 135\u2013145",
+          "wpm": 162
+        },
+        {
+          "beat": "beat-05",
+          "detail": "160 wpm outside house band 135\u2013145",
+          "wpm": 160
+        },
+        {
+          "beat": "beat-06",
+          "detail": "152 wpm outside house band 135\u2013145",
+          "wpm": 152
+        },
+        {
+          "beat": "beat-07",
+          "detail": "149 wpm outside house band 135\u2013145",
+          "wpm": 149
+        },
+        {
+          "beat": "beat-08",
+          "detail": "152 wpm outside house band 135\u2013145",
+          "wpm": 152
+        },
+        {
+          "beat": "beat-09",
+          "detail": "147 wpm outside house band 135\u2013145",
+          "wpm": 147
+        },
+        {
+          "beat": "beat-10",
+          "detail": "134 wpm outside house band 135\u2013145",
+          "wpm": 134
+        }
+      ],
+      "week-03": [
+        {
+          "beat": "beat-01",
+          "detail": "149 wpm outside house band 135\u2013145",
+          "wpm": 149
+        },
+        {
+          "beat": "beat-02",
+          "detail": "148 wpm outside house band 135\u2013145",
+          "wpm": 148
+        },
+        {
+          "beat": "beat-03",
+          "detail": "160 wpm outside house band 135\u2013145",
+          "wpm": 160
+        },
+        {
+          "beat": "beat-06",
+          "detail": "157 wpm outside house band 135\u2013145",
+          "wpm": 157
+        },
+        {
+          "beat": "beat-07",
+          "detail": "147 wpm outside house band 135\u2013145",
+          "wpm": 147
+        },
+        {
+          "beat": "beat-08",
+          "detail": "164 wpm outside house band 135\u2013145",
+          "wpm": 164
+        },
+        {
+          "beat": "beat-09",
+          "detail": "157 wpm outside house band 135\u2013145",
+          "wpm": 157
+        },
+        {
+          "beat": "beat-10",
+          "detail": "146 wpm outside house band 135\u2013145",
+          "wpm": 146
+        }
+      ],
+      "week-04": [
+        {
+          "beat": "beat-01",
+          "detail": "161 wpm outside house band 135\u2013145",
+          "wpm": 161
+        },
+        {
+          "beat": "beat-02",
+          "detail": "164 wpm outside house band 135\u2013145",
+          "wpm": 164
+        },
+        {
+          "beat": "beat-03",
+          "detail": "150 wpm outside house band 135\u2013145",
+          "wpm": 150
+        },
+        {
+          "beat": "beat-06",
+          "detail": "151 wpm outside house band 135\u2013145",
+          "wpm": 151
+        },
+        {
+          "beat": "beat-07",
+          "detail": "148 wpm outside house band 135\u2013145",
+          "wpm": 148
+        },
+        {
+          "beat": "beat-08",
+          "detail": "154 wpm outside house band 135\u2013145",
+          "wpm": 154
+        },
+        {
+          "beat": "beat-09",
+          "detail": "149 wpm outside house band 135\u2013145",
+          "wpm": 149
+        }
+      ],
+      "week-05": [
+        {
+          "beat": "beat-01",
+          "detail": "156 wpm outside house band 135\u2013145",
+          "wpm": 156
+        },
+        {
+          "beat": "beat-02",
+          "detail": "154 wpm outside house band 135\u2013145",
+          "wpm": 154
+        },
+        {
+          "beat": "beat-03",
+          "detail": "151 wpm outside house band 135\u2013145",
+          "wpm": 151
+        },
+        {
+          "beat": "beat-05",
+          "detail": "132 wpm outside house band 135\u2013145",
+          "wpm": 132
+        },
+        {
+          "beat": "beat-06",
+          "detail": "162 wpm outside house band 135\u2013145",
+          "wpm": 162
+        },
+        {
+          "beat": "beat-07",
+          "detail": "160 wpm outside house band 135\u2013145",
+          "wpm": 160
+        },
+        {
+          "beat": "beat-09",
+          "detail": "146 wpm outside house band 135\u2013145",
+          "wpm": 146
+        },
+        {
+          "beat": "beat-10",
+          "detail": "148 wpm outside house band 135\u2013145",
+          "wpm": 148
+        }
+      ],
+      "week-06": [
+        {
+          "beat": "beat-01",
+          "detail": "160 wpm outside house band 135\u2013145",
+          "wpm": 160
+        },
+        {
+          "beat": "beat-02",
+          "detail": "151 wpm outside house band 135\u2013145",
+          "wpm": 151
+        },
+        {
+          "beat": "beat-03",
+          "detail": "154 wpm outside house band 135\u2013145",
+          "wpm": 154
+        },
+        {
+          "beat": "beat-05",
+          "detail": "147 wpm outside house band 135\u2013145",
+          "wpm": 147
+        },
+        {
+          "beat": "beat-07",
+          "detail": "148 wpm outside house band 135\u2013145",
+          "wpm": 148
+        },
+        {
+          "beat": "beat-08",
+          "detail": "164 wpm outside house band 135\u2013145",
+          "wpm": 164
+        },
+        {
+          "beat": "beat-09",
+          "detail": "146 wpm outside house band 135\u2013145",
+          "wpm": 146
+        },
+        {
+          "beat": "beat-10",
+          "detail": "151 wpm outside house band 135\u2013145",
+          "wpm": 151
+        }
+      ]
+    }
+  }
+}

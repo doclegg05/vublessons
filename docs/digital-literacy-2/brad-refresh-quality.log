@@ -1,0 +1,466 @@
+==> graded PDF email server checks
+
+> vublessons@1.0.0 test:report-email
+> tsc -p tsconfig.functions.json && tsx --test tests/server/*.test.mts
+
+✔ pre uses canonical score and creates an openable two-page branded PDF (214.14ms)
+✔ post uses canonical score and creates an openable two-page branded PDF (223.435ms)
+✔ rejects tampered scores, domains, answers, version, IDs, dates and oversized input (0.817958ms)
+✔ fixed Gmail account and genuine PDF attachment; ignores attacker recipient/file fields (172.386ms)
+✔ simultaneous and later duplicate events send once (343.114917ms)
+✔ missing configuration stays recorded without sending, and later configuration can send (215.191792ms)
+✔ uncertain provider outcome is not blindly resent (206.728959ms)
+✔ reusing an ID with changed answers or identity is rejected (1.168458ms)
+✔ SMTP verification failure never sends or records accepted (184.273958ms)
+✔ the native event handler stays disabled outside production or without the activation flag (8.272667ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1746.740875
+==> 1/5 build:site
+
+> vublessons@1.0.0 build:site
+> node scripts/build-site.js
+
+check-courses: OK — 4 courses, 24 lessons, catalog and courses/ tree agree.
+Built site: /Users/brittlegg/.codex/worktrees/dl2-narration-refresh/vublessons/dist/site
+  198 HTML pages published.
+==> 2/5 link check
+checked 1314 internal refs across roots ['courses', 'instructors', 'index.html']
+BROKEN: 0
+=== distinct broken refs per category ===
+==> 3/5 courses.json drift check
+check-courses: OK — 4 courses, 24 lessons, catalog and courses/ tree agree.
+==> 4/5 playwright
+[1A[2K[2m[WebServer] [22m(node:5890) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1A[2K[2m[WebServer] [22m(node:5915) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 304 tests using 5 workers
+
+✔ pre uses canonical score and creates an openable two-page branded PDF (210.5ms)
+[1A[2K(node:5922) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+✔ post uses canonical score and creates an openable two-page branded PDF (276.699708ms)
+✔ rejects tampered scores, domains, answers, version, IDs, dates and oversized input (1.260125ms)
+[1A[2K(node:5925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:5922) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[1/304] tests/content/dl2-curriculum.spec.js:3:1 › DL2 six complete weeks have two-hour plans and aligned assessment pairs
+[1A[2K(node:5923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:5924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:5926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:5925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[2/304] tests/content/dl2-monday-fixes.spec.js:19:1 › DL2 instructor pages are kept out of search results
+[1A[2K(node:5924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[3/304] tests/content/dl2-monday-fixes.spec.js:24:1 › DL2 instructor pages still reach each other
+[1A[2K(node:5926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[4/304] tests/content/dl2-curriculum.spec.js:8:1 › DL2 cohort dates appear only in syllabus; pages include shared text sizing
+[1A[2K(node:5923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[5/304] tests/content/dl2-monday-fixes.spec.js:14:1 › DL2 learner pages do not link answer keys, lesson plans or the instructor guide
+[1A[2K[6/304] tests/content/dl2-monday-fixes.spec.js:31:1 › DL2 appears in the instructor area
+[1A[2K[7/304] tests/content/dl2-os-assets.spec.js:7:1 › fonts, vendor libraries and the seal are served
+[1A[2K[8/304] tests/content/dl2-os-assets.spec.js:17:1 › pdf-lib embeds the Playfair WOFF through fontkit
+[1A[2K[9/304] tests/content/dl2-os-items.spec.js:8:1 › 20 items per form, parallel by number
+[1A[2K[10/304] tests/content/dl2-os-items.spec.js:19:1 › domain counts match the blueprint
+[1A[2K[11/304] tests/content/dl2-os-items.spec.js:27:1 › every item is well formed, answers are balanced
+[1A[2K[12/304] tests/content/dl2-os-items.spec.js:43:1 › grade counts correct answers overall and by domain
+✔ fixed Gmail account and genuine PDF attachment; ignores attacker recipient/file fields (220.359291ms)
+[1A[2K[13/304] tests/content/dl2-os-items.spec.js:55:1 › record id is stable and readable
+[1A[2K[14/304] tests/content/dl2-os-items.spec.js:64:1 › initials are letters only, so a record ID never carries markup
+[1A[2K[15/304] tests/content/dl2-os-items.spec.js:84:3 › pre: the correct option is strictly the longest on at most 6 of 20 items
+[1A[2K[16/304] tests/content/dl2-os-items.spec.js:95:3 › pre: every option is at most 110 characters
+[1A[2K[17/304] tests/content/dl2-os-items.spec.js:89:3 › pre: no correct option is more than 1.3 × its longest distractor
+[1A[2K[18/304] tests/content/dl2-os-items.spec.js:84:3 › post: the correct option is strictly the longest on at most 6 of 20 items
+[1A[2K[19/304] tests/content/dl2-os-items.spec.js:89:3 › post: no correct option is more than 1.3 × its longest distractor
+[1A[2K[20/304] tests/content/dl2-os-items.spec.js:95:3 › post: every option is at most 110 characters
+[1A[2K[21/304] tests/content/dl2-os-keys.spec.js:7:3 › pre key lists all 20 answers with reasons
+[1A[2K[22/304] tests/content/dl2-os-keys.spec.js:14:3 › pre printable has 20 questions with four bubbles each
+[1A[2K[23/304] tests/content/dl2-os-keys.spec.js:7:3 › post key lists all 20 answers with reasons
+[1A[2K[24/304] tests/content/dl2-os-keys.spec.js:14:3 › post printable has 20 questions with four bubbles each
+✔ simultaneous and later duplicate events send once (426.595792ms)
+[1A[2K[25/304] tests/content/dl2-os-keys.spec.js:22:1 › pre-test key letterhead org name renders on one line
+[1A[2K[26/304] tests/content/dl2-os-keys.spec.js:36:3 › pre answer key is excluded from search indexing
+[1A[2K[27/304] tests/content/dl2-os-keys.spec.js:36:3 › post answer key is excluded from search indexing
+[1A[2K[28/304] tests/content/dl2-os-keys.spec.js:42:1 › syllabus states 20 questions
+[1A[2K[29/304] tests/content/dl2-os-pdf-text.spec.js:6:1 › clean() makes every PDF string encodable in the WinAnsi fallback fonts
+[1A[2K[30/304] tests/content/dl2-os-week1-files.spec.js:40:1 › the flyer is a real Word document with the Mission 1C text
+[1A[2K[31/304] tests/content/dl2-os-week1-files.spec.js:52:1 › Normal margins push exactly the last line to page 2; Narrow margins fit one page
+✔ missing configuration stays recorded without sending, and later configuration can send (453.106917ms)
+[1A[2K[32/304] tests/content/dl2-os-week1-files.spec.js:72:1 › the site serves both class files
+[1A[2K[33/304] tests/content/dl2-os-week1-print.spec.js:30:1 › each mission prints on its own page(s), letter size
+[1A[2K[34/304] tests/content/dl2-os-week1-files.spec.js:79:1 › the run sheet and the missions link the class files; printed wording stays
+[1A[2K[35/304] tests/content/dl2-os-week1-print.spec.js:47:1 › the worksheet prints as exactly 5 pages, one per mission
+[1A[2K[36/304] tests/content/dl2-os-week1-print.spec.js:37:1 › run sheet and key exist with the letterhead
+[1A[2K[37/304] tests/content/dl2-os-week1-print.spec.js:15:1 › five missions, each complete
+[1A[2K[38/304] tests/content/dl2-review-fixes.spec.js:18:1 › DL2 teaching text is visible on every slide, not only inside a collapsed note
+[1A[2K[39/304] tests/content/dl2-review-fixes.spec.js:26:1 › DL2 week 6 worksheet teaches the hand-repair mechanics for version 2
+[1A[2K[40/304] tests/content/dl2-os-week1-print.spec.js:53:1 › the run sheet prints on exactly 1 page, with the Before class checks
+✔ uncertain provider outcome is not blindly resent (382.64675ms)
+✔ reusing an ID with changed answers or identity is rejected (0.648166ms)
+[1A[2K[41/304] tests/content/dl2-review-fixes.spec.js:39:1 › DL2 week 5 skills challenge gives every task its inputs, a response box and a rating
+[1A[2K[42/304] tests/content/dl2-os-week1-print.spec.js:63:1 › mission fills print even with background graphics off
+[1A[2K[43/304] tests/content/dl2-week1-tsdr.spec.js:12:1 › Week 1 agenda teaches each skill group as its own Tell, Show, Do, Review cycle
+[1A[2K[44/304] tests/content/dl2-week1-tsdr.spec.js:22:1 › Week 1 plays each video chapter inside its cycle and names the pause points
+[1A[2K[45/304] tests/content/dl2-week1-tsdr.spec.js:29:1 › Week 1 pre-test step records each score instead of printing full reports
+[1A[2K[46/304] tests/content/dl2-week1-tsdr.spec.js:44:1 › Week 1 worksheet tasks give learners everything they need to finish them
+[1A[2K[47/304] tests/content/dl2-week1-tsdr.spec.js:52:1 › Week 1 slides say how printers, screens and connectors really behave
+[1A[2K[48/304] tests/content/dl2-week1-tsdr.spec.js:62:1 › Week 1 knowledge checks offer believable wrong answers
+[1A[2K[49/304] tests/content/dl2-week1-tsdr.spec.js:69:1 › Week 1 lab quick card gives Windows 11 steps on the lesson plan
+[1A[2K[50/304] tests/content/dl2-week1-tsdr.spec.js:34:1 › Week 1 Mission Control plan covers five observable tasks and all 120 minutes
+[1A[2K[51/304] tests/content/dl2-week1-tsdr.spec.js:77:1 › Week 1 prep list is specific to week 1
+[1A[2K[52/304] tests/content/dl2-week6-agent.spec.js:20:1 › Week 6 teaches directing an AI coding agent, not vibe coding
+[1A[2K[53/304] tests/content/dl2-week6-agent.spec.js:30:1 › Week 6 slide titles name each step of the agent loop; order, count and kinds are unchanged
+[1A[2K[54/304] tests/content/dl2-week6-agent.spec.js:35:1 › Week 6 slide 10 shows the agent’s diff, with minus and plus signs, where toLowerCase disappears
+[1A[2K[55/304] tests/content/dl2-week6-agent.spec.js:45:1 › Slide 10’s diff lines are real lines of versions 1 and 2
+[1A[2K[56/304] tests/content/dl2-week6-agent.spec.js:75:1 › Version 1’s script has one statement per line, so an agent’s diff is short enough to read
+✔ SMTP verification failure never sends or records accepted (191.380542ms)
+✔ the native event handler stays disabled outside production or without the activation flag (4.71425ms)
+[1A[2K[57/304] tests/content/dl2-week6-agent.spec.js:83:1 › Week 6 worksheet opens all three versions and gives the procedures before the tasks
+[1A[2K[58/304] tests/content/dl2-week6-agent.spec.js:110:1 › Week 6 rubric scores four criteria 0, 1 or 2 with descriptors, on the worksheet and the answer guide
+[1A[2K[59/304] tests/content/dl2-week6-agent.spec.js:98:1 › Week 6 worksheet logs the five checks and the retest, with a typed box for each result
+[1A[2K[60/304] tests/content/dl2-week6-agent.spec.js:55:1 › The three practice pages: version 2 keeps its planted defect and version 3 is a one-line repair
+[1A[2K[61/304] tests/content/dl2-week6-agent.spec.js:123:1 › Week 6 answer guide lists the expected result of every check
+[1A[2K[62/304] tests/content/dl2-week6-agent.spec.js:128:1 › Week 6 transcript defines the words the video uses, above the transcript
+[1A[2K[63/304] tests/content/dl2-week6-agent.spec.js:137:1 › Week 6 plan, syllabus and instructor guide describe the instructor-led agent demo
+[1A[2K[64/304] tests/content/dl2-week6-agent.spec.js:151:1 › Week 6 slides show the real starter page and the agent loop, not the old rename or focus repair
+[1A[2K[65/304] tests/content/dl2-week6-agent.spec.js:166:1 › DL2 course description presents week 6 as guiding an AI agent, not a small AI-built app
+[1A[2K[66/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 2 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[67/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 2 plays every video chapter inside the plan and names the pause points
+[1A[2K[68/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 2 lesson plan states measurable outcomes for every goal
+[1A[2K[69/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 2 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[70/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 2 knowledge checks offer believable wrong answers
+[1A[2K[71/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 3 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[72/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 3 plays every video chapter inside the plan and names the pause points
+[1A[2K[73/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 3 lesson plan states measurable outcomes for every goal
+[1A[2K[74/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 3 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[75/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 3 knowledge checks offer believable wrong answers
+[1A[2K[76/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 4 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[77/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 4 plays every video chapter inside the plan and names the pause points
+[1A[2K[78/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 4 lesson plan states measurable outcomes for every goal
+[1A[2K[79/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 4 knowledge checks offer believable wrong answers
+[1A[2K[80/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 5 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[81/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 4 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[82/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 5 plays every video chapter inside the plan and names the pause points
+[1A[2K[83/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 5 lesson plan states measurable outcomes for every goal
+[1A[2K[84/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 5 knowledge checks offer believable wrong answers
+[1A[2K[85/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 5 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[86/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 6 plays every video chapter inside the plan and names the pause points
+[1A[2K[87/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 6 lesson plan states measurable outcomes for every goal
+[1A[2K[88/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 6 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[89/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 6 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[90/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 6 knowledge checks offer believable wrong answers
+[1A[2K[91/304] tests/content/homepage-catalog.spec.js:11:1 › homepage renders one card per course in courses.json
+[1A[2K[92/304] tests/content/homepage-catalog.spec.js:27:1 › homepage has zero external CDN dependencies (offline-capable)
+[1A[2K[93/304] tests/functional/assessment-pairing.spec.js:47:3 › ICS: different learner and unconfirmed same-name learner never inherit a comparison
+[1A[2K[94/304] tests/functional/assessment-pairing.spec.js:57:3 › ICS: deliberate attempt pairing reaches results, saved data, export, and print
+[1A[2K[95/304] tests/functional/assessment-pairing.spec.js:65:3 › ICS: completed results keep their confirmed baseline after storage changes
+[1A[2K[96/304] tests/functional/assessment-pairing.spec.js:73:3 › ICS: editing identity and replacing a saved attempt invalidate confirmation
+[1A[2K[97/304] tests/functional/assessment-pairing.spec.js:89:3 › ICS: malformed saved results cannot create a comparison
+[1A[2K[98/304] tests/functional/assessment-pairing.spec.js:100:3 › ICS: new learner clears only this course's saved results
+[1A[2K[99/304] tests/functional/assessment-pairing.spec.js:47:3 › DL1: different learner and unconfirmed same-name learner never inherit a comparison
+[1A[2K[100/304] tests/functional/assessment-pairing.spec.js:57:3 › DL1: deliberate attempt pairing reaches results, saved data, export, and print
+[1A[2K[101/304] tests/functional/assessment-pairing.spec.js:65:3 › DL1: completed results keep their confirmed baseline after storage changes
+[1A[2K[102/304] tests/functional/assessment-pairing.spec.js:73:3 › DL1: editing identity and replacing a saved attempt invalidate confirmation
+[1A[2K[103/304] tests/functional/assessment-pairing.spec.js:89:3 › DL1: malformed saved results cannot create a comparison
+[1A[2K[104/304] tests/functional/assessment-pairing.spec.js:100:3 › DL1: new learner clears only this course's saved results
+[1A[2K[105/304] tests/functional/assessment-pairing.spec.js:109:37 › DL1 pre: print excludes hidden quiz layout and keeps the full report
+[1A[2K[106/304] tests/functional/assessment-pairing.spec.js:109:37 › DL1 post: print excludes hidden quiz layout and keeps the full report
+[1A[2K[107/304] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-01: sidebar scrolls independently and lists handouts
+[1A[2K[108/304] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-02: sidebar scrolls independently and lists handouts
+[1A[2K[109/304] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-03: sidebar scrolls independently and lists handouts
+[1A[2K[110/304] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-04: sidebar scrolls independently and lists handouts
+[1A[2K[111/304] tests/functional/dl1-sidebar-scroll.spec.js:15:3 › DL1 week-05: sidebar scrolls independently and lists handouts
+[1A[2K[112/304] tests/functional/dl2-learning-app.spec.js:8:1 › DL2 course continue reflects the saved lesson rather than invented completion
+[1A[2K[113/304] tests/functional/dl2-monday-fixes.spec.js:26:2 › shared lab computers › Start fresh clears the previous learner's lessons and test answers after confirmation
+[1A[2K[114/304] tests/functional/dl2-monday-fixes.spec.js:49:2 › presenting a deck › Arrow keys still change slides after clicking a button inside a slide
+[1A[2K[115/304] tests/functional/dl2-monday-fixes.spec.js:56:2 › presenting a deck › Page Up and Page Down inside a focused lesson widget do not change slides
+[1A[2K[116/304] tests/functional/dl2-monday-fixes.spec.js:63:2 › presenting a deck › Previous and Next stay on screen on a tall slide
+[1A[2K[117/304] tests/functional/dl2-monday-fixes.spec.js:70:2 › presenting a deck › Opening a deck without a slide address does not jump down the page
+[1A[2K[118/304] tests/functional/dl2-monday-fixes.spec.js:80:2 › contrast on the projector › Flip-card text stays readable while the pointer is over it
+[1A[2K[119/304] tests/functional/dl2-monday-fixes.spec.js:86:2 › contrast on the projector › A selected phishing clue stays readable
+[1A[2K[120/304] tests/functional/dl2-monday-fixes.spec.js:94:2 › contrast on the projector › The button on every completion slide stands out from the slide
+[1A[2K[121/304] tests/functional/dl2-monday-fixes.spec.js:101:2 › contrast on the projector › Keyboard focus rings are visible on dark backgrounds
+[1A[2K[122/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: weeks/week-01/presentation.html
+[1A[2K[123/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: weeks/week-01/worksheet.html
+[1A[2K[124/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: weeks/week-01/run-sheet.html
+[1A[2K[125/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: weeks/week-01/files/sound-test.html
+[1A[2K[126/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/post-test.html
+[1A[2K[127/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/pre-test.html
+[1A[2K[128/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/pre-test-answer-key.html
+[1A[2K[129/304] tests/functional/dl2-os-a11y.spec.js:25:1 › axe: pre-test resumed on a shared PC
+[1A[2K[130/304] tests/functional/dl2-os-deck.spec.js:17:1 › Next reveals build parts before moving on, and Back reverses
+[1A[2K[131/304] tests/functional/dl2-os-deck.spec.js:39:1 › phase strip, counter, stage tag and scene follow the slide
+[1A[2K[132/304] tests/functional/dl2-os-deck.spec.js:52:1 › N shows notes; typed number + Enter jumps; nothing auto-advances
+[1A[2K[133/304] tests/functional/dl2-os-deck.spec.js:67:1 › no countdown timer anywhere, even after T on a Do slide
+[1A[2K[134/304] tests/functional/dl2-os-deck.spec.js:78:1 › a registered stepper consumes Next before the slide changes
+[1A[2K[135/304] tests/functional/dl2-os-deck.spec.js:92:1 › text-size host exists so no floating button is added
+[1A[2K[136/304] tests/functional/dl2-os-deck.spec.js:100:1 › a fresh open starts at slide 1; the same tab keeps its place
+[1A[2K[137/304] tests/functional/dl2-os-deck.spec.js:121:1 › opening the Week 1 deck shows on the course home, and the last slide marks it viewed
+[1A[2K[138/304] tests/functional/dl2-os-demo.spec.js:18:1 › mounts with caption, counter and checklist
+[1A[2K[139/304] tests/functional/dl2-os-demo.spec.js:26:1 › Next plays the click and applies state; Back restores it
+[1A[2K[140/304] tests/functional/dl2-os-demo.spec.js:42:1 › reduced motion jumps straight to each state
+[1A[2K[141/304] tests/functional/dl2-os-demo.spec.js:54:1 › half speed button reports its state in words
+[1A[2K[142/304] tests/functional/dl2-os-demo.spec.js:48:1 › controller refuses Next at the end so the deck can move on
+[1A[2K[143/304] tests/functional/dl2-os-demo.spec.js:74:1 › cursor rests on a visible fallback when its target is hidden by its own state
+[1A[2K[144/304] tests/functional/dl2-os-demo.spec.js:97:1 › Next during the last step's animation finishes the step and stays on the slide
+[1A[2K[145/304] tests/functional/dl2-os-pdf.spec.js:27:1 › pre-test PDF: 2 pages, record-id title, named file
+[1A[2K[146/304] tests/functional/dl2-os-pdf.spec.js:36:1 › mixed result PDF (item 1 wrong, item 5 skipped): 2 pages, record-id title
+[1A[2K[147/304] tests/functional/dl2-os-pdf.spec.js:45:1 › without the self-hosted fonts, the PDF falls back to standard fonts and still builds
+[1A[2K[148/304] tests/functional/dl2-os-pdf.spec.js:70:1 › a very long, accented name fits the Student box (shrunk to 7pt, then cut with …) and the file name is ASCII
+[1A[2K[149/304] tests/functional/dl2-os-pdf.spec.js:87:1 › a longish name shrinks to fit the Student box without being cut
+[1A[2K[150/304] tests/functional/dl2-os-pdf.spec.js:100:1 › a short name keeps the full 10.5pt size
+[1A[2K[151/304] tests/functional/dl2-os-phase-navigation.spec.js:22:3 › phase buttons jump forward and backward without overflow at 1366x768
+[1A[2K[152/304] tests/functional/dl2-os-phase-navigation.spec.js:22:3 › phase buttons jump forward and backward without overflow at 1920x1080
+[1A[2K[153/304] tests/functional/dl2-os-phase-navigation.spec.js:40:1 › all six phase buttons support Enter and Space, visible focus, and build reset
+[1A[2K[154/304] tests/functional/dl2-os-phase-navigation.spec.js:59:1 › phase jump clears a pending numeric jump and remains usable in full screen
+[1A[2K[155/304] tests/functional/dl2-os-sound-test.spec.js:14:1 › one keyboard press plays three rising notes and says so in words
+[1A[2K[156/304] tests/functional/dl2-os-sound-test.spec.js:32:1 › letterhead page, no media files or outside requests, text-size script last
+[1A[2K[157/304] tests/functional/dl2-os-storage.spec.js:15:1 › Week 1 deck moves on with blocked storage and reduced motion
+[1A[2K[158/304] tests/functional/dl2-os-storage.spec.js:24:1 › pre-test runs from name to graded result with blocked storage
+[1A[2K[159/304] tests/functional/dl2-os-test.spec.js:21:1 › name is required and the letterhead header shows
+[1A[2K[160/304] tests/functional/dl2-os-test.spec.js:28:1 › selection shows in words; Back is disabled on question 1
+[1A[2K[161/304] tests/functional/dl2-os-test.spec.js:36:1 › full run: skip one, review, submit, grade, send copy
+[1A[2K[162/304] tests/functional/dl2-os-test.spec.js:59:1 › offline: result is queued and sent on the next visit
+[1A[2K[163/304] tests/functional/dl2-os-test.spec.js:78:1 › a reload keeps answers in progress
+[1A[2K[164/304] tests/functional/dl2-os-test.spec.js:86:1 › the page registers its Netlify form and loads no external resources
+[1A[2K[165/304] tests/functional/dl2-os-test.spec.js:94:1 › focus moves to the review h1 and the result h1 on those transitions
+[1A[2K[166/304] tests/functional/dl2-os-test.spec.js:111:1 › Go back in the confirm dialog returns focus to Submit my test
+[1A[2K[167/304] tests/functional/dl2-os-test.spec.js:119:1 › outbox: a failed item is preserved without duplication after a partial flush
+[1A[2K[168/304] tests/functional/dl2-os-test.spec.js:150:1 › outbox: an item enqueued while a flush is in flight is not clobbered by that flush's write
+[1A[2K[169/304] tests/functional/dl2-os-test.spec.js:189:1 › print: only the HTML report shows, app chrome and score are hidden
+[1A[2K[170/304] tests/functional/dl2-os-test.spec.js:208:1 › ArrowDown twice on question 1 selects option B (radiogroup keyboard pattern)
+[1A[2K[171/304] tests/functional/dl2-os-test.spec.js:217:1 › fallback report: a crafted name adds no markup of its own
+[1A[2K[172/304] tests/functional/dl2-os-test.spec.js:240:1 › fallback report escapes the record ID itself
+[1A[2K[173/304] tests/functional/dl2-os-test.spec.js:270:1 › a saved test in progress says whose it is, and Start over returns to the name screen
+[1A[2K[174/304] tests/functional/dl2-os-test.spec.js:287:1 › the review screen also says whose test it is
+[1A[2K[175/304] tests/functional/dl2-os-test.spec.js:295:1 › a test started in this visit shows no Not-you note
+[1A[2K[176/304] tests/functional/dl2-os-test.spec.js:303:1 › arrow keys change the answer only when focus is on the options
+[1A[2K[177/304] tests/functional/dl2-os-test.spec.js:317:1 › outbox holds the copy as soon as the test is submitted, while the send is still in flight
+[1A[2K[178/304] tests/functional/dl2-os-test.spec.js:334:1 › outbox is empty again once the copy reaches Britt
+[1A[2K[179/304] tests/functional/dl2-os-test.spec.js:344:1 › two tabs retry one queued record once, retaining its record ID
+[1A[2K[180/304] tests/functional/dl2-os-test.spec.js:368:1 › blocked storage plus a failed submission never claims a saved retry copy
+[1A[2K[181/304] tests/functional/dl2-os-week1-deck.spec.js:6:1 › structure: 27 slides, phases in order, five demos, five Do slides, no timer
+[1A[2K[182/304] tests/functional/dl2-os-week1-deck.spec.js:20:1 › no break slide or break cue
+[1A[2K[183/304] tests/functional/dl2-os-week1-deck.spec.js:27:1 › every unit slide names its app
+[1A[2K[184/304] tests/functional/dl2-os-week1-deck.spec.js:38:1 › every slide fits 1920×1080 and body text is at least 32px
+[1A[2K[185/304] tests/functional/dl2-os-week1-deck.spec.js:59:1 › no external requests
+[1A[2K[186/304] tests/functional/dl2-os-week1-deck.spec.js:67:1 › legacy deck still opens
+[1A[2K[187/304] tests/functional/dl2-os-week1-deck.spec.js:74:1 › every slide fits at every text size, and the text-size status is visually hidden
+[1A[2K[188/304] tests/functional/dl2-os-week1-demos.spec.js:7:23 › w1-scale runs to the end
+[1A[2K[189/304] tests/functional/dl2-os-week1-demos.spec.js:7:23 › w1-sound runs to the end
+[1A[2K[190/304] tests/functional/dl2-os-week1-demos.spec.js:7:23 › w1-print runs to the end
+[1A[2K[191/304] tests/functional/dl2-os-week1-demos.spec.js:7:23 › w1-calendar runs to the end
+[1A[2K[192/304] tests/functional/dl2-os-week1-demos.spec.js:7:23 › w1-autocorrect runs to the end
+[1A[2K[193/304] tests/functional/dl2-os-week1-demos.spec.js:27:1 › scale demo ends at 125% with a bigger window
+[1A[2K[194/304] tests/functional/dl2-os-week1-demos.spec.js:37:1 › every Week 1 demo step has its own caption
+[1A[2K[195/304] tests/functional/dl2-os-week1-demos.spec.js:55:23 › w1-scale camera glides gently and never zooms out between steps
+[1A[2K[196/304] tests/functional/dl2-os-week1-demos.spec.js:55:23 › w1-sound camera glides gently and never zooms out between steps
+[1A[2K[197/304] tests/functional/dl2-os-week1-demos.spec.js:55:23 › w1-print camera glides gently and never zooms out between steps
+[1A[2K[198/304] tests/functional/dl2-os-week1-demos.spec.js:55:23 › w1-calendar camera glides gently and never zooms out between steps
+[1A[2K[199/304] tests/functional/dl2-os-week1-demos.spec.js:55:23 › w1-autocorrect camera glides gently and never zooms out between steps
+[1A[2K[200/304] tests/functional/dl2-present-mode.spec.js:29:28 › Present mode fits every slide at 1024×768
+[1A[2K[201/304] tests/functional/dl2-present-mode.spec.js:29:28 › Present mode fits every slide at 1280×720
+[1A[2K[202/304] tests/functional/dl2-present-mode.spec.js:29:28 › Present mode fits every slide at 1366×768
+[1A[2K[203/304] tests/functional/dl2-present-mode.spec.js:29:28 › Present mode fits every slide at 1920×1080
+[1A[2K[204/304] tests/functional/dl2-present-mode.spec.js:54:1 › Present mode turns on with P or the Present button and off with Escape or P
+[1A[2K[205/304] tests/functional/dl2-present-mode.spec.js:72:1 › Interactions still work in present mode
+[1A[2K[206/304] tests/functional/dl2-present-mode.spec.js:78:1 › Leaving present mode puts every slide back exactly as it was
+[1A[2K[207/304] tests/functional/dl2-present-mode.spec.js:87:1 › Typing P inside a form field does not start present mode
+[1A[2K[208/304] tests/functional/dl2-present-mode.spec.js:93:1 › A slide too tall for the screen is shown one part at a time, words first
+[1A[2K[209/304] tests/functional/dl2-present-mode.spec.js:105:1 › Restarting right after Escape keeps presenting when the earlier full screen finishes closing
+[1A[2K[210/304] tests/functional/dl2-present-mode.spec.js:115:1 › Words stay readable against every slide background in present mode
+[1A[2K[211/304] tests/functional/dl2-present-mode.spec.js:139:1 › Present mode passes an accessibility scan
+[1A[2K[212/304] tests/functional/dl2-review-fixes.spec.js:9:2 › DL2 skip link is keyboard-reachable, visible when focused, and jumps to main content on /assessments/pre-test.html
+[1A[2K[213/304] tests/functional/dl2-review-fixes.spec.js:9:2 › DL2 skip link is keyboard-reachable, visible when focused, and jumps to main content on /weeks/week-02/presentation.html
+[1A[2K[214/304] tests/functional/dl2-review-fixes.spec.js:29:1 › DL2 week 6 starter keeps its data in a top-level resources array
+[1A[2K[215/304] tests/functional/dl2-slide-scenes.spec.js:5:31 › DL2 week 2: illustrated teaching choices work with keyboard and enlarged mobile text
+[1A[2K[216/304] tests/functional/dl2-slide-scenes.spec.js:5:31 › DL2 week 3: illustrated teaching choices work with keyboard and enlarged mobile text
+[1A[2K[217/304] tests/functional/dl2-slide-scenes.spec.js:5:31 › DL2 week 4: illustrated teaching choices work with keyboard and enlarged mobile text
+[1A[2K[218/304] tests/functional/dl2-slide-scenes.spec.js:5:31 › DL2 week 5: illustrated teaching choices work with keyboard and enlarged mobile text
+[1A[2K[219/304] tests/functional/dl2-slide-scenes.spec.js:5:31 › DL2 week 6: illustrated teaching choices work with keyboard and enlarged mobile text
+[1A[2K[220/304] tests/functional/dl2-slide-scenes.spec.js:30:1 › DL2 chart keeps bars, labels, order and data table aligned
+[1A[2K[221/304] tests/functional/dl2-slide-scenes.spec.js:42:1 › DL2 crop and resize demonstrate distinct reversible edits
+[1A[2K[222/304] tests/functional/dl2-slide-scenes.spec.js:50:1 › DL2 editing timeline distinguishes trimming ends from removing a middle section
+[1A[2K[223/304] tests/functional/dl2-slide-scenes.spec.js:60:1 › DL2 email draft reviews recipient, subject and attachment without sending
+[1A[2K[224/304] tests/functional/dl2-slide-scenes.spec.js:72:1 › DL2 recovery distinguishes missing file from wrong content before restoration
+[1A[2K[225/304] tests/functional/dl2-slide-scenes.spec.js:84:1 › DL2 live supply input and illustrated worksheet stay synchronized including zero
+[1A[2K[226/304] tests/functional/dl2-video-chapters.spec.js:4:1 › DL2 teaching videos expose ten accurate, keyboard-operated chapters without autoplay
+[1A[2K[227/304] tests/functional/dl2-video-chapters.spec.js:23:1 › DL2 lesson and transcript chapters fit enlarged mobile text and retain native video keys
+[1A[2K[228/304] tests/functional/dl2-video-chapters.spec.js:42:1 › DL2 screen demonstrations are replayable and the app exercise matches the narrated checks
+[1A[2K[229/304] tests/functional/dl2-week6-agent.spec.js:15:1 › Version 1 (resource-finder.html) does not search categories yet, and ignores capital letters
+[1A[2K[230/304] tests/functional/dl2-week6-agent.spec.js:22:1 › Version 2 (the agent’s result) finds categories but fails the mixed-case check
+[1A[2K[231/304] tests/functional/dl2-week6-agent.spec.js:35:1 › Version 3 (after the repair) passes mixed case and keeps the category search
+[1A[2K[232/304] tests/functional/dl2-week6-agent.spec.js:45:2 › resource-finder.html passes the keyboard and narrow-screen checks
+[1A[2K[233/304] tests/functional/dl2-week6-agent.spec.js:45:2 › resource-finder-agent.html passes the keyboard and narrow-screen checks
+[1A[2K[234/304] tests/functional/dl2-week6-agent.spec.js:45:2 › resource-finder-agent-fixed.html passes the keyboard and narrow-screen checks
+[1A[2K[235/304] tests/functional/dl2-week6-agent.spec.js:55:1 › Week 6 slide 10 shows the diff when a learner chooses what the agent changed
+[1A[2K[236/304] tests/functional/dl2-week6-agent.spec.js:66:1 › Week 6 worksheet and answer guide fit a phone screen; the log tables scroll inside their box
+[1A[2K[237/304] tests/functional/dl2-week6-agent.spec.js:74:1 › Week 6 worksheet test log takes typed results and prints them
+[1A[2K[238/304] tests/functional/dl2-workshop.spec.js:9:1 › DL2 workstation models change only the intended view and support keyboard activation
+[1A[2K[239/304] tests/functional/dl2-workshop.spec.js:25:1 › DL2 workshop views keep their content across switches and a protection choice limits shared details
+[1A[2K[240/304] tests/functional/dl2-workshop.spec.js:35:1 › DL2 sync deletion reaches both locations but leaves a separate recovery copy
+[1A[2K[241/304] tests/functional/dl2-workshop.spec.js:38:1 › DL2 spreadsheet shows referenced range and recalculates, export explains losses
+[1A[2K[242/304] tests/functional/dl2-workshop.spec.js:42:1 › DL2 collaboration model turns vague feedback into an actionable change
+[1A[2K[243/304] tests/functional/dl2-workshop.spec.js:46:1 › DL2 safety scenarios explain independent verification and distinct protections
+[1A[2K[244/304] tests/functional/dl2-workshop.spec.js:50:1 › DL2 app and prompt workshops handle no matches, case, blank tasks and literal input
+[1A[2K[245/304] tests/functional/dl2-workshop.spec.js:56:1 › DL2 mobile workshop keeps text controls in flow and model instructions at classroom size
+[1A[2K[246/304] tests/functional/dl2-workshop.spec.js:64:1 › DL2 workshop initial and changed states meet automated WCAG A/AA checks
+[1A[2K[247/304] tests/functional/dl2.spec.js:7:31 › DL2 week 2: all slides, navigation, resources and reload
+[1A[2K[248/304] tests/functional/dl2.spec.js:7:31 › DL2 week 3: all slides, navigation, resources and reload
+[1A[2K[249/304] tests/functional/dl2.spec.js:7:31 › DL2 week 4: all slides, navigation, resources and reload
+[1A[2K[250/304] tests/functional/dl2.spec.js:7:31 › DL2 week 5: all slides, navigation, resources and reload
+[1A[2K[251/304] tests/functional/dl2.spec.js:7:31 › DL2 week 6: all slides, navigation, resources and reload
+[1A[2K[252/304] tests/functional/dl2.spec.js:15:1 › DL2 interactions use keyboard, score checks, and preserve input keys
+[1A[2K[253/304] tests/functional/dl2.spec.js:27:1 › DL2 mobile menu, text enlargement and starter edge cases
+[1A[2K[254/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /index.html
+[1A[2K[255/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /syllabus.html
+[1A[2K[256/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /weeks/week-01/presentation.html
+[1A[2K[257/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /weeks/week-02/worksheet.html
+[1A[2K[258/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /assessments/pre-test.html
+[1A[2K[259/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /activities/resource-finder.html
+[1A[2K[260/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /activities/resource-finder-agent.html
+[1A[2K[261/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /activities/resource-finder-agent-fixed.html
+[1A[2K[262/304] tests/functional/dl2.spec.js:31:303 › DL2 accessibility /weeks/week-06/worksheet.html
+[1A[2K[263/304] tests/functional/dl2.spec.js:34:31 › DL2 week 2: video plays, seeks, and loads captions
+[1A[2K[264/304] tests/functional/dl2.spec.js:34:31 › DL2 week 3: video plays, seeks, and loads captions
+[1A[2K[265/304] tests/functional/dl2.spec.js:34:31 › DL2 week 4: video plays, seeks, and loads captions
+[1A[2K[266/304] tests/functional/dl2.spec.js:34:31 › DL2 week 5: video plays, seeks, and loads captions
+[1A[2K[267/304] tests/functional/dl2.spec.js:34:31 › DL2 week 6: video plays, seeks, and loads captions
+[1A[2K[268/304] tests/functional/dl2.spec.js:49:1 › DL2 enlarged text remains readable and every mobile lesson fits
+[1A[2K[269/304] tests/functional/dl2.spec.js:64:1 › DL2 worksheet typed answers appear in print
+[1A[2K[270/304] tests/functional/dl2.spec.js:67:1 › DL2 knowledge-check choices keep the classroom type floor at every text size
+[1A[2K[271/304] tests/functional/financial-contrast.spec.js:5:3 › Financial Readiness pre-test link stays readable in light mode and on hover
+[1A[2K[272/304] tests/functional/financial-contrast.spec.js:5:3 › Financial Readiness pre-test link stays readable in dark mode and on hover
+[1A[2K[273/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 1: every slide reflows with readable and enlarged text
+[1A[2K[274/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 1: menu and text controls work by keyboard
+[1A[2K[275/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 2: every slide reflows with readable and enlarged text
+[1A[2K[276/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 2: menu and text controls work by keyboard
+[1A[2K[277/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 3: every slide reflows with readable and enlarged text
+[1A[2K[278/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 3: menu and text controls work by keyboard
+[1A[2K[279/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 4: every slide reflows with readable and enlarged text
+[1A[2K[280/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 4: menu and text controls work by keyboard
+[1A[2K[281/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 5: every slide reflows with readable and enlarged text
+[1A[2K[282/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 5: menu and text controls work by keyboard
+[1A[2K[283/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 6: every slide reflows with readable and enlarged text
+[1A[2K[284/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 6: menu and text controls work by keyboard
+[1A[2K[285/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 7: every slide reflows with readable and enlarged text
+[1A[2K[286/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 7: menu and text controls work by keyboard
+[1A[2K[287/304] tests/functional/ics-slide-accessibility.spec.js:6:3 › Computer Skills week 8: every slide reflows with readable and enlarged text
+[1A[2K[288/304] tests/functional/ics-slide-accessibility.spec.js:48:3 › Computer Skills week 8: menu and text controls work by keyboard
+[1A[2K[289/304] tests/functional/ics-slide-accessibility.spec.js:105:1 › Computer Skills tables scroll by keyboard without changing slides
+[1A[2K[290/304] tests/functional/shell.spec.js:3:1 › app bar is injected with seal-home link and controls
+[1A[2K[291/304] tests/functional/shell.spec.js:11:1 › Text Size + persists across reload via data-text-size
+[1A[2K[292/304] tests/functional/shell.spec.js:24:1 › Text Size is available on standalone course pages and visibly scales text
+[1A[2K[293/304] tests/functional/shell.spec.js:37:1 › computer skills dashboard links resolve from no-slash route
+[1A[2K[294/304] tests/functional/shell.spec.js:45:1 › legacy computer-skills week route redirects to canonical presentation
+[1A[2K[295/304] tests/functional/shell.spec.js:51:1 › digital literacy retired form routes open browser assessments
+[1A[2K[296/304] tests/functional/shell.spec.js:61:1 › digital literacy practice quiz exposes printable PDF results
+[1A[2K[297/304] tests/functional/shell.spec.js:76:1 › Help opens the glossary modal and the duplicate FAB is hidden
+[1A[2K[298/304] tests/functional/shell.spec.js:83:1 › reduced-motion: flag carries the gate class
+[1A[2K[299/304] tests/functional/shell.spec.js:91:1 › skip-to-content link is present and targets main
+[1A[2K[300/304] tests/functional/shell.spec.js:98:1 › instructors landing loads (no dead /instructors/ link) with the shell
+[1A[2K[301/304] tests/functional/va-and-intake-repairs.spec.js:8:1 › VA teaching and handouts direct learners to current sign-in and health tools
+[1A[2K[302/304] tests/functional/va-and-intake-repairs.spec.js:27:1 › intake confirmation action resolves and displays success without sending form data
+[1A[2K[303/304] tests/functional/va-and-intake-repairs.spec.js:44:3 › instructor footer contrast meets AA: /instructors/intake.html
+[1A[2K[304/304] tests/functional/va-and-intake-repairs.spec.js:44:3 › instructor footer contrast meets AA: /instructors/classes/
+[1A[2K  304 passed (58.6s)
+==> 5/5 a11y check (axe-core, ratchet vs committed baseline)
+  / [homepage] — clean
+  /courses/computer-skills/index.html [computer-skills: course home] — clean
+  /courses/computer-skills/weeks/week-01/pre-test.html [computer-skills: pre-test] — clean
+  /courses/computer-skills/weeks/week-08/post-test.html [computer-skills: post-test] — clean
+  /courses/computer-skills/weeks/week-01/presentation.html [computer-skills: VA Online Services] — clean
+  /courses/computer-skills/weeks/week-02/presentation.html [computer-skills: Windows Tips & Productivity] — clean
+  /courses/computer-skills/weeks/week-03/presentation.html [computer-skills: Email Productivity (Gmail)] — clean
+  /courses/computer-skills/weeks/week-04/presentation.html [computer-skills: Microsoft Word] — clean
+  /courses/computer-skills/weeks/week-05/presentation.html [computer-skills: Microsoft Excel] — clean
+  /courses/computer-skills/weeks/week-06/presentation.html [computer-skills: Cloud Computing & Google Drive] — clean
+  /courses/computer-skills/weeks/week-07/presentation.html [computer-skills: Introduction to AI Tools] — clean
+  /courses/computer-skills/weeks/week-08/presentation.html [computer-skills: Mobile Integration & Review] — clean
+  /courses/financial-readiness/financial-readiness.html [financial-readiness: course home] — clean
+  /courses/financial-readiness/assessments/pre-test-form.html [financial-readiness: pre-test] — clean
+  /courses/financial-readiness/assessments/post-test-form.html [financial-readiness: post-test] — clean
+  /courses/digital-literacy-1/index.html [digital-literacy-1: course home] — clean
+  /courses/digital-literacy-1/assessments/pre-test.html [digital-literacy-1: pre-test] — clean
+  /courses/digital-literacy-1/assessments/post-test.html [digital-literacy-1: post-test] — clean
+  /courses/digital-literacy-1/weeks/week-01/presentation.html [digital-literacy-1: Inside the Computer] — clean
+  /courses/digital-literacy-1/weeks/week-02/presentation.html [digital-literacy-1: Getting Online] — clean
+  /courses/digital-literacy-1/weeks/week-03/presentation.html [digital-literacy-1: Creating & Communicating] — clean
+  /courses/digital-literacy-1/weeks/week-04/presentation.html [digital-literacy-1: Citizenship & Safety] — clean
+  /courses/digital-literacy-1/weeks/week-05/presentation.html [digital-literacy-1: Review & Testing Day] — clean
+  /courses/digital-literacy-2/index.html [digital-literacy-2: course home] — clean
+  /courses/digital-literacy-2/assessments/pre-test.html [digital-literacy-2: pre-test] — clean
+  /courses/digital-literacy-2/assessments/post-test.html [digital-literacy-2: post-test] — clean
+  /courses/digital-literacy-2/weeks/week-01/presentation.html [digital-literacy-2: Make technology work for you] — clean
+  /courses/digital-literacy-2/weeks/week-02/presentation.html [digital-literacy-2: Find, judge, and organize information] — clean
+  /courses/digital-literacy-2/weeks/week-03/presentation.html [digital-literacy-2: Create something people can use] — clean
+  /courses/digital-literacy-2/weeks/week-04/presentation.html [digital-literacy-2: Communicate and collaborate with care] — clean
+  /courses/digital-literacy-2/weeks/week-05/presentation.html [digital-literacy-2: Protect your work and show your skills] — clean
+  /courses/digital-literacy-2/weeks/week-06/presentation.html [digital-literacy-2: Guide an AI agent to improve a web app] — clean
+  /instructors/intake.html [instructor intake] — clean
+  /instructors/classes/index.html [class directory] — clean
+a11y-check: PASS (no violations beyond the committed baseline)
+==> readability baseline (report-only)
+readability-gate — Flesch-Kincaid, ceiling grade 8 (BASELINE / report-only)
+allowlist: 6 term(s) from config/readability-allowlist.json
+
+grade  ease   words  sent   status  file
+  5.3   64.3   1144   275  ok      courses/computer-skills/weeks/week-01/presentation.html
+  3.3   77.4    831   261  ok      courses/computer-skills/weeks/week-02/presentation.html
+  4.8   69.4   2395   488  ok      courses/computer-skills/weeks/week-03/presentation.html
+  4.9   68.5   1965   424  ok      courses/computer-skills/weeks/week-04/presentation.html
+  3.6   75.4   1548   422  ok      courses/computer-skills/weeks/week-05/presentation.html
+  4.3   73.7   1668   317  ok      courses/computer-skills/weeks/week-06/presentation.html
+  4.0   74.8   1257   268  ok      courses/computer-skills/weeks/week-07/presentation.html
+  4.2   71.7    780   197  ok      courses/computer-skills/weeks/week-08/presentation.html
+  3.8   76.5   1662   332  ok      courses/digital-literacy-1/weeks/week-01/presentation.html
+  3.6   79.4   1804   317  ok      courses/digital-literacy-1/weeks/week-02/presentation.html
+  4.1   75.1   1573   309  ok      courses/digital-literacy-1/weeks/week-03/presentation.html
+  4.9   70.5   2052   338  ok      courses/digital-literacy-1/weeks/week-04/presentation.html
+  4.5   73.6   1502   247  ok      courses/digital-literacy-1/weeks/week-05/presentation.html
+  1.4   96.8   1928   290  ok      courses/digital-literacy-2/weeks/week-01/presentation.html
+  6.4   58.1   2675   540  ok      courses/digital-literacy-2/weeks/week-02/presentation.html
+  4.1   73.7   2692   609  ok      courses/digital-literacy-2/weeks/week-03/presentation.html
+  6.2   60.1   3160   576  ok      courses/digital-literacy-2/weeks/week-04/presentation.html
+  5.8   64.4   2440   391  ok      courses/digital-literacy-2/weeks/week-05/presentation.html
+  4.4   74.0   3444   588  ok      courses/digital-literacy-2/weeks/week-06/presentation.html
+
+files: 19  scored: 19  over ceiling: 0  errors: 0  median grade: 4.3
+baseline mode — exit 0. Drop --baseline to fail on files over the ceiling.
+quality gate: PASS

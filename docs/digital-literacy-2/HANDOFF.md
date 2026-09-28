@@ -1,5 +1,40 @@
 # Digital Literacy Level 2 course
 
+## Narration refresh — approved September 28, 2026
+
+The narration-only refresh uses ElevenLabs voice `Dslrhjl3ZpzrctukrQSN`, whose
+provider display name is **Hey Its Brad - Clear Narrator for Documentary**.
+Sources, settings, usage snapshots and receipts are under
+`video/digital-literacy-2/elevenlabs-brad-v3-refresh/`. Earlier Britt profiles
+remain provenance; raw/isolated sources and rejected candidates are also retained
+under `~/Desktop/vub-brad-narration-refresh/`. Per-take settings override the profile
+default. HyperFrames advanced from 0.8.58 to 0.8.82 with source validation.
+
+Use `check-expressive-takes.py --profile brad-refresh` with both `--model base.en`
+and `--model small.en`, then `import-elevenlabs-narration.py --profile brad-refresh`,
+`normalize-pace.py`, `align-captions.py` and a normal `build-media.py` run. Use the
+media Python environment for transcription, import and alignment.
+
+For this scope, run `refresh-video-chapters.py` instead of the broad page generator.
+It updates existing chapter times and content-hash media URL versions, including
+the Week 1 archived presentation,
+and preserves the Mission Control deck and assessment release. Caption grouping
+shares up to 0.6 seconds of display time between neighboring phrases for readability,
+while keeping every cue inside its audio clip and leaving speech unstretched.
+
+After strict source checks, renders and loudness normalization, run
+`verify-media.py --profile brad-refresh` and the complete quality gate.
+`build-narration-preview.py` creates the six-video local gallery after the new
+manifest verifies. `verify-narration-playback.cjs` checks all sixty keyboard seeks,
+eighteen actual playback/caption/audio-decode samples, and gallery accessibility.
+It defaults to `http://127.0.0.1:3948` (`DL2_REVIEW_URL` overrides the port).
+
+The 135–145 WPM audit band is advisory, not the separate defect gate. Retain and
+report its warnings. Targeted pacing revisions must preserve words and natural
+pronunciation; do not change thresholds or mechanically stretch speech to pass.
+The user approved publication on September 28, 2026. See `NARRATION-REFRESH.md`
+for validation evidence and the retained pacing observations.
+
 ## Mission Control (Sep 2026)
 
 Week 1 and the pre/post tests run on the Mission Control system in

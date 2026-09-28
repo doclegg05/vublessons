@@ -1,0 +1,49 @@
+{
+  "formatVersion": 1,
+  "voiceEngine": "ElevenLabs eleven_v3, Britt (iKrofGyA12WC0e6AhZ8B); Voice Isolator cleanup; directed delivery, no time stretch; chaptered teaching",
+  "renderer": "HyperFrames 0.8.58, local GSAP 3.14.2",
+  "videos": [
+    {
+      "path": "courses/digital-literacy-2/media/week-01.mp4",
+      "sha256": "26107e712bb03889f50a31bc3df3df7a50fa9b055b300d85209bdfaa67df81d0",
+      "durationSeconds": 427.9,
+      "bytes": 10517804,
+      "captions": "courses/digital-literacy-2/media/week-01.vtt"
+    },
+    {
+      "path": "courses/digital-literacy-2/media/week-02.mp4",
+      "sha256": "8561603d305a2fd8cf97c273e9ff027db47c8d9dda492915db6b27d58c2c5a24",
+      "durationSeconds": 431.638,
+      "bytes": 11004752,
+      "captions": "courses/digital-literacy-2/media/week-02.vtt"
+    },
+    {
+      "path": "courses/digital-literacy-2/media/week-03.mp4",
+      "sha256": "b90a9d2608457e23896ee2228cbcc4c27081522a3a16bb99593eade85825d799",
+      "durationSeconds": 432.5,
+      "bytes": 10115741,
+      "captions": "courses/digital-literacy-2/media/week-03.vtt"
+    },
+    {
+      "path": "courses/digital-literacy-2/media/week-04.mp4",
+      "sha256": "5ed3a655561091ad0eb4e781cf56edc0140b3864bc9ad93a8b4de7db3ede78a9",
+      "durationSeconds": 440.584,
+      "bytes": 13880966,
+      "captions": "courses/digital-literacy-2/media/week-04.vtt"
+    },
+    {
+      "path": "courses/digital-literacy-2/media/week-05.mp4",
+      "sha256": "da1f24c5a64303f097f10ce4c1c69bac42b6418ea2066f6e844de75155487c01",
+      "durationSeconds": 451.4,
+      "bytes": 10684083,
+      "captions": "courses/digital-literacy-2/media/week-05.vtt"
+    },
+    {
+      "path": "courses/digital-literacy-2/media/week-06.mp4",
+      "sha256": "4d475cc9c984491fb0e12caa2637b4f4c9bbcb5e018a604980a1fce824a685da",
+      "durationSeconds": 451.2,
+      "bytes": 10552859,
+      "captions": "courses/digital-literacy-2/media/week-06.vtt"
+    }
+  ]
+}

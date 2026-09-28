@@ -1,0 +1,68 @@
+[
+  {
+    "week": "week-01",
+    "chapter": "beat-03",
+    "model": "small.en",
+    "sourceSha256": "46d1606ae807fb5d344d4daa1e95eeb2877163568782b79f0f5c674edd20f20a",
+    "durationSeconds": 41.5173125,
+    "wordsPerMinute": 154.6,
+    "matchRatio": 0.9813084112149533,
+    "differences": [
+      {
+        "expected": "Page zoom",
+        "recognized": "PageZoom"
+      }
+    ],
+    "recognized": "Now, suppose the browser tabs and the rest of the desktop are also hard to see. PageZoom will not solve every part of that problem. System text size changes text in supported areas. Display scaling changes the size of text, apps, and other interface elements more broadly. The exact controls depend on your computer. Ask the instructor before changing a shared workstation's system settings. This is like choosing between a magnifying glass for one page and a more comfortable arrangement for the whole desk. Which would you try first if only one website is too small? Browser zoom, because it matches the scope of the problem."
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-04",
+    "model": "small.en",
+    "sourceSha256": "251a7c89689063c94630feb9ead79f7dcb4b94be19cac1773a1295b38398daaf",
+    "durationSeconds": 40.3795625,
+    "wordsPerMinute": 162.0,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Picture a radio connected to headphones. Turning up the radio does not make the room speaker play if the sound is still going to the headphones. A computer can work the same way. First check whether the sound is muted. Then inspect the selected output device, speakers, a monitor, or a headset. Choose the device you intend to hear, begin at a comfortable volume, and play a short test. If that test works but a meeting does not, Check the meeting app's own audio choice next. Change one setting at a time. This gives you evidence about what fixed the problem, instead of leaving you with several unexplained changes."
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-02",
+    "model": "small.en",
+    "sourceSha256": "b74d49667f8f739505158cf943ed96d133f14831f87905267afe2f7e17a6d808",
+    "durationSeconds": 44.861,
+    "wordsPerMinute": 144.4,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Start with the words that describe your task, the kind of service, and the location. Computer Help Library, plus your town, is more useful than typing help by itself. Inspect the result title and the website address before opening it. If the results are too broad, add a specific service or location. If there are no useful results, remove one restriction rather than assuming the service does not exist. Filters can help, but they can also hide a relevant page. Pause and write a search for your chosen community task. Explain what each word contributes. Then, change one term and compare the results instead of opening every link."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-06",
+    "model": "small.en",
+    "sourceSha256": "3fec110fd4667fe6302755e219c75c8cb12d2305ec43ce68b588859e8c390ac4",
+    "durationSeconds": 46.78825,
+    "wordsPerMinute": 138.5,
+    "matchRatio": 0.9629629629629629,
+    "differences": [
+      {
+        "expected": "instructor-approved",
+        "recognized": "instructor -approved"
+      },
+      {
+        "expected": "the",
+        "recognized": "a"
+      },
+      {
+        "expected": "plain-text",
+        "recognized": "plain text"
+      },
+      {
+        "expected": "text-file",
+        "recognized": "text file"
+      }
+    ],
+    "recognized": "Use the instructor -approved tool if one is available, or begin with a supplied starter. Save the file with its HTML extension and open it in the browser. Confirm that the heading, search field, filter, and results appear. Keep this first working version before asking for changes. If no AI account is available, you can still complete the exercise with a plain text editor. Change the heading and one fictional resource. Save the file and refresh the browser. Be careful that the editor has not silently added a text file extension. The goal is a working result you can explain, not evidence that you used a particular paid service or model."
+  }
+]

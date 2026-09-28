@@ -1,0 +1,74 @@
+[
+  {
+    "week": "week-01",
+    "chapter": "beat-03",
+    "text": "[thoughtful] Now suppose the browser tabs and the rest of the desktop are also hard to see. [short pause] Page zoom will not solve every part of that problem. [short pause] System text size changes text in supported areas; display scaling changes the size of text, apps, and other interface elements more broadly. [short pause] The exact controls depend on your computer. [short pause] Ask the instructor before changing a shared workstation's system settings. [short pause] This is like choosing between a magnifying glass for one page and a more comfortable arrangement for the whole desk. [short pause] [curious] Which would you try first if only one website is too small? [short pause] [confident] Browser zoom, because it matches the scope of the problem.\n",
+    "settings": {
+      "model": "eleven_v3",
+      "voice": "Dslrhjl3ZpzrctukrQSN",
+      "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
+      "speed": 0.85,
+      "stability": 0.5,
+      "similarityBoost": 0.8,
+      "style": 0,
+      "useSpeakerBoost": false,
+      "language": "en",
+      "outputFormat": "mp3_44100_128"
+    },
+    "output_directory": "week-01/beat-03-pacing-candidate/raw"
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-04",
+    "text": "[warmly] Picture a radio connected to headphones. [short pause] Turning up the radio does not make the room speaker play if the sound is still going to the headphones. [short pause] [interested] A computer can work the same way. [short pause] First check whether the sound is muted. [short pause] Then inspect the selected output device: speakers, a monitor, or a headset. [short pause] Choose the device you intend to hear, begin at a comfortable volume, and play a short test. [short pause] If that test works but a meeting does not, check the meeting app's own audio choice next. [short pause] [encouraging] Change one setting at a time. [short pause] This gives you evidence about what fixed the problem instead of leaving you with several unexplained changes.\n",
+    "settings": {
+      "model": "eleven_v3",
+      "voice": "Dslrhjl3ZpzrctukrQSN",
+      "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
+      "speed": 0.85,
+      "stability": 0.5,
+      "similarityBoost": 0.8,
+      "style": 0,
+      "useSpeakerBoost": false,
+      "language": "en",
+      "outputFormat": "mp3_44100_128"
+    },
+    "output_directory": "week-01/beat-04-pacing-candidate/raw"
+  },
+  {
+    "week": "week-02",
+    "chapter": "beat-02",
+    "text": "[interested] Start with the words that describe your task, the kind of service, and the location. [short pause] Computer help library plus your town is more useful than typing help by itself. [short pause] Inspect the result title and the website address before opening it. [short pause] If the results are too broad, add a specific service or location. [short pause] [reassuring] If there are no useful results, remove one restriction rather than assuming the service does not exist. [short pause] Filters can help, but they can also hide a relevant page. [short pause] [encouraging] [short pause] Pause and write a search for your chosen community task. [short pause] Explain what each word contributes. [short pause] Then change one term and compare the results instead of opening every link.\n",
+    "settings": {
+      "model": "eleven_v3",
+      "voice": "Dslrhjl3ZpzrctukrQSN",
+      "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
+      "speed": 0.85,
+      "stability": 0.5,
+      "similarityBoost": 0.8,
+      "style": 0,
+      "useSpeakerBoost": false,
+      "language": "en",
+      "outputFormat": "mp3_44100_128"
+    },
+    "output_directory": "week-02/beat-02-pacing-candidate/raw"
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-06",
+    "text": "[encouraging] Use the instructor-approved tool if one is available, or begin with the supplied starter. [short pause] Save the file with its HTML extension and open it in the browser. [short pause] Confirm that the heading, search field, filter, and results appear. [short pause] Keep this first working version before asking for changes. [short pause] [reassuring] If no AI account is available, you can still complete the exercise with a plain-text editor: change the heading and one fictional resource, save the file, and refresh the browser. [short pause] Be careful that the editor has not silently added a text-file extension. [short pause] [pleased] The goal is a working result you can explain, not evidence that you used a particular paid service or model.\n",
+    "settings": {
+      "model": "eleven_v3",
+      "voice": "Dslrhjl3ZpzrctukrQSN",
+      "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
+      "speed": 0.85,
+      "stability": 0.5,
+      "similarityBoost": 0.8,
+      "style": 0,
+      "useSpeakerBoost": false,
+      "language": "en",
+      "outputFormat": "mp3_44100_128"
+    },
+    "output_directory": "week-06/beat-06-pacing-candidate/raw"
+  }
+]
