@@ -114,3 +114,31 @@ test('a fresh open starts at slide 1; the same tab keeps its place', async ({ pa
   await fresh.goto(DECK);
   await expect(fresh.locator('.strip .count')).toHaveText('1 / 28');
 });
+
+// Final review minor: leaving a Do slide and coming back must not reset its running mission timer.
+const page4 = page3.replace('</main>', '<section class="slide" data-phase="evaluate"><div class="panel full"><h1>Four</h1></div></section></main>');
+
+test('returning to a Do slide keeps its running timer', async ({ page }) => {
+  await page.clock.install();
+  await page.goto('http://localhost:3939/courses/digital-literacy-2/os/fonts.css');
+  await page.setContent(page4, { waitUntil: 'load' });
+  await page.keyboard.press('3');
+  await page.keyboard.press('Enter');
+  await expect(active(page)).toHaveText('Three');
+  await page.keyboard.press('t');
+  await page.clock.runFor(5000);
+  await expect(page.locator('.strip .t')).toHaveText('T-00:55');
+  await page.keyboard.press('ArrowRight'); // forward one slide...
+  await expect(active(page)).toHaveText('Four');
+  await page.keyboard.press('ArrowLeft'); // ...and back
+  await expect(active(page)).toHaveText('Three');
+  await expect(page.locator('.strip .t')).toHaveText('T-00:55');
+  await page.clock.runFor(2000);
+  await expect(page.locator('.strip .t')).toHaveText('T-00:53');
+  await page.keyboard.press('PageUp'); // back to the slide before (to re-show it)...
+  await expect(active(page)).toHaveText('Two');
+  await page.keyboard.press('PageDown'); // ...and forward again
+  await expect(active(page)).toHaveText('Three');
+  await page.clock.runFor(1000);
+  await expect(page.locator('.strip .t')).toHaveText('T-00:52');
+});

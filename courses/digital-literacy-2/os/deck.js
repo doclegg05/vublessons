@@ -20,7 +20,7 @@
     '<path fill="url(#dl2g3)" d="M0 390 L110 350 L240 372 L380 340 L520 380 L660 350 L800 380 L940 340 L1040 360 L1085 470 L1085 560 L0 560Z M1315 470 L1360 350 L1450 372 L1530 345 L1600 360 L1600 560 L1315 560Z"/></svg>';
 
   var deck, slides = [], index = 0, steppers = new Map(), ui = {}, typed = '';
-  var timer = { left: 0, total: 0, running: false, expired: false, handle: null };
+  var timer = { left: 0, total: 0, running: false, expired: false, handle: null, slide: null };
   var storeKey = 'dl2os:slide:' + location.pathname;
 
   /* The resume position lives in sessionStorage: a reload (or reopening the deck in the same tab)
@@ -91,7 +91,9 @@
     setStep(next, dir === 'back' ? parts(next).length : 0);
     var stepper = steppers.get(next);
     if (stepper) stepper.reset();
-    if (next.dataset.minutes) setTimer(Number(next.dataset.minutes));
+    /* A timed slide sets the timer only when the timer isn't already its own, so stepping away
+     * and back (PageUp to re-show a demo, then PageDown) keeps a running mission timer. */
+    if (next.dataset.minutes && timer.slide !== next) { setTimer(Number(next.dataset.minutes)); timer.slide = next; }
     renderChrome();
     safeSet(storeKey, String(index));
     if (history.replaceState) history.replaceState(null, '', '#' + (index + 1));
