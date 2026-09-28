@@ -110,6 +110,9 @@ table.key td{border-bottom:1px solid var(--rule);padding:5pt 4pt;vertical-align:
 .mission-set { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .mission { break-before: page; margin-top: 26pt; }
 .mission:first-of-type { break-before: auto; margin-top: 0; }
+/* On paper the page break already separates missions; Chromium keeps a margin after a forced break, which
+ * pushed missions B–E 26pt lower than A and cost Mission D and E their bottom room. */
+@media print { .mission { margin-top: 0; } }
 /* Compact the generic namerow/mhead/two/home/fine spacing (unchanged elsewhere) so a
  * mission's larger step type still fits one letter page under the tall fixed letterhead. */
 .mission .namerow { margin-top:1pt; }
@@ -138,6 +141,13 @@ table.key td{border-bottom:1px solid var(--rule);padding:5pt 4pt;vertical-align:
 .mission .check { line-height:1.15; }
 .mission .home { margin-top:3pt; padding:4pt 8pt; break-inside:avoid; }
 .mission .fine { margin-top:2pt; padding-top:3pt; break-inside:avoid; }
-.mission .four-box { display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:0.75in; gap:5pt; margin-top:5pt; break-inside:avoid; }
+/* Keycaps take their own line room instead of overlapping the line above ("Enter" cut into "Display?"). */
+.mission kbd { display:inline-block; line-height:1.1; }
+/* Mission E: the four write-in boxes sit in one row so the mission, with its letterhead, fits one sheet. */
+.mission .four-box { display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:0.9in; gap:5pt; margin-top:5pt; break-inside:avoid; }
 .mission .four-box > div { border:1.5pt solid var(--navy); border-radius:6pt; padding:6pt 8pt; font-size:10.5pt; }
-.mission .four-box > div b { display:block; font-size:8pt; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--navy); margin-bottom:3pt; }
+.mission .four-box > div b { display:block; font-size:8pt; font-weight:800; letter-spacing:.05em; text-transform:uppercase; color:var(--navy); margin-bottom:3pt; }
+/* Mission E's full-width stuck box: no default paragraph margins, so the page keeps room at the bottom. */
+.mission .stuck.solo { margin-top:5pt; padding:6pt 8pt; }
+.mission .stuck.solo h4 { margin-top:0; }
+.mission .stuck.solo p { margin:2pt 0 0; }

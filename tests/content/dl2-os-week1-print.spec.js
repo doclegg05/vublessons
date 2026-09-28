@@ -1,6 +1,15 @@
 // Week 1 printouts: five letterhead missions with Point A/B and "You should see" on every step.
 const { test, expect } = require('@playwright/test');
+const { PDFDocument } = require('../../courses/digital-literacy-2/os/vendor/pdf-lib.min.js');
 const W = '/courses/digital-literacy-2/weeks/week-01/';
+
+// Prints a page the way Chromium's print dialog would (Letter, backgrounds on) and counts the sheets.
+async function printedPages(page, url) {
+  await page.goto(url);
+  await page.evaluate(() => document.fonts.ready);
+  const doc = await PDFDocument.load(await page.pdf({ format: 'Letter', printBackground: true }));
+  return doc.getPageCount();
+}
 
 test('five missions, each complete', async ({ page }) => {
   await page.goto(W + 'worksheet.html');
@@ -31,4 +40,9 @@ test('run sheet and key exist with the letterhead', async ({ page }) => {
   }
   await page.goto(W + 'run-sheet.html');
   await expect(page.locator('table tbody tr')).toHaveCount(9);
+});
+
+// I2 (final review): Mission E spilled onto a sixth, nearly empty sheet with its Take it home line.
+test('the worksheet prints as exactly 5 pages, one per mission', async ({ page }) => {
+  expect(await printedPages(page, W + 'worksheet.html')).toBe(5);
 });
