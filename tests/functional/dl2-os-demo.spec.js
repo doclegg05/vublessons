@@ -81,3 +81,29 @@ test('cursor rests on a visible fallback when its target is hidden by its own st
   expect(pos.left === '0px' && pos.top === '0px').toBe(false);
   expect(pos).toEqual({ left: '900px', top: '500px' });
 });
+
+// Final review minor: with full motion, Next pressed while the LAST step is still animating finishes that
+// step on screen and is consumed; only the following Next leaves the slide.
+const deckDemo = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}">
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="deck.css"><link rel="stylesheet" href="win11.css"></head>
+<body class="dl2-os"><main class="deck">
+<section class="slide"><div class="panel full"><h1>Demo</h1><div class="demo" data-demo="t-last" style="width:1200px"></div></div></section>
+<section class="slide"><div class="panel full"><h1>After</h1></div></section>
+</main><script src="deck.js"></script><script src="demo.js"></script>
+<script>DL2Demo.define({ id:'t-last', title:'Test', scene:'<div class="w11-wall"></div><button id="b1" style="position:absolute;left:100px;top:100px;width:200px;height:60px">One</button>',
+ steps:[{cap:'Start here.',check:'Start'},{cap:'Click <em>One</em>.',check:'Click One',target:'#b1',action:'click',state:{cls:{finished:true}}}]});</script>
+</body></html>`;
+
+test('Next during the last step\'s animation finishes the step and stays on the slide', async ({ page }) => {
+  await page.goto(BASE + 'fonts.css');
+  await page.setContent(deckDemo, { waitUntil: 'load' });
+  await expect(page.locator('.demo-stepno')).toHaveText('STEP 1 / 2');
+  await page.keyboard.press('ArrowRight'); // starts the last step (about 2.4s of animation)
+  await expect(page.locator('.demo-stepno')).toHaveText('STEP 2 / 2');
+  await expect(page.locator('.screen')).not.toHaveClass(/finished/);
+  await page.keyboard.press('ArrowRight'); // still animating: finish it now, stay here
+  await expect(page.locator('.screen')).toHaveClass(/finished/);
+  await expect(page.locator('.slide.is-active h1')).toHaveText('Demo');
+  await page.keyboard.press('ArrowRight'); // the step is done, so the deck moves on
+  await expect(page.locator('.slide.is-active h1')).toHaveText('After');
+});

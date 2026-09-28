@@ -140,7 +140,9 @@
     var ctl = {
       index: function () { return idx; },
       next: function () {
-        if (busy) jump(idx);
+        /* Mid-animation, Next finishes the current step on screen and is used up by that, even on
+         * the last step, so a quick presenter always sees each result before moving on. */
+        if (busy) { jump(idx); return true; }
         if (idx >= def.steps.length - 1) return false;
         play(idx + 1); return true;
       },
