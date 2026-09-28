@@ -1,4 +1,6 @@
 const {test,expect}=require('@playwright/test');
+// Real media-key checks run one player at a time, as in classroom use.
+test.describe.configure({mode:'default'});
 const {AxeBuilder}=require('@axe-core/playwright');
 const fs=require('fs'),crypto=require('crypto');
 const manifest=require('../../courses/digital-literacy-2/media/manifest.json');
@@ -8,12 +10,13 @@ const version=path=>crypto.createHash('sha256').update(fs.readFileSync(path)).di
 // checking the course navigation underneath. This drawer is absent from production.
 async function dismissPreviewDrawer(page){
  const host=page.locator('iframe[title="Netlify Drawer"]');
- if(!await host.count())return;
+ if(!/^deploy-preview-\d+--vubcourse\.netlify\.app$/.test(new URL(page.url()).hostname))return;
+ await host.waitFor({state:'attached',timeout:10000});
  const drawer=page.frameLocator('iframe[title="Netlify Drawer"]');
  const minimize=drawer.getByRole('button',{name:'Minimize',exact:true});
- if(await minimize.isVisible())await minimize.click({timeout:5000});
  const dismiss=drawer.getByRole('button',{name:'Dismiss',exact:true});
- if(await dismiss.isVisible())await dismiss.click({timeout:5000});
+ if(!await dismiss.isVisible()){await minimize.waitFor({state:'visible',timeout:10000});await minimize.click();}
+ await dismiss.click();
 }
 for(let week=1;week<=6;week++)test(`Week ${week}: opening, approved playback/captions, controls and return`,async({page,context})=>{
  const failures=[];page.on('pageerror',e=>failures.push(e.message));
@@ -40,6 +43,10 @@ for(let week=1;week<=6;week++)test(`Week ${week}: opening, approved playback/cap
  expect(await video.evaluate(v=>v.textTracks[0].mode)).toBe('showing');
  const transcript=page.getByRole('link',{name:/Transcript & chapters/});
  expect(await transcript.evaluate(a=>new URL(a.href).pathname.replace(/\.html$/,''))).toBe(`${base}/weeks/week-0${week}/video-transcript`);await expect(transcript).toHaveAttribute('target','_blank');
+ // Parallel browser tests must not compete for the Mac's audible media focus.
+ // The shipped player remains unmuted; only this test instance plays silently.
+ expect(await video.evaluate(v=>v.muted)).toBe(false);
+ await video.evaluate(v=>{v.muted=true;});
  await video.focus();await page.keyboard.press('Space');
  await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(.1);
  const at=await page.evaluate(()=>DL2Deck.index());
