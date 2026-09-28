@@ -10,7 +10,12 @@
   var KEY = 'dl2os:test:' + FORM, OUTBOX = 'dl2os:outbox';
   var LETTERS = ['A', 'B', 'C', 'D'];
   var esc = global.DL2Paper.esc;
-  var st = load() || { phase: 'start', name: '', started: null, at: 0, answers: ITEMS.map(function () { return null; }) };
+  var st = load() || fresh();
+  /* A shared lab PC can open on someone else's unsubmitted test. When a saved test in progress
+   * carries a name, the question and review screens say whose it is and offer Start over. */
+  var resumed = !!(st.name && (st.phase === 'q' || st.phase === 'review'));
+
+  function fresh() { return { phase: 'start', name: '', started: null, at: 0, answers: ITEMS.map(function () { return null; }) }; }
 
   function load() { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) { /* storage blocked */ } }
@@ -22,6 +27,11 @@
     return '<header class="test-top"><img src="/courses/digital-literacy-2/os/img/vub-seal-360.png" alt="" width="44" height="44">' +
       '<div class="ttl">Digital Literacy Level 2 · ' + LABEL + (st.name ? '<small>' + esc(st.name) + '</small>' : '') + '</div>' +
       (extra || '') + '</header>';
+  }
+  function resumeNote() {
+    if (!resumed) return '';
+    return '<div class="resume-note" role="note"><p>Continuing the ' + LABEL.toLowerCase() + ' for <strong>' + esc(st.name) + '</strong>. Not you?</p> ' +
+      '<button type="button" data-go="restart">Start over</button></div>';
   }
   function ticks() {
     return '<div class="ticks" aria-hidden="true">' + ITEMS.map(function (_, i) {
@@ -41,7 +51,7 @@
 
   function renderQuestion() {
     var it = ITEMS[st.at], chosen = st.answers[st.at];
-    root.innerHTML = top('<div class="q-count">Question ' + (st.at + 1) + ' of 20</div>') + ticks() +
+    root.innerHTML = top('<div class="q-count">Question ' + (st.at + 1) + ' of 20</div>') + resumeNote() + ticks() +
       '<main class="test-card" id="main"><h1 class="q" id="q-stem">' + esc(it.stem) + '</h1><div class="opts" role="radiogroup" aria-labelledby="q-stem">' +
       it.options.map(function (o, k) {
         var L = LETTERS[k], on = chosen === L;
@@ -55,7 +65,7 @@
 
   function renderReview() {
     var answered = st.answers.filter(Boolean).length;
-    root.innerHTML = top('<div class="q-count">Review</div>') + '<main class="test-card" id="main"><h1 tabindex="-1">Check your answers</h1>' +
+    root.innerHTML = top('<div class="q-count">Review</div>') + resumeNote() + '<main class="test-card" id="main"><h1 tabindex="-1">Check your answers</h1>' +
       '<p>You answered <strong>' + answered + ' of 20</strong>. Select any question to change it.</p><div class="review">' +
       ITEMS.map(function (it, i) {
         var a = st.answers[i];
@@ -179,6 +189,7 @@
     } else if (act === 'next') { if (st.at === 19) st.phase = 'review'; else st.at++; save(); render(); }
     else if (act === 'back') { st.at = Math.max(0, st.at - 1); save(); render(); }
     else if (act === 'last') { st.phase = 'q'; st.at = 19; save(); render(); }
+    else if (act === 'restart') { clear(); st = fresh(); resumed = false; render(); }
     else if (act === 'submit') root.querySelector('dialog.confirm').showModal();
     else if (act === 'cancel') {
       root.querySelector('dialog.confirm').close();

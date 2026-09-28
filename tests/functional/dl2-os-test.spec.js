@@ -257,3 +257,43 @@ test('fallback report escapes the record ID itself', async ({ page }) => {
   await expect(report).toContainText('Record DL2-PRE-<i>ID</i> · Lee Park');
   await expect(report.locator('i')).toHaveCount(0);
 });
+
+// I5 (final review): a lab PC can open on someone else's unsubmitted test. When a saved test in progress
+// has a name, the question and review screens say whose it is and offer Start over (keyboard, words, escaped).
+async function leaveTest(page, saved) {
+  await page.goto(URL);
+  await page.evaluate(s => { localStorage.clear(); localStorage.setItem('dl2os:test:pre', JSON.stringify(s)); }, saved);
+  await page.reload();
+}
+const inProgress = (phase, name) => ({ phase, name, started: new Date().toISOString(), at: 3, answers: Array.from({ length: 20 }, (_, i) => (i < 3 ? 'A' : null)) });
+
+test('a saved test in progress says whose it is, and Start over returns to the name screen', async ({ page }) => {
+  await leaveTest(page, inProgress('q', '<b>Pat</b> Smith'));
+  await expect(page.locator('.q-count')).toHaveText('Question 4 of 20');
+  const note = page.locator('.resume-note');
+  await expect(note).toHaveText('Continuing the pre-test for <b>Pat</b> Smith. Not you? Start over');
+  await expect(note.locator('b')).toHaveCount(0);
+  await page.keyboard.press('Shift+Tab'); // from the focused answer back to Start over
+  await expect(note.getByRole('button', { name: 'Start over' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.getByLabel('Your full name')).toHaveValue('');
+  await expect(page.getByLabel('Your full name')).toBeFocused();
+  await expect(page.locator('.resume-note')).toHaveCount(0);
+  expect(await page.evaluate(() => localStorage.getItem('dl2os:test:pre'))).toBeNull();
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Start the pre-test' })).toBeVisible();
+});
+
+test('the review screen also says whose test it is', async ({ page }) => {
+  await leaveTest(page, inProgress('review', 'Ann Lee'));
+  await expect(page.getByRole('heading', { name: 'Check your answers' })).toBeVisible();
+  await expect(page.locator('.resume-note')).toContainText('Continuing the pre-test for Ann Lee. Not you?');
+  await page.locator('.resume-note').getByRole('button', { name: 'Start over' }).click();
+  await expect(page.getByRole('button', { name: 'Start the pre-test' })).toBeVisible();
+});
+
+test('a test started in this visit shows no Not-you note', async ({ page }) => {
+  await start(page);
+  await expect(page.locator('.q-count')).toHaveText('Question 1 of 20');
+  await expect(page.locator('.resume-note')).toHaveCount(0);
+});

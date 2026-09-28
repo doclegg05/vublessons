@@ -53,6 +53,38 @@ body.dl2-test-page {
 .test-top .ttl small { display:block; font-weight:400; font-size:16px; opacity:.85; margin-top:2px; }
 .test-top .q-count { margin-left:auto; font-weight:700; font-size:20px; white-space:nowrap; }
 
+/* ---- "Continuing the test for NAME. Not you? Start over" (a shared lab PC resumed someone's test) ---- */
+.resume-note {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px 18px;
+  max-width:980px;
+  margin:16px auto 0;
+  padding:14px 20px;
+  background:#fff8e1;
+  border:2px solid #c9a227;
+  border-radius:12px;
+  color:#0f1c33;
+  font-size:20px;
+  line-height:1.4;
+}
+.resume-note p { margin:0; }
+.resume-note button {
+  font:inherit;
+  font-size:18px;
+  font-weight:700;
+  min-height:44px;
+  padding:8px 20px;
+  border-radius:10px;
+  border:2px solid #1b365d;
+  background:#fff;
+  color:#1b365d;
+  cursor:pointer;
+}
+.resume-note button:hover { background:#eef3fb; }
+.resume-note button:focus-visible { outline:3px solid #1b365d; outline-offset:3px; }
+
 /* ---- 20-segment progress ticks ---- */
 .ticks { display:grid; grid-template-columns:repeat(20,1fr); gap:4px; padding:14px 20px 0; max-width:980px; margin:0 auto; }
 .ticks i { display:block; height:8px; border-radius:4px; background:#cfd8e8; }
