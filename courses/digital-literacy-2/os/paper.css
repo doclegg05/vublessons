@@ -49,7 +49,7 @@
 .paper-doc tr.miss td { background:#fdf5f6; }
 .sig { display:grid; grid-template-columns:1fr 1fr; gap:24pt; font-size:9.5pt; color:#4a5874; margin-top:24pt; }
 .sig div { border-top:1pt solid var(--ink); padding-top:4pt; }
-.fine { margin-top:16pt; display:flex; justify-content:space-between; font-size:8pt; color:#7a869f; border-top:1pt solid var(--rule); padding-top:6pt; }
+.fine { margin-top:16pt; display:flex; justify-content:space-between; font-size:8pt; color:#5b6883; border-top:1pt solid var(--rule); padding-top:6pt; }
 
 /* ---------------- worksheet paper (ported from mockup 4) ---------------- */
 .namerow { display:grid; grid-template-columns:1.6fr 1fr; gap:18pt; font-size:12pt; color:#3a4763; margin-top:8pt; }
