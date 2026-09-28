@@ -150,7 +150,7 @@ body.dl2-test-page {
 .review-row:hover { border-color:#94a8c8; }
 .review-row b { flex:none; width:32px; height:32px; border-radius:8px; background:#e8eef8; color:#1b365d; display:grid; place-items:center; font-weight:700; }
 .review-row span { flex:1; }
-.review-row em { flex:none; font-style:normal; font-weight:700; color:#1d6b3a; }
+.review-row em { flex:none; font-style:normal; font-weight:700; color:#1B365D; }
 .review-row.skipped { background:#fdf3f5; border-color:#e2a3b1; }
 .review-row.skipped em { color:#a3142f; }
 
@@ -166,3 +166,16 @@ dialog.confirm .test-nav button { min-width:140px; }
 .pdf-status, .copy-status { font-size:18px; color:#2a3752; margin:8px 0; }
 .html-report { margin-top:24px; text-align:left; }
 .html-report .paper-doc { box-shadow:0 10px 30px -14px rgba(15,28,51,.3); }
+
+/* ---- print: only the HTML-report fallback (the printable graded report) belongs on
+ * paper. Hide all app chrome — the navy header, progress ticks, text-size control, and
+ * every heading/button/status line in the test card — leaving just .html-report. ---- */
+@media print {
+  .test-top,
+  .ticks,
+  .test-textsize,
+  .test-card h1,
+  .test-card .test-nav,
+  .pdf-status,
+  .copy-status { display:none !important; }
+}

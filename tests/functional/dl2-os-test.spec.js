@@ -90,3 +90,62 @@ test('the page registers its Netlify form and loads no external resources', asyn
   await expect(page.locator('form[name="dl2-pretest"][data-netlify="true"]')).toHaveCount(1);
   expect(external).toEqual([]);
 });
+
+test('focus moves to the review h1 and the result h1 on those transitions', async ({ page }) => {
+  await start(page);
+  await answerAll(page);
+  const reviewIsActive = await page.evaluate(() => {
+    var h1 = document.querySelector('main h1');
+    return !!h1 && document.activeElement === h1 && h1.textContent === 'Check your answers';
+  });
+  expect(reviewIsActive).toBe(true);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Yes, submit' }).click();
+  const resultIsActive = await page.evaluate(() => {
+    var h1 = document.querySelector('main h1');
+    return !!h1 && document.activeElement === h1 && h1.textContent.indexOf('Thank you') === 0;
+  });
+  expect(resultIsActive).toBe(true);
+});
+
+test('Go back in the confirm dialog returns focus to Submit my test', async ({ page }) => {
+  await start(page);
+  await answerAll(page);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Go back' }).click();
+  await expect(page.getByRole('button', { name: 'Submit my test' })).toBeFocused();
+});
+
+test('outbox: a failed item is preserved without duplication after a partial flush', async ({ page }) => {
+  const mk = (id, letter) => ({
+    'form-name': 'dl2-pretest', 'bot-field': '', 'record-id': id, student: letter + ' Tester',
+    form: 'pre v1', started: new Date().toISOString(), submitted: new Date().toISOString(),
+    score: '18/20', domains: 'x:18/20', answers: Array(20).fill(letter).join(',')
+  });
+  const aa = mk('DL2-PRE-20260928-1650-AA', 'A');
+  const bb = mk('DL2-PRE-20260928-1650-BB', 'B');
+  await page.goto(URL);
+  await page.evaluate(([aa, bb]) => {
+    try { localStorage.clear(); localStorage.setItem('dl2os:outbox', JSON.stringify([aa, bb])); } catch (e) {}
+  }, [aa, bb]);
+  const posts = [];
+  await page.route('**/', async route => {
+    if (route.request().method() !== 'POST') return route.continue();
+    const body = new URLSearchParams(route.request().postData());
+    if (body.get('record-id') === aa['record-id']) { posts.push(body.get('record-id')); return route.fulfill({ status: 200, body: 'ok' }); }
+    return route.abort();
+  });
+  await page.reload();
+  await expect.poll(async () => {
+    const list = await page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox') || '[]'));
+    return list.length === 1 && list[0]['record-id'].endsWith('-BB');
+  }).toBe(true);
+  expect(posts).toContain(aa['record-id']);
+});
+
+test('ArrowDown twice on question 1 selects option B (radiogroup keyboard pattern)', async ({ page }) => {
+  await start(page);
+  await page.keyboard.press('ArrowDown');
+  await page.keyboard.press('ArrowDown');
+  await expect(page.locator('.opt[data-letter="B"]')).toHaveAttribute('aria-checked', 'true');
+});

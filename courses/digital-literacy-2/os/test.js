@@ -55,7 +55,7 @@
 
   function renderReview() {
     var answered = st.answers.filter(Boolean).length;
-    root.innerHTML = top('<div class="q-count">Review</div>') + '<main class="test-card" id="main"><h1>Check your answers</h1>' +
+    root.innerHTML = top('<div class="q-count">Review</div>') + '<main class="test-card" id="main"><h1 tabindex="-1">Check your answers</h1>' +
       '<p>You answered <strong>' + answered + ' of 20</strong>. Select any question to change it.</p><div class="review">' +
       ITEMS.map(function (it, i) {
         var a = st.answers[i];
@@ -63,6 +63,7 @@
       }).join('') + '</div><div class="test-nav"><button type="button" data-go="last">◀ Back to question 20</button><button type="button" class="primary" data-go="submit">Submit my test</button></div>' +
       '<dialog class="confirm"><h2>Submit your test?</h2><p>You answered ' + answered + ' of 20. You can’t change answers after you submit.</p>' +
       '<div class="test-nav"><button type="button" data-go="cancel">Go back</button><button type="button" class="primary" data-go="confirm">Yes, submit</button></div></dialog></main>';
+    root.querySelector('main h1').focus();
   }
 
   function download(bytes, filename) {
@@ -75,13 +76,28 @@
     return fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return true; });
   }
+  /* Outbox writes always re-read from storage immediately before writing, so a write
+   * here never clobbers an item another code path (a fresh submission failure, or a
+   * concurrent flush) added or removed in the meantime. */
+  function enqueueOutbox(item) {
+    var list = readOutbox().filter(function (i) { return i['record-id'] !== item['record-id']; });
+    list.push(item);
+    writeOutbox(list);
+  }
+  function dequeueOutbox(recordId) {
+    var list = readOutbox().filter(function (i) { return i['record-id'] !== recordId; });
+    writeOutbox(list);
+  }
   function flushOutbox() {
     var list = readOutbox();
     if (!list.length) return;
-    var remaining = [];
     list.reduce(function (p, item) {
-      return p.then(function () { return send(item).catch(function () { remaining.push(item); }); });
-    }, Promise.resolve()).then(function () { writeOutbox(remaining); });
+      return p.then(function () {
+        return send(item).then(function () {
+          dequeueOutbox(item['record-id']);
+        }).catch(function () { /* leave it queued; retried on the next flush */ });
+      });
+    }, Promise.resolve());
   }
 
   function submit() {
@@ -102,11 +118,12 @@
   function renderResult(report, payload) {
     var r = report.result, last = String(report.name).trim().split(/\s+/).pop().replace(/[^A-Za-z0-9-]/g, '') || 'Student';
     var filename = 'DL2-' + report.label.replace('-', '') + '-' + last + '-' + report.recordId.split('-').slice(2, 4).join('-') + '.pdf';
-    root.innerHTML = top() + '<main class="test-card result" id="main"><h1>Thank you, ' + esc(report.name) + '!</h1>' +
+    root.innerHTML = top() + '<main class="test-card result" id="main"><h1 tabindex="-1">Thank you, ' + esc(report.name) + '!</h1>' +
       '<p class="result-score">' + r.correct + ' of 20 correct</p><p class="pdf-status" role="status">Making your results PDF…</p>' +
       '<p class="copy-status" role="status">Sending a copy to Britt…</p>' +
       '<div class="test-nav"><button type="button" data-go="pdf" disabled>Save my PDF again</button><button type="button" class="primary" data-go="print" disabled>Print my results</button></div>' +
       '<div class="html-report" hidden></div></main>';
+    root.querySelector('main h1').focus();
     var pdfUrl = null, bytes = null;
     var build = global.DL2Pdf ? global.DL2Pdf.build(report) : Promise.reject(new Error('PDF library not loaded'));
     build.then(function (b) {
@@ -127,7 +144,7 @@
     send(payload).then(function () {
       root.querySelector('.copy-status').textContent = '✓ A copy was sent to Britt.';
     }).catch(function () {
-      var list = readOutbox(); list.push(payload); writeOutbox(list);
+      enqueueOutbox(payload);
       root.querySelector('.copy-status').textContent = 'Saved on this computer. Tell Britt.';
     });
   }
@@ -163,13 +180,28 @@
     else if (act === 'back') { st.at = Math.max(0, st.at - 1); save(); render(); }
     else if (act === 'last') { st.phase = 'q'; st.at = 19; save(); render(); }
     else if (act === 'submit') root.querySelector('dialog.confirm').showModal();
-    else if (act === 'cancel') root.querySelector('dialog.confirm').close();
+    else if (act === 'cancel') {
+      root.querySelector('dialog.confirm').close();
+      var submitBtn = root.querySelector('[data-go="submit"]');
+      if (submitBtn) submitBtn.focus();
+    }
     else if (act === 'confirm') { root.querySelector('dialog.confirm').close(); submit(); }
   });
   root.addEventListener('keydown', function (e) {
     if (st.phase !== 'q') return;
+    if (e.target.matches('input')) return;
     var k = e.key.toUpperCase();
-    if (LETTERS.indexOf(k) > -1 && !e.target.matches('input')) { st.answers[st.at] = k; save(); renderQuestion(); }
+    if (LETTERS.indexOf(k) > -1) { st.answers[st.at] = k; save(); renderQuestion(); return; }
+    /* ARIA radiogroup keyboard pattern: Down/Right moves to (and selects) the next
+     * option, Up/Left the previous one, wrapping at the ends. Selection follows focus,
+     * matching the letter-key and click behaviors above. */
+    var dir = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1 : (e.key === 'ArrowUp' || e.key === 'ArrowLeft') ? -1 : 0;
+    if (!dir) return;
+    e.preventDefault();
+    var count = ITEMS[st.at].options.length;
+    var idx = LETTERS.indexOf(st.answers[st.at]);
+    var nextIdx = idx === -1 ? (dir === 1 ? 0 : count - 1) : (idx + dir + count) % count;
+    st.answers[st.at] = LETTERS[nextIdx]; save(); renderQuestion();
   });
 
   flushOutbox();
