@@ -5,7 +5,7 @@ const read=p=>fs.readFileSync(p,'utf8');
 const w1=JSON.parse(read('scripts/dl2/curriculum.json')).weeks[0];
 const w6=JSON.parse(read('scripts/dl2/curriculum.json')).weeks[5];
 const dir='courses/digital-literacy-2/weeks/week-01';
-const plan=read(`${dir}/lesson-plan.html`),worksheet=read(`${dir}/worksheet.html`);
+const plan=read(`${dir}/lesson-plan.html`);
 const text=html=>html.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&#x27;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g,' ');
 const slide=title=>{const s=w1.slides.find(s=>s.title===title);if(!s)throw new Error(`no slide "${title}"`);return s;};
 
@@ -62,12 +62,14 @@ test('Week 1 knowledge checks offer believable wrong answers',()=>{
  for(const silly of ['Buy a new monitor','Erase the browser history','Publish your account password'])expect(options).not.toContain(silly);
 });
 
-test('Week 1 lab quick card gives Windows 11 steps on the lesson plan and the worksheet',()=>{
+// Narrowed 2026-09-28 (Mission Control, Task 11): the lesson plan only. The generated worksheet's quick card was
+// replaced by the letterhead missions 1A–1E, which give Windows 11 steps per mission (dl2-os-week1-print.spec.js).
+test('Week 1 lab quick card gives Windows 11 steps on the lesson plan',()=>{
  expect(w1.lab_paths.length).toBeGreaterThanOrEqual(8);
  for(const row of w1.lab_paths)expect(row).toHaveLength(2);
- for(const page of [plan,worksheet]){const plain=text(page);
-  expect(plain).toMatch(/Windows 11/);
-  for(const [task,steps] of w1.lab_paths){expect(plain).toContain(task);expect(plain).toContain(steps);}}
+ const plain=text(plan);
+ expect(plain).toMatch(/Windows 11/);
+ for(const [task,steps] of w1.lab_paths){expect(plain).toContain(task);expect(plain).toContain(steps);}
 });
 
 test('Week 1 prep list is specific to week 1',()=>{

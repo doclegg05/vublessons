@@ -24,11 +24,13 @@ const measure=async page=>{await settle(page);return page.evaluate(()=>{
  return {id:s.id,framed:!!f,top:r.top,bottom:r.bottom,roomBottom:Math.min(room.bottom,bar.top),roomRight:room.right,right:r.right,smallest,overflowing,fit};
 });};
 
+// Narrowed 2026-09-28 (Mission Control, Task 11): weeks 2–6 here. Week 1's replaced deck has its own fit checks at
+// 1920×1080 and every text size (tests/functional/dl2-os-week1-deck.spec.js).
 for(const [w,h] of screens)test(`Present mode fits every slide at ${w}×${h}`,async({page})=>{
  test.setTimeout(120_000);
  await page.setViewportSize({width:w,height:h});await page.emulateMedia({reducedMotion:'reduce'});
  const misfits=[];
- for(let n=1;n<=6;n++){
+ for(let n=2;n<=6;n++){
   await page.goto(deck(n));await page.keyboard.press('p');await expect(page.locator('body')).toHaveClass(/presenting/);
   const count=await page.locator('.slide').count();
   for(let i=1;i<=count;i++){
@@ -47,23 +49,9 @@ for(const [w,h] of screens)test(`Present mode fits every slide at ${w}×${h}`,as
  expect(misfits,misfits.join('\n')).toEqual([]);
 });
 
-test('Present mode turns on with P or the Present button and off with Escape or P',async({page})=>{
- await page.setViewportSize({width:1366,height:768});await page.goto(deck(1));
- const body=page.locator('body');
- await expect(body).not.toHaveClass(/presenting/);await expect(page.locator('.sidebar')).toBeVisible();
- await page.getByRole('button',{name:/Present/}).click();await expect(body).toHaveClass(/presenting/);
- await expect(page.locator('.sidebar')).toBeHidden();await expect(page.locator('.topbar')).toBeHidden();
- // Slide 3 fits in one part, so the next key moves straight to slide 4.
- await page.locator('[data-slide="2"]').evaluate(b=>b.click());await page.keyboard.press('ArrowRight');await expect(page.locator('#slide-4')).toBeVisible();
- await page.keyboard.press('Escape');await expect(body).not.toHaveClass(/presenting/);await expect(page.locator('.sidebar')).toBeVisible();
- await expect.poll(()=>page.evaluate(()=>!!document.fullscreenElement)).toBe(false);
- // Let the switch to full screen finish before the second press, as a person would.
- const settled=()=>page.waitForFunction(()=>!!document.fullscreenElement,null,{timeout:2000}).catch(()=>{})
-  .then(()=>page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))));
- await page.keyboard.press('p');await expect(body).toHaveClass(/presenting/);await settled();
- await page.keyboard.press('p');await expect(body).not.toHaveClass(/presenting/);
- await expect.poll(()=>page.evaluate(()=>!!document.fullscreenElement)).toBe(false);
-});
+// Retired 2026-09-28 (Mission Control, Task 11): 'Present mode turns on with P or the Present button and off with
+// Escape or P' and 'Interactions still work in present mode'. Both drove the replaced week 1 deck (its Present button,
+// sidebar and slide 21 check). The Mission Control deck has no present mode; see dl2-os-deck.spec.js.
 
 test('Leaving present mode puts every slide back exactly as it was',async({page})=>{
  await page.setViewportSize({width:1366,height:768});await page.goto(deck(3));
@@ -78,12 +66,6 @@ test('Typing P inside a form field does not start present mode',async({page})=>{
  await page.goto(deck(3));const id=await page.locator('.slide:has(#paper-cost)').getAttribute('id');
  await page.goto(deck(3)+'#'+id);await page.locator('#paper-cost').focus();await expect(page.locator('#paper-cost')).toBeFocused();await page.keyboard.press('p');
  await expect(page.locator('body')).not.toHaveClass(/presenting/);
-});
-
-test('Interactions still work in present mode',async({page})=>{
- await page.setViewportSize({width:1366,height:768});await page.goto(deck(1)+'#slide-21');await page.keyboard.press('p');
- await page.locator('#slide-21 .check-options button').nth(2).click();
- await expect(page.locator('#slide-21 .feedback')).toContainText('Correct');
 });
 
 test('A slide too tall for the screen is shown one part at a time, words first',async({page})=>{
@@ -107,11 +89,12 @@ test('Restarting right after Escape keeps presenting when the earlier full scree
  await expect(body).toHaveClass(/presenting/);
 });
 
+// Narrowed 2026-09-28 (Mission Control, Task 11): weeks 2–6; week 1's replaced deck has no present mode.
 test('Words stay readable against every slide background in present mode',async({page})=>{
  test.setTimeout(120_000);
  await page.setViewportSize({width:1920,height:1080});
  const bad=[];
- for(let n=1;n<=6;n++){
+ for(let n=2;n<=6;n++){
   await page.goto(deck(n));await page.keyboard.press('p');
   const count=await page.locator('.slide').count();
   for(let i=0;i<count;i++){
@@ -130,10 +113,11 @@ test('Words stay readable against every slide background in present mode',async(
  expect(bad,bad.join('\n')).toEqual([]);
 });
 
+// Narrowed 2026-09-28 (Mission Control, Task 11): week 1 slide 7 dropped with the replaced deck.
 test('Present mode passes an accessibility scan',async({page})=>{
  const AxeBuilder=require('@axe-core/playwright').default;
  await page.setViewportSize({width:1366,height:768});
- for(const [n,slide] of [[1,7],[4,17],[3,15]]){
+ for(const [n,slide] of [[4,17],[3,15]]){
   await page.goto(deck(n)+'#slide-'+slide);await page.keyboard.press('p');await expect(page.locator('body')).toHaveClass(/presenting/);
   const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
   expect(result.violations.map(v=>({id:v.id,nodes:v.nodes.map(x=>x.target)})),`week ${n} slide ${slide}`).toEqual([]);

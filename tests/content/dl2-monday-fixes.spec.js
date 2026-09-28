@@ -32,8 +32,6 @@ test('DL2 appears in the instructor area',()=>{
  expect(hrefs(read('instructors/index.html'))).toContain('/courses/digital-literacy-2/instructor-guide.html');
 });
 
-test('DL2 pre-test shows the learner name field without an extra click and promises no missing score field',()=>{
- const pre=read(`${course}/assessments/pre-test.html`);
- expect(pre).toMatch(/<details class="learner-details" open>/);
- expect(pre).not.toMatch(/saved score/i);
-});
+// Retired 2026-09-28 (Mission Control, Task 11): 'DL2 pre-test shows the learner name field without an extra click and
+// promises no missing score field'. It asserted the replaced 28-question pre-test's <details class="learner-details">;
+// the new pre-test asks for the name on its start screen (tests/functional/dl2-os-test.spec.js).
