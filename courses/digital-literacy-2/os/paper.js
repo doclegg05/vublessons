@@ -7,9 +7,7 @@
     course: 'Digital Literacy Level 2', cohort: 'Fall 2026 · Sep 28 – Nov 2', instructor: 'Britt Legg',
     location: 'New River Community and Technical College', classTime: '4:30–6:30 PM ET'
   };
-  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  function classDate(d) { return DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' · ' + META.classTime; }
+  function classDate(d) { return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/New_York' }) + ' · ' + META.classTime; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function letterhead(opts) {
     var date = opts && opts.date ? classDate(opts.date) : (opts && opts.dateText) || '';
@@ -21,5 +19,6 @@
       '<div><dt>Instructor</dt><dd>' + META.instructor + '</dd></div><div><dt>Date &amp; time</dt><dd>' + esc(date) + '</dd></div>' +
       '<div><dt>Location</dt><dd>' + META.location + '</dd></div></dl><div class="lh-rule" aria-hidden="true"></div></header>';
   }
-  global.DL2Paper = { META: META, classDate: classDate, letterhead: letterhead, esc: esc };
-})(window);
+  var api = { META: META, classDate: classDate, letterhead: letterhead, esc: esc };
+  if (typeof module === 'object' && module.exports) module.exports = api; else global.DL2Paper = api;
+})(typeof window !== 'undefined' ? window : globalThis);
