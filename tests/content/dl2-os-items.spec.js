@@ -58,3 +58,17 @@ test('record id is stable and readable', () => {
   expect(Grade.initials('cher')).toBe('C');
   expect(Grade.initials('')).toBe('X');
 });
+
+// I4 (final review): the record ID is built from the name, so initials take only the first A–Z letter
+// of each name part (accents folded first) and fall back to 'X'. A record ID can never carry markup.
+test('initials are letters only, so a record ID never carries markup', () => {
+  const hostile = Grade.initials('<img src=x onerror=alert(1)>');
+  expect(hostile).toMatch(/^[A-Z]{1,2}$/);
+  expect(hostile).toBe('IO');
+  expect(Grade.initials('<x onmouseover=window.__pwn=1 y')).toBe('XY');
+  expect(Grade.initials('José Núñez−Smith')).toBe('JN');
+  expect(Grade.initials('Émile  Zola')).toBe('EZ');
+  expect(Grade.initials("  o'brien ")).toBe('O');
+  expect(Grade.initials('123 !!! <>')).toBe('X');
+  expect(Grade.recordId('pre', new Date(2026, 8, 28, 16, 52), '<b>Pat</b> Smith')).toBe('DL2-PRE-20260928-1652-BS');
+});

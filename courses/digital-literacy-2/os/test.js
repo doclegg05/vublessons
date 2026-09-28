@@ -59,7 +59,7 @@
       '<p>You answered <strong>' + answered + ' of 20</strong>. Select any question to change it.</p><div class="review">' +
       ITEMS.map(function (it, i) {
         var a = st.answers[i];
-        return '<button type="button" class="review-row' + (a ? '' : ' skipped') + '" data-jump="' + i + '"><b>' + (i + 1) + '</b><span>' + esc(it.stem) + '</span><em>' + (a ? 'Answer: ' + a : '⚠ Not answered') + '</em></button>';
+        return '<button type="button" class="review-row' + (a ? '' : ' skipped') + '" data-jump="' + i + '"><b>' + (i + 1) + '</b><span>' + esc(it.stem) + '</span><em>' + (a ? 'Answer: ' + esc(a) : '⚠ Not answered') + '</em></button>';
       }).join('') + '</div><div class="test-nav"><button type="button" data-go="last">◀ Back to question 20</button><button type="button" class="primary" data-go="submit">Submit my test</button></div>' +
       '<dialog class="confirm"><h2>Submit your test?</h2><p>You answered ' + answered + ' of 20. You can’t change answers after you submit.</p>' +
       '<div class="test-nav"><button type="button" data-go="cancel">Go back</button><button type="button" class="primary" data-go="confirm">Yes, submit</button></div></dialog></main>';
@@ -152,10 +152,10 @@
   function htmlReport(report) {
     var r = report.result;
     return '<div class="paper-doc">' + global.DL2Paper.letterhead({ date: report.submitted }) +
-      '<h2>' + report.label + ' · Graded Results</h2><p>Record ' + report.recordId + ' · ' + esc(report.name) + ' · ' + r.correct + '/20</p>' +
+      '<h2>' + report.label + ' · Graded Results</h2><p>Record ' + esc(report.recordId) + ' · ' + esc(report.name) + ' · ' + r.correct + '/20</p>' +
       '<table><thead><tr><th>#</th><th>Skill checked</th><th>Your answer</th><th>Correct answer</th><th>Result</th></tr></thead><tbody>' +
       r.rows.map(function (row) {
-        return '<tr' + (row.correct ? '' : ' class="miss"') + '><td>' + row.n + '</td><td>' + esc(row.skill) + '</td><td>' + (row.chosen ? row.chosen + ' · ' + esc(row.chosenText) : 'Not answered') + '</td><td>' + row.answer + ' · ' + esc(row.answerText) + '</td><td>' + (row.correct ? '✓ Correct' : '✗ Incorrect') + '</td></tr>';
+        return '<tr' + (row.correct ? '' : ' class="miss"') + '><td>' + row.n + '</td><td>' + esc(row.skill) + '</td><td>' + (row.chosen ? esc(row.chosen) + ' · ' + esc(row.chosenText) : 'Not answered') + '</td><td>' + esc(row.answer) + ' · ' + esc(row.answerText) + '</td><td>' + (row.correct ? '✓ Correct' : '✗ Incorrect') + '</td></tr>';
       }).join('') + '</tbody></table></div>';
   }
 

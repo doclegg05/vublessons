@@ -211,3 +211,49 @@ test('ArrowDown twice on question 1 selects option B (radiogroup keyboard patter
   await page.keyboard.press('ArrowDown');
   await expect(page.locator('.opt[data-letter="B"]')).toHaveAttribute('aria-checked', 'true');
 });
+
+// I4 (final review): with the PDF unavailable, the HTML report shows the name and record ID as text only.
+// Every element in the report must be one the report itself writes, with no event-handler attributes.
+test('fallback report: a crafted name adds no markup of its own', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'DL2Pdf', { value: { build: () => Promise.reject(new Error('forced')) }, writable: false });
+  });
+  await page.route('**/', r => (r.request().method() === 'POST' ? r.fulfill({ status: 200, body: 'ok' }) : r.continue()));
+  const name = '<x onmouseover=window.__pwn=1 y';
+  await start(page, name);
+  await answerAll(page);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Yes, submit' }).click();
+  const report = page.locator('.html-report');
+  await expect(report).toBeVisible();
+  await expect(report).toContainText(name);
+  await expect(report).toContainText(/Record DL2-PRE-\d{8}-\d{4}-XY/);
+  const odd = await report.evaluate(el => {
+    const ok = ['DIV', 'HEADER', 'IMG', 'DL', 'DT', 'DD', 'H2', 'P', 'TABLE', 'THEAD', 'TBODY', 'TR', 'TH', 'TD'];
+    return [...el.querySelectorAll('*')]
+      .filter(n => !ok.includes(n.tagName) || [...n.attributes].some(a => /^on/i.test(a.name)))
+      .map(n => n.outerHTML.slice(0, 80));
+  });
+  expect(odd).toEqual([]);
+});
+
+test('fallback report escapes the record ID itself', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'DL2Pdf', { value: { build: () => Promise.reject(new Error('forced')) }, writable: false });
+    // Force a record ID with markup in it, whatever initials() returns.
+    let grade;
+    Object.defineProperty(window, 'DL2Grade', {
+      configurable: true,
+      get: () => grade,
+      set: v => { grade = Object.assign({}, v, { recordId: () => 'DL2-PRE-<i>ID</i>' }); }
+    });
+  });
+  await page.route('**/', r => (r.request().method() === 'POST' ? r.fulfill({ status: 200, body: 'ok' }) : r.continue()));
+  await start(page, 'Lee Park');
+  await answerAll(page);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Yes, submit' }).click();
+  const report = page.locator('.html-report');
+  await expect(report).toContainText('Record DL2-PRE-<i>ID</i> · Lee Park');
+  await expect(report.locator('i')).toHaveCount(0);
+});
