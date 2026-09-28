@@ -21,9 +21,14 @@ const contrast=(a,b)=>{const lum=c=>{const [r,g,bl]=c.match(/[\d.]+/g).slice(0,3
 //  - 'Assessment topic labels fit their tabs on a tablet-width screen' (old topic tabs)
 
 test.describe('shared lab computers',()=>{
- // Narrowed 2026-09-28 (Mission Control, Task 11): the old pre-test grading and its results checks are gone.
- test('Start fresh clears the previous learner\'s lessons after confirmation',async({page})=>{
+ // Narrowed 2026-09-28 (Mission Control, Task 11): the old pre-test grading is gone. The new pre-test keeps answers in
+ // progress (not results) on the computer, so Start fresh must clear those, but keep any unsent copy meant for Britt.
+ test('Start fresh clears the previous learner\'s lessons and test answers after confirmation',async({page})=>{
   await page.goto(deck(3)+'#slide-8');await expect(page.locator('#slide-8')).toBeVisible();
+  await page.goto(base+'/assessments/pre-test.html');
+  await page.getByLabel('Your full name').fill('Alice Example');await page.getByRole('button',{name:'Start the pre-test'}).click();
+  await page.locator('.opt[data-letter="A"]').click();
+  await page.evaluate(()=>localStorage.setItem('dl2os:outbox',JSON.stringify([{'record-id':'DL2-PRE-20260928-1700-AE'}])));
   await page.goto(base+'/index.html');await expect(page.locator('.continue-course')).toHaveText('Continue week 3');
   const reset=page.getByRole('button',{name:'Start fresh on this computer'});
   page.once('dialog',d=>d.dismiss());await reset.click();
@@ -31,6 +36,10 @@ test.describe('shared lab computers',()=>{
   page.once('dialog',d=>d.accept());await reset.click();
   await expect(page.locator('.continue-course')).toHaveText('Begin week 1');
   await expect(page.locator('[data-course-count]')).toHaveText('0 of 6 lessons viewed to the end');
+  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('dl2os:outbox')).length),'unsent copy kept').toBe(1);
+  await page.route('**/',r=>r.request().method()==='POST'?r.fulfill({status:200,body:'ok'}):r.continue());
+  await page.goto(base+'/assessments/pre-test.html');
+  await expect(page.getByLabel('Your full name')).toHaveValue('');await expect(page.locator('.q-count')).toHaveCount(0);
  });
 });
 

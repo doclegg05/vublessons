@@ -10,6 +10,9 @@
   if(!confirm('Clear saved lessons and test answers for Digital Literacy Level 2 on this computer? Print or download any results you need first.'))return;
   window.VubProgress?.reset('dl2');
   try{Object.keys(sessionStorage).filter(k=>k.startsWith('vub:dl2:assessment:')).forEach(k=>sessionStorage.removeItem(k));}catch(_){}
+  // Mission Control pre/post tests keep answers in progress here (os/test.js). The outbox (dl2os:outbox) is kept:
+  // it holds submitted copies that have not reached Britt yet.
+  try{['dl2os:test:pre','dl2os:test:post'].forEach(k=>localStorage.removeItem(k));}catch(_){}
   location.reload();
  });
  if(document.querySelector('.learning-home')){
