@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Headset Sound Test · Week 1 · Digital Literacy Level 2</title>
+<meta name="description" content="Mission 1B headset sound test for Digital Literacy Level 2: press one button to hear three notes in your headset.">
+<link rel="stylesheet" href="/courses/digital-literacy-2/os/fonts.css"><link rel="stylesheet" href="/courses/digital-literacy-2/os/paper.css">
+<style>
+  /* This page only: big, calm controls for a headset check at the workstation. */
+  .sound-test .k { font-size:10pt; font-weight:800; letter-spacing:.2em; color:var(--red); margin-top:16pt; }
+  .sound-test .doc-h1 { font-size:30pt; line-height:1.1; margin:4pt 0 10pt; }
+  .sound-test .say { font-size:20pt; line-height:1.45; color:var(--ink); margin:0 0 18pt; }
+  .sound-test .play { display:block; width:100%; min-height:96px; padding:14pt 18pt; font:800 28pt/1.2 "Source Sans 3", "Segoe UI", sans-serif; color:#fff; background:var(--navy); border:3px solid var(--navy); border-radius:12px; cursor:pointer; }
+  .sound-test .play:hover { background:#2C4A7C; }
+  .sound-test .play:focus-visible { outline:4px solid var(--gold); outline-offset:4px; }
+  .sound-test .sound-status { font-size:18pt; line-height:1.4; min-height:1.4em; margin:14pt 0 0; font-weight:700; color:var(--navy); }
+  .sound-test .stuck { margin-top:18pt; font-size:14pt; line-height:1.45; }
+  .sound-test .stuck h2 { font-family:"Source Sans 3", "Segoe UI", sans-serif; font-size:10pt; letter-spacing:.14em; font-weight:800; color:#a3142f; margin:0 0 4pt; }
+</style>
+</head>
+<body>
+<main class="paper-doc sound-test" id="main">
+<header class="letterhead"><div class="lh-bar" aria-hidden="true"></div><img class="lh-seal" src="/courses/digital-literacy-2/os/img/vub-seal-360.png" alt="Veterans Upward Bound seal"><div class="lh-org"><div class="lh-state">WEST VIRGINIA</div><div class="lh-name">Veterans Upward Bound</div><div class="lh-trio">A TRIO program funded by the U.S. Department of Education</div></div><dl class="lh-meta"><div><dt>Course</dt><dd>Digital Literacy Level 2</dd></div><div><dt>Cohort</dt><dd>Fall 2026 · Sep 28 – Nov 2</dd></div><div><dt>Instructor</dt><dd>Britt Legg</dd></div><div><dt>Date &amp; time</dt><dd>Mon, Sep 28, 2026 · 4:30–6:30 PM ET</dd></div><div><dt>Location</dt><dd>New River Community and Technical College</dd></div></dl><div class="lh-rule" aria-hidden="true"></div></header>
+
+<p class="k">WEEK 1 · MISSION B · STEP 5</p>
+<h1 class="doc-h1">Headset sound test</h1>
+<p class="say" id="say">Put your headset on. Click the button. You should hear three notes in your headset, not the speakers.</p>
+
+<button type="button" class="play" id="play" aria-describedby="say"><span aria-hidden="true">▶</span> Play test sound</button>
+<p class="sound-status" id="sound-status" role="status" aria-live="polite"></p>
+
+<section class="stuck" aria-labelledby="stuck-h">
+  <h2 id="stuck-h">IF YOU GET STUCK</h2>
+  <p><b>Heard it from the speakers?</b> Click the speaker icon on the taskbar, click the arrow › beside the volume slider, and choose your headset. Then press the button again.</p>
+  <p><b>Heard nothing?</b> Check that the headset is plugged in all the way and the volume slider is up.</p>
+</section>
+
+<div class="fine"><span>DL2 · Week 1 · Mission B</span><span>Headset sound test</span></div>
+</main>
+<script>
+/* Three rising notes (C5, E5, G5) made with the Web Audio API: no sound files to download. */
+(function () {
+  'use strict';
+  var play = document.getElementById('play'), status = document.getElementById('sound-status');
+  var Ctx = window.AudioContext || window.webkitAudioContext, ctx = null, timer = null;
+  var NOTES = [523.25, 659.25, 783.99], GAP = 0.38, RING = 1.1, PEAK = 0.25;
+  function note(freq, at) {
+    var osc = ctx.createOscillator(), gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(0.0001, at);
+    gain.gain.exponentialRampToValueAtTime(PEAK, at + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, at + RING);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(at);
+    osc.stop(at + RING + 0.05);
+  }
+  play.addEventListener('click', function () {
+    if (!Ctx) { status.textContent = 'This browser can’t play the test sound. Ask Britt for help.'; return; }
+    try {
+      if (!ctx) ctx = new Ctx();
+      if (ctx.state === 'suspended' && ctx.resume) ctx.resume();
+      var start = ctx.currentTime + 0.05;
+      NOTES.forEach(function (freq, i) { note(freq, start + i * GAP); });
+      status.textContent = 'Playing three notes…';
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        status.textContent = 'Done: three notes played. Heard them in your headset? Step 5 is done.';
+      }, (GAP * (NOTES.length - 1) + RING) * 1000);
+    } catch (e) {
+      status.textContent = 'The test sound didn’t start. Press the button again, or ask Britt for help.';
+    }
+  });
+})();
+</script>
+<script src="/shared/text-size.js"></script>
+</body></html>

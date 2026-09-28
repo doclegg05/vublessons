@@ -128,6 +128,8 @@ table.key td{border-bottom:1px solid var(--rule);padding:5pt 4pt;vertical-align:
 .mission .mission-steps > li .d .see { display:block; margin-top:1pt; font-size:12pt; color:#1d6b3a; }
 .mission .mission-steps > li .d .see::before { content:"You should see: "; font-weight:700; }
 .mission .mission-steps > li .d .see.alt::before { content:"You should see (hear): "; font-weight:700; }
+.mission .mission-steps > li .d .where { font-size:8.5pt; color:#5b6883; white-space:nowrap; }
+.mission .mission-steps > li .d .where a { color:var(--navy); }
 .mission .mission-steps > li .d .see .ln { border-bottom:1pt solid var(--ink); display:inline-block; min-width:56pt; }
 .mission .mission-steps > li .box { width:16pt; height:16pt; border:2pt solid var(--navy); border-radius:3pt; margin-top:1pt; flex:none; }
 .mission .two { margin-top:4pt; gap:8pt; }

@@ -1,4 +1,4 @@
-// Automated accessibility scan (axe) of the Mission Control page types: deck, letterhead missions, run sheet,
+// Automated accessibility scan (axe) of the Mission Control page types: deck, letterhead missions, run sheet, sound test,
 // the pre/post test and an answer key. Serious and critical findings fail the test.
 const { test, expect } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
@@ -7,6 +7,7 @@ const PAGES = [
   'weeks/week-01/presentation.html',
   'weeks/week-01/worksheet.html',
   'weeks/week-01/run-sheet.html',
+  'weeks/week-01/files/sound-test.html',
   'assessments/pre-test.html',
   'assessments/post-test.html',
   'assessments/pre-test-answer-key.html',
