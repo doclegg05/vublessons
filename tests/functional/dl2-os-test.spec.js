@@ -143,6 +143,68 @@ test('outbox: a failed item is preserved without duplication after a partial flu
   expect(posts).toContain(aa['record-id']);
 });
 
+// This is the discriminating race test: it fails against a batched flush (read the
+// outbox once, send everything, write the survivors back once at the end) because that
+// final write clobbers whatever another code path enqueued while the flush was in
+// flight. It passes only when each dequeue re-reads storage immediately before writing.
+test('outbox: an item enqueued while a flush is in flight is not clobbered by that flush\'s write', async ({ page }) => {
+  const mk = (id, letter) => ({
+    'form-name': 'dl2-pretest', 'bot-field': '', 'record-id': id, student: letter + ' Tester',
+    form: 'pre v1', started: new Date().toISOString(), submitted: new Date().toISOString(),
+    score: '18/20', domains: 'x:18/20', answers: Array(20).fill(letter).join(',')
+  });
+  const aa = mk('DL2-PRE-20260928-1700-AA', 'A');
+  const cc = mk('DL2-PRE-20260928-1700-CC', 'C');
+  await page.goto(URL);
+  await page.evaluate((aa) => {
+    try { localStorage.clear(); localStorage.setItem('dl2os:outbox', JSON.stringify([aa])); } catch (e) {}
+  }, aa);
+  await page.route('**/', async route => {
+    if (route.request().method() !== 'POST') return route.continue();
+    const body = new URLSearchParams(route.request().postData());
+    if (body.get('record-id') === aa['record-id']) {
+      await new Promise(r => setTimeout(r, 800));
+      return route.fulfill({ status: 200, body: 'ok' });
+    }
+    return route.abort();
+  });
+  const aaPosted = page.waitForRequest(req => {
+    if (req.method() !== 'POST') return false;
+    return new URLSearchParams(req.postData() || '').get('record-id') === aa['record-id'];
+  });
+  await Promise.all([aaPosted, page.reload()]);
+  // AA's POST is now in flight (the route above is 800ms into fulfilling it). Simulate a
+  // brand-new submission enqueuing CC through another code path while that flush is
+  // still pending, exactly as a real second tab or a fresh submit would.
+  await page.evaluate((cc) => {
+    var list = JSON.parse(localStorage.getItem('dl2os:outbox') || '[]');
+    list.push(cc);
+    localStorage.setItem('dl2os:outbox', JSON.stringify(list));
+  }, cc);
+  await expect.poll(async () => {
+    return page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox') || '[]'));
+  }, { timeout: 5000 }).toEqual([cc]);
+});
+
+test('print: only the HTML report shows, app chrome and score are hidden', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'DL2Pdf', {
+      value: { build: () => Promise.reject(new Error('forced')) },
+      writable: false
+    });
+  });
+  await start(page, 'Faye Cole');
+  await answerAll(page);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Yes, submit' }).click();
+  await expect(page.locator('.html-report')).toBeVisible();
+  await page.emulateMedia({ media: 'print' });
+  await expect(page.locator('.html-report')).toBeVisible();
+  await expect(page.locator('.result-score')).toBeHidden();
+  await expect(page.locator('.test-top')).toBeHidden();
+  await expect(page.locator('.copy-status')).toBeHidden();
+});
+
 test('ArrowDown twice on question 1 selects option B (radiogroup keyboard pattern)', async ({ page }) => {
   await start(page);
   await page.keyboard.press('ArrowDown');

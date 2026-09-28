@@ -168,14 +168,26 @@ dialog.confirm .test-nav button { min-width:140px; }
 .html-report .paper-doc { box-shadow:0 10px 30px -14px rgba(15,28,51,.3); }
 
 /* ---- print: only the HTML-report fallback (the printable graded report) belongs on
- * paper. Hide all app chrome — the navy header, progress ticks, text-size control, and
- * every heading/button/status line in the test card — leaving just .html-report. ---- */
+ * paper. Hide all app chrome — the navy header, progress ticks, text-size control,
+ * every heading/button/status line in the test card, and the score line — then flatten
+ * the test card itself (no border/shadow/padding/width cap) so .html-report is the only
+ * thing left on a plain white page. ---- */
 @media print {
+  body.dl2-test-page { background:#fff; }
   .test-top,
   .ticks,
   .test-textsize,
   .test-card h1,
   .test-card .test-nav,
   .pdf-status,
-  .copy-status { display:none !important; }
+  .copy-status,
+  .result-score { display:none !important; }
+  .test-card {
+    max-width:none;
+    margin:0;
+    padding:0;
+    border:none;
+    box-shadow:none;
+    background:#fff;
+  }
 }
