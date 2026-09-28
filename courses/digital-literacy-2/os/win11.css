@@ -25,7 +25,7 @@
 }
 .w11-tbi { width: 40px; height: 40px; border-radius: 4px; display: grid; place-items: center; position: relative; }
 .w11-tbi.open::after { content: ""; position: absolute; bottom: 2px; width: 16px; height: 3px; border-radius: 2px; background: #005fb8; }
-.w11-tray { position: absolute; right: 14px; font-size: 12px; text-align: right; line-height: 1.35; color: #1a1a1a; }
+.w11-tray { position: absolute; right: 6px; top: 0; bottom: 0; display: flex; align-items: center; gap: 2px; font-size: 12px; text-align: right; line-height: 1.35; color: #1a1a1a; }
 
 .w11-win {
   position: absolute; font-size: var(--ui); width: 66em; height: 632px;
@@ -115,4 +115,172 @@
 .w11-page { display:none; }
 .screen[data-page="system"] .w11-page[data-page="system"], .screen[data-page="display"] .w11-page[data-page="display"],
 .screen[data-page="sound"] .w11-page[data-page="sound"] { display:block; }
+.screen[data-page="print"] .w11-page[data-page="print"] { display:flex; }
 .w11-flyout { display:none; } .screen.menu-open .w11-flyout { display:block; }
+
+/* ================= Week 1 kits (demos/week-01.js) =================
+ * Shared chrome additions, the Quick Settings kit (w11-qs*) and the Word window + File ▸ Print
+ * backstage kit (wd-*). Every kit root sets its own px font-size and line-height so the
+ * text-size.js body rules (html[data-text-size] body{font-size:…!important}) can't leak in. */
+.screen { font-size:14px; line-height:normal; }
+/* The approved mockup sized everything border-box (its global `* { box-sizing:border-box }`). */
+.screen, .screen *, .screen *::before, .screen *::after { box-sizing:border-box; }
+
+/* ---- taskbar + tray ---- */
+.w11-taskbar { z-index:20; }
+.w11-tbi svg { display:block; }
+.w11-tbi.open { background:rgba(255,255,255,.66); box-shadow:inset 0 0 0 1px rgba(0,0,0,.05); }
+.w11-tray-btn { height:40px; display:flex; align-items:center; border-radius:4px; padding:0 8px; }
+.w11-tray-btn svg { display:block; }
+.w11-tray-icons { gap:10px; padding:0 10px; }
+.w11-tray-icons > span { display:grid; place-items:center; }
+.w11-clock { flex-direction:column; align-items:flex-end; justify-content:center; padding:0 6px 0 8px; }
+.w11-bell { padding:0 10px 0 6px; }
+.screen[data-qs="open"] .w11-tray-icons, .screen[data-qs="outputs"] .w11-tray-icons { background:rgba(255,255,255,.72); box-shadow:inset 0 0 0 1px rgba(0,0,0,.06); }
+
+/* ---- window chrome: SVG caption buttons, title icon ---- */
+.w11-title > svg { width:1.3em; height:1.3em; flex:none; }
+.w11-ctl svg { width:.84em; height:.84em; display:block; }
+
+/* ---- desktop shortcuts ---- */
+.w11-desk { position:absolute; left:4px; top:6px; display:flex; flex-direction:column; gap:10px; }
+.w11-dicon { width:78px; padding:4px 0 6px; display:flex; flex-direction:column; align-items:center; gap:3px; color:#fff; font-size:12px; line-height:1.25; text-align:center; text-shadow:0 1px 2px rgba(0,0,0,.65); }
+
+/* ---- Settings additions: slider, card chevrons, combo chevron ---- */
+.w11-slider { position:relative; display:block; flex:1; height:1.43em; }
+.w11-slider::before, .w11-slider::after { content:""; position:absolute; left:0; top:50%; height:.29em; margin-top:-.145em; border-radius:.15em; }
+.w11-slider::before { right:0; background:#8a8a8a; }
+.w11-slider::after { width:var(--v, 50%); background:#005fb8; }
+.w11-slider i { position:absolute; z-index:1; left:var(--v, 50%); top:50%; width:1.43em; height:1.43em; margin:-.715em 0 0 -.715em; border-radius:50%; background:#fff; box-shadow:0 0 0 1px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.2); }
+.w11-slider i::after { content:""; position:absolute; inset:.36em; border-radius:50%; background:#005fb8; }
+.w11-card .w11-card-slider { flex:none; width:12em; margin-right:.6em; }
+.w11-card .chev svg { width:1em; height:1em; display:block; }
+.w11-combo > svg { width:.8em; height:.8em; flex:none; }
+
+/* ---- Quick Settings flyout (bottom-right, above the taskbar) ---- */
+.w11-qs { position:absolute; right:12px; bottom:60px; z-index:10; width:360px; font-size:14px; line-height:1.3; color:#1a1a1a;
+  background:rgba(242,242,242,.94); backdrop-filter:blur(40px) saturate(1.4); border:1px solid rgba(0,0,0,.1); border-radius:8px;
+  box-shadow:0 12px 36px rgba(0,0,0,.28), 0 2px 8px rgba(0,0,0,.12); overflow:hidden; animation:w11-qsin .3s cubic-bezier(.1,.9,.2,1); }
+@keyframes w11-qsin { from { opacity:0; transform:translateY(30px); } }
+.screen[data-qs="closed"] .w11-qs { display:none; }
+.screen[data-qs="open"] .w11-qs-out { display:none; }
+.screen[data-qs="outputs"] .w11-qs-main { display:none; }
+.w11-qs svg { display:block; }
+.w11-qs-top { display:flex; gap:8px; padding:22px 12px 0 22px; }
+.w11-qs-tiles { flex:1; display:grid; grid-template-columns:repeat(3, 1fr); gap:10px 12px; }
+.w11-qs-cell { display:flex; flex-direction:column; gap:6px; min-width:0; }
+.w11-qs-tile { height:48px; display:flex; border-radius:4px; background:#fbfbfb; border:1px solid rgba(0,0,0,.07); border-bottom-color:rgba(0,0,0,.15); }
+.w11-qs-tile.on { background:#005fb8; border-color:#005fb8; color:#fff; }
+.w11-qs-main-ico { flex:1; display:grid; place-items:center; }
+.w11-qs-split { width:30px; display:grid; place-items:center; border-left:1px solid rgba(0,0,0,.08); }
+.w11-qs-tile.on .w11-qs-split { border-left-color:rgba(255,255,255,.35); }
+.w11-qs-lab { font-size:12px; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.w11-qs-pager { width:8px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; padding-bottom:18px; }
+.w11-qs-pager i { width:5px; height:5px; border-radius:3px; background:#8f8f8f; }
+.w11-qs-pager i.on { height:12px; background:#4f4f4f; }
+.w11-qs-row { display:flex; align-items:center; gap:10px; height:44px; padding:0 14px 0 18px; }
+.w11-qs-top + .w11-qs-row { margin-top:18px; }
+.w11-qs-ico { width:28px; height:32px; flex:none; display:grid; place-items:center; }
+.w11-qs-more { width:32px; height:32px; flex:none; display:grid; place-items:center; border-radius:4px; }
+.w11-qs-more:not(.w11-qs-blank) { background:rgba(0,0,0,.035); }
+.w11-qs-foot { display:flex; align-items:center; gap:4px; height:48px; margin-top:16px; padding:0 12px 0 22px; background:rgba(0,0,0,.035); border-top:1px solid rgba(0,0,0,.07); }
+.w11-qs-batt { flex:1; display:flex; align-items:center; gap:8px; font-size:13px; }
+.w11-qs-fbtn { width:32px; height:32px; display:grid; place-items:center; border-radius:4px; }
+/* Sound output page */
+.w11-qs-head { display:flex; align-items:center; gap:8px; height:54px; padding:0 20px 0 12px; font-size:14px; font-weight:600; }
+.w11-qs-back { width:32px; height:32px; display:grid; place-items:center; border-radius:4px; }
+.w11-qs-list { display:flex; flex-direction:column; gap:3px; padding:0 12px; }
+.w11-qs-dev { position:relative; display:flex; align-items:center; gap:10px; height:42px; padding:0 14px 0 8px; border-radius:4px; }
+.w11-qs-name { flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.w11-qs .tick { visibility:hidden; color:#005fb8; font-weight:600; font-size:15px; }
+.screen[data-out="speakers"] #out-speakers .tick, .screen[data-out="headphones"] #out-headphones .tick { visibility:visible; }
+.screen[data-out="speakers"] #out-speakers, .screen[data-out="headphones"] #out-headphones { background:rgba(0,0,0,.055); }
+.screen[data-out="speakers"] #out-speakers::before, .screen[data-out="headphones"] #out-headphones::before { content:""; position:absolute; left:0; top:50%; width:3px; height:16px; margin-top:-8px; border-radius:2px; background:#005fb8; }
+.w11-qs-div { height:1px; margin:12px 22px 10px; background:rgba(0,0,0,.08); }
+.w11-qs-label { padding:0 22px 2px; font-size:12px; font-weight:600; color:#5f5f5f; }
+.w11-qs-mix { gap:10px; padding:0 26px 0 20px; }
+.w11-qs-mix .w11-qs-name { flex:none; width:98px; font-size:13px; }
+.w11-qs-link { color:#005fb8; font-size:13px; }
+
+/* ---- Word (Microsoft 365) window, maximized ---- */
+.wd-win { position:absolute; left:0; top:0; width:1280px; height:672px; display:flex; flex-direction:column; background:#fff; color:#242424; font-size:13px; line-height:1.3; overflow:hidden; }
+.wd-win svg { display:block; flex:none; }
+.wd-title { position:relative; flex:none; height:34px; display:flex; align-items:center; padding-left:10px; background:#185abd; color:#fff; font-size:12px; }
+.wd-qat { display:flex; align-items:center; gap:2px; }
+.wd-autosave { display:flex; align-items:center; gap:6px; margin-right:6px; }
+.wd-sw { display:inline-flex; align-items:center; gap:4px; height:16px; padding:0 6px 0 3px; border:1px solid rgba(255,255,255,.85); border-radius:9px; font-size:11px; }
+.wd-sw i { width:9px; height:9px; border-radius:50%; background:#fff; }
+.wd-qi { width:26px; height:26px; display:grid; place-items:center; border-radius:4px; }
+.wd-dim { opacity:.5; }
+.wd-doc { margin-left:14px; white-space:nowrap; }
+.wd-search { position:absolute; left:505px; top:5px; width:290px; height:24px; display:flex; align-items:center; gap:8px; padding:0 10px; border-radius:4px; background:#f3f6fb; color:#555; }
+.wd-user { margin-left:auto; display:flex; align-items:center; gap:10px; padding-right:10px; white-space:nowrap; }
+.wd-av { width:24px; height:24px; border-radius:50%; display:grid; place-items:center; background:#c9a227; color:#1a1a1a; font-size:10px; font-weight:600; }
+.wd-ctl { display:flex; height:100%; }
+.wd-ctl > span { width:46px; display:grid; place-items:center; color:#fff; }
+.wd-ctl svg { width:10px; height:10px; }
+.screen[data-page="print"] .wd-qat, .screen[data-page="account"] .wd-qat { visibility:hidden; }
+/* File backstage: blue rail + page (print; account is highlighted the same way) */
+.wd-backstage { display:none; flex:1; min-height:0; }
+.screen[data-page="print"] .wd-backstage, .screen[data-page="account"] .wd-backstage { display:flex; }
+.wd-rail { width:172px; flex:none; display:flex; flex-direction:column; padding:4px 0 8px; background:#185abd; color:#fff; font-size:14px; }
+.wd-rback { height:50px; display:flex; align-items:center; padding-left:18px; }
+.wd-ri { position:relative; height:34px; display:flex; align-items:center; gap:12px; padding:0 22px; }
+.wd-rdiv { height:1px; margin:6px 22px; background:rgba(255,255,255,.35); }
+.wd-rfoot { margin-top:auto; }
+.screen[data-page="print"] .wd-ri[data-rail="print"], .screen[data-page="account"] .wd-ri[data-rail="account"] { background:rgba(0,0,0,.24); font-weight:600; }
+.wd-bs-page { flex:1; min-width:0; }
+/* Print: settings column */
+.wd-pcol { width:350px; flex:none; padding:8px 22px 0 34px; overflow:hidden; background:#fff; }
+.wd-h { margin:0 0 8px; font-size:26px; font-weight:600; line-height:1.25; }
+.wd-prow { display:flex; align-items:flex-start; gap:18px; margin-bottom:6px; }
+.wd-printbtn { width:74px; height:70px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; border:1px solid #d1d1d1; border-radius:4px; background:#fff; }
+.wd-copies { display:flex; align-items:center; gap:8px; padding-top:4px; }
+.wd-spin { width:62px; height:26px; display:flex; align-items:center; justify-content:space-between; padding:0 5px 0 9px; border:1px solid #c7c7c7; border-bottom-color:#8a8a8a; border-radius:4px; }
+.wd-arrows { display:flex; flex-direction:column; gap:2px; }
+.wd-sub { display:flex; align-items:center; gap:6px; margin:6px 0 4px; font-size:14px; font-weight:600; }
+.wd-dd { position:relative; display:flex; align-items:center; gap:10px; min-height:38px; margin-bottom:3px; padding:2px 10px 2px 7px; border:1px solid #d1d1d1; border-radius:4px; background:#fff; }
+.wd-dd > svg:not(.wd-dd-ico) { color:#616161; }
+.wd-printer > svg:first-child { margin:0 3px; }
+.wd-dd-t { flex:1; min-width:0; display:flex; flex-direction:column; }
+.wd-dd-t b { font-weight:400; font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.wd-dd-t small { font-size:11px; color:#616161; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.wd-link { margin:1px 0 2px; color:#185abd; font-size:12px; }
+.wd-right { text-align:right; }
+.wd-pages { display:flex; align-items:center; gap:8px; margin:1px 0 4px 4px; }
+.wd-input { width:170px; height:22px; border:1px solid #c7c7c7; border-bottom-color:#8a8a8a; border-radius:3px; }
+.wd-when-narrow { display:none; }
+.screen[data-margins="narrow"] .wd-when-normal { display:none; }
+.screen[data-margins="narrow"] .wd-when-narrow { display:block; }
+/* Margins menu: an Office gallery that opens upward from Normal Margins */
+.wd-dd .w11-flyout.wd-menu { top:auto; right:auto; bottom:calc(100% + 3px); left:-1px; width:296px; padding:4px 0; background:#fff; border:1px solid #c7c7c7; border-radius:6px; box-shadow:0 8px 22px rgba(0,0,0,.2); }
+.wd-mi { display:flex; align-items:center; gap:12px; height:56px; padding:0 12px; }
+.wd-mi-ico { width:30px; height:38px; }
+.wd-mi-t { display:flex; flex-direction:column; gap:1px; }
+.wd-mi-t b { font-size:13px; font-weight:600; }
+.wd-mi-g { display:grid; grid-template-columns:auto 42px auto 42px; column-gap:6px; font-size:11px; color:#444; }
+.screen[data-margins="normal"] #m-normal { background:#e3ecf9; }
+.wd-mi-custom { margin-top:4px; padding:8px 12px 6px 54px; border-top:1px solid #e3e3e3; }
+/* Print: preview with the flyer (8.5 x 11 in at 40.5 px/in = 43%) */
+.wd-preview { flex:1; min-width:0; display:flex; flex-direction:column; background:#ebebeb; }
+.wd-pages-view { flex:1; min-height:0; display:flex; align-items:center; justify-content:center; gap:26px; }
+.pv-page { flex:none; width:344px; height:445px; padding:40px; overflow:hidden; background:#fff; color:#1a1a1a; box-shadow:0 1px 3px rgba(0,0,0,.2), 0 6px 18px rgba(0,0,0,.08); transition:padding .5s cubic-bezier(.65,0,.35,1); }
+.screen[data-margins="narrow"] .pv-page { padding:20px; }
+.screen[data-margins="narrow"] .pv-page2 { display:none; }
+.screen[data-margins="normal"] .pv-page1 .pv-spill { display:none; }
+.pv-in { font-family:Calibri, "Segoe UI", sans-serif; text-align:center; font-size:9.6px; line-height:1.35; }
+.pv-banner { height:92px; display:grid; place-items:center; border-radius:5px; background:#1b365d; }
+.pv-title { margin-top:14px; font-family:Georgia, "Times New Roman", serif; font-size:24px; font-weight:700; line-height:1.15; color:#1b365d; }
+.pv-date { margin-top:5px; font-size:8.4px; font-weight:700; color:#b31942; }
+.pv-rule { height:2px; margin:10px 36px 12px; background:#c9a227; }
+.pv-line { margin-bottom:10.5px; }
+.pv-page2 .pv-in { text-align:center; }
+/* Print: pager + zoom */
+.wd-pager { flex:none; height:44px; display:flex; align-items:center; gap:6px; padding:0 16px; color:#444; }
+.wd-pg-btn { width:22px; height:22px; display:grid; place-items:center; color:#444; }
+.screen[data-margins="narrow"] .wd-pg-next { color:#bdbdbd; }
+.wd-pg-box { padding:1px 4px; white-space:nowrap; }
+.wd-zoom { margin-left:auto; display:flex; align-items:center; gap:10px; }
+.wd-zb { display:grid; place-items:center; min-width:12px; font-size:15px; }
+.wd-zslider { position:relative; width:110px; height:2px; background:#8a8a8a; }
+.wd-zslider i { position:absolute; left:28%; top:50%; width:4px; height:12px; margin:-6px 0 0 -2px; border-radius:1px; background:#444; }
