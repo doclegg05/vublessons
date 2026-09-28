@@ -31,3 +31,19 @@ test('scale demo ends at 125% with a bigger window', async ({ page }) => {
   for (let i = 0; i < 4; i++) await page.locator('[data-act="next"]').click();
   await expect(page.locator('#scale-val')).toHaveText('125%');
 });
+
+// Final review minor: two w1-calendar steps shared one caption, so Next seemed to do nothing. Every step's
+// caption changes on Next, in every Week 1 demo.
+test('every Week 1 demo step has its own caption', async ({ page }) => {
+  await page.goto(BASE + 'fonts.css');
+  await page.setContent(`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}"></head><body>
+    <script src="demo.js"></script>
+    <script>window.__defs = []; var define = DL2Demo.define; DL2Demo.define = function (d) { __defs.push(d); return define(d); };</script>
+    <script src="demos/week-01.js"></script></body></html>`, { waitUntil: 'load' });
+  const defs = await page.evaluate(() => __defs.map(d => ({ id: d.id, caps: d.steps.map(s => s.cap), checks: d.steps.map(s => s.check) })));
+  expect(defs.map(d => d.id)).toEqual(IDS);
+  for (const d of defs) expect(new Set(d.caps).size, d.id).toBe(d.caps.length);
+  const cal = defs.find(d => d.id === 'w1-calendar');
+  expect(cal.caps.slice(3, 5)).toEqual(['Open the <em>Repeat</em> menu.', 'Choose <em>Weekly on Monday</em>.']);
+  expect(cal.checks.slice(3, 5)).toEqual(['Make it repeat', 'Weekly on Monday']);
+});
