@@ -23,8 +23,11 @@
   var timer = { left: 0, total: 0, running: false, expired: false, handle: null };
   var storeKey = 'dl2os:slide:' + location.pathname;
 
-  function safeGet(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
-  function safeSet(key, value) { try { localStorage.setItem(key, value); } catch (e) { /* storage blocked */ } }
+  /* The resume position lives in sessionStorage: a reload (or reopening the deck in the same tab)
+   * keeps its place, but a fresh browser opens at slide 1, so a rehearsal on the presenting PC
+   * never makes class start mid-deck. */
+  function safeGet(key) { try { return sessionStorage.getItem(key); } catch (e) { return null; } }
+  function safeSet(key, value) { try { sessionStorage.setItem(key, value); } catch (e) { /* storage blocked */ } }
 
   function parts(slide) { return Array.prototype.slice.call(slide.querySelectorAll('.build')); }
   function shown(slide) { return Number(slide.dataset.step || 0); }

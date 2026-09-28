@@ -93,3 +93,24 @@ test('text-size host exists so no floating button is added', async ({ page }) =>
   await open(page);
   await expect(page.locator('.strip .vub-appbar .vub-textsize [data-vub-textsize-plus]')).toHaveCount(1);
 });
+
+// I3 (final review): the resume position lives in sessionStorage, so a fresh browser opens the real
+// Week 1 deck at slide 1 even after a rehearsal left an old slide number in localStorage, while the
+// same tab (a reload, or reopening the deck without #N) keeps its place.
+test('a fresh open starts at slide 1; the same tab keeps its place', async ({ page, context }) => {
+  const DECK = '/courses/digital-literacy-2/weeks/week-01/presentation.html';
+  await page.goto(DECK);
+  // A rehearsal on this machine left slide 20 behind under the old localStorage key.
+  await page.evaluate(() => { localStorage.setItem('dl2os:slide:' + location.pathname, '19'); });
+  const deck = await context.newPage(); // a fresh browser tab
+  await deck.goto(DECK);
+  await expect(deck.locator('.strip .count')).toHaveText('1 / 28');
+  await deck.keyboard.press('5');
+  await deck.keyboard.press('Enter');
+  await expect(deck.locator('.strip .count')).toHaveText('5 / 28');
+  await deck.goto(DECK); // no #N: same tab, so it resumes
+  await expect(deck.locator('.strip .count')).toHaveText('5 / 28');
+  const fresh = await context.newPage(); // another new tab starts a new session
+  await fresh.goto(DECK);
+  await expect(fresh.locator('.strip .count')).toHaveText('1 / 28');
+});
