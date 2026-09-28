@@ -1,0 +1,1237 @@
+{
+  "status": "Technical transcription review complete; human listening remains subjective acceptance.",
+  "recognizers": [
+    "faster-whisper base.en, unprompted",
+    "faster-whisper small.en, unprompted"
+  ],
+  "chapters": 60,
+  "retakes": [
+    {
+      "week": "week-02",
+      "chapter": "beat-07",
+      "reason": "clear/clearer ambiguity",
+      "acceptedCandidate": 2
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-06",
+      "reason": "and/in ambiguity in editing instruction",
+      "acceptedCandidate": 2,
+      "note": "Accuracy retake was subsequently replaced by the accepted pacing take documented in pacing-review.json."
+    }
+  ],
+  "reviewNotes": [
+    "Both recognizers were compared against all 60 original scripts, without supplying a text prompt.",
+    "Week 5 chapter 3 base.en missed a complete phrase; small.en recognizes the full exact script (1.0 match). Import uses that independent result at the same minimum threshold and same audio hash. Both reports remain preserved.",
+    "Week 3 chapter 5 number spellings and currency notation explain the low raw lexical ratio. All formula numbers remain present.",
+    "Hyphens, compounds, punctuation, number notation, and homophones produce expected lexical differences. Base and small recognition resolve one another's extra words, articles and isolated word omissions.",
+    "Week 3 chapter 3 Track/Tracked changes is an inflection ambiguity in both recognizers; the authored script remains Tracked changes. Listening review can assess the consonant ending.",
+    "Final pacing retakes use sentence pause tags at requested speed 0.85: Week 1 chapters 3/4, Week 2 chapter 2, Week 6 chapter 6. See pacing-review.json; all scripts remain unchanged and no audio is stretched.",
+    "ASR does not establish pronunciation quality, warmth, natural inflection, or how the narrator sounds on classroom speakers."
+  ],
+  "takes": [
+    {
+      "week": "week-01",
+      "chapter": "beat-01",
+      "sourceSha256": "32ff9835785b73d6180cd2f9dcb278c3c87605c2e5e25dc9d4035002210df9a5",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 155.9,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "built,"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-02",
+      "sourceSha256": "b25afaabea7778dcf3bdcec53abc0bd8d945eb954a568cc4c334f8dbfefb60da",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 155.0,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "build,"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-03",
+      "sourceSha256": "7d7cddd9bd6bd334d6229be4adc254c495d790e9bfd4d9f58f7d7fc55a132faf",
+      "baseMatch": 0.9813,
+      "smallMatch": 0.9813,
+      "wordsPerMinute": 141.8,
+      "baseDifferences": [
+        {
+          "expected": "Page zoom",
+          "recognized": "PageZoom"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "Page zoom",
+          "recognized": "PageZoom"
+        }
+      ]
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-04",
+      "sourceSha256": "218c0afbbd4a21931b8c98d32dbf6beee0266a93823902499cf3dd8bf8f25524",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 150.3,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "test."
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-05",
+      "sourceSha256": "af909a5942d3ba962b03ad611a20302a1e08f6101c3ba81d6669bb308285d2fe",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 143.0,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-06",
+      "sourceSha256": "8861cbf75fcb8857a29dc54d91efb0bef01cd2f45fc3be6515af38ef1b6e05f7",
+      "baseMatch": 0.9903,
+      "smallMatch": 0.9903,
+      "wordsPerMinute": 141.0,
+      "baseDifferences": [
+        {
+          "expected": "webpage",
+          "recognized": "web page"
+        },
+        {
+          "expected": "",
+          "recognized": "page."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "webpage",
+          "recognized": "web page"
+        }
+      ]
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-07",
+      "sourceSha256": "36545bb42e31cba9063a88f8a78306903c2c44763af5588ca7c97dadf6705f24",
+      "baseMatch": 0.9811,
+      "smallMatch": 0.9811,
+      "wordsPerMinute": 157.8,
+      "baseDifferences": [
+        {
+          "expected": "two",
+          "recognized": "2"
+        },
+        {
+          "expected": "three",
+          "recognized": "3"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "two",
+          "recognized": "2"
+        },
+        {
+          "expected": "three",
+          "recognized": "3"
+        }
+      ]
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-08",
+      "sourceSha256": "85405c04b6793d7a490a0e4274c260ba63dc2676e80ac8d2c16b6d30be00f1d1",
+      "baseMatch": 0.9904,
+      "smallMatch": 0.9904,
+      "wordsPerMinute": 136.9,
+      "baseDifferences": [
+        {
+          "expected": "Free-or-busy",
+          "recognized": "Free or busy"
+        },
+        {
+          "expected": "",
+          "recognized": "roles."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "Free-or-busy",
+          "recognized": "Free or busy"
+        }
+      ]
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-09",
+      "sourceSha256": "3e9a1d82518c0c904dace09bdfd0aa8a7e22c74ab0ce7c616efb5da6aa60a787",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 156.0,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "version."
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-01",
+      "chapter": "beat-10",
+      "sourceSha256": "8105aad4cce0dfb3d9648a91ce645f6d84d157d2786abc8ee93a59398ceaae09",
+      "baseMatch": 0.991,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 159.8,
+      "baseDifferences": [
+        {
+          "expected": "route",
+          "recognized": "root"
+        },
+        {
+          "expected": "",
+          "recognized": "work,"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-01",
+      "sourceSha256": "a274468abcdef65d40030365b77ee42323371b223b672f59e042a5c202ecd414",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 163.4,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-02",
+      "sourceSha256": "b74d49667f8f739505158cf943ed96d133f14831f87905267afe2f7e17a6d808",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 144.4,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-03",
+      "sourceSha256": "126cf2013f2749b48601e045269af5f3baf9e4b3a3f9393e7b9e19e6afe95f61",
+      "baseMatch": 0.9907,
+      "smallMatch": 0.9907,
+      "wordsPerMinute": 143.6,
+      "baseDifferences": [
+        {
+          "expected": "Search-result",
+          "recognized": "appear. Search results"
+        },
+        {
+          "expected": "",
+          "recognized": "and"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "Search-result",
+          "recognized": "Search result"
+        }
+      ]
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-04",
+      "sourceSha256": "087c5b2dcef8cb6e3e285c39c31cca52eff15255df6029c6454a5555ab6ca3af",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 162.2,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-05",
+      "sourceSha256": "89c0a524789057e3ac291cf6c33681821ef84d51031f3334bd7102c175996f24",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 159.8,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "Others,"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-06",
+      "sourceSha256": "28d4f2f0846ad65d05401c27fa2d92ce55b1b5bafad96fb084b66eb06d00d4c3",
+      "baseMatch": 0.9903,
+      "smallMatch": 0.9806,
+      "wordsPerMinute": 148.9,
+      "baseDifferences": [
+        {
+          "expected": "library-help-draft.",
+          "recognized": "library, hash help, dash draft."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "library-help-draft.",
+          "recognized": "library -help -draft."
+        },
+        {
+          "expected": "Reopen",
+          "recognized": "Re -open"
+        }
+      ]
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-07",
+      "sourceSha256": "f998d822239a7d5cbd91465edf08bb0a3455361442e7e7e00e948c9cde533f7f",
+      "baseMatch": 0.9725,
+      "smallMatch": 0.9817,
+      "wordsPerMinute": 146.3,
+      "baseDifferences": [
+        {
+          "expected": "clearer",
+          "recognized": "clear"
+        },
+        {
+          "expected": "",
+          "recognized": "else."
+        },
+        {
+          "expected": "read-only",
+          "recognized": "read -only"
+        },
+        {
+          "expected": "Read-only",
+          "recognized": "Read -only"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "read-only",
+          "recognized": "read -only"
+        },
+        {
+          "expected": "Read-only",
+          "recognized": "Read -only"
+        }
+      ]
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-08",
+      "sourceSha256": "137e43c73937f7496c4320e376d6a4f1ca78c388beabd838c70e1ed7dbca570d",
+      "baseMatch": 0.9907,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 152.3,
+      "baseDifferences": [
+        {
+          "expected": "mistake",
+          "recognized": "mistakes"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-09",
+      "sourceSha256": "180f853f4818ad2b3364b60e96ca55fe6c03401ea3e72bec3e9c2d31a543193c",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 146.8,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-02",
+      "chapter": "beat-10",
+      "sourceSha256": "b2c1533898e94646c0f5ae26eb5f953890fb292e58de3d36207a467e4000b44f",
+      "baseMatch": 0.9903,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 133.7,
+      "baseDifferences": [
+        {
+          "expected": "course",
+          "recognized": "core"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-01",
+      "sourceSha256": "ee8841e5576dc4a53228ba4ac32d6a05159a3a888240cfc5c17d440391c1359b",
+      "baseMatch": 0.9902,
+      "smallMatch": 0.9902,
+      "wordsPerMinute": 147.7,
+      "baseDifferences": [
+        {
+          "expected": "computer-help",
+          "recognized": "computer help"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "computer-help",
+          "recognized": "computer help"
+        }
+      ]
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-02",
+      "sourceSha256": "f43ad23856e87390135d850b71b0e9419b96c01bce957e13b2516ff26b270fa8",
+      "baseMatch": 0.9813,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 147.9,
+      "baseDifferences": [
+        {
+          "expected": "link text",
+          "recognized": "LinkText"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-03",
+      "sourceSha256": "1aff76c475e3ab0baae506cb0741b7b8d3a0561631d166f856f1b1c9229a5634",
+      "baseMatch": 0.9908,
+      "smallMatch": 0.9725,
+      "wordsPerMinute": 160.3,
+      "baseDifferences": [
+        {
+          "expected": "Tracked",
+          "recognized": "Track"
+        },
+        {
+          "expected": "",
+          "recognized": "them."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "mouse work;",
+          "recognized": "mousework."
+        },
+        {
+          "expected": "Tracked",
+          "recognized": "Track"
+        }
+      ]
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-04",
+      "sourceSha256": "201ade5d56376db1636fd014bd3a69657eb67e2ad7c795b8cf60a05dfcbd1945",
+      "baseMatch": 0.9813,
+      "smallMatch": 0.9533,
+      "wordsPerMinute": 144.6,
+      "baseDifferences": [
+        {
+          "expected": "twelve,",
+          "recognized": "12,"
+        },
+        {
+          "expected": "twelve",
+          "recognized": "12"
+        },
+        {
+          "expected": "",
+          "recognized": "boxes."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "two.",
+          "recognized": "2."
+        },
+        {
+          "expected": "twelve,",
+          "recognized": "12,"
+        },
+        {
+          "expected": "eight,",
+          "recognized": "8,"
+        },
+        {
+          "expected": "five.",
+          "recognized": "5."
+        },
+        {
+          "expected": "twelve",
+          "recognized": "12"
+        }
+      ]
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-05",
+      "sourceSha256": "c6b3cb144522c81646c79c2e04d4da43c27db3adc4c27f53ade8c40e93a2444d",
+      "baseMatch": 0.945,
+      "smallMatch": 0.945,
+      "wordsPerMinute": 137.0,
+      "baseDifferences": [
+        {
+          "expected": "twenty-five dollars.",
+          "recognized": "$25."
+        },
+        {
+          "expected": "twelve",
+          "recognized": "12"
+        },
+        {
+          "expected": "fifteen.",
+          "recognized": "15."
+        },
+        {
+          "expected": "twenty-eight",
+          "recognized": "28,"
+        },
+        {
+          "expected": "twenty-five,",
+          "recognized": "25,"
+        },
+        {
+          "expected": "",
+          "recognized": "you,"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "twenty-five dollars.",
+          "recognized": "$25."
+        },
+        {
+          "expected": "twelve",
+          "recognized": "12"
+        },
+        {
+          "expected": "fifteen.",
+          "recognized": "15."
+        },
+        {
+          "expected": "twenty-eight",
+          "recognized": "28"
+        },
+        {
+          "expected": "twenty-five,",
+          "recognized": "25,"
+        }
+      ]
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-06",
+      "sourceSha256": "fce0840371aaca7808c0f35c3d0b21344bc5cebbed9c8b1df3f8f3690393d76c",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 157.4,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-07",
+      "sourceSha256": "fcd87f004a454ae6169fa03897465ab46f610ef99333267f040a97cbf05aeeae",
+      "baseMatch": 0.981,
+      "smallMatch": 0.9905,
+      "wordsPerMinute": 146.1,
+      "baseDifferences": [
+        {
+          "expected": "three-slide",
+          "recognized": "three -slide"
+        },
+        {
+          "expected": "aloud.",
+          "recognized": "allowed."
+        },
+        {
+          "expected": "",
+          "recognized": "problems."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "three-slide",
+          "recognized": "three -slide"
+        }
+      ]
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-08",
+      "sourceSha256": "7df2f0a6aea6c6399b6485d186afe43fe451565203ddcdeb40f2ce150e029950",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 163.6,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-09",
+      "sourceSha256": "b29fbd6774f0c6db1e96a263b5774f05f164e630bcd1bfe1c2c1302c0ed3708f",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 157.3,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-03",
+      "chapter": "beat-10",
+      "sourceSha256": "66d5a16e2590129a6585238666f4015aadc71401500a4c20d472430b2379e1e4",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 145.5,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-01",
+      "sourceSha256": "1ee54b1a9806467622b4a318dd19776fa89f51f486fb5a38afa26409e250f659",
+      "baseMatch": 0.9906,
+      "smallMatch": 0.9717,
+      "wordsPerMinute": 159.1,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "\u2013"
+        },
+        {
+          "expected": "computer-help",
+          "recognized": "computer help"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "organize: a",
+          "recognized": "organize\u2014a"
+        },
+        {
+          "expected": "computer-help",
+          "recognized": "computer help"
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-02",
+      "sourceSha256": "2dec45a493ad636d3cb03a340f7b873ba755b0886f2ff86db783803e86dfc647",
+      "baseMatch": 0.9912,
+      "smallMatch": 0.9912,
+      "wordsPerMinute": 163.0,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "patients."
+        },
+        {
+          "expected": "private-looking",
+          "recognized": "private looking"
+        },
+        {
+          "expected": "",
+          "recognized": "starting"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "private-looking",
+          "recognized": "private -looking"
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-03",
+      "sourceSha256": "cfe55646226a790a85d5494f5fedeec8b62a21e4d4ab9b8f06a51aa271871c80",
+      "baseMatch": 0.9821,
+      "smallMatch": 0.9911,
+      "wordsPerMinute": 148.4,
+      "baseDifferences": [
+        {
+          "expected": "computer-help",
+          "recognized": "Computer Help"
+        },
+        {
+          "expected": "than",
+          "recognized": "then."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "computer-help",
+          "recognized": "computer help"
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-04",
+      "sourceSha256": "cc703feac8a47a4b147dad37b9e2a84fc25e0b00dfcff6306813deb489057784",
+      "baseMatch": 0.9911,
+      "smallMatch": 0.9911,
+      "wordsPerMinute": 145.1,
+      "baseDifferences": [
+        {
+          "expected": "To",
+          "recognized": "Two"
+        },
+        {
+          "expected": "",
+          "recognized": "letters."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "To",
+          "recognized": "Two,"
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-05",
+      "sourceSha256": "2176b3e550ed6d78fe18d0a047aa0a7a0d1fefa7c75bda1134b7db63c5cdb15e",
+      "baseMatch": 1.0,
+      "smallMatch": 0.9905,
+      "wordsPerMinute": 135.6,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "them."
+        },
+        {
+          "expected": "",
+          "recognized": "in"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "them.",
+          "recognized": ""
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-06",
+      "sourceSha256": "caeb7d011611a32b0bbe5bd0c2545f6cdcb72288e57c8805b65545ed488ef92b",
+      "baseMatch": 1.0,
+      "smallMatch": 0.9907,
+      "wordsPerMinute": 151.2,
+      "baseDifferences": [],
+      "smallDifferences": [
+        {
+          "expected": "identifies",
+          "recognized": "Identify"
+        },
+        {
+          "expected": "",
+          "recognized": "it."
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-07",
+      "sourceSha256": "c827e412128dd827e7ef9ef3d7cf5fdffa12e4ecf1f911d2e33caec717e6feac",
+      "baseMatch": 0.9908,
+      "smallMatch": 0.9908,
+      "wordsPerMinute": 146.8,
+      "baseDifferences": [
+        {
+          "expected": "raise-hand",
+          "recognized": "raise hand"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "raise-hand",
+          "recognized": "raise hand"
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-08",
+      "sourceSha256": "9f3e997d2b5744437df5691d32eb267d733791063eab638ec930971df0562357",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 154.4,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-09",
+      "sourceSha256": "b9d9afa21045f6533fb3112ed8121eca1c8af89b912e8bf13526f28cbc247cd5",
+      "baseMatch": 0.9623,
+      "smallMatch": 0.934,
+      "wordsPerMinute": 145.9,
+      "baseDifferences": [
+        {
+          "expected": "twelve dollars",
+          "recognized": "$12"
+        },
+        {
+          "expected": "one-time",
+          "recognized": "one -time"
+        },
+        {
+          "expected": "in-app",
+          "recognized": "in -app"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "twelve dollars",
+          "recognized": "$12"
+        },
+        {
+          "expected": "purchased: a",
+          "recognized": "purchased\u2014a"
+        },
+        {
+          "expected": "one-time",
+          "recognized": "one -time"
+        },
+        {
+          "expected": "in-app",
+          "recognized": "in -app"
+        },
+        {
+          "expected": "a",
+          "recognized": ""
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "chapter": "beat-10",
+      "sourceSha256": "0be40fa12bb1d918d0848aaf45d86f7fee917afa6b53a3200732984026f69b7a",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 144.7,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-01",
+      "sourceSha256": "00ba3576fe66e4d01b2c48ccb3886cf92560cf94c8ac80526253e2ac91e830fa",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 155.7,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "practice."
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-02",
+      "sourceSha256": "616c32cdddabec06072455ac050cce2f4d66e3ba19542cd83397c86b84754b02",
+      "baseMatch": 0.9909,
+      "smallMatch": 0.9909,
+      "wordsPerMinute": 153.1,
+      "baseDifferences": [
+        {
+          "expected": "screen-free",
+          "recognized": "screen free"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "screen-free",
+          "recognized": "screen -free"
+        }
+      ]
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-03",
+      "sourceSha256": "01c81a8f9efb142e3f73f1ff9a1d566e30a39f617c6ea18ce6c6123c9202a92d",
+      "baseMatch": 0.8611,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 151.4,
+      "baseDifferences": [
+        {
+          "expected": "familiar account deserves a check when the request is unusual. Avoid trying to prove",
+          "recognized": "of"
+        },
+        {
+          "expected": "in",
+          "recognized": "and"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-04",
+      "sourceSha256": "94f4e9f3f4d7f3c9ff5653a347a4786be5ddecc523cbf9cd2fb2a029ee81c573",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 144.3,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-05",
+      "sourceSha256": "81d78fff6e50331b9a3966879a792e99fe1b3c938792a92e81accad967465430",
+      "baseMatch": 0.9907,
+      "smallMatch": 0.9907,
+      "wordsPerMinute": 130.3,
+      "baseDifferences": [
+        {
+          "expected": "read-only.",
+          "recognized": "Read Only."
+        },
+        {
+          "expected": "",
+          "recognized": "encrypted."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "read-only.",
+          "recognized": "Read Only"
+        }
+      ]
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-06",
+      "sourceSha256": "0f74dfdf6a51b36176b5d0a97f8d4fd96fc567bb6e2f9417b5ce3789b443764b",
+      "baseMatch": 0.991,
+      "smallMatch": 0.991,
+      "wordsPerMinute": 160.4,
+      "baseDifferences": [
+        {
+          "expected": "instructor-approved",
+          "recognized": "instructor approved"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "instructor-approved",
+          "recognized": "instructor -approved"
+        }
+      ]
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-07",
+      "sourceSha256": "9cdf3097815d9d2a2221c3d3d19f2207efa8502466a2d4ebaa3b11e17e278ccd",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 159.8,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-08",
+      "sourceSha256": "c3a0f577011fa7c5e8a79edbee2a28c975ec957198d53908f7d90bc6cb444fd2",
+      "baseMatch": 0.9909,
+      "smallMatch": 0.9909,
+      "wordsPerMinute": 142.0,
+      "baseDifferences": [
+        {
+          "expected": "wellbeing.",
+          "recognized": "well -being."
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "wellbeing.",
+          "recognized": "well -being."
+        }
+      ]
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-09",
+      "sourceSha256": "6b68b6779ba5a982bb703c17f128828a76650b82ce6179f7f71380bd6e735a90",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 146.3,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-05",
+      "chapter": "beat-10",
+      "sourceSha256": "b25eb776b4fb9d836095af3373a8410e5d3528b2651abc3f39dc396f77bc31dc",
+      "baseMatch": 0.9912,
+      "smallMatch": 0.9912,
+      "wordsPerMinute": 146.4,
+      "baseDifferences": [
+        {
+          "expected": "post-test,",
+          "recognized": "post test,"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "post-test,",
+          "recognized": "post -test,"
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-01",
+      "sourceSha256": "c8a6d724fe9db7eb8855e1d4cc27f8b1f56e4e01a3a28d9b69577ab74e0a7f9b",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 160.0,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-02",
+      "sourceSha256": "4022beef4e35fff1dfbc6202157f933b0c7341048cac8be76fbb4ddb07eb5045",
+      "baseMatch": 0.9909,
+      "smallMatch": 0.9818,
+      "wordsPerMinute": 148.1,
+      "baseDifferences": [
+        {
+          "expected": "sign-in",
+          "recognized": "sign -in"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "one-file",
+          "recognized": "One File"
+        },
+        {
+          "expected": "sign-in",
+          "recognized": "sign -in"
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-03",
+      "sourceSha256": "767e80320fde82d24ed6a06870fe5bb3bffa1f95519d9de1912f6c615cd0f5fa",
+      "baseMatch": 0.9906,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 153.5,
+      "baseDifferences": [
+        {
+          "expected": "its",
+          "recognized": "at"
+        }
+      ],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-04",
+      "sourceSha256": "e9b1b679673987c267c8bfcaf27671056d24e53a07ad1c0cfd462dd0426e5ebf",
+      "baseMatch": 0.9909,
+      "smallMatch": 0.9909,
+      "wordsPerMinute": 139.1,
+      "baseDifferences": [
+        {
+          "expected": "no-results",
+          "recognized": "no results"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "no-results",
+          "recognized": "no results"
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-05",
+      "sourceSha256": "26f9e8f8c16265cbab1a0e93f1f48b3804f5d2ee73c8686cfce7991dde69acdf",
+      "baseMatch": 0.9911,
+      "smallMatch": 0.9911,
+      "wordsPerMinute": 146.1,
+      "baseDifferences": [
+        {
+          "expected": "no-results",
+          "recognized": "no results"
+        },
+        {
+          "expected": "",
+          "recognized": "to"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "no-results",
+          "recognized": "no results"
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-06",
+      "sourceSha256": "3fec110fd4667fe6302755e219c75c8cb12d2305ec43ce68b588859e8c390ac4",
+      "baseMatch": 0.963,
+      "smallMatch": 0.963,
+      "wordsPerMinute": 138.5,
+      "baseDifferences": [
+        {
+          "expected": "instructor-approved",
+          "recognized": "instructor -approved"
+        },
+        {
+          "expected": "the",
+          "recognized": "a"
+        },
+        {
+          "expected": "plain-text",
+          "recognized": "plain text"
+        },
+        {
+          "expected": "text-file",
+          "recognized": "text file"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "instructor-approved",
+          "recognized": "instructor -approved"
+        },
+        {
+          "expected": "the",
+          "recognized": "a"
+        },
+        {
+          "expected": "plain-text",
+          "recognized": "plain text"
+        },
+        {
+          "expected": "text-file",
+          "recognized": "text file"
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-07",
+      "sourceSha256": "91ead7997be4bc75b02a424e9a83f61e17bfefaaad2cb2e82fbcd3bec19c8527",
+      "baseMatch": 0.9818,
+      "smallMatch": 0.9909,
+      "wordsPerMinute": 146.6,
+      "baseDifferences": [
+        {
+          "expected": "uppercase.",
+          "recognized": "upper case."
+        },
+        {
+          "expected": "case-insensitive",
+          "recognized": "case -insensitive"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "case-insensitive",
+          "recognized": "case -insensitive"
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-08",
+      "sourceSha256": "69970216694176a77943c3e5e8244878455e1406dc7d11c9a784ebb00aad89f0",
+      "baseMatch": 0.9907,
+      "smallMatch": 0.9907,
+      "wordsPerMinute": 162.7,
+      "baseDifferences": [
+        {
+          "expected": "text-size",
+          "recognized": "text size"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "text-size",
+          "recognized": "text size"
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-09",
+      "sourceSha256": "74e86dae4d7239a45cc2cdde3daccab98be95561bed18b2bb4117d08f2568a5d",
+      "baseMatch": 1.0,
+      "smallMatch": 1.0,
+      "wordsPerMinute": 146.0,
+      "baseDifferences": [],
+      "smallDifferences": []
+    },
+    {
+      "week": "week-06",
+      "chapter": "beat-10",
+      "sourceSha256": "29a049317bcd6cffd8c6c50fd8e61ce94a86d93407f88cf324330e05bc49ab68",
+      "baseMatch": 0.991,
+      "smallMatch": 0.973,
+      "wordsPerMinute": 149.2,
+      "baseDifferences": [
+        {
+          "expected": "",
+          "recognized": "exercise."
+        },
+        {
+          "expected": "sign-in",
+          "recognized": "sign -in"
+        }
+      ],
+      "smallDifferences": [
+        {
+          "expected": "sign-in",
+          "recognized": "sign -in"
+        },
+        {
+          "expected": "a way",
+          "recognized": "away"
+        }
+      ]
+    }
+  ]
+}

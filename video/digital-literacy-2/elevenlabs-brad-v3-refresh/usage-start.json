@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-09-28",
+  "voice": {
+    "id": "Dslrhjl3ZpzrctukrQSN",
+    "name": "Hey Its Brad - Clear Narrator for Documentary",
+    "category": "professional",
+    "fine_tuning_status": {
+      "eleven_v2_flash": "fine_tuned",
+      "eleven_multilingual_v2": "fine_tuned",
+      "eleven_turbo_v2": "fine_tuned",
+      "eleven_v2_5_flash": "fine_tuned",
+      "eleven_flash_v2": "fine_tuned",
+      "eleven_multilingual_sts_v2": "fine_tuned",
+      "eleven_flash_v2_5": "fine_tuned",
+      "eleven_turbo_v2_5": "fine_tuned"
+    }
+  },
+  "usage": {
+    "character_count": 314314,
+    "character_limit": 681468,
+    "remaining": 367154,
+    "current_overage": {
+      "amount": "0",
+      "currency": "usd"
+    }
+  },
+  "note": "Read before synthesis; account-wide credit delta will be recorded after generation. Dollar cost is not exposed per call."
+}

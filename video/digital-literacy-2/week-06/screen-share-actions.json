@@ -2,8 +2,8 @@
   {
     "chapter": 6,
     "title": "Open a working version before changing it",
-    "startSeconds": 223.672,
-    "durationSeconds": 42.812,
+    "startSeconds": 228.038,
+    "durationSeconds": 48.338,
     "actions": [
       {
         "at": 0.0,
@@ -14,7 +14,7 @@
         "label": "Start from the supplied local HTML file"
       },
       {
-        "at": 5.85,
+        "at": 6.75,
         "phrase": "Save the file",
         "state": 1,
         "x": 650,
@@ -22,7 +22,7 @@
         "label": "Save a distinct working version"
       },
       {
-        "at": 6.39,
+        "at": 7.43,
         "phrase": "with its HTML extension",
         "state": 2,
         "x": 1003,
@@ -30,7 +30,7 @@
         "label": "Keep .html \u2022 not .html.txt"
       },
       {
-        "at": 8.41,
+        "at": 9.79,
         "phrase": "open it in the browser",
         "state": 3,
         "x": 981,
@@ -38,7 +38,7 @@
         "label": "Open the file in a browser"
       },
       {
-        "at": 10.31,
+        "at": 12.11,
         "phrase": "Confirm that the heading",
         "state": 4,
         "x": 550,
@@ -50,8 +50,8 @@
   {
     "chapter": 7,
     "title": "Test the happy path and the missing result",
-    "startSeconds": 266.484,
-    "durationSeconds": 44.089,
+    "startSeconds": 276.376,
+    "durationSeconds": 46.574,
     "actions": [
       {
         "at": 0.0,
@@ -70,7 +70,7 @@
         "label": "library \u2192 Community library"
       },
       {
-        "at": 5.45,
+        "at": 5.75,
         "phrase": "Then enter an unmatched term",
         "state": 2,
         "x": 560,
@@ -78,7 +78,7 @@
         "label": "zzz \u2192 No matching resources"
       },
       {
-        "at": 15.37,
+        "at": 17.27,
         "phrase": "Clear the field",
         "state": 3,
         "x": 560,
@@ -86,7 +86,7 @@
         "label": "Clear the search before the next check"
       },
       {
-        "at": 16.31,
+        "at": 18.31,
         "phrase": "try LIBRARY in uppercase",
         "state": 4,
         "x": 560,
@@ -94,7 +94,7 @@
         "label": "LIBRARY \u2192 the same result"
       },
       {
-        "at": 25.53,
+        "at": 27.69,
         "phrase": "combine the search with a category filter",
         "state": 5,
         "x": 790,
@@ -102,7 +102,7 @@
         "label": "Learning + LIBRARY \u2192 match"
       },
       {
-        "at": 28.07,
+        "at": 30.91,
         "phrase": "both conditions apply",
         "state": 6,
         "x": 790,

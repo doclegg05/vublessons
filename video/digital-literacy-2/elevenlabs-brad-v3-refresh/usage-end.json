@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-09-28",
+  "character_count_before": 314314,
+  "character_count_after": 403136,
+  "account_credit_delta": 88822,
+  "remaining": 278332,
+  "current_overage": {
+    "amount": "0",
+    "currency": "usd"
+  },
+  "successfulTtsTakes": 68,
+  "successfulIsolations": 68,
+  "note": "Account-wide before/after credit delta; no per-call dollar price is exposed. Other account activity during this interval would be included."
+}

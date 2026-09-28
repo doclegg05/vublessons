@@ -1,0 +1,38 @@
+[
+  {
+    "week": "week-01",
+    "chapter": "beat-03",
+    "settings": {
+      "model": "eleven_v3",
+      "voice": "Dslrhjl3ZpzrctukrQSN",
+      "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
+      "speed": 0.85,
+      "stability": 0.5,
+      "similarityBoost": 0.8,
+      "style": 0,
+      "useSpeakerBoost": false,
+      "language": "en",
+      "outputFormat": "mp3_44100_128"
+    },
+    "text": "[thoughtful] Now suppose the browser tabs and the rest of the desktop are also hard to see. [long pause] Page zoom will not solve every part of that problem. [long pause] System text size changes text in supported areas; display scaling changes the size of text, apps, and other interface elements more broadly. [long pause] The exact controls depend on your computer. [long pause] Ask the instructor before changing a shared workstation's system settings. [long pause] This is like choosing between a magnifying glass for one page and a more comfortable arrangement for the whole desk. [long pause] [curious] Which would you try first if only one website is too small? [long pause] [confident] Browser zoom, because it matches the scope of the problem.\n",
+    "output_directory": "week-01/beat-03-pacing-candidate-02/raw"
+  },
+  {
+    "week": "week-01",
+    "chapter": "beat-04",
+    "settings": {
+      "model": "eleven_v3",
+      "voice": "Dslrhjl3ZpzrctukrQSN",
+      "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
+      "speed": 0.85,
+      "stability": 0.5,
+      "similarityBoost": 0.8,
+      "style": 0,
+      "useSpeakerBoost": false,
+      "language": "en",
+      "outputFormat": "mp3_44100_128"
+    },
+    "text": "[warmly] Picture a radio connected to headphones. [long pause] Turning up the radio does not make the room speaker play if the sound is still going to the headphones. [long pause] [interested] A computer can work the same way. [long pause] First check whether the sound is muted. [long pause] Then inspect the selected output device: speakers, a monitor, or a headset. [long pause] Choose the device you intend to hear, begin at a comfortable volume, and play a short test. [long pause] If that test works but a meeting does not, check the meeting app's own audio choice next. [long pause] [encouraging] Change one setting at a time. [long pause] This gives you evidence about what fixed the problem instead of leaving you with several unexplained changes.\n",
+    "output_directory": "week-01/beat-04-pacing-candidate-02/raw"
+  }
+]

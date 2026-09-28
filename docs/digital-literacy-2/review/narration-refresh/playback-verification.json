@@ -1,0 +1,299 @@
+{
+  "videos": [
+    {
+      "week": "week-01",
+      "duration": 444.166667,
+      "keyboardChapterSeeks": 10,
+      "playback": [
+        {
+          "chapter": 1,
+          "time": 3.173436,
+          "paused": false,
+          "readyState": 4,
+          "cues": 121,
+          "activeCaptions": [
+            "hear instructions,\nor remember an appointment."
+          ],
+          "decodedAudioBytes": 97611,
+          "decodedVideoFrames": 233
+        },
+        {
+          "chapter": 5,
+          "time": 178.061837,
+          "paused": false,
+          "readyState": 4,
+          "cues": 121,
+          "activeCaptions": [
+            "A slow computer and a full computer\nare not exactly the same problem."
+          ],
+          "decodedAudioBytes": 146558,
+          "decodedVideoFrames": 312
+        },
+        {
+          "chapter": 10,
+          "time": 403.201408,
+          "paused": false,
+          "readyState": 4,
+          "cues": 121,
+          "activeCaptions": [
+            "Now pause and choose one improvement\nthat matters to your own routine."
+          ],
+          "decodedAudioBytes": 196584,
+          "decodedVideoFrames": 391
+        }
+      ]
+    },
+    {
+      "week": "week-02",
+      "duration": 443,
+      "keyboardChapterSeeks": 10,
+      "playback": [
+        {
+          "chapter": 1,
+          "time": 3.159066,
+          "paused": false,
+          "readyState": 4,
+          "cues": 119,
+          "activeCaptions": [
+            "Imagine a neighbor asks where they\ncan get help using a computer."
+          ],
+          "decodedAudioBytes": 243671,
+          "decodedVideoFrames": 517
+        },
+        {
+          "chapter": 5,
+          "time": 178.202307,
+          "paused": false,
+          "readyState": 4,
+          "cues": 119,
+          "activeCaptions": [
+            "Read its purpose and required\nfields before typing."
+          ],
+          "decodedAudioBytes": 292870,
+          "decodedVideoFrames": 601
+        },
+        {
+          "chapter": 10,
+          "time": 397.478701,
+          "paused": false,
+          "readyState": 4,
+          "cues": 119,
+          "activeCaptions": [
+            "Pause and build a small resource\nfolder for your chosen community task."
+          ],
+          "decodedAudioBytes": 342482,
+          "decodedVideoFrames": 681
+        }
+      ]
+    },
+    {
+      "week": "week-03",
+      "duration": 444.333333,
+      "keyboardChapterSeeks": 10,
+      "playback": [
+        {
+          "chapter": 1,
+          "time": 3.169024,
+          "paused": false,
+          "readyState": 4,
+          "cues": 122,
+          "activeCaptions": [
+            "Think about a notice, set of directions,\nor supply list that was easy to use."
+          ],
+          "decodedAudioBytes": 115118,
+          "decodedVideoFrames": 288
+        },
+        {
+          "chapter": 5,
+          "time": 179.395427,
+          "paused": false,
+          "readyState": 4,
+          "cues": 122,
+          "activeCaptions": [
+            "Select a total cell outside the three\ninput cells and enter equals SUM,"
+          ],
+          "decodedAudioBytes": 165027,
+          "decodedVideoFrames": 368
+        },
+        {
+          "chapter": 10,
+          "time": 399.659035,
+          "paused": false,
+          "readyState": 4,
+          "cues": 122,
+          "activeCaptions": [
+            "to use your resource pack\nwithout your explanation first."
+          ],
+          "decodedAudioBytes": 213706,
+          "decodedVideoFrames": 448
+        }
+      ]
+    },
+    {
+      "week": "week-04",
+      "duration": 453.416667,
+      "keyboardChapterSeeks": 10,
+      "playback": [
+        {
+          "chapter": 1,
+          "time": 3.159101,
+          "paused": false,
+          "readyState": 4,
+          "cues": 128,
+          "activeCaptions": [
+            "a family gathering,\na volunteer activity, or a meeting."
+          ],
+          "decodedAudioBytes": 105067,
+          "decodedVideoFrames": 279
+        },
+        {
+          "chapter": 5,
+          "time": 182.518138,
+          "paused": false,
+          "readyState": 4,
+          "cues": 128,
+          "activeCaptions": [
+            "editing three separate handouts\nand calling each one final."
+          ],
+          "decodedAudioBytes": 154887,
+          "decodedVideoFrames": 359
+        },
+        {
+          "chapter": 10,
+          "time": 408.923805,
+          "paused": false,
+          "readyState": 4,
+          "cues": 128,
+          "activeCaptions": [
+            "Complete the fictional\ncoordination task with a partner."
+          ],
+          "decodedAudioBytes": 204432,
+          "decodedVideoFrames": 438
+        }
+      ]
+    },
+    {
+      "week": "week-05",
+      "duration": 460.833333,
+      "keyboardChapterSeeks": 10,
+      "playback": [
+        {
+          "chapter": 1,
+          "time": 3.170088,
+          "paused": false,
+          "readyState": 4,
+          "cues": 136,
+          "activeCaptions": [
+            "Think about how you handle an\nunexpected request in everyday life."
+          ],
+          "decodedAudioBytes": 178204,
+          "decodedVideoFrames": 395
+        },
+        {
+          "chapter": 5,
+          "time": 184.222528,
+          "paused": false,
+          "readyState": 4,
+          "cues": 136,
+          "activeCaptions": [
+            "Imagine a document labeled read-only."
+          ],
+          "decodedAudioBytes": 228411,
+          "decodedVideoFrames": 475
+        },
+        {
+          "chapter": 10,
+          "time": 415.21482,
+          "paused": false,
+          "readyState": 4,
+          "cues": 136,
+          "activeCaptions": [
+            "Before the post-test,\nreview the skills you can demonstrate:"
+          ],
+          "decodedAudioBytes": 326830,
+          "decodedVideoFrames": 655
+        }
+      ]
+    },
+    {
+      "week": "week-06",
+      "duration": 457.75,
+      "keyboardChapterSeeks": 10,
+      "playback": [
+        {
+          "chapter": 1,
+          "time": 3.157151,
+          "paused": false,
+          "readyState": 4,
+          "cues": 129,
+          "activeCaptions": [
+            "contacts, places to visit, or resources"
+          ],
+          "decodedAudioBytes": 200839,
+          "decodedVideoFrames": 444
+        },
+        {
+          "chapter": 5,
+          "time": 183.645764,
+          "paused": false,
+          "readyState": 4,
+          "cues": 129,
+          "activeCaptions": [
+            "the task, the controls,\nthe data boundaries, and the checks."
+          ],
+          "decodedAudioBytes": 249492,
+          "decodedVideoFrames": 524
+        },
+        {
+          "chapter": 10,
+          "time": 413.832488,
+          "paused": false,
+          "readyState": 4,
+          "cues": 129,
+          "activeCaptions": [
+            "Show a partner the saved app and carry\nout your three acceptance checks."
+          ],
+          "decodedAudioBytes": 298595,
+          "decodedVideoFrames": 604
+        }
+      ]
+    }
+  ],
+  "galleryPlayback": [
+    {
+      "week": 1,
+      "posterLoaded": true,
+      "playbackAdvanced": true
+    },
+    {
+      "week": 2,
+      "posterLoaded": true,
+      "playbackAdvanced": true
+    },
+    {
+      "week": 3,
+      "posterLoaded": true,
+      "playbackAdvanced": true
+    },
+    {
+      "week": 4,
+      "posterLoaded": true,
+      "playbackAdvanced": true
+    },
+    {
+      "week": 5,
+      "posterLoaded": true,
+      "playbackAdvanced": true
+    },
+    {
+      "week": 6,
+      "posterLoaded": true,
+      "playbackAdvanced": true
+    }
+  ],
+  "pageErrors": [],
+  "galleryAccessibility": {
+    "desktop": [],
+    "mobile": []
+  }
+}

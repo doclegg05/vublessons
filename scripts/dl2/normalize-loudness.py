@@ -7,8 +7,9 @@ Default paths: courses/digital-literacy-2/media/week-0[1-6].mp4 (rewritten in pl
 import argparse,json,re,shutil,subprocess,sys,tempfile
 from pathlib import Path
 def measure(path,target,peak):
-    log=subprocess.run(['ffmpeg','-hide_banner','-nostats','-i',str(path),'-af',f'loudnorm=I={target}:TP={peak}:LRA=11:print_format=json','-vn','-f','null','-'],capture_output=True,text=True).stderr
-    return json.loads(log[log.rfind('{'):])
+    log=subprocess.run(['ffmpeg','-hide_banner','-nostats','-i',str(path),'-af',f'loudnorm=I={target}:TP={peak}:LRA=11:print_format=json','-vn','-f','null','-'],capture_output=True,text=True,check=True).stderr
+    # FFmpeg can print its muxing summary after the filter's JSON block.
+    return json.JSONDecoder().raw_decode(log[log.rfind('{'):])[0]
 def integrated(path):
     log=subprocess.run(['ffmpeg','-hide_banner','-nostats','-i',str(path),'-af','ebur128','-vn','-f','null','-'],capture_output=True,text=True).stderr
     tail=log[log.rfind('Integrated loudness'):];return float(re.search(r'I:\s+(-?[0-9.]+) LUFS',tail).group(1))

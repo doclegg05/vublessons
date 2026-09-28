@@ -2,8 +2,8 @@
   {
     "chapter": 2,
     "title": "Give the document a readable structure",
-    "startSeconds": 38.981,
-    "durationSeconds": 40.095,
+    "startSeconds": 42.974,
+    "durationSeconds": 44.971,
     "actions": [
       {
         "at": 0.0,
@@ -14,7 +14,7 @@
         "label": "Start with meaningful document structure"
       },
       {
-        "at": 3.37,
+        "at": 3.73,
         "phrase": "Use a real heading style",
         "state": 1,
         "x": 554,
@@ -22,7 +22,7 @@
         "label": "Select the title text"
       },
       {
-        "at": 4.49,
+        "at": 4.89,
         "phrase": "for the title",
         "state": 2,
         "x": 160,
@@ -30,7 +30,7 @@
         "label": "Open Styles \u2192 choose Heading 1"
       },
       {
-        "at": 5.35,
+        "at": 5.77,
         "phrase": "section headings",
         "state": 3,
         "x": 222,
@@ -38,7 +38,7 @@
         "label": "The title now appears in Navigation"
       },
       {
-        "at": 26.49,
+        "at": 29.13,
         "phrase": "Use link text",
         "state": 4,
         "x": 588,
@@ -50,8 +50,8 @@
   {
     "chapter": 5,
     "title": "Build a formula and challenge it",
-    "startSeconds": 163.19,
-    "durationSeconds": 48.269,
+    "startSeconds": 176.239,
+    "durationSeconds": 49.29,
     "actions": [
       {
         "at": 0.0,
@@ -62,7 +62,7 @@
         "label": "Select B5 \u2022 keep the total outside the input range"
       },
       {
-        "at": 4.15,
+        "at": 4.35,
         "phrase": "enter equals SUM",
         "state": 1,
         "x": 467,
@@ -70,7 +70,7 @@
         "label": "Enter =SUM(B2:B4)"
       },
       {
-        "at": 17.83,
+        "at": 17.53,
         "phrase": "twenty five dollars",
         "state": 2,
         "x": 771,
@@ -78,7 +78,7 @@
         "label": "Check the expected total: $25"
       },
       {
-        "at": 19.43,
+        "at": 19.57,
         "phrase": "Now change paper",
         "state": 3,
         "x": 769,
@@ -86,7 +86,7 @@
         "label": "Predict the new total before the change"
       },
       {
-        "at": 20.19,
+        "at": 20.25,
         "phrase": "from twelve to fifteen",
         "state": 4,
         "x": 769,
@@ -94,7 +94,7 @@
         "label": "Change B2 from 12 to 15"
       },
       {
-        "at": 24.17,
+        "at": 24.41,
         "phrase": "twenty eight",
         "state": 5,
         "x": 769,
@@ -102,7 +102,7 @@
         "label": "The formula recalculates: $28"
       },
       {
-        "at": 31.95,
+        "at": 32.51,
         "phrase": "inspect the formula and range",
         "state": 6,
         "x": 414,

@@ -176,13 +176,55 @@ def group_cues(words:list,audio_duration:float)->list:
   chunks+=split_span(words,lo,end,audio_duration);lo=end+1
  chunks=rebalance_chunks(words,chunks,audio_duration)
  chunks=merge_short_chunks(words,chunks,audio_duration)
- return rebalance_chunks(words,chunks,audio_duration)
+ chunks=rebalance_chunks(words,chunks,audio_duration)
+ if any(timing_deficit(words,lo,hi,audio_duration)>0 for lo,hi in chunks):
+  # Fast phrases can require moving more than one adjacent boundary. Search
+  # the whole chapter, retaining two-line fit and readable phrase endings.
+  best={n:((0,0.0,0,0),[])}
+  for lo in range(n-1,-1,-1):
+   options=[]
+   for hi in range(lo,n):
+    text=' '.join(x['word'] for x in words[lo:hi+1])
+    if not fits_two_lines(text):break
+    if hi+1 not in best or ends_dangling(words[hi]['word']) or dangling_sentence_start(words,lo,hi):continue
+    deficit=timing_deficit(words,lo,hi,audio_duration)
+    tail,following=best[hi+1]
+    cost=(tail[0]+int(deficit>0),tail[1]+round(deficit,3),tail[2]+int(not boundary_strength(words[hi]['word'])),tail[3]+1)
+    options.append((cost,[(lo,hi)]+following))
+   if options:best[lo]=min(options,key=lambda x:x[0])
+  if 0 in best:
+   cost,candidate=best[0]
+   old_deficits=[timing_deficit(words,lo,hi,audio_duration) for lo,hi in chunks]
+   old_cost=(sum(d>0 for d in old_deficits),round(sum(old_deficits),3))
+   clause_share=sum(bool(boundary_strength(words[hi]['word'])) for _,hi in candidate)/len(candidate)
+   if cost[:2]<old_cost and clause_share>=.50:chunks=candidate
+ return chunks
 def cue_timing(words:list,lo:int,hi:int,audio_duration:float)->tuple:
  text=' '.join(x['word'] for x in words[lo:hi+1])
  cs=words[lo]['start'];natural_end=max(words[hi]['end'],cs+.3)
  cap=min(extension_cap(words,hi,audio_duration),cs+MAX_CUE_DURATION,audio_duration)
  end=min(cap,max(natural_end,cs+required_duration(len(text))))
  return cs,end,text
+def chapter_cues(words:list,audio_duration:float)->list:
+ cues=[cue_timing(words,lo,hi,audio_duration) for lo,hi in group_cues(words,audio_duration)]
+ original_starts=[cue[0] for cue in cues]
+ # Share a small amount of display time between neighboring phrases when
+ # a fast phrase cannot extend into silence. Schedule forward first, then
+ # backwards to fit the actual audio clip, preserving cue order. The limit
+ # prevents readability repairs from concealing a substantially fast take.
+ previous_end=0
+ for i,(start,end,text) in enumerate(cues):
+  start=max(start,previous_end)
+  end=max(end,start+required_duration(len(text)))
+  cues[i]=(start,end,text);previous_end=end
+ next_start=audio_duration
+ for i in range(len(cues)-1,-1,-1):
+  start,end,text=cues[i]
+  end=min(end,next_start)
+  start=min(start,end-required_duration(len(text)))
+  assert start>=-.001 and abs(original_starts[i]-start)<=.6, 'Caption timing needs a slower take'
+  cues[i]=(max(0,start),end,text);next_start=max(0,start)
+ return cues
 def wrap_cue(text:str,width:int=LINE_WIDTH)->str:
  if len(text)<=width:return text
  i=wrap_split(text,width)
@@ -212,11 +254,12 @@ for week in sorted(root.glob(args[0] if args else 'week-*')):
   clips.append(f'<div class="clip" id="host-{cid}" data-composition-id="{cid}" data-composition-src="compositions/frames/scene-{i+1}.html" data-start="{start:.3f}" data-duration="{duration}" data-track-index="0" style="position:absolute;inset:0"></div>')
   audio.append(f'<audio class="clip" id="aud-{b["id"]}" src="narration/{b["id"]}.wav" data-start="{start+b.get('leadIn',0.01):.3f}" data-duration="{b["audioDuration"]:.5f}" data-track-index="1"></audio>')
   aligned=json.loads((week/f'narration/{b["id"]}.words.json').read_text())['words']
-  for lo,hi in group_cues(aligned,b['audioDuration']):
-   cs_rel,ce_rel,text=cue_timing(aligned,lo,hi,b['audioDuration']);lead=b.get('leadIn',0.01)
-   cs=start+lead+cs_rel;ce=min(start+lead+b['audioDuration'],start+lead+ce_rel);cues.append((cs,ce,text))
+  if not visual_only:
+   for cs_rel,ce_rel,text in chapter_cues(aligned,b['audioDuration']):
+    lead=b.get('leadIn',0.01)
+    cues.append((start+lead+cs_rel,start+lead+ce_rel,text))
   plan=visuals.chapter_plan(n,i)
-  story.append(f'## Frame {i+1} — {b["title"]}\n\n- src: compositions/frames/scene-{i+1}.html\n- duration: {duration}s\n- status: animated\n- transition_in: cut\n- scene: {plan['kind']} / {plan['layout']}\n- photo: {plan['photo'] or 'none: full-stage authored demonstration'}\n- worked states: {'; '.join(plan['steps'])}\n- voiceover: "{b["text"]}"\n- blueprint: compose\n\nScene 1 (0–{duration}s): {'Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json.' if plan['layout']=='screen-share' else 'Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram.'} Britt audio, chapter windows and existing caption files are retained in visual-only mode.\n')
+  story.append(f'## Frame {i+1} — {b["title"]}\n\n- src: compositions/frames/scene-{i+1}.html\n- duration: {duration}s\n- status: animated\n- transition_in: cut\n- scene: {plan['kind']} / {plan['layout']}\n- photo: {plan['photo'] or 'none: full-stage authored demonstration'}\n- worked states: {'; '.join(plan['steps'])}\n- voiceover: "{b["text"]}"\n- blueprint: compose\n\nScene 1 (0–{duration}s): {'Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json.' if plan['layout']=='screen-share' else 'Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram.'} Narration audio, chapter windows and existing caption files are retained in visual-only mode.\n')
   start+=duration
  if not visual_only:(week/'narration/beats.json').write_text(json.dumps(beats,indent=2)+'\n')
  title=json.loads((root/'videos.json').read_text())[n-1]['title']
