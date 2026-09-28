@@ -18,10 +18,12 @@ test('DL2 teaching videos expose ten accurate, keyboard-operated chapters withou
   }
  }
 });
+// Narrowed 2026-09-28 (Mission Control, Task 11): the lesson-deck route uses week 2, because week 1's deck was replaced
+// (the Mission Control deck has no video slide). The week 1 video transcript is unchanged and still checked.
 test('DL2 lesson and transcript chapters fit enlarged mobile text and retain native video keys',async({page})=>{
  await page.setViewportSize({width:390,height:844});
- for(const route of ['presentation','video-transcript']){
-  await page.goto(`${base}/weeks/week-01/${route}.html`);
+ for(const [route,week] of [['presentation','week-02'],['video-transcript','week-01']]){
+  await page.goto(`${base}/weeks/${week}/${route}.html`);
   if(route==='presentation'){
    await page.getByRole('button',{name:'Show lesson navigation'}).click();
    await page.locator('[data-slide]').filter({hasText:/Watch:/}).click();

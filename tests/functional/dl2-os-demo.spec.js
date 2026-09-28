@@ -1,0 +1,109 @@
+// Show engine: steps move a cursor, apply cumulative state, and Back rebuilds the previous state.
+const { test, expect } = require('@playwright/test');
+const BASE = 'http://localhost:3939/courses/digital-literacy-2/os/';
+const html = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}">
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="deck.css"><link rel="stylesheet" href="win11.css"></head>
+<body class="dl2-os"><div class="demo" data-demo="t-two" style="width:1200px"></div>
+<script src="demo.js"></script>
+<script>DL2Demo.define({ id:'t-two', title:'Test', scene:'<div class="w11-wall"></div><button id="b1" style="position:absolute;left:100px;top:100px;width:200px;height:60px">One</button><div id="lab" style="position:absolute;left:500px;top:300px">start</div>',
+ steps:[{cap:'Start here.',check:'Start'},{cap:'Click <em>One</em>.',check:'Click One',target:'#b1',action:'click',state:{attr:{page:'two'},text:{'#lab':'clicked'}}},{cap:'Done.',check:'Done',state:{cls:{finished:true}}}]});</script>
+</body></html>`;
+
+async function open(page, opts = {}) {
+  if (opts.reduced) await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(BASE + 'fonts.css');
+  await page.setContent(html, { waitUntil: 'load' });
+}
+
+test('mounts with caption, counter and checklist', async ({ page }) => {
+  await open(page);
+  await expect(page.locator('.demo-stepno')).toHaveText('STEP 1 / 3');
+  await expect(page.locator('.demo-cap')).toHaveText('Start here.');
+  await expect(page.locator('.demo-todo li')).toHaveCount(3);
+  await expect(page.locator('.demo-todo li.now')).toContainText('Start');
+});
+
+test('Next plays the click and applies state; Back restores it', async ({ page }) => {
+  await open(page);
+  await page.locator('[data-act="next"]').click();
+  await expect(page.locator('.screen')).toHaveAttribute('data-page', 'two', { timeout: 8000 });
+  await expect(page.locator('#lab')).toHaveText('clicked');
+  await expect(page.locator('.demo-stepno')).toHaveText('STEP 2 / 3');
+  await page.locator('[data-act="next"]').click();
+  await expect(page.locator('.screen')).toHaveClass(/finished/, { timeout: 8000 });
+  await page.locator('[data-act="back"]').click();
+  await expect(page.locator('.screen')).not.toHaveClass(/finished/);
+  await expect(page.locator('.screen')).toHaveAttribute('data-page', 'two');
+  await page.locator('[data-act="replay"]').click();
+  await expect(page.locator('#lab')).toHaveText('start');
+  await expect(page.locator('.demo-stepno')).toHaveText('STEP 1 / 3');
+});
+
+test('reduced motion jumps straight to each state', async ({ page }) => {
+  await open(page, { reduced: true });
+  await page.locator('[data-act="next"]').click();
+  await expect(page.locator('.screen')).toHaveAttribute('data-page', 'two', { timeout: 1000 });
+});
+
+test('controller refuses Next at the end so the deck can move on', async ({ page }) => {
+  await open(page, { reduced: true });
+  const r = await page.evaluate(() => { const c = DL2Demo.get('t-two'); return [c.next(), c.next(), c.next()]; });
+  expect(r).toEqual([true, true, false]);
+});
+
+test('half speed button reports its state in words', async ({ page }) => {
+  await open(page);
+  const slow = page.locator('[data-act="slow"]');
+  await slow.click();
+  await expect(slow).toHaveAttribute('aria-pressed', 'true');
+});
+
+// Fixture for the cursor-resting-point bug: step 2 clicks #b1, and that click's own state
+// (cls:{gone:true}) hides #b1 via the inline <style> below. render() must not rest the cursor
+// on a target that its own state just hid; it should fall back to an earlier visible target or,
+// as here (step 1 has no target), to def.start.
+const goneHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}">
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="deck.css"><link rel="stylesheet" href="win11.css"></head>
+<body class="dl2-os"><div class="demo" data-demo="t-gone" style="width:1200px"></div>
+<script src="demo.js"></script>
+<script>DL2Demo.define({ id:'t-gone', title:'Test', start:[900,500],
+ scene:'<style>.screen.gone #b1{display:none}</style><div class="w11-wall"></div><button id="b1" style="position:absolute;left:100px;top:100px;width:200px;height:60px">One</button>',
+ steps:[{cap:'Start here.',check:'Start'},{cap:'Click <em>One</em>.',check:'Click One',target:'#b1',action:'click',state:{cls:{gone:true}}}]});</script>
+</body></html>`;
+
+test('cursor rests on a visible fallback when its target is hidden by its own state', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto(BASE + 'fonts.css');
+  await page.setContent(goneHtml, { waitUntil: 'load' });
+  await page.locator('[data-act="next"]').click();
+  await expect(page.locator('.screen')).toHaveClass(/gone/, { timeout: 1000 });
+  const pos = await page.locator('.demo-cursor').evaluate(function (el) { return { left: el.style.left, top: el.style.top }; });
+  expect(pos.left === '0px' && pos.top === '0px').toBe(false);
+  expect(pos).toEqual({ left: '900px', top: '500px' });
+});
+
+// Final review minor: with full motion, Next pressed while the LAST step is still animating finishes that
+// step on screen and is consumed; only the following Next leaves the slide.
+const deckDemo = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}">
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="deck.css"><link rel="stylesheet" href="win11.css"></head>
+<body class="dl2-os"><main class="deck">
+<section class="slide"><div class="panel full"><h1>Demo</h1><div class="demo" data-demo="t-last" style="width:1200px"></div></div></section>
+<section class="slide"><div class="panel full"><h1>After</h1></div></section>
+</main><script src="deck.js"></script><script src="demo.js"></script>
+<script>DL2Demo.define({ id:'t-last', title:'Test', scene:'<div class="w11-wall"></div><button id="b1" style="position:absolute;left:100px;top:100px;width:200px;height:60px">One</button>',
+ steps:[{cap:'Start here.',check:'Start'},{cap:'Click <em>One</em>.',check:'Click One',target:'#b1',action:'click',state:{cls:{finished:true}}}]});</script>
+</body></html>`;
+
+test('Next during the last step\'s animation finishes the step and stays on the slide', async ({ page }) => {
+  await page.goto(BASE + 'fonts.css');
+  await page.setContent(deckDemo, { waitUntil: 'load' });
+  await expect(page.locator('.demo-stepno')).toHaveText('STEP 1 / 2');
+  await page.keyboard.press('ArrowRight'); // starts the last step (about 2.4s of animation)
+  await expect(page.locator('.demo-stepno')).toHaveText('STEP 2 / 2');
+  await expect(page.locator('.screen')).not.toHaveClass(/finished/);
+  await page.keyboard.press('ArrowRight'); // still animating: finish it now, stay here
+  await expect(page.locator('.screen')).toHaveClass(/finished/);
+  await expect(page.locator('.slide.is-active h1')).toHaveText('Demo');
+  await page.keyboard.press('ArrowRight'); // the step is done, so the deck moves on
+  await expect(page.locator('.slide.is-active h1')).toHaveText('After');
+});

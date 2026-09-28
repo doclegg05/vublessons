@@ -13,8 +13,10 @@ const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').r
 function section(html,slideNumber){const m=html.match(new RegExp(`<section[^>]*id="slide-${slideNumber}"[^>]*>([\\s\\S]*?)</section>`));if(!m)throw new Error(`slide-${slideNumber} not found`);return m[1];}
 const withoutDetails=html=>html.replace(/<details[\s\S]*?<\/details>/g,'');
 
+// Narrowed 2026-09-28 (Mission Control, Task 11): weeks 2–6 only. Week 1's generated deck was replaced by the
+// 27-slide Mission Control deck, which is not built from curriculum.json (tests/functional/dl2-os-week1-deck.spec.js).
 test('DL2 teaching text is visible on every slide, not only inside a collapsed note',()=>{
- for(const w of curriculum.weeks){const html=deck(w.n);
+ for(const w of curriculum.weeks.filter(w=>w.n!==1)){const html=deck(w.n);
   w.slides.forEach((s,i)=>{const visible=withoutDetails(section(html,i+2));expect(visible,`week ${w.n} slide ${i+2} "${s.title}"`).toContain(esc(s.body));});}
 });
 

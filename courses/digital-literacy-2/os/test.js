@@ -1,0 +1,242 @@
+/* DL2 pre/post test: name → 20 questions → review → submit → grade → PDF → copy to Britt.
+ * Answers survive a reload. If sending fails, the copy waits in an outbox and retries next visit. */
+(function (global) {
+  'use strict';
+  var root = document.querySelector('[data-dl2-test]');
+  if (!root) return;
+  var FORM = root.dataset.form === 'post' ? 'post' : 'pre';
+  var LABEL = FORM === 'pre' ? 'Pre-Test' : 'Post-Test';
+  var ITEMS = global.DL2Items[FORM];
+  var KEY = 'dl2os:test:' + FORM, OUTBOX = 'dl2os:outbox';
+  var LETTERS = ['A', 'B', 'C', 'D'];
+  var esc = global.DL2Paper.esc;
+  var st = load() || fresh();
+  /* A shared lab PC can open on someone else's unsubmitted test. When a saved test in progress
+   * carries a name, the question and review screens say whose it is and offer Start over. */
+  var resumed = !!(st.name && (st.phase === 'q' || st.phase === 'review'));
+
+  function fresh() { return { phase: 'start', name: '', started: null, at: 0, answers: ITEMS.map(function () { return null; }) }; }
+
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) { /* storage blocked */ } }
+  function clear() { try { localStorage.removeItem(KEY); } catch (e) { /* storage blocked */ } }
+  function readOutbox() { try { return JSON.parse(localStorage.getItem(OUTBOX) || '[]'); } catch (e) { return []; } }
+  function writeOutbox(list) { try { localStorage.setItem(OUTBOX, JSON.stringify(list)); return true; } catch (e) { return false; } }
+
+  function top(extra) {
+    return '<header class="test-top"><img src="/courses/digital-literacy-2/os/img/vub-seal-360.png" alt="" width="44" height="44">' +
+      '<div class="ttl">Digital Literacy Level 2 · ' + LABEL + (st.name ? '<small>' + esc(st.name) + '</small>' : '') + '</div>' +
+      (extra || '') + '</header>';
+  }
+  function resumeNote() {
+    if (!resumed) return '';
+    return '<div class="resume-note" role="note"><p>Continuing the ' + LABEL.toLowerCase() + ' for <strong>' + esc(st.name) + '</strong>. Not you?</p> ' +
+      '<button type="button" data-go="restart">Start over</button></div>';
+  }
+  function ticks() {
+    return '<div class="ticks" aria-hidden="true">' + ITEMS.map(function (_, i) {
+      return '<i class="' + (st.answers[i] ? 'a' : '') + (i === st.at ? ' c' : '') + '"></i>';
+    }).join('') + '</div>';
+  }
+
+  function renderStart(error) {
+    root.innerHTML = top() + '<main class="test-card start" id="main"><h1>' + LABEL + '</h1>' +
+      '<p>20 questions · about 20 minutes. Pick the best answer for each. You can go back and change answers before you submit.</p>' +
+      '<p>' + (FORM === 'pre' ? 'This shows where to start. It is not a grade.' : 'This shows how far you’ve come since the pre-test.') + '</p>' +
+      '<label for="name">Your full name</label><input id="name" autocomplete="name" value="' + esc(st.name) + '">' +
+      (error ? '<p class="field-error" role="alert">' + error + '</p>' : '') +
+      '<div class="test-nav"><span></span><button type="button" class="primary" data-go="begin">Start the ' + LABEL.toLowerCase() + '</button></div></main>';
+    root.querySelector('#name').focus();
+  }
+
+  function renderQuestion() {
+    var it = ITEMS[st.at], chosen = st.answers[st.at];
+    root.innerHTML = top('<div class="q-count">Question ' + (st.at + 1) + ' of 20</div>') + resumeNote() + ticks() +
+      '<main class="test-card" id="main"><h1 class="q" id="q-stem">' + esc(it.stem) + '</h1><div class="opts" role="radiogroup" aria-labelledby="q-stem">' +
+      it.options.map(function (o, k) {
+        var L = LETTERS[k], on = chosen === L;
+        return '<button type="button" class="opt' + (on ? ' sel' : '') + '" role="radio" aria-checked="' + on + '" data-letter="' + L + '"><b>' + L + '</b><span>' + esc(o) + '</span><span class="pick">' + (on ? '✓ Selected' : '') + '</span></button>';
+      }).join('') + '</div>' +
+      '<div class="test-nav"><button type="button" data-go="back"' + (st.at === 0 ? ' disabled' : '') + '>◀ Back</button>' +
+      '<button type="button" class="primary" data-go="next">' + (st.at === 19 ? 'Review answers' : 'Next ▶') + '</button></div></main>';
+    var sel = root.querySelector('.opt.sel') || root.querySelector('.opt');
+    sel.focus();
+  }
+
+  function renderReview() {
+    var answered = st.answers.filter(Boolean).length;
+    root.innerHTML = top('<div class="q-count">Review</div>') + resumeNote() + '<main class="test-card" id="main"><h1 tabindex="-1">Check your answers</h1>' +
+      '<p>You answered <strong>' + answered + ' of 20</strong>. Select any question to change it.</p><div class="review">' +
+      ITEMS.map(function (it, i) {
+        var a = st.answers[i];
+        return '<button type="button" class="review-row' + (a ? '' : ' skipped') + '" data-jump="' + i + '"><b>' + (i + 1) + '</b><span>' + esc(it.stem) + '</span><em>' + (a ? 'Answer: ' + esc(a) : '⚠ Not answered') + '</em></button>';
+      }).join('') + '</div><div class="test-nav"><button type="button" data-go="last">◀ Back to question 20</button><button type="button" class="primary" data-go="submit">Submit my test</button></div>' +
+      '<dialog class="confirm"><h2>Submit your test?</h2><p>You answered ' + answered + ' of 20. You can’t change answers after you submit.</p>' +
+      '<div class="test-nav"><button type="button" data-go="cancel">Go back</button><button type="button" class="primary" data-go="confirm">Yes, submit</button></div></dialog></main>';
+    root.querySelector('main h1').focus();
+  }
+
+  function download(bytes, filename) {
+    var url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
+    var a = document.createElement('a'); a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+    return url;
+  }
+  function send(payload) {
+    var body = new URLSearchParams(payload).toString();
+    return fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return true; });
+  }
+  /* Outbox writes always re-read from storage immediately before writing, so a write
+   * here never clobbers an item another code path (a fresh submission failure, or a
+   * concurrent flush) added or removed in the meantime. */
+  function enqueueOutbox(item) {
+    var list = readOutbox().filter(function (i) { return i['record-id'] !== item['record-id']; });
+    list.push(item);
+    return writeOutbox(list);
+  }
+  function dequeueOutbox(recordId) {
+    var list = readOutbox().filter(function (i) { return i['record-id'] !== recordId; });
+    writeOutbox(list);
+  }
+  function deliver(payload, fromQueue) {
+    function run() {
+      if (fromQueue && !readOutbox().some(function (item) { return item['record-id'] === payload['record-id']; })) return Promise.resolve();
+      return send(payload).then(function () { dequeueOutbox(payload['record-id']); });
+    }
+    if (global.navigator.locks) return global.navigator.locks.request('dl2os:send:' + payload['record-id'], run);
+    return run();
+  }
+  function flushOutbox() {
+    var list = readOutbox();
+    if (!list.length) return;
+    list.reduce(function (p, item) {
+      return p.then(function () {
+        return deliver(item, true).catch(function () { /* leave it queued; retried on the next flush */ });
+      });
+    }, Promise.resolve());
+  }
+
+  function submit() {
+    var submitted = new Date(), started = new Date(st.started);
+    var result = global.DL2Grade.grade(ITEMS, st.answers);
+    var rid = global.DL2Grade.recordId(FORM, submitted, st.name) + '-' + global.crypto.randomUUID().slice(0, 8);
+    var payload = {
+      'form-name': 'dl2-' + FORM + 'test', 'bot-field': '', 'record-id': rid, student: st.name, form: FORM + ' ' + global.DL2Items.version,
+      started: started.toISOString(), submitted: submitted.toISOString(), score: result.correct + '/' + result.total,
+      domains: result.byDomain.map(function (d) { return d.id + ':' + d.correct + '/' + d.total; }).join(' '),
+      answers: st.answers.map(function (a) { return a || '-'; }).join(',')
+    };
+    var report = { form: FORM, label: LABEL, items: ITEMS, result: result, name: st.name, started: started, submitted: submitted, recordId: rid };
+    /* Queue the copy before the answers are cleared and before it is sent: if the tab closes
+     * mid-send, the next visit's flush still delivers it. It leaves the outbox once sent. */
+    var queued = enqueueOutbox(payload);
+    clear();
+    renderResult(report, payload, queued);
+  }
+
+  function renderResult(report, payload, queued) {
+    var r = report.result;
+    /* File name: plain ASCII. Accents are folded first (Nguyễn → Nguyen, Núñez → Nunez), then anything else is dropped. */
+    var last = String(report.name).trim().split(/\s+/).pop().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z0-9-]/g, '') || 'Student';
+    var filename = 'DL2-' + report.label.replace('-', '') + '-' + last + '-' + report.recordId.split('-').slice(2, 4).join('-') + '-' + report.recordId.split('-').pop().replace(/[^A-Za-z0-9]/g, '') + '.pdf';
+    root.innerHTML = top() + '<main class="test-card result" id="main"><h1 tabindex="-1">Thank you, ' + esc(report.name) + '!</h1>' +
+      '<p class="result-score">' + r.correct + ' of 20 correct</p><p class="pdf-status" role="status">Making your results PDF…</p>' +
+      '<section class="record-path" aria-labelledby="send-heading"><h2 id="send-heading">1. Submit results to Britt</h2><p class="copy-status" role="status">Sending a copy to Britt…</p><div class="test-nav"><button type="button" data-go="send" disabled>Submit to instructor</button></div><p>Netlify stores your answers and score. This does not save the PDF to your flash drive.</p></section>' +
+      '<section class="record-path usb-backup" aria-labelledby="usb-heading"><h2 id="usb-heading">2. Save your PDF to Britt’s flash drive</h2><ol><li>Plug in the flash drive Britt supplied.</li><li>Select <strong>Download graded PDF</strong>. If Save As opens, choose the flash drive. If the browser saves automatically, open Downloads and copy the PDF to the flash drive.</li><li>Open the PDF <strong>from the flash drive</strong>. Check your name, test type and score.</li><li>Close the PDF, safely eject the drive, and return it to Britt.</li></ol><p>Saving the PDF does not submit your answers. You can save it even while the online copy is waiting to send.</p><div class="test-nav"><button type="button" data-go="pdf" disabled>Download graded PDF</button><button type="button" class="primary" data-go="print" disabled>Print my results</button></div></section>' +
+      '<div class="html-report" hidden></div></main>';
+    root.querySelector('main h1').focus();
+    var pdfUrl = null, bytes = null;
+    var build = global.DL2Pdf ? global.DL2Pdf.build(report) : Promise.reject(new Error('PDF library not loaded'));
+    build.then(function (b) {
+      bytes = b; pdfUrl = download(bytes, filename);
+      root.querySelector('.pdf-status').textContent = 'Your PDF download has started: ' + filename + '. Check Downloads, or choose Download graded PDF.';
+      root.querySelectorAll('[data-go="pdf"],[data-go="print"]').forEach(function (btn) { btn.disabled = false; });
+    }).catch(function (err) {
+      console.error('DL2 PDF failed', err);
+      root.querySelector('.pdf-status').textContent = 'The PDF could not be made on this computer. Your full report is below. Use Print.';
+      var box = root.querySelector('.html-report'); box.hidden = false; box.innerHTML = htmlReport(report);
+      root.querySelector('[data-go="print"]').disabled = false;
+    });
+    root.addEventListener('click', function (e) {
+      var go = e.target.closest('[data-go]'); if (!go) return;
+      if (go.dataset.go === 'send') sendResult();
+      if (go.dataset.go === 'pdf' && bytes) download(bytes, filename);
+      if (go.dataset.go === 'print') { if (pdfUrl) global.open(pdfUrl, '_blank'); else global.print(); }
+    });
+    function sendResult() {
+      var button = root.querySelector('[data-go="send"]');
+      button.disabled = true;
+      root.querySelector('.copy-status').textContent = 'Sending a copy to Britt…';
+      deliver(payload, queued).then(function () {
+        root.querySelector('.copy-status').textContent = '✓ Netlify accepted your results for Britt. Keep your PDF as a backup.';
+        button.textContent = 'Submitted to instructor';
+      }).catch(function () {
+        button.disabled = false;
+        button.textContent = 'Retry submission to instructor';
+        root.querySelector('.copy-status').textContent = queued ? 'Not sent yet. Saved on this computer for retry. Tell Britt and keep your PDF.' : 'Not sent, and this browser could not save a retry copy. Save or print your PDF and give it to Britt.';
+      });
+    }
+    sendResult();
+  }
+
+  function htmlReport(report) {
+    var r = report.result;
+    return '<div class="paper-doc">' + global.DL2Paper.letterhead({ date: report.submitted }) +
+      '<h2>' + report.label + ' · Graded Results</h2><p>Record ' + esc(report.recordId) + ' · ' + esc(report.name) + ' · ' + r.correct + '/20</p>' +
+      '<table><thead><tr><th>#</th><th>Skill checked</th><th>Your answer</th><th>Correct answer</th><th>Result</th></tr></thead><tbody>' +
+      r.rows.map(function (row) {
+        return '<tr' + (row.correct ? '' : ' class="miss"') + '><td>' + row.n + '</td><td>' + esc(row.skill) + '</td><td>' + (row.chosen ? esc(row.chosen) + ' · ' + esc(row.chosenText) : 'Not answered') + '</td><td>' + esc(row.answer) + ' · ' + esc(row.answerText) + '</td><td>' + (row.correct ? '✓ Correct' : '✗ Incorrect') + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+
+  function render() {
+    if (st.phase === 'start') renderStart();
+    else if (st.phase === 'q') renderQuestion();
+    else if (st.phase === 'review') renderReview();
+  }
+
+  root.addEventListener('click', function (e) {
+    var opt = e.target.closest('.opt');
+    if (opt) { st.answers[st.at] = opt.dataset.letter; save(); renderQuestion(); return; }
+    var jump = e.target.closest('[data-jump]');
+    if (jump) { st.at = Number(jump.dataset.jump); st.phase = 'q'; save(); render(); return; }
+    var go = e.target.closest('[data-go]'); if (!go) return;
+    var act = go.dataset.go;
+    if (act === 'begin') {
+      var name = root.querySelector('#name').value.trim().replace(/\s+/g, ' ');
+      if (name.length < 2) return renderStart('Please type your name so your results are yours.');
+      st.name = name; st.started = new Date().toISOString(); st.phase = 'q'; st.at = 0; save(); render();
+    } else if (act === 'next') { if (st.at === 19) st.phase = 'review'; else st.at++; save(); render(); }
+    else if (act === 'back') { st.at = Math.max(0, st.at - 1); save(); render(); }
+    else if (act === 'last') { st.phase = 'q'; st.at = 19; save(); render(); }
+    else if (act === 'restart') { clear(); st = fresh(); resumed = false; render(); }
+    else if (act === 'submit') root.querySelector('dialog.confirm').showModal();
+    else if (act === 'cancel') {
+      root.querySelector('dialog.confirm').close();
+      var submitBtn = root.querySelector('[data-go="submit"]');
+      if (submitBtn) submitBtn.focus();
+    }
+    else if (act === 'confirm') { root.querySelector('dialog.confirm').close(); submit(); }
+  });
+  root.addEventListener('keydown', function (e) {
+    if (st.phase !== 'q') return;
+    if (e.target.matches('input')) return;
+    var k = e.key.toUpperCase();
+    if (LETTERS.indexOf(k) > -1) { st.answers[st.at] = k; save(); renderQuestion(); return; }
+    /* ARIA radiogroup keyboard pattern: Down/Right moves to (and selects) the next
+     * option, Up/Left the previous one, wrapping at the ends. Selection follows focus,
+     * matching the letter-key and click behaviors above. Only inside the options: an arrow
+     * pressed on Back or Next (to scroll, say) must not quietly change the answer. */
+    var dir = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1 : (e.key === 'ArrowUp' || e.key === 'ArrowLeft') ? -1 : 0;
+    if (!dir || !e.target.closest('.opts')) return;
+    e.preventDefault();
+    var count = ITEMS[st.at].options.length;
+    var idx = LETTERS.indexOf(st.answers[st.at]);
+    var nextIdx = idx === -1 ? (dir === 1 ? 0 : count - 1) : (idx + dir + count) % count;
+    st.answers[st.at] = LETTERS[nextIdx]; save(); renderQuestion();
+  });
+
+  flushOutbox();
+  render();
+  global.DL2Test = { state: function () { return st; } };
+})(window);

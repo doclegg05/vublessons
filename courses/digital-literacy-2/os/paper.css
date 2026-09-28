@@ -1,0 +1,156 @@
+/* DL2 paper: letter-size documents on official letterhead. Prints in black and white.
+ * Ported from mockup 3 (graded PDF: .doc-title, .who, .doms, table, .sig, .fine) and
+ * mockup 4 (worksheet: .namerow, .mhead, .badges, .ab, ol.steps, .path, kbd, .two, .stuck,
+ * .check, .home). The mockups size type in cqw against an on-screen preview box; these
+ * documents print at a fixed 8.5in width, so sizes are converted to print-safe pt
+ * (base 12pt body, 11pt small text, 24pt org name, 20pt mission/doc titles). Reused by
+ * later tasks for answer keys, printable tests and worksheets. */
+@page { size: letter; margin: 0.5in; }
+.paper-doc { --navy:#1B365D; --gold:#C9A227; --red:#B31942; --ink:#15213A; --rule:#E3E8F1; font-family:"Source Sans 3", "Segoe UI", sans-serif; color:var(--ink); background:#fff; max-width:8.5in; margin:0 auto; padding:0.5in; font-size:12pt; line-height:1.4; }
+.letterhead { position:relative; display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:12pt; align-items:center; padding-top:10pt; }
+.lh-bar { position:absolute; left:-0.5in; right:-0.5in; top:-0.5in; height:7pt; background:linear-gradient(90deg,var(--navy) 0 60%, var(--gold) 60% 80%, var(--red) 80%); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.lh-seal { width:54pt; height:54pt; }
+.lh-state { font-size:8pt; letter-spacing:.34em; font-weight:700; color:#8a6d12; white-space:nowrap; }
+.lh-name { font-family:"Playfair Display", Georgia, serif; font-weight:800; font-size:18.5pt; line-height:1.05; color:var(--navy); white-space:nowrap; }
+.lh-trio { font-size:8.5pt; font-style:italic; color:#4a5874; margin-top:3pt; }
+/* Meta block: label column + one-line values, like the graded PDF. */
+.lh-meta { margin:0; width:160pt; font-size:7.5pt; line-height:1.45; border-left:2pt solid var(--gold); padding-left:8pt; }
+.lh-meta div { display:grid; grid-template-columns:44pt minmax(0,1fr); margin-top:1pt; }
+.lh-meta dt { font-weight:700; color:var(--navy); }
+.lh-meta dd { margin:0; }
+.lh-rule { grid-column:1 / -1; height:5pt; border-top:2pt solid var(--navy); border-bottom:1pt solid var(--gold); margin-top:4pt; }
+@media print { .no-print { display:none !important; } }
+
+/* ---------------- graded report (ported from mockup 3) ---------------- */
+.paper-doc h2 { font-family:"Playfair Display", Georgia, serif; font-size:18pt; color:var(--navy); margin:16pt 0 4pt; }
+.paper-doc > p { font-size:11pt; color:#2a3752; margin:0 0 10pt; }
+.rule2 { margin:14pt 0 16pt; height:4pt; border-top:2pt solid var(--navy); border-bottom:1pt solid var(--gold); }
+.doc-title { display:flex; justify-content:space-between; align-items:flex-end; gap:12pt; }
+.doc-title h1 { font-family:"Playfair Display", Georgia, serif; font-size:20pt; color:var(--navy); margin:0; }
+.doc-title .rid { font-size:9pt; color:#5b6883; text-align:right; line-height:1.5; font-family:"DL2 JetBrains Mono", "Courier New", monospace; }
+.who { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:10pt; margin-top:14pt; }
+.who > div { border:1pt solid #d9e0ec; border-radius:6pt; padding:8pt 10pt; font-size:11pt; }
+.who small { display:block; font-size:8pt; letter-spacing:.12em; text-transform:uppercase; color:#6a7690; font-weight:700; margin-bottom:2pt; }
+.who .score { background:var(--navy); color:#fff; border-color:var(--navy); display:flex; align-items:center; gap:10pt; }
+.who .score small { color:#c9d6ee; }
+.who .score > div { border:none; padding:0; }
+.who .score strong { font-family:"Playfair Display", Georgia, serif; font-size:22pt; line-height:1; }
+.doms { margin-top:14pt; display:grid; grid-template-columns:repeat(2,1fr); gap:5pt 20pt; font-size:10pt; }
+.dom { display:grid; grid-template-columns:1fr 60pt 24pt; gap:6pt; align-items:center; }
+.dom .bar { height:6pt; background:var(--rule); border-radius:6pt; overflow:hidden; }
+.dom .bar i { display:block; height:100%; background:linear-gradient(90deg,var(--navy),#2c5aa0); }
+.dom span:last-child { text-align:right; font-weight:700; }
+.paper-doc table { width:100%; border-collapse:collapse; margin-top:14pt; font-size:10.5pt; }
+.paper-doc th { text-align:left; font-size:8pt; letter-spacing:.1em; text-transform:uppercase; color:#5b6883; border-bottom:2pt solid var(--navy); padding:5pt 4pt; }
+.paper-doc td { padding:5pt 4pt; border-bottom:1pt solid var(--rule); vertical-align:top; line-height:1.35; }
+.paper-doc td.n { font-weight:700; color:var(--navy); width:18pt; }
+.paper-doc td.r { white-space:nowrap; font-weight:700; }
+.paper-doc td.r.ok { color:#1d6b3a; } .paper-doc td.r.no { color:#a3142f; }
+.paper-doc tr.miss td { background:#fdf5f6; }
+.sig { display:grid; grid-template-columns:1fr 1fr; gap:24pt; font-size:9.5pt; color:#4a5874; margin-top:24pt; }
+.sig div { border-top:1pt solid var(--ink); padding-top:4pt; }
+.fine { margin-top:16pt; display:flex; justify-content:space-between; font-size:8pt; color:#5b6883; border-top:1pt solid var(--rule); padding-top:6pt; }
+
+/* ---------------- worksheet paper (ported from mockup 4) ---------------- */
+.namerow { display:grid; grid-template-columns:1.6fr 1fr; gap:18pt; font-size:12pt; color:#3a4763; margin-top:8pt; }
+.namerow span { display:inline-block; min-height:14pt; border-bottom:1pt solid var(--ink); padding-bottom:2pt; }
+.mhead { display:flex; align-items:flex-end; justify-content:space-between; margin-top:14pt; gap:12pt; }
+.mhead .k { font-size:9pt; font-weight:800; letter-spacing:.2em; color:var(--red); }
+.mhead h1 { font-family:"Playfair Display", Georgia, serif; font-size:20pt; color:var(--navy); line-height:1.08; margin-top:2pt; }
+.badges { display:flex; gap:6pt; flex:none; }
+.badges span { font-size:9pt; font-weight:700; border:1.5pt solid var(--navy); color:var(--navy); border-radius:20pt; padding:3pt 9pt; white-space:nowrap; }
+.badges span.do { background:var(--navy); color:#fff; }
+.ab { display:grid; grid-template-columns:1fr auto 1fr; gap:10pt; align-items:stretch; margin-top:12pt; }
+.ab > div { border-radius:6pt; padding:10pt 12pt; font-size:11pt; line-height:1.4; }
+.ab small { display:block; font-size:8pt; font-weight:800; letter-spacing:.14em; margin-bottom:2pt; }
+.ab .a { background:#f1f4f9; border:1.5pt solid #c6d0e1; } .ab .a small { color:#4a5874; }
+.ab .b { background:#fbf6e6; border:1.5pt solid var(--gold); } .ab .b small { color:#8a6d12; }
+.ab .arr { display:grid; place-items:center; font-size:16pt; color:var(--navy); font-weight:800; }
+ol.steps { list-style:none; margin:12pt 0 0; padding:0; display:flex; flex-direction:column; gap:7pt; counter-reset:s; }
+ol.steps li { display:grid; grid-template-columns:22pt 1fr 18pt; gap:9pt; align-items:start; padding:8pt; border:1pt solid #dbe2ee; border-radius:5pt; }
+ol.steps li .n { width:22pt; height:22pt; border-radius:5pt; background:var(--navy); color:#fff; display:grid; place-items:center; font-weight:800; font-size:10pt; }
+ol.steps li .d { font-size:11.5pt; line-height:1.4; }
+ol.steps li .d b { color:var(--ink); }
+ol.steps li .d .see { display:block; margin-top:3pt; font-size:10pt; color:#1d6b3a; }
+ol.steps li .d .see::before { content:"You should see: "; font-weight:700; }
+ol.steps li .box { width:18pt; height:18pt; border:2pt solid var(--navy); border-radius:3pt; margin-top:2pt; }
+.path { font-family:"DL2 JetBrains Mono", "Courier New", monospace; font-size:.92em; background:#eef2f9; border:1pt solid #c6d0e1; border-radius:3pt; padding:0 4pt; white-space:nowrap; }
+kbd { font-family:"Source Sans 3", sans-serif; font-weight:700; font-size:.92em; border:1pt solid #9aa6bf; border-bottom-width:2pt; border-radius:3pt; padding:0 4pt; background:#fff; }
+.two { display:grid; grid-template-columns:1fr 1fr; gap:10pt; margin-top:12pt; }
+.stuck { background:#fdf3f5; border:1.5pt solid #e2a3b1; border-radius:6pt; padding:9pt 11pt; font-size:10.5pt; line-height:1.45; }
+.stuck h4, .check h4 { font-size:8pt; letter-spacing:.14em; font-weight:800; margin-bottom:3pt; }
+.stuck h4 { color:#a3142f; }
+.stuck p + p { margin-top:4pt; }
+.check { border:1.5pt solid var(--navy); border-radius:6pt; padding:9pt 11pt; font-size:10.5pt; line-height:1.7; }
+.check h4 { color:var(--navy); }
+.check .ln { display:inline-block; border-bottom:1pt solid var(--ink); min-width:80pt; }
+.home { margin-top:10pt; display:flex; align-items:center; gap:9pt; background:var(--navy); color:#fff; border-radius:6pt; padding:9pt 11pt; font-size:11pt; }
+.home b { color:#e6c65c; letter-spacing:.12em; font-size:8pt; }
+.home .ln { flex:1; border-bottom:1pt solid rgba(255,255,255,.7); height:10pt; }
+
+/* ---------------- answer keys and printable paper tests (Task 7) ---------------- */
+.doc-h1{font-family:"Playfair Display",serif;color:var(--navy);font-size:20pt;margin:14pt 0 4pt}
+.doc-sub{color:#4a5874}
+table.key{width:100%;border-collapse:collapse;font-size:10.5pt}
+table.key th{text-align:left;border-bottom:2pt solid var(--navy);font-size:8.5pt;letter-spacing:.1em;text-transform:uppercase;color:#5b6883}
+table.key td{border-bottom:1px solid var(--rule);padding:5pt 4pt;vertical-align:top}
+.pq{break-inside:avoid;margin:10pt 0;padding:8pt 10pt;border:1px solid var(--rule);border-radius:6pt}
+.pq h2{font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-size:13pt;margin:0 0 6pt}
+.pq-opts{display:grid;grid-template-columns:1fr 1fr;gap:4pt 14pt}
+.pq-opt{font-size:12.5pt}
+.bubble{font-size:15pt;margin-right:4pt}
+[data-dl2-doc] .namerow{display:grid;grid-template-columns:2fr 1fr;gap:24pt;margin:12pt 0}
+[data-dl2-doc] .namerow span{border-bottom:1px solid var(--ink)}
+
+/* ---------------- mission worksheets (Task 10): letterhead Point A -> Point B missions ---------------- */
+/* One .paper-doc holds all five <article class="mission"> as siblings so :first-of-type
+ * and print pagination both work; box-decoration-break:clone re-applies the paper-doc's
+ * padding on every printed page so the letterhead bar bleeds to the margin on every mission,
+ * not just the first. */
+.mission-set { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.mission { break-before: page; margin-top: 26pt; }
+.mission:first-of-type { break-before: auto; margin-top: 0; }
+/* On paper the page break already separates missions; Chromium keeps a margin after a forced break, which
+ * pushed missions B–E 26pt lower than A and cost Mission D and E their bottom room. */
+@media print { .mission { margin-top: 0; } }
+/* Compact the generic namerow/mhead/two/home/fine spacing (unchanged elsewhere) so a
+ * mission's larger step type still fits one letter page under the tall fixed letterhead. */
+.mission .namerow { margin-top:1pt; }
+.mission .mhead { margin-top:3pt; }
+.mission .mission-ab { display:grid; grid-template-columns:1fr auto 1fr; gap:8pt; align-items:stretch; margin-top:4pt; }
+.mission .mission-ab > div { border-radius:6pt; padding:4pt 8pt; font-size:12pt; line-height:1.08; }
+.mission .mission-ab small { display:block; font-size:8pt; font-weight:800; letter-spacing:.14em; margin-bottom:2pt; }
+.mission .mission-ab .a { background:#f1f4f9; border:1.5pt solid #c6d0e1; } .mission .mission-ab .a small { color:#4a5874; }
+.mission .mission-ab .b { background:#fbf6e6; border:1.5pt solid var(--gold); } .mission .mission-ab .b small { color:#8a6d12; }
+.mission .mission-ab .arr { display:grid; place-items:center; font-size:15pt; color:var(--navy); font-weight:800; }
+.mission .mission-steps { list-style:none; margin:5pt 0 0; padding:0; display:flex; flex-direction:column; gap:2pt; }
+.mission .mission-steps > li { display:grid; grid-template-columns:20pt 1fr 16pt; gap:8pt; align-items:start; padding:1pt 6pt; border:1pt solid #dbe2ee; border-radius:5pt; break-inside:avoid; }
+.mission .mission-steps > li .n { width:20pt; height:20pt; border-radius:5pt; background:var(--navy); color:#fff; display:grid; place-items:center; font-weight:800; font-size:9.5pt; flex:none; }
+.mission .mission-steps > li .d { font-size:12pt; line-height:1.05; }
+.mission .mission-steps > li .d .act { font-size:13pt; color:var(--ink); }
+.mission .mission-steps > li .d .see { display:block; margin-top:1pt; font-size:12pt; color:#1d6b3a; }
+.mission .mission-steps > li .d .see::before { content:"You should see: "; font-weight:700; }
+.mission .mission-steps > li .d .see.alt::before { content:"You should see (hear): "; font-weight:700; }
+.mission .mission-steps > li .d .where { font-size:8.5pt; color:#5b6883; white-space:nowrap; }
+.mission .mission-steps > li .d .where a { color:var(--navy); }
+.mission .mission-steps > li .d .see .ln { border-bottom:1pt solid var(--ink); display:inline-block; min-width:56pt; }
+.mission .mission-steps > li .box { width:16pt; height:16pt; border:2pt solid var(--navy); border-radius:3pt; margin-top:1pt; flex:none; }
+.mission .two { margin-top:4pt; gap:8pt; }
+.mission .stuck, .mission .check { padding:4pt 8pt; line-height:1.1; break-inside:avoid; }
+.mission .stuck p + p { margin-top:2pt; }
+.mission .check { line-height:1.15; }
+.mission .home { margin-top:3pt; padding:4pt 8pt; break-inside:avoid; }
+.mission .fine { margin-top:2pt; padding-top:3pt; break-inside:avoid; }
+/* Keycaps take their own line room instead of overlapping the line above ("Enter" cut into "Display?"). */
+.mission kbd { display:inline-block; line-height:1.1; }
+/* Edge prints with "Background graphics" off by default, which dropped the navy DO badge, the step numbers, the
+ * Take it home bar (and its white write-on line) and the tinted boxes. These keep their fills on paper. */
+.mission .badges span.do, .mission .mission-ab > div, .mission .mission-steps > li .n, .mission .stuck, .mission .check, .mission .home { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+/* Mission E: the four write-in boxes sit in one row so the mission, with its letterhead, fits one sheet. */
+.mission .four-box { display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:0.9in; gap:5pt; margin-top:5pt; break-inside:avoid; }
+.mission .four-box > div { border:1.5pt solid var(--navy); border-radius:6pt; padding:6pt 8pt; font-size:10.5pt; }
+.mission .four-box > div b { display:block; font-size:8pt; font-weight:800; letter-spacing:.05em; text-transform:uppercase; color:var(--navy); margin-bottom:3pt; }
+/* Mission E's full-width stuck box: no default paragraph margins, so the page keeps room at the bottom. */
+.mission .stuck.solo { margin-top:5pt; padding:6pt 8pt; }
+.mission .stuck.solo h4 { margin-top:0; }
+.mission .stuck.solo p { margin:2pt 0 0; }

@@ -7,6 +7,10 @@ const text=html=>html.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&#x
 // Video pause points: the end of each practice prompt, from the narration word timings.
 const pauses={2:['1:17','3:29','5:02','6:35'],3:['1:58','6:28'],4:['1:29','2:54','4:22','6:35'],5:['1:23','2:43','3:36','4:55','6:13'],6:['2:52','6:37']};
 // Throwaway knowledge-check options named in the 2026-09-26 content review.
+// 2026-09-28 (Mission Control, Task 11): the post-test now has 20 questions. The week 5 plan was corrected by hand;
+// scripts/dl2/curriculum.json still says "28-question" (the generator was off limits for that task). Remove this
+// mapping once the source says 20 and the plan is regenerated.
+const asPublished=o=>o.replace('the 28-question post-test','the 20-question post-test');
 const silly=['Count the page’s colors','Delete their document','This is bad.','I dislike everything.','Only the button color','Whether the site has animations','Share your password instead','Skip testing','Add real personal records immediately'];
 
 for(const n of [2,3,4,5,6]){
@@ -21,7 +25,8 @@ for(const n of [2,3,4,5,6]){
   for(const [,phase,action] of cycles)for(const step of ['Tell','Show','Do','Review'])expect(action,`${phase} names its ${step} step`).toContain(step+':');
   expect(actions()).toMatch(/every learner/i);
   expect(actions()).not.toMatch(/switch driver and coach roles halfway/i);
-  expect(w.agenda.some(([m,phase])=>m===10&&/break/i.test(phase))).toBe(true);
+  // 2026-09-28: Britt teaches without a class break (was: one 10-minute break).
+  expect(w.agenda.some(([,phase])=>/break/i.test(phase))).toBe(false);
  });
 
  test(`Week ${n} plays every video chapter inside the plan and names the pause points`,()=>{
@@ -34,7 +39,7 @@ for(const n of [2,3,4,5,6]){
  test(`Week ${n} lesson plan states measurable outcomes for every goal`,()=>{
   expect(w.outcomes.length).toBe(w.objectives.length);
   expect(w.outcomes.length).toBeGreaterThanOrEqual(3);
-  const p=plan();for(const o of w.outcomes){expect(o).toMatch(/^[A-Z][^:]{1,40}: /);expect(p).toContain(o);}
+  const p=plan();for(const o of w.outcomes){expect(o).toMatch(/^[A-Z][^:]{1,40}: /);expect(p).toContain(asPublished(o));}
  });
 
  test(`Week ${n} has a week-specific prep list and a Windows 11 quick card`,()=>{

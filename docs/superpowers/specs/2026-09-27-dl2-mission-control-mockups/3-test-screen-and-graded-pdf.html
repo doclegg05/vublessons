@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DL2: test screen and graded PDF</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --page:#070b14; --ink:#e8ecf5; --muted:#9aa6bf; --line:rgba(255,255,255,.1); }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:radial-gradient(1200px 600px at 20% -10%, #16213d 0%, transparent 60%), var(--page); color:var(--ink); font-family:Figtree, system-ui, sans-serif; padding:36px 20px 80px; }
+  .wrap { max-width:1240px; margin:0 auto; }
+  h2.t { font-size:32px; font-weight:800; letter-spacing:-.02em; }
+  p.sub { color:var(--muted); font-size:17px; margin-top:8px; max-width:920px; line-height:1.55; }
+  h3.sec { font-size:22px; font-weight:800; margin:40px 0 6px; }
+  p.secsub { color:var(--muted); font-size:15.5px; margin-bottom:16px; max-width:900px; line-height:1.55; }
+  .pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .choice { border:1px solid var(--line); border-radius:18px; padding:14px; cursor:pointer; background:rgba(255,255,255,.02); transition:border-color .2s, box-shadow .2s; }
+  .choice:hover { border-color:rgba(255,255,255,.28); }
+  .choice.selected { border-color:#00e5ff; box-shadow:0 0 0 3px rgba(0,229,255,.22); }
+  .choice .lab { display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px; margin:2px 4px 12px; }
+  .choice .lab span { width:30px; height:30px; border-radius:9px; background:rgba(255,255,255,.08); display:grid; place-items:center; }
+  .choice.selected .lab span { background:#00e5ff; color:#021018; }
+  .choice .lab small { font-weight:500; color:var(--muted); font-size:14px; }
+
+  /* ---------- test screen mock ---------- */
+  .scr { position:relative; aspect-ratio:16/10; border-radius:12px; overflow:hidden; container-type:inline-size; }
+  .scr .top { position:absolute; left:0; right:0; top:0; height:9cqw; display:flex; align-items:center; gap:2cqw; padding:0 4cqw; }
+  .scr .top img { width:4.2cqw; }
+  .scr .top .ttl { font-size:1.9cqw; font-weight:700; line-height:1.2; }
+  .scr .top .ttl small { display:block; font-weight:500; font-size:1.5cqw; opacity:.75; }
+  .scr .top .qn { margin-left:auto; font-size:1.9cqw; font-weight:700; }
+  .ticks { position:absolute; left:4cqw; right:4cqw; top:9.5cqw; display:grid; grid-template-columns:repeat(20,1fr); gap:.5cqw; }
+  .ticks i { height:.9cqw; border-radius:1cqw; }
+  .card { position:absolute; left:4cqw; right:4cqw; top:12.5cqw; bottom:10.5cqw; border-radius:2cqw; padding:2.4cqw 3.4cqw; }
+  .q { font-size:2.5cqw; line-height:1.3; font-weight:600; }
+  .opts { display:flex; flex-direction:column; gap:1cqw; margin-top:1.8cqw; }
+  .o { display:flex; align-items:center; gap:1.6cqw; padding:.9cqw 1.6cqw; border-radius:1.2cqw; font-size:2.05cqw; line-height:1.25; }
+  .o b { flex:none; width:3.4cqw; height:3.4cqw; border-radius:.9cqw; display:grid; place-items:center; font-size:1.8cqw; }
+  .o .pick { margin-left:auto; font-size:1.7cqw; font-weight:700; display:none; align-items:center; gap:.8cqw; }
+  .o.sel .pick { display:flex; }
+  .nav { position:absolute; left:4cqw; right:4cqw; bottom:2.2cqw; display:flex; justify-content:space-between; }
+  .nav span { font-size:1.9cqw; font-weight:700; padding:1cqw 3cqw; border-radius:1.2cqw; }
+
+  /* dark (DL2 calm) */
+  .dark { background:radial-gradient(60% 60% at 80% 110%, rgba(0,229,255,.18), transparent 60%), radial-gradient(50% 50% at 0% 0%, rgba(255,60,172,.12), transparent 60%), #060a18; color:#eef8ff; font-family:'Space Grotesk', sans-serif; }
+  .dark .ticks i { background:rgba(255,255,255,.12); } .dark .ticks i.a { background:#00e5ff; } .dark .ticks i.c { background:#ffc400; box-shadow:0 0 1cqw #ffc400; }
+  .dark .card { background:rgba(10,18,40,.92); border:1px solid rgba(0,229,255,.3); }
+  .dark .o { background:rgba(255,255,255,.04); border:2px solid rgba(255,255,255,.14); }
+  .dark .o b { background:rgba(0,229,255,.12); color:#6ff3ff; font-family:'JetBrains Mono', monospace; }
+  .dark .o.sel { border-color:#00e5ff; background:rgba(0,229,255,.1); box-shadow:0 0 2cqw -0.5cqw rgba(0,229,255,.7); }
+  .dark .o.sel b { background:#00e5ff; color:#021018; }
+  .dark .o .pick { color:#6ff3ff; }
+  .dark .nav span:first-child { border:2px solid rgba(255,255,255,.2); }
+  .dark .nav span:last-child { background:#ffc400; color:#1a1305; }
+  /* light (clean) */
+  .light { background:linear-gradient(180deg,#eef2f9,#e4eaf5); color:#0f1c33; font-family:'Source Sans 3', sans-serif; }
+  .light .top { background:#1b365d; color:#fff; }
+  .light .ticks i { background:#cfd8e8; } .light .ticks i.a { background:#1b365d; } .light .ticks i.c { background:#c9a227; }
+  .light .card { background:#fff; border:1px solid #d6deec; box-shadow:0 1cqw 3cqw -1cqw rgba(15,28,51,.18); }
+  .light .o { border:2px solid #d6deec; background:#fafcff; }
+  .light .o b { background:#e8eef8; color:#1b365d; }
+  .light .o.sel { border-color:#1b365d; background:#eef3fb; }
+  .light .o.sel b { background:#1b365d; color:#fff; }
+  .light .o .pick { color:#1b365d; }
+  .light .nav span:first-child { border:2px solid #b8c4d8; color:#1b365d; }
+  .light .nav span:last-child { background:#b31942; color:#fff; }
+
+  /* ---------- graded PDF (letter paper) ---------- */
+  .paperwrap { display:grid; grid-template-columns:minmax(0,820px) 1fr; gap:24px; align-items:start; margin-top:6px; }
+  .paper { background:#fff; color:#15213a; aspect-ratio:8.5/11; border-radius:4px; box-shadow:0 30px 80px -30px rgba(0,0,0,.9); position:relative; overflow:hidden; container-type:inline-size; font-family:'Source Sans 3', sans-serif; padding:4.6cqw 5.6cqw; }
+  .wm { position:absolute; left:50%; top:52%; width:58cqw; transform:translate(-50%,-50%); opacity:.045; pointer-events:none; }
+  .tri { position:absolute; left:0; right:0; top:0; height:1.1cqw; background:linear-gradient(90deg,#1b365d 0 60%, #c9a227 60% 80%, #b31942 80%); }
+  .lh { display:grid; grid-template-columns:auto 1fr auto; gap:2.6cqw; align-items:center; margin-top:1cqw; }
+  .lh img { width:12cqw; }
+  .lh .org .st { font-size:1.55cqw; letter-spacing:.34em; font-weight:700; color:#a8861c; }
+  .lh .org .nm { font-family:'Playfair Display', serif; font-size:4.3cqw; font-weight:800; color:#1b365d; line-height:1.02; margin-top:.4cqw; }
+  .lh .org .tr { font-size:1.6cqw; color:#4a5874; margin-top:.8cqw; font-style:italic; }
+  .lh .meta { font-size:1.45cqw; line-height:1.55; border-left:.25cqw solid #c9a227; padding-left:1.8cqw; color:#2a3752; }
+  .lh .meta b { color:#1b365d; font-weight:700; display:inline-block; min-width:9.5cqw; }
+  .rule2 { margin:2.2cqw 0 2.4cqw; height:.9cqw; border-top:.3cqw solid #1b365d; border-bottom:.15cqw solid #c9a227; }
+  .doc-title { display:flex; justify-content:space-between; align-items:flex-end; }
+  .doc-title h1 { font-family:'Playfair Display', serif; font-size:3.4cqw; color:#1b365d; }
+  .doc-title .rid { font-size:1.35cqw; color:#5b6883; text-align:right; line-height:1.5; font-family:'JetBrains Mono', monospace; }
+  .who { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:1.6cqw; margin-top:2cqw; }
+  .who div { border:1px solid #d9e0ec; border-radius:.8cqw; padding:1.2cqw 1.6cqw; font-size:1.5cqw; }
+  .who small { display:block; font-size:1.15cqw; letter-spacing:.14em; text-transform:uppercase; color:#6a7690; font-weight:700; margin-bottom:.3cqw; }
+  .who .score { background:#1b365d; color:#fff; border-color:#1b365d; display:flex; align-items:center; gap:1.6cqw; }
+  .who .score small { color:#c9d6ee; }
+  .who .score > div { border:none; padding:0; }
+  .who .score strong { font-family:'Playfair Display', serif; font-size:4.2cqw; line-height:1; }
+  .doms { margin-top:2cqw; display:grid; grid-template-columns:repeat(2,1fr); gap:.8cqw 3cqw; font-size:1.38cqw; }
+  .dom { display:grid; grid-template-columns:1fr 10cqw 3.6cqw; gap:1cqw; align-items:center; }
+  .dom .bar { height:1cqw; background:#e3e8f1; border-radius:1cqw; overflow:hidden; }
+  .dom .bar i { display:block; height:100%; background:linear-gradient(90deg,#1b365d,#2c5aa0); }
+  .dom span:last-child { text-align:right; font-weight:700; }
+  table { width:100%; border-collapse:collapse; margin-top:2.2cqw; font-size:1.36cqw; }
+  th { text-align:left; font-size:1.1cqw; letter-spacing:.12em; text-transform:uppercase; color:#5b6883; border-bottom:.2cqw solid #1b365d; padding:.8cqw .6cqw; }
+  td { padding:.85cqw .6cqw; border-bottom:1px solid #e3e8f1; vertical-align:top; line-height:1.35; }
+  td.n { font-weight:700; color:#1b365d; width:3cqw; }
+  td.r { white-space:nowrap; font-weight:700; }
+  td.r.ok { color:#1d6b3a; } td.r.no { color:#a3142f; }
+  tr.miss td { background:#fdf5f6; }
+  .foot { position:absolute; left:5.6cqw; right:5.6cqw; bottom:3.6cqw; }
+  .sig { display:grid; grid-template-columns:1fr 1fr; gap:4cqw; font-size:1.3cqw; color:#4a5874; }
+  .sig div { border-top:1px solid #15213a; padding-top:.6cqw; }
+  .fine { margin-top:1.6cqw; display:flex; justify-content:space-between; font-size:1.1cqw; color:#7a869f; border-top:1px solid #e3e8f1; padding-top:.9cqw; }
+  .notes { font-size:15px; line-height:1.6; color:#c9d2e4; display:flex; flex-direction:column; gap:12px; }
+  .notes div { background:rgba(255,255,255,.035); border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  .notes b { display:block; color:#6ff3ff; font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:5px; }
+  @media (max-width:980px) { .pair, .paperwrap { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2 class="t">Pre-test and post-test: the test screen and the graded PDF</h2>
+  <p class="sub">Twenty multiple-choice questions, one per screen, in big type with big answer buttons. There's a review screen before submitting that flags anything skipped. Submitting grades the test and saves a PDF with your letterhead. The post-test covers the same skills in the same order with new scenarios, so the scores compare fairly.</p>
+
+  <h3 class="sec">1 · The test screen: which look?</h3>
+  <p class="secsub">A real Week 1 question. Pick the one that feels right for a test.</p>
+  <div class="pair">
+    <div class="choice" data-choice="test-dark" onclick="toggleSelect(this)">
+      <div class="lab"><span>A</span> Calm dark <small>matches the DL2 deck, no moving background</small></div>
+      <div class="scr dark">
+        <div class="top"><img src="/files/vub-seal-white.png" alt=""><div class="ttl">Digital Literacy Level 2 · Pre-Test<small>James D. · started 4:36 PM</small></div><div class="qn">Question 4 of 20</div></div>
+        <div class="ticks"><i class="a"></i><i class="a"></i><i class="a"></i><i class="c"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="card">
+          <div class="q">Text is too small in every app you use. Zooming in the web browser only fixed one website. What should you change?</div>
+          <div class="opts">
+            <div class="o"><b>A</b>Zoom in the browser again</div>
+            <div class="o sel"><b>B</b>The Scale setting in Settings ▸ Display<span class="pick">✓ Selected</span></div>
+            <div class="o"><b>C</b>The screen resolution, to its lowest</div>
+            <div class="o"><b>D</b>Nothing. It can't be changed.</div>
+          </div>
+        </div>
+        <div class="nav"><span>◀ Back</span><span>Next ▶</span></div>
+      </div>
+    </div>
+    <div class="choice" data-choice="test-light" onclick="toggleSelect(this)">
+      <div class="lab"><span>B</span> Clean light <small>paper-like, navy and red, calm</small></div>
+      <div class="scr light">
+        <div class="top"><img src="/files/vub-seal-white.png" alt=""><div class="ttl">Digital Literacy Level 2 · Pre-Test<small>James D. · started 4:36 PM</small></div><div class="qn">Question 4 of 20</div></div>
+        <div class="ticks"><i class="a"></i><i class="a"></i><i class="a"></i><i class="c"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="card">
+          <div class="q">Text is too small in every app you use. Zooming in the web browser only fixed one website. What should you change?</div>
+          <div class="opts">
+            <div class="o"><b>A</b>Zoom in the browser again</div>
+            <div class="o sel"><b>B</b>The Scale setting in Settings ▸ Display<span class="pick">✓ Selected</span></div>
+            <div class="o"><b>C</b>The screen resolution, to its lowest</div>
+            <div class="o"><b>D</b>Nothing. It can't be changed.</div>
+          </div>
+        </div>
+        <div class="nav"><span>◀ Back</span><span>Next ▶</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sec">2 · The graded PDF</h3>
+  <p class="secsub">Saved the moment a student submits. White paper, built for printing and filing. Page 1 is shown here. Page 2 carries the remaining questions and the signature block.</p>
+  <div class="paperwrap">
+    <div class="paper">
+      <div class="tri"></div>
+      <img class="wm" src="/files/vub-logo.png" alt="">
+      <div class="lh">
+        <img src="/files/vub-logo.png" alt="Veterans Upward Bound seal">
+        <div class="org">
+          <div class="st">WEST VIRGINIA</div>
+          <div class="nm">Veterans Upward Bound</div>
+          <div class="tr">A TRIO program funded by the U.S. Department of Education</div>
+        </div>
+        <div class="meta">
+          <div><b>Course</b>Digital Literacy Level 2</div>
+          <div><b>Cohort</b>Fall 2026 · Sep 28 – Nov 2</div>
+          <div><b>Instructor</b>Britt Legg</div>
+          <div><b>Date &amp; time</b>Mon, Sep 28, 2026 · 4:30–6:30 PM ET</div>
+          <div><b>Location</b>New River Community and Technical College</div>
+        </div>
+      </div>
+      <div class="rule2"></div>
+      <div class="doc-title"><h1>Pre-Test · Graded Results</h1><div class="rid">Record DL2-PRE-20260928-1652-JD<br>Form: Pre-test v1 · 20 items</div></div>
+      <div class="who">
+        <div><small>Student</small>James Doe</div>
+        <div><small>Started / submitted</small>4:36 PM / 4:52 PM (16 min)</div>
+        <div class="score"><strong>14/20</strong><div><small>Score</small>70% correct</div></div>
+      </div>
+      <div class="doms">
+        <div class="dom"><span>Technology Basics</span><span class="bar"><i style="width:100%"></i></span><span>3/3</span></div>
+        <div class="dom"><span>Digital Citizenship</span><span class="bar"><i style="width:67%"></i></span><span>2/3</span></div>
+        <div class="dom"><span>Information Management</span><span class="bar"><i style="width:67%"></i></span><span>2/3</span></div>
+        <div class="dom"><span>Content Creation</span><span class="bar"><i style="width:33%"></i></span><span>1/3</span></div>
+        <div class="dom"><span>Communication</span><span class="bar"><i style="width:100%"></i></span><span>3/3</span></div>
+        <div class="dom"><span>Collaboration</span><span class="bar"><i style="width:50%"></i></span><span>1/2</span></div>
+        <div class="dom"><span>Safety &amp; Security</span><span class="bar"><i style="width:67%"></i></span><span>2/3</span></div>
+      </div>
+      <table>
+        <thead><tr><th>#</th><th>Skill checked</th><th>Your answer</th><th>Correct answer</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td>Make text bigger everywhere</td><td>B · Scale in Settings</td><td>B · Scale in Settings</td><td class="r ok">✓ Correct</td></tr>
+          <tr><td class="n">2</td><td>Send sound to a headset</td><td>C · Pick the output device</td><td>C · Pick the output device</td><td class="r ok">✓ Correct</td></tr>
+          <tr class="miss"><td class="n">3</td><td>Fix a page that prints onto two sheets</td><td>A · Print it anyway</td><td>D · Preview, then fix the margins</td><td class="r no">✗ Incorrect</td></tr>
+          <tr><td class="n">4</td><td>Repeating calendar reminder</td><td>B · Edit the whole series</td><td>B · Edit the whole series</td><td class="r ok">✓ Correct</td></tr>
+          <tr><td class="n">5</td><td>Narrow a web search</td><td>A · Add a place and a filter</td><td>A · Add a place and a filter</td><td class="r ok">✓ Correct</td></tr>
+          <tr class="miss"><td class="n">6</td><td>Judge whether a source is current</td><td>C · It looks professional</td><td>B · Check the date and who runs it</td><td class="r no">✗ Incorrect</td></tr>
+          <tr><td class="n">7</td><td>Share a file so others can only view it</td><td>D · Viewer</td><td>D · Viewer</td><td class="r ok">✓ Correct</td></tr>
+          <tr><td class="n">8</td><td>Real heading styles in a document</td><td>A · Heading 1 / Heading 2</td><td>A · Heading 1 / Heading 2</td><td class="r ok">✓ Correct</td></tr>
+          <tr><td class="n">9</td><td>Add up costs with a SUM formula</td><td>C · =SUM(B2:B6)</td><td>C · =SUM(B2:B6)</td><td class="r ok">✓ Correct</td></tr>
+          <tr class="miss"><td class="n">10</td><td>Crop and credit a photo you're allowed to use</td><td>A · Crop it, no credit</td><td>B · Crop a copy and add the credit</td><td class="r no">✗ Incorrect</td></tr>
+          <tr class="miss"><td class="n">11</td><td>Share a handout that must look the same everywhere</td><td>B · Send the Word file</td><td>A · Export a PDF, then open and check it</td><td class="r no">✗ Incorrect</td></tr>
+          <tr><td class="n">12</td><td>Choose the right channel for a message</td><td>D · Phone call</td><td>D · Phone call</td><td class="r ok">✓ Correct</td></tr>
+          <tr><td class="n">13</td><td>Write a clear email request with a deadline</td><td>B · Ask, add "by Thursday"</td><td>B · Ask, add "by Thursday"</td><td class="r ok">✓ Correct</td></tr>
+          <tr><td class="n">14</td><td>What Bcc does, and doesn't do</td><td>C · Hides addresses only</td><td>C · Hides addresses only</td><td class="r ok">✓ Correct</td></tr>
+        </tbody>
+      </table>
+      <div class="foot">
+        <div class="fine"><span>Page 1 of 2 · Items 15–20 and signatures on page 2</span><span>Scores guide practice. They are not a certification.</span></div>
+      </div>
+    </div>
+    <div class="notes">
+      <div><b>Letterhead</b>Your seal, West Virginia Veterans Upward Bound, the TRIO funding line, the course and cohort, you as instructor, the date and class time, and New River CTC.</div>
+      <div><b>Built for an audit</b>Each PDF gets its own record number, a test version, start and submit times, a score for each of the 7 IC3 skill areas, and every question with both answers. Page 2 has student and instructor signature lines.</div>
+      <div><b>Never color alone</b>Results say "✓ Correct" or "✗ Incorrect" in words, and wrong answers get a shaded row, so it reads the same in black-and-white print.</div>
+      <div><b>Pre vs. post</b>Question 3 on the pre-test and question 3 on the post-test check the same skill with a different real-life scenario. A pre/post comparison sheet can come later.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

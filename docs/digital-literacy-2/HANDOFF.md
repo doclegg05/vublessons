@@ -1,5 +1,96 @@
 # Digital Literacy Level 2 course
 
+## Mission Control (Sep 2026)
+
+Week 1 and the pre/post tests run on the Mission Control system in
+`courses/digital-literacy-2/os/`. Weeks 2–6 still use the generated
+learning-app pages described in the sections below. The "Present mode" and
+"Week 1: Tell, Show, Do, Review" sections below now describe weeks 2–6 and
+the legacy Week 1 deck only.
+
+**Files map** (paths under `courses/digital-literacy-2/`)
+
+| Path | What it is |
+|:-----|:-----------|
+| `os/deck.css`, `os/deck.js` | Projector deck engine. One slide at a time. → / PageDown reveal the next `.build` part, then step a Show demo, then change slides. N notes, six clickable phase buttons, F fullscreen, B blank, number + Enter jumps. Nothing auto-advances. |
+| `os/win11.css`, `os/demo.js`, `os/demos/week-01.js` | "Show" demos: Windows 11 + Microsoft 365 recreations with a guided cursor, captions and a checklist. |
+| `os/items.js` | **The item bank**, the single source for the pre/post tests, grading, answer keys, printables and the results PDF. There are 20 parallel items per form: item N on each form checks the same skill, domain and week. |
+| `os/grade.js`, `os/test.js`, `os/test.css` | Grading and record IDs. The test app: name → 20 questions → review → submit → PDF → copy to Britt. Answers survive a reload. Unsent copies wait in the `dl2os:outbox` localStorage key and retry on the next visit. |
+| `os/pdf.js`, `os/vendor/` | Graded results PDF on the letterhead (pdf-lib + fontkit, self-hosted). `clean()` keeps every drawn string WinAnsi-safe for the standard-font fallback. |
+| `os/paper.css`, `os/paper.js`, `os/keys.js` | Letterhead paper system. `keys.js` renders the answer keys and printable tests from the item bank. |
+| `os/fonts.css`, `os/fonts/`, `os/img/` | Self-hosted fonts and the seal (no CDN). |
+| `weeks/week-01/presentation.html` | The 27-slide Week 1 deck (five units, WIPPEA phases). |
+| `weeks/week-01/worksheet.html`, `answer-key.html`, `run-sheet.html` | Letterhead Missions 1A–1E, their key, and the one-page landscape run sheet. |
+| `weeks/week-01/files/` | Class files: `Community Supper Flyer.docx` (Mission 1C) and `sound-test.html` (Mission 1B). Rebuild the flyer with `python3 docs/digital-literacy-2/class-files/make-community-supper-flyer.py`. Its docstring has the page math: exactly one line spills at Normal margins, and it fits at Narrow. |
+| `weeks/week-01/presentation-legacy.html` | The previous generated Week 1 deck, kept for reference. |
+| `assessments/pre-test.html`, `post-test.html` + `-answer-key`, `-printable` | 20-question tests, keys and paper backups. Keep these URLs stable. |
+
+**Do not run `scripts/dl2/build-pages.py` or `learning.py` as they are.**
+They regenerate `weeks/week-01/presentation.html`, `worksheet.html`,
+`answer-key.html`, the assessment keys, `syllabus.html`, `sources.html` and the
+lesson plans from `curriculum.json`. That would overwrite the Mission Control
+files and the 20-question wording. Teach the generator to skip these files first.
+
+**Add a slide.** Add a `<section class="slide" data-phase="…" data-stage="…" data-unit="…">`
+in `presentation.html`. Phases: warm-up, intro, present, practice, evaluate,
+apply. Stages: tell, show, do, review. Put teaching words in the slide and
+presenter words in `<aside class="notes">`. Mark reveal-one-at-a-time parts
+`class="build"`. The current classroom version has no timer or scheduled break. On a dense
+slide, `data-fit="tight"` caps text growth (1.1×) so it still fits at large text sizes. Run
+`tests/functional/dl2-os-week1-deck.spec.js`: slide count, fit at 1920×1080
+and at every text size, and body text ≥ 32px.
+
+**Add a demo.** Append a `DL2Demo.define({ id, title, start, scene, steps })`
+to `os/demos/week-01.js` (one file per week). Each step has a caption, a
+target, an action and the resulting state. Mount it on a slide with
+`<div class="demo" data-demo="<id>"></div>`. The deck lets the demo take
+its steps before moving on. Windows text in a scene uses div/span only (see
+the file header). Check it with `dl2-os-demo.spec.js` and `dl2-os-week1-demos.spec.js`.
+
+**Add a mission.** Copy an `<article class="mission">` in `worksheet.html`:
+letterhead, Point A → Point B, 5–6 steps (each with a `.see` "You should
+see" line and a check box), If you get stuck, Check yourself and Take it home. Add
+its model answer to `answer-key.html` and a row to the run sheet. Each
+mission starts on its own letter page. `dl2-os-week1-print.spec.js` checks
+the structure.
+
+**Change a test question.** Edit only `os/items.js`. Keep item N parallel
+across forms and keep the answers balanced (5 each A–D). The keys,
+printables, grading and PDF all follow. `dl2-os-items.spec.js` and
+`dl2-os-pdf-text.spec.js` guard the bank.
+
+**Netlify forms.** Results post to `dl2-pretest` and `dl2-posttest` (hidden static forms).
+Form detection is enabled on the `vubcourse` project. Both forms are registered,
+with individual `submission_created` email notifications to the verified instructor
+address, `britt.legg76@gmail.com`. Netlify stores name, record ID, test version,
+timestamps, score, domain totals and answer letters. The notification contains
+fields, **not a PDF attachment**. See the instructor guide for the Forms dashboard.
+
+The results screen distinguishes HTTP acceptance from a queued copy; it never
+claims inbox delivery. A failed post keeps the same record ID in the browser outbox
+and retries on the next visit or the Retry button. Web Locks serialize retries
+across tabs where supported. If an HTTP response is lost after Netlify stores a
+record, a retry can still create a duplicate: deduplicate exports by record ID.
+IDs include a random suffix so learners with matching initials in the same minute
+do not collide. If storage is blocked, the page explicitly asks for the PDF backup.
+
+**USB backup.** After grading, each learner downloads the existing graded PDF,
+chooses Britt's supplied drive in Save As or copies the file from Downloads, opens
+it from the drive to check identity/test/score, then safely ejects and returns it.
+This is independent of Netlify submission. Filenames include type, surname, date,
+time and the unique suffix. The page cannot detect a physical USB save.
+
+**Shared lab computers.** The course home's *Start fresh on this computer*
+clears lesson progress and any pre/post test in progress (`dl2os:test:*`).
+It keeps `dl2os:outbox`, so unsent results still reach Britt.
+
+**Checks.** `npm run build:site && npx playwright test` runs the whole suite. The
+Mission Control specs are `tests/*/dl2-os-*.spec.js`. Old DL2 cases that
+asserted the replaced Week 1 and 28-question files were retired or narrowed
+on 2026-09-28, and each carries a dated comment. For links, run
+`python3 tools/link-check.py`: `npm run links` calls `python`, which macOS
+doesn't ship. For site-wide WCAG checks, run `node scripts/a11y-check.mjs`.
+
 ## Screen-share task walkthroughs
 
 The six videos include twelve screen-share chapters (9m14s total), mapped in

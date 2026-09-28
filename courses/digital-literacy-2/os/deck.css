@@ -1,0 +1,250 @@
+/* DL2 Mission Control deck. Stage is 16:9, sized to the viewport; type is in cqw so a
+ * 1920-wide projector gets ≥32px body text. !important on text rules keeps shared/text-size.js
+ * from resizing projector type; the deck applies text size through --ts instead. */
+:root { --c-bg:#050814; --c-panel:rgba(6,14,34,.93); --c-cyan:#00e5ff; --c-mag:#ff3cac; --c-gold:#ffc400; --c-ink:#e9fbff; --c-soft:#8fe4f2; --c-peach:#ffc79a; }
+html, body { margin:0; height:100%; background:var(--c-bg); overflow:hidden; }
+body.dl2-os { color:var(--c-ink); font-family:"DL2 Space Grotesk", "Segoe UI", system-ui, sans-serif; }
+.deck { --ts:1; position:fixed; left:50%; top:50%; width:min(100vw, calc(100vh * 16 / 9)); aspect-ratio:16/9; transform:translate(-50%,-50%); container-type:inline-size; z-index:1; }
+html[data-text-size="sm"] .deck { --ts:.95; } html[data-text-size="lg"] .deck { --ts:1.08; }
+html[data-text-size="xl"] .deck { --ts:1.16; } html[data-text-size="xxl"] .deck { --ts:1.24; }
+
+/* scenes (full viewport, behind the stage) */
+.scenes { position:fixed; inset:0; z-index:0; }
+.scene { position:absolute; inset:0; opacity:0; transition:opacity .8s ease; overflow:hidden; }
+body[data-scene="deck"] .scene-deck, body[data-scene="gorge"] .scene-gorge { opacity:1; }
+.scene-deck { background:radial-gradient(80% 60% at 50% 110%, rgba(0,220,255,.28), transparent 60%), radial-gradient(50% 40% at 85% 10%, rgba(255,60,172,.22), transparent 70%), radial-gradient(40% 40% at 10% 20%, rgba(255,196,0,.12), transparent 70%), var(--c-bg); }
+.scene-deck .grid { position:absolute; left:-50%; right:-50%; bottom:-10%; height:50%; background-image:linear-gradient(rgba(0,229,255,.55) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,.55) 1px, transparent 1px); background-size:4vw 4vw; transform:perspective(30vw) rotateX(62deg); transform-origin:bottom; animation:dl2-grid 4s linear infinite; -webkit-mask-image:linear-gradient(to top,#000 20%,transparent 90%); mask-image:linear-gradient(to top,#000 20%,transparent 90%); }
+@keyframes dl2-grid { to { background-position:0 4vw; } }
+.scene-gorge { background:linear-gradient(180deg,#0b0a2a 0%, #2a1850 34%, #7a2d6b 55%, #e2735a 70%, #f4b76a 78%, #2a1a3e 79%); }
+.scene-gorge .gorge-land { position:absolute; left:0; bottom:0; width:100%; height:62%; }
+.scene-gorge .sun { position:absolute; left:74%; top:50%; width:22vw; height:22vw; transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle, rgba(255,214,150,.95), rgba(255,140,110,.45) 45%, transparent 70%); filter:blur(.6vw); animation:dl2-breathe 8s ease-in-out infinite alternate; }
+@keyframes dl2-breathe { to { transform:translate(-50%,-46%) scale(1.06); } }
+.scene-gorge .stars { position:absolute; inset:0 0 45% 0; opacity:.8; background-image:radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 32% 8%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 58% 22%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 76% 12%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 88% 30%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 22% 34%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 44% 4%, #fff 50%, transparent 51%); animation:dl2-twinkle 6s ease-in-out infinite alternate; }
+@keyframes dl2-twinkle { to { opacity:.35; } }
+
+/* slides and transitions */
+.slide { position:absolute; inset:0; visibility:hidden; }
+.slide.is-active, .slide.is-leaving { visibility:visible; }
+.slide.is-active { animation:dl2-open .45s cubic-bezier(.2,.8,.2,1) both; }
+.slide.is-leaving { animation:dl2-close .45s cubic-bezier(.4,0,.2,1) both; }
+@keyframes dl2-open { from { opacity:0; transform:scale(.965) translateY(1.2cqw); filter:blur(4px); } }
+@keyframes dl2-close { to { opacity:0; transform:scale(1.02); filter:blur(3px); } }
+.slide .notes { display:none; }
+
+/* panel with tracing neon edge (pseudo-elements; clip-path clips both) */
+@property --dl2-ang { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+.panel { position:absolute; isolation:isolate; clip-path:polygon(2cqw 0,100% 0,100% calc(100% - 2cqw),calc(100% - 2cqw) 100%,0 100%,0 2cqw); padding:2.6cqw 3.4cqw; }
+.panel::before { content:""; position:absolute; inset:0; z-index:-2; background:conic-gradient(from var(--dl2-ang), var(--c-cyan), var(--c-mag), var(--c-gold), var(--c-cyan)); animation:dl2-edge 9s linear infinite; }
+.panel::after { content:""; position:absolute; inset:2px; z-index:-2; /* same layer as ::before, painted after it; -1 is free for .unit-mark */ background:linear-gradient(160deg, #07112a, #050a19); clip-path:polygon(calc(2cqw - 1px) 0,100% 0,100% calc(100% - 2cqw + 1px),calc(100% - 2cqw + 1px) 100%,0 100%,0 calc(2cqw - 1px)); }
+@keyframes dl2-edge { to { --dl2-ang:360deg; } }
+.panel.full { left:4.5%; right:4.5%; top:6%; bottom:17%; }
+.panel.left { left:4.5%; right:40%; top:7%; bottom:20%; }
+.panel.center { left:12%; right:12%; top:16%; bottom:24%; text-align:center; }
+.panel.bare::before, .panel.bare::after { display:none; } /* gorge slides: text straight on the scene */
+
+/* type (≥32px body at 1920 ⇒ ≥1.67cqw) */
+.dl2-os .deck .slide h1 { font-size:calc(4.1cqw * var(--ts)) !important; line-height:1.06 !important; font-weight:700; letter-spacing:-.02em; margin:1.4cqw 0 0; }
+.dl2-os .deck .slide h1 em { font-style:normal; color:var(--c-gold); }
+.dl2-os .deck .slide h2 { font-size:calc(2.8cqw * var(--ts)) !important; line-height:1.15 !important; margin:0; }
+.dl2-os .deck .slide p, .dl2-os .deck .slide li, .dl2-os .deck .slide td, .dl2-os .deck .slide th { font-size:calc(1.9cqw * var(--ts)) !important; line-height:1.35 !important; }
+.hud { display:flex; align-items:center; gap:1.1cqw; font-family:"DL2 JetBrains Mono", monospace; font-size:1.15cqw; letter-spacing:.12em; text-transform:uppercase; color:#6ff3ff; }
+.hud img { width:2.4cqw; height:auto; }
+/* The app (and file) a unit works in, readable from the back row: body-size type, not HUD caps. */
+.hud .app { display:inline-flex; align-items:baseline; gap:.8cqw; font-family:"DL2 Space Grotesk", "Segoe UI", system-ui, sans-serif; font-size:calc(1.8cqw * var(--ts)); font-weight:700; letter-spacing:0; text-transform:none; color:#021018; background:var(--c-gold); padding:.3cqw 1.1cqw; }
+.hud .app .file { font-weight:500; }
+.hud .app .file::before { content:"· "; }
+.hud .tag { margin-left:auto; padding:.25cqw .9cqw; font-weight:700; color:#021018; }
+.tag-tell { background:#6ff3ff; } .tag-show { background:#ff6fc1; } .tag-do { background:var(--c-gold); } .tag-review { background:#a6ff8f; }
+.steps { list-style:none; margin:2.2cqw 0 0; padding:0; display:flex; flex-direction:column; gap:1.2cqw; }
+.steps li { display:flex; align-items:center; gap:1.3cqw; }
+.num { flex:none; width:3.3cqw; height:3.3cqw; display:grid; place-items:center; font-family:"DL2 JetBrains Mono", monospace; font-weight:700; font-size:1.4cqw; border:1px solid rgba(0,229,255,.5); color:#6ff3ff; background:rgba(0,229,255,.08); clip-path:polygon(.8cqw 0,100% 0,100% calc(100% - .8cqw),calc(100% - .8cqw) 100%,0 100%,0 .8cqw); }
+.build { opacity:0; transform:translateX(-1.5cqw); transition:opacity .55s cubic-bezier(.2,.8,.2,1), transform .55s cubic-bezier(.2,.8,.2,1); }
+.build.on { opacity:1; transform:none; }
+.build.now .num { background:var(--c-cyan); color:#021018; box-shadow:0 0 2cqw var(--c-cyan); }
+.dl2-os kbd, .path { font-family:"DL2 JetBrains Mono", monospace; font-size:.9em; color:#021018; background:var(--c-gold); padding:.1cqw .7cqw; font-weight:700; }
+
+/* phase strip */
+.strip { position:absolute; left:4.5%; right:4.5%; bottom:4.5%; height:7.5%; display:grid; grid-template-columns:repeat(6,1fr) auto auto; gap:.5cqw; font-family:"DL2 JetBrains Mono", monospace; font-size:1.1cqw; letter-spacing:.1em; z-index:5; }
+.seg { border:1px solid rgba(0,229,255,.35); display:flex; align-items:center; justify-content:center; color:var(--c-soft); background:rgba(4,10,26,.75); text-transform:uppercase; padding:0 1cqw; }
+.strip button.seg { appearance:none; min-width:0; font:inherit; letter-spacing:inherit; line-height:1.2; cursor:pointer; }
+.strip button.seg:not(:disabled):hover { border-color:var(--c-cyan); background:rgba(0,229,255,.24); text-decoration:underline; text-underline-offset:.25em; }
+.strip button.seg:focus-visible { outline:3px solid var(--c-gold); outline-offset:2px; }
+.strip button.seg:disabled { opacity:.45; cursor:default; }
+.seg.done { background:rgba(0,229,255,.2); color:#d4fbff; }
+.seg.now { background:linear-gradient(90deg,rgba(255,60,172,.55),rgba(255,196,0,.45)); color:#fff; border-color:#ff6fc1; box-shadow:0 0 1.6cqw rgba(255,60,172,.6); }
+.strip .seg[data-phase].done::before { content:"✓ "; } .strip .seg[data-phase].now::before { content:"▸ "; }
+.seg.vub-appbar button { font:inherit; color:var(--c-ink); background:none; border:0; padding:0 .4cqw; cursor:pointer; }
+.seg.vub-appbar button:focus-visible, .dl2-os button:focus-visible { outline:3px solid var(--c-gold); outline-offset:2px; }
+@keyframes dl2-blink { 50% { opacity:.5; } }
+
+/* notes, blackout */
+.notes-panel { position:fixed; left:2vw; right:2vw; bottom:2vw; max-height:40vh; overflow:auto; z-index:20; background:rgba(4,8,20,.96); border:1px solid rgba(0,229,255,.5); padding:1.2vw 1.6vw; font-size:24px; line-height:1.5; color:var(--c-ink); }
+.notes-panel h2 { font-family:"DL2 JetBrains Mono", monospace; font-size:16px; letter-spacing:.14em; color:#6ff3ff; margin:0 0 .5em; }
+body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-index:30; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation:none !important; transition:none !important; }
+  .build { opacity:0; transform:none; } .build.on { opacity:1; }
+}
+
+/* ================= Do slide (ported from mockup 4: .dohead, .sab, .dsteps, .sheet) ================= */
+.dohead { display:flex; align-items:flex-start; gap:2cqw; margin-top:1.4cqw; }
+.dohead h1 { flex:1; margin-top:0; }
+.dl2-os .deck .slide .dohead h1 { font-size:calc(3.5cqw * var(--ts-h, 1)) !important; line-height:1.05 !important; }
+
+.sab { display:grid; grid-template-columns:1fr auto 1fr; gap:1.2cqw; margin-top:1.8cqw; align-items:stretch; }
+.sab > div { padding:1.2cqw 1.6cqw; }
+.dl2-os .deck .slide .sab > div, .dl2-os .deck .slide .sab p { font-size:calc(1.8cqw * var(--ts)) !important; line-height:1.3 !important; }
+.sab small { display:block; font-family:"DL2 JetBrains Mono", monospace; font-size:1.15cqw; letter-spacing:.18em; margin-bottom:.4cqw; }
+.sab .a { border:1px solid rgba(0,229,255,.4); background:rgba(0,229,255,.06); } .sab .a small { color:#6ff3ff; }
+.sab .b { border:1px solid rgba(255,196,0,.6); background:rgba(255,196,0,.08); } .sab .b small { color:var(--c-gold); }
+.sab .arr { display:grid; place-items:center; font-size:3cqw; color:#ff6fc1; }
+
+.dsteps { display:grid; grid-template-columns:repeat(5,1fr); gap:.8cqw; margin-top:1.8cqw; }
+.dsteps div { border:1px solid rgba(255,255,255,.16); padding:1cqw 1.1cqw; background:rgba(255,255,255,.03); }
+.dl2-os .deck .slide .dsteps div, .dl2-os .deck .slide .dsteps p { font-size:calc(1.75cqw * var(--ts)) !important; line-height:1.25 !important; }
+.dsteps b { display:block; font-family:"DL2 JetBrains Mono", monospace; color:#6ff3ff; font-size:1.2cqw; margin-bottom:.3cqw; }
+
+.sheet { margin-top:1.6cqw; font-family:"DL2 JetBrains Mono", monospace; letter-spacing:.1em; color:#bfe9f2; }
+.dl2-os .deck .slide .sheet { font-size:calc(1.3cqw * var(--ts)) !important; }
+.sheet b { color:var(--c-gold); }
+
+/* ================= Review (answer reveal, multiple-choice, compare) ================= */
+.answer { position:relative; margin-top:2cqw; padding:1.6cqw 2.2cqw; background:var(--c-panel); border-left:.35cqw solid var(--c-cyan); }
+.dl2-os .deck .slide .answer, .dl2-os .deck .slide .answer p { font-size:calc(2cqw * var(--ts)) !important; line-height:1.4 !important; }
+.answer b { color:var(--c-gold); }
+
+.choices { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2cqw; margin-top:2cqw; } /* slide 26: three choice cards */
+.choices div { border:1px solid rgba(0,229,255,.35); background:rgba(4,10,26,.75); padding:1.4cqw 1.6cqw; }
+.dl2-os .deck .slide .choices div, .dl2-os .deck .slide .choices p { font-size:calc(1.8cqw * var(--ts)) !important; line-height:1.3 !important; }
+/* Verdicts are real text on each card, hidden (and the cards neutral) until the answer card is revealed. */
+.choices > div { position:relative; }
+.choices b { display:inline-grid; place-items:center; width:1.7em; height:1.7em; margin-right:.5em; vertical-align:.1em; font-family:"DL2 JetBrains Mono", monospace; font-size:.8em; color:#6ff3ff; border:1px solid rgba(0,229,255,.5); background:rgba(0,229,255,.08); }
+.choices .verdict { visibility:hidden; position:absolute; top:0; left:1.6cqw; transform:translateY(-50%); padding:.3cqw .9cqw; font-family:"DL2 JetBrains Mono", monospace; font-weight:700; font-size:calc(1.35cqw * var(--ts-h, 1)); line-height:1.2; letter-spacing:.14em; text-transform:uppercase; color:#021018; }
+.choices .correct .verdict::before { content:"✓ "; } .choices .incorrect .verdict::before { content:"✗ "; }
+.choices:has(~ .answer.on) .verdict { visibility:visible; }
+.choices:has(~ .answer.on) .correct { border-color:#a6ff8f; background:rgba(166,255,143,.12); box-shadow:0 0 2cqw rgba(166,255,143,.22); }
+.choices:has(~ .answer.on) .correct .verdict { background:#a6ff8f; }
+.choices:has(~ .answer.on) .correct b { color:#021018; background:#a6ff8f; border-color:#a6ff8f; }
+.choices:has(~ .answer.on) .incorrect { border-color:rgba(255,60,172,.75); background:rgba(255,60,172,.07); }
+.choices:has(~ .answer.on) .incorrect .verdict { background:#ff6fc1; }
+
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:1.6cqw; margin-top:2cqw; } /* slide 23: two-column compare */
+.compare > div { border:1px solid rgba(0,229,255,.3); background:rgba(4,10,26,.7); padding:1.4cqw 1.8cqw; }
+.dl2-os .deck .slide .compare > div, .dl2-os .deck .slide .compare p { font-size:calc(1.8cqw * var(--ts)) !important; line-height:1.35 !important; }
+.compare h3 { font-family:"DL2 JetBrains Mono", monospace; font-size:1.2cqw; letter-spacing:.12em; text-transform:uppercase; color:#6ff3ff; margin:0 0 .8cqw; }
+
+/* ================= Gorge opener (ported from mockup 1's .opener, dusk variant) ================= */
+.slide[data-scene="gorge"] .opener { position:absolute; inset:0; }
+.slide[data-scene="gorge"] .opener .content { position:absolute; left:6%; top:9%; width:58%; }
+.slide[data-scene="gorge"] .opener .seal { width:7cqw; height:auto; filter:drop-shadow(0 0 1.6cqw rgba(0,229,255,.55)); }
+.slide[data-scene="gorge"] .opener .kicker { font-family:"DL2 JetBrains Mono", monospace; font-size:1.3cqw; letter-spacing:.2em; text-transform:uppercase; color:var(--c-peach); margin-top:2cqw; }
+.slide[data-scene="gorge"] .opener .kicker b { color:var(--c-gold); font-weight:700; }
+.dl2-os .deck .slide[data-scene="gorge"] .opener h1 { font-size:calc(5.6cqw * var(--ts)) !important; line-height:1 !important; margin-top:1cqw; }
+.slide[data-scene="gorge"] .opener .chips { display:flex; flex-wrap:wrap; gap:.8cqw; margin-top:2.4cqw; }
+.slide[data-scene="gorge"] .opener .chip { font-size:1.75cqw; padding:.6cqw 1.2cqw; border:1px solid rgba(255,220,200,.55); background:rgba(40,16,50,.45); color:var(--c-ink); clip-path:polygon(.7cqw 0,100% 0,100% calc(100% - .7cqw),calc(100% - .7cqw) 100%,0 100%,0 .7cqw); opacity:0; transform:translateY(1cqw); animation:dl2-chip .6s forwards; }
+.slide[data-scene="gorge"] .opener .chip:nth-child(1) { animation-delay:.3s; }
+.slide[data-scene="gorge"] .opener .chip:nth-child(2) { animation-delay:.5s; }
+.slide[data-scene="gorge"] .opener .chip:nth-child(3) { animation-delay:.7s; }
+.slide[data-scene="gorge"] .opener .chip:nth-child(4) { animation-delay:.9s; }
+.slide[data-scene="gorge"] .opener .chip:nth-child(5) { animation-delay:1.1s; }
+@keyframes dl2-chip { to { opacity:1; transform:none; } }
+.slide[data-scene="gorge"] .opener .go { position:absolute; left:6%; bottom:19%; font-family:"DL2 JetBrains Mono", monospace; font-size:1.2cqw; letter-spacing:.2em; color:var(--c-gold); } /* clears the always-on .strip (bottom:4.5%, height:7.5%), unlike the mockup where the opener had no strip */
+.slide[data-scene="gorge"] .opener .go::after { content:" ▮"; animation:dl2-blink 1s steps(2) infinite; }
+.slide[data-scene="gorge"] .opener .where { position:absolute; right:3%; top:5%; text-align:right; font-family:"DL2 JetBrains Mono", monospace; font-size:1.2cqw; letter-spacing:.12em; color:var(--c-peach); line-height:1.6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .slide[data-scene="gorge"] .opener .chip { opacity:1; transform:none; }
+}
+
+/* ================= Deck layout helpers (added with the Week 1 deck) ================= */
+/* A hidden slide hides everything in it, even demo parts that set visibility:visible (win11 ticks). */
+.slide:not(.is-active):not(.is-leaving) * { visibility:hidden !important; }
+/* Show slides inside a 16:9 deck: a wider side column, a compact checklist and one row of controls,
+ * so a 7-step demo fits under the HUD at 1920×1080 without the caption overlapping the list. The demo
+ * is as tall as the bezel, so the controls line up with the bezel's bottom edge. */
+.deck .slide[data-stage="show"] .demo { grid-template-columns:1fr 29%; flex:none; height:auto; }
+.slide[data-stage="show"] .demo-cap { flex:none; }
+.slide[data-stage="show"] .demo-todo { gap:.4cqw; }
+.dl2-os .deck .slide[data-stage="show"] .demo-todo li { line-height:1.2 !important; }
+.slide[data-stage="show"] .demo-todo li i { width:2cqw; height:2cqw; }
+.slide[data-stage="show"] .demo-controls { flex-wrap:nowrap; gap:.5cqw; }
+.slide[data-stage="show"] .demo-controls button { padding:.6cqw .7cqw; }
+/* Steps centered as a block in a centered panel; four steps in two columns when a slide needs the room. */
+.panel.center .steps { width:fit-content; margin-inline:auto; text-align:left; }
+.dl2-os .deck .slide .steps + h2 { margin-top:2.4cqw; }
+.steps.cols { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(2,auto); grid-auto-flow:column; column-gap:3cqw; }
+/* Do slide with a long Point B; a countdown on a gorge slide. */
+.sab.b-wide { grid-template-columns:1fr auto 2.1fr; }
+/* Review: the "why" card carries a gold rule; emphasis in body text is gold and upright, like h1 em. */
+.answer.why { border-left-color:var(--c-gold); }
+.dl2-os .deck .slide p em, .dl2-os .deck .slide li em { font-style:normal; color:var(--c-gold); }
+
+/* ================= Polish pass: composed slides, unit marks, every text size ================= */
+/* The deck sizes its own type through --ts. text-size.js also raises body font-size and line-height
+ * for reading pages; keep those out of the deck so only --ts moves slide type. Headings are already
+ * huge, so they grow half as fast as body text (--ts-h). */
+.deck { font-size:16px; line-height:normal; --ts-h:calc(1 + (var(--ts) - 1) / 2); }
+.dl2-os .deck .strip button { font-size:inherit !important; line-height:1 !important; }
+.dl2-os .deck .slide .demo-controls button { font-size:1.2cqw !important; line-height:1.2 !important; }
+/* The text-size status ("Default text") is for screen readers only; the strip shows A− and A+. */
+.strip .vub-textsize .status { position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; }
+
+/* Composed slides (Tell, Review, Warm-up, Intro, Apply): a flex column whose content block sits
+ * centered in the space under the HUD instead of hugging the top of the panel. */
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full { display:flex; flex-direction:column; padding-bottom:3.4cqw; }
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full > .hud { margin-bottom:1.6cqw; }
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full > .hud + * { margin-top:auto; }
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full > :last-child { margin-bottom:auto; }
+.dl2-os .deck .slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) h1 { font-size:calc(4.6cqw * var(--ts-h)) !important; line-height:1.04 !important; text-wrap:balance; }
+.dl2-os .deck .slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .steps li { font-size:calc(2.3cqw * var(--ts)) !important; line-height:1.25 !important; }
+/* Spacing yields as type grows: (2 - --ts) is 1 at default and .76 at the largest size. */
+.slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .steps { margin-top:calc(3cqw * (2 - var(--ts))); gap:calc(1.5cqw * (2 - var(--ts))); }
+.slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .steps li { gap:1.7cqw; }
+.slide[data-stage="tell"] .steps:not(.cols) { max-width:68cqw; } /* wrap before the unit mark */
+.slide .steps li > span:last-child, .slide .story p, .slide .answer, .slide .compare > div, .slide .choices > div { text-wrap:pretty; } /* no one-word last lines */
+.slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .num { width:3.8cqw; height:3.8cqw; font-size:calc(1.6cqw * var(--ts-h)); clip-path:polygon(.9cqw 0,100% 0,100% calc(100% - .9cqw),calc(100% - .9cqw) 100%,0 100%,0 .9cqw); }
+/* The help-request Tell slide: four parts in two columns sized to their text, then the compare, where
+ * the short bad request gets the narrow card. Opaque cards let the unit mark tuck behind them. */
+.slide[data-stage="tell"] .steps.cols { grid-template-columns:auto auto; justify-content:start; column-gap:3.4cqw; margin-top:calc(2.6cqw * (2 - var(--ts))); }
+.dl2-os .deck .slide[data-stage="tell"] .steps.cols li { font-size:calc(1.95cqw * var(--ts)) !important; }
+.slide[data-stage="tell"] .compare { grid-template-columns:1fr 2.3fr; margin-top:calc(2.4cqw * (2 - var(--ts))); }
+.slide[data-stage="tell"] .compare > div { background:#050b1d; }
+.dl2-os .deck .slide[data-stage="tell"] .compare > div { font-size:calc(1.9cqw * var(--ts)) !important; line-height:1.3 !important; }
+.slide[data-stage="tell"] .compare h3 { font-size:1.3cqw; }
+
+/* Warm-up: Frank's night as a timeline, one node per line. */
+.slide[data-phase="warm-up"] .story { position:relative; margin-top:2.6cqw; padding-left:3cqw; display:flex; flex-direction:column; gap:1.3cqw; }
+.slide[data-phase="warm-up"] .story::before { content:""; position:absolute; left:.55cqw; top:.9cqw; bottom:.9cqw; width:2px; background:linear-gradient(180deg, var(--c-cyan), rgba(255,60,172,.7)); opacity:.55; }
+.dl2-os .deck .slide[data-phase="warm-up"] .story p { position:relative; margin:0; font-size:calc(2.3cqw * var(--ts)) !important; line-height:1.3 !important; }
+.slide[data-phase="warm-up"] .story p::before { content:""; position:absolute; left:-3cqw; top:calc(.65em - .6cqw); width:1.2cqw; height:1.2cqw; box-sizing:border-box; background:#07112a; border:2px solid var(--c-cyan); transform:rotate(45deg); }
+.slide[data-phase="warm-up"] .story p.now::before { background:var(--c-cyan); box-shadow:0 0 1.2cqw var(--c-cyan); }
+.dl2-os .deck .slide[data-phase="warm-up"] .story + h2 { margin-top:2.8cqw; font-size:calc(3.3cqw * var(--ts-h)) !important; }
+
+/* Apply: the closing line sits under the list with room to breathe. */
+.dl2-os .deck .slide[data-phase="apply"] .steps + p { margin-top:3cqw; font-size:calc(2.1cqw * var(--ts)) !important; }
+
+/* Review: bigger answer type and spacing; the answer and why cards read as a pair. */
+.dl2-os .deck .slide[data-stage="review"] h1 { font-size:calc(4.2cqw * var(--ts-h)) !important; } /* questions run long */
+.slide[data-stage="review"] .panel.full > h1 + * { margin-top:calc(3cqw * (2 - var(--ts))); }
+.dl2-os .deck .slide[data-stage="review"] .answer { font-size:calc(2.4cqw * var(--ts)) !important; line-height:1.35 !important; }
+.slide[data-stage="review"] .answer { margin-top:calc(1.5cqw * (2 - var(--ts))); padding:1.8cqw 2.6cqw; background:linear-gradient(90deg, rgba(0,229,255,.13), rgba(6,14,34,.93) 45%); border-left-width:.45cqw; }
+.slide[data-stage="review"] .answer.why { background:linear-gradient(90deg, rgba(255,196,0,.12), rgba(6,14,34,.93) 45%); }
+.slide[data-stage="review"] .choices { gap:1.6cqw; }
+.slide[data-stage="review"] .choices > div { padding:2cqw 1.8cqw 1.6cqw; }
+.dl2-os .deck .slide[data-stage="review"] .choices > div { font-size:calc(2cqw * var(--ts)) !important; line-height:1.3 !important; }
+.slide[data-stage="review"] .choices + .answer { margin-top:calc(2.2cqw * (2 - var(--ts))); }
+.choices.b-wide { grid-template-columns:1fr 1.7fr 1fr; } /* the long middle choice gets the room */
+
+/* Unit mark: a huge outlined unit letter behind the Tell text, filling the panel's right side. */
+.unit-mark { position:absolute; right:4cqw; top:50%; z-index:-1; transform:translateY(-44%); font-family:"DL2 Space Grotesk", "Segoe UI", system-ui, sans-serif; font-weight:700; font-size:24cqw; line-height:.8; letter-spacing:0; color:transparent; -webkit-text-stroke:2px rgba(0,229,255,.22); background:repeating-linear-gradient(180deg, rgba(0,229,255,.07) 0 2px, transparent 2px 7px); -webkit-background-clip:text; background-clip:text; filter:drop-shadow(0 0 1.2cqw rgba(0,229,255,.2)); pointer-events:none; user-select:none; }
+
+/* Do slides: a flex column; a small gap between blocks (it yields as type grows) plus whatever room
+ * is left, so the mission still fits at larger text sizes. */
+.slide[data-stage="do"] .panel.full { display:flex; flex-direction:column; row-gap:calc(1.2cqw * (2 - var(--ts))); }
+.slide[data-stage="do"] .dohead { margin-top:calc(1.4cqw * (2 - var(--ts))); }
+.slide[data-stage="do"] .panel.full > :is(.sab, .dsteps, .sheet) { margin-top:auto; }
+
+/* The two largest text sizes: Show and Do slides (and any slide marked data-fit="tight") cap slide
+ * type at 1.1×; beyond that their content would run past the panel, which clips it. */
+html:is([data-text-size="xl"],[data-text-size="xxl"]) .slide:is([data-stage="do"],[data-stage="show"],[data-fit="tight"]) { --ts:1.1; --ts-h:1.05; }

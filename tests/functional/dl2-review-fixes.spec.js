@@ -4,7 +4,8 @@ const base='/courses/digital-literacy-2';
 
 // Decks start keyboard focus inside the current slide (the deck's own bypass), so the skip link
 // is reached by tabbing backwards there; on document pages it is the first Tab stop.
-for(const path of ['/assessments/pre-test.html','/weeks/week-01/presentation.html']){
+// Narrowed 2026-09-28 (Mission Control, Task 11): the generated-deck case uses week 2, since week 1's deck was replaced.
+for(const path of ['/assessments/pre-test.html','/weeks/week-02/presentation.html']){
  test(`DL2 skip link is keyboard-reachable, visible when focused, and jumps to main content on ${path}`,async({page})=>{
   await page.goto(base+path);
   const skip=page.locator('a.skip');
@@ -19,19 +20,8 @@ for(const path of ['/assessments/pre-test.html','/weeks/week-01/presentation.htm
  });
 }
 
-test('DL2 assessment topic buttons expose their visible text and answered count to assistive tech',async({page})=>{
- await page.goto(base+'/assessments/pre-test.html');
- const buttons=page.locator('[data-topic-index]');
- await expect(buttons).toHaveCount(7);
- for(let i=0;i<7;i++){const b=buttons.nth(i);const visible=(await b.innerText()).replace(/\s+/g,' ').trim();
-  const name=await b.evaluate(el=>el.getAttribute('aria-label')||el.textContent);
-  const normalized=name.replace(/\s+/g,' ').trim();
-  for(const word of visible.split(' '))expect(normalized,`button ${i+1} accessible name "${normalized}" must contain visible "${word}"`).toContain(word);
-  await expect(b).toHaveAccessibleName(/0 \/ 4 answered/);}
- await page.locator('fieldset:visible input').first().check();
- await expect(buttons.nth(0)).toHaveAccessibleName(/1 \/ 4 answered/);
- await expect(buttons.nth(3)).toHaveAccessibleName(/Creating/);
-});
+// Retired 2026-09-28 (Mission Control, Task 11): 'DL2 assessment topic buttons expose their visible text and answered
+// count to assistive tech'. The replaced 28-question pre-test's topic tabs are gone; the new test has no topic tabs.
 
 // Retired 2026-09-26 with the week 6 redesign: 'DL2 week 6 manual edit still passes the v2 search check'.
 // Learners no longer rename a record; the three practice pages are checked in
