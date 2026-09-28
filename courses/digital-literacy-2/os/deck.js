@@ -234,7 +234,7 @@
         // Course-home resume links identify the old layout; older legacy decks restart safely.
         start = resumeTotal === legacyTotal ? migratePosition(start) : 0;
       } else if (!resumeTotal && safeGet(storeKey + ':version') !== 'opening-v1' && saved >= 0 &&
-          (fromHash === null || fromHash === saved)) {
+          fromHash === null) {
         start = migratePosition(saved);
       }
     }

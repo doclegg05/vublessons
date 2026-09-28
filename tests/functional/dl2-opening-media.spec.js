@@ -4,6 +4,17 @@ const fs=require('fs'),crypto=require('crypto');
 const manifest=require('../../courses/digital-literacy-2/media/manifest.json');
 const base='/courses/digital-literacy-2', route=n=>`${base}/weeks/week-0${n}/presentation.html`;
 const version=path=>crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex').slice(0,12);
+// Netlify injects a review drawer into previews; dismiss it via its real UI before
+// checking the course navigation underneath. This drawer is absent from production.
+async function dismissPreviewDrawer(page){
+ const host=page.locator('iframe[title="Netlify Drawer"]');
+ if(!await host.count())return;
+ const drawer=page.frameLocator('iframe[title="Netlify Drawer"]');
+ const minimize=drawer.getByRole('button',{name:'Minimize',exact:true});
+ if(await minimize.isVisible())await minimize.click({timeout:5000});
+ const dismiss=drawer.getByRole('button',{name:'Dismiss',exact:true});
+ if(await dismiss.isVisible())await dismiss.click({timeout:5000});
+}
 for(let week=1;week<=6;week++)test(`Week ${week}: opening, approved playback/captions, controls and return`,async({page,context})=>{
  const failures=[];page.on('pageerror',e=>failures.push(e.message));
  await page.goto(route(week)+'#1');
@@ -28,7 +39,7 @@ for(let week=1;week<=6;week++)test(`Week ${week}: opening, approved playback/cap
  await expect.poll(()=>video.evaluate(v=>v.textTracks[0]?.cues?.length||0)).toBeGreaterThan(10);
  expect(await video.evaluate(v=>v.textTracks[0].mode)).toBe('showing');
  const transcript=page.getByRole('link',{name:/Transcript & chapters/});
- await expect(transcript).toHaveAttribute('href','video-transcript.html');await expect(transcript).toHaveAttribute('target','_blank');
+ expect(await transcript.evaluate(a=>new URL(a.href).pathname.replace(/\.html$/,''))).toBe(`${base}/weeks/week-0${week}/video-transcript`);await expect(transcript).toHaveAttribute('target','_blank');
  await video.focus();await page.keyboard.press('Space');
  await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(.1);
  const at=await page.evaluate(()=>DL2Deck.index());
@@ -42,6 +53,7 @@ for(let week=1;week<=6;week++)test(`Week ${week}: opening, approved playback/cap
  await page.goto(route(week)+`#${week===1?2:1}`);await expect(page.locator('.slide.is-active video')).toBeVisible();
  await page.reload();await expect(page.locator('.slide.is-active video')).toBeVisible();
  await page.goto(route(week)+'#6');await page.goBack();await expect(page.locator('.slide.is-active video')).toBeVisible();
+ await dismissPreviewDrawer(page);
  await page.locator('.strip [data-phase=present]').click();await expect(page.locator('.slide.is-active')).toHaveAttribute('data-stage','tell');
  expect(failures).toEqual([]);
 });
@@ -71,9 +83,11 @@ test('Phone openings retain visible player, large controls, links and no horizon
 });
 test('Old session/hash and course-home saved positions migrate once without changing assessments',async({page})=>{
  for(const [week,old,current] of [[1,0,2],[1,1,0],[1,9,10],[2,0,1],[6,22,23]]){
+  await page.goto(route(week));
+  const savedPath=new URL(page.url()).pathname; // local server and Netlify normalize .html differently
   await page.goto(base+'/index.html');
-  await page.evaluate(({path,old})=>{sessionStorage.setItem('dl2os:slide:'+path,String(old));sessionStorage.removeItem('dl2os:slide:'+path+':version');}, {path:route(week).replace(/\.html$/,''),old});
-  await page.goto(route(week)+`#${old+1}`);expect(await page.evaluate(()=>DL2Deck.index())).toBe(current);
+  await page.evaluate(({path,old})=>{sessionStorage.setItem('dl2os:slide:'+path,String(old));sessionStorage.removeItem('dl2os:slide:'+path+':version');}, {path:savedPath,old});
+  await page.goto(route(week));expect(await page.evaluate(()=>DL2Deck.index())).toBe(current);
   await page.reload();expect(await page.evaluate(()=>DL2Deck.index())).toBe(current);
  }
  await page.goto(base+'/index.html');
@@ -81,7 +95,13 @@ test('Old session/hash and course-home saved positions migrate once without chan
  await expect(page.locator('.continue-course')).toHaveAttribute('href',/#resume-23-9$/);
  await page.locator('.continue-course').click();await expect(page.locator('.strip .count')).toHaveText('10 / 24');
  await expect(page).not.toHaveURL(/resume-/);await page.reload();await expect(page.locator('.strip .count')).toHaveText('10 / 24');
- // Explicit links without old session state use the current numbering, invalid/stale bounds are clamped.
+ // Explicit opening links must win over old saved positions on a shared lab computer.
+ for(const week of [1,2]){
+  await page.goto(route(week)+'#1');
+  await page.evaluate(()=>{const key='dl2os:slide:'+location.pathname;sessionStorage.setItem(key,'0');sessionStorage.removeItem(key+':version');});
+  await page.reload();expect(await page.evaluate(()=>DL2Deck.index())).toBe(0);
+ }
+ // Explicit links use the current numbering; invalid/stale bounds are clamped.
  await page.goto(route(3)+'#999');await expect(page.locator('.strip .count')).toHaveText('24 / 24');
  await page.goto(route(3)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 24');
 });
