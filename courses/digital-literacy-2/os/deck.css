@@ -49,6 +49,10 @@ body[data-scene="deck"] .scene-deck, body[data-scene="gorge"] .scene-gorge { opa
 .dl2-os .deck .slide p, .dl2-os .deck .slide li, .dl2-os .deck .slide td, .dl2-os .deck .slide th { font-size:calc(1.9cqw * var(--ts)) !important; line-height:1.35 !important; }
 .hud { display:flex; align-items:center; gap:1.1cqw; font-family:"DL2 JetBrains Mono", monospace; font-size:1.15cqw; letter-spacing:.12em; text-transform:uppercase; color:#6ff3ff; }
 .hud img { width:2.4cqw; height:auto; }
+/* The app (and file) a unit works in, readable from the back row: body-size type, not HUD caps. */
+.hud .app { display:inline-flex; align-items:baseline; gap:.8cqw; font-family:"DL2 Space Grotesk", "Segoe UI", system-ui, sans-serif; font-size:calc(1.8cqw * var(--ts)); font-weight:700; letter-spacing:0; text-transform:none; color:#021018; background:var(--c-gold); padding:.3cqw 1.1cqw; }
+.hud .app .file { font-weight:500; }
+.hud .app .file::before { content:"· "; }
 .hud .tag { margin-left:auto; padding:.25cqw .9cqw; font-weight:700; color:#021018; }
 .tag-tell { background:#6ff3ff; } .tag-show { background:#ff6fc1; } .tag-do { background:var(--c-gold); } .tag-review { background:#a6ff8f; }
 .steps { list-style:none; margin:2.2cqw 0 0; padding:0; display:flex; flex-direction:column; gap:1.2cqw; }
@@ -60,13 +64,15 @@ body[data-scene="deck"] .scene-deck, body[data-scene="gorge"] .scene-gorge { opa
 .dl2-os kbd, .path { font-family:"DL2 JetBrains Mono", monospace; font-size:.9em; color:#021018; background:var(--c-gold); padding:.1cqw .7cqw; font-weight:700; }
 
 /* phase strip */
-.strip { position:absolute; left:4.5%; right:4.5%; bottom:4.5%; height:7.5%; display:grid; grid-template-columns:repeat(6,1fr) auto auto auto; gap:.5cqw; font-family:"DL2 JetBrains Mono", monospace; font-size:1.1cqw; letter-spacing:.1em; z-index:5; }
+.strip { position:absolute; left:4.5%; right:4.5%; bottom:4.5%; height:7.5%; display:grid; grid-template-columns:repeat(6,1fr) auto auto; gap:.5cqw; font-family:"DL2 JetBrains Mono", monospace; font-size:1.1cqw; letter-spacing:.1em; z-index:5; }
 .seg { border:1px solid rgba(0,229,255,.35); display:flex; align-items:center; justify-content:center; color:var(--c-soft); background:rgba(4,10,26,.75); text-transform:uppercase; padding:0 1cqw; }
+.strip button.seg { appearance:none; min-width:0; font:inherit; letter-spacing:inherit; line-height:1.2; cursor:pointer; }
+.strip button.seg:not(:disabled):hover { border-color:var(--c-cyan); background:rgba(0,229,255,.24); text-decoration:underline; text-underline-offset:.25em; }
+.strip button.seg:focus-visible { outline:3px solid var(--c-gold); outline-offset:2px; }
+.strip button.seg:disabled { opacity:.45; cursor:default; }
 .seg.done { background:rgba(0,229,255,.2); color:#d4fbff; }
 .seg.now { background:linear-gradient(90deg,rgba(255,60,172,.55),rgba(255,196,0,.45)); color:#fff; border-color:#ff6fc1; box-shadow:0 0 1.6cqw rgba(255,60,172,.6); }
 .strip .seg[data-phase].done::before { content:"✓ "; } .strip .seg[data-phase].now::before { content:"▸ "; }
-.seg.t { color:var(--c-gold); border-color:rgba(255,196,0,.5); min-width:9cqw; }
-.seg.t.expired { background:var(--c-gold); color:#1a1305; animation:dl2-blink 1s steps(2) infinite; }
 .seg.vub-appbar button { font:inherit; color:var(--c-ink); background:none; border:0; padding:0 .4cqw; cursor:pointer; }
 .seg.vub-appbar button:focus-visible, .dl2-os button:focus-visible { outline:3px solid var(--c-gold); outline-offset:2px; }
 @keyframes dl2-blink { 50% { opacity:.5; } }
@@ -81,14 +87,10 @@ body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-i
   .build { opacity:0; transform:none; } .build.on { opacity:1; }
 }
 
-/* ================= Do slide (ported from mockup 4: .dohead, .timer, .sab, .dsteps, .sheet) ================= */
+/* ================= Do slide (ported from mockup 4: .dohead, .sab, .dsteps, .sheet) ================= */
 .dohead { display:flex; align-items:flex-start; gap:2cqw; margin-top:1.4cqw; }
 .dohead h1 { flex:1; margin-top:0; }
 .dl2-os .deck .slide .dohead h1 { font-size:calc(3.5cqw * var(--ts-h, 1)) !important; line-height:1.05 !important; }
-.timer { flex:none; text-align:center; font-family:"DL2 JetBrains Mono", monospace; border:1px solid rgba(255,196,0,.6); padding:.8cqw 1.6cqw; color:var(--c-gold); }
-.timer b { display:block; font-weight:700; }
-.dl2-os .deck .slide .timer b { font-size:calc(3.6cqw * var(--ts-h, 1)) !important; line-height:1 !important; }
-.timer small { font-size:1.15cqw; letter-spacing:.2em; }
 
 .sab { display:grid; grid-template-columns:1fr auto 1fr; gap:1.2cqw; margin-top:1.8cqw; align-items:stretch; }
 .sab > div { padding:1.2cqw 1.6cqw; }
@@ -174,8 +176,6 @@ body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-i
 .steps.cols { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(2,auto); grid-auto-flow:column; column-gap:3cqw; }
 /* Do slide with a long Point B; a countdown on a gorge slide. */
 .sab.b-wide { grid-template-columns:1fr auto 2.1fr; }
-.slide[data-scene="gorge"] .opener .timer { display:inline-block; margin-top:2.4cqw; padding:1.2cqw 2.4cqw; background:rgba(40,16,50,.45); }
-.dl2-os .deck .slide[data-scene="gorge"] .opener .timer b { font-size:calc(5cqw * var(--ts)) !important; }
 /* Review: the "why" card carries a gold rule; emphasis in body text is gold and upright, like h1 em. */
 .answer.why { border-left-color:var(--c-gold); }
 .dl2-os .deck .slide p em, .dl2-os .deck .slide li em { font-style:normal; color:var(--c-gold); }

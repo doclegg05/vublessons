@@ -30,7 +30,7 @@
         [
           25,
           "Pre-test",
-          "Slide 3. Learners type their name first, then work quietly; read directions aloud without suggesting answers. Record each score out of 28 on your roster; print page 1 only if a paper copy is needed. Early finishers read slide 4; late finishers may run to minute 38."
+          "Slide 3. Learners type their name first, then work quietly; read directions aloud without suggesting answers. Record each score out of 20 on your roster; print page 1 only if a paper copy is needed. Early finishers read slide 4; late finishers may run to minute 38."
         ],
         [
           3,
@@ -46,11 +46,6 @@
           10,
           "Cycle B: hearing and screen",
           "Tell: slide 7. Show: chapter 4, then choose the sound output live from the speaker icon on the taskbar. Do: worksheet task 3 with a headset, every learner. Review: the slide 20 knowledge check. Point to the monitor brightness buttons; do not change them."
-        ],
-        [
-          10,
-          "Break",
-          "Offer a screen-free pause."
         ],
         [
           10,
@@ -73,7 +68,7 @@
           "Play chapter 10 (pause at 6:28). Each learner shows you three things: zoom and reset, choose the headset and test it, and preview page 1 on the right printer. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
         ],
         [
-          7,
+          17,
           "Apply and close",
           "Slides 23 and 24. Home task: on your own device, make one change from today, write down how you undid it, and share it at the start of week 2. Restore lab settings, then select Start fresh on this computer."
         ]
@@ -391,11 +386,6 @@
           "Tell: slide 9. Show: chapter 5, pausing at 3:29 before chapter 6 starts; then on slide 10 select Review practice request with one choice blank to show the message Please select an item in the list. Do: worksheet task 5 on slide 10, every learner. Review: ask whether anyone received a request (no); a partner reads the confirmation aloud."
         ],
         [
-          10,
-          "Break",
-          "Offer a screen-free pause."
-        ],
-        [
           14,
           "Cycle D: folders and file names",
           "Tell: slides 11 and 12. Show: chapter 6, then live, Windows logo key and E \u203a Documents \u203a New \u203a Folder named Community resources; in Word, File \u203a Save As \u203a Browse into that folder as library-help-v1.docx; close Word and reopen the file from the folder. Say the video calls it library-help-draft and ours adds a version number. Do: worksheet task 6, every learner. Review: a partner reopens the file from the folder."
@@ -416,7 +406,7 @@
           "Play chapter 10 and pause at 6:35 to ask what the folder should hold; play on to compare. Each learner shows you three things: the five-field source note, the file reopened from Community resources, and a file restored from the Recycle Bin, and names the role for a reviewer. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
         ],
         [
-          8,
+          18,
           "Apply and close",
           "Slides 21, 22 and 23. Home task: search for one service you need, write the five-field source note, and keep it in a named folder on your own device or on paper; share it at the start of week 3. Print or save the worksheet, delete the Community resources folder and ZIP from Documents, then select Start fresh on this computer. Remind learners of next week\u2019s date from the syllabus, especially if it falls on a holiday."
         ]
@@ -729,11 +719,6 @@
           "Tell: slides 4 and 6. Show: chapter 3; pause at 1:58 and ask each learner to name one change that would help the reader. Then live in Word: Ctrl and K for a link, Ctrl and C, V and Z, File \u203a Save As into Resource pack, and Review \u203a Track Changes with Accept and Reject. Do: worksheet task 3, then task 4 by swapping seats, every learner; the owner makes the final choice. Review: the slide 20 knowledge check."
         ],
         [
-          10,
-          "Break",
-          "Offer a screen-free break. Learners minimize Word; they will need it again in cycle E."
-        ],
-        [
           19,
           "Cycle C: a total that recalculates",
           "Tell: slides 8, 9 and 10. Show: chapter 4, then chapter 5; pause at 2:59, before the narrator gives the totals, and have learners write what B5 will show now and after paper becomes 15. Play to 3:12 to check, then stop; skip the 3:25 prompt, which comes after the answer. Type the formula live in Excel and say each key: equals, SUM, open bracket, B2, colon, B4, close bracket, Enter. Do: worksheet task 5, every learner, saved as an Excel workbook. Review: the slide 19 knowledge check; a partner reads the formula bar. Then Tell and Show only: slide 11 and chapter 6, with Insert \u203a Recommended Charts on the projector (optional for fast finishers)."
@@ -754,7 +739,7 @@
           "Play chapter 10 (pause at 6:28); partners try each other's PDF without help. Each learner shows you three things: both headings in the Navigation pane, B5 showing =SUM(B2:B4) and 28, and the PDF opened from Resource pack with a working link. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
         ],
         [
-          8,
+          18,
           "Apply and close",
           "Slides 22 and 23. Home task: on any computer, make one real notice with a heading and numbered steps, or a three-line list with a SUM total, and share one improvement at the start of week 4. Save or print the worksheet. Learners copy Resource pack to a flash drive if they want to keep it, then delete it; select Start fresh on this computer."
         ]
@@ -1070,11 +1055,6 @@
           "Tell: slides 5, 6 and 7. Show: chapter 4 (screen demo), pausing at 2:54 to ask which recipients to remove before the demo removes them; read the next line aloud. Use the slide 5 and 6 practice views, and rewrite \u201cPls RSVP ASAP\u201d aloud as a model. If you have a demonstration account, show Cc, Bcc and Schedule send in Outlook.com on the projector; otherwise say the slides are simulated. Do: worksheet tasks 3 and 4, every learner. Review: ask aloud who receives Sam\u2019s Reply all (you and Alex, not the Bcc list) and check each learner\u2019s To, Cc and Bcc lines."
         ],
         [
-          10,
-          "Break",
-          "Offer a screen-free pause."
-        ],
-        [
           18,
           "Cycle C: one shared copy and useful feedback",
           "Tell: slides 10, 11, 12 and 13 (Word with OneDrive and Google Docs are common shared-file tools; version history needs a file saved online). Show: chapter 5, then chapter 6 (pause at 4:22), then live in Word: type the two-step handout, select step 2, Review \u203a New Comment, reply, make the change and resolve it. Do: worksheet task 5 as a pair decision, then task 6 in Word, every learner: swap seats to comment on a partner\u2019s handout, swap back to reply and resolve. Review: the slide 19 knowledge check; the partner confirms the comment names the place, the change and the reason."
@@ -1095,7 +1075,7 @@
           "Play chapter 10 if time allows. Using slide 21, each learner shows you three things: the To, Cc and Bcc lines from task 3 and who a Reply all reaches, the answered and resolved comment in Word, and the one-year cost of offer A with a payment choice and reason. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
         ],
         [
-          8,
+          18,
           "Apply and close",
           "Slides 22 and 23. Home task: before week 5, find one subscription or regular charge you pay (a card statement or a phone\u2019s app store), write down when it renews and how to cancel it, and share one fact at the start of week 5. No amounts or account numbers are needed. Close Word without saving, restore lab settings, then select Start fresh on this computer."
         ]
@@ -1412,20 +1392,15 @@
         [
           25,
           "Individual check: skills challenge",
-          "Every learner works the five rows of worksheet task 7 alone at their own seat; partners do not help. From minute 8, visit each learner once, about a minute each, and rate all five rows on the paper roster; come back once to anyone not finished. Check row 3 in the formula bar before the file is closed."
-        ],
-        [
-          10,
-          "Break",
-          "Screen-free break. Finish any challenge ratings on the roster."
+          "Every learner works the five rows of worksheet task 7 alone at their own seat; partners do not help. From minute 8, visit each learner once, about a minute each, and rate all five rows on the paper roster; come back once to anyone not finished. Check row 3 in the formula bar before the file is closed. Finish any challenge ratings on the roster."
         ],
         [
           25,
           "Post-test",
-          "Slide 18. Learners type their name first and work alone; read directions aloud without suggesting answers. A learner may enter the week 1 score from your roster for a comparison. Record each score out of 28; print page 1 only if a paper copy is needed. Late finishers may run to minute 110."
+          "Slide 18. Learners type their name first and work alone; read directions aloud without suggesting answers. A learner may enter the week 1 score from your roster for a comparison. Record each score out of 20; print page 1 only if a paper copy is needed. Late finishers may run to minute 110."
         ],
         [
-          13,
+          23,
           "Apply and close",
           "Slide 19: each learner reads the domain scores, completes worksheet task 8 and chooses one practice task; discuss the two or three items the class missed most. Slide 20. Home task: at home, check for updates or turn on two-step verification for one account, and share it at the start of week 6. Restore lab settings, then select Start fresh on this computer."
         ]
@@ -1577,7 +1552,7 @@
         },
         {
           "title": "Take the post-test",
-          "body": "Type your name first, then answer on your own. When you finish, print page 1 of your results or save it as a PDF, and give your score out of 28 to your instructor.",
+          "body": "Type your name first, then answer on your own. When you finish, print page 1 of your results or save it as a PDF, and give your score out of 20 to your instructor.",
           "kind": "assessment",
           "href": "post"
         },
@@ -1595,7 +1570,7 @@
         "Say your choice for each card on slide 9 before you flip it. Then look without changing anything: in Edge, open Settings from the \u00b7\u00b7\u00b7 menu, search permissions and open Camera; in Windows 10, open Start \u203a Settings \u203a Update & Security \u203a Windows Update (Windows 11: Start \u203a Settings \u203a Windows Update). Write one thing each page shows.",
         "In Word, open a blank document and select File \u203a Info \u203a Protect Document. Write which option asks for a password to open and encrypts the file, and which only limits changes. Do not set a password. Then write what device encryption protects and what you do before you step away from a signed-in computer.",
         "Skills challenge, on your own: refine a search, build a structured paragraph, total four costs with a formula, bring back deleted text and write useful feedback. Leave your work on screen for your instructor.",
-        "Take the post-test on your own. Print page 1 of your results or save it as a PDF, and write your score out of 28. Name one strength and one skill to practice next."
+        "Take the post-test on your own. Print page 1 of your results or save it as a PDF, and write your score out of 20. Name one strength and one skill to practice next."
       ],
       "answers": [
         "A specific change (chair, screen about an arm\u2019s length away with the top at or slightly below eye level, text size or Magnifier) and a benefit the learner can see; no medical claims. Settings restored.",
@@ -1605,7 +1580,7 @@
         "USB: do not connect; give it to staff. Camera: deny when the task does not need it. Benefits fee: do not pay or use the link; VA never charges a fee to apply; call a number from VA.gov. Windows 10: free security updates ended October 2025; use Extended Security Updates or a supported device. One real detail from each page; nothing changed or installed.",
         "Encrypt with Password sets a password to open and encrypts the file; Word cannot recover a lost password. Always Open Read-Only and Restrict Editing only limit changes; the text is still readable. Device encryption protects a lost or stolen computer that is turned off; lock the screen with Windows logo key and L before stepping away.",
         "Rate each row Independent, With prompt or Needs practice on the paper roster, using the evidence list below. The quick card counts as Independent; any spoken prompt is With prompt. Keep this separate from the post-test score.",
-        "Page 1 printed or saved; score out of 28 on the roster; a named strength and a specific next task tied to a results domain."
+        "Page 1 printed or saved; score out of 20 on the roster; a named strength and a specific next task tied to a results domain."
       ],
       "challenge": {
         "item": 6,
@@ -1702,7 +1677,7 @@
         "Comfort and access: at a lab workstation, each learner makes one comfort change (chair, screen distance, text size or Magnifier) and says what it made easier, then names two universal design features and who each one helps. The change is visible, and lab settings are restored afterwards.",
         "Scams: given the fictional message on slide 8, each learner names two warning signs and an independent check that does not use the message\u2019s link or number, says what to do after typing a password, and gives a safe next step for a catfishing request, fear of missing out and a hurtful post, with no more than one prompt.",
         "Devices and files: using slide 9, Edge settings, Windows Update and Word\u2019s Protect Document menu without changing anything, each learner chooses safe responses to an unknown USB drive and an unneeded camera request, says why updates matter, tells a password to open (encryption) apart from read-only, and says what device encryption protects and when to lock the screen. Both knowledge checks are answered correctly.",
-        "Skills challenge and post-test: working alone, each learner completes the five challenge rows (refined search, structured paragraph, formula total, undo recovery, useful feedback), each rated Independent, With prompt or Needs practice, then completes the 28-question post-test and records the score and one next practice task."
+        "Skills challenge and post-test: working alone, each learner completes the five challenge rows (refined search, structured paragraph, formula total, undo recovery, useful feedback), each rated Independent, With prompt or Needs practice, then completes the 20-question post-test and records the score and one next practice task."
       ]
     },
     {
@@ -1746,11 +1721,6 @@
           "Tell: slides 11 and 10 (one change at a time; a diff shows removed lines with a minus sign and added lines with a plus sign). Show: approve the plan, let the agent make the change, then show the before-and-after on the projector; chapter 6 (3:44\u20134:01) shows keeping a working version first. If the live run is slow or fails, use the prepared version on slide 10. Do: worksheet task 4, every learner marks each changed line on slide 10 as asked for or not asked for. Review: partners compare; ask which change nobody asked for and which check would catch it."
         ],
         [
-          10,
-          "Break",
-          "Screen-free pause. Leave version 1 and the worksheet open."
-        ],
-        [
           15,
           "Cycle D: test with the checklist",
           "Tell: slide 17 (happy path, no match, mixed case, keyboard, narrow screen). Show: chapter 7 (4:27\u20135:11) and chapter 8 (5:11\u20135:55), then test the live agent's page on the projector while the class calls out each check. Do: worksheet task 5, every learner opens the agent's version (resource-finder-agent.html) at their own seat and records expected, actual and pass or fail in the App test log. Review: the slide 20 knowledge check; a learner who found a failing check reads out their evidence."
@@ -1771,7 +1741,7 @@
           "Each learner shows you three things: one acceptance check and its result, the change the spec did not ask for, and one SaaS trade-off with a reason. Score the extension rubric (0, 1 or 2 per row) and mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
         ],
         [
-          7,
+          17,
           "Apply and close",
           "Slides 22 to 24. Home task: choose one website you already use that runs as a service, such as web email. Write where your data lives, how you sign in, and one check you would run after the company changes the site. Keep it with your worksheet. Then select Start fresh on this computer at each station."
         ]

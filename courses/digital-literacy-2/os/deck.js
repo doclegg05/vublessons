@@ -20,7 +20,6 @@
     '<path fill="url(#dl2g3)" d="M0 390 L110 350 L240 372 L380 340 L520 380 L660 350 L800 380 L940 340 L1040 360 L1085 470 L1085 560 L0 560Z M1315 470 L1360 350 L1450 372 L1530 345 L1600 360 L1600 560 L1315 560Z"/></svg>';
 
   var deck, slides = [], index = 0, steppers = new Map(), ui = {}, typed = '';
-  var timer = { left: 0, total: 0, running: false, expired: false, handle: null, slide: null };
   var storeKey = 'dl2os:slide:' + location.pathname;
 
   /* The resume position lives in sessionStorage: a reload (or reopening the deck in the same tab)
@@ -59,27 +58,6 @@
     slide.dataset.steps = String(list.length);
   }
 
-  function pad(n) { return (n < 10 ? '0' : '') + n; }
-  function renderTimer() {
-    var seg = ui.timer;
-    seg.classList.toggle('expired', timer.expired);
-    seg.classList.toggle('running', timer.running);
-    seg.textContent = timer.expired ? "TIME'S UP" : timer.total ? 'T-' + pad(Math.floor(timer.left / 60)) + ':' + pad(timer.left % 60) : 'T--:--';
-  }
-  function stopTimer() { timer.running = false; clearInterval(timer.handle); timer.handle = null; }
-  function setTimer(minutes) { stopTimer(); timer.total = timer.left = Math.round(minutes * 60); timer.expired = false; renderTimer(); }
-  function toggleTimer() {
-    if (!timer.total || timer.expired) return;
-    if (timer.running) { stopTimer(); renderTimer(); return; }
-    timer.running = true;
-    timer.handle = setInterval(function () {
-      timer.left = Math.max(0, timer.left - 1);
-      if (timer.left === 0) { stopTimer(); timer.expired = true; }
-      renderTimer();
-    }, 1000);
-    renderTimer();
-  }
-
   function renderChrome() {
     var slide = slides[index];
     var at = PHASES.map(function (p) { return p[0]; }).indexOf(slide.dataset.phase || '');
@@ -95,6 +73,7 @@
   }
 
   function go(to, dir) {
+    typed = '';
     to = Math.max(0, Math.min(slides.length - 1, to));
     var old = slides[index], next = slides[to];
     if (old !== next) {
@@ -105,15 +84,13 @@
       setTimeout(function () { old.classList.remove('is-leaving'); }, LEAVE_MS);
     }
     index = to;
+    next.classList.remove('is-leaving');
     next.classList.add('is-active');
     next.removeAttribute('aria-hidden');
     next.inert = false;
     setStep(next, dir === 'back' ? parts(next).length : 0);
     var stepper = steppers.get(next);
     if (stepper) stepper.reset();
-    /* A timed slide sets the timer only when the timer isn't already its own, so stepping away
-     * and back (PageUp to re-show a demo, then PageDown) keeps a running mission timer. */
-    if (next.dataset.minutes && timer.slide !== next) { setTimer(Number(next.dataset.minutes)); timer.slide = next; }
     renderChrome();
     safeSet(storeKey, String(index));
     saveProgress();
@@ -156,7 +133,6 @@
     else if (k === 'Home') { e.preventDefault(); go(0, 'forward'); }
     else if (k === 'End') { e.preventDefault(); go(slides.length - 1, 'forward'); }
     else if (k === 'n' || k === 'N') toggleNotes();
-    else if (k === 't' || k === 'T') toggleTimer();
     else if (k === 'f' || k === 'F') toggleFullscreen();
     else if (k === 'b' || k === 'B' || k === '.') document.body.classList.toggle('blackout');
   }
@@ -183,12 +159,18 @@
     strip.className = 'strip';
     strip.setAttribute('aria-label', 'Lesson phase');
     ui.segs = PHASES.map(function (p) {
-      var s = document.createElement('span');
+      var s = document.createElement('button');
+      var first = slides.findIndex(function (slide) { return slide.dataset.phase === p[0]; });
+      s.type = 'button';
       s.className = 'seg'; s.dataset.phase = p[0]; s.textContent = p[1];
+      s.disabled = first < 0;
+      s.setAttribute('aria-label', p[1] + (first < 0 ? ': no section in this lesson' : ': jump to slide ' + (first + 1)));
+      // A phase jump always opens its first slide at the beginning, even when jumping back.
+      // Use the normal route so builds, demos, progress, the URL and saved position agree.
+      s.addEventListener('click', function () { if (first >= 0) go(first, 'forward'); });
       strip.appendChild(s);
       return s;
     });
-    ui.timer = document.createElement('span'); ui.timer.className = 'seg t'; ui.timer.setAttribute('role', 'timer'); strip.appendChild(ui.timer);
     ui.count = document.createElement('span'); ui.count.className = 'seg count'; strip.appendChild(ui.count);
     var host = document.createElement('span');
     host.className = 'seg vub-appbar';
@@ -200,7 +182,6 @@
     ui.notes.className = 'notes-panel';
     ui.notes.hidden = true;
     document.body.appendChild(ui.notes);
-    renderTimer();
   }
 
   function tagStages() {

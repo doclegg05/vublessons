@@ -21,7 +21,7 @@
   function save() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) { /* storage blocked */ } }
   function clear() { try { localStorage.removeItem(KEY); } catch (e) { /* storage blocked */ } }
   function readOutbox() { try { return JSON.parse(localStorage.getItem(OUTBOX) || '[]'); } catch (e) { return []; } }
-  function writeOutbox(list) { try { localStorage.setItem(OUTBOX, JSON.stringify(list)); } catch (e) { /* storage blocked */ } }
+  function writeOutbox(list) { try { localStorage.setItem(OUTBOX, JSON.stringify(list)); return true; } catch (e) { return false; } }
 
   function top(extra) {
     return '<header class="test-top"><img src="/courses/digital-literacy-2/os/img/vub-seal-360.png" alt="" width="44" height="44">' +
@@ -92,20 +92,26 @@
   function enqueueOutbox(item) {
     var list = readOutbox().filter(function (i) { return i['record-id'] !== item['record-id']; });
     list.push(item);
-    writeOutbox(list);
+    return writeOutbox(list);
   }
   function dequeueOutbox(recordId) {
     var list = readOutbox().filter(function (i) { return i['record-id'] !== recordId; });
     writeOutbox(list);
+  }
+  function deliver(payload, fromQueue) {
+    function run() {
+      if (fromQueue && !readOutbox().some(function (item) { return item['record-id'] === payload['record-id']; })) return Promise.resolve();
+      return send(payload).then(function () { dequeueOutbox(payload['record-id']); });
+    }
+    if (global.navigator.locks) return global.navigator.locks.request('dl2os:send:' + payload['record-id'], run);
+    return run();
   }
   function flushOutbox() {
     var list = readOutbox();
     if (!list.length) return;
     list.reduce(function (p, item) {
       return p.then(function () {
-        return send(item).then(function () {
-          dequeueOutbox(item['record-id']);
-        }).catch(function () { /* leave it queued; retried on the next flush */ });
+        return deliver(item, true).catch(function () { /* leave it queued; retried on the next flush */ });
       });
     }, Promise.resolve());
   }
@@ -113,7 +119,7 @@
   function submit() {
     var submitted = new Date(), started = new Date(st.started);
     var result = global.DL2Grade.grade(ITEMS, st.answers);
-    var rid = global.DL2Grade.recordId(FORM, submitted, st.name);
+    var rid = global.DL2Grade.recordId(FORM, submitted, st.name) + '-' + global.crypto.randomUUID().slice(0, 8);
     var payload = {
       'form-name': 'dl2-' + FORM + 'test', 'bot-field': '', 'record-id': rid, student: st.name, form: FORM + ' ' + global.DL2Items.version,
       started: started.toISOString(), submitted: submitted.toISOString(), score: result.correct + '/' + result.total,
@@ -123,27 +129,27 @@
     var report = { form: FORM, label: LABEL, items: ITEMS, result: result, name: st.name, started: started, submitted: submitted, recordId: rid };
     /* Queue the copy before the answers are cleared and before it is sent: if the tab closes
      * mid-send, the next visit's flush still delivers it. It leaves the outbox once sent. */
-    enqueueOutbox(payload);
+    var queued = enqueueOutbox(payload);
     clear();
-    renderResult(report, payload);
+    renderResult(report, payload, queued);
   }
 
-  function renderResult(report, payload) {
+  function renderResult(report, payload, queued) {
     var r = report.result;
     /* File name: plain ASCII. Accents are folded first (Nguyễn → Nguyen, Núñez → Nunez), then anything else is dropped. */
     var last = String(report.name).trim().split(/\s+/).pop().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z0-9-]/g, '') || 'Student';
-    var filename = 'DL2-' + report.label.replace('-', '') + '-' + last + '-' + report.recordId.split('-').slice(2, 4).join('-') + '.pdf';
+    var filename = 'DL2-' + report.label.replace('-', '') + '-' + last + '-' + report.recordId.split('-').slice(2, 4).join('-') + '-' + report.recordId.split('-').pop().replace(/[^A-Za-z0-9]/g, '') + '.pdf';
     root.innerHTML = top() + '<main class="test-card result" id="main"><h1 tabindex="-1">Thank you, ' + esc(report.name) + '!</h1>' +
       '<p class="result-score">' + r.correct + ' of 20 correct</p><p class="pdf-status" role="status">Making your results PDF…</p>' +
-      '<p class="copy-status" role="status">Sending a copy to Britt…</p>' +
-      '<div class="test-nav"><button type="button" data-go="pdf" disabled>Save my PDF again</button><button type="button" class="primary" data-go="print" disabled>Print my results</button></div>' +
+      '<section class="record-path" aria-labelledby="send-heading"><h2 id="send-heading">1. Submit results to Britt</h2><p class="copy-status" role="status">Sending a copy to Britt…</p><div class="test-nav"><button type="button" data-go="send" disabled>Submit to instructor</button></div><p>Netlify stores your answers and score. This does not save the PDF to your flash drive.</p></section>' +
+      '<section class="record-path usb-backup" aria-labelledby="usb-heading"><h2 id="usb-heading">2. Save your PDF to Britt’s flash drive</h2><ol><li>Plug in the flash drive Britt supplied.</li><li>Select <strong>Download graded PDF</strong>. If Save As opens, choose the flash drive. If the browser saves automatically, open Downloads and copy the PDF to the flash drive.</li><li>Open the PDF <strong>from the flash drive</strong>. Check your name, test type and score.</li><li>Close the PDF, safely eject the drive, and return it to Britt.</li></ol><p>Saving the PDF does not submit your answers. You can save it even while the online copy is waiting to send.</p><div class="test-nav"><button type="button" data-go="pdf" disabled>Download graded PDF</button><button type="button" class="primary" data-go="print" disabled>Print my results</button></div></section>' +
       '<div class="html-report" hidden></div></main>';
     root.querySelector('main h1').focus();
     var pdfUrl = null, bytes = null;
     var build = global.DL2Pdf ? global.DL2Pdf.build(report) : Promise.reject(new Error('PDF library not loaded'));
     build.then(function (b) {
       bytes = b; pdfUrl = download(bytes, filename);
-      root.querySelector('.pdf-status').textContent = 'Your PDF is saved in Downloads as ' + filename + '.';
+      root.querySelector('.pdf-status').textContent = 'Your PDF download has started: ' + filename + '. Check Downloads, or choose Download graded PDF.';
       root.querySelectorAll('[data-go="pdf"],[data-go="print"]').forEach(function (btn) { btn.disabled = false; });
     }).catch(function (err) {
       console.error('DL2 PDF failed', err);
@@ -153,15 +159,24 @@
     });
     root.addEventListener('click', function (e) {
       var go = e.target.closest('[data-go]'); if (!go) return;
+      if (go.dataset.go === 'send') sendResult();
       if (go.dataset.go === 'pdf' && bytes) download(bytes, filename);
       if (go.dataset.go === 'print') { if (pdfUrl) global.open(pdfUrl, '_blank'); else global.print(); }
     });
-    send(payload).then(function () {
-      dequeueOutbox(payload['record-id']);
-      root.querySelector('.copy-status').textContent = '✓ A copy was sent to Britt.';
-    }).catch(function () {
-      root.querySelector('.copy-status').textContent = 'Saved on this computer. Tell Britt.';
-    });
+    function sendResult() {
+      var button = root.querySelector('[data-go="send"]');
+      button.disabled = true;
+      root.querySelector('.copy-status').textContent = 'Sending a copy to Britt…';
+      deliver(payload, queued).then(function () {
+        root.querySelector('.copy-status').textContent = '✓ Netlify accepted your results for Britt. Keep your PDF as a backup.';
+        button.textContent = 'Submitted to instructor';
+      }).catch(function () {
+        button.disabled = false;
+        button.textContent = 'Retry submission to instructor';
+        root.querySelector('.copy-status').textContent = queued ? 'Not sent yet. Saved on this computer for retry. Tell Britt and keep your PDF.' : 'Not sent, and this browser could not save a retry copy. Save or print your PDF and give it to Britt.';
+      });
+    }
+    sendResult();
   }
 
   function htmlReport(report) {

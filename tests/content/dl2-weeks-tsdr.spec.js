@@ -25,7 +25,8 @@ for(const n of [2,3,4,5,6]){
   for(const [,phase,action] of cycles)for(const step of ['Tell','Show','Do','Review'])expect(action,`${phase} names its ${step} step`).toContain(step+':');
   expect(actions()).toMatch(/every learner/i);
   expect(actions()).not.toMatch(/switch driver and coach roles halfway/i);
-  expect(w.agenda.some(([m,phase])=>m===10&&/break/i.test(phase))).toBe(true);
+  // 2026-09-28: Britt teaches without a class break (was: one 10-minute break).
+  expect(w.agenda.some(([,phase])=>/break/i.test(phase))).toBe(false);
  });
 
  test(`Week ${n} plays every video chapter inside the plan and names the pause points`,()=>{

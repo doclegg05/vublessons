@@ -8,6 +8,7 @@ Usage: python tools/link-check.py [root ...]   (default roots: courses instructo
 Exit code 0 if no broken internal links, 1 otherwise.
 """
 import os, re, sys
+from urllib.parse import unquote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 roots = sys.argv[1:] or ["courses", "instructors", "index.html"]
@@ -44,7 +45,7 @@ for f in html_files(roots):
         if not r or r.startswith(SKIP):
             continue
         checked += 1
-        target = r.split("#", 1)[0].split("?", 1)[0]
+        target = unquote(r.split("#", 1)[0].split("?", 1)[0])
         if not target:
             continue
         if target.startswith("/"):

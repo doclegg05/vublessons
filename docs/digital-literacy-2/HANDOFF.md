@@ -12,14 +12,14 @@ the legacy Week 1 deck only.
 
 | Path | What it is |
 |:-----|:-----------|
-| `os/deck.css`, `os/deck.js` | Projector deck engine. One slide at a time. → / PageDown reveal the next `.build` part, then step a Show demo, then change slides. N notes, T timer (Do slides), F fullscreen, B blank, number + Enter jumps. Nothing auto-advances. |
+| `os/deck.css`, `os/deck.js` | Projector deck engine. One slide at a time. → / PageDown reveal the next `.build` part, then step a Show demo, then change slides. N notes, six clickable phase buttons, F fullscreen, B blank, number + Enter jumps. Nothing auto-advances. |
 | `os/win11.css`, `os/demo.js`, `os/demos/week-01.js` | "Show" demos: Windows 11 + Microsoft 365 recreations with a guided cursor, captions and a checklist. |
 | `os/items.js` | **The item bank**, the single source for the pre/post tests, grading, answer keys, printables and the results PDF. There are 20 parallel items per form: item N on each form checks the same skill, domain and week. |
 | `os/grade.js`, `os/test.js`, `os/test.css` | Grading and record IDs. The test app: name → 20 questions → review → submit → PDF → copy to Britt. Answers survive a reload. Unsent copies wait in the `dl2os:outbox` localStorage key and retry on the next visit. |
 | `os/pdf.js`, `os/vendor/` | Graded results PDF on the letterhead (pdf-lib + fontkit, self-hosted). `clean()` keeps every drawn string WinAnsi-safe for the standard-font fallback. |
 | `os/paper.css`, `os/paper.js`, `os/keys.js` | Letterhead paper system. `keys.js` renders the answer keys and printable tests from the item bank. |
 | `os/fonts.css`, `os/fonts/`, `os/img/` | Self-hosted fonts and the seal (no CDN). |
-| `weeks/week-01/presentation.html` | The 28-slide Week 1 deck (five units, WIPPEA phases). |
+| `weeks/week-01/presentation.html` | The 27-slide Week 1 deck (five units, WIPPEA phases). |
 | `weeks/week-01/worksheet.html`, `answer-key.html`, `run-sheet.html` | Letterhead Missions 1A–1E, their key, and the one-page landscape run sheet. |
 | `weeks/week-01/files/` | Class files: `Community Supper Flyer.docx` (Mission 1C) and `sound-test.html` (Mission 1B). Rebuild the flyer with `python3 docs/digital-literacy-2/class-files/make-community-supper-flyer.py`. Its docstring has the page math: exactly one line spills at Normal margins, and it fits at Narrow. |
 | `weeks/week-01/presentation-legacy.html` | The previous generated Week 1 deck, kept for reference. |
@@ -35,7 +35,7 @@ files and the 20-question wording. Teach the generator to skip these files first
 in `presentation.html`. Phases: warm-up, intro, present, practice, evaluate,
 apply. Stages: tell, show, do, review. Put teaching words in the slide and
 presenter words in `<aside class="notes">`. Mark reveal-one-at-a-time parts
-`class="build"`. Give Do and break slides `data-minutes` for the T timer. On a dense
+`class="build"`. The current classroom version has no timer or scheduled break. On a dense
 slide, `data-fit="tight"` caps text growth (1.1×) so it still fits at large text sizes. Run
 `tests/functional/dl2-os-week1-deck.spec.js`: slide count, fit at 1920×1080
 and at every text size, and body text ≥ 32px.
@@ -59,18 +59,26 @@ across forms and keep the answers balanced (5 each A–D). The keys,
 printables, grading and PDF all follow. `dl2-os-items.spec.js` and
 `dl2-os-pdf-text.spec.js` guard the bank.
 
-**Netlify forms.** Results are posted as the `dl2-pretest` and
-`dl2-posttest` forms (hidden `<form data-netlify>` in each test page).
-Britt's one-time steps in the Netlify dashboard, after the first deploy
-that includes these pages:
-1. Forms: make sure form detection is on, and that both `dl2-pretest` and
-   `dl2-posttest` are listed (redeploy if they aren't).
-2. Site configuration ▸ Notifications ▸ Emails and webhooks ▸ Form
-   submission notifications: add an **email notification** for
-   `dl2-pretest`, and another for `dl2-posttest`, to Britt's address.
-Until then, submissions still arrive in the Forms tab. If a post fails, the
-learner sees "Saved on this computer. Tell Britt.", and the copy is resent the
-next time that computer opens the test.
+**Netlify forms.** Results post to `dl2-pretest` and `dl2-posttest` (hidden static forms).
+Form detection is enabled on the `vubcourse` project. Both forms are registered,
+with individual `submission_created` email notifications to the verified instructor
+address, `britt.legg76@gmail.com`. Netlify stores name, record ID, test version,
+timestamps, score, domain totals and answer letters. The notification contains
+fields, **not a PDF attachment**. See the instructor guide for the Forms dashboard.
+
+The results screen distinguishes HTTP acceptance from a queued copy; it never
+claims inbox delivery. A failed post keeps the same record ID in the browser outbox
+and retries on the next visit or the Retry button. Web Locks serialize retries
+across tabs where supported. If an HTTP response is lost after Netlify stores a
+record, a retry can still create a duplicate: deduplicate exports by record ID.
+IDs include a random suffix so learners with matching initials in the same minute
+do not collide. If storage is blocked, the page explicitly asks for the PDF backup.
+
+**USB backup.** After grading, each learner downloads the existing graded PDF,
+chooses Britt's supplied drive in Save As or copies the file from Downloads, opens
+it from the drive to check identity/test/score, then safely ejects and returns it.
+This is independent of Netlify submission. Filenames include type, surname, date,
+time and the unique suffix. The page cannot detect a physical USB save.
 
 **Shared lab computers.** The course home's *Start fresh on this computer*
 clears lesson progress and any pre/post test in progress (`dl2os:test:*`).

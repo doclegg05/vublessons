@@ -26,11 +26,11 @@ async function submitPre(page, pick = i => Items.pre[i].answer, skip = [], name 
 
 test('pre-test PDF: 2 pages, record-id title, named file', async ({ page }) => {
   const { download, doc } = await submitPre(page);
-  expect(download.suggestedFilename()).toMatch(/^DL2-PreTest-Doe-\d{8}-\d{4}\.pdf$/);
+  expect(download.suggestedFilename()).toMatch(/^DL2-PreTest-Doe-\d{8}-\d{4}-[0-9a-f]{8}\.pdf$/);
   expect(doc.getPageCount()).toBe(2);
-  expect(doc.getTitle()).toMatch(/^DL2-PRE-\d{8}-\d{4}-JD$/);
+  expect(doc.getTitle()).toMatch(/^DL2-PRE-\d{8}-\d{4}-JD-[0-9a-f]{8}$/);
   expect(doc.getAuthor()).toBe('West Virginia Veterans Upward Bound');
-  await expect(page.locator('.pdf-status')).toContainText('saved in Downloads');
+  await expect(page.locator('.pdf-status')).toContainText('download has started');
 });
 
 test('mixed result PDF (item 1 wrong, item 5 skipped): 2 pages, record-id title', async ({ page }) => {
@@ -38,16 +38,16 @@ test('mixed result PDF (item 1 wrong, item 5 skipped): 2 pages, record-id title'
   const { doc } = await submitPre(page, i => (i === 0 ? wrong : Items.pre[i].answer), [4]);
   await expect(page.locator('.result-score')).toContainText('18 of 20');
   expect(doc.getPageCount()).toBe(2);
-  expect(doc.getTitle()).toMatch(/^DL2-PRE-\d{8}-\d{4}-JD$/);
-  await expect(page.locator('.pdf-status')).toContainText('saved in Downloads');
+  expect(doc.getTitle()).toMatch(/^DL2-PRE-\d{8}-\d{4}-JD-[0-9a-f]{8}$/);
+  await expect(page.locator('.pdf-status')).toContainText('download has started');
 });
 
 test('without the self-hosted fonts, the PDF falls back to standard fonts and still builds', async ({ page }) => {
   await page.route('**/os/fonts/*.woff', r => r.abort());
   const { doc } = await submitPre(page, undefined, [], 'José Núñez−Smith');
   expect(doc.getPageCount()).toBe(2);
-  expect(doc.getTitle()).toMatch(/^DL2-PRE-\d{8}-\d{4}-JN$/);
-  await expect(page.locator('.pdf-status')).toContainText('saved in Downloads');
+  expect(doc.getTitle()).toMatch(/^DL2-PRE-\d{8}-\d{4}-JN-[0-9a-f]{8}$/);
+  await expect(page.locator('.pdf-status')).toContainText('download has started');
 });
 
 // Every text run drawn on a page, as { size, text }. Only readable for the StandardFonts (WinAnsi) fallback,
@@ -71,7 +71,7 @@ test('a very long, accented name fits the Student box (shrunk to 7pt, then cut w
   await page.route('**/os/fonts/*.woff', r => r.abort());
   const name = 'Nguyễn Thị Bartholomew-Alexander Montgomery-Wellington Fitzgerald-Nguyễn';
   const { download, doc } = await submitPre(page, undefined, [], name);
-  expect(download.suggestedFilename()).toMatch(/^DL2-PreTest-Fitzgerald-Nguyen-\d{8}-\d{4}\.pdf$/);
+  expect(download.suggestedFilename()).toMatch(/^DL2-PreTest-Fitzgerald-Nguyen-\d{8}-\d{4}-[0-9a-f]{8}\.pdf$/);
   const helv = await (await PDFDocument.create()).embedFont(StandardFonts.Helvetica);
   const drawn = studentName(await drawnText(doc, 0));
   expect(drawn.text.startsWith('Nguyen Thi Bartholomew')).toBe(true);

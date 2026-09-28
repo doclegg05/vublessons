@@ -3,6 +3,8 @@
 (function (global) {
   'use strict';
   var W = 1280, H = 720;
+  /* Camera pacing (Britt, 2026-09-28): slow, gentle and at most one move per step, so viewers stay oriented. */
+  var CAM_MS = 1400, CURSOR_MS = 1000, CAM_EASE = 'cubic-bezier(.4,0,.2,1)', ZOOM = 1.5, MAX_ZOOM = 1.8;
   var registry = {}, controllers = {};
   var reduce = !!(global.matchMedia && global.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var CURSOR = '<svg viewBox="0 0 22 30" aria-hidden="true"><path d="M1.5 1.5 L1.5 23 L7 17.8 L10.8 27 L14.4 25.5 L10.7 16.5 L18 16.5 Z" fill="#fff" stroke="#000" stroke-width="1.6" stroke-linejoin="round"/></svg>';
@@ -45,14 +47,28 @@
     host.appendChild(bezel); host.appendChild(side);
 
     var screen, cursor, spot, idx = 0, token = 0, busy = false, spd = 1, auto = false, base = 1, cam = { z: 1, px: W / 2, py: H / 2 };
+    var view = { tx: 0, ty: 0, s: 1 };
     var wait = function (ms) { return new Promise(function (r) { setTimeout(r, reduce ? 0 : ms * spd); }); };
 
     function camera(anim) {
       var s = base * cam.z, bw = vp.clientWidth, bh = vp.clientHeight;
       var tx = Math.min(0, Math.max(bw - W * s, bw / 2 - cam.px * s));
       var ty = Math.min(0, Math.max(bh - H * s, bh / 2 - cam.py * s));
-      screen.style.transition = anim && !reduce ? 'transform ' + 700 * spd + 'ms cubic-bezier(.65,0,.35,1)' : 'none';
+      view = { tx: tx, ty: ty, s: s };
+      screen.style.transition = anim && !reduce ? 'transform ' + CAM_MS * spd + 'ms ' + CAM_EASE : 'none';
       screen.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
+    }
+    /* True when the point already sits well inside the current view, so the camera can stay still. */
+    function inView(p) {
+      var x = view.tx + p.x * view.s, y = view.ty + p.y * view.s, bw = vp.clientWidth, bh = vp.clientHeight;
+      return x > bw * 0.2 && x < bw * 0.8 && y > bh * 0.2 && y < bh * 0.8;
+    }
+    /* One glide per step: zoom: false shows the step on the whole screen; otherwise a gentle zoom, capped. */
+    function aim(step, p) {
+      var z = step.zoom === false ? 1 : Math.min(step.zoom || ZOOM, MAX_ZOOM);
+      if (cam.z === z && (z === 1 || inView(p))) return;
+      cam = z === 1 ? { z: 1, px: W / 2, py: H / 2 } : { z: z, px: p.x, py: p.y };
+      camera(true);
     }
     function fit() { base = vp.clientWidth / W || 1; if (screen) camera(false); }
     if (global.ResizeObserver) new ResizeObserver(fit).observe(vp);
@@ -69,7 +85,7 @@
       return { box: p, x: p.x + p.w * at[0], y: p.y + p.h * at[1] };
     }
     function place(x, y, anim) {
-      cursor.style.transition = anim && !reduce ? 'left ' + 750 * spd + 'ms cubic-bezier(.45,0,.2,1), top ' + 750 * spd + 'ms cubic-bezier(.45,0,.2,1)' : 'none';
+      cursor.style.transition = anim && !reduce ? 'left ' + CURSOR_MS * spd + 'ms ' + CAM_EASE + ', top ' + CURSOR_MS * spd + 'ms ' + CAM_EASE : 'none';
       cursor.style.left = x + 'px'; cursor.style.top = y + 'px';
     }
     function render(i) {
@@ -98,17 +114,13 @@
       if (reduce || !step.target) { render(i); busy = false; return Promise.resolve(); }
       var p = point(step);
       if (!p) { console.error('DL2Demo: missing target', step.target, 'in', def.id); render(i); busy = false; return Promise.resolve(); }
-      cam = { z: 1, px: W / 2, py: H / 2 }; camera(true);
-      return wait(450).then(function () {
-        if (my !== token) return;
-        place(p.x, p.y, true);
-        return wait(800);
-      }).then(function () {
+      aim(step, p);
+      place(p.x, p.y, true);
+      return wait(CAM_MS).then(function () {
         if (my !== token) return;
         Object.assign(spot.style, { left: p.box.x - 6 + 'px', top: p.box.y - 6 + 'px', width: p.box.w + 12 + 'px', height: p.box.h + 12 + 'px' });
         spot.classList.add('on');
-        if (step.zoom !== false) { cam = { z: step.zoom || 2.1, px: p.x, py: p.y }; camera(true); }
-        return wait(750);
+        return wait(500);
       }).then(function () {
         if (my !== token) return;
         if (step.action === 'type' && step.text) {

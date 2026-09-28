@@ -46,13 +46,13 @@ test('full run: skip one, review, submit, grade, send copy', async ({ page }) =>
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
   await expect(page.locator('.result-score')).toContainText('18 of 20');
-  await expect(page.locator('.copy-status')).toContainText('A copy was sent to Britt');
+  await expect(page.locator('.copy-status')).toContainText('Netlify accepted your results for Britt');
   expect(posts).toHaveLength(1);
   const body = new URLSearchParams(posts[0]);
   expect(body.get('form-name')).toBe('dl2-pretest');
   expect(body.get('student')).toBe('James Doe');
   expect(body.get('score')).toBe('18/20');
-  expect(body.get('record-id')).toMatch(/^DL2-PRE-\d{8}-\d{4}-JD$/);
+  expect(body.get('record-id')).toMatch(/^DL2-PRE-\d{8}-\d{4}-JD-[0-9a-f]{8}$/);
   expect(body.get('answers').split(',')).toHaveLength(20);
 });
 
@@ -67,7 +67,7 @@ test('offline: result is queued and sent on the next visit', async ({ page }) =>
   await answerAll(page);
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
-  await expect(page.locator('.copy-status')).toContainText('Saved on this computer. Tell Britt.');
+  await expect(page.locator('.copy-status')).toContainText('Not sent yet. Saved on this computer for retry. Tell Britt and keep your PDF.');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox')).length)).toBe(1);
   fail = false;
   await page.goto(URL);
@@ -254,7 +254,7 @@ test('fallback report escapes the record ID itself', async ({ page }) => {
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
   const report = page.locator('.html-report');
-  await expect(report).toContainText('Record DL2-PRE-<i>ID</i> · Lee Park');
+  await expect(report).toContainText(/Record DL2-PRE-<i>ID<\/i>-[0-9a-f]{8} · Lee Park/);
   await expect(report.locator('i')).toHaveCount(0);
 });
 
@@ -327,7 +327,7 @@ test('outbox holds the copy as soon as the test is submitted, while the send is 
   const box = await page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox') || '[]'));
   expect(box).toHaveLength(1);
   expect(box[0]).toMatchObject({ 'form-name': 'dl2-pretest', student: 'Ray Hill', score: '20/20' });
-  expect(box[0]['record-id']).toMatch(/^DL2-PRE-\d{8}-\d{4}-RH$/);
+  expect(box[0]['record-id']).toMatch(/^DL2-PRE-\d{8}-\d{4}-RH-[0-9a-f]{8}$/);
   await page.unrouteAll({ behavior: 'ignoreErrors' });
 });
 
@@ -337,6 +337,42 @@ test('outbox is empty again once the copy reaches Britt', async ({ page }) => {
   await answerAll(page);
   await page.getByRole('button', { name: 'Submit my test' }).click();
   await page.getByRole('button', { name: 'Yes, submit' }).click();
-  await expect(page.locator('.copy-status')).toContainText('A copy was sent to Britt');
+  await expect(page.locator('.copy-status')).toContainText('Netlify accepted your results for Britt');
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox') || '[]'))).toEqual([]);
+});
+
+test('two tabs retry one queued record once, retaining its record ID', async ({ page, context }) => {
+  const posts = [];
+  let release;
+  const hold = new Promise(resolve => { release = resolve; });
+  await context.route('**/', async route => {
+    if (route.request().method() !== 'POST') return route.continue();
+    posts.push(new URLSearchParams(route.request().postData()));
+    await hold;
+    await route.fulfill({ status: 200, body: 'ok' });
+  });
+  await page.goto(URL);
+  const record = { 'form-name': 'dl2-pretest', 'record-id': 'DL2-SYNTHETIC-RETRY', student: 'Synthetic Retry', score: '10/20', answers: 'A' };
+  await page.evaluate(r => localStorage.setItem('dl2os:outbox', JSON.stringify([r])), record);
+  const second = await context.newPage();
+  await Promise.all([page.reload(), second.goto(URL)]);
+  await expect.poll(() => posts.length).toBe(1);
+  release();
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('dl2os:outbox')).length)).toBe(0);
+  // Wait for both tabs to finish their lock callback, not a timing-only assumption.
+  await second.evaluate(() => navigator.locks.request('dl2os:send:DL2-SYNTHETIC-RETRY', () => {}));
+  expect(posts).toHaveLength(1);
+  expect(posts[0].get('record-id')).toBe(record['record-id']);
+});
+
+test('blocked storage plus a failed submission never claims a saved retry copy', async ({ page }) => {
+  await page.addInitScript(() => { Storage.prototype.setItem = () => { throw new Error('blocked'); }; });
+  await page.route('**/', route => route.request().method() === 'POST' ? route.abort() : route.continue());
+  await start(page, 'Synthetic Storage');
+  await answerAll(page);
+  await page.getByRole('button', { name: 'Submit my test' }).click();
+  await page.getByRole('button', { name: 'Yes, submit' }).click();
+  await expect(page.locator('.copy-status')).toContainText('could not save a retry copy');
+  await expect(page.locator('.copy-status')).not.toContainText('Netlify accepted');
+  await expect(page.getByRole('button', { name: 'Download graded PDF' })).toBeEnabled();
 });

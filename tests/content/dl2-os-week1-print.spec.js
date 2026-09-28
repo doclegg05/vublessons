@@ -40,7 +40,7 @@ test('run sheet and key exist with the letterhead', async ({ page }) => {
     await expect(page.locator('.letterhead')).toContainText('New River Community and Technical College');
   }
   await page.goto(W + 'run-sheet.html');
-  await expect(page.locator('table tbody tr')).toHaveCount(9);
+  await expect(page.locator('table tbody tr')).toHaveCount(8); // no break row
 });
 
 // I2 (final review): Mission E spilled onto a sixth, nearly empty sheet with its Take it home line.

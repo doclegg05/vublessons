@@ -1,18 +1,38 @@
 // tests/functional/dl2-os-week1-deck.spec.js
-// Week 1 deck: 28 slides, WIPPEA order, every Show mounts, text floor, no external requests.
+// Week 1 deck: 27 slides (no break), WIPPEA order, every Show mounts, text floor, no external requests.
 const { test, expect } = require('@playwright/test');
 const URL = '/courses/digital-literacy-2/weeks/week-01/presentation.html';
 
-test('structure: 28 slides, phases in order, five demos, five Do timers', async ({ page }) => {
+test('structure: 27 slides, phases in order, five demos, five Do slides, no timer', async ({ page }) => {
   await page.goto(URL);
-  await expect(page.locator('.slide')).toHaveCount(28);
+  await expect(page.locator('.slide')).toHaveCount(27);
   await expect(page.locator('.slide[data-stage="show"] .demo-bezel')).toHaveCount(5);
-  await expect(page.locator('.slide[data-stage="do"][data-minutes]')).toHaveCount(5);
+  await expect(page.locator('.slide[data-stage="do"]')).toHaveCount(5);
+  await expect(page.locator('.timer, [data-minutes], .strip [role="timer"]')).toHaveCount(0);
   const phases = await page.locator('.slide[data-phase]').evaluateAll(s => s.map(x => x.dataset.phase));
   const order = ['warm-up', 'intro', 'present', 'practice', 'evaluate', 'apply'];
   expect(phases[0]).toBe('warm-up'); expect(phases.at(-1)).toBe('apply');
   expect(phases.every(p => order.includes(p))).toBe(true);
   await expect(page.locator('a[href*="legacy"]')).toHaveCount(0);
+});
+
+// Britt teaches without a class break, so no slide or speaker note schedules one.
+test('no break slide or break cue', async ({ page }) => {
+  await page.goto(URL);
+  const text = await page.locator('.slide').evaluateAll(s => s.map(x => x.textContent).join(' '));
+  expect(text).not.toMatch(/\bbreak\b|intermission/i);
+});
+
+// Every unit slide names the app (and file, when there is one) learners work in.
+test('every unit slide names its app', async ({ page }) => {
+  await page.goto(URL);
+  const want = { A: 'Windows Settings', B: 'Windows Quick Settings', C: 'Microsoft Word', D: 'Microsoft Outlook', E: 'Microsoft Word' };
+  const got = await page.locator('.slide[data-unit]').evaluateAll(s =>
+    s.map(x => ({ unit: x.dataset.unit, app: (x.querySelector('.hud .app') || {}).textContent || '' })));
+  expect(got.length).toBe(21);
+  for (const g of got) expect(g.app, `unit ${g.unit}`).toContain(want[g.unit]);
+  const c = got.filter(g => g.unit === 'C');
+  expect(c.every(g => g.app.includes('Community Supper Flyer.docx'))).toBe(true);
 });
 
 test('every slide fits 1920×1080 and body text is at least 32px', async ({ page }) => {

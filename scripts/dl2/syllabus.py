@@ -1,4 +1,23 @@
-<!doctype html>
+"""Print-friendly DL2 syllabus, following the Level 1 syllabus overview format."""
+from html import escape
+
+
+def render(weeks):
+    dates = ['September 28', 'October 5', 'October 12', 'October 19', 'October 26', 'November 2']
+    outcomes = '\n'.join(
+        '<li>' + ' '.join(escape(x) for x in w['objectives']) + '</li>'
+        for w in weeks
+    )
+    rows = []
+    for w, date in zip(weeks, dates):
+        evidence = {1: 'Pre-test.', 5: 'Post-test and skills challenge.', 6: 'Spec, change review and test log.'}.get(w['n'], '')
+        alignment = 'VUB web app extension' if w['n'] == 6 else 'GS6 objective groups: ' + ', '.join(w['refs'])
+        rows.append(f'''<tr>
+          <th scope="row">Week {w['n']}<br><span>{date}</span></th>
+          <td>{escape(w['title'])}</td>
+          <td>{escape(w['summary'])} <strong>{evidence}</strong><br><em>{escape(alignment)}</em></td>
+        </tr>''')
+    return f'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -43,12 +62,7 @@
     </section>
     <section aria-labelledby="outcomes">
       <h2 id="outcomes">Learning Outcomes (IC3 GS6 Level 2 + VUB Extension)</h2>
-      <ul class="outcomes"><li>Adjust device and browser settings for a task, then restore them. Create a practice appointment and choose what others can see. Pick the right connection and printer, and preview before printing. Check what an automatic feature changed before you accept it. Ask for help clearly and give useful feedback.</li>
-<li>Write a clear search and narrow it with one filter. Judge whether a source fits your question, and record where you found it. Fill in an online form with only what is needed, and read the confirmation. Save a file with a clear name in a folder you can find, and pack it in a ZIP file. Choose who can view, comment or edit, and pick the right way to get a file back.</li>
-<li>Give a handout real headings, numbered steps and a clear link. Use shortcuts and Track Changes to edit safely and let the owner decide. Add costs with a SUM formula and check that the total updates. Make three matching slides with a cropped, described and credited photo. Save a PDF, check it, and choose the right file type for the next person.</li>
-<li>Choose a channel and an account that fit the message. Write a clear email and choose who receives it. Give, answer and resolve feedback on one shared copy. Take part in an online meeting or community with care. Check a purchase, subscription or payment before you agree.</li>
-<li>Set up your computer so it is comfortable and easy to use. Spot a scam or a fake identity and check it a safer way. Protect your devices and files with updates, permissions, locking and passwords. Show five skills from this course, then take the post-test.</li>
-<li>Write a clear request and checks for an AI coding agent. Predict what the agent will change before it starts. Read the change and spot anything you did not ask for. Test the result, report a problem and retest after the fix. Explain what running a website as a service takes.</li></ul>
+      <ul class="outcomes">{outcomes}</ul>
     </section>
     <section aria-labelledby="learning">
       <h2 id="learning">How We Will Learn</h2>
@@ -59,31 +73,7 @@
       <table>
         <caption>All meetings: 4:30–6:30 p.m. Eastern Time · 2026</caption>
         <thead><tr><th scope="col">Week / Date</th><th scope="col">Lesson</th><th scope="col">Key Activities &amp; Alignment</th></tr></thead>
-        <tbody><tr>
-          <th scope="row">Week 1<br><span>September 28</span></th>
-          <td>Make technology work for you</td>
-          <td>Set up a comfortable workspace, organize a calendar, and solve everyday device problems. <strong>Pre-test.</strong><br><em>GS6 objective groups: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 2.3</em></td>
-        </tr><tr>
-          <th scope="row">Week 2<br><span>October 5</span></th>
-          <td>Find, judge, and organize information</td>
-          <td>Find a reliable community resource and manage a shared file with care. <strong></strong><br><em>GS6 objective groups: 3.1, 3.2, 3.3, 4.2, 4.3.1, 7.4</em></td>
-        </tr><tr>
-          <th scope="row">Week 3<br><span>October 12</span></th>
-          <td>Create something people can use</td>
-          <td>Build a clear resource handout, a small workbook, and a short presentation. <strong></strong><br><em>GS6 objective groups: 4.1, 4.2, 4.3, 4.4</em></td>
-        </tr><tr>
-          <th scope="row">Week 4<br><span>October 19</span></th>
-          <td>Communicate and collaborate with care</td>
-          <td>Choose the right channel, give useful feedback, and make safe online choices. <strong></strong><br><em>GS6 objective groups: 2.1, 2.2, 2.3, 5.1, 5.2, 6.1, 6.2</em></td>
-        </tr><tr>
-          <th scope="row">Week 5<br><span>October 26</span></th>
-          <td>Protect your work and show your skills</td>
-          <td>Practice safe decisions, complete a skills challenge, and measure your growth. <strong>Post-test and skills challenge.</strong><br><em>GS6 objective groups: 7.1, 7.2, 7.3, 7.4, 2.1, 4.2</em></td>
-        </tr><tr>
-          <th scope="row">Week 6<br><span>November 2</span></th>
-          <td>Guide an AI agent to improve a web app</td>
-          <td>Write a clear request for an AI coding agent, review what it changed, test the result, and learn what running a website as a service takes. <strong>Spec, change review and test log.</strong><br><em>VUB web app extension</em></td>
-        </tr></tbody>
+        <tbody>{''.join(rows)}</tbody>
       </table>
       <p class="schedule-note">The October 12 meeting is included as scheduled. Confirm building access with the program before that meeting.</p>
     </section>
@@ -100,3 +90,4 @@
   <footer>WV Veterans Upward Bound · Building technology confidence for veterans.</footer>
 </body>
 </html>
+'''

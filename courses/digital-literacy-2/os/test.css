@@ -199,6 +199,13 @@ dialog.confirm .test-nav button { min-width:140px; }
 .html-report { margin-top:24px; text-align:left; }
 .html-report .paper-doc { box-shadow:0 10px 30px -14px rgba(15,28,51,.3); }
 
+.record-path { text-align:left; margin:24px 0; padding:20px; border:2px solid #c8d3e3; border-radius:14px; background:#f7f9fc; }
+.record-path h2 { font-size:24px; line-height:1.3; color:#1b365d; margin:0 0 12px; }
+.record-path p, .record-path li { font-size:18px; line-height:1.6; }
+.record-path li { margin:10px 0; }
+.record-path .test-nav { flex-wrap:wrap; }
+@media print { .record-path { display:none !important; } }
+
 /* ---- print: only the HTML-report fallback (the printable graded report) belongs on
  * paper. Hide all app chrome — the navy header, progress ticks, text-size control,
  * every heading/button/status line in the test card, and the score line — then flatten

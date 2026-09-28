@@ -1,4 +1,4 @@
-// Mission Control deck engine: builds before slides, phase strip, notes, timer, no auto-advance.
+// Mission Control deck engine: builds before slides, phase strip, notes, no timer, no auto-advance.
 const { test, expect } = require('@playwright/test');
 const BASE = 'http://localhost:3939/courses/digital-literacy-2/os/';
 const page3 = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}">
@@ -63,16 +63,16 @@ test('N shows notes; typed number + Enter jumps; nothing auto-advances', async (
   await expect(active(page)).toHaveText('Three');
 });
 
-test('Do-slide timer counts down after T and says TIME\'S UP in words', async ({ page }) => {
+// Britt paces by the room, not a clock: no countdown in the strip, and T does nothing.
+test('no countdown timer anywhere, even after T on a Do slide', async ({ page }) => {
   await page.clock.install();
   await open(page);
   await page.keyboard.press('End');
-  await expect(page.locator('.strip .t')).toHaveText('T-01:00');
   await page.keyboard.press('t');
   await page.clock.runFor(2000);
-  await expect(page.locator('.strip .t')).toHaveText('T-00:58');
-  await page.clock.runFor(60000);
-  await expect(page.locator('.strip .t')).toHaveText("TIME'S UP");
+  await expect(page.locator('.strip [role="timer"], .strip .t, .timer')).toHaveCount(0);
+  await expect(page.locator('.strip')).not.toContainText(/T-|TIME/);
+  await expect(active(page)).toHaveText('Three');
 });
 
 test('a registered stepper consumes Next before the slide changes', async ({ page }) => {
@@ -104,43 +104,15 @@ test('a fresh open starts at slide 1; the same tab keeps its place', async ({ pa
   await page.evaluate(() => { localStorage.setItem('dl2os:slide:' + location.pathname, '19'); });
   const deck = await context.newPage(); // a fresh browser tab
   await deck.goto(DECK);
-  await expect(deck.locator('.strip .count')).toHaveText('1 / 28');
+  await expect(deck.locator('.strip .count')).toHaveText('1 / 27');
   await deck.keyboard.press('5');
   await deck.keyboard.press('Enter');
-  await expect(deck.locator('.strip .count')).toHaveText('5 / 28');
+  await expect(deck.locator('.strip .count')).toHaveText('5 / 27');
   await deck.goto(DECK); // no #N: same tab, so it resumes
-  await expect(deck.locator('.strip .count')).toHaveText('5 / 28');
+  await expect(deck.locator('.strip .count')).toHaveText('5 / 27');
   const fresh = await context.newPage(); // another new tab starts a new session
   await fresh.goto(DECK);
-  await expect(fresh.locator('.strip .count')).toHaveText('1 / 28');
-});
-
-// Final review minor: leaving a Do slide and coming back must not reset its running mission timer.
-const page4 = page3.replace('</main>', '<section class="slide" data-phase="evaluate"><div class="panel full"><h1>Four</h1></div></section></main>');
-
-test('returning to a Do slide keeps its running timer', async ({ page }) => {
-  await page.clock.install();
-  await page.goto('http://localhost:3939/courses/digital-literacy-2/os/fonts.css');
-  await page.setContent(page4, { waitUntil: 'load' });
-  await page.keyboard.press('3');
-  await page.keyboard.press('Enter');
-  await expect(active(page)).toHaveText('Three');
-  await page.keyboard.press('t');
-  await page.clock.runFor(5000);
-  await expect(page.locator('.strip .t')).toHaveText('T-00:55');
-  await page.keyboard.press('ArrowRight'); // forward one slide...
-  await expect(active(page)).toHaveText('Four');
-  await page.keyboard.press('ArrowLeft'); // ...and back
-  await expect(active(page)).toHaveText('Three');
-  await expect(page.locator('.strip .t')).toHaveText('T-00:55');
-  await page.clock.runFor(2000);
-  await expect(page.locator('.strip .t')).toHaveText('T-00:53');
-  await page.keyboard.press('PageUp'); // back to the slide before (to re-show it)...
-  await expect(active(page)).toHaveText('Two');
-  await page.keyboard.press('PageDown'); // ...and forward again
-  await expect(active(page)).toHaveText('Three');
-  await page.clock.runFor(1000);
-  await expect(page.locator('.strip .t')).toHaveText('T-00:52');
+  await expect(fresh.locator('.strip .count')).toHaveText('1 / 27');
 });
 
 // Final review minor: the old decks recorded each slide through shared/progress.js (VubProgress.saveSlide
@@ -153,17 +125,17 @@ test('opening the Week 1 deck shows on the course home, and the last slide marks
   await page.reload();
   await expect(page.locator('[data-week-status="1"]')).toHaveText('Ready to begin');
   await page.goto(DECK);
-  await expect(page.locator('.strip .count')).toHaveText('1 / 28');
+  await expect(page.locator('.strip .count')).toHaveText('1 / 27');
   await expect.poll(() => page.evaluate(() => {
     const p = JSON.parse(localStorage.getItem('vub:progress:v1') || '{}');
     return p.dl2 && p.dl2['1'] && [p.dl2['1'].slide, p.dl2['1'].total];
-  })).toEqual([0, 28]);
+  })).toEqual([0, 27]);
   await page.goto(HOME);
   await expect(page.locator('[data-week-status="1"]')).toHaveText('Resume at slide 1');
   await expect(page.locator('.continue-course')).toHaveText('Continue week 1');
   await page.goto(DECK);
   await page.keyboard.press('End');
-  await expect(page.locator('.strip .count')).toHaveText('28 / 28');
+  await expect(page.locator('.strip .count')).toHaveText('27 / 27');
   await page.goto(HOME);
   await expect(page.locator('[data-week-status="1"]')).toHaveText('Lesson viewed to the end');
   await expect(page.locator('[data-course-count]')).toHaveText('1 of 6 lessons viewed to the end');

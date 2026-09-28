@@ -47,3 +47,44 @@ test('every Week 1 demo step has its own caption', async ({ page }) => {
   expect(cal.caps.slice(3, 5)).toEqual(['Open the <em>Repeat</em> menu.', 'Choose <em>Weekly on Monday</em>.']);
   expect(cal.checks.slice(3, 5)).toEqual(['Make it repeat', 'Weekly on Monday']);
 });
+
+// Britt, 2026-09-28: the Show camera zoomed out and back in on every step, too fast, and viewers found the
+// back and forth uncomfortable. Now each step is at most one slow glide, a gentle zoom, and the camera only
+// pulls back on steps marked zoomOut (to show the result) or zoom: false (a whole-screen step).
+const MIN_MOVE_MS = 1200, MAX_ZOOM = 1.8;
+for (const id of IDS) test(`${id} camera glides gently and never zooms out between steps`, async ({ page }) => {
+  await page.clock.install();
+  await page.goto(BASE + 'fonts.css');
+  await page.setContent(`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><base href="${BASE}">
+    <link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="deck.css"><link rel="stylesheet" href="win11.css"></head>
+    <body class="dl2-os"><div class="demo" data-demo="${id}" style="width:1600px;height:700px"></div>
+    <script src="demo.js"></script>
+    <script>window.__defs = {}; var define = DL2Demo.define; DL2Demo.define = function (d) { __defs[d.id] = d; return define(d); };</script>
+    <script src="demos/week-01.js"></script></body></html>`, { waitUntil: 'load' });
+  const base = await page.evaluate(() => Number(/scale\(([\d.]+)\)/.exec(document.querySelector('.demo-viewport .screen').style.transform)[1]));
+  await page.evaluate(() => {
+    window.__cam = [];
+    new MutationObserver(ms => {
+      for (const m of ms) {
+        const el = m.target, t = el.style.transition;
+        if (!el.classList.contains('screen') || !t || t === 'none') continue;
+        const tf = el.style.transform, last = __cam[__cam.length - 1];
+        if (last && last.tf === tf) continue;
+        __cam.push({ tf, s: Number(/scale\(([\d.]+)\)/.exec(tf)[1]), d: Number(/([\d.]+)ms/.exec(t)[1]) });
+      }
+    }).observe(document.querySelector('.demo-viewport'), { subtree: true, attributes: true, attributeFilter: ['style'] });
+  });
+  const total = await page.locator('.demo-todo li').count();
+  for (let i = 1; i < total; i++) {
+    await page.locator('[data-act="next"]').click();
+    await page.clock.runFor(8000);
+  }
+  const { cam, zoomOutSteps } = await page.evaluate(k => ({ cam: __cam, zoomOutSteps: __defs[k].steps.filter(s => s.zoomOut || s.zoom === false).length }), id);
+  expect(cam.length).toBeGreaterThan(0);
+  for (const c of cam) {
+    expect(c.d, c.tf).toBeGreaterThanOrEqual(MIN_MOVE_MS);
+    expect(c.s / base, c.tf).toBeLessThanOrEqual(MAX_ZOOM + 1e-6);
+  }
+  const pullBacks = cam.filter(c => Math.abs(c.s / base - 1) < 1e-6).length;
+  expect(pullBacks).toBeLessThanOrEqual(zoomOutSteps);
+});
