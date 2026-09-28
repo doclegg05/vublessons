@@ -72,3 +72,28 @@ test('initials are letters only, so a record ID never carries markup', () => {
   expect(Grade.initials('123 !!! <>')).toBe('X');
   expect(Grade.recordId('pre', new Date(2026, 8, 28, 16, 52), '<b>Pat</b> Smith')).toBe('DL2-PRE-20260928-1652-BS');
 });
+
+// I1 (final review): the correct option was the longest on 18 of 20 items per form, so a test-wise learner could
+// pass by picking the longest answer. Length must not point to the key: per form it is strictly the longest option
+// on at most 6 items, never more than 1.3 × its longest distractor, and no option runs past 110 characters.
+const LETTERS = ['A', 'B', 'C', 'D'];
+const keyed = it => it.options[LETTERS.indexOf(it.answer)];
+const longestDistractor = it => Math.max(...it.options.filter((_, k) => k !== LETTERS.indexOf(it.answer)).map(o => o.length));
+
+for (const form of ['pre', 'post']) {
+  test(`${form}: the correct option is strictly the longest on at most 6 of 20 items`, () => {
+    const giveaways = Items[form].filter(it => keyed(it).length > longestDistractor(it)).map(it => it.n);
+    expect(giveaways.length, `correct option is longest on items ${giveaways.join(', ')}`).toBeLessThanOrEqual(6);
+  });
+
+  test(`${form}: no correct option is more than 1.3 × its longest distractor`, () => {
+    const over = Items[form].filter(it => keyed(it).length > 1.3 * longestDistractor(it))
+      .map(it => `${it.n}: ${keyed(it).length} vs ${longestDistractor(it)}`);
+    expect(over).toEqual([]);
+  });
+
+  test(`${form}: every option is at most 110 characters`, () => {
+    const long = Items[form].flatMap(it => it.options.filter(o => o.length > 110).map(o => `${it.n}: ${o.length}`));
+    expect(long).toEqual([]);
+  });
+}
