@@ -143,6 +143,9 @@ table.key td{border-bottom:1px solid var(--rule);padding:5pt 4pt;vertical-align:
 .mission .fine { margin-top:2pt; padding-top:3pt; break-inside:avoid; }
 /* Keycaps take their own line room instead of overlapping the line above ("Enter" cut into "Display?"). */
 .mission kbd { display:inline-block; line-height:1.1; }
+/* Edge prints with "Background graphics" off by default, which dropped the navy DO badge, the step numbers, the
+ * Take it home bar (and its white write-on line) and the tinted boxes. These keep their fills on paper. */
+.mission .badges span.do, .mission .mission-ab > div, .mission .mission-steps > li .n, .mission .stuck, .mission .check, .mission .home { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 /* Mission E: the four write-in boxes sit in one row so the mission, with its letterhead, fits one sheet. */
 .mission .four-box { display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:0.9in; gap:5pt; margin-top:5pt; break-inside:avoid; }
 .mission .four-box > div { border:1.5pt solid var(--navy); border-radius:6pt; padding:6pt 8pt; font-size:10.5pt; }

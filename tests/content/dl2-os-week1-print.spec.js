@@ -46,3 +46,18 @@ test('run sheet and key exist with the letterhead', async ({ page }) => {
 test('the worksheet prints as exactly 5 pages, one per mission', async ({ page }) => {
   expect(await printedPages(page, W + 'worksheet.html')).toBe(5);
 });
+
+// Final review minor: with the print dialog's "Background graphics" off (Edge's default), the navy DO badge, step
+// numbers and Take it home bar printed white-on-white. Those mission parts keep their fills on paper.
+test('mission fills print even with background graphics off', async ({ page }) => {
+  await page.goto(W + 'worksheet.html');
+  await page.emulateMedia({ media: 'print' });
+  const sel = ['.letterhead .lh-bar', '.badges span.do', '.mission-ab .a', '.mission-ab .b', '.mission-steps > li .n',
+    '.stuck', '.check', '.home', '.home .ln'];
+  const modes = await page.locator('article.mission').first().evaluate((m, list) => Object.fromEntries(list.map(s => {
+    const el = m.querySelector(s) || document.querySelector('#m1E ' + s);
+    const cs = getComputedStyle(el);
+    return [s, cs.printColorAdjust || cs.webkitPrintColorAdjust];
+  })), sel);
+  for (const s of sel) expect(modes[s], s).toBe('exact');
+});
