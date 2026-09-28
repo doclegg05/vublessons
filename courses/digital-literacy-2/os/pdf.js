@@ -13,12 +13,13 @@
   /* Every string is drawn through clean(). Symbols the fonts lack become plain equivalents; odd spaces (tabs, the
    * narrow no-break space some browsers put before AM/PM) become plain spaces. A final safety pass keeps only
    * printable Latin-1 and the common General Punctuation set (– — ‘ ’ “ ” • …), so the StandardFonts (WinAnsi)
-   * fallback, used when the self-hosted fonts can't load, can never throw on an unexpected character. */
+   * fallback, used when the self-hosted fonts can't load, can never throw on an unexpected character. A letter outside
+   * that set keeps its base letter (ễ → e, ị → i: "Nguyễn" stays "Nguyen", not "Nguyn"). */
   function clean(s) {
     return String(s).replace(/▸/g, '>').replace(/[✓✗⚠]/g, '').replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
       .replace(/−/g, '-')
       .replace(/[\t\n\r -   　]/g, ' ')
-      .replace(/[^\x20-\x7E\xA0-\xFF–—‘’“”•…]/g, '');
+      .replace(/[^\x20-\x7E\xA0-\xFF–—‘’“”•…]/g, function (c) { return c.normalize('NFD').replace(/[^\x20-\x7E\xA0-\xFF–—‘’“”•…]/g, ''); });
   }
   function fetchBytes(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(url); return r.arrayBuffer(); }); }
   function wrap(font, text, size, width) {
@@ -31,6 +32,15 @@
     return lines;
   }
   function spaced(s) { return s.split('').join(' '); }
+  /* The largest size, from `size` down to `min`, at which the cleaned text fits `width`. If it is
+   * still too wide at `min`, it is cut and ends with "…". Returns { text, size }. */
+  function fit(font, s, width, size, min) {
+    var t = clean(s), at1 = font.widthOfTextAtSize(t, 1);
+    if (at1 * size > width) size = Math.max(min, Math.floor(width / at1 * 10) / 10);
+    if (font.widthOfTextAtSize(t, size) <= width) return { text: t, size: size };
+    while (t && font.widthOfTextAtSize(t.replace(/\s+$/, '') + '…', size) > width) t = t.slice(0, -1);
+    return { text: t.replace(/\s+$/, '') + '…', size: size };
+  }
 
   function build(report) {
     var L = global.PDFLib, META = global.DL2Paper.META;
@@ -106,7 +116,8 @@
         right(p1, 'Form: ' + report.form + ' ' + global.DL2Items.version + ' · 20 items', PW - M, PH - 166, 7.5, f.mono, MUTED);
         var by = PH - 222, t = function (d) { return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }); };
         var mins = Math.max(1, Math.round((report.submitted - report.started) / 60000));
-        box(p1, M, by, 190, 42, null, RULE); text(p1, 'STUDENT', M + 9, by + 28, 6.8, f.bold, MUTED); text(p1, report.name, M + 9, by + 12, 10.5, f.sans);
+        box(p1, M, by, 190, 42, null, RULE); text(p1, 'STUDENT', M + 9, by + 28, 6.8, f.bold, MUTED);
+        var who = fit(f.sans, report.name, 190 - 18, 10.5, 7); text(p1, who.text, M + 9, by + 12, who.size, f.sans);
         box(p1, M + 198, by, 160, 42, null, RULE); text(p1, 'STARTED / SUBMITTED', M + 207, by + 28, 6.8, f.bold, MUTED); text(p1, t(report.started) + ' / ' + t(report.submitted) + ' (' + mins + ' min)', M + 207, by + 12, 9.5, f.sans);
         box(p1, M + 366, by, PW - 2 * M - 366, 42, NAVY); text(p1, r.correct + '/' + r.total, M + 378, by + 12, 22, f.serif, [255, 255, 255]);
         text(p1, 'SCORE', M + 452, by + 26, 6.8, f.bold, [201, 214, 238]); text(p1, r.percent + '% correct', M + 452, by + 12, 9.5, f.sans, [255, 255, 255]);
@@ -125,7 +136,8 @@
         box(p2, 0, PH - 8, PW * 0.6, 8, NAVY); box(p2, PW * 0.6, PH - 8, PW * 0.2, 8, GOLD); box(p2, PW * 0.8, PH - 8, PW * 0.2, 8, RED);
         if (seal) p2.drawImage(seal, { x: M, y: PH - 76, width: 40, height: 40 });
         text(p2, META.org + ' · ' + report.label + ' · Graded Results (continued)', M + 50, PH - 58, 11, f.serif, NAVY);
-        text(p2, report.name + ' · Record ' + report.recordId, M + 50, PH - 72, 8, f.sans, MUTED);
+        var rec = ' · Record ' + report.recordId, head = fit(f.sans, report.name, PW - M - (M + 50) - f.sans.widthOfTextAtSize(clean(rec), 8), 8, 8);
+        text(p2, head.text + rec, M + 50, PH - 72, 8, f.sans, MUTED);
         line(p2, M, PH - 86, PW - M, PH - 86, 1.2, NAVY);
         var y2 = tableHead(p2, PH - 108);
         r.rows.slice(10).forEach(function (rw) { y2 = row(p2, y2, rw); });

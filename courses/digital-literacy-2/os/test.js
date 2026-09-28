@@ -129,7 +129,9 @@
   }
 
   function renderResult(report, payload) {
-    var r = report.result, last = String(report.name).trim().split(/\s+/).pop().replace(/[^A-Za-z0-9-]/g, '') || 'Student';
+    var r = report.result;
+    /* File name: plain ASCII. Accents are folded first (Nguyễn → Nguyen, Núñez → Nunez), then anything else is dropped. */
+    var last = String(report.name).trim().split(/\s+/).pop().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z0-9-]/g, '') || 'Student';
     var filename = 'DL2-' + report.label.replace('-', '') + '-' + last + '-' + report.recordId.split('-').slice(2, 4).join('-') + '.pdf';
     root.innerHTML = top() + '<main class="test-card result" id="main"><h1 tabindex="-1">Thank you, ' + esc(report.name) + '!</h1>' +
       '<p class="result-score">' + r.correct + ' of 20 correct</p><p class="pdf-status" role="status">Making your results PDF…</p>' +

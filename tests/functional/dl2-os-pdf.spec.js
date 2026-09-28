@@ -1,7 +1,7 @@
 // Submitting the pre-test downloads a letterhead PDF whose metadata carries the record ID.
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
-const { PDFDocument } = require('../../courses/digital-literacy-2/os/vendor/pdf-lib.min.js');
+const { PDFDocument, PDFArray, StandardFonts, decodePDFRawStream } = require('../../courses/digital-literacy-2/os/vendor/pdf-lib.min.js');
 const Items = require('../../courses/digital-literacy-2/os/items.js');
 
 // Takes the pre-test as `name` (pick(i) is the letter chosen for item i; skipped items get no answer),
@@ -48,4 +48,57 @@ test('without the self-hosted fonts, the PDF falls back to standard fonts and st
   expect(doc.getPageCount()).toBe(2);
   expect(doc.getTitle()).toMatch(/^DL2-PRE-\d{8}-\d{4}-JN$/);
   await expect(page.locator('.pdf-status')).toContainText('saved in Downloads');
+});
+
+// Every text run drawn on a page, as { size, text }. Only readable for the StandardFonts (WinAnsi) fallback,
+// so tests that use it block the self-hosted fonts.
+async function drawnText(doc, pageIndex) {
+  const c = doc.getPage(pageIndex).node.Contents();
+  const streams = c instanceof PDFArray ? c.asArray().map(r => doc.context.lookup(r)) : [c];
+  const src = streams.map(st => Buffer.from(decodePDFRawStream(st).decode()).toString('latin1')).join('\n');
+  const WIN = { 0x85: '…', 0x91: '‘', 0x92: '’', 0x93: '“', 0x94: '”', 0x95: '•', 0x96: '–', 0x97: '—' };
+  return [...src.matchAll(/\/\S+ ([\d.]+) Tf[\s\S]*?<([0-9A-Fa-f]*)> Tj/g)].map(m => ({
+    size: Number(m[1]),
+    text: Buffer.from(m[2], 'hex').toString('latin1').replace(/[\x80-\x9f]/g, ch => WIN[ch.charCodeAt(0)] || ch)
+  }));
+}
+const studentName = runs => runs[runs.findIndex(r => r.text === 'STUDENT') + 1];
+const STUDENT_BOX = 190 - 18; // box width less 9pt padding each side
+
+// Final review minors: a long name shrank nothing and ran into STARTED / SUBMITTED; letters outside Latin-1
+// were dropped ("Nguyễn" became "Nguyn") in the PDF and its file name.
+test('a very long, accented name fits the Student box (shrunk to 7pt, then cut with …) and the file name is ASCII', async ({ page }) => {
+  await page.route('**/os/fonts/*.woff', r => r.abort());
+  const name = 'Nguyễn Thị Bartholomew-Alexander Montgomery-Wellington Fitzgerald-Nguyễn';
+  const { download, doc } = await submitPre(page, undefined, [], name);
+  expect(download.suggestedFilename()).toMatch(/^DL2-PreTest-Fitzgerald-Nguyen-\d{8}-\d{4}\.pdf$/);
+  const helv = await (await PDFDocument.create()).embedFont(StandardFonts.Helvetica);
+  const drawn = studentName(await drawnText(doc, 0));
+  expect(drawn.text.startsWith('Nguyen Thi Bartholomew')).toBe(true);
+  expect(drawn.text.endsWith('…')).toBe(true);
+  expect(drawn.size).toBe(7);
+  expect(helv.widthOfTextAtSize(drawn.text, drawn.size)).toBeLessThanOrEqual(STUDENT_BOX);
+  // Page 2's running header (name · record) stays inside the right margin too.
+  const head = (await drawnText(doc, 1)).find(r => r.text.includes(' · Record DL2-PRE-'));
+  expect(head.text.startsWith('Nguyen Thi ')).toBe(true);
+  expect(helv.widthOfTextAtSize(head.text, head.size)).toBeLessThanOrEqual(612 - 44 - (44 + 50));
+});
+
+test('a longish name shrinks to fit the Student box without being cut', async ({ page }) => {
+  await page.route('**/os/fonts/*.woff', r => r.abort());
+  const name = 'Bartholomew Alexander Montgomery-Wellington';
+  await submitPre(page, undefined, [], name).then(async ({ doc }) => {
+    const helv = await (await PDFDocument.create()).embedFont(StandardFonts.Helvetica);
+    const drawn = studentName(await drawnText(doc, 0));
+    expect(drawn.text).toBe(name);
+    expect(drawn.size).toBeGreaterThanOrEqual(7);
+    expect(drawn.size).toBeLessThan(10.5);
+    expect(helv.widthOfTextAtSize(drawn.text, drawn.size)).toBeLessThanOrEqual(STUDENT_BOX);
+  });
+});
+
+test('a short name keeps the full 10.5pt size', async ({ page }) => {
+  await page.route('**/os/fonts/*.woff', r => r.abort());
+  const { doc } = await submitPre(page, undefined, [], 'Ann Lee');
+  expect(studentName(await drawnText(doc, 0))).toEqual({ size: 10.5, text: 'Ann Lee' });
 });
