@@ -3,11 +3,12 @@ const { test, expect } = require('@playwright/test');
 const { PDFDocument } = require('../../courses/digital-literacy-2/os/vendor/pdf-lib.min.js');
 const W = '/courses/digital-literacy-2/weeks/week-01/';
 
-// Prints a page the way Chromium's print dialog would (Letter, backgrounds on) and counts the sheets.
+// Prints a page the way Chromium's print dialog would (Letter, backgrounds on, and the page's own @page size, which
+// the dialog honors: the run sheet is landscape) and counts the sheets.
 async function printedPages(page, url) {
   await page.goto(url);
   await page.evaluate(() => document.fonts.ready);
-  const doc = await PDFDocument.load(await page.pdf({ format: 'Letter', printBackground: true }));
+  const doc = await PDFDocument.load(await page.pdf({ format: 'Letter', printBackground: true, preferCSSPageSize: true }));
   return doc.getPageCount();
 }
 
@@ -45,6 +46,16 @@ test('run sheet and key exist with the letterhead', async ({ page }) => {
 // I2 (final review): Mission E spilled onto a sixth, nearly empty sheet with its Take it home line.
 test('the worksheet prints as exactly 5 pages, one per mission', async ({ page }) => {
   expect(await printedPages(page, W + 'worksheet.html')).toBe(5);
+});
+
+// Final review I3/I5/C1: the run sheet's Before class list covers stale tests, the deck's slide 1 and a Forms check,
+// and still prints on one landscape sheet.
+test('the run sheet prints on exactly 1 page, with the Before class checks', async ({ page }) => {
+  expect(await printedPages(page, W + 'run-sheet.html')).toBe(1);
+  const list = page.locator('.checklist');
+  await expect(list).toContainText('Open the Pre-test on each PC. If it says “Continuing the pre-test for…”, click Start over.');
+  await expect(list).toContainText('Open presentation.html#1 (starts at slide 1) and press F.');
+  await expect(list).toContainText('Send one test submission and confirm it arrives in Netlify Forms.');
 });
 
 // Final review minor: with the print dialog's "Background graphics" off (Edge's default), the navy DO badge, step
