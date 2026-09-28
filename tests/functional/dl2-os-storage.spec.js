@@ -15,9 +15,9 @@ test.beforeEach(async ({ page }) => {
 test('Week 1 deck moves on with blocked storage and reduced motion', async ({ page }) => {
   const errors = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto('/courses/digital-literacy-2/weeks/week-01/presentation.html');
-  await expect(page.locator('.strip .count')).toHaveText('1 / 27');
+  await expect(page.locator('.strip .count')).toHaveText('1 / 28');
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('.strip .count')).toHaveText('2 / 27');
+  await expect(page.locator('.strip .count')).toHaveText('2 / 28');
   expect(errors).toEqual([]);
 });
 

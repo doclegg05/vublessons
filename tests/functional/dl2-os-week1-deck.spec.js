@@ -1,11 +1,11 @@
 // tests/functional/dl2-os-week1-deck.spec.js
-// Week 1 deck: 27 slides (no break), WIPPEA order, every Show mounts, text floor, no external requests.
+// Week 1 deck: 28 slides (no break), WIPPEA order, every Show mounts, text floor, no external requests.
 const { test, expect } = require('@playwright/test');
 const URL = '/courses/digital-literacy-2/weeks/week-01/presentation.html';
 
-test('structure: 27 slides, phases in order, five demos, five Do slides, no timer', async ({ page }) => {
+test('structure: 28 slides, phases in order, five demos, five Do slides, no timer', async ({ page }) => {
   await page.goto(URL);
-  await expect(page.locator('.slide')).toHaveCount(27);
+  await expect(page.locator('.slide')).toHaveCount(28);
   await expect(page.locator('.slide[data-stage="show"] .demo-bezel')).toHaveCount(5);
   await expect(page.locator('.slide[data-stage="do"]')).toHaveCount(5);
   await expect(page.locator('.timer, [data-minutes], .strip [role="timer"]')).toHaveCount(0);
@@ -71,9 +71,9 @@ test('legacy deck still opens', async ({ page }) => {
 
 // Polish pass: the deck must fit at every step of the A−/A+ control, and the control's status
 // label ("Default text") is for screen readers only; the phase strip shows just A− and A+.
-test('every slide fits at every text size, and the text-size status is visually hidden', async ({ page }) => {
+for (const width of [1366, 1920]) test(`every slide fits at every text size at ${width}, and the text-size status is visually hidden`, async ({ page }) => {
   test.setTimeout(120_000);
-  await page.setViewportSize({ width: 1920, height: 1080 });
+  await page.setViewportSize({ width, height: width === 1366 ? 768 : 1080 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(URL + '#1');
   await page.evaluate(() => document.fonts.ready);

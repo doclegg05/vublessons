@@ -1,11 +1,12 @@
 """Run from repo root: python3 scripts/dl2/mission-control/build.py.
-Only owns Weeks 2–6 Mission Control materials and companion practice libraries.
-Does not write Week 1, assessments, video/transcript, catalogue or email delivery.
+Owns Week 1 deck from week-01.html plus Weeks 2–6 materials and practice libraries.
+Does not write assessments, video/transcript, catalogue or email delivery.
 """
 import json,html,re
 from pathlib import Path
 from content import WEEKS
 from visuals import visual
+from opening import video_slide, media_url
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 BASE='/courses/digital-literacy-2'
@@ -36,15 +37,15 @@ def app_links():return '<nav class="resource-links" aria-label="Three practice v
 def slide(n,i,title,body,phase='present',stage='',notes='',cls=''):
  return f'<section class="slide {cls}" id="slide-{i}" data-phase="{phase}" data-stage="{stage}" data-scene="deck" aria-labelledby="s{i}"><div class="panel full"><div class="hud"><img src="/assets/vub-seal-white.png" alt=""><span>Week {n}</span><span class="app">Mission Control</span></div><h1 id="s{i}" tabindex="-1">{e(title)}</h1>{body}</div><aside class="notes"><h2>{e(title)}</h2><p>{e(notes)}</p></aside></section>'
 for n,w in WEEKS.items():
- target=OUT/f'weeks/week-{n:02}';old=OLD[n-1];slides=[];schedule=[]
+ target=OUT/f'weeks/week-{n:02}';old=OLD[n-1];slides=[video_slide(n,1)];schedule=[]
  def add(title,body,phase='present',stage='',notes='',cls=''):
   slides.append(slide(n,len(slides)+1,title,body,phase,stage,notes,cls));return len(slides)
  photo=f'{BASE}/assets/photos/{w["photo"]}.webp'
  add(w['title'],f'<div class="mission-hero"><div><p>Digital Literacy Level 2</p><p>Four missions. One useful result.</p><a class="mission-link" href="worksheet.html">Open your mission worksheet</a></div><figure><img src="{photo}" alt="Illustrative West Virginia learning scenario"><figcaption>Fictional people and setting</figcaption></figure></div>','warm-up',notes='Welcome learners by name. This lesson uses fictional examples and existing tools. Open the worksheet before demonstrations. F toggles fullscreen; N shows notes. Arrow keys progress through shows before advancing slides.')
- add('Start with what you know.',f'<p class="mission-prompt">{e(w["warm"])}</p><p>Share one experience. Passing is welcome.</p>','warm-up',notes='8 minutes including the welcome. Invite a real example without asking for private account or benefits details. Connect existing experience to today’s task.')
- add('Your four missions.', '<ol class="mission-map">'+''.join(f'<li><b>{chr(65+i)}</b><span>{e(m["title"])}</span></li>' for i,m in enumerate(w['missions']))+'</ol><p>Tell → Show → Do → Review</p>','intro',notes='5 minutes. Preview the task sequence and success evidence. Use prepared examples if software or accounts are unavailable. The break is protected; optional extensions can wait.')
+ add('Start with what you know.',f'<p class="mission-prompt">{e(w["warm"])}</p><p>Share one experience. Passing is welcome.</p>','warm-up',notes='3 minutes including the welcome, after the 8-minute opening video. Invite a real example without asking for private account or benefits details. Connect existing experience to today’s task.')
+ add('Your four missions.', '<ol class="mission-map">'+''.join(f'<li><b>{chr(65+i)}</b><span>{e(m["title"])}</span></li>' for i,m in enumerate(w['missions']))+'</ol><p>Tell → Show → Do → Review</p>','intro',notes='2 minutes. Preview the task sequence and success evidence. Use prepared examples if software or accounts are unavailable. The break is protected; optional extensions can wait.')
  elapsed=13
- schedule=[(0,8,'Welcome and experience','1–2'),(8,13,'Mission overview','3')]
+ schedule=[(0,8,'Opening video','1'),(8,11,'Welcome and experience','2–3'),(11,13,'Mission overview','4')]
  for k,m in enumerate(w['missions']):
   letter=chr(65+k);mid=f'{n}{letter}';first=len(slides)+1
   add(m['title'], '<ol class="mission-principles">'+''.join(f'<li><span>{i+1}</span>{e(t)}</li>' for i,t in enumerate(m['tell']))+'</ol>',stage='tell',notes=f'Mission {mid}. App: {m["app"]}. Explain why this helps: {m["finish"]}. Connect to the learner’s own household or community task. Ask for a prediction before the show. Full procedural steps and expected evidence are in the worksheet and answer guide.')
@@ -69,11 +70,20 @@ for n,w in WEEKS.items():
  add('Mission complete.',f'<p>You practiced. You checked. You can explain your choices.</p><div class="mission-actions">{link(BASE+"/index.html","Return to course home")}{link("practice.html","Practice a skill again")}</div>','apply',notes='Collect evidence, not just self-reported confidence. Celebrate a concrete improvement. Close applications and restore shared settings. Keep support needs separate from assessment results.')
  schedule.append((elapsed,120,'Transfer and close',f'{len(slides)-1}–{len(slides)}'))
  assert elapsed+w['minutes'][-1]==120,(n,elapsed,w['minutes'])
- head=f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week {n} · {e(w["title"])} · VUB</title><link rel="stylesheet" href="{BASE}/os/fonts.css"><link rel="stylesheet" href="{BASE}/os/deck.css"><link rel="stylesheet" href="{BASE}/os/missions.css"></head>'
- nav='<nav class="mission-toolbar" aria-label="Presentation controls">'+link(BASE+'/index.html','Course home')+'<button type="button" data-deck-prev>Back</button><button type="button" data-deck-next>Next</button><button type="button" data-deck-notes aria-expanded="false">Notes (N)</button><button type="button" data-deck-full>Fullscreen (F)</button><label>Mission <select data-mission-jump><option value="0">Start</option>'+''.join(f'<option value="{3+k*4+(1 if k>1 else 0)}">{chr(65+k)} · {e(m["title"])}</option>' for k,m in enumerate(w['missions']))+'</select></label></nav>'
- (target/'presentation.html').write_text(head+f'<body class="dl2-os mission-series"><a class="mission-skip" href="#main">Skip to lesson</a>{nav}<main id="main" tabindex="-1" class="deck" aria-label="Week {n} presentation">'+''.join(slides)+f'</main><script src="{BASE}/os/deck.js"></script><script src="{BASE}/os/missions.js"></script><script src="/shared/text-size.js"></script></body></html>')
+ head=f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week {n} · {e(w["title"])} · VUB</title><link rel="stylesheet" href="{BASE}/os/fonts.css"><link rel="stylesheet" href="{BASE}/os/deck.css"><link rel="stylesheet" href="{BASE}/os/missions.css"><link rel="stylesheet" href="{BASE}/os/opening.css"></head>'
+ nav='<nav class="mission-toolbar" aria-label="Presentation controls">'+link(BASE+'/index.html','Course home')+'<button type="button" data-deck-prev>Back</button><button type="button" data-deck-next>Next</button><button type="button" data-deck-notes aria-expanded="false">Notes (N)</button><button type="button" data-deck-full>Fullscreen (F)</button><label>Mission <select data-mission-jump><option value="0">Start</option>'+''.join(f'<option value="{4+k*4+(1 if k>1 else 0)}">{chr(65+k)} · {e(m["title"])}</option>' for k,m in enumerate(w['missions']))+'</select></label></nav>'
+ (target/'presentation.html').write_text(head+f'<body class="dl2-os mission-series"><a class="mission-skip" href="#main">Skip to lesson</a>{nav}<main id="main" tabindex="-1" data-deck-version="opening-v1" class="deck" aria-label="Week {n} presentation">'+''.join(slides)+f'</main><script src="{BASE}/os/deck.js"></script><script src="{BASE}/os/missions.js"></script><script src="/shared/text-size.js"></script></body></html>')
  # Keep existing interactive simulations and their stable exercise numbers available as a companion library.
  practice=(HERE/f'practice/week-{n:02}.html').read_text().replace('</head>',f'<link rel="stylesheet" href="{BASE}/os/mission-practice.css"></head>')
+ # Derive media URL versions and chapter times from approved artifacts on every build.
+ for suffix in ('mp4','vtt'):
+  path=f'courses/digital-literacy-2/media/week-{n:02}.{suffix}'
+  practice=re.sub(re.escape('/'+path)+r'(?:\?[^"\s]*)?',lambda _:media_url(path),practice)
+ chapter_times=iter(json.loads((OUT/f'media/week-{n:02}-chapters.json').read_text()))
+ def chapter_time(match):
+  seconds=next(chapter_times)['startSeconds']
+  return f'{match[1]}{seconds:.3f}{match[2]}{seconds:.3f}{match[3]}{int(seconds)//60}:{int(seconds)%60:02}{match[4]}'
+ practice=re.sub(r'(data-video-seek=")[\d.]+("><time datetime="PT)[\d.]+(S">)\d+:\d+(</time>)',chapter_time,practice)
  practice=practice.replace('<body class="lesson"', '<body class="lesson mission-library"')
  practice=practice.replace('<title>', '<title>Practice library · ',1)
  practice=practice.replace('<div class="deck-toolbar">', '<div class="deck-toolbar">'+link('presentation.html#1','Return to Mission Control'))
@@ -107,7 +117,7 @@ for n,w in WEEKS.items():
  (target/'worksheet.html').write_text(paper(n,'Mission worksheet',worksheet))
  (target/'answer-key.html').write_text(paper(n,'Answer and observation guide',answer,True))
  table='<table><thead><tr><th>Elapsed minutes</th><th>Slides</th><th>Teaching segment</th></tr></thead><tbody>'+''.join(f'<tr><td>{a}–{b} ({b-a} min)</td><td>{s}</td><td>{e(t)}</td></tr>' for a,b,t,s in schedule)+'</tbody></table>'
- prep='<p>Before class: print worksheet and answer guide; open the lesson and practice library; check projector, keyboard, sound and printer; provide fresh fictional files. The course video is available for optional chapter replay. No learner account or purchase is required.</p>'
+ prep='<p>Before class: print worksheet and answer guide; open the lesson and practice library; check projector, keyboard, sound and printer; provide fresh fictional files. Play the opening video in the first 8 minutes; welcome, prior experience and mission overview share the next 5 minutes. Use later chapter replay only as needed. No learner account or purchase is required.</p>'
  plan='<h2>Objectives</h2>'+ul(old['objectives'])+'<h2>Observable outcomes</h2>'+ul(old['outcomes'])+'<h2>120-minute plan</h2>'+table+prep+'<h2>Teaching rhythm</h2><p>Tell: explain the purpose using prior experience. Show: ask for a prediction and demonstrate one step at a time. Do: learners act at their own seats using the quick card. Review: explain choices and inspect evidence. Use N for slide-specific instructor notes and the answer guide for expected results.</p><h2>Pacing and recovery</h2><p>Protect the 8-minute break. Finish each essential Point B before optional extensions. Offer prepared examples, partner observation and paper annotation when tools are unavailable; record these as simulated work. Use the closing block for consolidation, not a new task.</p>'
  if n==3:plan+='<p>Week 3 is deliberately sequential: 27 minutes Word, 22 Excel, break, 20 PowerPoint, 16 export/media. Use the supplied starter wording and fresh CSV. Charts, extra decoration and advanced video editing are optional. If a learner falls behind, provide the completed prior artifact so the next objective can still be practiced.</p>'
  if n==5:plan+='<p>Mission 5D is a 26-minute observed skills challenge. The following 22 minutes belong to the individual 20-question post-test. Keep observation ratings and test scores separate. Use a paper test if the browser cannot load; keep the complete result as the backup.</p>'
@@ -119,3 +129,6 @@ for n,w in WEEKS.items():
  notes=''.join(f'<section><h2>Slide {i+1}</h2>'+re.search(r'<aside class="notes">(.*?)</aside>',s).group(1)+'</section>' for i,s in enumerate(slides))
  (target/'instructor-notes.html').write_text(paper(n,'Instructor notes',notes,True))
  print(f'Week {n}: {len(slides)} slides, 4 matched missions, 120 minutes')
+
+(OUT/'weeks/week-01/presentation.html').write_text((HERE/'week-01.html').read_text().replace('<!-- OPENING_MEDIA -->',video_slide(1,2)))
+print('Week 1: 28 slides; pre-test, video, existing lesson')

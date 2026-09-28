@@ -1,0 +1,36 @@
+/* Opening controls serve all six decks; native video remains the primary control. */
+.dl2-os .deck .slide:is(.opening-video,.opening-pretest) { --ts:inherit !important; }
+.dl2-os .deck .slide:is(.opening-video,.opening-pretest) .panel.full { top:8%; bottom:15%; padding:1.7cqw 2.4cqw; display:flex; flex-direction:column; gap:1cqw; }
+.dl2-os .deck .slide:is(.opening-video,.opening-pretest) h1 { font-size:calc(2.8cqw * var(--ts)) !important; margin:0 !important; line-height:1.1 !important; }
+.opening-media { display:grid; grid-template-columns:minmax(0,1.85fr) minmax(0,1fr); align-items:center; gap:2cqw; min-height:0; flex:1; }
+.opening-media video { display:block; width:100%; max-height:100%; aspect-ratio:16/9; background:#000; border:1px solid #5398a8; border-radius:10px; object-fit:contain; }
+.opening-guide { display:flex; flex-direction:column; gap:1.5cqw; }
+.dl2-os .deck .slide:is(.opening-video,.opening-pretest) :is(p,li,a,button) { font-size:calc(max(32px,1.7cqw) * var(--ts)) !important; line-height:1.25 !important; }
+.opening-guide p { margin:0; }
+.opening-guide a { color:#9aeeff; text-underline-offset:.15em; }
+.opening-guide a span { display:block; }
+.dl2-os [data-opening-next] { border:1px solid #72d9ec; background:#122d4c; color:#e9fbff; font:inherit; padding:.6cqw .9cqw; border-radius:6px; text-align:left; cursor:pointer; }
+.dl2-os :is([data-opening-next],.opening-test-link,.opening-guide a,video):focus-visible { outline:4px solid #ffc400; outline-offset:5px; }
+.dl2-os [data-opening-next]:hover { background:#234765; }
+.pretest-layout { display:grid; grid-template-columns:1.5fr 1fr; align-items:center; gap:3cqw; flex:1; }
+.pretest-layout ol { margin:0; padding-left:2.5cqw; display:grid; gap:1.3cqw; }
+.opening-test-link { display:block; border:2px solid #ffe386; background:#ffc400; color:#07112a; border-radius:8px; padding:1cqw; font-weight:700; text-underline-offset:.15em; }
+.opening-test-link span { display:block; font-weight:400; margin-top:.5em; }
+/* At phone widths the opening uses normal page flow, with every control reachable. */
+@media(max-width:800px) {
+ html:has(.slide[data-opening].is-active),body:has(.slide[data-opening].is-active) { height:auto; overflow:auto; }
+ .dl2-os:has(.slide[data-opening].is-active) .deck { position:relative; left:auto; top:auto; transform:none; width:100%; aspect-ratio:auto; }
+ .dl2-os:has(.slide[data-opening].is-active) .slide { display:none; }
+ .dl2-os:has(.slide[data-opening].is-active) .slide.is-active { position:relative; display:block; }
+ .dl2-os .deck .slide:is(.opening-video,.opening-pretest) .panel.full { position:relative; inset:auto; clip-path:none; padding:24px 20px; gap:20px; }
+ .dl2-os .deck .slide:is(.opening-video,.opening-pretest) h1 { font-size:calc(30px * var(--ts))!important; }
+ .dl2-os .deck .slide:is(.opening-video,.opening-pretest) :is(p,li,a,button) { font-size:calc(32px * var(--ts))!important; }
+ .opening-media,.pretest-layout { grid-template-columns:1fr; gap:24px; }
+ .opening-guide { gap:22px; }
+ .opening-media video { max-height:none; }
+ .pretest-layout ol { padding-left:28px; gap:18px; }
+ .dl2-os [data-opening-next],.opening-test-link { padding:14px; }
+ .dl2-os .slide[data-opening] .hud { font-size:14px; gap:12px; }
+ .dl2-os .slide[data-opening] .hud img { width:30px; }
+ .dl2-os:has(.slide[data-opening].is-active) .strip { position:relative; inset:auto; margin:14px; height:auto; min-height:90px; grid-template-columns:repeat(3,1fr); font-size:14px; gap:8px; }
+}

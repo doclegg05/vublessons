@@ -12,7 +12,7 @@
     notesButton.addEventListener('click', function () { shortcut('n'); });
     document.querySelector('[data-deck-full]').addEventListener('click', function () { shortcut('f'); });
     function syncNavigation() {
-      var at = deck.index(), starts = [3, 7, 12, 16], mission = 0;
+      var at = deck.index(), starts = Array.from(document.querySelector('[data-mission-jump]').options).map(function (o) { return Number(o.value); }), mission = 0;
       starts.forEach(function (start) { if (at >= start) mission = start; });
       document.querySelector('[data-mission-jump]').value = String(mission);
       document.querySelector('[data-deck-prev]').disabled = at === 0;

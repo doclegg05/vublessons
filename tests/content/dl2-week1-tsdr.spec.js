@@ -34,8 +34,12 @@ test('Week 1 pre-test step records each score instead of printing full reports',
 test('Week 1 Mission Control plan covers five observable tasks and all 120 minutes',()=>{
  const plain=text(plan);
  for(const task of ['Change Display Scale','Select a headset output','Adjust flyer margins','Create a fictional recurring calendar event','Undo an automatic change'])expect(plain).toContain(task);
- for(const range of ['slides 1–2','slides 3–4','slides 5–8','slides 9–12','slides 13–16','slides 17–20','slides 21–25','slides 26–27'])expect(plain).toContain(range);
- expect(plain).toContain('100–120 (20 min)');
+ for(const range of ['slide 1','slide 2','slides 3–5','slides 6–9','slides 10–13','slides 14–17','slides 18–21','slides 22–26','slides 27–28'])expect(plain).toContain(range);
+ expect(plain).toContain('108–120 (12 min)');
+ const blocks=[...plain.matchAll(/(\d+)–(\d+) \((\d+) min\)/g)].map(m=>m.slice(1).map(Number));
+ expect(blocks.reduce((sum,[a,b,d])=>sum+d,0)).toBe(120);
+ for(let i=0;i<blocks.length;i++){expect(blocks[i][1]-blocks[i][0]).toBe(blocks[i][2]);if(i)expect(blocks[i][0]).toBe(blocks[i-1][1]);}
+ expect(plain).toContain('Opening video · slide 2');
  expect(plain).toContain('20-question pre-test');
  expect(plain).toContain('paper simulation');
  expect(plain).not.toContain('out of 28');
