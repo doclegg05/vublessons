@@ -676,7 +676,7 @@
         state: { cls: { 'menu-open': false }, text: { '#doc-line': 'Copyright (c) 2026' }, attr: { ac: 'none' } } },
       { check: 'Find the version', cap: 'For a help request: File ▸ Account ▸ <em>About Word</em>.', target: '#file-tab', action: 'click', at: [0.62, 0.78], zoomOut: true,
         state: { attr: { page: 'account', about: 'open' } } },
-      { check: 'Copy the version', cap: 'Write down the version number (2408) for your request.', target: '#about-version', action: 'hover', at: [0.56, 1.1], zoom: 2.4 }
+      { check: 'Copy the version', cap: 'Write down the version number you see (ours says 2408; yours may be newer).', target: '#about-version', action: 'hover', at: [0.56, 1.1], zoom: 2.4 }
     ]
   });
 })();

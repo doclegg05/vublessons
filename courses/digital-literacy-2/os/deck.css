@@ -35,7 +35,7 @@ body[data-scene="deck"] .scene-deck, body[data-scene="gorge"] .scene-gorge { opa
 @property --dl2-ang { syntax:'<angle>'; inherits:false; initial-value:0deg; }
 .panel { position:absolute; isolation:isolate; clip-path:polygon(2cqw 0,100% 0,100% calc(100% - 2cqw),calc(100% - 2cqw) 100%,0 100%,0 2cqw); padding:2.6cqw 3.4cqw; }
 .panel::before { content:""; position:absolute; inset:0; z-index:-2; background:conic-gradient(from var(--dl2-ang), var(--c-cyan), var(--c-mag), var(--c-gold), var(--c-cyan)); animation:dl2-edge 9s linear infinite; }
-.panel::after { content:""; position:absolute; inset:2px; z-index:-1; background:linear-gradient(160deg, #07112a, #050a19); clip-path:polygon(calc(2cqw - 1px) 0,100% 0,100% calc(100% - 2cqw + 1px),calc(100% - 2cqw + 1px) 100%,0 100%,0 calc(2cqw - 1px)); }
+.panel::after { content:""; position:absolute; inset:2px; z-index:-2; /* same layer as ::before, painted after it; -1 is free for .unit-mark */ background:linear-gradient(160deg, #07112a, #050a19); clip-path:polygon(calc(2cqw - 1px) 0,100% 0,100% calc(100% - 2cqw + 1px),calc(100% - 2cqw + 1px) 100%,0 100%,0 calc(2cqw - 1px)); }
 @keyframes dl2-edge { to { --dl2-ang:360deg; } }
 .panel.full { left:4.5%; right:4.5%; top:6%; bottom:17%; }
 .panel.left { left:4.5%; right:40%; top:7%; bottom:20%; }
@@ -84,10 +84,10 @@ body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-i
 /* ================= Do slide (ported from mockup 4: .dohead, .timer, .sab, .dsteps, .sheet) ================= */
 .dohead { display:flex; align-items:flex-start; gap:2cqw; margin-top:1.4cqw; }
 .dohead h1 { flex:1; margin-top:0; }
-.dl2-os .deck .slide .dohead h1 { font-size:calc(3.5cqw * var(--ts)) !important; line-height:1.05 !important; }
+.dl2-os .deck .slide .dohead h1 { font-size:calc(3.5cqw * var(--ts-h, 1)) !important; line-height:1.05 !important; }
 .timer { flex:none; text-align:center; font-family:"DL2 JetBrains Mono", monospace; border:1px solid rgba(255,196,0,.6); padding:.8cqw 1.6cqw; color:var(--c-gold); }
 .timer b { display:block; font-weight:700; }
-.dl2-os .deck .slide .timer b { font-size:calc(3.6cqw * var(--ts)) !important; line-height:1 !important; }
+.dl2-os .deck .slide .timer b { font-size:calc(3.6cqw * var(--ts-h, 1)) !important; line-height:1 !important; }
 .timer small { font-size:1.15cqw; letter-spacing:.2em; }
 
 .sab { display:grid; grid-template-columns:1fr auto 1fr; gap:1.2cqw; margin-top:1.8cqw; align-items:stretch; }
@@ -115,10 +115,17 @@ body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-i
 .choices { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2cqw; margin-top:2cqw; } /* slide 26: three choice cards */
 .choices div { border:1px solid rgba(0,229,255,.35); background:rgba(4,10,26,.75); padding:1.4cqw 1.6cqw; }
 .dl2-os .deck .slide .choices div, .dl2-os .deck .slide .choices p { font-size:calc(1.8cqw * var(--ts)) !important; line-height:1.3 !important; }
-.choices div.correct { border-color:#a6ff8f; background:rgba(166,255,143,.12); }
-.choices div.correct::before { content:"CORRECT · "; color:#a6ff8f; font-family:"DL2 JetBrains Mono", monospace; font-size:.7em; letter-spacing:.06em; }
-.choices div.incorrect { border-color:var(--c-mag); background:rgba(255,60,172,.1); }
-.choices div.incorrect::before { content:"NOT QUITE · "; color:var(--c-mag); font-family:"DL2 JetBrains Mono", monospace; font-size:.7em; letter-spacing:.06em; }
+/* Verdicts are real text on each card, hidden (and the cards neutral) until the answer card is revealed. */
+.choices > div { position:relative; }
+.choices b { display:inline-grid; place-items:center; width:1.7em; height:1.7em; margin-right:.5em; vertical-align:.1em; font-family:"DL2 JetBrains Mono", monospace; font-size:.8em; color:#6ff3ff; border:1px solid rgba(0,229,255,.5); background:rgba(0,229,255,.08); }
+.choices .verdict { visibility:hidden; position:absolute; top:0; left:1.6cqw; transform:translateY(-50%); padding:.3cqw .9cqw; font-family:"DL2 JetBrains Mono", monospace; font-weight:700; font-size:calc(1.35cqw * var(--ts-h, 1)); line-height:1.2; letter-spacing:.14em; text-transform:uppercase; color:#021018; }
+.choices .correct .verdict::before { content:"✓ "; } .choices .incorrect .verdict::before { content:"✗ "; }
+.choices:has(~ .answer.on) .verdict { visibility:visible; }
+.choices:has(~ .answer.on) .correct { border-color:#a6ff8f; background:rgba(166,255,143,.12); box-shadow:0 0 2cqw rgba(166,255,143,.22); }
+.choices:has(~ .answer.on) .correct .verdict { background:#a6ff8f; }
+.choices:has(~ .answer.on) .correct b { color:#021018; background:#a6ff8f; border-color:#a6ff8f; }
+.choices:has(~ .answer.on) .incorrect { border-color:rgba(255,60,172,.75); background:rgba(255,60,172,.07); }
+.choices:has(~ .answer.on) .incorrect .verdict { background:#ff6fc1; }
 
 .compare { display:grid; grid-template-columns:1fr 1fr; gap:1.6cqw; margin-top:2cqw; } /* slide 23: two-column compare */
 .compare > div { border:1px solid rgba(0,229,255,.3); background:rgba(4,10,26,.7); padding:1.4cqw 1.8cqw; }
@@ -166,9 +173,78 @@ body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-i
 .dl2-os .deck .slide .steps + h2 { margin-top:2.4cqw; }
 .steps.cols { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(2,auto); grid-auto-flow:column; column-gap:3cqw; }
 /* Do slide with a long Point B; a countdown on a gorge slide. */
-.sab.b-wide { grid-template-columns:1fr auto 1.6fr; }
+.sab.b-wide { grid-template-columns:1fr auto 2.1fr; }
 .slide[data-scene="gorge"] .opener .timer { display:inline-block; margin-top:2.4cqw; padding:1.2cqw 2.4cqw; background:rgba(40,16,50,.45); }
 .dl2-os .deck .slide[data-scene="gorge"] .opener .timer b { font-size:calc(5cqw * var(--ts)) !important; }
 /* Review: the "why" card carries a gold rule; emphasis in body text is gold and upright, like h1 em. */
 .answer.why { border-left-color:var(--c-gold); }
 .dl2-os .deck .slide p em, .dl2-os .deck .slide li em { font-style:normal; color:var(--c-gold); }
+
+/* ================= Polish pass: composed slides, unit marks, every text size ================= */
+/* The deck sizes its own type through --ts. text-size.js also raises body font-size and line-height
+ * for reading pages; keep those out of the deck so only --ts moves slide type. Headings are already
+ * huge, so they grow half as fast as body text (--ts-h). */
+.deck { font-size:16px; line-height:normal; --ts-h:calc(1 + (var(--ts) - 1) / 2); }
+.dl2-os .deck .strip button { font-size:inherit !important; line-height:1 !important; }
+.dl2-os .deck .slide .demo-controls button { font-size:1.2cqw !important; line-height:1.2 !important; }
+/* The text-size status ("Default text") is for screen readers only; the strip shows A− and A+. */
+.strip .vub-textsize .status { position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; }
+
+/* Composed slides (Tell, Review, Warm-up, Intro, Apply): a flex column whose content block sits
+ * centered in the space under the HUD instead of hugging the top of the panel. */
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full { display:flex; flex-direction:column; padding-bottom:3.4cqw; }
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full > .hud { margin-bottom:1.6cqw; }
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full > .hud + * { margin-top:auto; }
+.slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) .panel.full > :last-child { margin-bottom:auto; }
+.dl2-os .deck .slide:is([data-stage="tell"],[data-stage="review"],[data-phase="warm-up"],[data-phase="intro"],[data-phase="apply"]) h1 { font-size:calc(4.6cqw * var(--ts-h)) !important; line-height:1.04 !important; text-wrap:balance; }
+.dl2-os .deck .slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .steps li { font-size:calc(2.3cqw * var(--ts)) !important; line-height:1.25 !important; }
+/* Spacing yields as type grows: (2 - --ts) is 1 at default and .76 at the largest size. */
+.slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .steps { margin-top:calc(3cqw * (2 - var(--ts))); gap:calc(1.5cqw * (2 - var(--ts))); }
+.slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .steps li { gap:1.7cqw; }
+.slide[data-stage="tell"] .steps:not(.cols) { max-width:68cqw; } /* wrap before the unit mark */
+.slide .steps li > span:last-child, .slide .story p, .slide .answer, .slide .compare > div, .slide .choices > div { text-wrap:pretty; } /* no one-word last lines */
+.slide:is([data-stage="tell"],[data-phase="intro"],[data-phase="apply"]) .num { width:3.8cqw; height:3.8cqw; font-size:calc(1.6cqw * var(--ts-h)); clip-path:polygon(.9cqw 0,100% 0,100% calc(100% - .9cqw),calc(100% - .9cqw) 100%,0 100%,0 .9cqw); }
+/* The help-request Tell slide: four parts in two columns sized to their text, then the compare, where
+ * the short bad request gets the narrow card. Opaque cards let the unit mark tuck behind them. */
+.slide[data-stage="tell"] .steps.cols { grid-template-columns:auto auto; justify-content:start; column-gap:3.4cqw; margin-top:calc(2.6cqw * (2 - var(--ts))); }
+.dl2-os .deck .slide[data-stage="tell"] .steps.cols li { font-size:calc(1.95cqw * var(--ts)) !important; }
+.slide[data-stage="tell"] .compare { grid-template-columns:1fr 2.3fr; margin-top:calc(2.4cqw * (2 - var(--ts))); }
+.slide[data-stage="tell"] .compare > div { background:#050b1d; }
+.dl2-os .deck .slide[data-stage="tell"] .compare > div { font-size:calc(1.9cqw * var(--ts)) !important; line-height:1.3 !important; }
+.slide[data-stage="tell"] .compare h3 { font-size:1.3cqw; }
+
+/* Warm-up: Frank's night as a timeline, one node per line. */
+.slide[data-phase="warm-up"] .story { position:relative; margin-top:2.6cqw; padding-left:3cqw; display:flex; flex-direction:column; gap:1.3cqw; }
+.slide[data-phase="warm-up"] .story::before { content:""; position:absolute; left:.55cqw; top:.9cqw; bottom:.9cqw; width:2px; background:linear-gradient(180deg, var(--c-cyan), rgba(255,60,172,.7)); opacity:.55; }
+.dl2-os .deck .slide[data-phase="warm-up"] .story p { position:relative; margin:0; font-size:calc(2.3cqw * var(--ts)) !important; line-height:1.3 !important; }
+.slide[data-phase="warm-up"] .story p::before { content:""; position:absolute; left:-3cqw; top:calc(.65em - .6cqw); width:1.2cqw; height:1.2cqw; box-sizing:border-box; background:#07112a; border:2px solid var(--c-cyan); transform:rotate(45deg); }
+.slide[data-phase="warm-up"] .story p.now::before { background:var(--c-cyan); box-shadow:0 0 1.2cqw var(--c-cyan); }
+.dl2-os .deck .slide[data-phase="warm-up"] .story + h2 { margin-top:2.8cqw; font-size:calc(3.3cqw * var(--ts-h)) !important; }
+
+/* Apply: the closing line sits under the list with room to breathe. */
+.dl2-os .deck .slide[data-phase="apply"] .steps + p { margin-top:3cqw; font-size:calc(2.1cqw * var(--ts)) !important; }
+
+/* Review: bigger answer type and spacing; the answer and why cards read as a pair. */
+.dl2-os .deck .slide[data-stage="review"] h1 { font-size:calc(4.2cqw * var(--ts-h)) !important; } /* questions run long */
+.slide[data-stage="review"] .panel.full > h1 + * { margin-top:calc(3cqw * (2 - var(--ts))); }
+.dl2-os .deck .slide[data-stage="review"] .answer { font-size:calc(2.4cqw * var(--ts)) !important; line-height:1.35 !important; }
+.slide[data-stage="review"] .answer { margin-top:calc(1.5cqw * (2 - var(--ts))); padding:1.8cqw 2.6cqw; background:linear-gradient(90deg, rgba(0,229,255,.13), rgba(6,14,34,.93) 45%); border-left-width:.45cqw; }
+.slide[data-stage="review"] .answer.why { background:linear-gradient(90deg, rgba(255,196,0,.12), rgba(6,14,34,.93) 45%); }
+.slide[data-stage="review"] .choices { gap:1.6cqw; }
+.slide[data-stage="review"] .choices > div { padding:2cqw 1.8cqw 1.6cqw; }
+.dl2-os .deck .slide[data-stage="review"] .choices > div { font-size:calc(2cqw * var(--ts)) !important; line-height:1.3 !important; }
+.slide[data-stage="review"] .choices + .answer { margin-top:calc(2.2cqw * (2 - var(--ts))); }
+.choices.b-wide { grid-template-columns:1fr 1.7fr 1fr; } /* the long middle choice gets the room */
+
+/* Unit mark: a huge outlined unit letter behind the Tell text, filling the panel's right side. */
+.unit-mark { position:absolute; right:4cqw; top:50%; z-index:-1; transform:translateY(-44%); font-family:"DL2 Space Grotesk", "Segoe UI", system-ui, sans-serif; font-weight:700; font-size:24cqw; line-height:.8; letter-spacing:0; color:transparent; -webkit-text-stroke:2px rgba(0,229,255,.22); background:repeating-linear-gradient(180deg, rgba(0,229,255,.07) 0 2px, transparent 2px 7px); -webkit-background-clip:text; background-clip:text; filter:drop-shadow(0 0 1.2cqw rgba(0,229,255,.2)); pointer-events:none; user-select:none; }
+
+/* Do slides: a flex column; a small gap between blocks (it yields as type grows) plus whatever room
+ * is left, so the mission still fits at larger text sizes. */
+.slide[data-stage="do"] .panel.full { display:flex; flex-direction:column; row-gap:calc(1.2cqw * (2 - var(--ts))); }
+.slide[data-stage="do"] .dohead { margin-top:calc(1.4cqw * (2 - var(--ts))); }
+.slide[data-stage="do"] .panel.full > :is(.sab, .dsteps, .sheet) { margin-top:auto; }
+
+/* The two largest text sizes: Show and Do slides (and any slide marked data-fit="tight") cap slide
+ * type at 1.1×; beyond that their content would run past the panel, which clips it. */
+html:is([data-text-size="xl"],[data-text-size="xxl"]) .slide:is([data-stage="do"],[data-stage="show"],[data-fit="tight"]) { --ts:1.1; --ts-h:1.05; }
