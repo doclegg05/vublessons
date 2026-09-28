@@ -10,7 +10,16 @@
   var PW = 612, PH = 792, M = 44;
 
   function rgbOf(L, c) { return L.rgb(c[0] / 255, c[1] / 255, c[2] / 255); }
-  function clean(s) { return String(s).replace(/▸/g, '>').replace(/[✓✗⚠]/g, '').replace(/[“”]/g, '"').replace(/[‘’]/g, "'"); }
+  /* Every string is drawn through clean(). Symbols the fonts lack become plain equivalents; odd spaces (tabs, the
+   * narrow no-break space some browsers put before AM/PM) become plain spaces. A final safety pass keeps only
+   * printable Latin-1 and the common General Punctuation set (– — ‘ ’ “ ” • …), so the StandardFonts (WinAnsi)
+   * fallback, used when the self-hosted fonts can't load, can never throw on an unexpected character. */
+  function clean(s) {
+    return String(s).replace(/▸/g, '>').replace(/[✓✗⚠]/g, '').replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
+      .replace(/−/g, '-')
+      .replace(/[\t\n\r -   　]/g, ' ')
+      .replace(/[^\x20-\x7E\xA0-\xFF–—‘’“”•…]/g, '');
+  }
   function fetchBytes(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(url); return r.arrayBuffer(); }); }
   function wrap(font, text, size, width) {
     var words = clean(text).split(/\s+/), lines = [], line = '';
@@ -128,5 +137,5 @@
       });
     });
   }
-  global.DL2Pdf = { build: build };
+  global.DL2Pdf = { build: build, _clean: clean };
 })(window);
