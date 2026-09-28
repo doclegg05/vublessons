@@ -1,3 +1,26 @@
+==> graded PDF email server checks
+
+> vublessons@1.0.0 test:report-email
+> tsc -p tsconfig.functions.json && tsx --test tests/server/*.test.mts
+
+✔ pre uses canonical score and creates an openable two-page branded PDF (214.14ms)
+✔ post uses canonical score and creates an openable two-page branded PDF (223.435ms)
+✔ rejects tampered scores, domains, answers, version, IDs, dates and oversized input (0.817958ms)
+✔ fixed Gmail account and genuine PDF attachment; ignores attacker recipient/file fields (172.386ms)
+✔ simultaneous and later duplicate events send once (343.114917ms)
+✔ missing configuration stays recorded without sending, and later configuration can send (215.191792ms)
+✔ uncertain provider outcome is not blindly resent (206.728959ms)
+✔ reusing an ID with changed answers or identity is rejected (1.168458ms)
+✔ SMTP verification failure never sends or records accepted (184.273958ms)
+✔ the native event handler stays disabled outside production or without the activation flag (8.272667ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1746.740875
 ==> 1/5 build:site
 
 > vublessons@1.0.0 build:site
@@ -13,59 +36,62 @@ BROKEN: 0
 ==> 3/5 courses.json drift check
 check-courses: OK — 4 courses, 24 lessons, catalog and courses/ tree agree.
 ==> 4/5 playwright
-[1A[2K[2m[WebServer] [22m(node:50931) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K[2m[WebServer] [22m(node:5890) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 [2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
 
-[1A[2K[2m[WebServer] [22m(node:50959) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K[2m[WebServer] [22m(node:5915) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 [2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
 
 
 Running 304 tests using 5 workers
 
-[1A[2K(node:50990) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+✔ pre uses canonical score and creates an openable two-page branded PDF (210.5ms)
+[1A[2K(node:5922) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50991) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+✔ post uses canonical score and creates an openable two-page branded PDF (276.699708ms)
+✔ rejects tampered scores, domains, answers, version, IDs, dates and oversized input (1.260125ms)
+[1A[2K(node:5925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K(node:5922) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K[1/304] tests/content/dl2-curriculum.spec.js:3:1 › DL2 six complete weeks have two-hour plans and aligned assessment pairs
+[1A[2K(node:5923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50994) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K(node:5924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50990) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K(node:5926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K(node:5925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50991) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K[2/304] tests/content/dl2-monday-fixes.spec.js:19:1 › DL2 instructor pages are kept out of search results
+[1A[2K(node:5924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[1A[2K[3/304] tests/content/dl2-monday-fixes.spec.js:24:1 › DL2 instructor pages still reach each other
+[1A[2K(node:5926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 
-[1A[2K(node:50994) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
-(Use `node --trace-warnings ...` to show where the warning was created)
-
-
-[1A[2K[1/304] tests/content/dl2-monday-fixes.spec.js:24:1 › DL2 instructor pages still reach each other
-[1A[2K[2/304] tests/content/dl2-curriculum.spec.js:3:1 › DL2 six complete weeks have two-hour plans and aligned assessment pairs
-[1A[2K[3/304] tests/content/dl2-monday-fixes.spec.js:19:1 › DL2 instructor pages are kept out of search results
 [1A[2K[4/304] tests/content/dl2-curriculum.spec.js:8:1 › DL2 cohort dates appear only in syllabus; pages include shared text sizing
+[1A[2K(node:5923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
 [1A[2K[5/304] tests/content/dl2-monday-fixes.spec.js:14:1 › DL2 learner pages do not link answer keys, lesson plans or the instructor guide
 [1A[2K[6/304] tests/content/dl2-monday-fixes.spec.js:31:1 › DL2 appears in the instructor area
 [1A[2K[7/304] tests/content/dl2-os-assets.spec.js:7:1 › fonts, vendor libraries and the seal are served
@@ -74,6 +100,7 @@ Running 304 tests using 5 workers
 [1A[2K[10/304] tests/content/dl2-os-items.spec.js:19:1 › domain counts match the blueprint
 [1A[2K[11/304] tests/content/dl2-os-items.spec.js:27:1 › every item is well formed, answers are balanced
 [1A[2K[12/304] tests/content/dl2-os-items.spec.js:43:1 › grade counts correct answers overall and by domain
+✔ fixed Gmail account and genuine PDF attachment; ignores attacker recipient/file fields (220.359291ms)
 [1A[2K[13/304] tests/content/dl2-os-items.spec.js:55:1 › record id is stable and readable
 [1A[2K[14/304] tests/content/dl2-os-items.spec.js:64:1 › initials are letters only, so a record ID never carries markup
 [1A[2K[15/304] tests/content/dl2-os-items.spec.js:84:3 › pre: the correct option is strictly the longest on at most 6 of 20 items
@@ -86,6 +113,7 @@ Running 304 tests using 5 workers
 [1A[2K[22/304] tests/content/dl2-os-keys.spec.js:14:3 › pre printable has 20 questions with four bubbles each
 [1A[2K[23/304] tests/content/dl2-os-keys.spec.js:7:3 › post key lists all 20 answers with reasons
 [1A[2K[24/304] tests/content/dl2-os-keys.spec.js:14:3 › post printable has 20 questions with four bubbles each
+✔ simultaneous and later duplicate events send once (426.595792ms)
 [1A[2K[25/304] tests/content/dl2-os-keys.spec.js:22:1 › pre-test key letterhead org name renders on one line
 [1A[2K[26/304] tests/content/dl2-os-keys.spec.js:36:3 › pre answer key is excluded from search indexing
 [1A[2K[27/304] tests/content/dl2-os-keys.spec.js:36:3 › post answer key is excluded from search indexing
@@ -93,69 +121,74 @@ Running 304 tests using 5 workers
 [1A[2K[29/304] tests/content/dl2-os-pdf-text.spec.js:6:1 › clean() makes every PDF string encodable in the WinAnsi fallback fonts
 [1A[2K[30/304] tests/content/dl2-os-week1-files.spec.js:40:1 › the flyer is a real Word document with the Mission 1C text
 [1A[2K[31/304] tests/content/dl2-os-week1-files.spec.js:52:1 › Normal margins push exactly the last line to page 2; Narrow margins fit one page
+✔ missing configuration stays recorded without sending, and later configuration can send (453.106917ms)
 [1A[2K[32/304] tests/content/dl2-os-week1-files.spec.js:72:1 › the site serves both class files
-[1A[2K[33/304] tests/content/dl2-os-week1-files.spec.js:79:1 › the run sheet and the missions link the class files; printed wording stays
-[1A[2K[34/304] tests/content/dl2-os-week1-print.spec.js:15:1 › five missions, each complete
-[1A[2K[35/304] tests/content/dl2-os-week1-print.spec.js:30:1 › each mission prints on its own page(s), letter size
+[1A[2K[33/304] tests/content/dl2-os-week1-print.spec.js:30:1 › each mission prints on its own page(s), letter size
+[1A[2K[34/304] tests/content/dl2-os-week1-files.spec.js:79:1 › the run sheet and the missions link the class files; printed wording stays
+[1A[2K[35/304] tests/content/dl2-os-week1-print.spec.js:47:1 › the worksheet prints as exactly 5 pages, one per mission
 [1A[2K[36/304] tests/content/dl2-os-week1-print.spec.js:37:1 › run sheet and key exist with the letterhead
-[1A[2K[37/304] tests/content/dl2-os-week1-print.spec.js:47:1 › the worksheet prints as exactly 5 pages, one per mission
-[1A[2K[38/304] tests/content/dl2-os-week1-print.spec.js:53:1 › the run sheet prints on exactly 1 page, with the Before class checks
-[1A[2K[39/304] tests/content/dl2-os-week1-print.spec.js:63:1 › mission fills print even with background graphics off
-[1A[2K[40/304] tests/content/dl2-review-fixes.spec.js:18:1 › DL2 teaching text is visible on every slide, not only inside a collapsed note
-[1A[2K[41/304] tests/content/dl2-review-fixes.spec.js:26:1 › DL2 week 6 worksheet teaches the hand-repair mechanics for version 2
-[1A[2K[42/304] tests/content/dl2-review-fixes.spec.js:39:1 › DL2 week 5 skills challenge gives every task its inputs, a response box and a rating
+[1A[2K[37/304] tests/content/dl2-os-week1-print.spec.js:15:1 › five missions, each complete
+[1A[2K[38/304] tests/content/dl2-review-fixes.spec.js:18:1 › DL2 teaching text is visible on every slide, not only inside a collapsed note
+[1A[2K[39/304] tests/content/dl2-review-fixes.spec.js:26:1 › DL2 week 6 worksheet teaches the hand-repair mechanics for version 2
+[1A[2K[40/304] tests/content/dl2-os-week1-print.spec.js:53:1 › the run sheet prints on exactly 1 page, with the Before class checks
+✔ uncertain provider outcome is not blindly resent (382.64675ms)
+✔ reusing an ID with changed answers or identity is rejected (0.648166ms)
+[1A[2K[41/304] tests/content/dl2-review-fixes.spec.js:39:1 › DL2 week 5 skills challenge gives every task its inputs, a response box and a rating
+[1A[2K[42/304] tests/content/dl2-os-week1-print.spec.js:63:1 › mission fills print even with background graphics off
 [1A[2K[43/304] tests/content/dl2-week1-tsdr.spec.js:12:1 › Week 1 agenda teaches each skill group as its own Tell, Show, Do, Review cycle
 [1A[2K[44/304] tests/content/dl2-week1-tsdr.spec.js:22:1 › Week 1 plays each video chapter inside its cycle and names the pause points
 [1A[2K[45/304] tests/content/dl2-week1-tsdr.spec.js:29:1 › Week 1 pre-test step records each score instead of printing full reports
-[1A[2K[46/304] tests/content/dl2-week1-tsdr.spec.js:34:1 › Week 1 Mission Control plan covers five observable tasks and all 120 minutes
-[1A[2K[47/304] tests/content/dl2-week1-tsdr.spec.js:44:1 › Week 1 worksheet tasks give learners everything they need to finish them
-[1A[2K[48/304] tests/content/dl2-week1-tsdr.spec.js:52:1 › Week 1 slides say how printers, screens and connectors really behave
-[1A[2K[49/304] tests/content/dl2-week1-tsdr.spec.js:62:1 › Week 1 knowledge checks offer believable wrong answers
-[1A[2K[50/304] tests/content/dl2-week1-tsdr.spec.js:77:1 › Week 1 prep list is specific to week 1
-[1A[2K[51/304] tests/content/dl2-week6-agent.spec.js:20:1 › Week 6 teaches directing an AI coding agent, not vibe coding
-[1A[2K[52/304] tests/content/dl2-week1-tsdr.spec.js:69:1 › Week 1 lab quick card gives Windows 11 steps on the lesson plan
-[1A[2K[53/304] tests/content/dl2-week6-agent.spec.js:45:1 › Slide 10’s diff lines are real lines of versions 1 and 2
+[1A[2K[46/304] tests/content/dl2-week1-tsdr.spec.js:44:1 › Week 1 worksheet tasks give learners everything they need to finish them
+[1A[2K[47/304] tests/content/dl2-week1-tsdr.spec.js:52:1 › Week 1 slides say how printers, screens and connectors really behave
+[1A[2K[48/304] tests/content/dl2-week1-tsdr.spec.js:62:1 › Week 1 knowledge checks offer believable wrong answers
+[1A[2K[49/304] tests/content/dl2-week1-tsdr.spec.js:69:1 › Week 1 lab quick card gives Windows 11 steps on the lesson plan
+[1A[2K[50/304] tests/content/dl2-week1-tsdr.spec.js:34:1 › Week 1 Mission Control plan covers five observable tasks and all 120 minutes
+[1A[2K[51/304] tests/content/dl2-week1-tsdr.spec.js:77:1 › Week 1 prep list is specific to week 1
+[1A[2K[52/304] tests/content/dl2-week6-agent.spec.js:20:1 › Week 6 teaches directing an AI coding agent, not vibe coding
+[1A[2K[53/304] tests/content/dl2-week6-agent.spec.js:30:1 › Week 6 slide titles name each step of the agent loop; order, count and kinds are unchanged
 [1A[2K[54/304] tests/content/dl2-week6-agent.spec.js:35:1 › Week 6 slide 10 shows the agent’s diff, with minus and plus signs, where toLowerCase disappears
-[1A[2K[55/304] tests/content/dl2-week6-agent.spec.js:30:1 › Week 6 slide titles name each step of the agent loop; order, count and kinds are unchanged
-[1A[2K[56/304] tests/content/dl2-week6-agent.spec.js:83:1 › Week 6 worksheet opens all three versions and gives the procedures before the tasks
-[1A[2K[57/304] tests/content/dl2-week6-agent.spec.js:75:1 › Version 1’s script has one statement per line, so an agent’s diff is short enough to read
-[1A[2K[58/304] tests/content/dl2-week6-agent.spec.js:55:1 › The three practice pages: version 2 keeps its planted defect and version 3 is a one-line repair
+[1A[2K[55/304] tests/content/dl2-week6-agent.spec.js:45:1 › Slide 10’s diff lines are real lines of versions 1 and 2
+[1A[2K[56/304] tests/content/dl2-week6-agent.spec.js:75:1 › Version 1’s script has one statement per line, so an agent’s diff is short enough to read
+✔ SMTP verification failure never sends or records accepted (191.380542ms)
+✔ the native event handler stays disabled outside production or without the activation flag (4.71425ms)
+[1A[2K[57/304] tests/content/dl2-week6-agent.spec.js:83:1 › Week 6 worksheet opens all three versions and gives the procedures before the tasks
+[1A[2K[58/304] tests/content/dl2-week6-agent.spec.js:110:1 › Week 6 rubric scores four criteria 0, 1 or 2 with descriptors, on the worksheet and the answer guide
 [1A[2K[59/304] tests/content/dl2-week6-agent.spec.js:98:1 › Week 6 worksheet logs the five checks and the retest, with a typed box for each result
-[1A[2K[60/304] tests/content/dl2-week6-agent.spec.js:110:1 › Week 6 rubric scores four criteria 0, 1 or 2 with descriptors, on the worksheet and the answer guide
+[1A[2K[60/304] tests/content/dl2-week6-agent.spec.js:55:1 › The three practice pages: version 2 keeps its planted defect and version 3 is a one-line repair
 [1A[2K[61/304] tests/content/dl2-week6-agent.spec.js:123:1 › Week 6 answer guide lists the expected result of every check
-[1A[2K[62/304] tests/content/dl2-week6-agent.spec.js:137:1 › Week 6 plan, syllabus and instructor guide describe the instructor-led agent demo
-[1A[2K[63/304] tests/content/dl2-week6-agent.spec.js:151:1 › Week 6 slides show the real starter page and the agent loop, not the old rename or focus repair
-[1A[2K[64/304] tests/content/dl2-week6-agent.spec.js:128:1 › Week 6 transcript defines the words the video uses, above the transcript
+[1A[2K[62/304] tests/content/dl2-week6-agent.spec.js:128:1 › Week 6 transcript defines the words the video uses, above the transcript
+[1A[2K[63/304] tests/content/dl2-week6-agent.spec.js:137:1 › Week 6 plan, syllabus and instructor guide describe the instructor-led agent demo
+[1A[2K[64/304] tests/content/dl2-week6-agent.spec.js:151:1 › Week 6 slides show the real starter page and the agent loop, not the old rename or focus repair
 [1A[2K[65/304] tests/content/dl2-week6-agent.spec.js:166:1 › DL2 course description presents week 6 as guiding an AI agent, not a small AI-built app
-[1A[2K[66/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 2 plays every video chapter inside the plan and names the pause points
-[1A[2K[67/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 2 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[66/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 2 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[67/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 2 plays every video chapter inside the plan and names the pause points
 [1A[2K[68/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 2 lesson plan states measurable outcomes for every goal
-[1A[2K[69/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 2 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[69/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 2 has a week-specific prep list and a Windows 11 quick card
 [1A[2K[70/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 2 knowledge checks offer believable wrong answers
-[1A[2K[71/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 3 plays every video chapter inside the plan and names the pause points
-[1A[2K[72/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 3 lesson plan states measurable outcomes for every goal
-[1A[2K[73/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 3 agenda teaches in Tell, Show, Do, Review cycles
-[1A[2K[74/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 3 knowledge checks offer believable wrong answers
-[1A[2K[75/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 4 agenda teaches in Tell, Show, Do, Review cycles
-[1A[2K[76/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 3 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[71/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 3 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[72/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 3 plays every video chapter inside the plan and names the pause points
+[1A[2K[73/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 3 lesson plan states measurable outcomes for every goal
+[1A[2K[74/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 3 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[75/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 3 knowledge checks offer believable wrong answers
+[1A[2K[76/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 4 agenda teaches in Tell, Show, Do, Review cycles
 [1A[2K[77/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 4 plays every video chapter inside the plan and names the pause points
 [1A[2K[78/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 4 lesson plan states measurable outcomes for every goal
-[1A[2K[79/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 4 has a week-specific prep list and a Windows 11 quick card
-[1A[2K[80/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 4 knowledge checks offer believable wrong answers
-[1A[2K[81/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 5 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[79/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 4 knowledge checks offer believable wrong answers
+[1A[2K[80/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 5 agenda teaches in Tell, Show, Do, Review cycles
+[1A[2K[81/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 4 has a week-specific prep list and a Windows 11 quick card
 [1A[2K[82/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 5 plays every video chapter inside the plan and names the pause points
 [1A[2K[83/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 5 lesson plan states measurable outcomes for every goal
-[1A[2K[84/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 5 has a week-specific prep list and a Windows 11 quick card
-[1A[2K[85/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 6 agenda teaches in Tell, Show, Do, Review cycles
-[1A[2K[86/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 5 knowledge checks offer believable wrong answers
-[1A[2K[87/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 6 plays every video chapter inside the plan and names the pause points
-[1A[2K[88/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 6 lesson plan states measurable outcomes for every goal
-[1A[2K[89/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 6 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[84/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 5 knowledge checks offer believable wrong answers
+[1A[2K[85/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 5 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[86/304] tests/content/dl2-weeks-tsdr.spec.js:32:2 › Week 6 plays every video chapter inside the plan and names the pause points
+[1A[2K[87/304] tests/content/dl2-weeks-tsdr.spec.js:39:2 › Week 6 lesson plan states measurable outcomes for every goal
+[1A[2K[88/304] tests/content/dl2-weeks-tsdr.spec.js:45:2 › Week 6 has a week-specific prep list and a Windows 11 quick card
+[1A[2K[89/304] tests/content/dl2-weeks-tsdr.spec.js:21:2 › Week 6 agenda teaches in Tell, Show, Do, Review cycles
 [1A[2K[90/304] tests/content/dl2-weeks-tsdr.spec.js:52:2 › Week 6 knowledge checks offer believable wrong answers
-[1A[2K[91/304] tests/content/homepage-catalog.spec.js:27:1 › homepage has zero external CDN dependencies (offline-capable)
-[1A[2K[92/304] tests/content/homepage-catalog.spec.js:11:1 › homepage renders one card per course in courses.json
-[1A[2K[93/304] tests/functional/assessment-pairing.spec.js:57:3 › ICS: deliberate attempt pairing reaches results, saved data, export, and print
-[1A[2K[94/304] tests/functional/assessment-pairing.spec.js:47:3 › ICS: different learner and unconfirmed same-name learner never inherit a comparison
+[1A[2K[91/304] tests/content/homepage-catalog.spec.js:11:1 › homepage renders one card per course in courses.json
+[1A[2K[92/304] tests/content/homepage-catalog.spec.js:27:1 › homepage has zero external CDN dependencies (offline-capable)
+[1A[2K[93/304] tests/functional/assessment-pairing.spec.js:47:3 › ICS: different learner and unconfirmed same-name learner never inherit a comparison
+[1A[2K[94/304] tests/functional/assessment-pairing.spec.js:57:3 › ICS: deliberate attempt pairing reaches results, saved data, export, and print
 [1A[2K[95/304] tests/functional/assessment-pairing.spec.js:65:3 › ICS: completed results keep their confirmed baseline after storage changes
 [1A[2K[96/304] tests/functional/assessment-pairing.spec.js:73:3 › ICS: editing identity and replacing a saved attempt invalidate confirmation
 [1A[2K[97/304] tests/functional/assessment-pairing.spec.js:89:3 › ICS: malformed saved results cannot create a comparison
@@ -187,8 +220,8 @@ Running 304 tests using 5 workers
 [1A[2K[123/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: weeks/week-01/worksheet.html
 [1A[2K[124/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: weeks/week-01/run-sheet.html
 [1A[2K[125/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: weeks/week-01/files/sound-test.html
-[1A[2K[126/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/pre-test.html
-[1A[2K[127/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/post-test.html
+[1A[2K[126/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/post-test.html
+[1A[2K[127/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/pre-test.html
 [1A[2K[128/304] tests/functional/dl2-os-a11y.spec.js:16:24 › axe: assessments/pre-test-answer-key.html
 [1A[2K[129/304] tests/functional/dl2-os-a11y.spec.js:25:1 › axe: pre-test resumed on a shared PC
 [1A[2K[130/304] tests/functional/dl2-os-deck.spec.js:17:1 › Next reveals build parts before moving on, and Back reverses
@@ -202,8 +235,8 @@ Running 304 tests using 5 workers
 [1A[2K[138/304] tests/functional/dl2-os-demo.spec.js:18:1 › mounts with caption, counter and checklist
 [1A[2K[139/304] tests/functional/dl2-os-demo.spec.js:26:1 › Next plays the click and applies state; Back restores it
 [1A[2K[140/304] tests/functional/dl2-os-demo.spec.js:42:1 › reduced motion jumps straight to each state
-[1A[2K[141/304] tests/functional/dl2-os-demo.spec.js:48:1 › controller refuses Next at the end so the deck can move on
-[1A[2K[142/304] tests/functional/dl2-os-demo.spec.js:54:1 › half speed button reports its state in words
+[1A[2K[141/304] tests/functional/dl2-os-demo.spec.js:54:1 › half speed button reports its state in words
+[1A[2K[142/304] tests/functional/dl2-os-demo.spec.js:48:1 › controller refuses Next at the end so the deck can move on
 [1A[2K[143/304] tests/functional/dl2-os-demo.spec.js:74:1 › cursor rests on a visible fallback when its target is hidden by its own state
 [1A[2K[144/304] tests/functional/dl2-os-demo.spec.js:97:1 › Next during the last step's animation finishes the step and stays on the slide
 [1A[2K[145/304] tests/functional/dl2-os-pdf.spec.js:27:1 › pre-test PDF: 2 pages, record-id title, named file
@@ -366,7 +399,7 @@ Running 304 tests using 5 workers
 [1A[2K[302/304] tests/functional/va-and-intake-repairs.spec.js:27:1 › intake confirmation action resolves and displays success without sending form data
 [1A[2K[303/304] tests/functional/va-and-intake-repairs.spec.js:44:3 › instructor footer contrast meets AA: /instructors/intake.html
 [1A[2K[304/304] tests/functional/va-and-intake-repairs.spec.js:44:3 › instructor footer contrast meets AA: /instructors/classes/
-[1A[2K  304 passed (1.0m)
+[1A[2K  304 passed (58.6s)
 ==> 5/5 a11y check (axe-core, ratchet vs committed baseline)
   / [homepage] — clean
   /courses/computer-skills/index.html [computer-skills: course home] — clean

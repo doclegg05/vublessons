@@ -1,8 +1,10 @@
 # Digital Literacy Level 2 narration refresh
 
 Prepared September 28, 2026 on `codex/dl2-narration-refresh`, from base
-`3cdc6fa2e6cf4a11e94ba443413703ed1fb46864`. This is a local review build.
-Publication awaits the user's review of the narrator and instructional pace.
+`3cdc6fa2e6cf4a11e94ba443413703ed1fb46864`. The user approved the narrator and
+instructional pace on September 28, 2026
+and authorized updating, merging and deploying this release. The branch now
+includes the graded-PDF email release from `main` at `b976c2f`.
 
 ## Review
 
@@ -33,12 +35,15 @@ All **6,480 authored teaching words**, 60 chapter IDs/titles and visual labels
 match the base release. The existing photographs, generated workstation intro,
 diagrams and fictional screen demonstrations remain. Demonstration actions,
 chapter windows, word alignments and captions follow the newly recorded audio.
-Only chapter timestamps changed across twelve learner pages.
+Only chapter timestamps and media URL versions changed across twelve learner pages.
+The media URLs include content hashes so returning learners receive the new audio
+and matching captions despite the one-day browser media cache.
 
 The current 27-slide Week 1 Mission Control presentation, its `os/` layer,
 assessments, backend, deployment configuration, catalog and teaching scripts
-remain unchanged. The work was isolated from the primary checkout and its
-concurrent assessment-email work. No production deployment was performed.
+match the updated `main` release. The work was isolated from the primary checkout
+and incorporated its completed assessment-email release before publication. The
+initial review did not deploy; publication was authorized after that review.
 
 Earlier Britt profiles and the original media manifest are retained. Selected
 source settings, prompts and receipts are in
@@ -88,7 +93,7 @@ All final checks passed:
 
 - `bash scripts/quality.sh`: build passed, 198 pages; 1,314 internal references
   with zero broken links; four-course catalog consistent; **304 Playwright tests
-  passed**; all 34 scanned accessibility routes clean. Readability remains the
+  passed, plus all 10 graded-PDF email server checks**; all 34 scanned accessibility routes clean. Readability remains the
   existing report-only baseline, not a new gate.
 - `verify-media.py --profile brad-refresh`: all six complete video/audio streams
   decoded without errors or black frames; source/receipt/alignment hashes and

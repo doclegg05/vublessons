@@ -3,10 +3,12 @@ const { chromium } = require('@playwright/test');
 const { AxeBuilder } = require('@axe-core/playwright');
 const fs = require('node:fs/promises');
 const assert = require('node:assert/strict');
+const { createHash } = require('node:crypto');
 
 (async () => {
   const base = process.env.DL2_REVIEW_URL || 'http://127.0.0.1:3948';
-  const out = 'docs/digital-literacy-2/review/narration-refresh';
+  const out = process.env.DL2_REVIEW_OUTPUT || 'docs/digital-literacy-2/review/narration-refresh';
+  const galleryRoute = 'docs/digital-literacy-2/review/narration-refresh';
   await fs.mkdir(out, { recursive: true });
   const manifest = JSON.parse(await fs.readFile('courses/digital-literacy-2/media/manifest.json'));
   const browser = await chromium.launch({ headless: true });
@@ -21,6 +23,11 @@ const assert = require('node:assert/strict');
       const chapters = JSON.parse(await fs.readFile(`courses/digital-literacy-2/media/${week}-chapters.json`));
       const media = manifest.videos[n - 1];
       await page.goto(`${base}/courses/digital-literacy-2/weeks/${week}/video-transcript.html`);
+      const videoUrl = new URL(await page.locator('video source').getAttribute('src'), base);
+      const captionUrl = new URL(await page.locator('video track').getAttribute('src'), base);
+      const captionHash = createHash('sha256').update(await fs.readFile(media.captions)).digest('hex');
+      assert.equal(videoUrl.searchParams.get('v'), media.sha256.slice(0, 12));
+      assert.equal(captionUrl.searchParams.get('v'), captionHash.slice(0, 12));
       await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
       const duration = await page.locator('video').evaluate(v => v.duration);
       assert(Math.abs(duration - media.durationSeconds) < .1);
@@ -64,7 +71,12 @@ const assert = require('node:assert/strict');
       videos.push({ week, duration, keyboardChapterSeeks: 10, playback });
       console.log(`${week}: 10 keyboard seeks, 3 playback/caption/audio-decode samples passed`);
     }
-    await page.goto(`${base}/${out}/index.html`);
+    if (process.env.DL2_SKIP_GALLERY === '1') {
+      assert.equal(errors.length, 0);
+      await fs.writeFile(`${out}/playback-verification.json`, JSON.stringify({ base, videos, pageErrors: errors }, null, 2) + '\n');
+      return;
+    }
+    await page.goto(`${base}/${galleryRoute}/index.html`);
     // Relative poster paths can break when a static server removes index.html.
     // Exercise the actual gallery too, including its one-player-at-a-time rule.
     const galleryVideos = page.locator('video');
