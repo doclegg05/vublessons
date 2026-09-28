@@ -139,7 +139,7 @@ body.blackout::after { content:""; position:fixed; inset:0; background:#000; z-i
 .slide[data-scene="gorge"] .opener .chip:nth-child(4) { animation-delay:.9s; }
 .slide[data-scene="gorge"] .opener .chip:nth-child(5) { animation-delay:1.1s; }
 @keyframes dl2-chip { to { opacity:1; transform:none; } }
-.slide[data-scene="gorge"] .opener .go { position:absolute; left:6%; bottom:7%; font-family:"DL2 JetBrains Mono", monospace; font-size:1.2cqw; letter-spacing:.2em; color:var(--c-gold); }
+.slide[data-scene="gorge"] .opener .go { position:absolute; left:6%; bottom:19%; font-family:"DL2 JetBrains Mono", monospace; font-size:1.2cqw; letter-spacing:.2em; color:var(--c-gold); } /* clears the always-on .strip (bottom:4.5%, height:7.5%), unlike the mockup where the opener had no strip */
 .slide[data-scene="gorge"] .opener .go::after { content:" ▮"; animation:dl2-blink 1s steps(2) infinite; }
 .slide[data-scene="gorge"] .opener .where { position:absolute; right:3%; top:5%; text-align:right; font-family:"DL2 JetBrains Mono", monospace; font-size:1.2cqw; letter-spacing:.12em; color:var(--c-peach); line-height:1.6; }
 
