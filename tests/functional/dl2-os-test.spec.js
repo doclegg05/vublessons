@@ -297,3 +297,18 @@ test('a test started in this visit shows no Not-you note', async ({ page }) => {
   await expect(page.locator('.q-count')).toHaveText('Question 1 of 20');
   await expect(page.locator('.resume-note')).toHaveCount(0);
 });
+
+// Final review minor (ledger T5): an arrow key pressed to scroll must not silently change the answer.
+// Arrow keys only act inside the answer options; A–D still work anywhere outside a text field.
+test('arrow keys change the answer only when focus is on the options', async ({ page }) => {
+  await start(page);
+  await page.locator('.opt[data-letter="A"]').click();
+  await page.getByRole('button', { name: 'Next' }).focus();
+  await page.keyboard.press('ArrowDown');
+  await expect(page.locator('.opt[data-letter="A"]')).toHaveAttribute('aria-checked', 'true');
+  await expect(page.locator('.opt[data-letter="B"]')).toHaveAttribute('aria-checked', 'false');
+  await expect(page.locator('.q-count')).toHaveText('Question 1 of 20');
+  await page.getByRole('button', { name: 'Next' }).focus();
+  await page.keyboard.press('c');
+  await expect(page.locator('.opt[data-letter="C"]')).toHaveAttribute('aria-checked', 'true');
+});

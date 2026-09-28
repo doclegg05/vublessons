@@ -205,9 +205,10 @@
     if (LETTERS.indexOf(k) > -1) { st.answers[st.at] = k; save(); renderQuestion(); return; }
     /* ARIA radiogroup keyboard pattern: Down/Right moves to (and selects) the next
      * option, Up/Left the previous one, wrapping at the ends. Selection follows focus,
-     * matching the letter-key and click behaviors above. */
+     * matching the letter-key and click behaviors above. Only inside the options: an arrow
+     * pressed on Back or Next (to scroll, say) must not quietly change the answer. */
     var dir = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1 : (e.key === 'ArrowUp' || e.key === 'ArrowLeft') ? -1 : 0;
-    if (!dir) return;
+    if (!dir || !e.target.closest('.opts')) return;
     e.preventDefault();
     var count = ITEMS[st.at].options.length;
     var idx = LETTERS.indexOf(st.answers[st.at]);
