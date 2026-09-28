@@ -7,13 +7,23 @@
     "dev": "serve .",
     "serve:dist": "serve dist/site",
     "links": "python tools/link-check.py",
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "test:report-email": "tsc -p tsconfig.functions.json && tsx --test tests/server/*.test.mts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@fontsource/playfair-display": "^5.2.8",
     "@fontsource/source-sans-3": "^5.2.9",
     "@playwright/test": "^1.58.2",
-    "serve": "^14.2.6"
+    "@types/node": "^26.6.3",
+    "@types/nodemailer": "^8.0.2",
+    "serve": "^14.2.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.1",
+    "@netlify/functions": "^6.0.0",
+    "nodemailer": "^10.0.12"
   }
 }

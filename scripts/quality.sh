@@ -27,6 +27,9 @@ if [ ! -d node_modules ]; then
   npm ci
 fi
 
+echo "==> graded PDF email server checks"
+npm run test:report-email
+
 echo "==> 1/5 build:site"
 npm run build:site
 
