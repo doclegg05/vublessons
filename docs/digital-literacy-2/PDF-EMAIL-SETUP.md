@@ -39,7 +39,11 @@ No app password has been supplied. No account, subscription or credential was cr
 2. In https://app.netlify.com/projects/vubcourse/configuration/env choose **Add a
    variable > Add a single variable**. Key: `DL2_GMAIL_APP_PASSWORD`. Paste the
    generated 16-character app password into Netlify only. Mark **Contains secret
-   values** where available, scope it to **Functions**, and use **Production** only.
+   values** and use **Production** only. Prefer **Functions** scope when available.
+   The current account plan locks secret scope to Builds, Functions and Runtime;
+   Functions-only requires an upgrade. Explicit instructor acceptance of those
+   broader production scopes is required before saving on this plan. Do not
+   upgrade or broaden the scope automatically.
    Never paste it in chat, browser source, the repository or public build files.
 3. Keep `DL2_PDF_EMAIL_ENABLED` unset/false until the prepared deployment is ready
    for the authorized synthetic test. The agent can set this non-secret activation
