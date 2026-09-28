@@ -2,9 +2,12 @@
  * Letter size, 44pt margins. Items 1–10 on page 1, 11–20 plus signatures on page 2
  * (a 14/6 split overflowed page 1: the real item bank's wrapped answer text needs
  * up to ~492pt on a page with only ~435pt of table room; 10/10 leaves margin). */
-(function (global) {
+(function (global, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory;
+  else global.DL2Pdf = factory(global);
+})(typeof window !== 'undefined' ? window : globalThis, function (global, readAsset) {
   'use strict';
-  var here = (document.currentScript && document.currentScript.src) || location.href;
+  var here = typeof document !== 'undefined' ? ((document.currentScript && document.currentScript.src) || location.href) : 'https://local.invalid/os/pdf.js';
   var asset = function (p) { return new URL(p, here).href; };
   var NAVY = [27, 54, 93], GOLD = [201, 162, 39], RED = [179, 25, 66], INK = [21, 33, 58], MUTED = [91, 104, 131], RULE = [227, 232, 241], MISS = [253, 245, 246], OK = [29, 107, 58], NO = [163, 20, 47];
   var PW = 612, PH = 792, M = 44;
@@ -21,7 +24,7 @@
       .replace(/[\t\n\r -   　]/g, ' ')
       .replace(/[^\x20-\x7E\xA0-\xFF–—‘’“”•…]/g, function (c) { return c.normalize('NFD').replace(/[^\x20-\x7E\xA0-\xFF–—‘’“”•…]/g, ''); });
   }
-  function fetchBytes(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(url); return r.arrayBuffer(); }); }
+  function fetchBytes(url) { if (readAsset) return readAsset(new URL(url).pathname.replace('/os/', '')); return fetch(url).then(function (r) { if (!r.ok) throw new Error(url); return r.arrayBuffer(); }); }
   function wrap(font, text, size, width) {
     var words = clean(text).split(/\s+/), lines = [], line = '';
     words.forEach(function (w) {
@@ -64,6 +67,7 @@
         doc.setTitle(report.recordId); doc.setSubject('DL2 ' + report.label + ' graded results');
         doc.setAuthor('West Virginia Veterans Upward Bound'); doc.setCreator('VUB Learning · DL2 Mission Control');
         doc.setCreationDate(report.submitted);
+        doc.setModificationDate(report.submitted);
 
         var p1 = doc.addPage([PW, PH]), p2 = doc.addPage([PW, PH]);
         function text(p, s, x, y, size, font, color) { p.drawText(clean(s), { x: x, y: y, size: size, font: font, color: rgbOf(L, color || INK) }); }
@@ -114,7 +118,7 @@
         text(p1, report.label + ' · Graded Results', M, PH - 164, 17, f.serif, NAVY);
         right(p1, 'Record ' + report.recordId, PW - M, PH - 156, 7.5, f.mono, MUTED);
         right(p1, 'Form: ' + report.form + ' ' + global.DL2Items.version + ' · 20 items', PW - M, PH - 166, 7.5, f.mono, MUTED);
-        var by = PH - 222, t = function (d) { return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }); };
+        var by = PH - 222, t = function (d) { return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }); };
         var mins = Math.max(1, Math.round((report.submitted - report.started) / 60000));
         box(p1, M, by, 190, 42, null, RULE); text(p1, 'STUDENT', M + 9, by + 28, 6.8, f.bold, MUTED);
         var who = fit(f.sans, report.name, 190 - 18, 10.5, 7); text(p1, who.text, M + 9, by + 12, who.size, f.sans);
@@ -149,5 +153,5 @@
       });
     });
   }
-  global.DL2Pdf = { build: build, _clean: clean };
-})(window);
+  return { build: build, _clean: clean };
+});
