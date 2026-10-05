@@ -1,9 +1,13 @@
 """Original task diagrams. No product screenshots or external assets."""
 from html import escape as e
+from week2 import WEEK2
 def rows(items,active=0):
  return '<div class="visual-rows">'+''.join(f'<div class="visual-row {"visual-active" if i==active else ""}"><span>{e(a)}</span><b>{e(b)}</b></div>' for i,(a,b) in enumerate(items))+'</div>'
 def visual(n,letter,step):
- if n==2 and letter=='A': return rows([('Search','help' if step==0 else 'library computer help Beckley'),('Source','Official provider page'),('Verify','Hours and eligibility')],step)
+ if n==2 and letter=='A':
+  # Text comes from the mission's own Show steps in week2.py, so the picture cannot drift from the lesson again.
+  asked,answer,page=[value for _,value,_ in WEEK2['missions'][0]['show']]
+  return rows([('Question',asked),('AI answer',answer if step>0 else 'Comes next'),('Library page',page if step>1 else 'Not opened yet')],step)
  if n==2 and letter=='B': return rows([('Name *','Alex · fictional'),('Topic *','[missing]' if step==1 else 'Computer help'),('Status','No request sent' if step==2 else 'Practice only')],step)
  if n==2 and letter=='C': return rows([('Documents','Community resources'),('File','library-help-v1.docx'),('Action',['Save → reopen','ZIP → extract','Recycle Bin → restore'][step])],step)
  if n==2 and letter=='D':return rows([('Reader','Viewer'),('Reviewer','Commenter'),('Coauthor','Editor')],step)

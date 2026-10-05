@@ -14,6 +14,7 @@ def mission(title, app, start, finish, tell, show, do, question, choices, answer
 
 def rnd(title, app, steps, early, notes, paper='', tasks=(), key=()):
     """One extra hands-on round: a Do slide, matching worksheet tasks and answer-key lines."""
+    assert not paper or app.startswith('Worksheet'), f'{title}: its material is printed on the worksheet, so the label must start with Worksheet'
     return dict(title=title, app=app, steps=list(steps), early=early, notes=notes, paper=paper, tasks=list(tasks), key=list(key))
 
 
@@ -44,8 +45,8 @@ A_ROUNDS = [
                       [['Free computer classes', '', ''], ['Beckley, Ohio', '', ''], ['Open until 9 p.m.', '', ''], ['Walk in without signing up', '', '']]),
         tasks=['Check each claim in the table against the fictional library page. Then write which source you would believe, and the next step before you travel.'],
         key=['Free computer classes: partly right, but the page says free for library card holders. Beckley, Ohio: wrong, the page says West Virginia. Open until 9 p.m.: wrong, the page says 8 p.m. Walk in without signing up: wrong, the page says sign up at the learning desk. Believe the library page, then phone the library to confirm hours before travelling.']),
-    rnd('Safe to ask?', 'Browser · Google',
-        ['Read six things someone might type into a question.',
+    rnd('Safe to ask?', 'Worksheet · six sample questions',
+        ['On your worksheet, read six things someone might type into a question.',
          'Sort each one: fine to ask, or keep it out of a question.',
          'Rewrite one unsafe question so it works without private details.'],
         'Done early? Write a safe question about a benefit or clinic near you.',
@@ -70,7 +71,7 @@ B_ROUNDS = [
                      ['Date of birth', ''], ['Social Security number', ''], ['Mother\'s maiden name', ''], ['Bank account number', '']]),
         tasks=['Sort the eight fields in the table, then write one question you would ask before giving a field you were unsure about.'],
         key=['Needed: name, preferred contact, topic, days free. Ask why first: date of birth. Do not give: Social Security number, mother\'s maiden name, bank account number. A good question: Why do you need this, and how long do you keep it?']),
-    rnd('Read before you send', 'Browser · fictional privacy note',
+    rnd('Read before you send', 'Worksheet · fictional privacy note',
         ['Read the short privacy note on your worksheet.',
          'Answer four questions: who collects it, why, how long, who sees it.',
          'Decide whether you would send the form, and why.'],
@@ -83,11 +84,11 @@ B_ROUNDS = [
 ]
 
 C_ROUNDS = [
-    rnd('Rename the mess', 'File Explorer · Downloads',
-        ['Read ten messy file names from a Downloads folder.',
+    rnd('Rename the mess', 'Worksheet · ten messy file names',
+        ['On your worksheet, read ten messy file names.',
          'Write a clear new name for each: subject, then what it is, then a version or date.',
-         'Choose one of three folders for each file.'],
-        'Done early? Create the three folders in Documents and move your renamed practice files into them.',
+         'Choose a folder for each: Community resources, Household or Photos.'],
+        'Done early? In File Explorer, make Household and Photos folders in Documents, beside Community resources.',
         'The names are on paper so the room needs no extra files. Good names say what it is and which version: library-hours-screenshot-oct.png. Folders: Community resources, Household, Photos. Any clear scheme works if a stranger could find the file.',
         paper=table(['Messy name', 'Clear new name', 'Folder'],
                     [['final-final-new.docx', '', ''], ['IMG_2231.jpg', '', ''], ['Document1.docx', '', ''], ['scan0004.pdf', '', ''], ['letter to landlord FINAL.docx', '', ''],
@@ -102,8 +103,8 @@ C_ROUNDS = [
         'File Explorer shows a search box at the top right. The Date modified heading appears in Details view. Pin to Quick access lives in the right-click menu (Show more options may be needed). If the lab image differs, demonstrate on the projector first.',
         tasks=['In File Explorer, search Documents for part of your file name, sort by Date modified, and pin Community resources to Quick access. Write one way each saves time.'],
         key=['Search finds a file from part of its name without opening every folder. Sorting by Date modified brings the newest file to the top. Pinning keeps the folder one click away in the left pane.']),
-    rnd('Which tool fixes it?', 'Windows · File Explorer',
-        ['Read four problems: deleted file, wrong wording, five files to email, dead computer.',
+    rnd('Which tool fixes it?', 'Worksheet · four problems',
+        ['On your worksheet, read four problems: deleted file, wrong wording, five files to email, dead computer.',
          'Choose the tool for each: Recycle Bin, version history, ZIP, or backup.',
          'Say why a ZIP does not fix the others.'],
         'Done early? Write a fifth problem and the tool that fixes it.',
@@ -115,8 +116,8 @@ C_ROUNDS = [
 ]
 
 D_ROUNDS = [
-    rnd('Role cards', 'Shared file · fictional',
-        ['Read six sharing situations.',
+    rnd('Role cards', 'Worksheet · six sharing situations',
+        ['On your worksheet, read six sharing situations.',
          'Choose the least access that does the job: Viewer, Commenter, Editor, or no sharing.',
          'Say what could go wrong if you chose Editor by habit.'],
         'Done early? Write a sharing situation of your own and the role it needs.',
@@ -126,8 +127,8 @@ D_ROUNDS = [
                      ['Thirty class members need the final copy.', ''], ['Someone you do not know asks to edit it.', ''], ['Your landlord should see a letter but not change it.', '']]),
         tasks=['Choose the least access for each of the six situations in the table, and explain one choice.'],
         key=['Neighbor: Viewer. Friend proofreading: Commenter. Co-leader: Editor. Thirty class members: Viewer, to named people or a view-only link. Stranger asking to edit: no sharing. Landlord: Viewer, or send a PDF copy.']),
-    rnd('Delete it. Then what?', 'Windows · File Explorer · fictional cloud folder',
-        ['Read three delete situations.',
+    rnd('Delete it. Then what?', 'Worksheet · three situations',
+        ['On your worksheet, read three delete situations.',
          'Say what sync does, what a backup does, and what version history does.',
          'Choose the best protection for each.'],
         'Done early? Explain sync and backup to a partner as if to a neighbor.',
@@ -168,14 +169,14 @@ WEEK2 = dict(
                 ['Ask in full sentences: what you need, where, what matters.',
                  'An AI answer is a lead from many pages. It can sound sure and be wrong.',
                  'Open the source: who published it, when, does it fit?'],
-                [('Ask', 'Free computer help, Beckley, evenings', 'Say what you need, where you are and what matters, as you would to a librarian. A follow-up narrows the answer. You do not have to start over.'),
-                 ('Read', 'AI answer: open until 9 p.m.', 'Treat the answer as a lead. It is a quick summary of many pages and can be wrong, old or about another town. Look for the links beside or beneath it.'),
-                 ('Check', 'Library page: open until 8 p.m.', 'Open the organization\'s own page and check who published it and when. When the answer and the page disagree, trust the page, then phone to confirm before you travel.')],
+                [('Ask', 'Where can I get free computer help near Beckley, WV, in the evening?', 'Say what you need, where you are and what matters, as you would to a librarian. A follow-up narrows the answer. You do not have to start over.'),
+                 ('Read', 'Open until 9\u00a0p.m.', 'Treat the answer as a lead. It is a quick summary of many pages and can be wrong, old or about another town. Look for the links beside or beneath it.'),
+                 ('Check', 'Open until 8\u00a0p.m.', 'Open the organization\'s own page and check who published it and when. When the answer and the page disagree, trust the page, then phone to confirm before you travel.')],
                 ['Ask a full-sentence question with a service, a town and one detail.',
                  'Ask one follow-up. Open one source link beneath the answer.',
                  'Find one detail the page confirms and one it does not.'],
-                'The AI answer says the library opens at 9. Its own page says 8. What next?',
-                ['Go at 9 because the answer is newer', 'Trust the library page and phone to confirm', 'Ask the AI again until it agrees'], 1,
+                'The AI answer says the library is open until 9\u00a0p.m. Its own page says until 8\u00a0p.m. What next?',
+                ['Trust the AI answer because it is newer', 'Trust the library page and phone to confirm', 'Ask the AI again until it agrees'], 1,
                 'The library\'s own page outranks a summary. Hours change, so phone before you go.',
                 [0, 1, 2, 3], 6, A_ROUNDS),
         mission('Complete a form carefully', 'Practice form', 'A request with missing information', 'A clear practice confirmation',

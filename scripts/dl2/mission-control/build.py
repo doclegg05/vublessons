@@ -119,7 +119,7 @@ for n,w in WEEKS.items():
   for idx in m['lab']:
    worksheet+=f'<li>{e(source_text(old["lab"][idx]))}</li>'
    answer+=f'<li>{e(source_text(old["answers"][idx]).replace('Page 1 printed or saved','Complete PDF saved or printed'))}</li>'
-  worksheet+='</ol>'+rounds_worksheet(mid,m)+response('evidence-'+mid,'What you tried, what happened, and how you checked it')+'<p>Route used: app / simulation / paper · Support: independent / with prompt / needs practice</p></section>'
+  worksheet+='</ol>'+response('evidence-'+mid,'What you tried, what happened, and how you checked it')+rounds_worksheet(mid,m)+'<p>Route used: app / simulation / paper · Support: independent / with prompt / needs practice</p></section>'
   answer+=f'</ol>{rounds_key(mid,m)}<p><b>Review:</b> {e(m["why"])}</p></section>'
  if w.get('capstone'):
   cp=w['capstone'];mid=f'{n}{chr(65+len(w["missions"]))}'
