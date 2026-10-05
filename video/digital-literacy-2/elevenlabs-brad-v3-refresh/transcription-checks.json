@@ -163,51 +163,60 @@
   {
     "week": "week-02",
     "chapter": "beat-01",
-    "sha256": "a274468abcdef65d40030365b77ee42323371b223b672f59e042a5c202ecd414",
-    "durationSeconds": 38.545,
-    "wordsPerMinute": 163.4,
+    "sha256": "f916f25f54c3f1a4a62bb238481e88eb95449f3eea68dc9d9587cfdc85a1a8c3",
+    "durationSeconds": 47.346,
+    "wordsPerMinute": 162.2,
     "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Imagine a neighbor asks where they can get help using a computer. You may already have a familiar library, community center, or veterans organization in mind. Use that experience as a starting point, then verify what is available now. Our task is to find a suitable public service, record enough evidence to revisit it, and organize a fictional handout without exposing private information. You can use a different local service that matters to you. The names and details in this demonstration are examples, not a claim about any particular organization. A useful search ends with a supported decision, not just a page that looks impressive."
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "it,"
+      }
+    ],
+    "recognized": "Imagine a neighbor asks where they can get help using a computer. You may already have a familiar library, community center, or veterans organization in mind. Use that experience as a starting point, then verify what is available now. Today's search tools answer in full sentences, so our first skill is asking well, and our second is checking what the answer says. Our task is to find a suitable public service, record enough evidence to revisit it, it, and organize a fictional handout without exposing private information. You can use a different local service that matters to you. The names and details in this demonstration are examples, not a claim about any particular organization. A useful search ends with a supported decision, not just an answer that sounds confident."
   },
   {
     "week": "week-02",
     "chapter": "beat-02",
-    "sha256": "b74d49667f8f739505158cf943ed96d133f14831f87905267afe2f7e17a6d808",
-    "durationSeconds": 44.861,
-    "wordsPerMinute": 144.4,
-    "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Start with the words that describe your task, the kind of service, and the location. Computer help library plus your town is more useful than typing help by itself. Inspect the result title and the website address before opening it. If the results are too broad, add a specific service or location. If there are no useful results, remove one restriction rather than assuming the service does not exist. Filters can help, but they can also hide a relevant page. Pause and write a search for your chosen community task. Explain what each word contributes. Then, change one term and compare the results instead of opening every link."
+    "sha256": "128a01c9336eddeac95accef12ea45759e6c0fc798969189d26903dde590d876",
+    "durationSeconds": 45.023,
+    "wordsPerMinute": 153.3,
+    "matchRatio": 0.9739,
+    "differences": [
+      {
+        "expected": "follow-up",
+        "recognized": "follow -up"
+      },
+      {
+        "expected": "follow-up,",
+        "recognized": "follow up,"
+      },
+      {
+        "expected": "follow-up.",
+        "recognized": "follow up."
+      }
+    ],
+    "recognized": "Search tools now answer in sentences. Google may show an AI overview above the results, and AI mode lets you keep asking follow -up questions. Both work best when you ask the way you would ask a librarian. Say what you need, where you are, and what matters to you. Where can I get free computer help near Beckley, West Virginia in the evening? Is far more useful than computer help? If the first answer is too broad, ask a follow up, such as, which of these are open on Saturdays? Pause and write a question for your chosen community task. Include the service, the place, and one detail that matters to you. Then, ask one follow up."
   },
   {
     "week": "week-02",
     "chapter": "beat-03",
-    "sha256": "126cf2013f2749b48601e045269af5f3baf9e4b3a3f9393e7b9e19e6afe95f61",
-    "durationSeconds": 45.116,
-    "wordsPerMinute": 143.6,
-    "matchRatio": 0.9907,
-    "differences": [
-      {
-        "expected": "Search-result",
-        "recognized": "appear. Search results"
-      },
-      {
-        "expected": "",
-        "recognized": "and"
-      }
-    ],
-    "recognized": "A page can be accurate and still be wrong for your decision. An official library page from another town may describe a real service, but not the one available to your neighbor. Ask who published the information, what evidence supports it, when it was updated, why it was written, and whether it answers your question. For opening hours or eligibility, go to the organization responsible for that service and check the details there. appear. Search results snippets may be incomplete. Compare two pages that disagree. Do not count votes between websites. Identify which source is in a position to know and confirm uncertain and details through an independently found contact method."
+    "sha256": "874ebecb1191fb4cd480f744176372f29436723c44a029f29391609f29c03334",
+    "durationSeconds": 46.068,
+    "wordsPerMinute": 156.3,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "An AI answer is a quick summary written from many pages. It can sound sure and still be wrong, out of date, or about a different town. So treat it as a lead, not a source. Look for the links beside or beneath it and open the organization's own page. Ask who published it, when it was updated, and whether it answers your question. If the summary and the page disagree, trust the responsible organization and confirm hours by phone before you travel. Never type private details into a question, such as a social security number, a bank number, or medical information. Pause, open one source from your answer, and find one detail it confirms and one it does not."
   },
   {
     "week": "week-02",
     "chapter": "beat-04",
-    "sha256": "087c5b2dcef8cb6e3e285c39c31cca52eff15255df6029c6454a5555ab6ca3af",
-    "durationSeconds": 40.31,
-    "wordsPerMinute": 162.2,
+    "sha256": "7382c5132e0ae6d008b7c6e41b43735a0258f69deb0439913d4d5a9965630b19",
+    "durationSeconds": 42.539,
+    "wordsPerMinute": 179.1,
     "matchRatio": 1.0,
     "differences": [],
-    "recognized": "Suppose you find a useful service today and need it again next month. A note saying good website will not be enough. Record the organization, the page title, the web address, the date you checked it, and the particular fact you plan to use. A bookmark helps you return, but it does not freeze the page or prove that the information remains current. In your handout, distinguish a checked fact from your own interpretation. If the page does not answer a question, write needs confirmation rather than filling the gap with a guess. This is the digital equivalent of writing the source beside a number in a household notebook."
+    "recognized": "Suppose you find a useful service today and need it again next month. A note saying, good website will not be enough. Record the organization, the page title, the web address, the date you checked it, and the particular fact you plan to use. If an AI answer led you to the page, record the page it pointed to, not the summary. A bookmark helps you return, but it does not freeze the page or prove that the information remains current. In your handout, distinguish a checked fact from your own interpretation. If the page does not answer a question, write needs confirmation rather than filling the gap with a guess. This is the digital equivalent of writing the source beside a number in a household notebook."
   },
   {
     "week": "week-02",

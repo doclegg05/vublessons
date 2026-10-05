@@ -1,29 +1,9 @@
 """Mission Control weeks 2–6. Authored teaching sequence, not assessment data."""
 def mission(title,app,start,finish,tell,show,do,question,choices,answer,why,lab,practice):
  return dict(title=title,app=app,start=start,finish=finish,tell=tell,show=show,do=do,question=question,choices=choices,answer=answer,why=why,lab=lab,practice=practice)
+from week2 import WEEK2
 WEEKS={
-2:dict(title='Find it. Check it. Keep it.',photo='library',warm='A neighbor in Beckley needs computer help. What would you check before sending them across town?',apply='Choose one local service. Save a source trail and explain what you still need to confirm.',minutes=[8,5,23,17,8,23,21,8,7],missions=[
-mission('Find a trustworthy answer','Browser','A broad search: computer help','A useful source you can check',
- ['Search for the service, provider and place.','Ask: who wrote it, what evidence, whose view?','Check when, task fit and another source.'],
- [('Search','public library computer help Beckley WV','Add a place; quotes or a date filter can help, but may hide useful pages.'),('Compare','Library page / undated social post','Use the original source. A recent date or .gov filter alone is not proof.'),('Record','Title → organization → URL → access date','Write the useful detail too. Confirm hours with the provider before travel.')],
- ['Refine one search using your town.','Compare two sources and record a source trail.','Name one detail to confirm before visiting.'],
- 'A recent post says the library opens late. What next?', ['Travel there now','Confirm with the library','Trust the search summary'],1,'Confirm through the library’s official contact. Recent and relevant are different from verified.',[0,1,2,3],6),
-mission('Complete a form carefully','Practice form','A request with missing information','A clear practice confirmation',
- ['Read required fields before typing.','Give only the information needed.','Read the confirmation; keep a reference.'],
- [('Inspect','Computer-help request · fictional','A name and topic are required. A Social Security number is not needed.'),('Try','Submit with the topic blank','A required-field message means the request is not complete.'),('Confirm','Practice complete — no request was sent','This local exercise cannot book a real appointment. Real forms need their own confirmation.')],
- ['Open the practice form; use fictional details.','Try a blank required field, then correct it.','Read the confirmation and explain its limit.'],
- 'The practice page says “No request was sent.” What happened?', ['An appointment is booked','Only the practice is complete','Your instructor received it'],1,'This is an account-free simulation. It practices validation and reading a confirmation, not delivery.',[4],10),
-mission('Organize and recover a file','File Explorer','A file lost among downloads','A named file you can reopen',
- ['Use a clear folder and file name.','ZIP packages files; extract before editing.','Deleted file? Recycle Bin. Wrong edit? History.'],
- [('Save','Documents / Community resources / library-help-v1.docx','Save a named file, close it, and reopen it from the folder.'),('Package','Community resources.zip → Extract All','Compression is not encryption or a separate backup. Edit the extracted copy.'),('Recover','Deleted file → Recycle Bin → Restore','For a bad edit in a cloud file, inspect version history; alert collaborators first.')],
- ['Save and reopen a clearly named practice file.','ZIP a copy and extract it into a new folder.','Delete the spare file, then restore it.'],
- 'The file exists, but a paragraph was replaced. Where first?', ['Recycle Bin','Make another ZIP','Version history, if available'],2,'Recycle Bin recovers deleted files. Version history can recover earlier content of a cloud file.',[5,7],18),
-mission('Share only the access needed','Shared file','One file; three different jobs','Reader, reviewer and coauthor roles',
- ['Viewer reads; commenter suggests; editor changes.','Check the account, owner and named recipients.','Sync copies deletions; keep a separate backup.'],
- [('Decide','Reader: Viewer · Reviewer: Commenter','If commenting is unavailable, agree on feedback another way; do not grant editing by habit.'),('Review','Coauthor: Editor · Anyone link: Off','Keep one shared copy and verify the intended person can open it.'),('Protect','Read-only ≠ encryption ≠ backup','Read-only limits changes. Sync can spread deletion. A separate backup supports recovery.')],
- ['Assign access to a reader, reviewer and writer.','State who owns the central copy.','Explain sync versus a separate backup.'],
- 'A neighbor only needs to read the handout. Which access?', ['Editor','Viewer','Public editable link'],1,'Viewer meets the task with less ability to change the shared copy. It does not encrypt it.',[6,7],15)
-]),
+2:WEEK2,
 3:dict(title='Make a useful resource pack.',photo='resource-pack',warm='Think of instructions that helped you learn a new task. What made them easy to follow?',apply='Open the saved PDF as a neighbor would. Check its steps, link and layout; choose one improvement.',minutes=[8,5,27,22,8,20,16,7,7],missions=[
 mission('Structure, then suggest','Word','A wall of plain text','A clear handout with a reviewed edit',
  ['Use real headings and numbered steps.','Name the link destination; use Ctrl+K.','Track Changes lets the owner decide.'],

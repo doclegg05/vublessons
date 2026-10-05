@@ -345,8 +345,8 @@
       "title": "Find, judge, and organize information",
       "summary": "Find a reliable community resource and manage a shared file with care.",
       "objectives": [
-        "Write a clear search and narrow it with one filter.",
-        "Judge whether a source fits your question, and record where you found it.",
+        "Ask a search tool a full-sentence question that names the service, the place and one detail, then refine it with a follow-up.",
+        "Read an AI answer as a lead, check it against the organization's own page, and record where you found it.",
         "Fill in an online form with only what is needed, and read the confirmation.",
         "Save a file with a clear name in a folder you can find, and pack it in a ZIP file.",
         "Choose who can view, comment or edit, and pick the right way to get a file back."
@@ -361,54 +361,49 @@
       ],
       "agenda": [
         [
-          7,
-          "Warm-up and goals",
-          "Logins. Reconnect: pairs share last week's home task (one change and how they undid it). Recall Level 1: ask what made a search clear, and where they saved their Level 1 file and what they called it. Read the goals on slide 1 aloud."
+          8,
+          "Opening video",
+          "Play the opening video, starting at chapter 1 (7:35 in all, captions on). It asks learners to ask well, check the answer, and keep a source trail, then Cycles A to D replay the chapters they need. Pause only if a question comes up."
         ],
         [
-          3,
-          "Introduction: the neighbor's question",
-          "Tell: slide 2 and chapter 1, a neighbor needs computer help. Learners write worksheet task 1, using library computer help or a service they need."
+          5,
+          "Welcome, experience and overview",
+          "Logins. Pairs share last week's home task. Read the overview: four missions, each with extra rounds, then a capstone."
         ],
         [
-          12,
-          "Cycle A: search",
-          "Tell: slides 3 and 4 (no plus signs; quotation marks; site:gov; a date filter). Show: chapter 2 from slide 14, pausing at 1:17 so learners say a search aloud; then live in Edge, search help, then public library computer help and a town, then one refinement, and Tools \u203a Any time on google.com. Do: worksheet task 2, every learner at their own seat. Review: a partner reads the refined search and says what changed; scan for plus signs and searches that are too narrow."
+          22,
+          "Cycle A: ask well, then check it",
+          "Tell: full-sentence questions; an AI answer is a lead; open the source. Show: chapters 2 and 3, pausing at 1:26 so learners say a question aloud and at 2:22 so they name one detail the page confirms, then chapter 4 (leave a source trail); then live in Edge, ask a question about a local library, a follow-up, then open the library's own page. Do: worksheet tasks 1 to 4 and the rounds rescue the weak question, catch the error and safe to ask, every learner at their own seat. Review: the library answer says 9 but its page says 8; a partner explains the next step."
         ],
         [
           16,
-          "Cycle B: judge and record a source",
-          "Tell: slides 5 and 7; say that an AI summary at the top of the results is not the source. Show: chapter 3 and chapter 4, then live, open a library's own page, find who runs it and when it was updated, and copy the address with Ctrl and L, then Ctrl and C. Do: worksheet tasks 3 and 4, every learner, using slide 8 as the checklist. Review: the slide 19 knowledge check; a partner checks the five source fields. Slide 6 is optional."
+          "Cycle B: complete a form carefully",
+          "Tell: the practice form. Show: chapter 5, pausing at 3:41 before chapter 6 starts; then show the message Please select an item in the list. Do: worksheet task 5 and the rounds needed, ask why first or do not give, then read before you send, every learner. Review: what the practice confirmation does not prove."
+        ],
+        [
+          22,
+          "Cycle C: organize and recover a file",
+          "Tell: folder, file name, ZIP and Recycle Bin. Show: chapter 6, then live in File Explorer and Word. Do: worksheet task 6 and the rounds rename the mess, find it fast and which tool fixes it, every learner. Review: the file exists but a paragraph was replaced; a partner names the tool."
+        ],
+        [
+          18,
+          "Cycle D: share only the access needed",
+          "Tell: Viewer, Commenter, Editor; sync versus backup. Show: chapter 7, pausing at 5:14 before the answer so learners choose the role; chapter 8 (optional pause at 5:59) and chapter 9. Do: worksheet tasks 7 and 8 and the rounds role cards and delete it, then what, every learner. Review: the neighbor only needs to read the handout."
+        ],
+        [
+          14,
+          "Capstone: community resource folder",
+          "Each learner picks a new service, asks a question, checks one source, writes the five-field note, saves it in Community resources, ZIPs the folder and plans the access. Partners swap the note only and test whether the trail can be followed."
         ],
         [
           8,
-          "Cycle C: online form",
-          "Tell: slide 9. Show: chapter 5, pausing at 3:29 before chapter 6 starts; then on slide 10 select Review practice request with one choice blank to show the message Please select an item in the list. Do: worksheet task 5 on slide 10, every learner. Review: ask whether anyone received a request (no); a partner reads the confirmation aloud."
-        ],
-        [
-          14,
-          "Cycle D: folders and file names",
-          "Tell: slides 11 and 12. Show: chapter 6, then live, Windows logo key and E \u203a Documents \u203a New \u203a Folder named Community resources; in Word, File \u203a Save As \u203a Browse into that folder as library-help-v1.docx; close Word and reopen the file from the folder. Say the video calls it library-help-draft and ours adds a version number. Do: worksheet task 6, every learner. Review: a partner reopens the file from the folder."
-        ],
-        [
-          14,
-          "Cycle E: sharing and protection",
-          "Tell: slides 15 and 16. Show: chapter 7, pausing at 5:02 before the answer so learners choose the role; then on the projector only, a real Share box from your own account with a fictional file if you have one, and in Word File \u203a Info \u203a Protect Document, pointing to Always Open Read-Only and Encrypt with Password without setting them. Do: worksheet task 7 on slide 15, marked simulated, every learner. Review: the slide 20 knowledge check; ask who owns the file after it is shared."
-        ],
-        [
-          18,
-          "Cycle F: sync, ZIP and recovery",
-          "Tell: slides 13, 17 and 18. Show: chapter 8 (optional pause at 5:47) and the slide 13 delete; chapter 9; then live, right-click the folder \u203a Show more options \u203a Send to \u203a Compressed (zipped) folder, Extract All, then delete a file and restore it from the Recycle Bin. Version history uses slide 18, marked simulated. Do: worksheet task 8, every learner. Review: a partner asks missing file or wrong wording, and the learner names the tool that fixes it."
-        ],
-        [
-          10,
           "Individual check",
-          "Play chapter 10 and pause at 6:35 to ask what the folder should hold; play on to compare. Each learner shows you three things: the five-field source note, the file reopened from Community resources, and a file restored from the Recycle Bin, and names the role for a reviewer. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+          "Play chapter 10 and pause at 6:47 to ask what the folder should hold; play on to compare. Each learner shows the five-field source note, the file reopened from Community resources, and a file restored from the Recycle Bin, and names the role for a reviewer. Mark Independent, With prompt or Needs practice on the roster."
         ],
         [
-          18,
+          7,
           "Apply and close",
-          "Slides 21, 22 and 23. Home task: search for one service you need, write the five-field source note, and keep it in a named folder on your own device or on paper; share it at the start of week 3. Print or save the worksheet, delete the Community resources folder and ZIP from Documents, then select Start fresh on this computer. Remind learners of next week\u2019s date from the syllabus, especially if it falls on a holiday."
+          "Home task: ask one question about a service you need, check one source and write the five-field note, kept in a named folder; share it at the start of week 3. Print or save the worksheet, delete the Community resources folder and ZIP from Documents, then select Start fresh on this computer."
         ]
       ],
       "slides": [
@@ -418,24 +413,24 @@
           "kind": "discussion"
         },
         {
-          "title": "Write a useful search",
-          "body": "Include the service, the provider and the place. Try: public library computer help and your town's name. Plus signs are not needed between words. Remove words that distract from the task.",
+          "title": "Ask the way you would ask a person",
+          "body": "Say what you need, where you are and one detail that matters. Where can I get free computer help near Beckley, WV, in the evening? is a better question than computer help.",
           "kind": "teach",
           "refs": [
             "3.1"
           ]
         },
         {
-          "title": "Refine without hiding useful results",
-          "body": "Quotation marks find an exact phrase. site: limits results to one website or kind of website, such as site:gov; it does not prove a page is accurate. A date filter shows recent pages. Each filter can also hide a useful page.",
+          "title": "Read the answer as a lead",
+          "body": "An AI answer, such as an AI Overview, is a quick summary written from many pages. It can sound sure and still be wrong, out of date or about a different town. Treat it as a lead, not a source.",
           "kind": "teach",
           "refs": [
             "3.1"
           ]
         },
         {
-          "title": "Five questions for a source",
-          "body": "Who made it? What evidence supports it? What perspective or interest shapes it? Is it current enough? Does it answer this task?",
+          "title": "Open the source behind the answer",
+          "body": "Open the organization's own page. Ask who published it, when it was updated and whether it fits your question. If the page and the AI answer disagree, trust the page.",
           "kind": "steps",
           "items": [
             "Check author and evidence",
@@ -448,7 +443,7 @@
         },
         {
           "title": "Compare two results",
-          "body": "These are fictional practice sources. Select a card, then justify which source you would verify first.",
+          "body": "An AI answer can link to many pages. These are fictional practice sources. Select a card, then say which page you would open and check first.",
           "kind": "flip",
           "cards": [
             [
@@ -462,8 +457,8 @@
           ]
         },
         {
-          "title": "Accuracy and relevance differ",
-          "body": "A correct page about another state's library may not answer a local question. A recent page can still be biased or wrong. A summary or AI answer at the top of the results is not the source; open the organization's own page.",
+          "title": "When the answer and the page disagree",
+          "body": "If the AI answer and the page disagree, trust the organization that runs the service, and confirm hours by phone before you travel.",
           "kind": "teach",
           "refs": [
             "3.2"
@@ -471,7 +466,7 @@
         },
         {
           "title": "Keep a source trail",
-          "body": "Record title, organization, URL, access date and the specific detail you used. Separate a direct quotation from your own summary.",
+          "body": "Record the title, organization, address, access date and the specific detail you used. If an AI answer led you to the page, record the page it pointed to, not the summary.",
           "kind": "teach",
           "refs": [
             "3.1",
@@ -560,15 +555,15 @@
         },
         {
           "title": "Knowledge check: a credible page",
-          "body": "Which action best checks a surprising service claim?",
+          "body": "An AI answer makes a surprising claim about a service. Which action best checks it?",
           "kind": "check",
           "options": [
-            "Trust it because it is the top search result",
+            "Trust it because the AI answer sounds sure",
             "Trust it because several websites repeat it",
-            "Confirm it with the organization that runs it"
+            "Open the organization's own page and check it"
           ],
           "answer": 2,
-          "why": "Ranking and repetition do not prove a claim. The organization that runs the service is in a position to know, so confirm through its own website or phone number."
+          "why": "The organization's own page is the evidence. An answer that sounds sure, or many sites repeating it, does not check the claim."
         },
         {
           "title": "Knowledge check: read-only",
@@ -594,20 +589,20 @@
         }
       ],
       "lab": [
-        "Write a question about a local public service you or a neighbor might need, such as computer help at a public library. Name the service and the town.",
-        "In Edge, search for that service and record your search. Then refine it one way: a phrase in quotation marks, site:gov, or Tools \u203a Any time on google.com. Record what changed. Plus signs are not needed.",
-        "Open one result that answers your question. Record the page title, the organization, the web address (Ctrl and L, Ctrl and C, then Ctrl and V here), today's date and the one detail you will use.",
-        "For that page, answer the five source questions from slide 5 in a few words each: who made it, what evidence it gives, why it was published, whether it is current, and whether it fits your question. Name one detail to confirm with the organization.",
+        "Write a question about a local public service you or a neighbor might need, such as computer help at a public library. Name the service, the town and one detail that matters to you, such as evening hours.",
+        "In Edge, ask Google your question. Read the answer, then ask one follow-up question. Record your question and what the follow-up changed. Do not type any private details.",
+        "Open one source link beside or beneath the answer. Record the page title, the organization, the web address (Ctrl and L, Ctrl and C, then Ctrl and V here), today's date and the one detail you will use.",
+        "For that page, answer the five source questions in a few words each: who made it, what evidence it gives, why it was published, whether it is current, and whether it fits your question. Name one detail in the AI answer that the page does not confirm, and one detail to confirm with the organization.",
         "On slide 10, select Review practice request with one choice left blank, and write the message you see. Then choose a topic and a contact method, submit, and copy the confirmation. Say what the confirmation does not prove.",
         "Open File Explorer (Windows logo key and E) \u203a Documents. Make a folder named Community resources. In Word, type your task 1 question and task 3 source note, and save the file in that folder as library-help-v1.docx. Close Word, reopen the file from the folder, and say who controls a copy kept in a cloud drive.",
         "On slide 15, choose access for three people: one who only reads, one who suggests wording, and one who writes the handout with you. Record each role and why, and mark it simulated. Say what read-only does and does not do.",
         "Right-click Community resources \u203a Show more options \u203a Send to \u203a Compressed (zipped) folder. Right-click the ZIP file \u203a Extract All, then open the extracted file. Delete that file and restore it from the Recycle Bin. On slide 18, choose the route for wrong wording and mark it simulated."
       ],
       "answers": [
-        "The question names a service and a town, for example: Where can I get computer help at a public library in [town]?",
-        "The first search names the service and place, with no plus signs. One refinement is used (quotation marks, site:gov or a date range) and its effect is stated, such as fewer, more local or more recent results. Ranking is not treated as proof.",
-        "All five fields: page title, organization, full web address, date checked and one specific detail. No personal records.",
-        "Who made it (credibility), what evidence it gives (accuracy), why it was published (perspective and bias), whether it is current, and whether it fits the question (relevance), each tied to something on the page. One detail, such as hours or eligibility, to confirm through the organization's own contact.",
+        "The question names a service, a town and one detail, for example: Where can I get free computer help at a public library in Beckley, WV, in the evening?",
+        "A full-sentence question with no private details. One follow-up (for example Which are open Saturdays?) and what it changed, such as a shorter or more local list. The AI answer is treated as a lead, not as proof.",
+        "All five fields: page title, organization, full web address, date checked and one specific detail, taken from the organization's own page rather than from the AI summary. No personal records.",
+        "Who made it (credibility), what evidence it gives (accuracy), why it was published (perspective and bias), whether it is current, and whether it fits the question (relevance), each tied to something on the page. One detail in the AI answer that the page does not confirm, and one detail, such as hours or eligibility, to confirm through the organization's own contact.",
         "Message: Please select an item in the list. Confirmation: Practice complete \u2026 No request was sent. It shows the exercise was done, not that anyone received a request.",
         "Documents \u203a Community resources holds library-help-v1.docx, reopened from that folder. The service and account (or the organization) control a cloud copy; the person who shares a file stays the owner.",
         "Reader: Viewer. Reviewer: Commenter, or the nearest option the service offers. Co-writer: Editor. Named people and the least access each task needs, marked simulated. Read-only stops changes but the file can still be read and copied; it is not encryption.",
@@ -615,20 +610,20 @@
       ],
       "lab_paths": [
         [
-          "Search from the address bar",
-          "Press Ctrl and L, type your words and press Enter. Edge searches with Bing. Plus signs are not needed between words."
+          "Ask a full-sentence question",
+          "Press Ctrl and L, type your question as you would ask a person (the service, the place and one detail) and press Enter. Google may show an AI Overview above the results. If an AI Mode button or tab appears, select it to keep asking follow-up questions."
         ],
         [
-          "Search for an exact phrase",
-          "Put the phrase in quotation marks, for example \"computer help\". Remove the quotation marks if you get too few results."
+          "Ask a follow-up",
+          "Type a short follow-up in the same place, such as: Which of these are open on Saturdays? You do not need to start over."
         ],
         [
-          "Search one kind of website",
-          "Type site: and the site or ending with no space, then your words, for example site:gov library computer help."
+          "Open the source behind an answer",
+          "Look for links beside or beneath the answer and open the organization's own page. Check who published it and when it was updated."
         ],
         [
-          "Show only recent results",
-          "Go to google.com and search. Below the search box, select Tools, then Any time, and choose a range such as Past year."
+          "Keep private details out of a question",
+          "Do not type a Social Security number, bank or card number, password, claim number or health details into a question."
         ],
         [
           "Find a word on a long page",
@@ -671,10 +666,10 @@
           "OneDrive: select the file \u203a Share, then choose Can view or Can edit; right-click the file \u203a Version history. Google Drive: Share \u203a Viewer, Commenter or Editor; in a Google Doc, select Last edit at the top right to see versions."
         ]
       ],
-      "prep": "Each station: Microsoft Edge, Microsoft Word (Notepad works if Word is missing; save as library-help-v1.txt), File Explorer with a local Documents folder that is not signed in to OneDrive, headphones, and this lesson and worksheet. At the front: the projector showing Edge, File Explorer and Word, and one real West Virginia public library page for the search and source demonstrations, checked the day before. The lab has no cloud account for learners, so sharing (worksheet task 7) and version history (task 8) use the slide 15 and slide 18 practice, marked simulated; if you have your own OneDrive or Google account, you may show the Share box and version history on the projector with a fictional file only. No printing is needed; decide whether learners may print their worksheet or should save it as a PDF before closing. Play video chapters 2, 6 and 7 with captions to check sound, and mark the pause points 1:17, 3:29, 5:02 and 6:35. After your own run-through, delete your practice folder and ZIP from Documents and select Start fresh on this computer at each station. No paid service, real purchase or new learner account is required.",
+      "prep": "Each station: Microsoft Edge, Microsoft Word (Notepad works if Word is missing; save as library-help-v1.txt), File Explorer with a local Documents folder that is not signed in to OneDrive, headphones, and this lesson and worksheet. At the front: the projector showing Edge, File Explorer and Word, and one real West Virginia public library page for the source demonstration, checked the day before. The lab has no cloud account for learners, so sharing (worksheet task 7) and version history (task 8) use the slide 15 and slide 18 practice, marked simulated; if you have your own OneDrive or Google account, you may show the Share box and version history on the projector with a fictional file only. No printing is needed; decide whether learners may print their worksheet or should save it as a PDF before closing. Play video chapters 2, 6 and 7 with captions to check sound, and mark the pause points 1:26, 2:22, 3:41, 5:14 and 6:47. Google shows an AI Overview for some questions only, and AI Mode may not appear for every learner: rehearse your demonstration question the day before, and use the fictional AI answer on the worksheet (Mission A, Round 3) if no AI answer appears. No sign-in is needed. After your own run-through, delete your practice folder and ZIP from Documents and select Start fresh on this computer at each station. No paid service, real purchase or new learner account is required.",
       "outcomes": [
-        "Search: in Microsoft Edge at a lab workstation, given a local service need, each learner writes a search that names the service, the provider and the place, then applies one refinement (quotation marks, site: or a date range) and says in one sentence what it changed. Correct with no more than one prompt, and no plus signs.",
-        "Sources: for one result from that search, each learner records the five source fields (title, organization, web address, date checked and the detail used), answers the five source questions from slide 5, and names one detail to confirm with the organization that runs the service. All five fields are present and each judgment points to something on the page.",
+        "Search: in Microsoft Edge at a lab workstation, given a local service need, each learner asks Google a full-sentence question that names the service, the place and one detail, asks one follow-up, and says in one sentence what the follow-up changed. No private details typed. Correct with no more than one prompt.",
+        "Sources: for one source link from that answer, each learner records the five source fields (title, organization, web address, date checked and the detail used), answers the five source questions, and names one detail in the AI answer that the page does not confirm. All five fields are present and each judgment points to something on the page.",
         "Forms: using the practice form on slide 10 with fictional details, each learner submits once with a required choice missing, reads the message, completes the form, and explains that the confirmation does not mean anyone received a request.",
         "Files: in File Explorer at a lab workstation, each learner makes a folder named Community resources, saves a Word file in it as library-help-v1.docx, reopens it from that folder, compresses the folder to a ZIP file, extracts it and opens the extracted copy. All steps done, with nothing saved in the wrong place.",
         "Access and recovery: using the permission practice on slide 15 (simulated), each learner chooses Viewer, Commenter or Editor for a reader, a reviewer and a co-writer, giving each the least access the task needs; restores a deleted practice file from the Recycle Bin; says when version history is the right tool instead; and says that read-only stops changes but is not encryption. All correct with no more than one prompt."

@@ -130,3 +130,7 @@
 .mission-series .slide[data-stage=do] .mission-actions { clear:both; padding-top:.7cqw; }
 @media(max-width:800px) { .mission-series .slide[data-stage=do] .mission-ab { float:none; width:auto; } .mission-series .slide[data-stage=do] .mission-do { margin:20px 0; } }
 .mission-series .slide[data-stage=do] .panel.full { display:block; }
+
+/* Week 2 rounds and capstone: Do slides without a Point A/B column use the full width. */
+.mission-series .slide.round-slide[data-stage=do] .mission-do { margin-left:0; }
+.mission-series .slide.round-slide .mission-early { color:var(--c-gold); margin:1.2cqw 0 0; }
