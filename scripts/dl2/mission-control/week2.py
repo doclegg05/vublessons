@@ -149,7 +149,7 @@ CAPSTONE = dict(
     early='Done early? Add a second source and mark which one you trust more.',
     notes_brief='Capstone. Learners choose a new service so they transfer the skills instead of repeating the demo. They need a question, a checked source, the five-field note, a clearly named file in Community resources, and a ZIP. No new account. Use fictional personal details if any are needed.',
     notes_peer='Partners swap the note only. If the partner cannot find the page and the detail from the note, the note is missing something: title, organization, full URL, date checked or the detail. Fix it together. Record how each pair did on the roster as Independent, With prompt or Needs practice.',
-    tasks=['Ask a question about a new community service. Check one source with the five source questions. Write the five-field source note.',
+    tasks=['Ask a question about a new community service. Check one source with the three source checks. Write the five-field source note.',
            'Save the note as a clearly named file in Community resources, ZIP the folder, and write who would get which access if you shared it.',
            'Swap the note only with a partner. Write whether your partner found the page and the detail, and what your note was missing.'],
     key=['A new service, not the earlier example. A question with a service, a place and one detail; one source from the organization\'s own page; all five fields (title, organization, full URL, date checked, specific detail).',
