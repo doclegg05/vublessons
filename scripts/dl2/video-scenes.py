@@ -24,8 +24,8 @@ CHAPTERS = {
  ('routine','workstation',['Choose|Read · hear · remember','Explain|Expected result versus actual','Finish|Save · restore · sign out'])],
 2: [
  ('search','library',['Task|Find community computer help','Place|Use your West Virginia town','Evidence|Confirm the details independently']),
- ('search',None,['Broad|Computer help','Refine|Computer help + library + town','Adjust|Remove a term if too restrictive']),
- ('source-check',None,['Responsibility|Who published this page?','Fit|Place · date · purpose','Conflict|Check the responsible organization']),
+ ('ask-ai',None,['Vague|"computer help" gets a general answer','Specific|Service · place · one detail','Follow-up|Ask again; do not start over']),
+ ('check-ai',None,['Answer|A lead, not yet a source','Source|Publisher · update date · fit','Decide|Pages disagree: confirm by phone']),
  ('source-trail',None,['Source|Organization · title · address','Checked|Date accessed · verified fact','Separate|Source statement ≠ my interpretation']),
  ('form',None,['Purpose|Who collects this information?','Required|Fictional topic and contact route','Review|Practice only: nothing is sent']),
  ('files',None,['Folder|Practice resources','Rename|computer-help-notes.txt','Reopen|Check location and account']),
@@ -141,6 +141,53 @@ def tile(kind,label,x,y,w=210,h=170,id=''):
  return f'<g {f"id={id}" if id else ""}>'+rect(x,y,w,h)+icon(kind,x+(w-68)/2,y+22,68)+text(label,x+w/2,y+h-22,28,anchor='middle')+'</g>'
 def paper(x,y,w=190,h=235,id=''):
  return f'<g {f"id={id}" if id else ""}>'+rect(x,y,w,h,'#e1efed')+rect(x+22,y+h*.11,w-44,14,'#1b365d',radius=3)+''.join(rect(x+22,y+h*(.30+j*.13),w-44-(j%2)*35,7,'#72978f',radius=2) for j in range(4))+'</g>'
+
+# Week 2 AI-search simulation: original fictional interface, no brand marks, no live account.
+def sim_frame(tag):
+ return rect(14,8,732,432,'#e1efed')+rect(14,8,732,50,'#c4d8de')+text('Practice search · simulation',34,43,26,'#1b365d')+text(tag,726,43,26,'#0f655f',anchor='end')
+def ask_ai_svg():
+ v=sim_frame('Fictional data')
+ v+=rect(34,72,692,92,'#ffffff')+icon('search',46,95,44,'#0f655f')
+ v+='<g id=q-0>'+text('computer help',108,129,34,'#1b365d')+'</g>'
+ v+='<g id=q-1 opacity="0">'+text('Where can I get free computer help near',108,115,28,'#1b365d')+text('Beckley, West Virginia, in the evening?',108,150,28,'#1b365d')+'</g>'
+ v+='<g id=q-2 opacity="0">'+text('Follow-up:',108,111,24,'#0f655f')+text('Which are open on Saturdays?',108,150,32,'#1b365d')+'</g>'
+ v+=rect(34,178,692,166,'#ffffff')+text('AI answer · simulation',56,212,24,'#0f655f')
+ v+='<g id=a-0>'+text('Computer help can mean software support,',56,254,28,'#1b365d')+text('repair shops, classes or online guides.',56,292,28,'#1b365d')+text('General: no place, no detail.',56,330,26,'#5A6A7A')+'</g>'
+ v+='<g id=a-1 opacity="0">'+text('1  Beckley library, Room A · until 9 p.m.',56,254,28,'#1b365d')+text('2  Hillside center · Tuesday evenings',56,292,28,'#1b365d')+text('Local: matches place and time.',56,330,26,'#5A6A7A')+'</g>'
+ v+='<g id=a-2 opacity="0">'+text('Saturday: Beckley library, Room A.',56,254,28,'#1b365d')+text('Hillside center: closed on Saturdays.',56,292,28,'#1b365d')+text('Narrowed by the follow-up.',56,330,26,'#5A6A7A')+'</g>'
+ for j,label in enumerate(['1  Vague','2  Specific','3  Follow-up']):
+  x=34+j*236;v+=f'<g id=chip-{j}>'+rect(x,360,220,72,'#c9a227' if j==0 else '#234b6a',radius=10)+text(label,x+110,406,30,'#1b365d' if j==0 else 'white',anchor='middle')+'</g>'
+ return v
+def check_ai_svg():
+ v=''
+ # State 0: the AI answer, one claim, and the links beneath it.
+ s0=sim_frame('Answer')+rect(34,72,692,52,'#c4d8de')+icon('search',42,78,40,'#0f655f')+text('Free computer help near Beckley, WV, evenings',96,108,26,'#1b365d')
+ s0+=rect(34,138,692,206,'#ffffff')+text('AI answer · simulation',56,174,24,'#0f655f')+text('Free computer help in the evening:',56,214,28,'#1b365d')+text('Beckley community library, Room A.',56,254,28,'#1b365d')
+ s0+=rect(46,272,420,52,'#ffffff','claim-bg')+text('Open until 9 p.m.',64,309,32,'#1b365d')+text('Claim to check',486,309,26,'#0f655f')
+ s0+=rect(34,358,692,74,'#234b6a')+text('Links:',52,404,26,'white')+'<g id=links-chip>'+rect(146,370,276,50,'#c4d8de')+text('library.example/help',162,404,26,'#1b365d')+'</g>'+rect(436,370,274,50,'#c4d8de')+text('directory.example',452,404,26,'#1b365d')
+ v+='<g id=state-0>'+s0+'</g>'
+ # State 1: the organization's own page.
+ s1=sim_frame('Source')+rect(34,72,692,52,'#c4d8de')+icon('search',42,78,40,'#0f655f')+text('library.example/help',96,108,28,'#1b365d')
+ s1+=rect(34,138,692,294,'#ffffff')+text('Beckley Community Library',56,182,34,'#1b365d')
+ s1+=rect(46,198,470,42,'#ffffff','pub-bg')+text('Published by: the library',64,228,26,'#1b365d')
+ s1+=rect(46,246,470,42,'#ffffff','date-bg')+text('Updated: September 30',64,276,26,'#1b365d')
+ s1+=text('Computer help · Room A',64,326,26,'#1b365d')
+ s1+=rect(46,342,470,64,'#ffffff','hours-bg')+text('Open until 8 p.m.',64,388,34,'#1b365d')
+ v+='<g id=state-1 opacity="0">'+s1+'</g>'
+ # State 2: compare and decide.
+ s2=sim_frame('Decide')
+ for j,(who,hours) in enumerate([('AI answer','9 p.m.'),('Library page','8 p.m.')]):
+  x=34+j*356;s2+=rect(x,72,336,170,'#ffffff')+text(who,x+20,110,28,'#0f655f')+text('Open until',x+20,152,28,'#1b365d')+text(hours,x+20,214,52,'#1b365d')
+ s2+=rect(34,254,692,64,'#c9a227')+text('Disagree: trust the library page.',54,298,32,'#1b365d')
+ s2+='<g id=next-step>'+rect(34,332,692,100,'#0f655f')+icon('clock',52,350,64,'white')+text('Next step: Confirm by phone',134,396,36,'white')+'</g>'
+ v+='<g id=state-2 opacity="0">'+s2+'</g>'
+ # State 3: privacy caption card.
+ s3=sim_frame('Privacy')+text('Never type these in a question',34,106,34,'#1b365d')
+ for j,t in enumerate(['Social Security number','Bank or card number','Medical information']):
+  y=126+j*66;s3+=rect(34,y,520,52,'#ffffff')+text(t,54,y+37,30,'#1b365d')+f'<path d="M50 {y+27}H538" stroke="#B31942" stroke-width="4"/>'+f'<path d="M590 {y+8}l36 36m0-36-36 36" stroke="#B31942" stroke-width="7" stroke-linecap="round"/>'
+ s3+=rect(34,334,692,98,'#234b6a')+text('Do not type this in a question',380,396,38,'white',anchor='middle')
+ v+='<g id=state-3 opacity="0">'+s3+'</g>'
+ return v
 
 def diagram(kind,i):
  note='';v=''
@@ -290,7 +337,7 @@ def diagram(kind,i):
   v+=f'<g id="concept-2">'+rect(20,283,720,109,'#0f655f')+text('Seller · renewal · cancellation',380,348,34,anchor='middle')+'</g>';note='Fictional offer. No payment is required.'
  elif kind=='source-trail':
   v=rect(22,14,716,425,'#e1efed')+text('My source record',52,61,34,'#1b365d')
-  rows=[('Organization','Fictional community library'),('Title / address','Computer help · example.org/help'),('Date accessed','Record the day you checked'),('Verified fact','The source states Room A'),('Interpretation','My conclusion is separate')]
+  rows=[('Organization','Fictional community library'),('Title / address','Page title and address, not the summary'),('Date accessed','Record the day you checked'),('Verified fact','The source states Room A'),('Interpretation','My conclusion is separate')]
   for j,(label,value) in enumerate(rows):
    y=96+j*72;v+=f'<g id="concept-{j}">'+text(label,52,y,24,'#0f655f')+text(value,52,y+37,28,'#1b365d')+'</g>'  # row pitch keeps the 24px label box clear of the 28px value box
   note='Fictional example · record evidence you can revisit.'
@@ -310,6 +357,10 @@ def diagram(kind,i):
    x=14+j*385;v+=f'<g id="{gid}">'+rect(x,25,350,337,'#e1efed')+rect(x,25,350,53,'#c4d8de')+text(label,x+175,62,29,'#1b365d',anchor='middle')+icon('search' if j==0 else 'person',x+141,92,68,'#0f655f')
    v+=text(lines[0],x+175,207,29,'#1b365d',anchor='middle')+''.join(text(t,x+175,252+k*44,26,'#1b365d',anchor='middle') for k,t in enumerate(lines[1:]))+'</g>'
   v+=arrow(290,396,473,396);note='A lead becomes useful after independent confirmation.'
+ elif kind=='ask-ai':
+  v=ask_ai_svg();note='Simulation · fictional interface and fictional data.'
+ elif kind=='check-ai':
+  v=check_ai_svg();note='Simulation · fictional interface and fictional data.'
  elif kind=='editing':
   v=rect(18,20,456,391,'#e1efed')+text('Computer help',45,73,34,'#1b365d')+rect(43,106,400,60,'#c9a227')+text('Visit the learning desk',56,145,28,'#1b365d')
   v+=text('Selected passage',48,217,27,'#1b365d')+icon('undo',184,272,90,'#0f655f')+rect(495,70,245,252)+icon('chat',578,94,70)+text('Comment',617,224,29,anchor='middle')+text('Suggest a change',617,275,24,anchor='middle');note='Select carefully. Keep a route back.'
@@ -406,6 +457,22 @@ def scene(n,i,b,words):
  elif kind=='search':
   change('#search-query',{'textContent':'computer help + library + town'},'library',.3)
   if index==1:change('#search-query',{'textContent':'computer help + town'},'remove',.72)
+ elif kind=='ask-ai':
+  def show(state,group,phrase,f):
+   for k in range(3):change(f'#{group}-{k}',{'opacity':1 if k==state else 0},phrase,f)
+  def pick(state,phrase,f):
+   show(state,'q',phrase,f);show(state,'a',phrase,f)
+   for k in range(3):change(f'#chip-{k} rect',{'fill':'#c9a227' if k==state else '#234b6a'},phrase,f);change(f'#chip-{k} text',{'fill':'#1b365d' if k==state else '#ffffff'},phrase,f)
+  pick(1,'where can i get',.30);pick(2,'if the first answer',.60)
+ elif kind=='check-ai':
+  def go(state,phrase,f):
+   for k in range(4):change(f'#state-{k}',{'opacity':1 if k==state else 0},phrase,f)
+  def mark(sel,phrase,f):move(sel,{'fill':'#c9a227'},phrase,f)
+  mark('#claim-bg','lead not a source',.18);mark('#links-chip rect','look for the links',.30)
+  go(1,'open the organizations own page',.40)
+  mark('#pub-bg','who published it',.46);mark('#date-bg','when it was updated',.52);mark('#hours-bg','answers your question',.58)
+  go(2,'if the summary and the page disagree',.62);light('#next-step','confirm hours by phone',.74)
+  go(3,'never type private details',.82);go(2,'pause open one source',.94)
  elif kind=='privacy':move('.diagram',{'scale':1.04,'transformOrigin':'70% 45%'},'free or busy',.6)
  elif kind=='routine':
   for s,p,f in [('#choose','one helpful adjustment',.2),('#test','show a partner',.4),('#explain','restore',.6)]:light(s,p,f)
@@ -467,8 +534,13 @@ def scene(n,i,b,words):
  if n==2 and index==8:
   move('.main-example',{'opacity':0},'zip',.66);move('.detail-example',{'opacity':1},'zip',.66)
  # Small chapter-specific evidence caption changes, without replacing pictures.
- for j,entry in enumerate(plan['steps']):
-  change('.video-note',{'textContent':entry.replace('|',' · ')},'',.10+j*.28)
+ if kind=='ask-ai':
+  for entry,(phrase,f) in zip(plan['steps'],[('',.04),('where can i get',.30),('if the first answer',.60)]):change('.video-note',{'textContent':'Simulation · '+entry.replace('|',' · ')},phrase,f)
+ elif kind=='check-ai':
+  for text_,(phrase,f) in zip(['Answer · a lead, not yet a source','Source · who published it, when, and does it fit','Decide · the pages disagree, so confirm by phone','Privacy · never type these in a question','Decide · one detail confirmed, one not'],[('an ai answer',.02),('open the organizations own page',.40),('if the summary and the page disagree',.62),('never type private details',.82),('pause open one source',.94)]):change('.video-note',{'textContent':'Simulation · '+text_},phrase,f)
+ else:
+  for j,entry in enumerate(plan['steps']):
+   change('.video-note',{'textContent':entry.replace('|',' · ')},'',.10+j*.28)
  photo=plan['photo']
  photohtml=f'<div class=photo-window><img class=topic-photo src="assets/{photo}.webp" alt=""></div>' if photo else ''
  if n==1 and index==0:

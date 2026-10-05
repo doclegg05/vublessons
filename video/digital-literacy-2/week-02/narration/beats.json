@@ -5,38 +5,38 @@
     "visual": "search",
     "variant": 0,
     "labels": [],
-    "text": "Imagine a neighbor asks where they can get help using a computer. You may already have a familiar library, community center, or veterans' organization in mind. Use that experience as a starting point, then verify what is available now. Our task is to find a suitable public service, record enough evidence to revisit it, and organize a fictional handout without exposing private information. You can use a different local service that matters to you. The names and details in this demonstration are examples, not a claim about any particular organization. A useful search ends with a supported decision, not just a page that looks impressive.",
-    "window": 40.095,
+    "text": "Imagine a neighbor asks where they can get help using a computer. You may already have a familiar library, community center, or veterans' organization in mind. Use that experience as a starting point, then verify what is available now. Today's search tools answer in full sentences, so our first skill is asking well, and our second is checking what the answer says. Our task is to find a suitable public service, record enough evidence to revisit it, and organize a fictional handout without exposing private information. You can use a different local service that matters to you. The names and details in this demonstration are examples, not a claim about any particular organization. A useful search ends with a supported decision, not just an answer that sounds confident.",
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 38.54514739229025,
+    "window": 48.896,
+    "audioDuration": 47.345510204081634,
     "start": 0.45
   },
   {
     "id": "beat-02",
-    "title": "Turn a broad question into a useful search",
+    "title": "Ask the way you would ask a person",
     "visual": "search",
     "variant": 0,
     "labels": [],
-    "text": "Start with the words that describe your task, the kind of service, and the location. Computer help library plus your town is more useful than typing help by itself. Inspect the result title and the website address before opening it. If the results are too broad, add a specific service or location. If there are no useful results, remove one restriction rather than assuming the service does not exist. Filters can help, but they can also hide a relevant page. Pause and write a search for your chosen community task. Explain what each word contributes. Then change one term and compare the results instead of opening every link.",
-    "window": 46.411,
+    "text": "Search tools now answer in sentences. Google may show an AI Overview above the results, and AI Mode lets you keep asking follow-up questions. Both work best when you ask the way you would ask a librarian. Say what you need, where you are, and what matters to you. Where can I get free computer help near Beckley, West Virginia, in the evening? is far more useful than computer help. If the first answer is too broad, ask a follow-up, such as which of these are open on Saturdays. Pause and write a question for your chosen community task. Include the service, the place, and one detail that matters to you. Then ask one follow-up.",
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 44.86097505668934,
-    "start": 40.545
+    "window": 46.574,
+    "audioDuration": 45.02351473922902,
+    "start": 49.346
   },
   {
     "id": "beat-03",
-    "title": "Judge the source and the fit",
+    "title": "Read the answer, then open the source",
     "visual": "verify",
     "variant": 4,
     "labels": [],
-    "text": "A page can be accurate and still be wrong for your decision. An official library page from another town may describe a real service, but not the one available to your neighbor. Ask who published the information, what evidence supports it, when it was updated, why it was written, and whether it answers your question. For opening hours or eligibility, go to the organization responsible for that service and check the details there. Search-result snippets may be incomplete. Compare two pages that disagree. Do not count votes between websites; identify which source is in a position to know, and confirm uncertain details through an independently found contact method.",
-    "window": 46.666,
+    "text": "An AI answer is a quick summary written from many pages. It can sound sure and still be wrong, out of date, or about a different town. So treat it as a lead, not a source. Look for the links beside or beneath it, and open the organization's own page. Ask who published it, when it was updated, and whether it answers your question. If the summary and the page disagree, trust the responsible organization, and confirm hours by phone before you travel. Never type private details into a question, such as a Social Security number, a bank number, or medical information. Pause, open one source from your answer, and find one detail it confirms and one it does not.",
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 45.11639455782313,
-    "start": 86.956
+    "window": 47.618,
+    "audioDuration": 46.0684126984127,
+    "start": 95.92
   },
   {
     "id": "beat-04",
@@ -44,12 +44,12 @@
     "visual": "source-trail",
     "variant": 0,
     "labels": [],
-    "text": "Suppose you find a useful service today and need it again next month. A note saying good website will not be enough. Record the organization, the page title, the web address, the date you checked it, and the particular fact you plan to use. A bookmark helps you return, but it does not freeze the page or prove that the information remains current. In your handout, distinguish a checked fact from your own interpretation. If the page does not answer a question, write needs confirmation rather than filling the gap with a guess. This is the digital equivalent of writing the source beside a number in a household notebook.",
-    "window": 41.86,
+    "text": "Suppose you find a useful service today and need it again next month. A note saying good website will not be enough. Record the organization, the page title, the web address, the date you checked it, and the particular fact you plan to use. If an AI answer led you to the page, record the page it pointed to, not the summary. A bookmark helps you return, but it does not freeze the page or prove that the information remains current. In your handout, distinguish a checked fact from your own interpretation. If the page does not answer a question, write needs confirmation rather than filling the gap with a guess. This is the digital equivalent of writing the source beside a number in a household notebook.",
     "leadIn": 0.45,
     "visualHold": 1.1,
-    "audioDuration": 40.30986394557823,
-    "start": 133.622
+    "window": 44.089,
+    "audioDuration": 42.538979591836735,
+    "start": 143.538
   },
   {
     "id": "beat-05",
@@ -62,7 +62,7 @@
     "leadIn": 0.45,
     "visualHold": 1.1,
     "audioDuration": 39.42750566893424,
-    "start": 175.482
+    "start": 187.627
   },
   {
     "id": "beat-06",
@@ -75,7 +75,7 @@
     "leadIn": 0.45,
     "visualHold": 1.1,
     "audioDuration": 41.51730158730159,
-    "start": 216.46
+    "start": 228.605
   },
   {
     "id": "beat-07",
@@ -88,7 +88,7 @@
     "leadIn": 0.45,
     "visualHold": 1.1,
     "audioDuration": 44.69843537414966,
-    "start": 259.527
+    "start": 271.672
   },
   {
     "id": "beat-08",
@@ -101,7 +101,7 @@
     "leadIn": 0.45,
     "visualHold": 1.1,
     "audioDuration": 42.14424036281179,
-    "start": 305.775
+    "start": 317.92
   },
   {
     "id": "beat-09",
@@ -114,7 +114,7 @@
     "leadIn": 0.45,
     "visualHold": 1.1,
     "audioDuration": 43.74641723356009,
-    "start": 349.469
+    "start": 361.614
   },
   {
     "id": "beat-10",
@@ -127,6 +127,6 @@
     "leadIn": 0.45,
     "visualHold": 2.0,
     "audioDuration": 46.23095238095238,
-    "start": 394.765
+    "start": 406.91
   }
 ]

@@ -100,8 +100,8 @@ test('Old session/hash and course-home saved positions migrate once without chan
  await page.goto(base+'/index.html');
  await page.evaluate(()=>VubProgress.saveSlide('dl2',2,8,23));await page.reload();
  await expect(page.locator('.continue-course')).toHaveAttribute('href',/#resume-23-9$/);
- await page.locator('.continue-course').click();await expect(page.locator('.strip .count')).toHaveText('10 / 24');
- await expect(page).not.toHaveURL(/resume-/);await page.reload();await expect(page.locator('.strip .count')).toHaveText('10 / 24');
+ await page.locator('.continue-course').click();await expect(page.locator('.strip .count')).toHaveText('10 / 36'); // Week 2 now has 36 slides (rounds and capstone, no break)
+ await expect(page).not.toHaveURL(/resume-/);await page.reload();await expect(page.locator('.strip .count')).toHaveText('10 / 36');
  // Explicit opening links must win over old saved positions on a shared lab computer.
  for(const week of [1,2]){
   await page.goto(route(week)+'#1');
