@@ -163,7 +163,7 @@ WEEK2 = dict(
     title='Find it. Check it. Keep it.', photo='library',
     warm='A neighbor in Beckley needs computer help. What would you check before sending them across town?',
     apply='Choose one local service. Save a source trail and explain what you still need to confirm.',
-    minutes=[8, 5, 22, 16, 22, 18, 14, 8, 7], nobreak=True, capstone=CAPSTONE, practice_tab=True,
+    minutes=[8, 5, 22, 16, 22, 18, 14, 8, 7], nobreak=True, capstone=CAPSTONE, practice_pages=True,
     missions=[
         mission('Ask well, then check it', 'Browser · Google', 'A broad question: computer help', 'A checked answer and a source trail',
                 ['Ask in full sentences: what you need, where, what matters.',
@@ -178,7 +178,7 @@ WEEK2 = dict(
                 'The AI answer says the library is open until 9\u00a0p.m. Its own page says until 8\u00a0p.m. What next?',
                 ['Trust the AI answer because it is newer', 'Trust the library page and phone to confirm', 'Ask the AI again until it agrees'], 1,
                 'The library\'s own page outranks a summary. Hours change, so phone before you go.',
-                [0, 1, 2, 3], 6, A_ROUNDS),
+                [0, 1, 2, 3], None, A_ROUNDS),
         mission('Complete a form carefully', 'Practice form', 'A request with missing information', 'A clear practice confirmation',
                 ['Read required fields before typing.', 'Give only the information needed.', 'Read the confirmation; keep a reference.'],
                 [('Inspect', 'Computer-help request · fictional', 'A name and topic are required. A Social Security number is not needed.'),
@@ -202,5 +202,5 @@ WEEK2 = dict(
                  ('Protect', 'Read-only ≠ encryption ≠ backup', 'Read-only limits changes. Sync can spread deletion. A separate backup supports recovery.')],
                 ['Assign access to a reader, reviewer and writer.', 'State who owns the central copy.', 'Explain sync versus a separate backup.'],
                 'A neighbor only needs to read the handout. Which access?', ['Editor', 'Viewer', 'Public editable link'], 1,
-                'Viewer meets the task with less ability to change the shared copy. It does not encrypt it.', [6, 7], 15, D_ROUNDS),
+                'Viewer meets the task with less ability to change the shared copy. It does not encrypt it.', [6], 15, D_ROUNDS),
     ])
