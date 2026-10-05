@@ -7,3 +7,13 @@ body.mission-library { --primary:#1b365d; --accent:#ffc400; font-family:'DL2 Spa
 .mission-library .sidebar a,.mission-library .sidebar button,.mission-library .sidebar h2 { color:#e9fbff; }
 .mission-library .sidebar .slide-link { background:#102b4c; }
 .mission-library .sidebar .slide-link[aria-current=true] { color:#041222; background:#ffc400; }
+
+/* Single-activity practice pages: one simulation with no deck controls around it. assets/lesson.js still needs the controls in the page, so they are hidden here. */
+.mission-activity .sidebar,.mission-activity .menu-toggle,.mission-activity #restart,.mission-activity #lesson-progress,.mission-activity #previous,.mission-activity #next,.mission-activity #slide-counter { display:none; }
+/* With its buttons hidden the bottom bar is empty, so it only shows in projector mode, where it holds Exit. */
+.mission-activity:not(.presenting) .bottom-nav { display:none; }
+.mission-activity .deck-layout { display:block; }
+.mission-activity .deck-main { max-width:1180px; margin:0 auto; }
+.mission-activity .activity-intro { flex:1 1 30rem; }
+.mission-activity .activity-intro h1 { margin:0 0 .3rem; font-size:1.7rem; color:#1b365d; }
+.mission-activity .activity-intro p { margin:0; font-size:1.15rem; }
