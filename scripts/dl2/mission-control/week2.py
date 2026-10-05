@@ -163,7 +163,7 @@ WEEK2 = dict(
     title='Find it. Check it. Keep it.', photo='library',
     warm='A neighbor in Beckley needs computer help. What would you check before sending them across town?',
     apply='Choose one local service. Save a source trail and explain what you still need to confirm.',
-    minutes=[8, 5, 22, 16, 22, 18, 14, 8, 7], nobreak=True, capstone=CAPSTONE,
+    minutes=[8, 5, 22, 16, 22, 18, 14, 8, 7], nobreak=True, capstone=CAPSTONE, practice_tab=True,
     missions=[
         mission('Ask well, then check it', 'Browser · Google', 'A broad question: computer help', 'A checked answer and a source trail',
                 ['Ask in full sentences: what you need, where, what matters.',
