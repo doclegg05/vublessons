@@ -1883,14 +1883,14 @@
         }
       ],
       "lab": [
-        "Write a change request (a spec) for the agent in plain English. The need: visitors type a kind of help, like learning, not a name. Say the one change, who it helps, and two things that must stay the same. The slide 7 builder can make a first draft.",
+        "Write a change request (a spec) for the agent in plain English. The need: visitors type a kind of help, like learning, not a name. Say the one change, who it helps, and two things that must stay the same. The Mission 6A practice page builder can make a first draft.",
         "Write three acceptance checks in the form I type or press this, I expect to see that. Make one check about the new change and one about something that already works and must not break.",
         "Before the agent runs, predict: which part will it change (HTML, CSS or JavaScript), about how many lines, and one thing that could break. Then read the agent's plan on the projector and write one way it matches or differs from your prediction.",
-        "Open slide 10 and read the agent's change (the diff). A line with a minus sign was removed; a line with a plus sign was added. Mark each changed line asked for or not asked for, and write down the change that breaks what the spec said to keep.",
+        "Open the Mission 6B practice page and read the agent's change (the diff). A line with a minus sign was removed; a line with a plus sign was added. Mark each changed line asked for or not asked for, and write down the change that breaks what the spec said to keep.",
         "Open the agent's version (resource-finder-agent.html) at your own seat. Run the five checks in the App test log: happy path (learning, then library), no match (zzz), mixed case (LIBRARY, then Learning), keyboard only, and narrow screen (zoom to 400%). Record expected, actual and pass or fail.",
         "Write a repair request the agent could act on: the steps, what you expected, what actually happened, and what must stay the same.",
         "Open the repaired version (resource-finder-agent-fixed.html). Repeat the check that failed, then two checks that passed before. Record the results and say whether you accept the repair.",
-        "Suppose the finder became a SaaS website where many people save favorite resources. Write where it would be hosted, why visitors would sign in, where saved favorites would live, where a private API key for a map service would go, and what it would cost and who would keep it running."
+        "Suppose the finder became a SaaS website where many people save favorite resources. Write where it would be hosted, why visitors would sign in, where saved favorites would live, where a secret API key for a payment service would go, and what it would cost and who would keep it running."
       ],
       "answers": [
         "One change: the search box also finds resources by category, so learning shows every Learning resource. Who: a visitor who knows the kind of help but not the name. Must stay the same (any two): capital and small letters match alike (LIBRARY finds Community library); the no-match message; keyboard use; the narrow-screen layout; only resource-finder.html changes; no outside code, personal data or sign-in. A strong spec also asks for a plan first.",
@@ -1900,13 +1900,13 @@
         "Version 2 results: learning, 2 fictional resources found (Community library, Practice Workbook Workshop), pass. library, 1 found (Community library), pass. zzz, No matching resources. Try a different word or reset the filters., pass. LIBRARY and Learning, No matching resources instead of 1 and 2 found, fail (a regression: version 1 finds LIBRARY). Keyboard: Tab reaches the link, search box, Category and Reset filters, each with a thick outline, pass. Narrow screen at 400%: one column, no sideways scrolling, pass; the round Text size button can cover part of the page in every version, which is a course issue, not the agent's change.",
         "Steps: open resource-finder-agent.html and type LIBRARY. Expected: Community library (1 found), as in version 1. Actual: No matching resources; Learning also finds nothing while learning finds 2. Request: make capital and small letters match the same resources again; keep the new category search and everything else the same; show the change before applying it.",
         "LIBRARY: 1 found (Community library), pass. Learning: 2 found, pass. Passed before and still pass: learning (2 found), library (1 found), zzz (no-match message), keyboard outline. Accept the repair because the failed check now passes and no earlier check broke. If the instructor's live repair differs, it is retested the same way.",
-        "Hosted: on a web server or hosting service so anyone with the address can use it (today it is one file on the course site with fixed data). Sign-in: so each person sees only their own favorites; the server must check it, because a sign-in picture is not security. Saved data: in a database on the server, not in this page or one browser. API key: on the server only, since anyone can read a page's code with Ctrl and U. Cost and upkeep: hosting, web address, map service and AI agent fees; someone must update listings, fix problems, back up data, help users and review every agent change. Accept four of six with a reason."
+        "Address and hosting: a domain name rented every year and a hosting service, so anyone with the address can use it (today it is one file on the course site with fixed data). Sign-in: so each person sees only their own favorites; the server must check it, because a sign-in picture is not security. Saved data: in a database on the server, not in this page or one browser. API key: on the server only, since anyone can read a page's code with Ctrl and U. Cost and upkeep: hosting, web address, payment service and AI agent fees; someone must update listings, fix problems, back up data, help users and review every agent change. Accept four of six with a reason."
       ],
       "procedures": [
         [
           "Open the three versions (no account needed)",
           [
-            "Version 1, before the agent: go to slide 9 and select Open starter app, or select Open version 1 above.",
+            "Version 1, before the agent: select Open version 1 above.",
             "Version 2, the agent\u2019s result: select Open the agent\u2019s version above. This is resource-finder-agent.html.",
             "Version 3, after the repair: select Open the repaired version above only when your instructor says so. This is resource-finder-agent-fixed.html.",
             "To compare two versions, open each in its own window (Ctrl and N). Press the Windows logo key and the Left arrow on one window, then pick the other for the right side."
@@ -1917,7 +1917,7 @@
           [
             "On version 2, press Ctrl and U. The page\u2019s code opens in a new tab. You can read it but not change it.",
             "Press Ctrl and F and type toLowerCase. Count how many places are highlighted. Do the same on version 1.",
-            "If the counts differ, find that line in the diff on slide 10. Ask: did our spec ask for this change?"
+            "If the counts differ, find that line in the diff on the Mission 6B practice page. Ask: did our spec ask for this change?"
           ]
         ],
         [
@@ -1973,7 +1973,7 @@
           "Choose File \u203a Save as. Type a name ending in .html. Set Save as type to All files, then select Save. Or type the whole name in quotation marks, such as \"resource-finder-v3.html\"."
         ]
       ],
-      "prep": "Each station: Microsoft Edge, headphones, this lesson and worksheet (typed, or printed for anyone who prefers paper), and Notepad as the plain-text editor for the optional hand repair. Learners need no account and no AI access: they open three practice pages on the course site, resource-finder.html (version 1), resource-finder-agent.html (version 2, the prepared agent result with one planted defect) and resource-finder-agent-fixed.html (version 3). At the front: your own computer on the projector with an AI coding agent signed in to your account, a practice folder holding copies of resource-finder.html and resource-finder-agent.html under version control, the terminal text enlarged, and the agent set to ask before every edit. Never show a sign-in page, key or bill on screen. Rehearse the whole demo with the class spec the week before and record it as a backup; the prepared pages are the fallback if the agent is slow, offline or does something unexpected. Print slide 10's diff and the App test log for anyone who wants paper. Play video chapters 4, 7 and 9 with captions to check sound. After your run-through, select Start fresh on this computer at each station. No paid service, purchase or learner account is required.",
+      "prep": "Each station: Microsoft Edge, headphones, this lesson and worksheet (typed, or printed for anyone who prefers paper), and Notepad as the plain-text editor for the optional hand repair. Learners need no account and no AI access: they open three practice pages on the course site, resource-finder.html (version 1), resource-finder-agent.html (version 2, the prepared agent result with one planted defect) and resource-finder-agent-fixed.html (version 3). At the front: your own computer on the projector with an AI coding agent signed in to your account, a practice folder holding copies of resource-finder.html and resource-finder-agent.html under version control, the terminal text enlarged, and the agent set to ask before every edit. Never show a sign-in page, key or bill on screen. Rehearse the whole demo with the class spec the week before and record it as a backup; the prepared pages are the fallback if the agent is slow, offline or does something unexpected. Print the diff from the Mission 6B practice page and the App test log for anyone who wants paper. Play the video to its first pause card to check sound and captions, and practice pausing while the card is on screen. After your run-through, select Start fresh on this computer at each station. No paid service, purchase or learner account is required.",
       "outcomes": [
         "Spec: given the starter page and a one-sentence need, each learner writes a plain-English change request that names the one change, who it helps and two things that must stay the same, plus three acceptance checks in the form I do this, I expect that. A partner can run every check without asking what it means.",
         "Prediction: before the agent runs, each learner writes which part of the page (HTML, CSS or JavaScript) the change needs and one thing that could break, then compares the prediction with the agent's plan and names one match or difference.",
@@ -2010,7 +2010,7 @@
       "glossary": [
         [
           "Agent",
-          "An AI coding agent is a program that reads your files, plans a change, edits the code and can run checks, all from a plain-English request. You approve each step and own the result."
+          "An AI coding agent is a program that reads your files, plans a change, edits the code and can run checks, all from a plain-English request. You choose how much it may do on its own, and you review every change before you accept it."
         ],
         [
           "Prompt",
@@ -2041,12 +2041,20 @@
           "Putting the page on a web server so anyone with the address can use it."
         ],
         [
+          "Domain name",
+          "The web address people type to reach a site. It is rented, usually every year; if nobody renews it, the site disappears."
+        ],
+        [
           "SaaS (software as a service)",
           "Software you use in a browser while a company hosts it, keeps the data, secures it and updates it, usually for a fee."
         ],
         [
+          "Back end",
+          "The part of a service that runs on a server: it stores shared data, checks sign-ins and keeps secret keys."
+        ],
+        [
           "API key",
-          "A secret code that lets your app use another company's service, such as maps, and bills you for it."
+          "A secret code that lets your app use another company\u2019s paid service, such as payments, and bills you for it. Secret keys belong on the server, never in a page\u2019s code."
         ],
         [
           "Authentication",
