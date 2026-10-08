@@ -434,166 +434,172 @@
   {
     "week": "week-04",
     "chapter": "beat-01",
-    "sha256": "1ee54b1a9806467622b4a318dd19776fa89f51f486fb5a38afa26409e250f659",
-    "durationSeconds": 39.985,
-    "wordsPerMinute": 159.1,
-    "matchRatio": 0.9717,
+    "sha256": "d523cc8eedc0edb0b8b27ccefa6b586d85ce40fbd13d562250d53aa36007076a",
+    "durationSeconds": 41.68,
+    "wordsPerMinute": 155.5,
+    "matchRatio": 0.9815,
     "differences": [
-      {
-        "expected": "organize: a",
-        "recognized": "organize\u2014a"
-      },
       {
         "expected": "computer-help",
         "recognized": "computer help"
+      },
+      {
+        "expected": "twenty",
+        "recognized": "20"
       }
     ],
-    "recognized": "Think of a group task you have helped organize\u2014a family gathering, a volunteer activity, or a meeting. Confusion often begins when people assume someone else knows what to do. We will coordinate a fictional community computer help session using a clear message, one shared handout, and an agreed review process. You can connect the example to a group you know without entering real members' information. The goal is not to send more messages. It is to help the right person take the right next action. By the end, you should be able to choose a channel, request useful feedback, and verify the decision everyone will follow."
+    "recognized": "Think of a group task you have helped organize, such as a family gathering or a volunteer day. Confusion usually starts when people assume someone else knows what to do. Today we plan a fictional Saturday computer help session. You wrote the handout, Sam will review it, Pat organizes the session and keeps the shared copy, Alex runs the session on the day, and 20 volunteers need to hear about it. You will send a clear request, improve one shared copy, take part in a meeting, and check an offer before you pay. The goal is not more messages. It is the right person taking the right next step."
   },
   {
     "week": "week-04",
     "chapter": "beat-02",
-    "sha256": "2dec45a493ad636d3cb03a340f7b873ba755b0886f2ff86db783803e86dfc647",
-    "durationSeconds": 41.588,
-    "wordsPerMinute": 163.0,
-    "matchRatio": 0.9912,
-    "differences": [
-      {
-        "expected": "private-looking",
-        "recognized": "private -looking"
-      }
-    ],
-    "recognized": "A live conversation can help resolve an urgent misunderstanding, while a written message can preserve details for someone who responds later. A shared document is useful when several people must work on the same content. Choose the channel by the task, timing, and audience. Check which account you are using before posting or sending. A personal account and an organization account may have different audiences, permissions, and expectations. Do not assume that a private -looking group makes every detail appropriate to share. Pause and choose a channel for a partner who cannot meet today but needs to review tomorrow's handout. A clear, written request with the shared document gives them a useful starting point."
+    "sha256": "24638d9df236baf0daf9de0fe2baca05a4c31f8b2d7d2b798d2cefb6aab73b9a",
+    "durationSeconds": 37.663,
+    "wordsPerMinute": 154.5,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Start by choosing how to reach someone. A detailed request that can wait until tomorrow suits an email because the details stay in writing. An urgent problem in this room needs a word in person right now. A shared document suits work that several people change. Then, check which account you are sending from. In a new email, the from line shows it. A personal account and a volunteer group account reach different people and carry different expectations. Choose a channel for each of the two messages on your worksheet, and say why. Pause the video now."
   },
   {
     "week": "week-04",
     "chapter": "beat-03",
-    "sha256": "cfe55646226a790a85d5494f5fedeec8b62a21e4d4ab9b8f06a51aa271871c80",
-    "durationSeconds": 45.279,
-    "wordsPerMinute": 148.4,
-    "matchRatio": 0.9911,
+    "sha256": "d5c800df4fde04940fe182fff83c23c2d2bbe44a9e4ad21905ba39ce69b2f722",
+    "durationSeconds": 45.116,
+    "wordsPerMinute": 137.0,
+    "matchRatio": 0.9612,
     "differences": [
       {
+        "expected": "questions. What",
+        "recognized": "questions\u2014what"
+      },
+      {
         "expected": "computer-help",
-        "recognized": "computer help"
+        "recognized": "Computer Help"
+      },
+      {
+        "expected": "tells",
+        "recognized": "tell"
       }
     ],
-    "recognized": "Our subject line is Review the computer help handout. The message says which section needs attention, what kind of feedback would help, and when a response is useful. For example, please comment on whether the contact section is clear before our next practice session. That is more actionable than please look at this. Use respectful, direct language and explain abbreviations the reader may not know. Attach or link the intended file, then check that it is the correct version. Read the message once from the recipient's point of view. Could they act without asking what you meant? In this course, draft the message with fictional information. You do not need to send it."
+    "recognized": "A useful email answers three questions\u2014what should I do, with which file, and by when. A subject such as, Please review the Computer Help handout by Thursday, tell Sam the job before the email is even opened. In the body, greet Sam, name the part to check, say when you need a reply, and close politely. Spell out abbreviations and drop guesses about anyone's age or skill. Then read it as Sam would. Could Sam act without asking you a question? Write the request to Sam, then rewrite the unclear message on your worksheet so anyone could follow it. Pause the video now."
   },
   {
     "week": "week-04",
     "chapter": "beat-04",
-    "sha256": "cc703feac8a47a4b147dad37b9e2a84fc25e0b00dfcff6306813deb489057784",
-    "durationSeconds": 46.301,
-    "wordsPerMinute": 145.1,
-    "matchRatio": 0.9911,
+    "sha256": "cd08a7153f37432ac1b83cc693abed8659d70aadcaeead9e21b83670062a8623",
+    "durationSeconds": 46.463,
+    "wordsPerMinute": 145.9,
+    "matchRatio": 0.9735,
     "differences": [
       {
-        "expected": "To",
-        "recognized": "Two,"
+        "expected": "To.",
+        "recognized": "too."
+      },
+      {
+        "expected": "To,",
+        "recognized": "too,"
+      },
+      {
+        "expected": "twenty",
+        "recognized": "20"
       }
     ],
-    "recognized": "Before sending a real email, inspect every recipient field. Two, usually identifies the main recipients. CC sends a visible copy to people who need to be informed. BCC hides those recipients' addresses from the other recipients, but it does not make the message confidential or stop someone from forwarding it. Reply all can send your response to more people than you intended. Check whether everyone needs that response. Timing also matters. A late message with an immediate deadline may be difficult for others to act on. Pause and review your fictional draft. Remove unnecessary recipients and give the partner a reasonable response window. Clear communication includes both the content and its destination."
+    "recognized": "Before you send, read every recipient line. Sam needs to act, so Sam goes in too. Pat should know, so Pat goes in CC. The volunteers do not need a review request, so take them off. The notice to the volunteers is a different email. There, Alex goes in too, Pat in CC, and the 20 volunteers in BCC, so they cannot see one another's addresses. BCC does not stop anyone from forwarding it. If Pat chooses reply all, it goes to you and Alex, never to the BCC names. Use schedule send so an early draft arrives at a sensible hour. Address the volunteer notice on your worksheet. Pause the video now."
   },
   {
     "week": "week-04",
     "chapter": "beat-05",
-    "sha256": "2176b3e550ed6d78fe18d0a047aa0a7a0d1fefa7c75bda1134b7db63c5cdb15e",
-    "durationSeconds": 46.463,
-    "wordsPerMinute": 135.6,
-    "matchRatio": 0.9905,
-    "differences": [
-      {
-        "expected": "them.",
-        "recognized": ""
-      }
-    ],
-    "recognized": "Imagine three people editing three separate handouts and calling each one final. It becomes difficult to know which instructions to use. Instead, agree where the common copy lives and what each person is responsible for. The owner coordinates the final decision, the writer drafts, and the reviewer suggests improvements. Give each person access appropriate to that task and verify that the link opens for Working together at the same time is synchronous collaboration. Leaving comments for later is asynchronous collaboration. Neither is automatically better. Choose the arrangement that fits people's schedules and the decision needed. Then record the agreed outcome in the shared place."
+    "sha256": "38a325e9fd1146900bed97c5447751f6fc6838ce00944dd9a43284635396a555",
+    "durationSeconds": 48.623,
+    "wordsPerMinute": 138.2,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Imagine three people editing three copies of the handout and calling each one final. Nobody knows which instructions to follow. Instead, agree on one shared copy and one place to keep it. Pat, the owner, makes the final call. You write, Sam reviews. Give each person only the access the job needs. Sam can comment, and you and Pat can edit. Working at the same time is called synchronous, leaving comments for later is called asynchronous. Neither is better. Pick the one that fits people's schedules and write the decision in the shared copy. With a partner, choose your roles, your shared place, and how you will work. Pause the video now."
   },
   {
     "week": "week-04",
     "chapter": "beat-06",
-    "sha256": "caeb7d011611a32b0bbe5bd0c2545f6cdcb72288e57c8805b65545ed488ef92b",
-    "durationSeconds": 42.864,
-    "wordsPerMinute": 151.2,
-    "matchRatio": 0.9907,
+    "sha256": "0a6afbd0c06727008eb45f8919e5cb35861203eb3205b1fbf390c29c6387325f",
+    "durationSeconds": 51.757,
+    "wordsPerMinute": 128.7,
+    "matchRatio": 0.982,
     "differences": [
       {
-        "expected": "identifies",
-        "recognized": "Identify"
+        "expected": "two",
+        "recognized": "to"
       },
       {
-        "expected": "",
-        "recognized": "it."
+        "expected": "first-time",
+        "recognized": "first -time"
       }
     ],
-    "recognized": "Compare two comments. This is confusing, gives the writer little to act on. Add the contact number after the steps so readers can find help. Identify a location, a change, and a reason. The writer can accept the idea, ask a clarifying question, or explain another choice. Discuss the work rather than judging the person. After making the edit, acknowledge the feedback and check the revised document. it. Resolve a comment only when the issue has been addressed or an alternative decision is clear. Pause and write one useful comment on the fictional handout. Have a partner explain the change they think you are requesting before they make it."
+    "recognized": "Compare to comments. This is confusing gives the writer nothing to act on. In step 2, add where the desk is, room A on the first floor, so first -time visitors can find it. That comment names a place, a change, and a reason. In Word, select the step, choose Review, then new comment, and type it. The writer replies first, then makes the change or explains why not. Resolve the comment only after that reply. A resolved comment is hidden, not deleted. Comment on the work, never on the person. Trade seats, add one useful comment, then reply to and resolve the comment on your own handout. Pause the video now."
   },
   {
     "week": "week-04",
     "chapter": "beat-07",
-    "sha256": "c827e412128dd827e7ef9ef3d7cf5fdffa12e4ecf1f911d2e33caec717e6feac",
-    "durationSeconds": 44.559,
-    "wordsPerMinute": 146.8,
-    "matchRatio": 0.9908,
+    "sha256": "cc3d6c8a0617d4ad6937b58bb9f5a20d0309fb4b73973f8eb75438fd78b81fa4",
+    "durationSeconds": 38.475,
+    "wordsPerMinute": 157.5,
+    "matchRatio": 0.9901,
     "differences": [
       {
-        "expected": "raise-hand",
-        "recognized": "raise hand"
+        "expected": "and",
+        "recognized": ""
       }
     ],
-    "recognized": "Before a practice meeting, select and test the intended speaker and microphone. Check the app's controls rather than assuming the computer's general settings tell the whole story. Mute when appropriate and use the agreed chat or raise hand control to contribute. A webinar may give the host more control over who can speak than a small meeting does. Follow the event's instructions and ask before recording. If captions are available and helpful, turn them on. Ask for clarification when a term is unfamiliar. If the connection fails, use the agreed backup plan, such as reading the shared notes afterward. Preparation reduces the amount of meeting time spent guessing about controls."
+    "recognized": "Before a meeting, test your headset. In Windows Settings, under Sound, choose the headset as the input and speak during the test. In the meeting, stay muted unless you are speaking and raise your hand when the host asks for it. Turn on captions if they help. A webinar is different. The host controls who can speak, so questions go in the Q &A box or the chat. Ask before you record anyone, especially a group sharing personal stories. If your sound fails partway through, use the backup the host gave you, such as the chat or the shared notes."
   },
   {
     "week": "week-04",
     "chapter": "beat-08",
-    "sha256": "9f3e997d2b5744437df5691d32eb267d733791063eab638ec930971df0562357",
-    "durationSeconds": 41.192,
-    "wordsPerMinute": 154.4,
+    "sha256": "91f35da15e69f84606189f5efd99c9d6db0c6b73542c006387ccdb800a80cfe2",
+    "durationSeconds": 42.4,
+    "wordsPerMinute": 147.2,
     "matchRatio": 1.0,
     "differences": [],
-    "recognized": "A community page can be useful for finding an event or asking a question, but members' posts are not automatically verified service information. Read the community's purpose and rules, observe how people ask for help, and contribute respectfully. For eligibility, opening hours, or official requirements, check the responsible organization through its known website or contact method. Keep private details out of a public question. If someone suggests an unfamiliar service, record what needs confirmation before acting. You already use judgment when accepting advice in person. Bring that same habit online. Consider who is speaking, what they can know, and where the claim can be checked independently."
+    "recognized": "A community page can point you to a pantry, a class, or an event. A member's post is a lead, not a fact. It might be old, about a different place, or simply wrong. Read the group's rules and keep private details out of public questions. For hours, eligibility, or what to bring, check the organization's own page or call its listed number. That is the same habit you used with AI answers in Week 2. Open the Mission 4C Practice page and practice the meeting controls. Then, list your meeting habits and one community claim you would check yourself. Pause the video now."
   },
   {
     "week": "week-04",
     "chapter": "beat-09",
-    "sha256": "b9d9afa21045f6533fb3112ed8121eca1c8af89b912e8bf13526f28cbc247cd5",
-    "durationSeconds": 43.584,
-    "wordsPerMinute": 145.9,
-    "matchRatio": 0.934,
+    "sha256": "2ade26fc6079f9c4c3016276f5e952096448623d95b44b97789c5f236e09b6d9",
+    "durationSeconds": 50.712,
+    "wordsPerMinute": 142.0,
+    "matchRatio": 0.9583,
     "differences": [
       {
-        "expected": "twelve dollars",
-        "recognized": "$12"
-      },
-      {
-        "expected": "purchased: a",
-        "recognized": "purchased\u2014a"
-      },
-      {
-        "expected": "one-time",
-        "recognized": "one -time"
-      },
-      {
-        "expected": "in-app",
-        "recognized": "in -app"
-      },
-      {
-        "expected": "a",
+        "expected": "dollars",
         "recognized": ""
+      },
+      {
+        "expected": "dollars",
+        "recognized": ""
+      },
+      {
+        "expected": "dollars.",
+        "recognized": ""
+      },
+      {
+        "expected": "Person-to-person",
+        "recognized": "Person -to -person"
+      },
+      {
+        "expected": "two",
+        "recognized": "2"
       }
     ],
-    "recognized": "A fictional offer says free trial today, then $12 each month. Before accepting, identify what is being purchased\u2014a physical good, a one -time service, or a continuing subscription. Check the amount due now, future charges, renewal timing, cancellation conditions, and the seller's identity. A small in -app purchase can still cost real money, and several small purchases can add up. A familiar logo or professional page is not proof that every offer is suitable. Our practice ends with explaining the decision. No purchase or payment details are required. Pause and name the fact you would need if the future price or cancellation method were missing."
+    "recognized": "Here are two fictional streaming offers. Offer A is free for 30 days, then $6 a month until you cancel. Offer B is $60 a year, paid now. Free does not mean free forever. After the first month, A charges you every month, so a full year of A costs $66. Before you agree, find the seller, the price now, the price later, the renewal date, and how to cancel. Deleting the app does not cancel the subscription. Pay with a credit card, which lets you dispute a wrong charge. Person -to -person apps are for people you know. Work out both offers for 3 months and for 12, and write 2 questions to ask. Pause the video now."
   },
   {
     "week": "week-04",
     "chapter": "beat-10",
-    "sha256": "0be40fa12bb1d918d0848aaf45d86f7fee917afa6b53a3200732984026f69b7a",
-    "durationSeconds": 45.186,
-    "wordsPerMinute": 144.7,
+    "sha256": "36e8f20426f1c23d7895306260f62f1122378ed3a3c7f84521d555cc9da444d1",
+    "durationSeconds": 37.431,
+    "wordsPerMinute": 160.3,
     "matchRatio": 1.0,
     "differences": [],
-    "recognized": "Complete the fictional coordination task with a partner, draft the request, choose the recipients and access role, propose a useful comment, and record the final decision in one shared place. Switch roles so both people practice explaining and checking. Then review the subscription example and state what you would verify before committing money. Judge success by observable results. The partner knows what to do, can open the right file, and understands the agreed outcome. For a group task from your own life, choose one habit to transfer. It might be a clearer subject, fewer recipients, one common copy, or a written decision that prevents the next round of confusion."
+    "recognized": "Good coordination leaves a trail anyone can follow. By the end of today, Sam knows what to review and by when. Pat can see the notice without the volunteers seeing one another. Everyone works from one shared copy and every comment ends with a reply and a decision. In meetings, you test first, take turns, and ask before recording. Before you pay for anything, you know what it will cost in a year and how to stop it. Pick one habit to use this week, a clearer subject line, fewer recipients, one shared copy, or a check before you pay."
   },
   {
     "week": "week-05",

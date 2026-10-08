@@ -1,0 +1,103 @@
+{
+  "about": "Topic dividers and pause cards for the Week 4 video (Britt, 2026-10-08). A divider plays silently before its chapter's narration; a pause card holds 10 seconds of silence after it. Read by normalize-pace.py and build-media.py; tests/content/dl2-video-cards.spec.js checks every worksheet reference.",
+  "chapters": {
+    "beat-02": {
+      "divider": {
+        "app": "Email",
+        "mission": "4A",
+        "title": "Send a clear request"
+      },
+      "pause": {
+        "try": [
+          "A detailed request for tomorrow: which channel?",
+          "An urgent problem in this room: which channel?",
+          "Say why for each."
+        ],
+        "where": "Mission 4A, task 1"
+      }
+    },
+    "beat-03": {
+      "pause": {
+        "try": [
+          "Write the request to Sam: subject, request, reply-by time.",
+          "Rewrite the unclear message for any reader.",
+          "Read it as Sam would."
+        ],
+        "where": "Mission 4A, tasks 2 and 4"
+      }
+    },
+    "beat-04": {
+      "pause": {
+        "try": [
+          "Volunteer notice: who goes in To, Cc and Bcc?",
+          "Who gets Pat's Reply all?",
+          "Pick a send time and an account."
+        ],
+        "where": "Mission 4A, task 3"
+      }
+    },
+    "beat-05": {
+      "divider": {
+        "app": "Word comments",
+        "mission": "4B",
+        "title": "Improve one shared copy"
+      },
+      "pause": {
+        "try": [
+          "Choose owner, writer and reviewer.",
+          "Pick one shared place and each person's access.",
+          "Together now, or comments for later?"
+        ],
+        "where": "Mission 4B, task 1"
+      }
+    },
+    "beat-06": {
+      "pause": {
+        "try": [
+          "Trade seats. Add one useful comment.",
+          "Name the place, the change and the reason.",
+          "Back at your seat: reply, decide, resolve."
+        ],
+        "where": "Mission 4B, task 2"
+      }
+    },
+    "beat-07": {
+      "divider": {
+        "app": "Meetings",
+        "mission": "4C",
+        "title": "Join with care"
+      }
+    },
+    "beat-08": {
+      "pause": {
+        "try": [
+          "Open the Mission 4C practice page.",
+          "Unmute, raise and lower your hand, mute.",
+          "List your meeting habits and one claim to check."
+        ],
+        "where": "Mission 4C, task 1"
+      }
+    },
+    "beat-09": {
+      "divider": {
+        "app": "Paying",
+        "mission": "4D",
+        "title": "Check before paying"
+      },
+      "pause": {
+        "try": [
+          "Work out Offer A and Offer B for 3 months.",
+          "Then for 12 months.",
+          "Write two questions to ask first."
+        ],
+        "where": "Mission 4D, task 1"
+      }
+    },
+    "beat-10": {
+      "divider": {
+        "app": "Wrap-up",
+        "title": "Leave a clear record of the next step"
+      }
+    }
+  }
+}

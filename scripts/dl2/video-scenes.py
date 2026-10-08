@@ -45,16 +45,16 @@ CHAPTERS = {
  ('media-edit',None,['Trim|Remove the start and the end','Split|Remove the pause in the middle','Check|Play it back; recheck captions']),
  ('bundle','resource-pack',['Handout|Find the next step; click the link','Workbook|Change a cost; the total follows','Slides|Read slide 2 from across the room'])],
 4: [
- ('roles','collaboration',['Task|Plan a community help session','Output|One useful handout','People|Owner · writer · reviewer']),
- ('identity-channel',None,['Task|Message, shared file or meeting?','Identity|Training profile is active','Timing|Enough context for a later reply']),
- ('message',None,['Subject|Review the computer-help handout','Request|Comment on the contact section','Timing|Reply before our practice session']),
- ('email-fields',None,['To / Cc|Visible recipient list','Bcc|Other recipients cannot see addresses','Reply all|Inspect who will receive it']),
- ('consolidate',None,['Before|Three competing file copies','Agree|One shared handout','Coordinate|Roles, access and response time']),
- ('feedback',None,['Vague|Make this better','Specific|Add the contact details here','Resolve|Explain decision after responding']),
- ('meeting',None,['Prepare|Sound test and captions','Participate|Mute or raise hand as needed','Choice|Ask before recording; keep notes']),
- ('community',None,['Read|Community rules and context','Verify|Compare claim with official source','Post|Share only agreed information']),
- ('commerce',None,['Today|Fictional trial offer','Renewal|12 dollars each month','Inspect|Seller · cancellation · full terms']),
- ('evidence','collaboration',['Draft|Clear request and response time','Shared file|Correct access and revised section','Record|Decision and next action'])],
+ ('roles','collaboration',['Cast|You write · Sam reviews · Pat owns','Session|Saturday computer help, run by Alex','Goal|The right person takes the right step']),
+ ('identity-channel',None,['Can wait|Email keeps the details','Urgent, here|Say it in person now','Account|Read the From line']),
+ ('message',None,['Subject|Please review the handout by Thursday','Request|Name the part to check','Reader|Spell out abbreviations; no guesses']),
+ ('email-fields',None,['To|Sam must act','Cc|Pat should know','Bcc|Volunteers on the notice only']),
+ ('consolidate',None,['Before|Three copies called final','Agree|One shared copy, one place','Roles|Pat owns · you write · Sam comments']),
+ ('feedback',None,['Vague|This is confusing','Useful|Place · change · reason','Resolve|Reply first, then resolve']),
+ ('meeting',None,['Prepare|Test the headset input','Take part|Mute · raise hand · captions','Respect|Ask before recording']),
+ ('community',None,['Lead|A post is not a fact','Check|The organization\'s own page or phone','Practice|Mission 4C practice page']),
+ ('commerce',None,['Offer A|Free 30 days, then $6 a month','Offer B|$60 a year, paid now','Check|Seller · renewal · how to cancel']),
+ ('evidence','collaboration',['Request|Sam knows what and by when','Copy|One shared copy, comments resolved','Pay|A year\'s cost and how to stop'])],
 5: [
  ('verify','safety',['Pause|What is being requested?','Inspect|What evidence do I have?','Verify|Choose an independent route']),
  ('comfort','workstation',['Comfort|Screen and input within reach','Access|Captions · large text · keyboard','Control|Choose a helpful adjustment']),
@@ -238,7 +238,7 @@ def diagram(kind,i):
   for x,t in [(113,'Handout'),(364,'Workbook'),(634,'Slides')]:v+=text(t,x,388,29,anchor='middle')
   note='Check it with another reader.'
  elif kind=='roles':
-  for j,t in enumerate(['Owner','Writer','Reviewer']):v+=tile('person',t,18+j*253,30,217,182,f'role-{j}')
+  for j,t in enumerate(['Pat: owner','You: writer','Sam: reviewer']):v+=tile('person',t,18+j*253,30,217,182,f'role-{j}')
   v+=f'<path d="M126 222v42h506v-42M379 222v86" fill="none" stroke="#E6C65C" stroke-width="4"/>'+rect(234,308,292,110,'#0f655f')+icon('file',258,326,67)+text('One copy',422,374,31,anchor='middle');note='Agree where the shared file lives.'
  elif kind=='consolidate':
   # Before: three competing "final" copies. After: they converge on one shared handout.
@@ -262,8 +262,8 @@ def diagram(kind,i):
   v+=f'<path id="muted" d="M347 321l64 65" stroke="#E6C65C" stroke-width="6" opacity="0"/>';note='Test sound. Mute. Raise your hand.'
  elif kind=='message':
   v=rect(30,30,700,355,'#e1efed')+icon('email',65,60,75,'#0f655f')
-  for j,t in enumerate(['Review the handout','Comment on the contact section','Reply before practice']):v+=f'<g id="message-{j}">'+rect(64,157+j*70,630,53,'#c4d8de')+text(t,85,192+j*70,29,'#1b365d')+'</g>'
-  note='Subject · request · response time'
+  for j,t in enumerate(['Please review the handout by Thursday','Check step 2: can visitors find the desk?','Reply by Thursday at 3 p.m.']):v+=f'<g id="message-{j}">'+rect(64,157+j*70,630,53,'#c4d8de')+text(t,85,192+j*70,28,'#1b365d')+'</g>'
+  note='What to do · which file · by when'
  elif kind=='phishing':
   v=rect(15,43,324,280,'#e1efed')+icon('email',128,72,87,'#1b365d')+text('ACT NOW',177,220,38,'#1b365d',anchor='middle')+rect(84,251,183,45,'#c9a227')+text('Unknown link',177,282,24,'#1b365d',anchor='middle')
   v+=icon('pause',354,136,82)+arrow(448,180,493,180)+tile('shield','Known contact',505,71,239,226,'verified');note='Pause. Verify independently.'
@@ -336,8 +336,8 @@ def diagram(kind,i):
    v+=f'<g id="concept-{j}">'+text(t,60,92+j*113,35,'#1b365d')+rect(149,51+j*113,550,76,'#c4d8de')+text(sub,171,99+j*113,25,'#1b365d')+'</g>'
   note='Inspect every recipient. Check Reply all.'
  elif kind=='commerce':
-  v=tile('clock','Trial today',20,41,300,192,'concept-0')+arrow(336,143,415,143)+tile('file','$12 each month',436,41,304,192,'concept-1')
-  v+=f'<g id="concept-2">'+rect(20,283,720,109,'#0f655f')+text('Seller · renewal · cancellation',380,348,34,anchor='middle')+'</g>';note='Fictional offer. No payment is required.'
+  v=tile('clock','A: free 30 days',20,41,300,192,'concept-0')+arrow(336,143,415,143)+tile('file','then $6 a month',436,41,304,192,'concept-1')
+  v+=f'<g id="concept-2">'+rect(20,262,720,72,'#173d5c')+text('B: $60 a year, paid now · A for a year: $66',380,308,28,anchor='middle')+rect(20,348,720,72,'#0f655f')+text('Seller · renewal · how to cancel',380,394,30,anchor='middle')+'</g>';note='Fictional offers. No payment is required.'
  elif kind=='source-trail':
   v=rect(22,14,716,425,'#e1efed')+text('My source record',52,61,34,'#1b365d')
   rows=[('Organization','Fictional community library'),('Title / address','Page title and address, not the summary'),('Date accessed','Record the day you checked'),('Verified fact','The source states Room A'),('Interpretation','My conclusion is separate')]
@@ -392,11 +392,11 @@ def diagram(kind,i):
   v+=rect(441,228,234,150,'#72978f')+f'<rect x="466" y="243" width="184" height="120" rx="4" fill="none" stroke="#b7d1ce" stroke-width="3" stroke-dasharray="10 8"/>'+icon('image',462,236,100,'#e1efed')
   v+=f'<path d="M644 357 566 327m0 0 11 14m-11-14 18-3" fill="none" stroke="#E6C65C" stroke-width="5" stroke-linecap="round"/>'+text('Resize proportionally',558,414,27,anchor='middle');note='One message per slide. Preserve the original image.'
  elif kind=='identity-channel':
-  v=rect(22,22,716,83,'#e1efed')+icon('person',42,35,57,'#0f655f')+text('Active profile: Training',128,74,34,'#1b365d')
-  for j,(k,t) in enumerate([('email','Message'),('file','Shared file'),('camera','Meeting')]):v+=tile(k,t,18+j*253,147,217,236)
+  v=rect(22,22,716,83,'#e1efed')+icon('email',42,35,57,'#0f655f')+text('From: volunteer group account',128,74,32,'#1b365d')
+  for j,(k,t) in enumerate([('email','Can wait: email'),('person','Urgent: in person'),('file','Many editors: file')]):v+=tile(k,t,18+j*253,147,217,236,f'channel-{j}')
   note='Choose a channel and identity that fit the task.'
  elif kind=='community':
-  v=rect(15,30,346,360,'#e1efed')+text('Community draft',40,82,30,'#1b365d')+icon('chat',130,107,91,'#0f655f')+text('Is this detail verified?',188,254,24,'#1b365d',anchor='middle')+text('Permission to share?',188,308,24,'#1b365d',anchor='middle')
+  v=rect(15,30,346,360,'#e1efed')+text('Community post',40,82,30,'#1b365d')+icon('chat',130,107,91,'#0f655f')+text('A lead, not a fact',188,254,26,'#1b365d',anchor='middle')+text('No private details',188,308,26,'#1b365d',anchor='middle')
   v+=rect(395,30,350,360)+text('Source check',570,82,30,anchor='middle')+icon('search',526,114,84)+text('Official contact',570,258,27,anchor='middle')+text('Hours · requirements',570,313,24,anchor='middle');note='Read the rules. Verify details. Respect privacy.'
  elif kind=='comfort':
   v=icon('computer',271,20,214)+rect(172,254,416,25,'#c9a227')+icon('grid',239,298,74)+icon('hand',411,295,76)
@@ -522,18 +522,21 @@ def scene(n,i,b,words):
   light('#alt','add alt text',.6);light('#credit','add the credit line',.85)
  elif kind=='bundle':
   for s,p,f in [('#handout','handout',.2),('#workbook','workbook',.28),('#slides','slides',.36)]:move(s,{'y':-10},p,f)
+ elif kind=='identity-channel' and n==4:
+  for j,p in enumerate(['suits an email','needs a word in person','a shared document']):light(f'#channel-{j}',p,.12+j*.15)
  elif kind=='roles':
-  for j,p in enumerate(['owner','writer','reviewer']):light(f'#role-{j}',p,.15+j*.17)
+  for j,p in enumerate(['pat organizes','you wrote the handout','sam will review'] if n==4 else ['owner','writer','reviewer']):light(f'#role-{j}',p,.15+j*.17)
  elif kind=='consolidate':
-  for j in range(3):move(f'#copy-{j}',{'opacity':.7},'instead agree where',.25)
-  move('#merge',{'opacity':1},'instead agree where',.25);move('#shared-copy',{'opacity':1},'instead agree where',.25);move('#agreed',{'opacity':1},'owner coordinates',.35)
+  agree,owner=('instead agree on','pat the owner') if n==4 else ('instead agree where','owner coordinates')
+  for j in range(3):move(f'#copy-{j}',{'opacity':.7},agree,.25)
+  move('#merge',{'opacity':1},agree,.25);move('#shared-copy',{'opacity':1},agree,.25);move('#agreed',{'opacity':1},owner,.35)
  elif kind=='source-check':light('#lead','another town',.15);light('#source','organization responsible',.55)
  elif kind=='timing':
   for j in range(3):move(f'#time-0-{j}',{'y':-9},'synchronous collaboration',.22);move(f'#time-1-{j}',{'x':10},'asynchronous collaboration',.5+j*.08)
  elif kind=='feedback':move('#contact',{'opacity':1},'add the contact number',.25);light('#accepted','accept the idea',.55)
- elif kind=='meeting':light('#meeting-0','test the sound',.15);move('#muted',{'opacity':1},'mute',.35);light('#meeting-2','raise-hand',.5)
+ elif kind=='meeting':light('#meeting-0','test your headset' if n==4 else 'test the sound',.15);move('#muted',{'opacity':1},'stay muted' if n==4 else 'mute',.35);light('#meeting-2','raise your hand' if n==4 else 'raise-hand',.5)
  elif kind=='message':
-  for j,p in enumerate(['specific subject','clear request','response time']):move(f'#message-{j} rect',{'fill':'#b2d8c9'},p,.2+j*.17)
+  for j,p in enumerate(['a subject such as','name the part to check','say when you need'] if n==4 else ['specific subject','clear request','response time']):move(f'#message-{j} rect',{'fill':'#b2d8c9'},p,.2+j*.17)
  elif kind=='phishing':light('#verified','known website',.62)
  elif kind=='access':light('#allow','video meeting',.1);light('#deny','deny',.68)
  elif kind=='encrypt':light('#locked','encryption',.35);move('#cipher',{'y':-9},'unreadable',.45)

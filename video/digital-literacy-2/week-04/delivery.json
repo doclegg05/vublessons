@@ -1,0 +1,231 @@
+{
+  "about": "Delivery tags for ElevenLabs v3, inserted before the named phrase. An empty phrase tags the start. Tags never change the spoken words; scripts/dl2/tag-narration.py checks that. Calm openers: [warmly] at the start ran fast in Week 3.",
+  "beat-01": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Confusion usually starts",
+      "[short pause]"
+    ],
+    [
+      "Today we plan",
+      "[short pause] [interested]"
+    ],
+    [
+      "You will send",
+      "[short pause]"
+    ],
+    [
+      "The goal is not",
+      "[short pause]"
+    ]
+  ],
+  "beat-02": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "An urgent problem",
+      "[short pause]"
+    ],
+    [
+      "Then check which account",
+      "[short pause]"
+    ],
+    [
+      "Choose a channel for each",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-03": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "A subject such as",
+      "[short pause]"
+    ],
+    [
+      "Spell out abbreviations",
+      "[short pause]"
+    ],
+    [
+      "Then read it as Sam would.",
+      "[short pause]"
+    ],
+    [
+      "Write the request to Sam,",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-04": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "The notice to the volunteers",
+      "[short pause]"
+    ],
+    [
+      "Bcc does not stop",
+      "[short pause]"
+    ],
+    [
+      "If Pat chooses Reply all",
+      "[short pause]"
+    ],
+    [
+      "Address the volunteer notice",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-05": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Instead, agree",
+      "[short pause]"
+    ],
+    [
+      "Working at the same time",
+      "[short pause]"
+    ],
+    [
+      "With a partner,",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-06": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "That comment names",
+      "[short pause]"
+    ],
+    [
+      "In Word, select the step",
+      "[short pause]"
+    ],
+    [
+      "Comment on the work",
+      "[short pause]"
+    ],
+    [
+      "Trade seats, add one",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-07": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "In the meeting,",
+      "[short pause]"
+    ],
+    [
+      "A webinar is different.",
+      "[short pause]"
+    ],
+    [
+      "Ask before you record",
+      "[short pause]"
+    ]
+  ],
+  "beat-08": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "A member's post",
+      "[short pause]"
+    ],
+    [
+      "For hours, eligibility",
+      "[short pause]"
+    ],
+    [
+      "Open the Mission 4C practice page",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-09": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Free does not mean",
+      "[short pause]"
+    ],
+    [
+      "Before you agree,",
+      "[short pause]"
+    ],
+    [
+      "Deleting the app",
+      "[short pause]"
+    ],
+    [
+      "Work out both offers",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-10": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "By the end of today,",
+      "[short pause]"
+    ],
+    [
+      "In meetings,",
+      "[short pause]"
+    ],
+    [
+      "Pick one habit",
+      "[short pause] [warmly]"
+    ]
+  ]
+}
