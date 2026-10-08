@@ -181,6 +181,11 @@ WEEK3 = dict(
     warm='Think of instructions that helped you learn a new task. What made them easy to follow?',
     apply='Open the saved PDF as a neighbor would. Check its steps, link and layout; choose one improvement.',
     minutes=[30, 5, 20, 20, 16, 14, 8, 7], nobreak=True, practice_pages=True, video_pauses=True,
+    downloads='<h2>Resource pack downloads</h2><p><a href="/courses/digital-literacy-2/assets/supplies.csv">Fresh supplies.csv</a> · '
+              '<a href="/courses/digital-literacy-2/assets/practice-photo.jpg">Approved practice photo</a></p><p>Photo: VUB practice '
+              'photo, used with permission. Essential: structured handout, tracked decision, recalculating workbook, three simple '
+              'slides with crop/alt text/credit, checked PDF. Optional: chart, extra slide decoration and advanced video editing. '
+              'The local trim/split model is the account-free media activity.</p>',
     plan_note='<p>Week 3 runs Word, Excel, PowerPoint, then export, in that order, with no break and no timer. The video '
               'stops at pause cards. At each card, pause and let learners do the worksheet task the card names, then play '
               'on. That makes the video block about 30 minutes, and learners reach each mission with its first tasks '
