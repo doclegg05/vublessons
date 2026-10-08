@@ -2,37 +2,36 @@
 
 ## Project Overview
 - **Name**: VUB Learning platform (`vublessons`)
-- **Description**: Static site hosting three Veterans Upward Bound courses — Intermediate Computer Skills (8 wks), Financial Readiness (5 modules), Digital Literacy L1 (5 wks)
+- **Description**: Static site hosting four Veterans Upward Bound courses: Intermediate Computer Skills (8 wks), Financial Readiness (5 modules), Digital Literacy L1 (5 wks), Digital Literacy L2 "Mission Control" (6 wks)
 - **Tech stack**: Static HTML/CSS/JS, no framework. Node build script (copy-only), Playwright tests, Python link checker
 - **Repo**: https://github.com/doclegg05/vublessons — renamed from `VUB-Financial-Readiness` on 2026-07-28; GitHub redirects the old URL
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-DL2 Weeks 1 and 2 are live. Week 3 was rebuilt on 2026-10-08 on branch `claude/course-weeks-3-6-alignment-3f6555` (lesson rounds, no break, no capstone, new 9:19 video with pause cards and topic dividers); its PR is open for Britt to listen and merge before Week 3 is taught on 2026-10-12. Weeks 4 to 6 still use the original Mission Control content, video and break slide; each gets its own PR with the same recipe (spec: `docs/digital-literacy-2/week-03-spec.md`).
+DL2 Weeks 1 and 2 are live. Weeks 3 to 6 were rebuilt on 2026-10-08 as four stacked PRs: #37 Week 3 (base `main`), #38 Week 4, #39 Week 5, #40 Week 6. Each has lesson rounds, no break, no capstone, per-mission practice pages, and a re-recorded video with 10-second pause cards and topic dividers. Each passed the full quality gate. None is merged; each waits for Britt to listen to its video. Merge in order, 37 first (Week 3 is taught 2026-10-12).
 
 ## Last Session
 - **Date**: 2026-10-08
-- **What we worked on**: Britt asked for Weeks 3 to 6 to match how Weeks 1 and 2 work, with the video edited, narration redone, and slides and handouts adjusted to match. Four read-only audits (one per week) found the video, deck and worksheet disagreeing in every week. Week 3 rebuilt end to end: `week3.py` (eleven rounds, no break, no capstone), shared helpers in `lessonkit.py`, ten chapters re-recorded, seven 10-second pause cards and five topic dividers in the video, transcript and lesson plan refreshed. Full quality gate passed (359 tests, 0 broken links, a11y pass).
-- **What we decided**: No capstones (Britt: they do not work with this class). Every video "pause and try it" ends on a full-screen pause card with about 10 seconds of silence and the worksheet location; every topic change opens on a divider card. A 30-minute video block is welcome because class runs short. Re-record all ten chapters per week. One PR per week, Week 3 first. Week 6 keeps the agent workflow and adds domains, hosting and back-end roadblocks in Mission D. Week 5 gets no capstone (the skills challenge is its transfer task). Auto-memory holds the card and capstone preferences.
-- **Where we left off**: Week 3 PR open, waiting for Britt to listen to the video. Next: Week 4 on its own branch, using the Week 4 audit findings (one cast and Bcc scenario, one feedback example, an offer with a free trial, Zelle and purchase-approval wording).
+- **What we worked on**: Weeks 3 to 6 rebuilt to Week 2's method, one PR each, same recipe (`docs/digital-literacy-2/week-03-spec.md` to `week-06-spec.md`). Week 4: one cast (you, Sam, Pat, Alex), one Bcc meaning, two offers with a free trial. Week 5: one scam message, two-step verification throughout, the skills challenge kept as the transfer task. Week 6: agent workflow on three prepared app versions, new Mission 6D on domain, hosting, back end, sign-in, secret keys and a caretaker. All forty chapters re-recorded (about 67k ElevenLabs characters). Gates: 359, 375, 391 and 405 tests passing, 0 broken links, a11y pass.
+- **What we decided**: No capstones; pause cards hold about 10 seconds and name the worksheet task; a divider opens every topic. Windows 10 consumer ESU date stays October 12, 2027 (Microsoft's page, checked 2026-10-08). Week 6 narration says "to lower case" because the voice misread toLowerCase.
+- **Where we left off**: all four PRs open. Britt listens to each video, then merges #37, #38, #39, #40 in order (retarget each to `main` as the one below merges).
 
 ## Open Items
-- [ ] Merge the Week 3 PR after Britt listens to the video on the lab speakers (taught 2026-10-12).
-- [ ] Week 4 (taught 2026-10-19), Week 5 (2026-10-26) and Week 6 (2026-11-02): same recipe, one PR each. Known per-week problems: Week 4 gives Bcc two meanings, uses four different feedback examples and has no free trial; Week 5's chapter 10 names the wrong challenge tasks and its Windows 10 card gives the wrong end date; Week 6's video teaches building from scratch, not the agent review the slides teach.
-- [ ] OpenRouter rejects the stored key (HTTP 401), so `render-review.mjs` (the whole-video model review) cannot run. Week 3 was reviewed by hand instead (`docs/digital-literacy-2/review/week-03-render-review.md`).
+- [ ] Listen to and merge, in order: #37 Week 3 (taught 2026-10-12), #38 Week 4 (2026-10-19), #39 Week 5 (2026-10-26), #40 Week 6 (2026-11-02). Week 6 chapter 1 runs 163 words per minute, the fastest kept.
+- [ ] OpenRouter rejects the stored key (HTTP 401), so `render-review.mjs` (the whole-video model review) cannot run. Weeks 3 to 6 were reviewed by hand instead (`docs/digital-literacy-2/review/week-0{3,4,5,6}-render-review.md`).
 - [ ] Weeks 1 and 2 videos have short pause prompts and no pause or divider cards; Britt may want the 10-second cards there too.
 - [ ] **DL2 Mission Control go-live checks (Week 1 was taught 2026-09-28; these were not re-verified):** enable Netlify form detection → push `feat/dl2-mission-control`, PR, merge → confirm forms `dl2-pretest`/`dl2-posttest` listed + email notifications on → one test submission → test print.
 - [x] ~~DL2 Week 2~~ rebuilt for AI-assisted search and merged 2026-10-05 (PR #31).
-- [ ] DL2 Weeks 3 to 6 (weekly); Week 6 needs its own brainstorm (agent-built app + domains/hosting/back-end roadblocks). Review each week's search or tool content for out-of-date techniques before teaching, as Week 2 needed.
+- [x] ~~DL2 Weeks 3 to 6~~ rebuilt 2026-10-08 (PRs #37 to #40); content checked for out-of-date techniques during the audits.
 - [x] ~~Merge PR #33 (Week 2 review fixes)~~ merged and confirmed live 2026-10-05.
 - [x] ~~Ship `claude/week-2-practice-new-tab`~~ merged as PR #34 and confirmed live 2026-10-05.
-- [ ] Ship `claude/week-2-mission-practice-pages` (Week 2 per-mission practice pages). Weeks 3 to 6 still link each mission to a numbered slide in their practice library, in the same tab; they need the same treatment before they are taught. At 1366x768 the Week 2 practice form still needs a short scroll to reach its buttons; at 1920x1080 it fits.
+- [ ] Ship `claude/week-2-mission-practice-pages` (Week 2 per-mission practice pages). Weeks 3 to 6 got per-mission practice pages in PRs #37 to #40. At 1366x768 the Week 2 practice form still needs a short scroll to reach its buttons; at 1920x1080 it fits.
 - [ ] Decide whether `claude/practice-form-purpose` ships.
 - [ ] Week 2 video, found 2026-10-05 (read-only review; nobody listened by ear). Needs a re-render: chapter 1 search box shows "computer help + library + town" from 0:07 to 0:49 while the narrator says to ask in full sentences (`scripts/dl2/video-scenes.py:458`); chapter 4 card rows (Title / address merged, fifth row Interpretation) differ from the five facts spoken. Needs a retake: chapter 4 runs 179 WPM. The doubled "and" near 0:29 was cleared by transcription (8 of 8 decodes). Retake with `scripts/dl2/elevenlabs-takes.py` (Week 2 only until generalized).
 - [ ] Lesson plan pause point 3:41 is early; the form prompt ends at 3:47 (`scripts/dl2/curriculum.json`, week 2 `agenda`).
 - [ ] Week 2 deck and worksheet items reported to Britt but not fixed: slide 32 "five-field source note" is never defined on a slide; worksheet Round 3 loophole (library open until 9 p.m. versus learning desk until 8 p.m.) and its "partly right" key; "four missions" on slides 2 and 4 versus five listed; rounds start at Round 2; round tables cannot be typed into and print with 9 mm rows; Mission 2D repeats Mission 2C's ZIP task; Show slides 19 and 26 highlight a row their caption does not describe.
 - [ ] Revoke the ElevenLabs key at elevenlabs.io once re-recording is done. It lives in the gitignored file `/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/digital-literacy-week-2-expand-d3d789/.env`.
-- [ ] Decide whether Weeks 3 to 6 drop the break slide (Week 2 did; Britt's standing rule is no breaks). Generator flag: `nobreak` in the week dict.
+- [x] ~~Decide whether Weeks 3 to 6 drop the break slide~~ they do (`nobreak` in each week dict, PRs #37 to #40).
 - [ ] Don't run `scripts/dl2/build-pages.py` — it would overwrite the new Week 1 and test files (see HANDOFF.md).
 - [x] ~~DL2 video review fixes~~ done 2026-09-24: all visual and caption findings fixed in the generators and re-rendered (see HANDOFF.md "Video review fixes"). Still open, need a re-record: pause-prompt timing, fast chapters, week 3 formula cause, week 6 undefined terms, week 5 challenge setup.
 - [x] ~~Merge PR #17 then PR #18~~ both merged to main 2026-09-24; Netlify deployed the DL2 course and the review fixes to vublessons.com.
@@ -75,6 +74,8 @@ Britt asked to be reminded of both (2026-07-28).
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | 2026-10-08 | Weeks 3 to 6 follow Week 2's method without capstones; videos get 10-second pause cards and topic dividers | Britt: capstones do not fit the class; Week 1 and 2 pauses were too short to catch; topic changes were hard to follow |
+| 2026-10-08 | Week 6 keeps the agent workflow on three prepared app versions; Mission 6D teaches the roadblocks to a real service | Learners need no AI account; the live agent run stays optional; the old video taught building from scratch |
+| 2026-10-08 | Windows 10 consumer ESU end date stays October 12, 2027 | The audit said 2026; Microsoft's consumer page says 2027 |
 | 2026-10-08 | Re-record all ten chapters for each of Weeks 3 to 6, one PR per week | Britt chose full re-records so each video follows its missions; Week 3 is taught first |
 | 2026-09-27 | DL2 rebuilt fresh as "Mission Control" (hand-written HTML + small os/ engine), not the old scripts/dl2 generators | Britt disliked the generated version; hand-authored slides allow build steps, OS transitions and coded Windows demos |
 | 2026-09-27 | DL2 pre/post = 20 parallel items (item N same skill), one item bank feeds test, keys, printables, PDF | Britt asked for 20; single source keeps pre/post aligned |
@@ -98,9 +99,10 @@ Britt asked to be reminded of both (2026-07-28).
 
 - **Per-mission practice pages (Week 2).** A week dict with `practice_pages=True` gets one page per mission simulation (`practice-2b.html` and so on), cut by `activity_page()` in `build.py` from that week's practice library. A mission whose `practice` is `None` gets no practice link. `assets/lesson.js` throws if the deck controls are missing, so the pages keep them in the markup and `os/mission-practice.css` hides them under `.mission-activity`. The practice library is the pre-Mission Control lesson deck kept whole, which is why a link into it reads as a second lesson.
 
-- **Week modules and video cards (2026-10-08).** Each rebuilt week has a lesson module (`mission-control/week2.py`, `week3.py`) using `lessonkit.py`. Video cards come from `video/digital-literacy-2/week-NN/cards.json` (see `docs/digital-literacy-2/week-03-spec.md` for the rebuild order). The take folder moved from the Desktop to the main checkout (`vub-brad-narration-refresh/`); point `VUB_TAKES_DIR` at it. Britt's card and capstone preferences live in auto-memory (`video-pause-and-topic-cards`, `no-capstones`).
+- **Week modules and video cards (2026-10-08).** Each rebuilt week has a lesson module (`mission-control/week2.py` to `week6.py`) using `lessonkit.py`. The lesson-plan pause times in `curriculum.json` and `dl2-weeks-tsdr.spec.js` are each pause card's `data-start` in `video/digital-literacy-2/week-NN/index.html`, rounded down. Video cards come from `video/digital-literacy-2/week-NN/cards.json` (see `docs/digital-literacy-2/week-03-spec.md` for the rebuild order). The take folder moved from the Desktop to the main checkout (`vub-brad-narration-refresh/`); point `VUB_TAKES_DIR` at it. Britt's card and capstone preferences live in auto-memory (`video-pause-and-topic-cards`, `no-capstones`).
 
 ## Known Issues
+- **Narration take gotchas.** The narrator misreads camelCase code names, and transcript checks sometimes report a doubled word that is not in the audio. Auto-memory holds both (`tts-code-words-spoken`, `recognizer-doubled-words`).
 - **`build.py` drops the second field of every Show tuple, in every week.** The demo picture comes from `visuals.py`, so editing a mission's Show values changes nothing on screen. This left Week 2 Mission A picturing the retired keyword search after PR #31. Week 2 Mission A now reads its three values from `week2.py`; Missions B to D and Weeks 3 to 6 still carry unused values.
 - **Three Playwright specs hard-code `http://localhost:3939` as the site's own origin** (`dl2-os-week1-deck`, `dl2-os-sound-test`, `dl2-os-test`). Running the suite against another port fails them for that reason only.
 - **The DL2 practice library scrolls at 1366x768** (pages are 1525 to 2390 px tall). The slide-fit work is on the unmerged branch `claude/slide-redesign-presentation-b1ed80`, which predates Mission Control.
