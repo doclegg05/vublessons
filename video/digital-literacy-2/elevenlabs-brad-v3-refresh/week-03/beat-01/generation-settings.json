@@ -2,7 +2,7 @@
   "model": "eleven_v3",
   "voice": "Dslrhjl3ZpzrctukrQSN",
   "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
-  "speed": 0.95,
+  "speed": 0.85,
   "stability": 0.5,
   "similarityBoost": 0.8,
   "style": 0,

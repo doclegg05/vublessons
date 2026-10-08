@@ -1,3 +1,13 @@
+# Weeks 3 to 6: the Week 2 method, pause cards, new videos (October 2026)
+
+Week 3 was rebuilt first (taught 2026-10-12). Spec, rebuild order and facts that must stay the same: `week-03-spec.md`. Weeks 4 to 6 follow the same recipe, one PR each, with their own spec.
+
+- Lesson data lives in one module per week (`mission-control/week2.py`, `week3.py`); shared helpers are in `mission-control/lessonkit.py`. No capstone after Week 2 (Britt, 2026-10-08).
+- Video cards: `video/digital-literacy-2/week-NN/cards.json` (topic dividers and 10-second pause cards), drawn by `scripts/dl2/video-cards.py`, timed by `normalize-pace.py`, checked by `tests/content/dl2-video-cards.spec.js`.
+- Narration tools now take a week: `author-media.py week-NN`, `tag-narration.py week-NN` (delivery tags from `week-NN/delivery.json`), `elevenlabs-takes.py --week week-NN [--speed 0.85]`, `check-expressive-takes.py --week week-NN`, `verify-media.py --week N`. Set `VUB_TAKES_DIR` to the take folder, which moved from the Desktop to the main checkout.
+- `verify-media.py` now checks each take's words against the week's teaching script, not the September 2026 wording.
+- `refresh-video-text.py week-NN` updates chapter labels and transcript text after a narration rewrite.
+
 # Current opening order — draft PR #28
 
 Week 1: pre-test directions and a labeled new-tab link (slide 1), approved captioned Brad video (slide 2), then existing lesson. Weeks 2–6: approved captioned Brad video (slide 1), then existing lesson. Totals are 28 / 24 / 24 / 24 / 24 / 24. The scoped generator, media-controls behavior, saved-position migration, 120-minute pacing, and Week 6 video alignment limitation are documented in `MISSION-CONTROL-WEEKS-2-6.md`. Production media from PR #29 is already live; the design/placement change remains preview-only.

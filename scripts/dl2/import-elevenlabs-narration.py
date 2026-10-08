@@ -7,6 +7,7 @@ those local source files to the script and prevent accidental stale reuse.
 """
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -19,7 +20,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('week', nargs='?', default='week-*')
 parser.add_argument('--profile', choices=['deep', 'expressive', 'brad-refresh'], default='deep')
 args = parser.parse_args()
-LOCAL = Path.home() / ('Desktop/vub-brad-narration-refresh' if args.profile == 'brad-refresh' else f'Desktop/vub-{args.profile}-narration')
+LOCAL = (Path(os.environ.get('VUB_TAKES_DIR', Path.home() / 'Desktop/vub-brad-narration-refresh')) if args.profile == 'brad-refresh'
+         else Path.home() / f'Desktop/vub-{args.profile}-narration')
 PROFILE_ROOT = ROOT / ('elevenlabs-brad-v3-refresh' if args.profile == 'brad-refresh' else f'elevenlabs-britt-v3-{args.profile}')
 PARAMETERS = dict(model='eleven_v3', voice='iKrofGyA12WC0e6AhZ8B',
                   voiceName='Britt - Mild Appalachian Male Voice', speed=0.95,
@@ -82,6 +84,9 @@ for folder, beat, source, receipt_path, receipt, original, local in jobs:
   shutil.copyfile(original, receipt_path.parent / 'original.mp3')
   shutil.copyfile(source, receipt_path.parent / 'isolated.mp3')
   shutil.copyfile(local / 'prompt.txt', receipt_path.parent / 'prompt.txt')
+  if args.profile in ('expressive', 'brad-refresh'):
+    # A retake can use different settings (for example a slower speed); keep the record beside its receipt.
+    shutil.copyfile(local / 'generation-settings.json', receipt_path.parent / 'generation-settings.json')
   raw = folder / (beat['id'] + '.raw.wav')
   wav = folder / (beat['id'] + '.wav')
   # Decode the provider source anew: do not tempo-adjust the old fallback audio.

@@ -1,0 +1,105 @@
+{
+  "about": "Topic dividers and pause cards for the Week 3 video (Britt, 2026-10-08). A divider plays silently before its chapter's narration; a pause card holds 10 seconds of silence after it. Read by normalize-pace.py and build-media.py; tests/content/dl2-video-cards.spec.js checks every worksheet reference.",
+  "chapters": {
+    "beat-01": {
+      "pause": {
+        "try": [
+          "Who will read your handout?",
+          "What should they do after reading it?",
+          "Write it as one sentence."
+        ],
+        "where": "Mission 3A, task 1"
+      }
+    },
+    "beat-02": {
+      "divider": {
+        "app": "Word",
+        "mission": "3A",
+        "title": "Structure, then suggest"
+      }
+    },
+    "beat-03": {
+      "pause": {
+        "try": [
+          "Type the handout. Apply Heading 1 and Heading 2.",
+          "Number the steps. Add the link.",
+          "Trade seats. Track one edit. Accept or reject."
+        ],
+        "where": "Mission 3A, tasks 2 to 4"
+      }
+    },
+    "beat-04": {
+      "divider": {
+        "app": "Excel",
+        "mission": "3B",
+        "title": "Make the total recalculate"
+      },
+      "pause": {
+        "try": [
+          "Open supplies.csv. Change B1 to Cost in dollars.",
+          "In B5, type =SUM(B2:B4) and press Enter.",
+          "Write your prediction for paper at $15."
+        ],
+        "where": "Mission 3B, task 1"
+      }
+    },
+    "beat-05": {
+      "pause": {
+        "try": [
+          "Change paper to 15. Check the total.",
+          "Compare it with your prediction.",
+          "Save As Excel Workbook: supplies.xlsx"
+        ],
+        "where": "Mission 3B, task 2"
+      }
+    },
+    "beat-06": {
+      "divider": {
+        "app": "PowerPoint",
+        "mission": "3C",
+        "title": "Show the message clearly"
+      }
+    },
+    "beat-07": {
+      "pause": {
+        "try": [
+          "Make three slides with one theme.",
+          "Insert the practice photo and crop it.",
+          "Add alt text and the credit line."
+        ],
+        "where": "Mission 3C, tasks 1 and 2"
+      }
+    },
+    "beat-08": {
+      "divider": {
+        "app": "Save and share",
+        "mission": "3D",
+        "title": "Export, then inspect"
+      },
+      "pause": {
+        "try": [
+          "Save the handout as a PDF.",
+          "Open the PDF from Resource pack.",
+          "Check the headings, steps and link."
+        ],
+        "where": "Mission 3D, task 1"
+      }
+    },
+    "beat-09": {
+      "pause": {
+        "try": [
+          "Open the Mission 3D practice page.",
+          "Trim the start and end.",
+          "Remove the pause in the middle."
+        ],
+        "where": "Mission 3D, Round 4"
+      }
+    },
+    "beat-10": {
+      "divider": {
+        "app": "Wrap-up",
+        "title": "Check your pack like its reader"
+      }
+    }
+  }
+}

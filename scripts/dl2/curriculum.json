@@ -694,49 +694,44 @@
       ],
       "agenda": [
         [
-          10,
-          "Warm-up: reconnect",
-          "Reconnect: two or three learners share last week's home task or one improvement. Recall Level 1, where you typed a short Word document and saved it with a clear name, and week 2 slide 11 (clear file names, one folder). Every learner opens File Explorer, goes to Documents and makes a folder named Resource pack; every file tonight goes there. Learners open the worksheet from slide 21."
+          30,
+          "Opening video with pause cards",
+          "Learners open the worksheet first. Play chapter 1, then chapters 2 and 3, 4 and 5, 6 and 7, 8 and 9, and chapter 10 in order; a topic card opens each mission. The video stops at a pause card at 0:42 (Mission 3A task 1), 2:32 (Mission 3A tasks 2 to 4), 3:45 (Mission 3B task 1), 4:42 (Mission 3B task 2), 6:19 (Mission 3C tasks 1 and 2), 7:24 (Mission 3D task 1) and 8:20 (Mission 3D Round 4). At each card, pause; every learner does the task the card names, then play on."
         ],
         [
           5,
-          "Introduction",
-          "Slides 1 and 2. Read the goals on slide 1 aloud and say tonight uses Word, then Excel, then PowerPoint, one at a time. Play chapter 1 from slide 15's chapter list. Ask slide 2's question; learners write worksheet task 1."
+          "Welcome and mission overview",
+          "Slides 2 to 4. Ask slide 3's question and point to the four missions; tonight uses Word, then Excel, then PowerPoint, then export."
+        ],
+        [
+          20,
+          "Cycle A: structure, then suggest",
+          "Tell: slide 5. Show: slide 6, replaying chapters 2 and 3 if a step was missed. Do: slide 7 checks worksheet tasks 1 to 4, which every learner did at the pause cards; then Rounds 2 and 3 on slides 8 and 9. Review: slide 10, and a partner confirms both headings appear in the Navigation Pane."
+        ],
+        [
+          20,
+          "Cycle B: a total that recalculates",
+          "Tell: slide 11. Show: slide 12, replaying chapters 4 and 5 if needed. Do: slide 13 checks worksheet tasks 1 and 2, then every learner works Rounds 2 to 4 on slides 14 to 16. Review: slide 17, and each learner shows B5 reading =SUM(B2:B5) or =SUM(B2:B4) in the formula bar."
         ],
         [
           16,
-          "Cycle A: a handout with structure",
-          "Tell: slides 3, 5 and 7 (real headings, one clear paragraph, link text that names the destination). Show: chapter 2, then live in Word: Home \u203a Styles \u203a Heading 1, Home \u203a Numbering, and View \u203a Navigation Pane. Do: worksheet task 2, every learner at their own seat. Review: a partner confirms both headings appear in the Navigation pane and the steps are numbered; re-model for anyone who used bold."
+          "Cycle C: slides and a picture",
+          "Tell: slide 18. Show: slide 19, replaying chapters 6 and 7 if needed. Do: slide 20 checks worksheet tasks 1 and 2, then every learner works Rounds 2 to 4 on slides 21 to 23. Review: slide 24, and a partner reads the alt text aloud without looking at the picture."
         ],
         [
-          13,
-          "Cycle B: edit and review",
-          "Tell: slides 4 and 6. Show: chapter 3; pause at 1:58 and ask each learner to name one change that would help the reader. Then live in Word: Ctrl and K for a link, Ctrl and C, V and Z, File \u203a Save As into Resource pack, and Review \u203a Track Changes with Accept and Reject. Do: worksheet task 3, then task 4 by swapping seats, every learner; the owner makes the final choice. Review: the slide 20 knowledge check."
+          14,
+          "Cycle D: export, then inspect",
+          "Tell: slide 25. Show: slide 26, replaying chapters 8 and 9 if needed. Do: slide 27 checks worksheet task 1, then every learner works Rounds 2 to 4 on slides 28 to 30; Round 4 is the Mission 3D practice page. Review: slide 31."
         ],
         [
-          19,
-          "Cycle C: a total that recalculates",
-          "Tell: slides 8, 9 and 10. Show: chapter 4, then chapter 5; pause at 2:59, before the narrator gives the totals, and have learners write what B5 will show now and after paper becomes 15. Play to 3:12 to check, then stop; skip the 3:25 prompt, which comes after the answer. Type the formula live in Excel and say each key: equals, SUM, open bracket, B2, colon, B4, close bracket, Enter. Do: worksheet task 5, every learner, saved as an Excel workbook. Review: the slide 19 knowledge check; a partner reads the formula bar. Then Tell and Show only: slide 11 and chapter 6, with Insert \u203a Recommended Charts on the projector (optional for fast finishers)."
-        ],
-        [
-          17,
-          "Cycle D: slides and a picture",
-          "Tell: slides 12, 13 and 16 (one theme, crop versus resize, credit the creator). Show: chapter 7, then live in PowerPoint: Blank Presentation, a theme on the Design tab, New Slide, Insert \u203a Pictures \u203a This Device, Picture Format \u203a Crop, and right-click \u203a View Alt Text. Do: worksheet tasks 6 and 7, every learner, with the practice photo. Review: a partner reads the alt text aloud without looking at the photo and checks the credit line."
-        ],
-        [
-          12,
-          "Cycle E: video edits and export",
-          "Tell and Show: slide 14 and chapter 8; every learner tries Trim and Remove a middle section on slide 14 and says what each removes (the Windows video editor needs an account, so we practice here). Tell: slides 17 and 18. Show: chapter 9, then in Word: File \u203a Save a Copy \u203a Browse \u203a PDF into Resource pack, and open the PDF from File Explorer. Do: worksheet task 8, every learner. Review: ask aloud which format suits a neighbor, a co-editor and a tool that needs rows."
-        ],
-        [
-          10,
+          8,
           "Individual check",
-          "Play chapter 10 (pause at 6:28); partners try each other's PDF without help. Each learner shows you three things: both headings in the Navigation pane, B5 showing =SUM(B2:B4) and 28, and the PDF opened from Resource pack with a working link. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+          "Slide 32. Replay chapter 10 if useful. Each learner shows you three things: both headings in the Navigation Pane, the total updating from its formula, and the PDF opened from Resource pack with a working link. Mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
         ],
         [
-          18,
+          7,
           "Apply and close",
-          "Slides 22 and 23. Home task: on any computer, make one real notice with a heading and numbered steps, or a three-line list with a SUM total, and share one improvement at the start of week 4. Save or print the worksheet. Learners copy Resource pack to a flash drive if they want to keep it, then delete it; select Start fresh on this computer."
+          "Slides 33 and 34. Home task: make one real notice with a heading and numbered steps, or a short list with a SUM total, and share one improvement at the start of Week 4. Save or print the worksheet. Learners copy Resource pack to a flash drive if they want to keep it, then delete it; select Start fresh on this computer."
         ]
       ],
       "slides": [
@@ -926,7 +921,7 @@
         "In Word, open a blank document and type these lines, one per line: Computer help at the library / Who it helps / Anyone who wants to practice one computer task. / Steps / Choose one task. / Visit the learning desk. / Ask how to repeat it at home. Make the first line Heading 1, and Who it helps and Steps Heading 2 (Home \u203a Styles). Select the three steps and choose Home \u203a Numbering. Open View \u203a Navigation Pane and check that both headings are listed.",
         "Add a last line: Read the computer-help guide. Select it, press Ctrl and K, type https://example.org/help in the Address box and select OK. Select the words learning desk, press Ctrl and C, click at the end of the last line, press Ctrl and V, then Ctrl and Z to undo. Save the file as resource-handout in your Resource pack folder. Record the shortcut that helped most.",
         "Swap seats with your partner. In their handout, select Review \u203a Track Changes and change one word to make a step clearer. Swap back. Find your partner's change, select Review \u203a Accept or Reject, and write your reason.",
-        "Download supplies.csv (button below) and open it in Excel. Type Total in A5. Click B5, type =SUM(B2:B4) and press Enter; B5 should show 25. Before you change anything, write what B5 will show if paper costs 15.",
+        "Download supplies.csv (button below) and open it in Excel. Click B1 and type Cost in dollars. Type Total in A5. Click B5, type =SUM(B2:B4) and press Enter; B5 should show 25. Before you change anything, write what B5 will show if paper costs 15.",
         "Click B2, type 15 and press Enter, then check B5 against your prediction. Save with File \u203a Save As as an Excel Workbook named supplies in your Resource pack folder.",
         "In PowerPoint, choose Blank Presentation and pick one theme on the Design tab. Make three slides titled Need computer help? / Steps / Where to get help. Paste the three steps from your handout on the second slide, and type Visit the learning desk on the third slide. Check the words can be read from the back of the room. Save as resource-slides in your Resource pack folder.",
         "Download the practice photo (button below). On the first slide, choose Insert \u203a Pictures \u203a This Device and insert it. Select Picture Format \u203a Crop, drag the black handles in so the two people and the handout fill the picture, and press Esc. Right-click the photo, choose View Alt Text, and write one sentence about what it shows. Type this credit in the subtitle box: Photo: VUB practice photo, used with permission. Save.",
@@ -937,7 +932,7 @@
         "The first line uses Heading 1, and Who it helps and Steps use Heading 2, not bold; the three steps are numbered; both headings appear in the Navigation pane.",
         "The link text names the destination and the link opens; paste and undo worked with no lost text; resource-handout is in the Resource pack folder; one useful shortcut is named.",
         "The edit appeared as a tracked change before the owner selected Accept or Reject; the reason names what the reader needs. Only the owner makes the final choice.",
-        "B5 shows =SUM(B2:B4) in the formula bar and 25; a written prediction came before any change.",
+        "B1 reads Cost in dollars; B5 shows =SUM(B2:B4) in the formula bar and 25; a written prediction came before any change.",
         "B5 shows 28 after B2 becomes 15; the file is saved as supplies.xlsx. Saving as CSV would keep the number but drop the formula.",
         "Three slides in the order need, steps, help; one theme on all three; text readable from the back of the room; the steps match the handout.",
         "The photo is cropped in PowerPoint and the photo file itself is unchanged; the alt text says in one sentence what the photo shows; the credit line names the source and the permission.",

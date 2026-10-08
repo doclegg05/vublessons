@@ -16,7 +16,8 @@ def visual(n,letter,step):
   # Week 3 pictures read the mission's own Show steps from week3.py, so a slide cannot show one value and say another.
   show=WEEK3['missions'][ord(letter)-65]['show']
   if letter=='C':return '<div class="visual-photo '+('cropped' if step>0 else '')+'"><img src="/courses/digital-literacy-2/assets/practice-photo.jpg" alt="Two people reviewing a handout in the approved practice image"></div><div class="visual-caption">'+e(show[step][1])+'</div>'
-  return rows([(label,value) for label,value,_ in show],step)
+  # Later steps stay hidden, as in Week 2's Mission A demo, so the picture never answers a prediction early.
+  return rows([(label,value if j<=step else 'Comes next') for j,(label,value,_) in enumerate(show)],step)
  if n==4 and letter=='A':return rows([('To','Alex · needs to act'),('Cc','Sam · kept informed'),('Bcc','Volunteer addresses hidden')],step)
  if n==4 and letter=='B':return rows([('Comment','Add the desk location after Step 2.'),('Owner reply','Added, so visitors can find it.'),('Status','Resolved' if step==2 else 'Open for review')],step)
  if n==4 and letter=='C':return rows([('Microphone','Muted' if step!=1 else 'Unmuted to speak'),('Hand','Raised' if step==1 else 'Lowered'),('Captions','Available')],step)

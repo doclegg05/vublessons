@@ -43,9 +43,10 @@ test('DL2 screen demonstrations are replayable and the app exercise matches the 
  for(let n=1;n<=6;n++){
   await page.goto(`${base}/weeks/week-${String(n).padStart(2,'0')}/video-transcript.html`);
   await page.locator('.video-chapters summary').click();
-  const demos=page.getByRole('button',{name:/Screen demo/});
-  await expect(demos).toHaveCount(2);
-  await expect(page.locator('.screen-demo-guide')).toHaveCount(2);
+  // Week 3 splits its Excel demo across chapters 4 and 5 so learners predict before the answer (2026-10-08).
+  const demos=page.getByRole('button',{name:/Screen demo/}),expected=n===3?3:2;
+  await expect(demos).toHaveCount(expected);
+  await expect(page.locator('.screen-demo-guide')).toHaveCount(expected);
   await demos.first().focus();await page.keyboard.press('Enter');
   await expect(page.locator('video')).toBeFocused();
   expect(await page.locator('video').evaluate(v=>v.paused)).toBe(true);

@@ -4,6 +4,7 @@ visual_only='--visual-only' in sys.argv
 args=[a for a in sys.argv[1:] if a!='--visual-only']
 from pathlib import Path
 spec=importlib.util.spec_from_file_location("video_scenes",Path(__file__).with_name("video-scenes.py"));visuals=importlib.util.module_from_spec(spec);spec.loader.exec_module(visuals)
+spec=importlib.util.spec_from_file_location("video_cards",Path(__file__).with_name("video-cards.py"));cards=importlib.util.module_from_spec(spec);spec.loader.exec_module(cards)
 from pathlib import Path
 root=Path('video/digital-literacy-2');public=Path('courses/digital-literacy-2/media');public.mkdir(exist_ok=True)
 esc=lambda s:html.escape(str(s),quote=True)
@@ -242,16 +243,20 @@ for week in sorted(root.glob(args[0] if args else 'week-*')):
   if not source.exists():raise FileNotFoundError(f'Required approved photograph missing: {source}')
   shutil.copy(source,assets/source.name)
  (week/'compositions/frames').mkdir(parents=True,exist_ok=True);(week/'captions').mkdir(exist_ok=True)
- clips=[];audio=[];cues=[];start=0;story=[];screen_actions=[]
+ clips=[];audio=[];cues=[];start=0;story=[];screen_actions=[];starts=[];chapter_cards=cards.load(week)
  for i,b in enumerate(beats):
   if 'audioDuration' not in b:raise RuntimeError('Wait for final audio generation')
-  duration=b['window'];b['start']=round(start+b.get('leadIn',0.01),3);cid=f'w{n}-scene-{i+1}';labels=b['labels'];labelhtml=''.join(f'<div class="point" id="{cid}-point-{j}"><span class="point-number">{j+1}</span><span>{esc(t)}</span></div>' for j,t in enumerate(labels))
+  # A chapter that opens on a topic divider starts at the divider, so chapter buttons land on it.
+  duration=b['window'];b['start']=round(start if 'divider' in chapter_cards.get(b['id'],{}) else start+b.get('leadIn',0.01),3);cid=f'w{n}-scene-{i+1}';starts.append(start);labels=b['labels'];labelhtml=''.join(f'<div class="point" id="{cid}-point-{j}"><span class="point-number">{j+1}</span><span>{esc(t)}</span></div>' for j,t in enumerate(labels))
   word_times=json.loads((week/f'narration/{b["id"]}.words.json').read_text())['words']
-  sub=visuals.scene(n,i,b,word_times)
+  # Cards own the silent stretches: the scene starts after its topic divider and ends when its pause card begins.
+  card=chapter_cards.get(b['id'],{});lead=cards.DIVIDER_SECONDS if 'divider' in card else 0;tail=b['visualHold']-cards.PAUSE_DELAY if 'pause' in card else 0
+  scene_beat=dict(b,leadIn=round(b.get('leadIn',0.01)-lead,3),window=round(duration-lead-tail,3));scene_start=start+lead
+  sub=visuals.scene(n,i,scene_beat,word_times)
   if (n,i) in visuals.screens.SELECTED:
-   screen_actions.append(dict(chapter=i+1,title=b['title'],startSeconds=round(start,3),durationSeconds=duration,actions=visuals.screens.timed_actions(n,i,b,word_times)))
+   screen_actions.append(dict(chapter=i+1,title=b['title'],startSeconds=round(scene_start,3),durationSeconds=scene_beat['window'],actions=visuals.screens.timed_actions(n,i,scene_beat,word_times)))
   (week/f'compositions/frames/scene-{i+1}.html').write_text(sub)
-  clips.append(f'<div class="clip" id="host-{cid}" data-composition-id="{cid}" data-composition-src="compositions/frames/scene-{i+1}.html" data-start="{start:.3f}" data-duration="{duration}" data-track-index="0" style="position:absolute;inset:0"></div>')
+  clips.append(f'<div class="clip" id="host-{cid}" data-composition-id="{cid}" data-composition-src="compositions/frames/scene-{i+1}.html" data-start="{scene_start:.3f}" data-duration="{scene_beat['window']}" data-track-index="0" style="position:absolute;inset:0"></div>')
   audio.append(f'<audio class="clip" id="aud-{b["id"]}" src="narration/{b["id"]}.wav" data-start="{start+b.get('leadIn',0.01):.3f}" data-duration="{b["audioDuration"]:.5f}" data-track-index="1"></audio>')
   aligned=json.loads((week/f'narration/{b["id"]}.words.json').read_text())['words']
   if not visual_only:
@@ -259,8 +264,9 @@ for week in sorted(root.glob(args[0] if args else 'week-*')):
     lead=b.get('leadIn',0.01)
     cues.append((start+lead+cs_rel,start+lead+ce_rel,text))
   plan=visuals.chapter_plan(n,i)
-  story.append(f'## Frame {i+1} — {b["title"]}\n\n- src: compositions/frames/scene-{i+1}.html\n- duration: {duration}s\n- status: animated\n- transition_in: cut\n- scene: {plan['kind']} / {plan['layout']}\n- photo: {plan['photo'] or 'none: full-stage authored demonstration'}\n- worked states: {'; '.join(plan['steps'])}\n- voiceover: "{b["text"]}"\n- blueprint: compose\n\nScene 1 (0–{duration}s): {'Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json.' if plan['layout']=='screen-share' else 'Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram.'} Narration audio, chapter windows and existing caption files are retained in visual-only mode.\n')
+  story.append(f'## Frame {i+1} — {b["title"]}\n\n- src: compositions/frames/scene-{i+1}.html\n- duration: {duration}s\n- status: animated\n- transition_in: cut\n- scene: {plan['kind']} / {plan['layout']}\n- photo: {plan['photo'] or 'none: full-stage authored demonstration'}\n- worked states: {'; '.join(plan['steps'])}\n- voiceover: "{b["text"]}"\n- blueprint: compose\n{"- cards: "+" · ".join(sorted(chapter_cards[b["id"]]))+"\n" if b["id"] in chapter_cards else ""}\nScene 1 (0–{duration}s): {'Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json.' if plan['layout']=='screen-share' else 'Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram.'} Narration audio, chapter windows and existing caption files are retained in visual-only mode.\n')
   start+=duration
+ clips+=cards.clips(week,n,beats,starts)
  if not visual_only:(week/'narration/beats.json').write_text(json.dumps(beats,indent=2)+'\n')
  title=json.loads((root/'videos.json').read_text())[n-1]['title']
  (week/'index.html').write_text(f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1280,height=720"><title>{esc(title)}</title><script src="assets/gsap.min.js"></script><style>@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-400-normal.woff2')}}@font-face{{font-family:VUB;src:url('assets/source-sans-3-latin-700-normal.woff2');font-weight:700}}*{{box-sizing:border-box}}body{{margin:0;font-family:VUB,'Segoe UI',sans-serif}}#root{{position:relative;width:100%;height:100%;overflow:hidden}}</style></head><body><div id="root" data-composition-id="main" data-start="0" data-duration="{start:.3f}" data-width="1280" data-height="720">{''.join(clips)}{''.join(audio)}</div><script>window.__timelines=window.__timelines||{{}};window.__timelines.main=gsap.timeline({{paused:true}});</script></body></html>''')

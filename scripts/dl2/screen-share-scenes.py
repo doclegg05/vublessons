@@ -9,7 +9,7 @@ import re
 
 E = lambda value: html.escape(str(value), quote=True)
 NAVY, INK, GOLD, PAPER, LINE = '#1B365D', '#18334d', '#E6C65C', '#F5F7FA', '#bacbd5'
-SELECTED = {(1, 1), (1, 6), (2, 5), (2, 6), (3, 1), (3, 4),
+SELECTED = {(1, 1), (1, 6), (2, 5), (2, 6), (3, 1), (3, 3), (3, 4),
             (4, 3), (4, 5), (5, 3), (5, 6), (6, 5), (6, 6)}
 
 
@@ -152,45 +152,71 @@ def sharing(stage):
 
 
 def document(stage):
-    s = chrome('Practice Writer', 'computer-help-handout • working copy')
-    s += box(25, 128, 1150, 57, '#c8d9e5') + button('Heading 1' if stage >= 3 else 'Normal text ▾', 40, 133, 235, stage == 2)
-    s += txt('B    I    U', 306, 170, 28, weight=700) + txt('1.  List', 462, 170, 28)
-    s += box(304, 201, 863, 275, '#fff', LINE) + box(26, 201, 260, 275, '#fff', LINE)
-    if stage!=2:s += txt('Navigation', 47, 240, 29, weight=700)
-    if stage >= 3: s += txt('Computer help', 48, 290, 27)
-    elif stage!=2: s += lines(['No headings', 'yet'], 48, 296, 27)
-    if stage in (1, 2): s += box(333, 219, 455, 58, '#b9d8f1')
-    s += txt('Computer help', 337, 260, 37 if stage >= 3 else 29, weight=700 if stage >= 3 else 400)
-    s += lines(['1. Choose a task.', '2. Visit the learning desk.', '3. Ask how to repeat it at home.'], 337, 316, 29, 47)
-    if stage >= 4: s += txt('Read the computer-help guide', 337, 459, 28, '#174876')
-    if stage == 2:
-        s += box(40, 184, 247, 188, '#fff', NAVY) + txt('Normal text', 57, 225, 28) + txt('Heading 2',57,335,28)
-        s += box(42, 242, 243, 51, GOLD) + txt('Heading 1', 57, 278, 28, weight=700)
+    # Week 3 chapter 2: the worksheet's handout lines, styled one step at a time (mission-control/week3.py, Mission 3A).
+    s = chrome('Practice Writer', 'resource-handout.docx • working copy')
+    s += box(25, 122, 1150, 50, '#c8d9e5')
+    for label, x, on in [('Home', 40, stage in (1, 2, 3, 5)), ('View', 130, stage == 4), ('Review', 215, False)]:
+        s += txt(label, x, 156, 26, NAVY if on else INK, 700 if on else 400)
+    for label, x, w, on in [('Normal', 330, 120, False), ('Heading 1', 460, 140, stage == 2), ('Heading 2', 610, 140, stage == 3)]:
+        s += button(label, x, 123, w, on)
+    s += txt('B  I  U', 768, 156, 26, weight=700) + button('1. Numbering', 862, 123, 190, stage == 5) + button('Link', 1062, 123, 100, stage == 6)
+    s += box(304, 182, 866, 310, '#fff', LINE)
+    if stage >= 4:
+        s += box(26, 182, 262, 310, '#fff', NAVY) + txt('Navigation', 44, 220, 27, weight=700)
+        s += lines(['Computer help at', 'the library'], 44, 262, 26, 32) + txt('Who it helps', 64, 340, 26) + txt('Steps', 64, 378, 26)
+    if stage == 1:
+        s += box(326, 196, 420, 38, '#b9d8f1')
+    s += txt('Computer help at the library', 330, 224, 34 if stage >= 3 else 26, weight=700 if stage >= 3 else 400)
+    h2 = 30 if stage >= 3 else 26
+    s += txt('Who it helps', 330, 264, h2, weight=700 if stage >= 3 else 400) + txt('Anyone who wants to practice one computer task.', 330, 300, 26)
+    s += txt('Steps', 330, 340, h2, weight=700 if stage >= 3 else 400)
+    steps = ['Choose one task.', 'Visit the learning desk.', 'Ask how to repeat it at home.']
+    s += lines([f'{j + 1}.  {v}' if stage >= 5 else v for j, v in enumerate(steps)], 330, 374, 26, 34)
+    if stage >= 6:
+        s += f'<text x="330" y="478" font-size="26" fill="#174876" text-decoration="underline">Read the computer-help guide</text>'
+        s += box(720, 318, 440, 160, '#fff', NAVY) + txt('Insert link  (Ctrl + K)', 742, 356, 26, weight=700)
+        s += txt('Text: Read the computer-help guide', 742, 398, 24)
+        address = txt('https://example.org/help', 852, 448, 26).replace('<text ', '<text data-type="true" ', 1)
+        s += txt('Address:', 742, 448, 24) + box(846, 420, 300, 40, '#fff', NAVY) + address
     return s
 
 
 def sheet(stage):
-    s = chrome('Practice Sheets', 'community-supplies • Supplies worksheet')
-    s += box(29, 130, 1141, 53, '#fff', LINE) + txt('B5' if stage < 4 or stage >= 5 else 'B2', 44, 166, 28, weight=700)
-    formula=txt('=SUM(B2:B4)' if stage in (1, 2, 3, 5, 6) else ('15' if stage == 4 else ''), 208, 166, 30)
-    if stage==1:formula=formula.replace('<text ', '<text data-type="true" ',1)
-    s += txt('fx', 148, 166, 28) + formula
-    x, y, cw, rh = 210, 193, 365, 48
+    # Week 3 chapters 4 and 5: supplies.csv (Item, Cost; Paper 12, Folders 8, Pens 5). Predict before the change.
+    s = chrome('Practice Sheets', 'supplies.csv • Excel practice')
+    selected = {1: 'B1', 2: 'B5', 3: 'B5', 4: 'B5', 5: 'B5', 7: 'B2', 9: 'B5'}.get(stage, 'A1')
+    bar = {1: 'Cost in dollars', 3: '=SUM(B2:B4)', 4: '=SUM(B2:B4)', 5: '=SUM(B2:B4)', 7: '15', 9: '=SUM(B2:B4)'}.get(stage, '')
+    s += box(29, 124, 1141, 53, '#fff', LINE) + txt(selected, 44, 160, 28, weight=700) + txt('fx', 148, 160, 28)
+    if stage == 9:
+        s += box(196, 130, 220, 42, GOLD)
+    formula = txt(bar, 208, 160, 30)
+    if stage in (3, 7):
+        formula = formula.replace('<text ', '<text data-type="true" ', 1)
+    s += formula
+    if stage == 10:
+        s += box(270, 196, 660, 290, '#fff', NAVY) + txt('Save As', 296, 240, 30, weight=700)
+        s += txt('File name:', 296, 296, 26) + box(470, 268, 430, 42, '#fff', LINE) + txt('supplies', 486, 298, 26)
+        s += txt('Save as type:', 296, 360, 26) + box(470, 332, 430, 42, GOLD) + txt('Excel Workbook (*.xlsx)', 486, 362, 26, weight=700)
+        s += txt('Not CSV: a CSV keeps the numbers', 296, 420, 26) + txt('but drops the formula.', 296, 454, 26)
+        return s
+    x, y, cw, rh = 210, 190, 365, 48
     for j, name in enumerate(['A', 'B']):
-        s += box(x+j*cw, y, cw, rh, '#c8d9e5', LINE, 0) + txt(name, x+170+j*cw, y+35, 29, weight=700)
-    rows = [('Item', 'Cost ($)'), ('Paper', '15' if stage >= 4 else '12'), ('Folders', '8'), ('Pens', '5'), ('Total', ('28' if stage >= 4 else '25') if stage >= 2 else '')]
+        s += box(x + j * cw, y, cw, rh, '#c8d9e5', LINE, 0) + txt(name, x + 170 + j * cw, y + 35, 28, weight=700)
+    total = '' if stage < 4 else ('28' if stage >= 8 else '25')
+    rows = [('Item', 'Cost in dollars' if stage >= 1 else 'Cost'), ('Paper', '15' if stage >= 8 else '12'), ('Folders', '8'), ('Pens', '5'), ('Total', total)]
     for j, (left, right) in enumerate(rows):
-        yy=y+(j+1)*rh
-        s += txt(j+1, 157, yy+35, 27)
+        yy = y + (j + 1) * rh
+        s += txt(j + 1, 157, yy + 35, 26)
         for k, value in enumerate([left, right]):
-            selected=(k==1 and ((j==4 and stage!=4) or (j==1 and stage==4)))
-            s += box(x+k*cw, yy, cw, rh, '#d3e9df' if selected else '#fff', NAVY if selected else LINE, 0)
-            s += txt(value, x+k*cw+24, yy+35, 29, weight=700 if j in (0, 4) else 400)
-    s += txt('Supplies', 38, 466, 28, weight=700)
-    if stage == 3:
-        s += box(945, 263, 222, 134, GOLD) + lines(['Predict:', '12 → 15', 'Total = ?'], 961, 300, 28, 39)
-    if stage >= 5:
-        s += box(945, 263, 222, 134, '#d3e9df') + lines(['Checked:', '15 + 8 + 5', '= 28'], 961, 300, 28, 39)
+            on = k == 1 and selected == f'B{j + 1}'
+            s += box(x + k * cw, yy, cw, rh, '#d3e9df' if on else '#fff', NAVY if on else LINE, 0)
+            s += txt(value, x + k * cw + 24, yy + 35, 28, weight=700 if j in (0, 4) else 400)
+    if stage == 9:
+        s += f'<rect x="{x + cw + 4}" y="{y + rh + 4}" width="{cw - 8}" height="{3 * rh - 8}" fill="none" stroke="#1B365D" stroke-width="4" stroke-dasharray="12 8"/>'
+    if stage in (5, 6, 7):
+        s += box(945, 250, 225, 134, GOLD) + lines(['Predict:', 'Paper 12 → 15', 'Total = ?'], 961, 287, 28, 39)
+    if stage == 8:
+        s += box(945, 250, 225, 134, '#d3e9df') + lines(['Checked:', '15 + 8 + 5', '= 28'], 961, 287, 28, 39)
     return s
 
 
@@ -364,19 +390,26 @@ PLANS = {
   ('inspect the recipient carefully',3,900,258,'Check recipient • save Commenter access'),
   ('have the partner verify',4,1011,441,'Verify from the partner’s view')]),
  (3, 1): (document, [
-  ('',0,558,251,'Start with meaningful document structure'),
-  ('Use a real heading style',1,554,250,'Select the title text'),
-  ('for the title',2,160,157,'Open Styles → choose Heading 1'),
-  ('section headings',3,222,284,'The title now appears in Navigation'),
-  ('Use link text',4,588,450,'Name the destination in the link text')]),
+  ('',0,620,300,'Type the handout lines from the worksheet'),
+  ('Select the first line',1,520,215,'Select the title line'),
+  ('choose Heading 1',2,530,147,'Home → Styles → Heading 1'),
+  ('make Who it helps',3,680,147,'Who it helps and Steps → Heading 2'),
+  ('turn on the Navigation Pane',4,152,150,'View → Navigation Pane lists the headings'),
+  ('choose Numbering',5,957,147,'Select the steps → Numbering'),
+  ('Press Control and K',6,990,440,'Ctrl + K → type the address')]),
+ (3, 3): (sheet, [
+  ('',0,600,300,'supplies.csv • items in column A, costs in column B'),
+  ('Change the heading in B1',1,755,265,'B1 → Cost in dollars'),
+  ('Click cell B5',2,755,457,'Select B5, just below the costs'),
+  ('Type an equals sign',3,330,152,'Type =SUM(B2:B4)'),
+  ('press Enter',4,755,457,'Press Enter • B5 shows 25'),
+  ('Before you change anything',5,1050,318,'Predict before you change anything')]),
  (3, 4): (sheet, [
-  ('',0,764,455,'Select B5 • keep the total outside the input range'),
-  ('enter equals SUM',1,467,160,'Enter =SUM(B2:B4)'),
-  ('twenty five dollars',2,771,455,'Check the expected total: $25'),
-  ('Now change paper',3,769,324,'Predict the new total before the change'),
-  ('from twelve to fifteen',4,769,324,'Change B2 from 12 to 15'),
-  ('twenty eight',5,769,455,'The formula recalculates: $28'),
-  ('inspect the formula and range',6,414,158,'Check =SUM(B2:B4) if the result is wrong')]),
+  ('',5,1050,318,'Your prediction is written down • the total is 25'),
+  ('Click B2',7,755,313,'Select B2 • type 15 • press Enter'),
+  ('changes to 28',8,755,457,'The formula recalculates: 28'),
+  ('read the formula bar',9,300,152,'Read the formula bar: =SUM(B2:B4)'),
+  ('Choose File',10,685,353,'Save As → Excel Workbook (*.xlsx)')]),
  (4, 3): (email, [
   ('',0,438,165,'Inspect every recipient before sending'),
   ('Cc sends a visible copy',1,472,220,'Cc is visible to the recipients'),
@@ -440,7 +473,8 @@ def timed_actions(n, i, beat, words):
             at=round(tokens[matches[0]][1]+beat.get('leadIn',.01),3)
         actions.append(dict(at=at, phrase=phrase, state=state, x=x, y=y, label=label))
     assert all(a['at'] < b['at'] for a,b in zip(actions,actions[1:])), (n,i,'out of order')
-    assert actions[-1]['at'] < beat['audioDuration'], (n,i,'outside narration')
+    # Action times include the lead-in (a topic divider makes it longer), so compare with where the narration ends.
+    assert actions[-1]['at'] < beat.get('leadIn',.01)+beat['audioDuration'], (n,i,'outside narration')
     return actions
 
 
