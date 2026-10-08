@@ -6,23 +6,7 @@ not a clock for learners. No break and no timers, per Britt's standing rule.
 """
 from html import escape as e
 
-
-def mission(title, app, start, finish, tell, show, do, question, choices, answer, why, lab, practice, rounds=()):
-    return dict(title=title, app=app, start=start, finish=finish, tell=tell, show=show, do=do, question=question,
-                choices=choices, answer=answer, why=why, lab=lab, practice=practice, rounds=list(rounds))
-
-
-def rnd(title, app, steps, early, notes, paper='', tasks=(), key=()):
-    """One extra hands-on round: a Do slide, matching worksheet tasks and answer-key lines."""
-    assert not paper or app.startswith('Worksheet'), f'{title}: its material is printed on the worksheet, so the label must start with Worksheet'
-    return dict(title=title, app=app, steps=list(steps), early=early, notes=notes, paper=paper, tasks=list(tasks), key=list(key))
-
-
-def table(head, rows):
-    """Small printable table for worksheet material. Cells are escaped."""
-    th = ''.join(f'<th scope="col">{e(h)}</th>' for h in head)
-    body = ''.join('<tr>' + ''.join(f'<td>{e(c)}</td>' for c in row) + '</tr>' for row in rows)
-    return f'<div class="table-scroll" tabindex="0" role="region" aria-label="Practice material"><table><thead><tr>{th}</tr></thead><tbody>{body}</tbody></table></div>'
+from lessonkit import mission, rnd, table
 
 
 A_ROUNDS = [
@@ -164,6 +148,7 @@ WEEK2 = dict(
     warm='A neighbor in Beckley needs computer help. What would you check before sending them across town?',
     apply='Choose one local service. Save a source trail and explain what you still need to confirm.',
     minutes=[8, 5, 22, 16, 22, 18, 14, 8, 7], nobreak=True, capstone=CAPSTONE, practice_pages=True,
+    plan_note='<p>Week 2 teaches AI-assisted search: ask a full-sentence question, read the answer as a lead, open the source, keep a trail. The old Google operator techniques are retired. Each mission has extra hands-on rounds and the lesson ends with a capstone folder. There is no break and no timer. Minutes are what this room is expected to need, based on Week 1 running at about half its plan. If the room is slow, skip in this order: every Done early line, Round 3 of Mission A (Safe to ask), Round 3 of Mission C (Which tool fixes it), then Round 3 of Mission D. Keep the Review slides, the capstone peer test and the individual check.</p><p>The Week 2 video was re-recorded for AI-assisted search; chapters 2 and 3 are new. The spec is docs/digital-literacy-2/week-02-ai-search-spec.md.</p>',
     missions=[
         mission('Ask well, then check it', 'Browser · Google', 'A broad question: computer help', 'A checked answer and a source trail',
                 ['Ask in full sentences: what you need, where, what matters.',

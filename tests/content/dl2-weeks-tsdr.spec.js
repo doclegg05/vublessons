@@ -52,6 +52,7 @@ for(const n of [2,3,4,5,6]){
  test(`Week ${n} knowledge checks offer believable wrong answers`,()=>{
   const options=w.slides.filter(s=>s.kind==='check').flatMap(s=>s.options);
   for(const o of silly)expect(options).not.toContain(o);
-  expect(w.lab).toHaveLength(8);expect(w.answers).toHaveLength(8);
+  // Week 3 splits the Excel task at the prediction (2026-10-08), so its worksheet has nine tasks.
+  expect(w.lab).toHaveLength(n===3?9:8);expect(w.answers).toHaveLength(w.lab.length);
  });
 }
