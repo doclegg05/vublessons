@@ -282,12 +282,7 @@ App test log and a Retest table with typed cells.
 
 **Still open**
 
-- Video re-record (not done): chapter 5 as "Write a spec the agent can follow"; chapter 6 as "Review the
-  agent's change before you accept it" with a screen demo of plan, approve, the diff with the missing
-  `toLowerCase`, and the way back; one spoken definition each for agent (ch1), SaaS and authentication
-  (ch2), API key (ch5), diff (ch6), happy path (ch7) and hosting (ch10); 3–5 s of silence after the prompts
-  at 2:52 and 6:37; screen-demo labels held at least 2.5 s. Until then the chapter titles still describe the
-  old build ("Give the AI a bounded, useful request") and the transcript's word list covers the terms.
+- Video re-record: done 2026-10-08. The video was rewritten to follow Missions 6A to 6D, with spoken definitions, pause cards and screen demos of the diff and of testing version 2. See `week-06-spec.md`.
 - The floating Text size button can cover the search box on narrow screens (AX-07). The proposed
   `shared/text-size.js` change was skipped because it is platform-wide; the answer guide tells the
   instructor this is not the agent's change.

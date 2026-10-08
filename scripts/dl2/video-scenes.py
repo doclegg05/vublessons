@@ -67,16 +67,16 @@ CHAPTERS = {
  ('challenge',None,['Search|Name the place; open its own page','Word and Excel|Heading, steps, a SUM formula','Undo and feedback|Bring back text; name what is missing']),
  ('results',None,['Post-test|20 questions, on your own','Submit|To Britt; save the graded PDF','Plan|One strength, one next skill'])],
 6: [
- ('app','app-planning',['Familiar task|Find a community resource','Small scope|One page, search and filter','Safe data|Fictional records only']),
- ('product-types',None,['Website|Information to read','Web app|Input → filtered result','SaaS|Hosted service and ongoing support']),
- ('parts',None,['HTML|Heading, label and search field','CSS|Layout and readable focus','JavaScript|Match records to the search']),
- ('acceptance',None,['Search library|Community library appears','Search zzz|No matching resources','Keyboard|Every control has visible focus']),
- ('prompt',None,['User and task|Find fictional community resources','Controls|Labeled search and category filter','Boundaries|No external dependencies or secrets']),
- ('local-file',None,['Save|resource-finder-v1.html','Open|Check heading, controls and results','No account|Edit heading; save and refresh']),
- ('app',None,['library|Matching resource shown','zzz|Clear no-results message','LIBRARY|Same match; also test category']),
- ('keyboard',None,['Keyboard|Tab through visible controls','Narrow screen|Labels and results remain readable','Data|Bundled file ≠ shared database']),
- ('versions',None,['Report|LIBRARY fails; library succeeds','Repair|Match case without losing filter','Retest|Failed check and a passing check']),
- ('evidence','app-planning',['Demonstrate|Run three acceptance checks','Explain|One part and one revision','Limit|Local prototype ≠ public service'])]
+ ('app','app-planning',['Agent|Reads, plans, edits, checks','You|Ask clearly, review every change','Today|One change to a fictional finder']),
+ ('baseline',None,['library|1 found','LIBRARY|1 found: capitals ignored','learning|Nothing: categories not searched']),
+ ('spec',None,['Change|Search categories too','Keep|Capitals match; no-match message','Checks|learning → 2 · LIBRARY → 1']),
+ ('plan',None,['Plan|One file, one rule, checks','Freedom|You choose; you still review','Predict|Part · lines · what could break']),
+ ('diff',None,['Asked for|+ category in the search','Not asked for|− toLowerCase','Check|Ctrl+U, then Ctrl+F']),
+ ('app',None,['Happy path|learning 2 · library 1','No match|zzz shows the message','Regression|LIBRARY finds nothing']),
+ ('report',None,['Steps|Open version 2; type LIBRARY','Expected|1 resource, as version 1','Keep|The new category search']),
+ ('retest',None,['Failed check|LIBRARY → 1 again','Passed before|learning 2 · zzz no match','Decide|Accept only if nothing broke']),
+ ('roadblocks',None,['Address|Domain name, rented yearly','Server|Back end · sign-in · secret keys','Caretaker|Pays, updates, reviews']),
+ ('evidence','app-planning',['Loop|Ask · read · test · report · retest','Owner|Someone keeps it running','Limit|An agent cannot take responsibility'])]
 }
 
 def chapter_plan(n,index):
@@ -392,6 +392,33 @@ def diagram(kind,i):
   for j,(k,t) in enumerate([('search','Search: name the place, open its page'),('file','Word: heading, numbered steps, bold warning'),('grid','Excel: total four costs with a formula'),('undo','Undo: bring a deleted line back'),('chat','Feedback: name what the flyer is missing')]):
    y=12+j*86;v+=f'<g id="task-{j}">'+rect(18,y,724,72,'#173d5c')+icon(k,32,y+8,56)+text(t,108,y+47,27)+'</g>'
   note='Five tasks · quick card allowed · separate from the test'
+ elif kind=='baseline':
+  v=rect(18,12,724,58,'#173d5c')+text('Version 1 · names and descriptions only',380,52,28,anchor='middle')
+  for j,(q,r,ok) in enumerate([('library','1 found',True),('LIBRARY','1 found',True),('learning','none found',False)]):
+   y=92+j*112;v+=f'<g id="base-{j}">'+rect(18,y,724,96,'#e1efed')+icon('search',36,y+18,60,'#0f655f')+text(q,116,y+60,32,'#1b365d')+text(r,520,y+60,32,'#0f655f' if ok else '#B31942')+'</g>'
+  note='Write down what works before you change anything.'
+ elif kind=='spec':
+  for j,(label,line) in enumerate([('One change','Search categories too'),('Keep','Capitals match; no-match message'),('Checks','learning → 2 · LIBRARY → 1'),('Never','Real names, passwords, secret keys')]):
+   y=12+j*106;v+=f'<g id="spec-{j}">'+rect(18,y,724,92,'#e1efed' if j<3 else '#f4d6dc')+text(label,40,y+40,26,'#0f655f' if j<3 else '#B31942')+text(line,40,y+78,28,'#1b365d')+'</g>'
+  note='A spec: one change, what stays, how you will check.'
+ elif kind=='plan':
+  v='<g id="plan-card">'+rect(18,12,450,410,'#e1efed')+text('Agent plan',40,56,30,'#1b365d')
+  for j,line in enumerate(['1. Open resource-finder.html','2. Add category to the','   search rule','3. Run learning, LIBRARY,','   and zzz']):v+=text(line,40,106+j*48,26,'#1b365d')
+  v+='</g><g id="predict">'+rect(492,12,250,410,'#173d5c')+text('My prediction',617,56,26,'#E6C65C',anchor='middle')
+  for j,line in enumerate(['Part: JavaScript','Lines: 1 or 2','Could break:','capital letters']):v+=text(line,512,116+j*56,25)
+  v+='</g>';note='Read the plan. Predict before it runs.'
+ elif kind=='report':
+  for j,(label,line) in enumerate([('Steps','Open version 2, type LIBRARY'),('Expected','1 resource, as in version 1'),('Actual','No matching resources'),('Keep','The new category search')]):
+   y=12+j*106;v+=f'<g id="report-{j}">'+rect(18,y,724,92,'#e1efed')+text(label,40,y+40,26,'#0f655f')+text(line,40,y+78,28,'#1b365d')+'</g>'
+  note='A report a stranger could follow.'
+ elif kind=='retest':
+  v=tile('edit','Version 2',15,20,330,200,'v2')+text('LIBRARY: 0 found',180,250,26,'#E6C65C',anchor='middle')+arrow(360,120,410,120)+tile('check','Version 3',425,20,320,200,'v3')+text('LIBRARY: 1 found',585,250,26,'#E6C65C',anchor='middle')
+  v+='<g id="passed">'+rect(15,272,730,70,'#0f655f')+text('Still pass: learning 2 · library 1 · zzz no match',380,316,26,anchor='middle')+'</g>'
+  v+='<g id="accept">'+rect(15,354,730,70,'#173d5c')+text('Accept only if nothing that worked has broken',380,398,26,anchor='middle')+'</g>';note='Retest the failure and what passed before.'
+ elif kind=='roadblocks':
+  for j,(k,label,line) in enumerate([('search','Address','Domain name'),('computer','Home','Hosting'),('grid','Memory','Back end'),('lock','Front door','Server checks'),('key','Keys','On the server'),('person','Caretaker','Pays, updates')]):
+   x=18+(j%3)*246;y=12+(j//3)*210;v+=f'<g id="road-{j}">'+rect(x,y,230,196,'#173d5c')+icon(k,x+83,y+16,64)+text(label,x+115,y+118,28,anchor='middle')+text(line,x+115,y+160,24,'#E6C65C',anchor='middle')+'</g>'
+  note='What a real service needs beyond the page.'
  elif kind=='slide-design':
   for j,label in enumerate(['Purpose','Action','Result']):
    x=18+j*250;v+=rect(x,30,225,170,'#e1efed')+text(label,x+112,72,30,'#1b365d',anchor='middle')+icon(['person','edit','check'][j],x+75,99,69,'#0f655f')
@@ -547,6 +574,18 @@ def scene(n,i,b,words):
  elif kind=='message':
   for j,p in enumerate(['a subject such as','name the part to check','say when you need'] if n==4 else ['specific subject','clear request','response time']):move(f'#message-{j} rect',{'fill':'#b2d8c9'},p,.2+j*.17)
  elif kind=='phishing':light('#request','asks you to verify' if n==5 else 'known website',.3 if n==5 else .62);light('#verified','three things should' if n==5 else 'known website',.62)
+ elif kind=='baseline':
+  for j,p in enumerate(['library finds one','library in capital letters','but learning finds nothing']):light(f'#base-{j}',p,.2+j*.15)
+ elif kind=='spec':
+  for j,p in enumerate(['it names one change','keep capital letters','then add acceptance checks','never put real names']):light(f'#spec-{j}',p,.15+j*.2)
+ elif kind=='plan':
+  light('#plan-card','show its plan',.1);light('#predict','make a prediction',.5)
+ elif kind=='report':
+  for j,p in enumerate(['give the steps','give what you expected','give what actually happened','then say what must stay']):light(f'#report-{j}',p,.1+j*.15)
+ elif kind=='retest':
+  light('#v3','sends back version 3',.05);light('#passed','repeat checks that passed',.45);light('#accept','only when the failed check',.65)
+ elif kind=='roadblocks':
+  for j,p in enumerate(['it needs an address','it needs a home','it needs a back end','sign-in must be checked','a secret api key','plan the finder']):light(f'#road-{j}',p,.12+j*.14)
  elif kind=='inclusive':
   for j,p in enumerate(['captions help','keyboard access helps','color is another']):light(f'#help-{j}',p,.12+j*.25)
  elif kind=='challenge':

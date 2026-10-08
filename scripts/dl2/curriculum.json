@@ -1682,54 +1682,44 @@
       ],
       "agenda": [
         [
-          8,
-          "Warm-up and reconnect",
-          "Reconnect: two learners share the practice step they chose at the end of week 5. Recall: in week 1 you let AutoCorrect change teh to the and checked it before keeping it; in week 5 you kept passwords private. Today a much bigger automatic helper changes a web page, and both rules still apply. Pairs discuss slide 2: where would a wrong change hurt most?"
+          30,
+          "Opening video with pause cards",
+          "Learners open the worksheet first. Play chapter 1, then chapters 2 and 3, chapters 4 and 5, chapter 6, chapter 7, chapter 8, chapter 9 and chapter 10 in order; a topic card opens each mission and the wrap-up. The video stops at a pause card at 1:33 (Mission 6A Round 2, the baseline on version 1), 2:31 (Mission 6A tasks 1 and 2), 3:24 (Mission 6B task 1), 4:32 (Mission 6B task 2), 5:31 (Mission 6C task 1), 6:28 (Mission 6C task 2), 7:23 (Mission 6C task 3) and 8:22 (Mission 6D task 1). At each card, pause; every learner does the task the card names, then play on."
+        ],
+        [
+          5,
+          "Welcome and mission overview",
+          "Slides 2 to 4. Ask slide 3's question and name the loop on the board: ask clearly, read the change, test it, report it, retest. Learners need no AI account; three prepared versions of the resource finder are the evidence."
+        ],
+        [
+          18,
+          "Cycle A: spec and acceptance checks",
+          "Tell: slide 5. Show: slide 6, replaying chapters 2 and 3 if needed. Do: slide 7 checks worksheet tasks 1 and 2 and the Round 2 baseline on slide 8, which every learner did at the pause cards; then Rounds 3 and 4 on slides 9 and 10. Review: slide 11."
+        ],
+        [
+          20,
+          "Cycle B: predict, then read the diff",
+          "Tell: slide 12. Show: slide 13, replaying chapters 4 and 5 if needed. Optional live run: after the predictions, give the class spec to the AI coding agent on the projector in plan mode and read its plan aloud; if the run is slow or does something unexpected, use the prepared version 2. Do: slide 14 checks worksheet tasks 1 and 2 on the Mission 6B practice page; then every learner works Rounds 2 to 4 on slides 15 to 17. Review: slide 18."
+        ],
+        [
+          18,
+          "Cycle C: test, report, repair, retest",
+          "Tell: slide 19. Show: slide 20, replaying chapter 6, 7 or 8 if needed; optionally paste one learner\u2019s repair request into the agent and read its one-line diff together. Do: slide 21 checks worksheet tasks 1 to 3, which every learner did at the pause cards on versions 2 and 3; then Rounds 2 to 4 on slides 22 to 24. Review: slide 25."
+        ],
+        [
+          15,
+          "Cycle D: know what ready means",
+          "Tell: slide 26. Show: slide 27, replaying chapter 9 if needed. Do: slide 28 checks worksheet task 1, the six roadblocks; then every learner works Rounds 2 to 4 on slides 29 to 31. Never show a sign-in page, key or bill on screen. Review: slide 32."
         ],
         [
           7,
-          "Introduction: goals and the example",
-          "Read the goals on slide 1 aloud. Slide 3 in one minute: SaaS is software you use in a browser while a company runs it. Play chapter 1 (0:00\u20130:46). Every learner opens slide 9 and selects Open starter app: this is version 1, the page the agent will change. Name the loop on the board: spec, plan, change, review, test, revise."
-        ],
-        [
-          15,
-          "Cycle A: spec and acceptance checks",
-          "Tell: slides 4, 6 and 7 (agent, prompt, spec, acceptance check). Show: chapter 4 (pause at 2:52 so learners can write), then chapter 5 (3:00\u20133:44); build the class spec live with the slide 7 builder. Do: worksheet tasks 1 and 2, every learner writes their own spec and three checks. Review: a partner reads each check aloud and says whether they could run it without guessing; pick one learner's checks for the demo."
-        ],
-        [
-          10,
-          "Cycle B: predict, then read the plan",
-          "Tell: slides 5 and 8 (HTML, CSS and JavaScript; ask the agent for a plan first). Show: chapter 3 (1:32\u20132:14); after the predictions, give the class spec to the AI coding agent on the projector in plan mode and read its plan aloud. Do: worksheet task 3, every learner writes a prediction before the plan appears, then compares. Review: show of hands for HTML, CSS or JavaScript; approve the plan only if it matches the spec."
-        ],
-        [
-          12,
-          "Cycle C: the agent changes, you review",
-          "Tell: slides 11 and 10 (one change at a time; a diff shows removed lines with a minus sign and added lines with a plus sign). Show: approve the plan, let the agent make the change, then show the before-and-after on the projector; chapter 6 (3:44\u20134:01) shows keeping a working version first. If the live run is slow or fails, use the prepared version on slide 10. Do: worksheet task 4, every learner marks each changed line on slide 10 as asked for or not asked for. Review: partners compare; ask which change nobody asked for and which check would catch it."
-        ],
-        [
-          15,
-          "Cycle D: test with the checklist",
-          "Tell: slide 17 (happy path, no match, mixed case, keyboard, narrow screen). Show: chapter 7 (4:27\u20135:11) and chapter 8 (5:11\u20135:55), then test the live agent's page on the projector while the class calls out each check. Do: worksheet task 5, every learner opens the agent's version (resource-finder-agent.html) at their own seat and records expected, actual and pass or fail in the App test log. Review: the slide 20 knowledge check; a learner who found a failing check reads out their evidence."
-        ],
-        [
-          13,
-          "Cycle E: repair and retest",
-          "Tell: slides 18 and 12 (regression; a repair request names the steps, expected, actual and what to keep). Show: chapter 9 (pause at 6:37), then paste one learner's repair request into the agent and read its one-line diff together. Do: worksheet tasks 6 and 7, every learner writes a repair request, then opens the repaired version (resource-finder-agent-fixed.html) and repeats the failed check and two checks that passed before. Review: a partner confirms that nothing that passed before now fails."
-        ],
-        [
-          13,
-          "Cycle F: what makes it SaaS",
-          "Tell: slides 3, 13, 14, 15 and 19 (SaaS, where data lives, API key, authentication, hosting, cost and upkeep). Show: chapter 2 (0:46\u20131:32) and chapter 10 (6:44\u20137:31), then press Ctrl and U on the agent's page to show that anyone can read a page's code. Do: worksheet task 8, every learner fills in the SaaS table for the finder. Review: the slide 21 knowledge check; two learners each explain one trade-off."
-        ],
-        [
-          10,
           "Individual check",
-          "Each learner shows you three things: one acceptance check and its result, the change the spec did not ask for, and one SaaS trade-off with a reason. Score the extension rubric (0, 1 or 2 per row) and mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
+          "Slide 33. Replay chapter 10 if useful. Each learner explains the bug, the repair and one responsibility they would keep if the finder served real people, and shows one check and its result as evidence. Score the 8-point extension rubric and mark Independent, With prompt or Needs practice on the roster; re-model only the missing step."
         ],
         [
-          17,
+          7,
           "Apply and close",
-          "Slides 22 to 24. Home task: choose one website you already use that runs as a service, such as web email. Write where your data lives, how you sign in, and one check you would run after the company changes the site. Keep it with your worksheet. Then select Start fresh on this computer at each station."
+          "Slides 34 and 35. Home task: choose one website you already use that runs as a service, such as web email. Write where your data lives, how you sign in, and one check you would run after the company changes the site. Save or print the worksheet, then select Start fresh on this computer at each station."
         ]
       ],
       "slides": [
