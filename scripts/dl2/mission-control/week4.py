@@ -128,15 +128,15 @@ D_ROUNDS = [
          'Write the last day to cancel the free month.'],
         'Done early? After how many paid months does Offer A cost more than Offer B?',
         'Offer A: free for 30 days, then $6 a month. Three months: 2 paid months, $12. Twelve months: 11 paid months, '
-        '$66. Offer B: $60 either way. A trial started October 19 ends November 18, so cancel by November 17. A costs '
+        '$66. Offer B: $60 either way. A trial started March 3 ends April 2, so cancel by April 1. A costs '
         'more than B after 10 paid months.',
         paper=table(['Offer', 'Price', '3 months', '12 months'],
                     [['A', 'Free for 30 days, then $6 a month until you cancel', '', ''],
                      ['B', '$60 a year, paid now, renews every year', '', '']]),
         tasks=['Work out what each offer in the table costs for 3 months and for 12 months, and write the last day to '
-               'cancel a free month that started October 19.'],
+               'cancel a free month that started March 3.'],
         key=['A: $12 for 3 months (2 paid months) and $66 for 12 months (11 paid months). B: $60 for either. The free '
-             'month runs October 19 to November 18, so cancel by November 17.']),
+             'month runs March 3 to April 2, so cancel by April 1.']),
     rnd('What is missing?', 'Worksheet · fictional sign-up screen',
         ['Read the fictional sign-up screen.',
          'Find the seller, the price now, the later price and the renewal.',
