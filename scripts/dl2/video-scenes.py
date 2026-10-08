@@ -56,16 +56,16 @@ CHAPTERS = {
  ('commerce',None,['Offer A|Free 30 days, then $6 a month','Offer B|$60 a year, paid now','Check|Seller · renewal · how to cancel']),
  ('evidence','collaboration',['Request|Sam knows what and by when','Copy|One shared copy, comments resolved','Pay|A year\'s cost and how to stop'])],
 5: [
- ('verify','safety',['Pause|What is being requested?','Inspect|What evidence do I have?','Verify|Choose an independent route']),
- ('comfort','workstation',['Comfort|Screen and input within reach','Access|Captions · large text · keyboard','Control|Choose a helpful adjustment']),
- ('phishing',None,['Claim|Your service will stop','Request|Provide information immediately','Evidence|A convincing logo is not proof']),
- ('trusted-route',None,['Message route|Sender supplies its own evidence','Independent route|Open a known website or bookmark','Confirm|Ask whether the issue exists']),
- ('encrypt',None,['Read-only|Content remains readable','Encryption|Key required to read the data','Limit|Unlocked accounts still need care']),
- ('usb','usb',['Found|Ordinary appearance proves nothing','Pause|Keep the drive disconnected','Procedure|Give it to authorized staff']),
- ('access',None,['Meeting|Camera or microphone may fit task','Text page|Camera access is unrelated','Review|Check app and permission later']),
- ('wellbeing',None,['Identity|A friendly story is not verification','Attention|Choose notifications and breaks','Support|Report · block · trusted help']),
- ('decision',None,['Claim|A code is needed for an appointment','Unverified|Who is actually asking?','Next step|Do not share; check known contact']),
- ('results',None,['Result|A classroom score, not certification','Review|Find a skill to practice','Transfer|Repeat a useful task with less help'])],
+ ('verify','safety',['Pause|What is being asked of me?','Look|What evidence do I have?','Check|Choose a safer route']),
+ ('comfort','workstation',['Position|Arm\'s length; top near eye level','Magnifier|Windows + plus · Windows + Esc','Restore|Put shared settings back']),
+ ('inclusive',None,['Captions|Noise, quiet rooms, hearing','Keyboard|Tab moves a visible outline','Color|Put a word beside it']),
+ ('phishing',None,['Claim|Act now: account will close','Sender|support@account-check.example','Request|Verify your password']),
+ ('trusted-route',None,['Message route|Its link and number prove nothing','Your route|A bookmark or the number on your card','Typed it?|Change it; two-step verification']),
+ ('wellbeing',None,['Friend|Money plus secrecy: stop and check','Attention|Set a stopping point','Hurtful post|Screenshot · report · talk to someone']),
+ ('access',None,['Updates|Windows Update on','Camera|Allow for a meeting, block for reading','USB|Unknown drive: give it to staff']),
+ ('encrypt',None,['Password to open|Encrypts the file','Read-only|Limits edits; still readable','Accounts|Passkey, or passphrase + two-step']),
+ ('challenge',None,['Search|Name the place; open its own page','Word and Excel|Heading, steps, a SUM formula','Undo and feedback|Bring back text; name what is missing']),
+ ('results',None,['Post-test|20 questions, on your own','Submit|To Britt; save the graded PDF','Plan|One strength, one next skill'])],
 6: [
  ('app','app-planning',['Familiar task|Find a community resource','Small scope|One page, search and filter','Safe data|Fictional records only']),
  ('product-types',None,['Website|Information to read','Web app|Input → filtered result','SaaS|Hosted service and ongoing support']),
@@ -265,7 +265,7 @@ def diagram(kind,i):
   for j,t in enumerate(['Please review the handout by Thursday','Check step 2: can visitors find the desk?','Reply by Thursday at 3 p.m.']):v+=f'<g id="message-{j}">'+rect(64,157+j*70,630,53,'#c4d8de')+text(t,85,192+j*70,28,'#1b365d')+'</g>'
   note='What to do · which file · by when'
  elif kind=='phishing':
-  v=rect(15,43,324,280,'#e1efed')+icon('email',128,72,87,'#1b365d')+text('ACT NOW',177,220,38,'#1b365d',anchor='middle')+rect(84,251,183,45,'#c9a227')+text('Unknown link',177,282,24,'#1b365d',anchor='middle')
+  v=rect(15,43,324,280,'#e1efed')+icon('email',128,62,76,'#1b365d')+text('Act now:',177,182,34,'#1b365d',anchor='middle')+text('account will close',177,222,28,'#1b365d',anchor='middle')+rect(54,251,246,45,'#c9a227','request')+text('Verify password',177,282,26,'#1b365d',anchor='middle')
   v+=icon('pause',354,136,82)+arrow(448,180,493,180)+tile('shield','Known contact',505,71,239,226,'verified');note='Pause. Verify independently.'
  elif kind=='access':
   v=tile('camera','Video meeting',25,37,320,190,'camera-yes')+tile('file','Text page',415,37,320,190,'camera-no')+icon('check',146,276,95,id='allow')
@@ -384,6 +384,14 @@ def diagram(kind,i):
   v+=f'<g id="alt">'+rect(432,20,310,180,'#e1efed')+text('Alt text',452,62,28,'#0f655f')+text('Two people review',452,110,26,'#1b365d')+text('a computer-help',452,146,26,'#1b365d')+text('handout.',452,182,26,'#1b365d')+'</g>'
   v+=f'<g id="credit">'+rect(432,222,310,192,'#173d5c')+text('Credit line',452,264,28,'#E6C65C')+text('Photo: VUB',452,312,26)+text('practice photo,',452,350,26)+text('used with permission',452,388,26)+'</g>'
   note='Crop · describe · credit'
+ elif kind=='inclusive':
+  for j,(k,label,detail) in enumerate([('chat','Captions','Noise, hearing'),('grid','Keyboard','Tab shows where'),('check','Color + word','Words beside color')]):
+   v+=f'<g id="help-{j}">'+tile(k,label,18+j*253,40,217,226)+text(detail,126+j*253,320,24,anchor='middle')+'</g>'
+  note='Built-in help for more people.'
+ elif kind=='challenge':
+  for j,(k,t) in enumerate([('search','Search: name the place, open its page'),('file','Word: heading, numbered steps, bold warning'),('grid','Excel: total four costs with a formula'),('undo','Undo: bring a deleted line back'),('chat','Feedback: name what the flyer is missing')]):
+   y=12+j*86;v+=f'<g id="task-{j}">'+rect(18,y,724,72,'#173d5c')+icon(k,32,y+8,56)+text(t,108,y+47,27)+'</g>'
+  note='Five tasks · quick card allowed · separate from the test'
  elif kind=='slide-design':
   for j,label in enumerate(['Purpose','Action','Result']):
    x=18+j*250;v+=rect(x,30,225,170,'#e1efed')+text(label,x+112,72,30,'#1b365d',anchor='middle')+icon(['person','edit','check'][j],x+75,99,69,'#0f655f')
@@ -433,9 +441,10 @@ def diagram(kind,i):
   v=tile('email','Unexpected message',18,32,345,233)+tile('search','Known contact',397,32,345,233)
   v+=text('Unverified request',190,326,29,anchor='middle')+text('Independent check',570,326,29,anchor='middle')+text('Do not use the message’s supplied number',380,411,30,'#E6C65C',anchor='middle');note='Use a route you already trust.'
  elif kind=='results':
-  v=rect(30,24,700,378,'#e1efed')+text('My next practice',65,81,36,'#1b365d')
-  for j,(name,w) in enumerate([('Settings',430),('Files',310),('Communication',365)]):
-   y=119+j*87;v+=text(name,62,y+30,26,'#1b365d')+rect(285,y,w,40,'#0f655f')
+  # A learning plan, not a domain chart: the real results list seven areas, so the picture names none.
+  v=rect(30,24,700,378,'#e1efed')+text('My results, as a plan',65,81,36,'#1b365d')
+  for j,(name,detail) in enumerate([('Score','out of 20'),('Strong area','keep using it'),('Next skill','practice this week')]):
+   y=119+j*87;v+=f'<g id="plan-{j}">'+text(name,62,y+30,28,'#1b365d')+rect(285,y,410,48,'#0f655f')+text(detail,305,y+34,26)+'</g>'
   note='Fictional learning report · not certification'
  elif kind=='acceptance':
   v=rect(20,30,720,375,'#e1efed')+text('Check',55,82,30,'#1b365d')+text('Expected result',338,82,30,'#1b365d')
@@ -537,7 +546,13 @@ def scene(n,i,b,words):
  elif kind=='meeting':light('#meeting-0','test your headset' if n==4 else 'test the sound',.15);move('#muted',{'opacity':1},'stay muted' if n==4 else 'mute',.35);light('#meeting-2','raise your hand' if n==4 else 'raise-hand',.5)
  elif kind=='message':
   for j,p in enumerate(['a subject such as','name the part to check','say when you need'] if n==4 else ['specific subject','clear request','response time']):move(f'#message-{j} rect',{'fill':'#b2d8c9'},p,.2+j*.17)
- elif kind=='phishing':light('#verified','known website',.62)
+ elif kind=='phishing':light('#request','asks you to verify' if n==5 else 'known website',.3 if n==5 else .62);light('#verified','three things should' if n==5 else 'known website',.62)
+ elif kind=='inclusive':
+  for j,p in enumerate(['captions help','keyboard access helps','color is another']):light(f'#help-{j}',p,.12+j*.25)
+ elif kind=='challenge':
+  for j,p in enumerate(['ask a search question','build a short word','total four costs','delete a line','write useful feedback']):light(f'#task-{j}',p,.18+j*.1)
+ elif kind=='results':
+  for j,p in enumerate(['your score','pick one strength','one skill to practice']):light(f'#plan-{j}',p,.35+j*.15)
  elif kind=='access':light('#allow','video meeting',.1);light('#deny','deny',.68)
  elif kind=='encrypt':light('#locked','encryption',.35);move('#cipher',{'y':-9},'unreadable',.45)
  elif kind=='attention':

@@ -4,7 +4,7 @@
     "model": "eleven_v3",
     "voice": "Dslrhjl3ZpzrctukrQSN",
     "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
-    "speed": 0.95,
+    "speed": 0.85,
     "stability": 0.5,
     "similarityBoost": 0.8,
     "style": 0,
@@ -13,11 +13,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "52c022898998aff275c4092d919009f32a226b6055ecfbab4dc8cc68294764a5",
+    "textSha256": "7732f1d7f559a0a1db7f5ea31ea594a66b3b0ae92370e67e4f0aa5dea200c9cb",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "acfc0d7ba6db127382314125d9494f550b8d9679a5abb8928bafd2523f473789",
-    "sourceSha256": "00ba3576fe66e4d01b2c48ccb3886cf92560cf94c8ac80526253e2ac91e830fa",
-    "sha256": "00ba3576fe66e4d01b2c48ccb3886cf92560cf94c8ac80526253e2ac91e830fa"
+    "originalSha256": "7415f82885b242d076ac180e3c26fd8d19ac7251c56e2ca7b2328b232bced2fb",
+    "sourceSha256": "b3caf26d42d26a2909323462fe7a19b64e6827a9f90363d4409bee4fdb9522e5",
+    "sha256": "b3caf26d42d26a2909323462fe7a19b64e6827a9f90363d4409bee4fdb9522e5"
   },
   "beat-02": {
     "engine": "ElevenLabs",
@@ -33,18 +33,18 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "e48647b87c29cbd94d983f157a0dd5f0ed07e959eee986b0687ef6999a348b1c",
+    "textSha256": "7bfe70b17098bed95b1b4375a9e001a466c14ebead023524e093ab99ed8b79f6",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "a3b42a651bc03edf77ddb874ef3f969555311af98954de4107185fe358170699",
-    "sourceSha256": "616c32cdddabec06072455ac050cce2f4d66e3ba19542cd83397c86b84754b02",
-    "sha256": "616c32cdddabec06072455ac050cce2f4d66e3ba19542cd83397c86b84754b02"
+    "originalSha256": "cd8ef9f82b58950281a17e712f6ec309f3c64aedcfd1c4f3e06d60fad4c6439f",
+    "sourceSha256": "b38729d5be16dc1f2501967f8af41b83219249fded6d0d32e908428ddeae7200",
+    "sha256": "b38729d5be16dc1f2501967f8af41b83219249fded6d0d32e908428ddeae7200"
   },
   "beat-03": {
     "engine": "ElevenLabs",
     "model": "eleven_v3",
     "voice": "Dslrhjl3ZpzrctukrQSN",
     "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
-    "speed": 0.95,
+    "speed": 0.85,
     "stability": 0.5,
     "similarityBoost": 0.8,
     "style": 0,
@@ -53,11 +53,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "8547f97d938b44401fe4a8b8a2efdfdd54db3d51a9b57e4265550dc05837e2db",
+    "textSha256": "2a6211f2d62ca7dabe99f933fbf432c6ad5691f820d304609505e8d1dfe7166d",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "a62b7674d46628bfe27bca6ba52d4ddf012d43ed975b3771d85f0daf84fa9804",
-    "sourceSha256": "01c81a8f9efb142e3f73f1ff9a1d566e30a39f617c6ea18ce6c6123c9202a92d",
-    "sha256": "01c81a8f9efb142e3f73f1ff9a1d566e30a39f617c6ea18ce6c6123c9202a92d"
+    "originalSha256": "91991e20a851b04d2a643395925a98fa9f093732a8f9b7cf06bb9e38ff67f47f",
+    "sourceSha256": "4568502a605e2a3b24c2991cec44357022a3d8cddede79f5b01cb90deb95860a",
+    "sha256": "4568502a605e2a3b24c2991cec44357022a3d8cddede79f5b01cb90deb95860a"
   },
   "beat-04": {
     "engine": "ElevenLabs",
@@ -73,11 +73,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "c16f86494f62d2257925f1484bf4b0b9b59bd5ab9b5dbf1362c7424808a1104e",
+    "textSha256": "2b903e752235f6931039df1d11b65779081a293b90bf91c10035d18c767f0a31",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "3a0539f30a4ca10ee3cfde342154cf884db24464126d8791b1d22d556fc2a77d",
-    "sourceSha256": "94f4e9f3f4d7f3c9ff5653a347a4786be5ddecc523cbf9cd2fb2a029ee81c573",
-    "sha256": "94f4e9f3f4d7f3c9ff5653a347a4786be5ddecc523cbf9cd2fb2a029ee81c573"
+    "originalSha256": "1ae2fd9c44a9bf8099c1bdf2bd5e29ac514e1763c841104745279ddb7578cc83",
+    "sourceSha256": "ae69ab64248b3a852f7d0202eb2c78b9f32aa4a6cd34cbb5e87c680654ef9622",
+    "sha256": "ae69ab64248b3a852f7d0202eb2c78b9f32aa4a6cd34cbb5e87c680654ef9622"
   },
   "beat-05": {
     "engine": "ElevenLabs",
@@ -93,11 +93,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "f9971e81481eff5dceabb688e8f11c5fcf8eb1e928c67c1a9e00003749064982",
+    "textSha256": "45888a9deb50ced30d7797c7de97513cb26d761cbbbb2a5910f3f36d7d1fecac",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "4b992225f505a257be7b610cc8319da6c7e307686fae8facea601c9b9afd3b26",
-    "sourceSha256": "81d78fff6e50331b9a3966879a792e99fe1b3c938792a92e81accad967465430",
-    "sha256": "81d78fff6e50331b9a3966879a792e99fe1b3c938792a92e81accad967465430"
+    "originalSha256": "af3f266ff4726f6766c58024160615568ba2bfdae5a41d67ec8935366a82beb5",
+    "sourceSha256": "6f55822a15da32d9efffefc6fa204bd99b7c1d704e4e60e693901cb1b33d82ae",
+    "sha256": "6f55822a15da32d9efffefc6fa204bd99b7c1d704e4e60e693901cb1b33d82ae"
   },
   "beat-06": {
     "engine": "ElevenLabs",
@@ -113,11 +113,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "2a8ce76e0afdaa5d8837f0f4c7e2e8030d74bcdab66f9e4963a9f253c54da914",
+    "textSha256": "a081b0c06d1ae4efdb1d0f0c120758a7123f55c1e905199a0deb524946a187da",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "77431778867b118253a19967bfb0a9e85a5d50dbc4ca85802384bce9930304a3",
-    "sourceSha256": "0f74dfdf6a51b36176b5d0a97f8d4fd96fc567bb6e2f9417b5ce3789b443764b",
-    "sha256": "0f74dfdf6a51b36176b5d0a97f8d4fd96fc567bb6e2f9417b5ce3789b443764b"
+    "originalSha256": "8773e169fb76e1cf366ff33a125f7dfb88c3bd4f8167f6f8057387872fcbaf7b",
+    "sourceSha256": "7cc7de5ec4b6b0097cb94360b8c35c01bee1897737c619e214889cbc2d1c8c72",
+    "sha256": "7cc7de5ec4b6b0097cb94360b8c35c01bee1897737c619e214889cbc2d1c8c72"
   },
   "beat-07": {
     "engine": "ElevenLabs",
@@ -133,11 +133,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "f4a2e528736fdb20bf09b3c4c3ead0afb584309d227943e580e063e4c49242b4",
+    "textSha256": "218ff82e390cff143d899cc92a748e42ea34a510f75fb769deba7f831a185784",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "545d0ee18d5d1eab24e3c79e25beddd64309465bfb0fa65e63efad0ec6eb6d3c",
-    "sourceSha256": "9cdf3097815d9d2a2221c3d3d19f2207efa8502466a2d4ebaa3b11e17e278ccd",
-    "sha256": "9cdf3097815d9d2a2221c3d3d19f2207efa8502466a2d4ebaa3b11e17e278ccd"
+    "originalSha256": "8e3fb8218c4d17a69689841000e6a69bbc6dcb817dd6ab3b60609233faba99c9",
+    "sourceSha256": "2871c6fc7f39fdb02cfdf1950ffc9611100282e11fe2e5ce6031b5639e183548",
+    "sha256": "2871c6fc7f39fdb02cfdf1950ffc9611100282e11fe2e5ce6031b5639e183548"
   },
   "beat-08": {
     "engine": "ElevenLabs",
@@ -153,18 +153,18 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "cb98af259239b53569ed6bbb4026440c0b5d08e64da59e8aca3e5e532616468e",
+    "textSha256": "8d67c6c3d33ba4db2f01fad94e9a9092dee2234fca99140246dcf9f61c09a117",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "2883dec35caf2cf8de51f83dd5ac3096f0d61903c3ec71061eab3d2f242b088e",
-    "sourceSha256": "c3a0f577011fa7c5e8a79edbee2a28c975ec957198d53908f7d90bc6cb444fd2",
-    "sha256": "c3a0f577011fa7c5e8a79edbee2a28c975ec957198d53908f7d90bc6cb444fd2"
+    "originalSha256": "4d88ead9194cdf1a9c038dcf1d7028491956dad1fba3ed28865ec7d970a22f13",
+    "sourceSha256": "dc9c8ef906013e852ae2ff2a10d9c9c02d72923258be9e9da868ef24331ed5d6",
+    "sha256": "dc9c8ef906013e852ae2ff2a10d9c9c02d72923258be9e9da868ef24331ed5d6"
   },
   "beat-09": {
     "engine": "ElevenLabs",
     "model": "eleven_v3",
     "voice": "Dslrhjl3ZpzrctukrQSN",
     "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
-    "speed": 0.95,
+    "speed": 0.85,
     "stability": 0.5,
     "similarityBoost": 0.8,
     "style": 0,
@@ -173,18 +173,18 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "6343627ba202a17446ae4eab9966a0c36aaf26a5d0e1c809e361b822958b94ca",
+    "textSha256": "44ae46634fd0e2e1973cc0a0c388cfdaa7ceb0aa9c449f649b4706923e924f90",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "5d313162c223e3a91a19dba896f03c04d2eaf4f87f8ca9a4c86b365aa1a45407",
-    "sourceSha256": "6b68b6779ba5a982bb703c17f128828a76650b82ce6179f7f71380bd6e735a90",
-    "sha256": "6b68b6779ba5a982bb703c17f128828a76650b82ce6179f7f71380bd6e735a90"
+    "originalSha256": "c14e0ad6878c7550c04447c9b4a2ccb69e2dba543afb191a49c018259c197b97",
+    "sourceSha256": "b9f2d0b24bda4980e25de419c879686e0dfd8904d7d8beae9fdf32b68d115152",
+    "sha256": "b9f2d0b24bda4980e25de419c879686e0dfd8904d7d8beae9fdf32b68d115152"
   },
   "beat-10": {
     "engine": "ElevenLabs",
     "model": "eleven_v3",
     "voice": "Dslrhjl3ZpzrctukrQSN",
     "voiceName": "Hey Its Brad - Clear Narrator for Documentary",
-    "speed": 0.95,
+    "speed": 0.85,
     "stability": 0.5,
     "similarityBoost": 0.8,
     "style": 0,
@@ -193,10 +193,10 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "9fc516552d2c1c23922070ab65456803c02088046f0f6dea2db581dcc2f5a0b1",
+    "textSha256": "746b2d818a41645004e51325846a5c01f249d668614eaf46b9e14295dbf08579",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "ca64990ae08657801b006fd6f5f68085896c49823d0da7beb9d5b3c004db1307",
-    "sourceSha256": "b25eb776b4fb9d836095af3373a8410e5d3528b2651abc3f39dc396f77bc31dc",
-    "sha256": "b25eb776b4fb9d836095af3373a8410e5d3528b2651abc3f39dc396f77bc31dc"
+    "originalSha256": "d194e90a041efe620ed3d8e29088836cdcf2b1b8366d11dcae8d1caf60545230",
+    "sourceSha256": "8c5b8babc733f63b7f6f1edcd4e727d06c95392b71894843c2314a1eaf49878d",
+    "sha256": "8c5b8babc733f63b7f6f1edcd4e727d06c95392b71894843c2314a1eaf49878d"
   }
 }

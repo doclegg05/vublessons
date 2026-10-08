@@ -1351,49 +1351,44 @@
       ],
       "agenda": [
         [
-          6,
-          "Warm-up and reconnect",
-          "Reconnect: two or three learners share last week\u2019s home task. Recall from earlier weeks: what does two-step verification add to a password (week 4), and does read-only keep a file secret (week 2)? Pairs share slide 2: one habit that protects their work and one that makes the computer comfortable. Ask who has had an urgent text or email demanding action, without sharing private details."
+          26,
+          "Opening video with pause cards",
+          "Learners open the worksheet first. Play chapter 1, then chapters 2 and 3, chapters 4 and 5, chapter 6, chapters 7 and 8, chapter 9 and chapter 10 in order; a topic card opens each mission, the skills challenge and the post-test. The video stops at a pause card at 2:12 (Mission 5A tasks 1 and 2), 3:51 (Mission 5B task 1), 4:43 (Mission 5B task 2) and 6:24 (Mission 5C tasks 1 and 2). At each card, pause; every learner does the task the card names, then play on."
         ],
         [
-          3,
-          "Introduction: pause, inspect, verify",
-          "Read the four goals on slide 1 aloud and say how the day runs: safety habits first, then the skills challenge and the post-test. Play chapter 1: pause, inspect the evidence, verify independently. This routine is the Review question for every cycle."
+          4,
+          "Welcome and mission overview",
+          "Slides 2 to 4. Ask slide 3's question and say how the day runs: three short safety missions, then the skills challenge and the post-test."
         ],
         [
-          8,
-          "Cycle A: comfort, access and attention",
-          "Tell: slides 3, 4 and 5 (screen about an arm\u2019s length away with the top at or slightly below eye level; universal design; FOMO). Show: chapter 2, pausing at 1:23 so each learner picks one control; then on the projector, Magnifier (Windows logo key and +, close with Windows logo key and Esc) and the Notifications page in Settings. Do: worksheet tasks 1 and 2, every learner at their own seat. Review: a partner says what changed and why it helps; settings are put back."
+          12,
+          "Cycle A: comfort and access",
+          "Tell: slide 5. Show: slide 6, replaying chapters 2 and 3 if needed. Do: slide 7 checks worksheet tasks 1 and 2, which every learner did at the pause card; then Rounds 2 and 3 on slides 8 and 9. Put shared settings back. Review: slide 10."
         ],
         [
-          14,
-          "Cycle B: scams and fake identities",
-          "Tell: slide 8 (phishing is a fake message pretending to be a trusted organization), then slides 6 and 7. Show: chapter 3, then chapter 4; pause at 2:43 and take a show of hands, reply or known route, before the answer plays. Play chapter 8. Live: point to a link on any webpage without clicking and read where it goes. Do: every learner inspects the subject, sender and link on slide 8, then writes worksheet tasks 3 and 4. Review: play chapter 9 and pause at 6:13; each learner tells a partner the evidence, what is unverified and the next step before the answer plays. Flip slide 9 card 3."
+          12,
+          "Cycle B: scams, checked another way",
+          "Tell: slide 11. Show: slide 12, replaying chapters 4 and 5 or chapter 6 if needed. Do: slide 13 checks worksheet tasks 1 and 2 on the Mission 5B practice page; then every learner works Rounds 2 and 3 on slides 14 and 15. Review: slide 16."
         ],
         [
-          14,
+          11,
           "Cycle C: protect devices and files",
-          "Tell: slides 12 and 13, then slides 10 and 11 (a password to open encrypts a Word file; read-only only limits changes; Word cannot recover a lost password). Show: chapter 6, chapter 7 (pause at 4:55), then chapter 5 (pause at 3:36). Live: Edge Settings, search permissions, open Camera; then lock the screen with Windows logo key and L. Do: slide 9 cards 1, 2 and 4, then worksheet tasks 5 and 6, every learner, looking only. Review: the slide 16 and slide 17 knowledge checks; re-teach any choice that more than two learners miss."
+          "Tell: slide 17. Show: slide 18, replaying chapters 7 and 8 if needed. Do: slide 19 checks worksheet tasks 1 and 2 on the Mission 5C practice page; then every learner works Rounds 2 and 3 on slides 20 and 21. Review: slide 22."
         ],
         [
-          2,
-          "Introduce the challenge",
-          "Play chapter 10, then show slide 15 and worksheet task 7. Say: five rows from weeks 2 to 4, done on your own; the quick card is allowed; a spoken prompt from anyone counts as With prompt."
+          26,
+          "Cycle D: skills challenge",
+          "Tell: slide 23; replay chapter 9 if useful. Show: slide 24. Do: slide 25; every learner works the five rows of worksheet task 7 alone at their own seat, with the quick card allowed and partners not helping. From minute 8, visit each learner once, about a minute each, and rate all five rows on the paper roster; a spoken prompt from anyone counts as With prompt. Check row 3 in the formula bar before the file is closed. Review: slide 26."
         ],
         [
-          25,
-          "Individual check: skills challenge",
-          "Every learner works the five rows of worksheet task 7 alone at their own seat; partners do not help. From minute 8, visit each learner once, about a minute each, and rate all five rows on the paper roster; come back once to anyone not finished. Check row 3 in the formula bar before the file is closed. Finish any challenge ratings on the roster."
-        ],
-        [
-          25,
+          22,
           "Post-test",
-          "Slide 18. Learners type their name first and work alone; read directions aloud without suggesting answers. A learner may enter the week 1 score from your roster for a comparison. Record each score out of 20; print page 1 only if a paper copy is needed. Late finishers may run to minute 110."
+          "Slide 27; replay chapter 10 first if useful. Learners type their name first and work alone; read directions aloud without suggesting answers. A learner may enter the week 1 score from your roster for a comparison. Learners submit to Britt and save the complete graded PDF; record each score out of 20."
         ],
         [
-          23,
+          7,
           "Apply and close",
-          "Slide 19: each learner reads the domain scores, completes worksheet task 8 and chooses one practice task; discuss the two or three items the class missed most. Slide 20. Home task: at home, check for updates or turn on two-step verification for one account, and share it at the start of week 6. Restore lab settings, then select Start fresh on this computer."
+          "Slides 28 and 29: each learner reads the results, names one strength and one skill to practice next, and completes worksheet task 8. Home task: check for updates or turn on two-step verification for one account. Restore lab settings, then select Start fresh on this computer."
         ]
       ],
       "slides": [

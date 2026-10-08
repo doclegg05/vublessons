@@ -1,138 +1,147 @@
 ---
 format: 1280x720
 mode: autonomous
-duration: 460.808s
-message: Use judgment, not fear, to stay safer
+duration: 490.351s
+message: Use judgment, not fear
 audience: adult veteran learners
 ---
 
-## Frame 1 — Use judgment, not fear, to stay safer
+## Frame 1 — Use judgment, not fear
 
 - src: compositions/frames/scene-1.html
-- duration: 43.95s
+- duration: 44.902s
 - status: animated
 - transition_in: cut
 - scene: verify / scenario
 - photo: safety
-- worked states: Pause|What is being requested?; Inspect|What evidence do I have?; Verify|Choose an independent route
-- voiceover: "Think about how you handle an unexpected request in everyday life. You might ask who is asking, why they need something, and how you can check the story. Those habits are valuable online too. In this lesson, we will examine a fictional urgent message, compare different protections for a file, and choose permissions that fit a task. You do not need to identify every kind of attack by name. You need a repeatable decision process: pause, inspect the evidence, verify independently, and choose an action that limits risk. Use fictional examples throughout. There is no reason to open a suspicious link or expose a private account to complete the practice."
+- worked states: Pause|What is being asked of me?; Look|What evidence do I have?; Check|Choose a safer route
+- voiceover: "Online safety is not about being afraid of your computer. It is a set of small decisions you already know how to make. You would not hand your house key to a stranger who knocked on the door, and you would not sign a paper without reading it. The same judgment works online. Today you will set up your station so it is comfortable, spot a scam and check it a safer way, and protect your devices and files. Then you will show five skills from this course and take the post-test. Each step starts the same way. Pause, look closely, and check before you act."
 - blueprint: compose
 
-Scene 1 (0–43.95s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 2 — Set up for comfort and control
+Scene 1 (0–44.902s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 2 — Set up a comfortable station
 
 - src: compositions/frames/scene-2.html
-- duration: 44.669s
+- duration: 45.347s
 - status: animated
 - transition_in: cut
 - scene: comfort / scenario
 - photo: workstation
-- worked states: Comfort|Screen and input within reach; Access|Captions · large text · keyboard; Control|Choose a helpful adjustment
-- voiceover: "A workable setup supports attention as well as visibility. Adjust the chair, screen position, text size, and sound to suit the task and your comfort, following the lab's arrangements. Take a screen-free break when needed. People differ in what they find helpful; do not assume one text size or pace suits everyone. Captions, clear labels, keyboard access, and instructions that do not rely on color can help many learners. These are examples of designing for a wider range of users rather than treating access as an afterthought. Pause and choose one control in this course that makes the work easier for you. Explain the benefit in terms of your task."
+- worked states: Position|Arm's length; top near eye level; Magnifier|Windows + plus · Windows + Esc; Restore|Put shared settings back
+- voiceover: "Start with your body and your screen. Sit so you can read without leaning in. The screen should be about an arm's length away, with the top near eye level. If the words are too small, Magnifier makes everything bigger. Press the Windows key and plus to zoom in, and the Windows key and Escape to close it. Browser zoom is different. It enlarges one website, and Control and zero puts it back. Change one thing at a time, notice what got easier, and put shared settings back before you leave. If alerts keep pulling you away, Do not disturb quiets them while you work."
 - blueprint: compose
+- cards: divider
 
-Scene 1 (0–44.669s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 3 — Recognize pressure in a message
+Scene 1 (0–45.347s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 3 — Design that helps more people
 
 - src: compositions/frames/scene-3.html
-- duration: 44.344s
+- duration: 52.142s
+- status: animated
+- transition_in: cut
+- scene: inclusive / demonstration
+- photo: none: full-stage authored demonstration
+- worked states: Captions|Noise, quiet rooms, hearing; Keyboard|Tab moves a visible outline; Color|Put a word beside it
+- voiceover: "Some features help far more people than you might expect. Captions help in a noisy room, in a quiet library, and for anyone who hears less than they used to. Keyboard access helps someone who cannot use a mouse. Press Tab, and a visible outline moves from one control to the next. Color is another one. If a schedule shows full shifts only in dark shading, some people will miss it, and so will a black and white printer. Put a word beside the color. Mute this week's video, read its captions, and press Tab to watch the outline move. Pause the video now."
+- blueprint: compose
+- cards: pause
+
+Scene 1 (0–52.142s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 4 — Spot the pressure in a message
+
+- src: compositions/frames/scene-4.html
+- duration: 46.067s
 - status: animated
 - transition_in: cut
 - scene: phishing / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Claim|Your service will stop; Request|Provide information immediately; Evidence|A convincing logo is not proof
-- voiceover: "Our fictional message says your service will stop unless you act immediately through a link. The urgency is a reason to slow down, not proof that the request is genuine. Look at what the sender wants you to do: reveal a password, provide a payment, open an attachment, or follow an unfamiliar link. A convincing name or logo can be copied. Even a message from a familiar account deserves a check when the request is unusual. Avoid trying to prove safety by clicking the link. Instead, describe the claim in plain language. Someone says I must provide information immediately. That helps you separate the pressure from the evidence."
+- worked states: Claim|Act now: account will close; Sender|support@account-check.example; Request|Verify your password
+- voiceover: "Here is a fictional message. The subject says Act now: account will close. It comes from support at account-check dot example, and it asks you to verify your password immediately. Three things should slow you down. The message pushes you to hurry. The sender does not match any organization you deal with. And it asks for a password, which a real organization will not request by email. A familiar logo proves nothing, because anyone can copy a logo. Spelling can be perfect and the message can still be fake. This kind of fake message is called phishing."
 - blueprint: compose
+- cards: divider
 
-Scene 1 (0–44.344s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 4 — Verify through a route you already trust
+Scene 1 (0–46.067s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 5 — Check it a safer way
 
-- src: compositions/frames/scene-4.html
-- duration: 48.106s
+- src: compositions/frames/scene-5.html
+- duration: 53.257s
 - status: animated
 - transition_in: cut
 - scene: trusted-route / screen-share
 - photo: none: full-stage authored demonstration
-- worked states: Do not follow the message’s link; Leave the suspicious message; Open a bookmark you already trust; Use Contact on the known website; Verify the claim through the independent contact
-- voiceover: "Open the organization's known website yourself, use a saved bookmark you trust, or find its contact details independently. Do not use the suspicious message's phone number as your independent check. Ask whether the claimed issue exists and what action, if any, is needed. If you already acted, stop further interaction and contact the appropriate official support channel promptly; in the lab, tell the instructor what happened. The exact recovery steps depend on what was shared. Pause and choose between replying to the message for reassurance and checking through a known route. The known route is stronger because it does not let the original sender supply all the evidence for its own claim."
+- worked states: Do not use the message's link or number; Leave the suspicious message alone; Open a bookmark you already trust; Use Contact on the site you know; Ask whether the problem is real; Typed it? Change it • two-step verification
+- voiceover: "Never use the link or the phone number inside a suspicious message. Reach the organization another way. Open a bookmark you saved, type an address you know, or call the number on your card or letter. Then ask whether the problem is real. If you already typed your password, go to the real site, change it, and turn on two-step verification, so a code is needed as well. Then tell someone who can help. Open the Mission 5B practice page. Inspect the subject, the sender, and the link, and write two warning signs and your safer check. Pause the video now."
 - blueprint: compose
+- cards: pause
 
-Scene 1 (0–48.106s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 5 — Separate editing restrictions from encryption
-
-- src: compositions/frames/scene-5.html
-- duration: 50.823s
-- status: animated
-- transition_in: cut
-- scene: encrypt / demonstration
-- photo: none: full-stage authored demonstration
-- worked states: Read-only|Content remains readable; Encryption|Key required to read the data; Limit|Unlocked accounts still need care
-- voiceover: "Imagine a document labeled read-only. That may prevent ordinary editing, but the content can still be readable. Encryption addresses a different question: can someone understand the data without the required key or authorized access? A password can protect different actions depending on the application, so do not assume every password prompt means the file is encrypted. Inspect what the feature actually promises. In our diagram, a readable file becomes protected data that requires a key. That does not remove the need to manage who can access an unlocked device or account. Pause and explain which protection fits preventing accidental edits, and which addresses readable data being exposed."
-- blueprint: compose
-
-Scene 1 (0–50.823s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 6 — Treat unknown devices cautiously
+Scene 1 (0–53.257s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 6 — Friends, feelings, and hurtful posts
 
 - src: compositions/frames/scene-6.html
-- duration: 43.067s
-- status: animated
-- transition_in: cut
-- scene: usb / scenario
-- photo: usb
-- worked states: Found|Ordinary appearance proves nothing; Pause|Keep the drive disconnected; Procedure|Give it to authorized staff
-- voiceover: "A USB drive found in a parking lot might look like an ordinary storage device. You cannot determine that it is safe by its appearance or by the label written on it. Do not plug it into your computer to discover its owner. Give it to authorized staff and follow the organization's procedure. The same general habit applies to unfamiliar attachments or unexpected software prompts: stop and verify the purpose before opening or installing. This is not about avoiding every useful tool. It is about making the source and task clear before granting a device or file a path into your system. Use only the instructor-approved fictional examples for this exercise."
-- blueprint: compose
-
-Scene 1 (0–43.067s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 7 — Grant camera and microphone access for a reason
-
-- src: compositions/frames/scene-7.html
-- duration: 43.23s
-- status: animated
-- transition_in: cut
-- scene: access / screen-share
-- photo: none: full-stage authored demonstration
-- worked states: Which site is asking, and why?; Trusted meeting + camera task → Allow; Check the permission that was granted; A text page does not need the camera → Block; Review permissions • blocked here
-- voiceover: "A video meeting may need a camera and microphone, but a simple text page normally has no reason to use them. When a permission prompt appears, identify which app is asking and what task you are trying to complete. Grant access only when the request fits that task and you trust the application. Deny an unrelated request, then review the setting later if a legitimate feature needs it. After a meeting, check the app's state and review permissions when appropriate. A permission decision is not permanent approval of everything an app might do. Pause and compare our two examples. Explain why a meeting and a text page lead to different choices."
-- blueprint: compose
-
-Scene 1 (0–43.23s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 8 — Protect attention and respond to harmful behavior
-
-- src: compositions/frames/scene-8.html
-- duration: 48.013s
+- duration: 52.467s
 - status: animated
 - transition_in: cut
 - scene: wellbeing / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Identity|A friendly story is not verification; Attention|Choose notifications and breaks; Support|Report · block · trusted help
-- voiceover: "Safety also includes the way an online interaction affects your attention and wellbeing. Catfishing uses a false identity to build trust. A friendly conversation does not by itself verify the person's story. Fear of missing out can encourage repeated checking of alerts even when you intended to do something else. Choose notification settings and breaks that support your own goals. If a post or interaction becomes harmful, avoid escalating it. Use the service's reporting or blocking tools when appropriate, and seek help from a trusted person or the relevant support channel. You do not have to solve every problem alone or continue a conversation because someone pressures you to respond."
+- worked states: Friend|Money plus secrecy: stop and check; Attention|Set a stopping point; Hurtful post|Screenshot · report · talk to someone
+- voiceover: "Not every risk arrives as an email. A new online friend may be warm and patient for weeks, then ask for money, often gift cards, and ask you to keep it secret. Secrecy and money together are a reason to stop and check with someone you trust. Scrolling late at night because you might miss something is a real pull too. Set a stopping point, or quiet your alerts. If someone posts something hurtful about you, do not reply in anger. Keep a screenshot if it is safe, report or block, and talk to someone. Write a safe next step for each situation on your worksheet. Pause the video now."
 - blueprint: compose
+- cards: pause
 
-Scene 1 (0–48.013s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 9 — Practice the complete decision process
+Scene 1 (0–52.467s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 7 — Updates and permissions
 
-- src: compositions/frames/scene-9.html
-- duration: 45.855s
+- src: compositions/frames/scene-7.html
+- duration: 45.974s
 - status: animated
 - transition_in: cut
-- scene: decision / demonstration
+- scene: access / screen-share
 - photo: none: full-stage authored demonstration
-- worked states: Claim|A code is needed for an appointment; Unverified|Who is actually asking?; Next step|Do not share; check known contact
-- voiceover: "Here is a new fictional scenario. A message claiming to represent a community service asks for a private code before it will confirm an appointment. Pause the video and state three things: what evidence you have, what remains unverified, and what you would do next. A strong response identifies the unusual request, avoids sharing the code, and checks the appointment through a known contact method. It does not rely only on spelling mistakes or how professional the message looks. Ask a partner to explain a different scenario using the same process. If you disagree, discuss the evidence behind each choice rather than guessing what answer the instructor wants."
+- worked states: Windows Update closes security holes; Which site is asking, and why?; Video meeting needs the camera → Allow; A page you only read → Block; Review site permissions after the call; Unknown USB drive: give it to staff
+- voiceover: "Updates fix security holes, so let Windows Update do its job. Home computers still on Windows 10 need Extended Security Updates, which run through October 2027, or a move to a supported device. A website may ask to use your camera or microphone. Allow it when the task needs it, such as a video meeting, and block it when it does not, such as a page you only read. A permission can stay on after a call ends, so check it in your browser settings now and then. If you find a USB drive you do not recognize, do not plug it in. Give it to staff."
 - blueprint: compose
+- cards: divider
 
-Scene 1 (0–45.855s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 10 — Use results to choose your next practice
+Scene 1 (0–45.974s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 8 — Lock, encrypt, or limit edits
+
+- src: compositions/frames/scene-8.html
+- duration: 54.929s
+- status: animated
+- transition_in: cut
+- scene: encrypt / demonstration
+- photo: none: full-stage authored demonstration
+- worked states: Password to open|Encrypts the file; Read-only|Limits edits; still readable; Accounts|Passkey, or passphrase + two-step
+- voiceover: "Different protections do different jobs. In Word, a password to open a file encrypts it, so nobody can read it without that password. Read-only only limits changes; anyone can still read the words. Device encryption protects a laptop that is lost while turned off. None of these protect a computer left signed in, so press Windows and L to lock it, or sign out of a shared computer. For accounts, use a passkey when a site offers one. Otherwise use a long, unique passphrase with two-step verification. On the Mission 5C practice page, choose before you flip each card, then look at the settings your worksheet names. Pause the video now."
+- blueprint: compose
+- cards: pause
+
+Scene 1 (0–54.929s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 9 — Show five skills from this course
+
+- src: compositions/frames/scene-9.html
+- duration: 48.855s
+- status: animated
+- transition_in: cut
+- scene: challenge / demonstration
+- photo: none: full-stage authored demonstration
+- worked states: Search|Name the place; open its own page; Word and Excel|Heading, steps, a SUM formula; Undo and feedback|Bring back text; name what is missing
+- voiceover: "Now you get to show what you can do. The skills challenge has five tasks, and you work on your own. Ask a search question that names the place, and open the organization's own page. Build a short Word paragraph with a real heading, three numbered steps, and a bold warning. Total four costs in Excel with a formula. Delete a line, then bring it back with Undo. And write useful feedback on a partner's flyer. The quick card is allowed. Your instructor watches and records how much help you needed. This is separate from your test score, and it shows what you can already do on your own."
+- blueprint: compose
+- cards: divider
+
+Scene 1 (0–48.855s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 10 — Take the post-test and read your results
 
 - src: compositions/frames/scene-10.html
-- duration: 48.751s
+- duration: 46.411s
 - status: animated
 - transition_in: cut
 - scene: results / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Result|A classroom score, not certification; Review|Find a skill to practice; Transfer|Repeat a useful task with less help
-- voiceover: "Before the post-test, review the skills you can demonstrate: adjust a setting and check it, justify a source, choose file access, test a calculation, and communicate a clear next step. Complete the assessment independently, then use its explanations to identify a useful practice task. A classroom score is one piece of evidence, not a judgment about your ability to learn and not a certification result. Keep the saved report if it helps you plan. Choose one skill to repeat with less help and one situation from your own routine where it would be useful. Confidence grows from being able to explain and repeat a successful process, including knowing when to ask for support."
+- worked states: Post-test|20 questions, on your own; Submit|To Britt; save the graded PDF; Plan|One strength, one next skill
+- voiceover: "Last comes the post-test. It has twenty questions, and you take it on your own, with no coaching. When you finish, submit your results to Britt and save the complete graded PDF. The results show your score and which areas went well. Treat them as a learning plan, not a verdict. Pick one strength to keep using and one skill to practice next. Then compare where you started on the pre-test with where you are now. Every row you completed in this course is something you can do again at home, at your own pace."
 - blueprint: compose
+- cards: divider
 
-Scene 1 (0–48.751s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+Scene 1 (0–46.411s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.

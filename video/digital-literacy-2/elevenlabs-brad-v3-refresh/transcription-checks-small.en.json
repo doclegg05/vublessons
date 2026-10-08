@@ -604,127 +604,152 @@
   {
     "week": "week-05",
     "chapter": "beat-01",
-    "sha256": "00ba3576fe66e4d01b2c48ccb3886cf92560cf94c8ac80526253e2ac91e830fa",
-    "durationSeconds": 42.4,
-    "wordsPerMinute": 155.7,
-    "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Think about how you handle an unexpected request in everyday life. You might ask, who is asking, why they need something, and how you can check the story. Those habits are valuable online, too. In this lesson, we will examine a fictional, urgent message, compare different protections for a file, and choose permissions that fit a task. You do not need to identify every kind of attack by name. You need a repeatable decision process. Pause, inspect the evidence, verify independently, and choose an action that limits risk. Use fictional examples throughout. There is no reason to open a suspicious link or expose a private account to complete the practice."
+    "sha256": "b3caf26d42d26a2909323462fe7a19b64e6827a9f90363d4409bee4fdb9522e5",
+    "durationSeconds": 43.352,
+    "wordsPerMinute": 146.7,
+    "matchRatio": 0.9906,
+    "differences": [
+      {
+        "expected": "post-test.",
+        "recognized": "post test."
+      }
+    ],
+    "recognized": "Online safety is not about being afraid of your computer. It is a set of small decisions you already know how to make. You would not hand your house key to a stranger who knocked on the door, and you would not sign a paper without reading it. The same judgment works online. Today, you will set up your station so it is comfortable, spot a scam and check it a safer way, and protect your devices and files. Then, you will show five skills from this course and take the post test. Each step starts the same way. Pause, look closely, and check before you act."
   },
   {
     "week": "week-05",
     "chapter": "beat-02",
-    "sha256": "616c32cdddabec06072455ac050cce2f4d66e3ba19542cd83397c86b84754b02",
-    "durationSeconds": 43.12,
-    "wordsPerMinute": 153.1,
-    "matchRatio": 0.9909,
-    "differences": [
-      {
-        "expected": "screen-free",
-        "recognized": "screen -free"
-      }
-    ],
-    "recognized": "A workable setup supports attention as well as visibility. Adjust the chair, screen position, text size, and sound to suit the task and your comfort following the lab's arrangements. Take a screen -free break when needed. People differ in what they find helpful. Do not assume one text size or pace suits everyone. Captions, clear labels, keyboard access, and instructions that do not rely on color can help many learners. These are examples of designing for a wider range of users rather than treating access as an afterthought. Pause and choose one control in this course that makes the work easier for you. Explain the benefit in terms of your task."
+    "sha256": "b38729d5be16dc1f2501967f8af41b83219249fded6d0d32e908428ddeae7200",
+    "durationSeconds": 40.797,
+    "wordsPerMinute": 154.4,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Start with your body and your screen. Sit so you can read without leaning in. The screen should be about an arm's length away with the top near eye level. If the words are too small, magnifier makes everything bigger. Press the Windows key and plus to zoom in and the Windows key and escape to close it. Browser zoom is different. It enlarges one website and control and zero puts it back. Change one thing at a time, notice what got easier, and put shared settings back before you leave. If alerts keep pulling you away, do not disturb quiets them while you work."
   },
   {
     "week": "week-05",
     "chapter": "beat-03",
-    "sha256": "01c81a8f9efb142e3f73f1ff9a1d566e30a39f617c6ea18ce6c6123c9202a92d",
-    "durationSeconds": 42.794,
-    "wordsPerMinute": 151.4,
+    "sha256": "4568502a605e2a3b24c2991cec44357022a3d8cddede79f5b01cb90deb95860a",
+    "durationSeconds": 41.192,
+    "wordsPerMinute": 151.5,
     "matchRatio": 1.0,
     "differences": [],
-    "recognized": "Our fictional message says your service will stop unless you act immediately through a link. The urgency is a reason to slow down, not proof that the request is genuine. Look at what the sender wants you to do. Reveal a password, provide a payment, open an attachment, or follow an unfamiliar link. A convincing name or logo can be copied. Even a message from a familiar account deserves a check when the request is unusual. Avoid trying to prove safety by clicking the link. Instead, describe the claim in plain language. Someone says, I must provide information immediately. That helps you separate the pressure from the evidence."
+    "recognized": "Some features help far more people than you might expect. Captions help in a noisy room, in a quiet library, and for anyone who hears less than they used to. Keyboard access helps someone who cannot use a mouse. Press Tab and a visible outline moves from one control to the next. Color is another one. If a schedule shows full shifts only in dark shading, some people will miss it, and so will a black and white printer. Put a word beside the color. Mute this week's video, read its captions, and press Tab to watch the outline move. Pause the video now."
   },
   {
     "week": "week-05",
     "chapter": "beat-04",
-    "sha256": "94f4e9f3f4d7f3c9ff5653a347a4786be5ddecc523cbf9cd2fb2a029ee81c573",
-    "durationSeconds": 46.556,
-    "wordsPerMinute": 144.3,
-    "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Open the organization's known website yourself, use a saved bookmark you trust, or find its contact details independently. Do not use the suspicious message's phone number as your independent check. Ask whether the claimed issue exists and what action, if any, is needed. If you already acted, stop further interaction and contact the appropriate official support channel promptly. In the lab, tell the instructor what happened. The exact recovery steps depend on what was shared. Pause and choose between replying to the message for reassurance and checking through a known route. The known route is stronger because it does not let the original sender supply all the evidence for its own claim."
+    "sha256": "ae69ab64248b3a852f7d0202eb2c78b9f32aa4a6cd34cbb5e87c680654ef9622",
+    "durationSeconds": 41.517,
+    "wordsPerMinute": 140.2,
+    "matchRatio": 0.9794,
+    "differences": [
+      {
+        "expected": "account-check dot",
+        "recognized": "account -check"
+      }
+    ],
+    "recognized": "Here is a fictional message. The subject says, act now. Account will close. It comes from support at account -check .example, and it asks you to verify your password immediately. Three things should slow you down. The message pushes you to hurry. The sender does not match any organization you deal with. And it asks for a password, which a real organization will not request by email. A familiar logo proves nothing because anyone can copy a logo. Spelling can be perfect and the message can still be fake. This kind of fake message is called phishing."
   },
   {
     "week": "week-05",
     "chapter": "beat-05",
-    "sha256": "81d78fff6e50331b9a3966879a792e99fe1b3c938792a92e81accad967465430",
-    "durationSeconds": 49.273,
-    "wordsPerMinute": 130.3,
-    "matchRatio": 0.9907,
+    "sha256": "6f55822a15da32d9efffefc6fa204bd99b7c1d704e4e60e693901cb1b33d82ae",
+    "durationSeconds": 42.307,
+    "wordsPerMinute": 143.2,
+    "matchRatio": 0.9703,
     "differences": [
       {
-        "expected": "read-only.",
-        "recognized": "Read Only"
+        "expected": "two-step",
+        "recognized": "two -step"
+      },
+      {
+        "expected": "your safer",
+        "recognized": "you're safe or"
       }
     ],
-    "recognized": "Imagine a document labeled Read Only that may prevent ordinary editing, but the content can still be readable. Encryption addresses a different question. Can someone understand the data without the required key or authorized access? A password can protect different actions depending on the application, so do not assume every password prompt means the file is encrypted. Inspect what the feature actually promises. In our diagram, a readable file becomes protected data that requires a key. That does not remove the need to manage who can access an unlocked device or account. Pause and explain which protection fits preventing accidental edits and which addresses readable data being exposed."
+    "recognized": "Never use the link or the phone number inside a suspicious message. Reach the organization another way. Open a bookmark you saved, type an address you know, or call the number on your card or letter. Then ask whether the problem is real. If you already typed your password, go to the real site, change it, and turn on two -step verification so a code is needed as well. Then tell someone who can help. Open the Mission 5B Practice page. Inspect the subject, the sender, and the link, and write two warning signs and you're safe or check. Pause the video now."
   },
   {
     "week": "week-05",
     "chapter": "beat-06",
-    "sha256": "0f74dfdf6a51b36176b5d0a97f8d4fd96fc567bb6e2f9417b5ce3789b443764b",
+    "sha256": "7cc7de5ec4b6b0097cb94360b8c35c01bee1897737c619e214889cbc2d1c8c72",
     "durationSeconds": 41.517,
-    "wordsPerMinute": 160.4,
-    "matchRatio": 0.991,
-    "differences": [
-      {
-        "expected": "instructor-approved",
-        "recognized": "instructor -approved"
-      }
-    ],
-    "recognized": "A USB drive found in a parking lot might look like an ordinary storage device. You cannot determine that it is safe by its appearance or by the label written on it. Do not plug it into your computer to discover its owner. Give it to authorized staff and follow the organization's procedure. The same general habit applies to unfamiliar attachments or unexpected software prompts. Stop and verify the purpose before opening or installing. This is not about avoiding every useful tool. It is about making the source and task clear before granting a device or file a path into your system. Use only the instructor -approved fictional examples for this exercise."
+    "wordsPerMinute": 159.0,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "Not every risk arrives as an email. A new online friend may be warm and patient for weeks, then ask for money, often gift cards, and ask you to keep it secret. Secrecy and money together are a reason to stop and check with someone you trust. Scrolling late at night because you might miss something is a real pull too. Set a stopping point or quiet your alerts. If someone posts something hurtful about you, do not reply in anger. Keep a screenshot if it is safe, report or block, and talk to someone. Write a safe next step for each situation on your worksheet. Pause the video now."
   },
   {
     "week": "week-05",
     "chapter": "beat-07",
-    "sha256": "9cdf3097815d9d2a2221c3d3d19f2207efa8502466a2d4ebaa3b11e17e278ccd",
-    "durationSeconds": 41.68,
-    "wordsPerMinute": 159.8,
+    "sha256": "2871c6fc7f39fdb02cfdf1950ffc9611100282e11fe2e5ce6031b5639e183548",
+    "durationSeconds": 41.424,
+    "wordsPerMinute": 155.0,
     "matchRatio": 1.0,
     "differences": [],
-    "recognized": "A video meeting may need a camera and microphone, but a simple text page normally has no reason to use them. When a permission prompt appears, identify which app is asking and what task you are trying to complete. Grant access only when the request fits that task and you trust the application. Deny an unrelated request, then review the setting later if a legitimate feature needs it. After a meeting, check the app's state and review permissions when appropriate. A permission decision is not permanent approval of everything an app might do. Pause and compare our two examples. Explain why a meeting and a text page lead to different choices."
+    "recognized": "Updates fix security holes, so let Windows Update do its job. Home computers still on Windows 10 need extended security updates, which run through October 2027, or a move to a supported device. A website may ask to use your camera or microphone. Allow it when the task needs it, such as a video meeting, and block it when it does not, such as a page you only read. A permission can stay on after a call ends, so check it in your browser settings now and then. If you find a USB drive you do not recognize, do not plug it in. Give it to staff."
   },
   {
     "week": "week-05",
     "chapter": "beat-08",
-    "sha256": "c3a0f577011fa7c5e8a79edbee2a28c975ec957198d53908f7d90bc6cb444fd2",
-    "durationSeconds": 46.463,
-    "wordsPerMinute": 142.0,
-    "matchRatio": 0.9909,
+    "sha256": "dc9c8ef906013e852ae2ff2a10d9c9c02d72923258be9e9da868ef24331ed5d6",
+    "durationSeconds": 43.979,
+    "wordsPerMinute": 151.4,
+    "matchRatio": 0.973,
     "differences": [
       {
-        "expected": "wellbeing.",
-        "recognized": "well -being."
+        "expected": "Read-only",
+        "recognized": "Read -only"
+      },
+      {
+        "expected": "passkey",
+        "recognized": "pass key"
+      },
+      {
+        "expected": "two-step",
+        "recognized": "two -step"
       }
     ],
-    "recognized": "Safety also includes the way an online interaction affects your attention and well -being. Catfishing uses a false identity to build trust. A friendly conversation does not by itself verify the person's story. Fear of missing out can encourage repeated checking of alerts, even when you intended to do something else. Choose notification settings and breaks that support your own goals. If a post or interaction becomes harmful, avoid escalating it. Use the service's reporting or blocking tools when appropriate and seek help from a trusted person or the relevant support channel. You do not have to solve every problem alone or continue a conversation because someone pressures you to respond."
+    "recognized": "Different protections do different jobs. In Word, a password to open a file encrypts it so nobody can read it without that password. Read -only only limits changes. Anyone can still read the words. Device encryption protects a laptop that is lost while turned off. None of these protect a computer left signed in, so press Windows and L to lock it or sign out of a shared computer. For accounts, use a pass key when a site offers one. Otherwise, use a long, unique passphrase with two -step verification. On the Mission 5C Practice page, choose before you flip each card, then look at the settings your worksheet names. Pause the video now."
   },
   {
     "week": "week-05",
     "chapter": "beat-09",
-    "sha256": "6b68b6779ba5a982bb703c17f128828a76650b82ce6179f7f71380bd6e735a90",
+    "sha256": "b9f2d0b24bda4980e25de419c879686e0dfd8904d7d8beae9fdf32b68d115152",
     "durationSeconds": 44.305,
-    "wordsPerMinute": 146.3,
+    "wordsPerMinute": 147.6,
     "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Here is a new fictional scenario. A message claiming to represent a community service asks for a private code before it will confirm an appointment. Pause the video and state three things. What evidence you have, what remains unverified, and what you would do next. A strong response identifies the unusual request, avoids sharing the code, and checks the appointment through a known contact method. It does not rely only on spelling mistakes or how professional the message looks. Ask a partner to explain a different scenario using the same process. If you disagree, discuss the evidence behind each choice rather than guessing what answer the instructor wants."
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "But"
+      }
+    ],
+    "recognized": "But now you get to show what you can do. The Skills Challenge has five tasks, and you work on your own. Ask a search question that names the place and open the organization's own page. Build a short word paragraph with a real heading, three numbered steps, and a bold warning. Total four costs in Excel with a formula. Delete a line, then bring it back with Undo. and write useful feedback on a partner's flyer. The quick card is allowed. Your instructor watches and records how much help you needed. This is separate from your test score, and it shows what you can already do on your own."
   },
   {
     "week": "week-05",
     "chapter": "beat-10",
-    "sha256": "b25eb776b4fb9d836095af3373a8410e5d3528b2651abc3f39dc396f77bc31dc",
-    "durationSeconds": 46.301,
-    "wordsPerMinute": 146.4,
-    "matchRatio": 0.9912,
+    "sha256": "8c5b8babc733f63b7f6f1edcd4e727d06c95392b71894843c2314a1eaf49878d",
+    "durationSeconds": 40.961,
+    "wordsPerMinute": 139.2,
+    "matchRatio": 0.9684,
     "differences": [
       {
-        "expected": "post-test,",
-        "recognized": "post -test,"
+        "expected": "post-test.",
+        "recognized": "post test."
+      },
+      {
+        "expected": "twenty",
+        "recognized": "20"
+      },
+      {
+        "expected": "Britt",
+        "recognized": "Brit"
       }
     ],
-    "recognized": "Before the post -test, review the skills you can demonstrate. Adjust a setting and check it. Justify a source. Choose file access. Test a calculation. And communicate a clear next step. Complete the assessment independently, then use its explanations to identify a useful practice task. A classroom score is one piece of evidence, not a judgment about your ability to learn, and not a certification result. Keep the saved report if it helps you plan. Choose one skill to repeat with less help and one situation from your own routine where it would be useful. Confidence grows from being able to explain and repeat a successful process, including knowing when to ask for support."
+    "recognized": "Last comes the post test. It has 20 questions and you take it on your own with no coaching. When you finish, submit your results to Brit and save the complete graded PDF. The results show your score and which areas went well. Treat them as a learning plan, not a verdict. Pick one strength to keep using and one skill to practice next. Then, compare where you started on the pretest with where you are now. Every row you completed in this course is something you can do again, at home, at your own pace."
   },
   {
     "week": "week-06",
