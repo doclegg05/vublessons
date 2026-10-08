@@ -8,7 +8,7 @@ for(let week=2;week<=6;week++) {
   await page.goto(route+'/presentation.html#1');
   // Rebuilt weeks have extra rounds and no break: Week 2 also has a capstone; Week 3 has none (Britt, 2026-10-08).
   // Weeks not yet rebuilt keep 24 slides and the protected break.
-  const shapes={2:{total:36,stages:{tell:5,show:4,do:15,review:5}},3:{total:34,stages:{tell:4,show:4,do:15,review:4}}};
+  const shapes={2:{total:36,stages:{tell:5,show:4,do:15,review:5}},3:{total:34,stages:{tell:4,show:4,do:15,review:4}},4:{total:33,stages:{tell:4,show:4,do:14,review:4}}};
   const {total,stages}=shapes[week]||{total:24,stages:{tell:4,show:4,do:4,review:4}};
   await expect(page.locator('.slide')).toHaveCount(total);
   for(const stage of ['tell','show','do','review'])await expect(page.locator(`.slide[data-stage=${stage}]`)).toHaveCount(stages[stage]);
