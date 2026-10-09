@@ -32,7 +32,7 @@ body.dl2-test-page {
   cursor:pointer;
 }
 .vub-appbar .vub-textsize button:hover { background:rgba(255,255,255,.24); }
-.vub-appbar .vub-textsize button:focus-visible { outline:3px solid #c9a227; outline-offset:2px; }
+.vub-appbar .vub-textsize button:focus-visible { outline: 3px solid #1B365D; outline-offset:2px; box-shadow: 0 0 0 2px #c9a227;}
 /* shared/text-size.js injects a live-status span into this host; it's for assistive tech
  * only (announcing the current size), so hide it visually like its own floating-button
  * version does, rather than rendering unstyled dark text over the navy header. */

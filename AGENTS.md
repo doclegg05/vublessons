@@ -154,20 +154,26 @@ household budgets), and give immediate hands-on practice. Celebrate progress.
 ## Design system
 
 ```css
---primary:      #1B365D;   /* VUB navy */
---primary-light:#2C4A7C;
---primary-dark: #0D1B2A;
---accent:       #C9A227;   /* gold */
---accent-light: #E6C65C;
---red:          #B31942;
---off-white:    #F5F7FA;
---gray:         #5A6A7A;
---success:      #28A745;
---danger:       #DC3545;
+/* Source of truth: shared/brand.css */
+--navy:       #0A3161;   /* Old Glory Blue: chrome, headings, primary buttons */
+--navy-deep:  #07223F;   /* app bar, footer, dark bands */
+--navy-mid:   #123E72;
+--navy-light: #2C5AA0;
+--red:        #B31942;   /* Old Glory Red: calls to action */
+--red-dark:   #8B1432;
+--gold:       #C9A227;   /* rules and decoration; 2.3:1 on cream, never small text */
+--gold-light: #E4C45A;   /* gold text on navy-deep */
+--cream:      #FDF9F4;   /* page background */
+--off-white:  #F5F7FA;
+--ink:        #16243A;   /* body text */
+--muted:      #46566D;   /* secondary text */
+--success:#1E7F44; --danger:#C2283C; --warning:#B5840B (icons/large text only); --info:#1A6E86;
+--focus:      #F5C84C;   /* inner band of the focus ring; pair with a navy outline */
 ```
 
-Typography: `'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`; base 18px, slide body 24px,
-line-height 1.8. Headings use Georgia in print/syllabus contexts.
+Typography (`shared/brand.css`): headings in `'Playfair Display'`, body in `'Source Sans 3'`, both
+self-hosted in `assets/fonts/`, with Georgia and Segoe UI fallbacks. Base 18px, slide body 24px,
+line-height 1.7. Individual course pages may still use their own stacks.
 
 ---
 
