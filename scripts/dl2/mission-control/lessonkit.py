@@ -6,20 +6,23 @@ from html import escape as e
 
 
 def mission(title: str, app: str, start: str, finish: str, tell: list, show: list, do: list, question: str,
-            choices: list, answer: int, why: str, lab: list, practice: int | None, rounds: tuple = ()) -> dict:
+            choices: list, answer: int, why: str, lab: list, practice: int | None, rounds: tuple = (),
+            links: tuple = ()) -> dict:
+    """links are (label, url) pairs to real pages learners open, such as the Week 6 app versions."""
     return dict(title=title, app=app, start=start, finish=finish, tell=tell, show=show, do=do, question=question,
-                choices=choices, answer=answer, why=why, lab=lab, practice=practice, rounds=list(rounds))
+                choices=choices, answer=answer, why=why, lab=lab, practice=practice, rounds=list(rounds), links=list(links))
 
 
 def rnd(title: str, app: str, steps: list, early: str, notes: str, paper: str = '', tasks: tuple = (), key: tuple = (),
-        practice: int | None = None) -> dict:
+        practice: int | None = None, links: tuple = ()) -> dict:
     """One extra hands-on round: a Do slide, matching worksheet tasks and answer-key lines.
 
     practice names a practice-library exercise that gets its own page for this round (practice_pages weeks only).
+    links are (label, url) pairs to real pages the round uses.
     """
     assert not paper or app.startswith('Worksheet'), f'{title}: its material is printed on the worksheet, so the label must start with Worksheet'
     return dict(title=title, app=app, steps=list(steps), early=early, notes=notes, paper=paper, tasks=list(tasks), key=list(key),
-                practice=practice)
+                practice=practice, links=list(links))
 
 
 def table(head: list, rows: list) -> str:

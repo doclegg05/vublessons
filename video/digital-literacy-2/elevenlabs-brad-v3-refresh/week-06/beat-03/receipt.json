@@ -11,9 +11,9 @@
   "language": "en",
   "outputFormat": "mp3_44100_128",
   "cleanup": "ElevenLabs Voice Isolator",
-  "originalSha256": "3f3ad7d55e0e3bc4a0b1f15438db8603d3f58ba52858e31366428beab64076a8",
-  "textSha256": "93ac1d272fc10f4e65984cca69502773e1caab7ecdf05d3d6c6a6d6f2466e8af",
-  "promptSha256": "ad27aaeac966e5f6235822a1ed58c6c2750b6ceb1d5e26ef7f4968ba8b7411b4",
-  "sourceSha256": "767e80320fde82d24ed6a06870fe5bb3bffa1f95519d9de1912f6c615cd0f5fa",
+  "originalSha256": "7629578dd4a425e4b5accac15e9754fa12aec3bde562a502f23e5688d80634b8",
+  "textSha256": "78135cf4471051a5864a8597993efd915f76f02998a9e82fcbcd23a5ad0c9d45",
+  "promptSha256": "c345d9599d708984b1d16c9f3097970e6a522dce3b987603e95bd5d73eac7709",
+  "sourceSha256": "e2e0f199f147362f003024f52b4103b679bb50a15e6c7a368618a49ce3a2ce36",
   "sourceFile": "isolated.mp3"
 }

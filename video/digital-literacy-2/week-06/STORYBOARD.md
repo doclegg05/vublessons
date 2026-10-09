@@ -1,138 +1,147 @@
 ---
 format: 1280x720
 mode: autonomous
-duration: 457.742s
-message: Build something small enough to understand
+duration: 558.720s
+message: Direct an agent, then check its work
 audience: adult veteran learners
 ---
 
-## Frame 1 — Build something small enough to understand
+## Frame 1 — Direct an agent, then check its work
 
 - src: compositions/frames/scene-1.html
-- duration: 42.417s
+- duration: 42.093s
 - status: animated
 - transition_in: cut
 - scene: app / scenario
 - photo: app-planning
-- worked states: Familiar task|Find a community resource; Small scope|One page, search and filter; Safe data|Fictional records only
-- voiceover: "Think about a list you already use: contacts, places to visit, or resources for a community activity. We will turn a fictional resource list into a small browser app that helps someone find an entry. Your experience with lists gives you a useful starting point for deciding whether the result makes sense. You do not need to become a professional programmer today. You will practice directing a build, checking what it does, and making one controlled improvement. The first version has one page, a search field, a category filter, and readable results. Keep the records fictional so the work can be shared and tested without exposing anyone's private information."
+- worked states: Agent|Reads, plans, edits, checks; You|Ask clearly, review every change; Today|One change to a fictional finder
+- voiceover: "An AI coding agent is a program that reads the files of an app, plans a change, edits the code, and can run checks, all from a request written in plain English. That sounds like magic, but it is closer to hiring a fast helper who has never met you. It does exactly what it understood, which is not always what you meant. Today you will direct one. Our app is a small, fictional community resource finder. You will ask for one change, read what the agent changed, test it, and report a problem. Then we look at what it would take to turn this page into a real service."
 - blueprint: compose
 
-Scene 1 (0–42.417s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 2 — Distinguish a website, an app, and a service
+Scene 1 (0–42.093s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 2 — Start from what already works
 
 - src: compositions/frames/scene-2.html
-- duration: 46.109s
+- duration: 61.621s
 - status: animated
 - transition_in: cut
-- scene: product-types / demonstration
+- scene: baseline / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Website|Information to read; Web app|Input → filtered result; SaaS|Hosted service and ongoing support
-- voiceover: "A website can present information for people to read. A web app responds to input, such as filtering our resource list. Software as a service usually provides an ongoing hosted service and may include accounts, stored data, subscriptions, and operational support. Our one-file practice app is not all of that. It has no real account system, private database, or payment service. This distinction helps you ask for an achievable first version. A convincing sign-in screen does not prove secure authentication exists behind it. Start by describing the useful behavior you can actually test in the browser, then treat hosting, security, and service operations as separate decisions that require more work."
+- worked states: library|1 found; LIBRARY|1 found: capitals ignored; learning|Nothing: categories not searched
+- voiceover: "Before you ask for any change, find out what works now. Open version 1 of the resource finder and try a few searches. Library finds one resource. LIBRARY in capital letters also finds one, because the page ignores capital letters. But learning finds nothing, even though two resources are about learning. Version 1 only searches names and descriptions, not categories. That is the one thing we want changed. Writing down what works today also tells you what must not break tomorrow. Search version 1 for library, LIBRARY, learning, community, and zzz, and write down each result. Pause the video now."
 - blueprint: compose
+- cards: divider · pause
 
-Scene 1 (0–46.109s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 3 — Understand the three parts of the page
+Scene 1 (0–61.621s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 3 — Write a spec the agent can follow
 
 - src: compositions/frames/scene-3.html
-- duration: 42.974s
+- duration: 57.901s
 - status: animated
 - transition_in: cut
-- scene: parts / demonstration
+- scene: spec / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: HTML|Heading, label and search field; CSS|Layout and readable focus; JavaScript|Match records to the search
-- voiceover: "HTML describes the content and structure: a heading, a labeled search field, and a list of resources. CSS controls how those parts are arranged and displayed. JavaScript responds to input, such as deciding which records match a search. Think of a familiar form: the questions and fields are its structure, their presentation helps you read them, and the rules determine what happens when you use it. The analogy is a starting point, not a complete description of software. Open the supplied starter in the browser and identify a visible example of each part. Changing a heading is different from changing the rule that filters the list."
+- worked states: Change|Search categories too; Keep|Capitals match; no-match message; Checks|learning → 2 · LIBRARY → 1
+- voiceover: "A spec is a careful request. It names one change, who it helps, and what must stay the same. Ours says: let the search also find resources by category, for visitors who know the kind of help but not the name. Keep capital letters matching, and keep the message that appears when nothing matches. Then add acceptance checks, tests anyone can run. I type learning, I expect two resources. I type LIBRARY, I expect one. Never put real names, passwords, or secret keys in a request. Write your spec and three checks a partner could run. Pause the video now."
 - blueprint: compose
+- cards: pause
 
-Scene 1 (0–42.974s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 4 — Write checks before asking for code
+Scene 1 (0–57.901s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 4 — Ask for a plan, then predict
 
 - src: compositions/frames/scene-4.html
-- duration: 48.989s
+- duration: 52.983s
 - status: animated
 - transition_in: cut
-- scene: acceptance / demonstration
+- scene: plan / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Search library|Community library appears; Search zzz|No matching resources; Keyboard|Every control has visible focus
-- voiceover: "Define success in terms someone else can observe. First, searching for library should show the fictional Community library entry. Second, searching for an unmatched term should show a clear no-results message. Third, the controls should work with the keyboard. Add a check for different letter cases and a narrow screen. These are acceptance checks: statements about behavior that help you decide whether the result is usable. Avoid a requirement such as make it amazing, because it does not explain what to test. Pause and write three checks for a small app idea of your own. Ask a partner whether they could carry out each check without guessing what you meant."
+- worked states: Plan|One file, one rule, checks; Freedom|You choose; you still review; Predict|Part · lines · what could break
+- voiceover: "A good agent can show its plan before it touches anything. Ask for that. Some agents can also work on their own for a while, and you choose how much freedom to give. Either way, you review every change before you accept it. Read the plan and make a prediction. Which part of the page will change? About how many lines? What could break? Predicting first makes you a sharper reviewer, because you know what to look for. Write your prediction: the part that will change, about how many lines, and one thing that could break. Pause the video now."
 - blueprint: compose
+- cards: divider · pause
 
-Scene 1 (0–48.989s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 5 — Give the AI a bounded, useful request
+Scene 1 (0–52.983s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 5 — Read the diff before you trust it
 
 - src: compositions/frames/scene-5.html
-- duration: 47.549s
+- duration: 68.048s
 - status: animated
 - transition_in: cut
-- scene: prompt / demonstration
+- scene: diff / screen-share
 - photo: none: full-stage authored demonstration
-- worked states: User and task|Find fictional community resources; Controls|Labeled search and category filter; Boundaries|No external dependencies or secrets
-- voiceover: "A useful prompt describes the user, the task, the controls, the data boundaries, and the checks. For example: build one local HTML page that searches fictional community resources by name and category. Include labeled fields, visible keyboard focus, a no-results message, and no external dependencies. Keep all example records fictional and explain how to run the file. Ask the AI to describe the important parts so you can inspect its work. Do not put passwords or private API keys into the prompt or the browser code. People can inspect code delivered to their browser. A longer prompt is not automatically better; each instruction should clarify behavior or a boundary you can verify."
+- worked states: A diff: minus removed, plus added; Asked for: category added to the search; Not asked for: toLowerCase removed; Ctrl+U shows the code • Ctrl+F: 1 match in version 2; Version 1 has 2 matches; version 2 has 1
+- voiceover: "A diff shows exactly what changed. A line with a minus sign was removed, and a line with a plus sign was added. Here, one added line puts the category into the search. That is what we asked for. But look closer. Another line lost three words written together in the code: to lower case. That is the step that ignores capital letters. Nobody asked for that. You can check it yourself. Press Control and U to see the page's code, then Control and F to search it for to lower case. Version 1 has two matches, and version 2 has one. Open the Mission 6B practice page, and mark each changed line as asked for or not. Pause the video now."
 - blueprint: compose
+- cards: pause
 
-Scene 1 (0–47.549s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 6 — Open a working version before changing it
+Scene 1 (0–68.048s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 6 — Test the agent's version
 
 - src: compositions/frames/scene-6.html
-- duration: 48.338s
-- status: animated
-- transition_in: cut
-- scene: local-file / screen-share
-- photo: none: full-stage authored demonstration
-- worked states: Start from the supplied local HTML file; Save a distinct working version; Keep .html • not .html.txt; Open the file in a browser; Check heading, search, category, and results
-- voiceover: "Use the instructor-approved tool if one is available, or begin with the supplied starter. Save the file with its HTML extension and open it in the browser. Confirm that the heading, search field, filter, and results appear. Keep this first working version before asking for changes. If no AI account is available, you can still complete the exercise with a plain-text editor: change the heading and one fictional resource, save the file, and refresh the browser. Be careful that the editor has not silently added a text-file extension. The goal is a working result you can explain, not evidence that you used a particular paid service or model."
-- blueprint: compose
-
-Scene 1 (0–48.338s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 7 — Test the happy path and the missing result
-
-- src: compositions/frames/scene-7.html
-- duration: 46.574s
+- duration: 59.3s
 - status: animated
 - transition_in: cut
 - scene: app / screen-share
 - photo: none: full-stage authored demonstration
-- worked states: Test the actual saved app; library → Community library; zzz → No matching resources; Clear the search before the next check; LIBRARY → the same result; Learning + LIBRARY → match; Community + LIBRARY → no match
-- voiceover: "Type library into the search field and compare the result with your first acceptance check. Then enter an unmatched term such as zzz. The page should explain that there are no matching resources rather than appearing broken or showing an old result. Clear the field and try LIBRARY in uppercase. If the intended behavior is a case-insensitive search, it should find the same record. Next combine the search with a category filter and inspect whether both conditions apply. Record expected and actual results separately. A confident statement from the AI is not test evidence. The evidence is what happened when you carried out a named check on the saved file."
+- worked states: Test the agent's version 2; Happy path: learning → 2 found; library → 1 found; zzz → the no-match message; LIBRARY → nothing found: a regression; Tab: a clear outline on each control
+- voiceover: "Now test the agent's version, called version 2. Start with the happy path, the normal use you expect to work. Type learning, and two resources appear. Type library, and one appears. Type zzz, and the no-match message shows. Then try capital letters. Type LIBRARY, and nothing is found. Version 1 found it. Something that used to work and broke after a change is called a regression. Keep going, because one failure does not end a test. Check that Tab moves a clear outline through the controls, and that the page still works in a narrow window. Run the five checks in your test log. Pause the video now."
 - blueprint: compose
+- cards: divider · pause
 
-Scene 1 (0–46.574s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 8 — Test access, screen size, and data assumptions
+Scene 1 (0–59.3s): Full-screen task simulation with word-aligned cursor, clicks, typed inputs, and verified outcomes; see screen-share-actions.json. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 7 — Report it so it can be fixed
+
+- src: compositions/frames/scene-7.html
+- duration: 56.693s
+- status: animated
+- transition_in: cut
+- scene: report / demonstration
+- photo: none: full-stage authored demonstration
+- worked states: Steps|Open version 2; type LIBRARY; Expected|1 resource, as version 1; Keep|The new category search
+- voiceover: "A bug report is a request a stranger could follow. Give the steps: open version 2 and type LIBRARY. Give what you expected: one resource, as version 1 found. Give what actually happened: no matches. Then say what must stay the same: keep the new category search. That last part matters, because a careless fix can undo the work you wanted. Saying it is broken gives the agent nothing to act on. A clear report usually gets a small, careful repair. Write a repair request with the steps, what you expected, what happened, and what to keep. Pause the video now."
+- blueprint: compose
+- cards: pause
+
+Scene 1 (0–56.693s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 8 — Retest the repair
 
 - src: compositions/frames/scene-8.html
-- duration: 41.372s
+- duration: 55.509s
 - status: animated
 - transition_in: cut
-- scene: keyboard / demonstration
+- scene: retest / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Keyboard|Tab through visible controls; Narrow screen|Labels and results remain readable; Data|Bundled file ≠ shared database
-- voiceover: "Set the mouse aside and move through the controls with the keyboard. Can you see which control has focus? Can you enter a search and operate the filter? Narrow the browser window and check that labels, results, and buttons remain readable without important content being cut off. Then ask where the data lives. In our starter, fictional records are inside the file. Browser storage, if added later, may remain only in that browser and may be cleared; it is not automatically a shared database or a backup. Test persistence rather than assuming it. Use the course's existing text-size and accessibility habits as standards for the app you build."
+- worked states: Failed check|LIBRARY → 1 again; Passed before|learning 2 · zzz no match; Decide|Accept only if nothing broke
+- voiceover: "The agent sends back version 3. Do not trust it until you retest. First repeat the check that failed. Type LIBRARY, and one resource appears again. Then repeat checks that passed before, because fixing one thing can break another. Learning still finds two, and zzz still shows the no-match message. Only when the failed check passes and nothing else broke do you accept the repair. This loop is the whole job: ask clearly, read the change, test it, report it, and retest. Run your checks on version 3 and decide whether to accept the repair. Pause the video now."
 - blueprint: compose
+- cards: pause
 
-Scene 1 (0–41.372s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 9 — Request one repair and retest what worked
+Scene 1 (0–55.509s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 9 — What stands between a page and a service
 
 - src: compositions/frames/scene-9.html
-- duration: 46.341s
+- duration: 58.579s
 - status: animated
 - transition_in: cut
-- scene: versions / demonstration
+- scene: roadblocks / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Report|LIBRARY fails; library succeeds; Repair|Match case without losing filter; Retest|Failed check and a passing check
-- voiceover: "Suppose the uppercase search failed. A useful revision request names the observed problem, the expected behavior, and the check: LIBRARY returns no result, but library returns Community library; make both searches match the same entry and preserve the category filter. Save the revised version under a distinct name. Repeat the failed check, then repeat a check that previously passed. This second step can reveal a regression, where fixing one behavior breaks another. If the new version is worse, return to the saved working version. Pause and make one small improvement or repair. Keep a brief test log so a partner can follow what changed and why you trust it."
+- worked states: Address|Domain name, rented yearly; Server|Back end · sign-in · secret keys; Caretaker|Pays, updates, reviews
+- voiceover: "Our finder is one page with fictional data. A real service needs much more. It needs an address, a domain name you rent every year. It needs a home: hosting is a computer that keeps the site running, so anyone with the address can use it. To save favorites for many people, it needs a back end, the part on a server that stores data. Sign-in must be checked on that server, never by a picture of a sign-in box. A secret API key, the code that lets your app use a paid service, stays on the server too. Plan the finder as a real service, one roadblock at a time. Pause the video now."
 - blueprint: compose
+- cards: divider · pause
 
-Scene 1 (0–46.341s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
-## Frame 10 — Demonstrate the result and name its limits
+Scene 1 (0–58.579s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+## Frame 10 — Direct it, check it, own it
 
 - src: compositions/frames/scene-10.html
-- duration: 47.079s
+- duration: 45.993s
 - status: animated
 - transition_in: cut
 - scene: evidence / scenario
 - photo: app-planning
-- worked states: Demonstrate|Run three acceptance checks; Explain|One part and one revision; Limit|Local prototype ≠ public service
-- voiceover: "Show a partner the saved app and carry out your three acceptance checks. Explain one part of the page, one change you made, and one limitation that remains. A local fictional prototype can be a successful learning result without being ready to operate a public service. Hosting is a separate choice. A real service handling accounts, private data, or payments needs appropriate security, access controls, support, and testing beyond this exercise. Do not treat a decorative sign-in form as protection. Carry forward the method you practiced: define a small task, give clear instructions, inspect the result, test more than the easiest path, and keep a way back when you revise it."
+- worked states: Loop|Ask · read · test · report · retest; Owner|Someone keeps it running; Limit|An agent cannot take responsibility
+- voiceover: "Here is what you practiced. You started from what worked, wrote one clear request with checks, predicted the change, read the diff, tested, reported a regression, and retested the repair. That loop works whether the helper is an AI agent or a person. And someone must still own the result. A real service needs a caretaker who pays the bills, keeps it updated, backs up the data, helps users, and reviews every change before it goes live. An agent can write code quickly. It cannot take responsibility. That part stays with the people who run the service."
 - blueprint: compose
+- cards: divider
 
-Scene 1 (0–47.079s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.
+Scene 1 (0–45.993s): Authored fictional demonstration with chapter-specific evidence captions. When present, a landscape scenario photograph or the generated week-1 workstation clip establishes context before the diagram. Narration audio, chapter windows and existing caption files are retained in visual-only mode.

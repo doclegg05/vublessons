@@ -893,165 +893,181 @@
   {
     "week": "week-06",
     "chapter": "beat-01",
-    "sha256": "c8a6d724fe9db7eb8855e1d4cc27f8b1f56e4e01a3a28d9b69577ab74e0a7f9b",
-    "durationSeconds": 40.867,
-    "wordsPerMinute": 160.0,
+    "sha256": "8cca947b3ff7964a4252f2e3378d75e4953dd992592748498c15123c13c7fd44",
+    "durationSeconds": 40.543,
+    "wordsPerMinute": 162.8,
     "matchRatio": 1.0,
     "differences": [],
-    "recognized": "Think about a list you already use, contacts, places to visit, or resources for a community activity. We will turn a fictional resource list into a small browser app that helps someone find an entry. Your experience with lists gives you a useful starting point for deciding whether the result makes sense. You do not need to become a professional programmer today. You will practice directing a build, checking what it does, and making one controlled improvement. The first version has one page, a search field, a category filter, and readable results. Keep the records fictional so the work can be shared and tested without exposing anyone's private information."
+    "recognized": "an AI coding agent is a program that reads the files of an app, plans a change, edits the code, and can run checks, all from a request written in plain English. That sounds like magic, but it is closer to hiring a fast helper who has never met you. It does exactly what it understood, which is not always what you meant. Today you will direct one. Our app is a small fictional community resource finder. You will ask for one change, read what the agent changed, test it, and report a problem. Then we look at what it would take to turn this page into a real service."
   },
   {
     "week": "week-06",
     "chapter": "beat-02",
-    "sha256": "4022beef4e35fff1dfbc6202157f933b0c7341048cac8be76fbb4ddb07eb5045",
-    "durationSeconds": 44.559,
-    "wordsPerMinute": 148.1,
-    "matchRatio": 0.9909,
+    "sha256": "31b77d7e00d55ab464ebb2a9daea3bd699e8092c063cdf90803dc49928acab36",
+    "durationSeconds": 47.671,
+    "wordsPerMinute": 125.9,
+    "matchRatio": 0.99,
     "differences": [
       {
-        "expected": "sign-in",
-        "recognized": "sign -in"
+        "expected": "",
+        "recognized": "categories."
+      },
+      {
+        "expected": "zzz,",
+        "recognized": "zzzz."
       }
     ],
-    "recognized": "A website can present information for people to read. A web app responds to input, such as filtering our resource list. Software as a service usually provides an ongoing hosted service and may include accounts, stored data, subscriptions, and operational support. Our OneFile Practice app is not all of that. It has no real account system, private database, or payment service. This distinction helps you ask for an achievable first version. A convincing sign -in screen does not prove secure authentication exists behind it. Start by describing the useful behavior you can actually test in the browser, then treat hosting, security, and service operations as separate decisions that require more work."
+    "recognized": "Before you ask for any change, find out what works now. Open version 1 of the resource finder and try a few searches. Library finds one resource. Library in capital letters also finds one, because the page ignores capital letters. But learning finds nothing, even though two resources are about learning. Version 1 only searches names and descriptions, not categories. categories. That is the one thing we want changed. Writing down what works today also tells you what must not break tomorrow. Search version 1 for library, library, learning, community, and zzzz. And write down each result. Pause the video now."
   },
   {
     "week": "week-06",
     "chapter": "beat-03",
-    "sha256": "767e80320fde82d24ed6a06870fe5bb3bffa1f95519d9de1912f6c615cd0f5fa",
-    "durationSeconds": 41.424,
-    "wordsPerMinute": 153.5,
-    "matchRatio": 0.9906,
+    "sha256": "e2e0f199f147362f003024f52b4103b679bb50a15e6c7a368618a49ce3a2ce36",
+    "durationSeconds": 46.951,
+    "wordsPerMinute": 127.8,
+    "matchRatio": 0.99,
     "differences": [
       {
-        "expected": "its",
-        "recognized": "at"
+        "expected": "Ours",
+        "recognized": "Our"
+      },
+      {
+        "expected": "",
+        "recognized": "three"
       }
     ],
-    "recognized": "HTML describes the content and structure, a heading, a labeled search field, and a list of resources. CSS controls how those parts are arranged and displayed. JavaScript responds to input, such as deciding which records match a search. Think of a familiar form. The questions and fields are at structure. Their presentation helps you read them. And the rules determine what happens when you use it. The analogy is a starting point, not a complete description of software. Open the supplied starter in the browser and identify a visible example of each part. Changing a heading is different from changing the rule that filters the list."
+    "recognized": "A spec is a careful request. It names one change, who it helps, and what must stay the same. Our says, let the search also find resources by category for visitors who know the kind of help, but not the name. Keep capital letters matching and keep the message that appears when nothing matches. Then add acceptance checks, tests anyone can run. I type learning. I expect two resources. I type library. I expect one. Never put real names, passwords, or secret keys in a request. Write your spec and three three checks a partner could run. Pause the video now."
   },
   {
     "week": "week-06",
     "chapter": "beat-04",
-    "sha256": "e9b1b679673987c267c8bfcaf27671056d24e53a07ad1c0cfd462dd0426e5ebf",
-    "durationSeconds": 47.439,
-    "wordsPerMinute": 139.1,
-    "matchRatio": 0.9909,
-    "differences": [
-      {
-        "expected": "no-results",
-        "recognized": "no results"
-      }
-    ],
-    "recognized": "Define success in terms someone else can observe. First, searching for library should show the fictional community library entry. Second, searching for an unmatched term should show a clear no results message. Third, the controls should work with the keyboard. Add a check for different letter cases and a narrow screen. These are acceptance checks, statements about behavior that help you decide whether the result is usable. Avoid a requirement such as make it amazing because it does not explain what to test. Pause and write three checks for a small app idea of your own. Ask a partner whether they could carry out each check without guessing what you meant."
+    "sha256": "ab28aac1ea2f338e87a69da811308754a28efb56e3faffdae09f9efa28a06adf",
+    "durationSeconds": 39.033,
+    "wordsPerMinute": 153.7,
+    "matchRatio": 1.0,
+    "differences": [],
+    "recognized": "A good agent can show its plan before it touches anything. Ask for that. Some agents can also work on their own for a while, and you choose how much freedom to give. Either way, you review every change before you accept it. Read the plan and make a prediction. Which part of the page will change? About how many lines? What could break? Predicting first makes you a sharper reviewer because you know what to look for. Write your prediction, the part that will change, about how many lines, and one thing that could break. Pause the video now."
   },
   {
     "week": "week-06",
     "chapter": "beat-05",
-    "sha256": "26f9e8f8c16265cbab1a0e93f1f48b3804f5d2ee73c8686cfce7991dde69acdf",
-    "durationSeconds": 45.999,
-    "wordsPerMinute": 146.1,
-    "matchRatio": 0.9911,
+    "sha256": "5eb3a0275d29917819a644032da072176b236e4330fcda74bc9f07bb694a608e",
+    "durationSeconds": 57.098,
+    "wordsPerMinute": 128.2,
+    "matchRatio": 0.9672,
     "differences": [
       {
-        "expected": "no-results",
-        "recognized": "no results"
+        "expected": "to",
+        "recognized": "Two"
       },
       {
         "expected": "",
-        "recognized": "to"
+        "recognized": "letters."
+      },
+      {
+        "expected": "Control",
+        "recognized": "Ctrl"
+      },
+      {
+        "expected": "Control",
+        "recognized": "Ctrl"
+      },
+      {
+        "expected": "to",
+        "recognized": "two"
       }
     ],
-    "recognized": "A useful prompt describes the user, the task, the controls, the data boundaries, and the checks. For example, build one local HTML page that searches fictional community resources by name and category. Include labeled fields, visible keyboard focus, a no results message, and no external dependencies. Keep all example records fictional and explain how to run the file. Ask the AI to to describe the important parts so you can inspect its work. Do not put passwords or private API keys into the prompt or the browser code. People can inspect code delivered to their browser. A longer prompt is not automatically better. Each instruction should clarify behavior or a boundary you can verify."
+    "recognized": "A diff shows exactly what changed. A line with a minus sign was removed, and a line with a plus sign was added. Here, one added line puts the category into the search. That is what we asked for. But look closer. Another line lost three words written together in the code. Two lower case. That is the step that ignores capital letters. letters. Nobody asked for that. You can check it yourself. Press Ctrl and U to see the page's code. Then Ctrl and F to search it for two lower case. Version 1 has two matches, and Version 2 has one. Open the Mission 6B Practice page and mark each changed line as asked for or not. Pause the video now."
   },
   {
     "week": "week-06",
     "chapter": "beat-06",
-    "sha256": "3fec110fd4667fe6302755e219c75c8cb12d2305ec43ce68b588859e8c390ac4",
-    "durationSeconds": 46.788,
-    "wordsPerMinute": 138.5,
-    "matchRatio": 0.963,
+    "sha256": "a27a2d512117597a3ce244393e844c5b2b954f3faefc52c3ed3cffaba55738cb",
+    "durationSeconds": 45.35,
+    "wordsPerMinute": 142.9,
+    "matchRatio": 0.9815,
     "differences": [
-      {
-        "expected": "instructor-approved",
-        "recognized": "instructor -approved"
-      },
       {
         "expected": "the",
         "recognized": "a"
       },
       {
-        "expected": "plain-text",
-        "recognized": "plain text"
-      },
-      {
-        "expected": "text-file",
-        "recognized": "text file"
+        "expected": "no-match",
+        "recognized": "no -match"
       }
     ],
-    "recognized": "Use the instructor -approved tool if one is available, or begin with a supplied starter. Save the file with its HTML extension and open it in the browser. Confirm that the heading, search field, filter, and results appear. Keep this first working version before asking for changes. If no AI account is available, you can still complete the exercise with a plain text editor. change the heading and one fictional resource. Save the file and refresh the browser. Be careful that the editor has not silently added a text file extension. The goal is a working result you can explain, not evidence that you used a particular paid service or model."
+    "recognized": "Now test the agents version, called version 2. Start with a happy path, the normal use you expect to work. Type learning, and two resources appear. Type library, and one appears. Type zzz, and the no -match message shows. Then try capital letters. Type library, and nothing is found. Version 1 found it. Something that used to work and broke after a change is called a regression. Keep going because one failure does not end a test. Check that tab moves a clear outline through the controls and that the page still works in a narrow window. Run the five checks in your test log. Pause the video now."
   },
   {
     "week": "week-06",
     "chapter": "beat-07",
-    "sha256": "91ead7997be4bc75b02a424e9a83f61e17bfefaaad2cb2e82fbcd3bec19c8527",
-    "durationSeconds": 45.023,
-    "wordsPerMinute": 146.6,
-    "matchRatio": 0.9818,
+    "sha256": "c6cb7b89c2eb6eef2d9e09f675f14ef1394da595dde77a18f18c572dbfdd093b",
+    "durationSeconds": 45.743,
+    "wordsPerMinute": 132.5,
+    "matchRatio": 0.9901,
     "differences": [
       {
-        "expected": "uppercase.",
-        "recognized": "upper case."
-      },
-      {
-        "expected": "case-insensitive",
-        "recognized": "case -insensitive"
+        "expected": "wanted.",
+        "recognized": "want it."
       }
     ],
-    "recognized": "Type library into the search field and compare the result with your first acceptance check. Then, enter an unmatched term such as ZZZ. The page should explain that there are no matching resources rather than appearing broken or showing an old result. Clear the field and try library in upper case. If the intended behavior is a case -insensitive search, it should find the same record. Next, combine the search with a category filter and inspect whether both conditions apply. Record expected and actual results separately. A confident statement from the AI is not test evidence. The evidence is what happened when you carried out a named check on the saved file."
+    "recognized": "A bug report is a request a stranger could follow. Give the steps. Open version 2 and type, library. Give what you expected. One resource as version 1 found. Give what actually happened. No matches. Then say what must stay the same. Keep the new category search. That last part matters because a careless fix can undo the work you want it. saying it is broken gives the agent nothing to act on. A clear report usually gets a small, careful repair. Write a repair request with the steps, what you expected, what happened, and what to keep. Pause the video now."
   },
   {
     "week": "week-06",
     "chapter": "beat-08",
-    "sha256": "69970216694176a77943c3e5e8244878455e1406dc7d11c9a784ebb00aad89f0",
-    "durationSeconds": 39.822,
-    "wordsPerMinute": 162.7,
-    "matchRatio": 0.9907,
+    "sha256": "2486926ac3f1dbd1d6e4489dcd57c587fe67e8f8053550d37e7deb02b41027ce",
+    "durationSeconds": 44.559,
+    "wordsPerMinute": 133.3,
+    "matchRatio": 0.9697,
     "differences": [
       {
-        "expected": "text-size",
-        "recognized": "text size"
+        "expected": "two,",
+        "recognized": "2"
+      },
+      {
+        "expected": "zzz",
+        "recognized": "zzzz"
+      },
+      {
+        "expected": "no-match",
+        "recognized": "no -match"
       }
     ],
-    "recognized": "Set the mouse aside and move through the controls with the keyboard. Can you see which control has focus? Can you enter a search and operate the filter? Narrow the browser window and check that labels, results, and buttons remain readable without important content being cut off. Then ask where the data lives. In our starter, fictional records are inside the file. Browser storage, if added later, may remain only in that browser and may be cleared. It is not automatically a shared database or a backup. Test persistence rather than assuming it. Use the courses existing text size and accessibility habits as standards for the app you build."
+    "recognized": "The agent sends back version 3. Do not trust it until you retest. First, repeat the check that failed, type library, and one resource appears again. Then repeat checks that passed before because fixing one thing can break another. Learning still finds 2 and zzzz still shows the no -match message. Only when the failed check passes and nothing else broke do you accept the repair. This loop is the whole job. Ask clearly, read the change, test it, report it, and retest. Run your checks on version 3 and decide whether to accept the repair. Pause the video now."
   },
   {
     "week": "week-06",
     "chapter": "beat-09",
-    "sha256": "74e86dae4d7239a45cc2cdde3daccab98be95561bed18b2bb4117d08f2568a5d",
-    "durationSeconds": 44.791,
-    "wordsPerMinute": 146.0,
-    "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Suppose the uppercase search failed. A useful revision request names the observed problem, the expected behavior, and the check. Library returns no result, but library returns community library. Make both searches match the same entry and preserve the category filter. Save the revised version under a distinct name. Repeat the failed check, then repeat a check that previously passed. This second step can reveal a regression. where fixing one behavior breaks another. If the new version is worse, return to the saved working version. Pause and make one small improvement or repair. Keep a brief test log so a partner can follow what changed and why you trust it."
-  },
-  {
-    "week": "week-06",
-    "chapter": "beat-10",
-    "sha256": "29a049317bcd6cffd8c6c50fd8e61ce94a86d93407f88cf324330e05bc49ab68",
+    "sha256": "27c319f1f9e2ce4bdf941f81b1c006051babb078c170d3afd25bc2b186d4cd72",
     "durationSeconds": 44.629,
-    "wordsPerMinute": 149.2,
-    "matchRatio": 0.991,
+    "wordsPerMinute": 154.6,
+    "matchRatio": 0.9826,
     "differences": [
       {
-        "expected": "",
-        "recognized": "exercise."
+        "expected": "Sign-in",
+        "recognized": "Sign -in"
       },
       {
         "expected": "sign-in",
         "recognized": "sign -in"
       }
     ],
-    "recognized": "Show a partner the Saved app and carry out your three acceptance checks. Explain one part of the page, one change you made, and one limitation that remains. A local fictional prototype can be a successful learning result without being ready to operate a public service. Hosting is a separate choice. A real service handling accounts, private data, or payments needs appropriate security, access controls, support, and testing beyond this exercise. exercise. Do not treat a decorative sign -in form as protection. Carry forward the method you practiced. Define a small task, give clear instructions, inspect the result, test more than the easiest path, and keep a way back when you revise it."
+    "recognized": "Our Finder is one page with fictional data. A real service needs much more. It needs an address, a domain name you rent every year. It needs a home. Hosting is a computer that keeps the site running, so anyone with the address can use it. To save favorites for many people, it needs a back -end, the part on a server that stores data. Sign -in must be checked on that server, never by a picture of a sign -in box. A secret API key, the code that lets your app use a paid service, stays on the server too. Plan the Finder as a real service, one roadblock at a time. Pause the video now."
+  },
+  {
+    "week": "week-06",
+    "chapter": "beat-10",
+    "sha256": "a24c909221a0bc26b88b1e1744fb73bf56ca0b14949776dfbb193b12b26b488d",
+    "durationSeconds": 40.543,
+    "wordsPerMinute": 143.6,
+    "matchRatio": 1.0,
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "Data"
+      }
+    ],
+    "recognized": "Here is what you practiced. You started from what worked, wrote one clear request with checks, predicted the change, read the diff, tested, reported a regression, and retested the repair. That loop works whether the helper is an AI agent or a person, and someone must still own the result. A real service needs a caretaker who pays the bills, keeps it updated, backs up the data, Data helps users and reviews every change before it goes live. An agent can write code quickly. It cannot take responsibility. That part stays with the people who run the service."
   }
 ]

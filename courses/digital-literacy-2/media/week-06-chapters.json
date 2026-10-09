@@ -1,42 +1,42 @@
 [
   {
-    "title": "Build something small enough to understand",
+    "title": "Direct an agent, then check its work",
     "startSeconds": 0.45
   },
   {
-    "title": "Distinguish a website, an app, and a service",
-    "startSeconds": 42.867
+    "title": "Start from what already works",
+    "startSeconds": 42.093
   },
   {
-    "title": "Understand the three parts of the page",
-    "startSeconds": 88.976
+    "title": "Write a spec the agent can follow",
+    "startSeconds": 104.164
   },
   {
-    "title": "Write checks before asking for code",
-    "startSeconds": 131.95
+    "title": "Ask for a plan, then predict",
+    "startSeconds": 161.615
   },
   {
-    "title": "Give the AI a bounded, useful request",
-    "startSeconds": 180.939
+    "title": "Read the diff before you trust it",
+    "startSeconds": 215.048
   },
   {
-    "title": "Open a working version before changing it",
-    "startSeconds": 228.488
+    "title": "Test the agent's version",
+    "startSeconds": 282.646
   },
   {
-    "title": "Test the happy path and the missing result",
-    "startSeconds": 276.826
+    "title": "Report it so it can be fixed",
+    "startSeconds": 342.396
   },
   {
-    "title": "Test access, screen size, and data assumptions",
-    "startSeconds": 323.4
+    "title": "Retest the repair",
+    "startSeconds": 399.089
   },
   {
-    "title": "Request one repair and retest what worked",
-    "startSeconds": 364.772
+    "title": "What stands between a page and a service",
+    "startSeconds": 454.148
   },
   {
-    "title": "Demonstrate the result and name its limits",
-    "startSeconds": 411.113
+    "title": "Direct it, check it, own it",
+    "startSeconds": 512.727
   }
 ]

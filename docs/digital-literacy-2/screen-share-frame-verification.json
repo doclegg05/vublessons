@@ -1,5 +1,5 @@
 {
-  "states": 82,
+  "states": 81,
   "minimumStructuralSimilarity": 0.95,
   "failures": [],
   "checks": [
@@ -565,98 +565,90 @@
     },
     {
       "week": 6,
-      "chapter": 6,
+      "chapter": 5,
       "action": 4,
-      "seconds": 240.848,
-      "structuralSimilarity": 0.975862,
+      "seconds": 258.528,
+      "structuralSimilarity": 0.987049,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 6,
+      "chapter": 5,
       "action": 3,
-      "seconds": 238.528,
-      "structuralSimilarity": 0.97589,
+      "seconds": 248.928,
+      "structuralSimilarity": 0.986568,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 6,
+      "chapter": 5,
       "action": 2,
-      "seconds": 236.168,
-      "structuralSimilarity": 0.979899,
+      "seconds": 234.408,
+      "structuralSimilarity": 0.983619,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 6,
+      "chapter": 5,
       "action": 1,
-      "seconds": 235.128,
-      "structuralSimilarity": 0.978173,
+      "seconds": 226.128,
+      "structuralSimilarity": 0.983879,
+      "passCheck": true
+    },
+    {
+      "week": 6,
+      "chapter": 5,
+      "action": 0,
+      "seconds": 215.298,
+      "structuralSimilarity": 0.984226,
       "passCheck": true
     },
     {
       "week": 6,
       "chapter": 6,
-      "action": 0,
-      "seconds": 228.738,
-      "structuralSimilarity": 0.984395,
-      "passCheck": true
-    },
-    {
-      "week": 6,
-      "chapter": 7,
-      "action": 6,
-      "seconds": 307.986,
-      "structuralSimilarity": 0.982298,
-      "passCheck": true
-    },
-    {
-      "week": 6,
-      "chapter": 7,
       "action": 5,
-      "seconds": 304.766,
-      "structuralSimilarity": 0.979783,
+      "seconds": 321.456,
+      "structuralSimilarity": 0.975725,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 7,
+      "chapter": 6,
       "action": 4,
-      "seconds": 295.386,
-      "structuralSimilarity": 0.981313,
+      "seconds": 306.136,
+      "structuralSimilarity": 0.984034,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 7,
+      "chapter": 6,
       "action": 3,
-      "seconds": 294.166,
-      "structuralSimilarity": 0.978193,
+      "seconds": 301.576,
+      "structuralSimilarity": 0.984306,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 7,
+      "chapter": 6,
       "action": 2,
-      "seconds": 282.826,
-      "structuralSimilarity": 0.984398,
+      "seconds": 298.596,
+      "structuralSimilarity": 0.981231,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 7,
+      "chapter": 6,
       "action": 1,
-      "seconds": 277.526,
-      "structuralSimilarity": 0.98101,
+      "seconds": 295.356,
+      "structuralSimilarity": 0.980585,
       "passCheck": true
     },
     {
       "week": 6,
-      "chapter": 7,
+      "chapter": 6,
       "action": 0,
-      "seconds": 276.601,
-      "structuralSimilarity": 0.978588,
+      "seconds": 286.346,
+      "structuralSimilarity": 0.978098,
       "passCheck": true
     }
   ]
