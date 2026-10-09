@@ -10,9 +10,9 @@ File: `courses/digital-literacy-2/media/week-03.mp4`, 558.7 s, 1280×720, 24 fps
 - `check-text-floor.py`: no text under 24 px. `check-captions.py`: all caption files pass.
 - Narration: every take matched its script at 0.96 or better on both `base.en` and `small.en`. Pace 127 to 158 words per minute.
 
-## Tier 2, whole-video model review: not run
+## Tier 2, whole-video model review: PASS
 
-`render-review.mjs` could not run. OpenRouter answered HTTP 401 "User not found" for the key in the documented `.env` and for the Keychain key. A PASS from this tier is not claimed.
+Run 2026-10-09 with a new OpenRouter key, after the old one returned HTTP 401. `render-review.mjs` (toolkit copy, google/gemini-3.5-flash, $0.13) watched and heard the whole file, sha256 `04755ada4c09…`. It got the teaching script, `beats.json`, `cards.json` and a note listing the planned silences (`video/digital-literacy-2/elevenlabs-brad-v3-refresh/render-review-context.md`). Verdict PASS: 0 blocker, 0 major, 0 minor. Report: `video/digital-literacy-2/elevenlabs-brad-v3-refresh/week-03/render-review.json`.
 
 ## Tier 1, frames and sound checked by hand
 

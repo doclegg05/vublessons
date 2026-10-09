@@ -1,0 +1,26 @@
+{
+  "tool": "render-review",
+  "version": 1,
+  "render": "/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/course-weeks-3-6-alignment-3f6555/courses/digital-literacy-2/media/week-03.mp4",
+  "sha256": "04755ada4c0931b8b6bd79d32280140589cc745b46515effbaae81e9d99c38ba",
+  "durationSeconds": 558.708333,
+  "model": "google/gemini-3.5-flash",
+  "route": "openrouter",
+  "generatedAt": "2026-10-09T13:41:53.187Z",
+  "proxy": {
+    "megabytes": 4.43,
+    "segments": 1
+  },
+  "verdict": "pass",
+  "issueCounts": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "issues": [],
+  "usage": {
+    "promptTokens": 56533,
+    "completionTokens": 4889,
+    "costUsd": 0.1288
+  }
+}
