@@ -10,7 +10,7 @@ import re
 E = lambda value: html.escape(str(value), quote=True)
 NAVY, INK, GOLD, PAPER, LINE = '#1B365D', '#18334d', '#E6C65C', '#F5F7FA', '#bacbd5'
 SELECTED = {(1, 1), (1, 6), (2, 5), (2, 6), (3, 1), (3, 3), (3, 4),
-            (4, 3), (4, 5), (5, 3), (5, 6), (6, 5), (6, 6)}
+            (4, 3), (4, 5), (5, 4), (5, 6), (6, 5), (6, 6)}
 
 
 def box(x, y, w, h, fill=PAPER, stroke=None, radius=8):
@@ -271,25 +271,37 @@ def feedback(stage):
 
 
 def trusted(stage):
+    # Week 5 chapter 5: the one fictional scam message (week5.py), then a route you already trust.
     s = chrome('VUB Practice Browser', 'mail.example • Suspicious message' if stage < 2 else ('New tab' if stage == 2 else 'mountain-community.example • Known bookmark'))
     if stage < 2:
-        s += box(32, 134, 1137, 345, '#fff') + txt('Urgent: your service will stop', 62, 189, 37, '#8d253c', 700)
-        s += lines(['Follow this link now to keep your service.', 'Call the number in this message for reassurance.'], 62, 259, 29, 61)
-        s += button('Act now', 66, 379, 195)
+        s += box(32, 134, 1137, 345, '#fff') + txt('Act now: account will close', 62, 189, 37, '#8d253c', 700)
+        s += txt('From: support@account-check.example', 62, 240, 28)
+        s += lines(['Verify your password immediately.', 'Questions? Call 1-800-555-0123.'], 62, 296, 29, 50)
+        s += button('Verify account', 66, 389, 250)
         if stage == 1:
-            s += box(499, 357, 625, 93, GOLD) + lines(['Leave the message alone.', 'Use a separate, trusted route.'], 522, 392, 28)
+            s += box(499, 357, 625, 93, GOLD) + lines(['Leave the message alone.', 'Use a route you already trust.'], 522, 392, 28)
     elif stage == 2:
         s += txt('Bookmarks', 48, 176, 34, weight=700) + button('Community desk — saved bookmark', 50, 221, 591, True)
     else:
         s += box(31, 134, 1137, 346, '#fff') + txt('Mountain Community Desk', 62, 190, 37, weight=700)
         s += txt('Fictional practice organization', 62, 240, 28)
         s += button('Contact us', 64, 283, 217, stage == 3)
-        if stage >= 4:
-            s += box(349, 273, 781, 177, '#d3e9df') + lines(['Contact found on the known website', '304-555-0142 • Fictional practice number', 'Ask: Does the claimed issue exist?'], 370, 315, 28, 48)
+        if stage == 4:
+            s += box(349, 273, 781, 177, '#d3e9df') + lines(['Contact found on the known website', '304-555-0142 • Fictional practice number', 'Ask: Is there really a problem?'], 370, 315, 28, 48)
+        if stage == 5:
+            s += box(349, 273, 781, 177, '#d3e9df') + lines(['Account settings', 'Password changed', 'Two-step verification: On'], 370, 315, 28, 48)
     return s
 
 
 def permissions(stage):
+    # Week 5 chapter 7: updates first (stage 6), then camera permissions, then an unknown USB drive (stage 7).
+    if stage == 6:
+        s = chrome('Settings', 'Windows Update') + box(31, 134, 1137, 345, '#fff') + txt('Windows Update', 62, 190, 37, weight=700)
+        s += box(62, 225, 1060, 70, '#d3e9df') + txt('You are up to date. Updates close security holes.', 82, 270, 28)
+        return s + lines(['Still on Windows 10 at home? Extended Security', 'Updates run through October 2027, or move to', 'a supported device.'], 62, 345, 28, 44)
+    if stage == 7:
+        s = chrome('Practice desk', 'Found in the lab • fictional') + box(31, 134, 1137, 345, '#fff') + txt('A USB drive you do not recognize', 62, 190, 37, weight=700)
+        return s + box(62, 230, 1060, 150, GOLD) + lines(['Do not plug it in, even to find the owner.', 'Give it to the instructor or lab staff.'], 82, 285, 30, 52)
     meeting = stage < 3
     s = chrome('Practice Browser Permissions', 'meeting.example • Join practice meeting' if meeting else 'reading.example • Plain text article')
     s += box(31, 134, 1137, 345, '#fff')
@@ -437,18 +449,20 @@ PLANS = {
   ('choose Review',3,360,145,'Review → New Comment'),
   ('The writer replies first',4,800,400,'The writer replies and makes the change'),
   ('Resolve the comment only',5,1040,440,'Resolve after the reply')]),
- (5, 3): (trusted, [
-  ('',0,1049,173,'Do not follow the message’s link'),
-  ('Open the organization',1,1145,87,'Leave the suspicious message'),
-  ('use a saved bookmark',2,442,245,'Open a bookmark you already trust'),
-  ('find its contact details independently',3,175,305,'Use Contact on the known website'),
-  ('Ask whether the claimed issue exists',4,722,403,'Verify the claim through the independent contact')]),
+ (5, 4): (trusted, [
+  ('',0,1049,173,'Do not use the message\'s link or number'),
+  ('Never use the link',1,1145,87,'Leave the suspicious message alone'),
+  ('Open a bookmark you saved',2,442,245,'Open a bookmark you already trust'),
+  ('type an address you know',3,175,305,'Use Contact on the site you know'),
+  ('Then ask whether the problem is real',4,722,403,'Ask whether the problem is real'),
+  ('If you already typed your password',5,722,403,'Typed it? Change it • two-step verification')]),
  (5, 6): (permissions, [
-  ('',0,812,253,'Which site is asking, and why?'),
-  ('Grant access only',1,966,384,'Trusted meeting + camera task → Allow'),
-  ('request fits that task',2,771,309,'Check the permission that was granted'),
-  ('Deny an unrelated request',4,680,384,'A text page does not need the camera → Block'),
-  ('review the setting later',5,762,310,'Review permissions • blocked here')]),
+  ('',6,600,270,'Windows Update closes security holes'),
+  ('A website may ask',0,812,253,'Which site is asking, and why?'),
+  ('Allow it when the task needs it',1,966,384,'Video meeting needs the camera → Allow'),
+  ('block it when it does not',4,680,384,'A page you only read → Block'),
+  ('A permission can stay on',5,762,310,'Review site permissions after the call'),
+  ('If you find a USB drive',7,600,300,'Unknown USB drive: give it to staff')]),
  (6, 5): (local_app, [
   ('',0,760,420,'Start from the supplied local HTML file'),
   ('Save the file',1,650,324,'Save a distinct working version'),
