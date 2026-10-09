@@ -2,8 +2,9 @@
 
 The take checks hear the staged MP3s; this hears the file learners get. Every
 chapter must match its script, sit inside its own audio clip, and leave the
-pause and topic cards silent. Words are placed by their midpoint because
-whisper stretches a word's end into the silence after it. Sound-alikes ("two lowercase") lower the ratio
+pause and topic cards silent. A word counts as narration when it overlaps a
+clip, because whisper stretches a chapter's last word into the silent card
+after it (Weeks 4 and 5, "now." at the end of chapter 3). Sound-alikes ("two lowercase") lower the ratio
 and need a human read of the differences, not a retake.
 Run with the faster-whisper venv: video/digital-literacy-2/.venv/bin/python.
 small.en is the default: on the whole Week 6 file base.en mistimed and dropped
@@ -57,7 +58,7 @@ def main() -> None:
   beats = json.loads((ROOT / f'video/digital-literacy-2/{week}/narration/beats.json').read_text())
   windows = clips(week)
   words = transcribe(ROOT / f'courses/digital-literacy-2/media/{week}.mp4', args.model)
-  inside = lambda w: next((b for b, (s, e) in windows.items() if s - EDGE <= (w.start + w.end) / 2 <= e + EDGE), None)
+  inside = lambda w: next((b for b, (s, e) in windows.items() if w.start <= e + EDGE and w.end >= s - EDGE), None)
   span = {i: inside(w) for i, w in enumerate(words)}
   spans = [(w, b['id']) for b in beats for w in b['text'].split()]
   chapters = [chapter_report(b, words, spans, span) for b in beats]
