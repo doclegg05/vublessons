@@ -79,6 +79,12 @@ CHAPTERS = {
  ('evidence','app-planning',['Demonstrate|Run three acceptance checks','Explain|One part and one revision','Limit|Local prototype ≠ public service'])]
 }
 
+# Closing trail of three tiles; a week can name its own (the default serves Weeks 2 and 6).
+WRAPUPS={None:([('file','Saved work'),('check','Test evidence'),('chat','Next step')],'Show the result. Explain why you trust it.','Choose a useful task to repeat independently.'),
+ 4:([('email','Clear request'),('file','Shared copy'),('check','Cost checked')],'Pick one habit to use this week.','Good coordination leaves a trail anyone can follow.')}
+# Bottom lines that follow the narration: an opening note (or the diagram's), then the phrase that brings in each step.
+NOTE_CUES={(4,0):('Think of a group task you have helped organize.',['you wrote the handout','alex runs the session','the goal is not']),
+ (4,9):(None,['sam knows what','one shared copy','before you pay'])}
 def chapter_plan(n,index):
  kind,photo,steps=CHAPTERS[n][index]
  if (n,index) in screens.SELECTED:
@@ -189,7 +195,7 @@ def check_ai_svg():
  v+='<g id=state-3 opacity="0">'+s3+'</g>'
  return v
 
-def diagram(kind,i):
+def diagram(kind,i,week=None):
  note='';v=''
  if kind=='zoom':
   v=rect(25,22,710,356,'#e1efed')+rect(25,22,710,47,'#c4d8de')+text('100%',675,55,28,'#1b365d','zoom-value',anchor='end')
@@ -411,8 +417,9 @@ def diagram(kind,i):
   v=rect(20,25,420,367,'#e1efed')+icon('email',50,50,71,'#0f655f')+text('Appointment message',52,159,31,'#1b365d')+text('A private code is requested',52,222,26,'#1b365d')+rect(52,267,350,63,'#c9a227')+text('Pause before sharing',227,309,28,'#1b365d',anchor='middle')
   v+=icon('pause',475,81,100)+icon('search',607,230,100)+arrow(494,229,601,229);note='Evidence → unknowns → independent next step.'
  elif kind=='evidence':
-  for j,(k,t) in enumerate([('file','Saved work'),('check','Test evidence'),('chat','Next step')]):v+=tile(k,t,18+j*253,45,217,258)
-  v+=arrow(237,167,269,167)+arrow(491,167,522,167)+text('Show the result. Explain why you trust it.',380,396,31,anchor='middle');note='Choose a useful task to repeat independently.'
+  tiles,line,note=WRAPUPS.get(week,WRAPUPS[None])
+  for j,(k,t) in enumerate(tiles):v+=tile(k,t,18+j*253,45,217,258)
+  v+=arrow(237,167,269,167)+arrow(491,167,522,167)+text(line,380,396,31,anchor='middle')
  elif kind=='product-types':
   for j,(k,label,detail) in enumerate([('file','Website','Read information'),('filter','Web app','Input → result'),('cloud','SaaS','Ongoing service')]):
    v+=tile(k,label,18+j*253,30,217,226)+text(detail,126+j*253,310,25,anchor='middle')
@@ -450,7 +457,7 @@ def diagram(kind,i):
 CSS='''*{box-sizing:border-box}.canvas-ground{position:absolute;inset:0;background:#102c4b}.photo-window{position:absolute;left:0;top:0;width:400px;height:720px;overflow:hidden}.topic-photo{width:100%;height:100%;object-fit:cover;object-position:48% center}.photo-shade{position:absolute;left:0;bottom:0;width:400px;height:130px;background:#102c4b}.gold-divider{position:absolute;left:395px;top:0;width:5px;height:720px;background:#c9a227}.video-title{position:absolute;left:440px;top:55px;max-width:755px;margin:0;font-size:46px;line-height:1.14;color:white;letter-spacing:-.5px}.graphic-stage{position:absolute;left:440px;top:153px;width:784px;height:460px}.diagram{width:100%;height:100%;overflow:visible}.video-note{position:absolute;left:445px;bottom:53px;font-size:29px;color:#e6c65c;margin:0;max-width:755px;line-height:1.3}.video-brand{position:absolute;left:31px;bottom:37px;display:flex;align-items:center;gap:12px;color:white;font-size:24px;font-weight:700}.video-brand img{width:49px;height:49px}.graphic-stage text{font-family:VUB}.layout-wide .photo-window{width:270px}.layout-wide .gold-divider{left:265px}.layout-wide .photo-shade{width:270px}.layout-wide .video-title{left:312px;max-width:880px}.layout-wide .graphic-stage{left:312px;width:910px;height:466px;top:153px}.layout-wide .video-note{left:320px;max-width:870px}.layout-finale .photo-window{left:850px;width:430px}.layout-finale .gold-divider{left:845px}.layout-finale .photo-shade{left:850px;width:430px}.layout-finale .video-title{left:55px;max-width:740px}.layout-finale .graphic-stage{left:40px;width:780px}.layout-finale .video-note{left:55px;max-width:750px}.layout-finale .video-brand{left:885px}'''
 def scene(n,i,b,words):
  if (n,i) in screens.SELECTED:return screens.scene(n,i,b,words)
- index=i;plan=chapter_plan(n,index);kind=plan['kind'];i=b.get('variant',i);cid=f'w{n}-scene-{index+1}';content,note=diagram(kind,i)
+ index=i;plan=chapter_plan(n,index);kind=plan['kind'];i=b.get('variant',i);cid=f'w{n}-scene-{index+1}';content,note=diagram(kind,i,n)
  if not note:raise ValueError(f'No authored diagram for {kind}')
  detail=(package_panel() if n==2 and index==8 else evidence_panel(plan['steps'])).replace('id="detail-', 'id="inspect-')
  content=f'<div class=main-example>{content}</div><div class=detail-example style="opacity:0">{detail}</div>'
@@ -459,10 +466,11 @@ def scene(n,i,b,words):
  for old in re.findall(r'id="([^\"]+)"',content):
   if not old.startswith(cid):content=content.replace(f'id="{old}"',f'id="{cid}-{old}"')
  def selector(s):return '#'+cid+' '+('#'+cid+'-'+s[1:] if s.startswith('#') else s)
- def at(phrase,fallback):
+ def at(phrase,fallback,strict=False):
   tokens=[re.sub('[^a-z0-9]','',w['word'].lower()) for w in words];needle=[re.sub('[^a-z0-9]','',x.lower()) for x in phrase.split()]
   for j in range(len(tokens)-len(needle)+1):
    if needle and tokens[j:j+len(needle)]==needle:return round(words[j]['start']+b.get('leadIn',0.01),3)
+  if strict:raise ValueError(f'Week {n} chapter {index+1} never says "{phrase}"')
   return round(b['audioDuration']*fallback+b.get('leadIn',0.01),3)
  events=[]
  def change(s,props,phrase='',f=.5):events.append(f'tl.set({json.dumps(selector(s))},{json.dumps(props)},{at(phrase,f)});')
@@ -574,8 +582,12 @@ def scene(n,i,b,words):
  elif kind=='check-ai':
   for text_,(phrase,f) in zip(['Answer · a lead, not yet a source','Source · who published it, when, and does it fit','Decide · the pages disagree, so confirm by phone','Privacy · never type these in a question','Decide · one detail confirmed, one not'],[('an ai answer',.02),('open the organizations own page',.40),('if the summary and the page disagree',.62),('never type private details',.82),('pause open one source',.94)]):change('.video-note',{'textContent':'Simulation · '+text_},phrase,f)
  else:
+  opening,cues=NOTE_CUES.get((n,index),(None,[]))
+  if cues and len(cues)!=len(plan['steps']):raise ValueError(f'Week {n} chapter {index+1}: {len(cues)} cues for {len(plan["steps"])} steps')
+  note=opening or note
   for j,entry in enumerate(plan['steps']):
-   change('.video-note',{'textContent':entry.replace('|',' · ')},'',.10+j*.28)
+   change('.video-note',{'textContent':entry.replace('|',' · ')},cues[j] if cues else '',.10+j*.28)
+  for phrase in cues:at(phrase,0,strict=True)
  photo=plan['photo']
  photohtml=f'<div class=photo-window><img class=topic-photo src="assets/{photo}.webp" alt=""></div>' if photo else ''
  if n==1 and index==0:
