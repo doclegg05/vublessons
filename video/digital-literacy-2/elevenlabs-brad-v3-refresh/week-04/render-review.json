@@ -1,0 +1,45 @@
+{
+  "tool": "render-review",
+  "version": 1,
+  "render": "/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/course-weeks-3-6-alignment-3f6555/courses/digital-literacy-2/media/week-04.mp4",
+  "sha256": "0b03269c10ee3299c0c84a20a69f25b5d139830ded30849b00e9a92058f9ba98",
+  "durationSeconds": 537.541667,
+  "model": "google/gemini-3.5-flash",
+  "route": "openrouter",
+  "generatedAt": "2026-10-09T14:05:54.718Z",
+  "proxy": {
+    "megabytes": 4.21,
+    "segments": 1
+  },
+  "verdict": "pass",
+  "issueCounts": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 2
+  },
+  "issues": [
+    {
+      "t": 239,
+      "dimension": "sync",
+      "severity": "minor",
+      "confidence": 0.9,
+      "description": "During the discussion of synchronous vs. asynchronous working methods (from 03:59 to 04:12), the slide remains static on the 'Roles' details instead of displaying information about timing or access.",
+      "suggested_edit": "Update the bullet points on screen to show 'synchronous' and 'asynchronous' timing concepts when they are mentioned in the narration.",
+      "timestamp": "03:59"
+    },
+    {
+      "t": 516,
+      "dimension": "mismatch",
+      "severity": "minor",
+      "confidence": 0.95,
+      "description": "The narrator mentions meeting habits ('In meetings, you test first, take turns, and ask before recording'), but this habit is completely omitted from the visual summary slide which only shows request, copy, and pay habits.",
+      "suggested_edit": "Add a fourth summary icon or bullet point for meeting coordination to ensure the visual elements match the spoken summary.",
+      "timestamp": "08:36"
+    }
+  ],
+  "usage": {
+    "promptTokens": 54438,
+    "completionTokens": 4892,
+    "costUsd": 0.1257
+  }
+}

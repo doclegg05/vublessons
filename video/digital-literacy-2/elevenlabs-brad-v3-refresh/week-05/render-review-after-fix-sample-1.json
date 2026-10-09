@@ -1,0 +1,45 @@
+{
+  "tool": "render-review",
+  "version": 1,
+  "render": "/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/course-weeks-3-6-alignment-3f6555/courses/digital-literacy-2/media/week-05.mp4",
+  "sha256": "37a5ccca5423939f6be62ad06d2f5d7af6e0fc75cf2edd03800310fc40ded9b5",
+  "durationSeconds": 490.375,
+  "model": "google/gemini-3.5-flash",
+  "route": "openrouter",
+  "generatedAt": "2026-10-09T14:18:26.841Z",
+  "proxy": {
+    "megabytes": 4.02,
+    "segments": 1
+  },
+  "verdict": "revise",
+  "issueCounts": {
+    "blocker": 1,
+    "major": 0,
+    "minor": 1
+  },
+  "issues": [
+    {
+      "t": 17,
+      "dimension": "legibility",
+      "severity": "minor",
+      "confidence": 0.95,
+      "description": "On-screen caption contains a typo: 'Look · What evidence do have?' is missing the word 'I'.",
+      "suggested_edit": "Change the caption text to 'Look · What evidence do I have?'.",
+      "timestamp": "00:17"
+    },
+    {
+      "t": 398,
+      "dimension": "prosody",
+      "severity": "blocker",
+      "confidence": 1,
+      "description": "The first sentence of this section ('Now you get to show what you can do') is spoken in an extremely slow, creepy whispering voice, which is highly inconsistent with the rest of the narration.",
+      "suggested_edit": "Re-record or re-generate this sentence using the normal narrator voice used throughout the rest of the video.",
+      "timestamp": "06:38"
+    }
+  ],
+  "usage": {
+    "promptTokens": 49848,
+    "completionTokens": 5393,
+    "costUsd": 0.1233
+  }
+}
