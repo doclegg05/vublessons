@@ -23,9 +23,9 @@ The checks above heard the takes. These ran on the MP4 and the page learners get
 - `verify-narration-playback.cjs`, run with `DL2_SKIP_GALLERY=1` against the built site: all six weeks pass. On Week 6 the page loads the video and captions whose hashes match the manifest, the duration matches, all 10 chapter buttons seek by keyboard, and three playback samples show frames, decoded audio and a caption on screen.
 - That check had been failing on Weeks 3 to 6. It sampled 2 s after each chapter start, but a chapter that opens on a topic card has no caption yet, and Week 6 clears captions in the pauses between sentences. It now samples the middle of the chapter's first caption.
 
-## Tier 2, whole-video model review: not run
+## Tier 2, whole-video model review: PASS
 
-`render-review.mjs` cannot run while OpenRouter rejects the stored key (HTTP 401, checked again 2026-10-09). No PASS is claimed from this tier.
+Run 2026-10-09 with a new OpenRouter key, after the old one returned HTTP 401. `render-review.mjs` (toolkit copy, google/gemini-3.5-flash, $0.13) watched and heard the whole file, sha256 `2cb673b3e2d90ee4…`. It got the teaching script, `beats.json`, `cards.json` and a note listing the planned silences (`video/digital-literacy-2/elevenlabs-brad-v3-refresh/render-review-context.md`). Verdict PASS: 0 blocker, 0 major, 0 minor. Report: `video/digital-literacy-2/elevenlabs-brad-v3-refresh/week-06/render-review.json`.
 
 ## Tier 1, frames and sound checked by hand
 
