@@ -1,0 +1,45 @@
+{
+  "tool": "render-review",
+  "version": 1,
+  "render": "/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/course-weeks-3-6-alignment-3f6555/courses/digital-literacy-2/media/week-04.mp4",
+  "sha256": "22249515c89ddee8592435a0dd9d547824a09e275c84f2ac7da9979182a5cf0e",
+  "durationSeconds": 537.541667,
+  "model": "google/gemini-3.5-flash",
+  "route": "openrouter",
+  "generatedAt": "2026-10-09T13:42:05.655Z",
+  "proxy": {
+    "megabytes": 4.21,
+    "segments": 1
+  },
+  "verdict": "revise",
+  "issueCounts": {
+    "blocker": 0,
+    "major": 1,
+    "minor": 1
+  },
+  "issues": [
+    {
+      "t": 0,
+      "dimension": "mismatch",
+      "severity": "minor",
+      "confidence": 0.9,
+      "description": "At the start of the video, the subtitle overlay reads 'Agree where the shared file lives', which does not match the introductory narration about organizing a group task and planning a computer-help session. This text belongs to a later section.",
+      "suggested_edit": "Change the overlay text at 0:00 to align with the introduction of the lesson, or remove it until the cast list appears at 0:05.",
+      "timestamp": "00:00"
+    },
+    {
+      "t": 498,
+      "dimension": "mismatch",
+      "severity": "major",
+      "confidence": 1,
+      "description": "The entire final wrap-up segment displays visual slides and overlays from a completely different lesson ('Saved work', 'Test evidence', 'Next step' with subtitle 'Show the result. Explain why you trust it') instead of the specified 'message' visual, contradicting the narration about email coordination, shared copy, and checking subscriptions.",
+      "suggested_edit": "Replace the wrap-up visuals and overlays from 498.0 to the end of the video with the correct 'message' (variant 4) graphics and corresponding coordination labels as planned.",
+      "timestamp": "08:18"
+    }
+  ],
+  "usage": {
+    "promptTokens": 54438,
+    "completionTokens": 4744,
+    "costUsd": 0.1244
+  }
+}
