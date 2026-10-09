@@ -111,7 +111,7 @@ Scene 1 (0–45.974s): Full-screen task simulation with word-aligned cursor, cli
 - transition_in: cut
 - scene: encrypt / demonstration
 - photo: none: full-stage authored demonstration
-- worked states: Password to open|Encrypts the file; Read-only|Limits edits; still readable; Accounts|Passkey, or passphrase + two-step
+- worked states: Password to open|Encrypts the file; Read-only|Limits edits; still readable; Device encryption|Protects a lost laptop that is off; Lock|Windows + L, or sign out; Accounts|Passkey, or passphrase + two-step
 - voiceover: "Different protections do different jobs. In Word, a password to open a file encrypts it, so nobody can read it without that password. Read-only only limits changes; anyone can still read the words. Device encryption protects a laptop that is lost while turned off. None of these protect a computer left signed in, so press Windows and L to lock it, or sign out of a shared computer. For accounts, use a passkey when a site offers one. Otherwise use a long, unique passphrase with two-step verification. On the Mission 5C practice page, choose before you flip each card, then look at the settings your worksheet names. Pause the video now."
 - blueprint: compose
 - cards: pause

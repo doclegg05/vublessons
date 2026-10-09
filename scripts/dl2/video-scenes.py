@@ -63,7 +63,7 @@ CHAPTERS = {
  ('trusted-route',None,['Message route|Its link and number prove nothing','Your route|A bookmark or the number on your card','Typed it?|Change it; two-step verification']),
  ('wellbeing',None,['Friend|Money plus secrecy: stop and check','Attention|Set a stopping point','Hurtful post|Screenshot · report · talk to someone']),
  ('access',None,['Updates|Windows Update on','Camera|Allow for a meeting, block for reading','USB|Unknown drive: give it to staff']),
- ('encrypt',None,['Password to open|Encrypts the file','Read-only|Limits edits; still readable','Accounts|Passkey, or passphrase + two-step']),
+ ('encrypt',None,['Password to open|Encrypts the file','Read-only|Limits edits; still readable','Device encryption|Protects a lost laptop that is off','Lock|Windows + L, or sign out','Accounts|Passkey, or passphrase + two-step']),
  ('challenge',None,['Search|Name the place; open its own page','Word and Excel|Heading, steps, a SUM formula','Undo and feedback|Bring back text; name what is missing']),
  ('results',None,['Post-test|20 questions, on your own','Submit|To Britt; save the graded PDF','Plan|One strength, one next skill'])],
 6: [
@@ -84,7 +84,8 @@ WRAPUPS={None:([('file','Saved work'),('check','Test evidence'),('chat','Next st
  4:([('email','Clear request'),('file','Shared copy'),('check','Cost checked')],'Pick one habit to use this week.','Good coordination leaves a trail anyone can follow.')}
 # Bottom lines that follow the narration: an opening note (or the diagram's), then the phrase that brings in each step.
 NOTE_CUES={(4,0):('Think of a group task you have helped organize.',['you wrote the handout','alex runs the session','the goal is not']),
- (4,9):(None,['sam knows what','one shared copy','before you pay'])}
+ (4,9):(None,['sam knows what','one shared copy','before you pay']),
+ (5,7):('Different protections do different jobs.',['a password to open','read-only only limits','device encryption protects','press windows and l','for accounts'])}
 def chapter_plan(n,index):
  kind,photo,steps=CHAPTERS[n][index]
  if (n,index) in screens.SELECTED:
