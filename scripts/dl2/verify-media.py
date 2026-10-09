@@ -1,17 +1,30 @@
-"""Validate final delivery MP4s, caption coverage, and write the build allowlist."""
+"""Validate final delivery MP4s, caption coverage, and write the build allowlist.
+
+  python3 scripts/dl2/verify-media.py --profile brad-refresh            # all six weeks
+  python3 scripts/dl2/verify-media.py --profile brad-refresh --week 3   # one week; the others keep their verified entries
+"""
 import argparse,hashlib,json,re,subprocess
 from pathlib import Path
 parser=argparse.ArgumentParser()
 parser.add_argument('--profile',choices=['expressive','brad-refresh'],default='expressive')
+parser.add_argument('--week',type=int,action='append',help='verify only this week (repeatable); other weeks keep their manifest entries')
 args=parser.parse_args()
 profile_dir=Path('video/digital-literacy-2')/('elevenlabs-brad-v3-refresh' if args.profile=='brad-refresh' else 'elevenlabs-britt-v3-expressive')
 profile=json.loads((profile_dir/'profile.json').read_text())
 public=Path('courses/digital-literacy-2/media');videos=[];reports=[]
+old_videos={v['path']:v for v in json.loads((public/'manifest.json').read_text())['videos']}
+old_reports={r['week']:r for r in json.loads(Path('docs/digital-literacy-2/media-verification.json').read_text())}
+def script_texts(n):
+ # The reviewed teaching source (teaching-scripts/week-NN.txt) is the approved wording for each chapter.
+ blocks=Path(f'video/digital-literacy-2/teaching-scripts/week-{n:02}.txt').read_text().strip().split('\n\n')
+ return [hashlib.sha256(b.split('\n',1)[1].strip().encode()).hexdigest() for b in blocks]
 def run(args):return subprocess.run(args,capture_output=True,text=True,check=True)
 def seconds(t):
  h,m,s=t.split(':');return int(h)*3600+int(m)*60+float(s)
 for n in range(1,7):
  p=public/f'week-{n:02}.mp4';source=Path(f'video/digital-literacy-2/week-{n:02}')
+ if args.week and n not in args.week:
+  videos.append(old_videos[str(p)]);reports.append(old_reports[n]);print(f'Week {n}: kept its earlier verified entry',flush=True);continue
  probe=json.loads(run(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]).stdout)
  v=next(s for s in probe['streams'] if s['codec_type']=='video');a=next(s for s in probe['streams'] if s['codec_type']=='audio');duration=float(probe['format']['duration'])
  assert (v['codec_name'],v['width'],v['height'],v['r_frame_rate'])==('h264',1280,720,'24/1');assert a['codec_name']=='aac'
@@ -37,8 +50,7 @@ for n in range(1,7):
    assert receipt['voice']==states[beat['id']]['voice']==profile['voice']
    if args.profile=='brad-refresh':
     assert states[beat['id']]['performanceProfile']=='brad-refresh'
-    approved=Path(f'video/digital-literacy-2/elevenlabs-britt-v3-expressive/week-{n:02}')/beat['id']/'receipt.json'
-    assert receipt['textSha256']==json.loads(approved.read_text())['textSha256'], 'Preserve the approved teaching words'
+    assert receipt['textSha256']==script_texts(n)[int(beat['id'][-2:])-1], 'Narration must match the reviewed teaching script'
     assert receipt['originalSha256']==hashlib.sha256((receipt_dir/'original.mp3').read_bytes()).hexdigest()
     assert receipt['sourceSha256']==hashlib.sha256((receipt_dir/'isolated.mp3').read_bytes()).hexdigest()
    assert receipt['textSha256']==alignment['textSha256']

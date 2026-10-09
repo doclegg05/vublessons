@@ -318,172 +318,183 @@
   {
     "week": "week-03",
     "chapter": "beat-01",
-    "sha256": "ee8841e5576dc4a53228ba4ac32d6a05159a3a888240cfc5c17d440391c1359b",
-    "durationSeconds": 41.424,
-    "wordsPerMinute": 147.7,
-    "matchRatio": 0.9902,
+    "sha256": "4558c2e2794ee6e5de9b05da0ca2245b5dba28d36ba0dbe28353b94ca157e51d",
+    "durationSeconds": 41.517,
+    "wordsPerMinute": 157.5,
+    "matchRatio": 0.9908,
     "differences": [
+      {
+        "expected": "",
+        "recognized": "Don't"
+      },
       {
         "expected": "computer-help",
         "recognized": "computer help"
       }
     ],
-    "recognized": "Think about a notice, set of directions, or supply list that was easy to use. What helped you find the next step? We will apply those same practical standards to a small resource pack, a handout, a supply workbook, and three slides. Choose a fictional community activity such as a library computer help session or a neighborhood meeting. Decide who will use the material and what they need to do after reading it. A beautiful page that leaves the reader unsure is unfinished. Keep that reader's task in view as we make choices about words, structure, calculations, pictures, and the final file format."
+    "recognized": "Don't think about a set of instructions that made a new task easy. Most likely they told you the next step and left nothing to guess. Today you will make a small resource pack for a library computer help session. You will write a handout in Word, total a supply list in Excel, and build three slides in PowerPoint. Then, you will save the handout as a PDF and check it the way your reader will. every choice starts with the reader. Who will pick up this handout and what should they do after reading it? Write one sentence that names your reader and their next step. Pause the video now."
   },
   {
     "week": "week-03",
     "chapter": "beat-02",
-    "sha256": "f43ad23856e87390135d850b71b0e9419b96c01bce957e13b2516ff26b270fa8",
-    "durationSeconds": 43.421,
-    "wordsPerMinute": 147.9,
-    "matchRatio": 0.9813,
+    "sha256": "43eb9a319402d3aa3e594062b22dd8972d607276544e7202bf28ceb2e40ae7b5",
+    "durationSeconds": 44.305,
+    "wordsPerMinute": 155.7,
+    "matchRatio": 0.9652,
     "differences": [
       {
-        "expected": "link text",
-        "recognized": "LinkText"
+        "expected": "Bold text",
+        "recognized": "BoldText"
+      },
+      {
+        "expected": "computer-help",
+        "recognized": "Computer Help"
+      },
+      {
+        "expected": "Control",
+        "recognized": "Ctrl"
       }
     ],
-    "recognized": "Start the handout with the service and the next action. Use a real heading style for the title and section headings followed by short paragraphs or a numbered list when order matters. Selecting bold text changes appearance, but does not necessarily identify a heading to assistive technology or a navigation pane. A numbered sequence might say, choose a task, visit the learning desk, and ask how to repeat the skill at home. Use LinkText that names the destination instead of click here. Read the document in order without relying on color or position alone. Does it still make sense? That is a useful first accessibility check."
+    "recognized": "Open a blank word document and type the handout lines from your worksheet. Select the first line, computer help at the library. On the Home tab, choose Heading 1. Then make who it helps and steps into Heading 2. BoldText only changes how a line looks. A heading style tells Word and a screen reader that a new section starts here. To check, open the View tab and turn on the Navigation pane. Your headings appear in a list on the left. Next, select the three steps and choose numbering. For the link, select words that name where it goes, such as Read the Computer Help Guide. Press Ctrl and K and type the address."
   },
   {
     "week": "week-03",
     "chapter": "beat-03",
-    "sha256": "1aff76c475e3ab0baae506cb0741b7b8d3a0561631d166f856f1b1c9229a5634",
-    "durationSeconds": 40.797,
-    "wordsPerMinute": 160.3,
-    "matchRatio": 0.9908,
+    "sha256": "b93060adf64498a36f6ca9fbaa9042f65481c30eb88f2c1caf4b30fdeb35c146",
+    "durationSeconds": 50.387,
+    "wordsPerMinute": 140.5,
+    "matchRatio": 1.0,
     "differences": [
       {
-        "expected": "Tracked",
-        "recognized": "Track"
-      },
-      {
         "expected": "",
-        "recognized": "them."
+        "recognized": "quietly"
       }
     ],
-    "recognized": "Select a short piece of text before changing it, and check what the selection includes. Common shortcuts such as copy, paste, save, and undo can reduce repeated mouse work. Your instructor can show the keys for your computer. Practice on a copy so a mistake is easy to reverse. When reviewing someone else's document, a comment asks a question or suggests an improvement. Track changes record proposed edits for review, where the application supports them. them. They are not the same as silently replacing the text. Pause and propose one specific improvement to the handout. Explain the reader's problem it solves, then let the author decide whether to accept it."
+    "recognized": "A few keys save a lot of mouse work. Control and C copies what you selected. Control and V pastes it. Control and Z undoes your last change, so a mistake is easy to take back. Now trade seats with a partner. In their handout, open the Review tab, turn on Track Changes, and change one word to make a step clearer. Word shows your edit in color instead of quietly quietly replacing the text. A comment is different. It explains why, and it changes nothing. Back at your own seat, choose accept or reject for each change. The owner always makes the final call. Build your handout, then trade seats and track one edit. Pause the video now."
   },
   {
     "week": "week-03",
     "chapter": "beat-04",
-    "sha256": "201ade5d56376db1636fd014bd3a69657eb67e2ad7c795b8cf60a05dfcbd1945",
-    "durationSeconds": 44.397,
-    "wordsPerMinute": 144.6,
-    "matchRatio": 0.9813,
+    "sha256": "ac8fc87b164f036b598de8d9c8e31f72fbd0c88b0f2a1b958e4b113de3a339c4",
+    "durationSeconds": 59.513,
+    "wordsPerMinute": 127.0,
+    "matchRatio": 0.9603,
     "differences": [
       {
-        "expected": "twelve,",
-        "recognized": "12,"
+        "expected": "supplies.csv",
+        "recognized": "supplies .csv"
       },
       {
-        "expected": "twelve",
-        "recognized": "12"
+        "expected": "dollars,",
+        "recognized": ""
       },
       {
-        "expected": "",
-        "recognized": "boxes."
+        "expected": "equals",
+        "recognized": "an equal"
+      },
+      {
+        "expected": "equals",
+        "recognized": "equal"
+      },
+      {
+        "expected": "dollars,",
+        "recognized": ""
       }
     ],
-    "recognized": "A workbook can contain several worksheets. Within a sheet columns usually have letters, rows have numbers, and a cell address combines both. B2 means column B, row two. Our fictional supply list puts item names in column A and dollar amounts in column B. Paper at 12, folders at eight, and pens at five. Include a heading that explains the units, so 12 is clearly dollars rather than boxes. boxes. Enter the values in separate cells instead of putting the whole list into one cell. Before calculating anything, check that each amount sits beside the intended item. A correct formula cannot rescue numbers assigned to the wrong rows."
+    "recognized": "Download supplies .csv from your worksheet and open it in Excel. Columns have letters and rows have numbers, so B2 means column B, row 2. The list has paper at $12, folders at $8, and pens at $5. Change the heading in B1 to cost in dollars, so a reader knows what the numbers mean. Click cell B5 just below the costs. Type an an equal sign, then sum, then b2 colon b4 in parentheses, and press enter. The equal sign starts a formula, and the colon means every cell from b2 through b4. b5 shows 25. Before you change anything, predict. If paper costs $15, what will the total be? Enter the formula in your own sheet and write your prediction. Pause the video now."
   },
   {
     "week": "week-03",
     "chapter": "beat-05",
-    "sha256": "c6b3cb144522c81646c79c2e04d4da43c27db3adc4c27f53ade8c40e93a2444d",
-    "durationSeconds": 47.74,
-    "wordsPerMinute": 137.0,
-    "matchRatio": 0.945,
+    "sha256": "9ac053552108c75f7da0d9cf9f6e5bb5545f67e107853288305e5c37ba6f3bb2",
+    "durationSeconds": 45.581,
+    "wordsPerMinute": 139.5,
+    "matchRatio": 0.9811,
     "differences": [
       {
-        "expected": "twenty-five dollars.",
-        "recognized": "$25."
+        "expected": "your",
+        "recognized": "you're"
       },
       {
-        "expected": "twelve",
-        "recognized": "12"
-      },
-      {
-        "expected": "fifteen.",
-        "recognized": "15."
-      },
-      {
-        "expected": "twenty-eight",
-        "recognized": "28,"
-      },
-      {
-        "expected": "twenty-five,",
-        "recognized": "25,"
+        "expected": "stayed",
+        "recognized": "state"
       },
       {
         "expected": "",
-        "recognized": "you,"
+        "recognized": "book."
       }
     ],
-    "recognized": "Select a total cell outside the three input cells and enter equals sum followed by the range B2 through B4 in parentheses. The colon means include the cells from the first address through the last. The expected total is $25. Now change paper from 12 to 15. The total should become 28, because the formula refers to the cells, not to a permanently typed answer. If it stays at 25, inspect the formula and range. Did you type the total manually? Did the range omit a cell? Pause and predict the result before changing a value. you, then compare the observed total with your prediction and correct any mismatch."
+    "recognized": "Now test your prediction. Click B2, type 15 and press enter. The total changes to 28 by itself, because the formula adds the cells, not a number someone typed. If you're total state at 25, click B5 and read the formula bar. A typed number or a range that skips a cell will not update. When it works, save it the right way. Choose File, then Save As, and pick Excel Workbook as the type. A CSV file keeps the numbers but drops the formula. Change paper to 15, check the total against your prediction, and save it as an Excel Workbook. book. Pause the video now."
   },
   {
     "week": "week-03",
     "chapter": "beat-06",
-    "sha256": "fce0840371aaca7808c0f35c3d0b21344bc5cebbed9c8b1df3f8f3690393d76c",
-    "durationSeconds": 42.307,
-    "wordsPerMinute": 157.4,
+    "sha256": "593ad3ed6e06a9a0f29bd4460f007eb46b12a1072bf079cdece04501f9cf9ac4",
+    "durationSeconds": 37.5,
+    "wordsPerMinute": 150.4,
     "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "A chart should help someone see a relationship in the checked data. To compare the three supply costs, select the item labels and their values, then choose a simple bar or column chart. Give it a meaningful title and make the dollar units clear. Check that the labels still match their bars. A large bar should represent the larger value, not merely a brighter color. After changing the paper cost, Confirm that the chart follows the updated cells. If a chart looks surprising, return to the table before decorating it. Keep the table available so a reader can inspect exact amounts and understand the information without relying only on the graphic."
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "large."
+      }
+    ],
+    "recognized": "Slides work best when each one does one job. The first slide names the need. Need computer help? The second shows the steps. The third says where to go. Use the same three steps as your handout so your reader gets one message, not two. Start PowerPoint with a blank presentation and pick one theme on the design tab so all three slides match. Keep the words few and large. large. Then step back from your screen. Can you still read every word? If you have to squint, cut words before you shrink the text."
   },
   {
     "week": "week-03",
     "chapter": "beat-07",
-    "sha256": "fcd87f004a454ae6169fa03897465ab46f610ef99333267f040a97cbf05aeeae",
-    "durationSeconds": 43.12,
-    "wordsPerMinute": 146.1,
-    "matchRatio": 0.981,
+    "sha256": "0939f221ebc3ab2ad4c9f08ddb7e3411e057f3828b0bbbd132dd9b790c66dfec",
+    "durationSeconds": 44.141,
+    "wordsPerMinute": 157.7,
+    "matchRatio": 0.9914,
     "differences": [
       {
-        "expected": "three-slide",
-        "recognized": "three -slide"
-      },
-      {
-        "expected": "aloud.",
-        "recognized": "allowed."
-      },
-      {
-        "expected": "",
-        "recognized": "problems."
+        "expected": "and",
+        "recognized": "in"
       }
     ],
-    "recognized": "For a three -slide presentation, use the first slide to name the useful task, the second to demonstrate the key steps, and the third to show the next action. Prefer a relevant picture or diagram to a paragraph copied from the handout. Keep text large and explain unfamiliar terms allowed. Cropping removes outer parts of an image from the view. Resizing changes its displayed dimensions. Those actions solve different problems. problems. Preserve the original file before experimenting, and check that a crop has not removed information the viewer needs. If an image carries meaning, provide an equivalent explanation or alternative text in the format you are using."
+    "recognized": "Insert the practice photo on the first slide. Cropping trims the edges you do not need, so the two people in the handout fill the frame. Resizing changes the size of the whole picture. They solve different problems. There is a catch. A crop only hides the edges. They stay in the file until you compress the picture and delete the cropped areas. Next, add alt text. One sentence that says what the photo shows for someone who cannot see it. PowerPoint may suggest a description. Check it the way you would check an AI answer. Then add the credit line. Make your three slides, then crop, describe, and credit the photo. Pause the video now."
   },
   {
     "week": "week-03",
     "chapter": "beat-08",
-    "sha256": "7df2f0a6aea6c6399b6485d186afe43fe451565203ddcdeb40f2ce150e029950",
-    "durationSeconds": 38.15,
-    "wordsPerMinute": 163.6,
+    "sha256": "8af6b0fd3d8be94ec6db663992124a8e048d1fd1528e54498b180ff5add7d8ff",
+    "durationSeconds": 50.945,
+    "wordsPerMinute": 150.8,
     "matchRatio": 1.0,
     "differences": [],
-    "recognized": "A useful instructional clip has a clear beginning, an understandable action, and a visible result. Trimming removes unwanted material at the start or end. Splitting allows you to work with sections inside a clip, such as removing a long, unrelated interruption. Watch both sides of an edit. Did it cut off the first syllable, or remove the step that explains the result? Keep speech intelligible and check captions against the final audio after editing. Captions from an earlier version may drift. You do not need elaborate effects. The goal is for another person to follow the action, pause when needed, and understand what changed."
+    "recognized": "who gets the file decides the format. A neighbor who only reads it gets a PDF, which looks the same on any computer. A partner who will edit it gets the word document. A tool that needs plain rows of numbers gets a CSV. Before you export, choose review, then check accessibility. It points out missing headings, missing alt text, and links that do not say where they go. Then, choose File, Save As, and set the type to PDF. Saving is not the last step. Open the PDF from your folder and check the headings, the numbered steps, and the link, because that file is what your reader gets. Save your handout as a PDF. Open it from the folder and check it. Pause the video now."
   },
   {
     "week": "week-03",
     "chapter": "beat-09",
-    "sha256": "b29fbd6774f0c6db1e96a263b5774f05f164e630bcd1bfe1c2c1302c0ed3708f",
-    "durationSeconds": 41.192,
-    "wordsPerMinute": 157.3,
-    "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Decide what the next person needs to do. An editable document supports revision. A PDF often preserves a finished layout for viewing or printing. A CSV carries plain table data, but does not preserve a workbook's full formatting and formula behavior. Keep the editable original as well as the export. Reopen the exported file and inspect the page breaks, labels, links, and important values. If you reused someone else's image or wording, check the permission or license and provide the required credit. Finding an image in a search result does not automatically give you permission to reuse it. Use original or appropriately licensed material for the practice pack."
+    "sha256": "7b8e7b300ee61b46b1e0384e7b5565d7238713f53e6675a28fcb9c3814d26be7",
+    "durationSeconds": 45.279,
+    "wordsPerMinute": 155.0,
+    "matchRatio": 0.9915,
+    "differences": [
+      {
+        "expected": "how-to",
+        "recognized": "how -to"
+      }
+    ],
+    "recognized": "Short how -to videos need editing too. Trimming cuts unwanted material at the start or the end. Splitting cuts a clip into pieces, so you can remove a section in the middle, such as a long pause. After every cut, play it back. Did you clip the first word of a sentence? Did you cut the step that explains the result? If the clip has captions, check them against the edited sound because old captions drift out of time. The video editor in Windows needs a Microsoft account, so today you will use a practice page. Open the Mission 3D Practice page, trim the start and end, then remove the pause in the middle. Pause the video now."
   },
   {
     "week": "week-03",
     "chapter": "beat-10",
-    "sha256": "66d5a16e2590129a6585238666f4015aadc71401500a4c20d472430b2379e1e4",
-    "durationSeconds": 45.35,
-    "wordsPerMinute": 145.5,
+    "sha256": "2d8c0bf83074147c3acda60603e9dba2c276bec51aa49188ac0ad1ba678132de",
+    "durationSeconds": 42.307,
+    "wordsPerMinute": 153.2,
     "matchRatio": 1.0,
-    "differences": [],
-    "recognized": "Pause and ask a partner to use your resource pack without your explanation first. Can they identify the next action on the handout? Can they find the total and explain what changed when one cost changed? Can they tell what each slide contributes? Record one point of confusion and revise it. Then reopen the export and repeat the affected check. This is useful evidence of learning. The document has structure, the calculation responds correctly, and another reader can act on the result. Carry the same routine into a household budget, a community notice, or another task you choose. Create for a reader, test the result, and keep a recoverable original."
+    "differences": [
+      {
+        "expected": "",
+        "recognized": "yourself."
+      }
+    ],
+    "recognized": "Before you call your pack finished, use it the way your reader will. Open the PDF and find the next step without hunting for it. Click the link. In the workbook, change one cost and watch the total follow. Read the second slide from across the room. Each check tests one of today's skills, a handout with real structure, a formula that updates, slides with one message, and an export you opened yourself. yourself. Fix the first problem you find, then check again. The same routine works for a club notice, a church bulletin, or a household budget. Make it for a reader, test it, and keep the original."
   },
   {
     "week": "week-04",

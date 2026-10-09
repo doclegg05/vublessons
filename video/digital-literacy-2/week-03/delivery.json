@@ -1,0 +1,251 @@
+{
+  "about": "Delivery tags for ElevenLabs v3, inserted before the named phrase. An empty phrase tags the start. Tags never change the spoken words; scripts/dl2/tag-narration.py checks that.",
+  "beat-01": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Most likely",
+      "[short pause]"
+    ],
+    [
+      "Today you will",
+      "[short pause] [interested]"
+    ],
+    [
+      "You will write",
+      "[short pause]"
+    ],
+    [
+      "Then you will save",
+      "[short pause]"
+    ],
+    [
+      "Every choice starts",
+      "[short pause]"
+    ],
+    [
+      "Who will pick up",
+      "[short pause]"
+    ],
+    [
+      "Write one sentence",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-02": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "Bold text only",
+      "[short pause]"
+    ],
+    [
+      "To check,",
+      "[short pause]"
+    ],
+    [
+      "For the link,",
+      "[short pause]"
+    ]
+  ],
+  "beat-03": [
+    [
+      "",
+      "[warmly]"
+    ],
+    [
+      "Now trade seats",
+      "[short pause] [interested]"
+    ],
+    [
+      "A comment is different.",
+      "[short pause]"
+    ],
+    [
+      "Build your handout",
+      "[encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-04": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "Click cell B5",
+      "[short pause]"
+    ],
+    [
+      "Before you change anything",
+      "[short pause] [curious]"
+    ],
+    [
+      "Enter the formula in your own sheet",
+      "[encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-05": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "If your total stayed",
+      "[short pause] [reassuring]"
+    ],
+    [
+      "When it works,",
+      "[short pause]"
+    ],
+    [
+      "Change paper to 15,",
+      "[encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-06": [
+    [
+      "",
+      "[warmly]"
+    ],
+    [
+      "Start PowerPoint",
+      "[short pause]"
+    ],
+    [
+      "Then step back",
+      "[short pause]"
+    ]
+  ],
+  "beat-07": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "Cropping trims",
+      "[short pause]"
+    ],
+    [
+      "Resizing changes",
+      "[short pause]"
+    ],
+    [
+      "They solve different",
+      "[short pause]"
+    ],
+    [
+      "There is a catch.",
+      "[short pause] [curious]"
+    ],
+    [
+      "A crop only hides",
+      "[short pause]"
+    ],
+    [
+      "They stay in the file",
+      "[short pause]"
+    ],
+    [
+      "Next, add alt text",
+      "[short pause]"
+    ],
+    [
+      "PowerPoint may suggest",
+      "[short pause]"
+    ],
+    [
+      "Check it the way",
+      "[short pause]"
+    ],
+    [
+      "Then add the credit",
+      "[short pause]"
+    ],
+    [
+      "Make your three slides",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-08": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "Before you export,",
+      "[short pause]"
+    ],
+    [
+      "Saving is not the last step.",
+      "[short pause]"
+    ],
+    [
+      "Save your handout as a PDF,",
+      "[encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-09": [
+    [
+      "",
+      "[interested]"
+    ],
+    [
+      "After every cut,",
+      "[short pause]"
+    ],
+    [
+      "The video editor in Windows",
+      "[short pause] [reassuring]"
+    ],
+    [
+      "Open the Mission 3D practice page",
+      "[encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-10": [
+    [
+      "",
+      "[warmly]"
+    ],
+    [
+      "Each check tests",
+      "[short pause]"
+    ],
+    [
+      "The same routine",
+      "[short pause] [warmly]"
+    ]
+  ]
+}

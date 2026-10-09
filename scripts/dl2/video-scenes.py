@@ -34,16 +34,16 @@ CHAPTERS = {
  ('recovery',None,['Recover|Trash or earlier version?','Package|Create ZIP from approved copies','Inspect|Extract and open the files']),
  ('evidence','library',['Source note|Fact · address · date checked','Folder|Recognizable name and location','Partner|Right access and recovery choice'])],
 3: [
- ('document','resource-pack',['Audience|Community computer-help reader','Purpose|A clear next action','Pack|Handout · workbook · slides']),
- ('document',None,['Heading style|Computer help','Numbered steps|Choose · visit · ask','Useful link|Read the computer-help guide']),
- ('editing',None,['Select|Check exactly what is selected','Preserve|Copy and undo unwanted changes','Review|Comment ≠ tracked suggestion']),
- ('sheet',None,['Column A|Item names','Column B|Cost in dollars','Cell B2|Paper: 12']),
- ('sheet',None,['Formula|=SUM(B2:B4)','Challenge|Paper: 12 → 15','Check|Total: 25 → 28']),
- ('chart',None,['Source|Paper 15 · folders 8 · pens 5','Question|Which supply costs most?','Check|Title and units match the table']),
- ('slide-design',None,['Slide 1|Purpose and useful image','Slide 2|One action at a time','Image edit|Crop removes; resize changes size']),
- ('media-edit',None,['Preserve|Keep the original clip','Edit|Trim ends; split unwanted section','Review|Listen at cuts; recheck captions']),
- ('export',None,['DOCX|Editable document structure','PDF|Inspect the saved page layout','CSV|Inspect values; record image credit']),
- ('bundle','resource-pack',['Reader|Can they find the next action?','Workbook|Does the total respond?','Improve|Fix one observed confusion'])],
+ ('document','resource-pack',['Reader|A neighbor who needs computer help','Next step|Visit the learning desk','Pack|Handout · workbook · slides']),
+ ('document',None,['Heading styles|Computer help at the library','Numbered steps|Choose · visit · ask','Link|Read the computer-help guide']),
+ ('editing',None,['Keys|Ctrl+C copy · Ctrl+V paste · Ctrl+Z undo','Track|Review → Track Changes shows the edit','Decide|The owner accepts or rejects']),
+ ('sheet',None,['Heading|B1: Cost in dollars','Formula|=SUM(B2:B4) shows 25','Predict|Paper 12 → 15: total?']),
+ ('sheet',None,['Test|Paper 15: total 28','Check|Read the formula bar','Save|Excel Workbook, not CSV']),
+ ('three-slides',None,['Slide 1|Need computer help?','Slide 2|Steps','Slide 3|Where to get help']),
+ ('crop',None,['Crop|Trim the edges you do not need','Keep|Cropped edges stay until you compress','Describe|Alt text and a credit line']),
+ ('export',None,['PDF|A reader gets the same layout','Check|Review → Check Accessibility','Open|Reopen the PDF from the folder']),
+ ('media-edit',None,['Trim|Remove the start and the end','Split|Remove the pause in the middle','Check|Play it back; recheck captions']),
+ ('bundle','resource-pack',['Handout|Find the next step; click the link','Workbook|Change a cost; the total follows','Slides|Read slide 2 from across the room'])],
 4: [
  ('roles','collaboration',['Task|Plan a community help session','Output|One useful handout','People|Owner · writer · reviewer']),
  ('identity-channel',None,['Task|Message, shared file or meeting?','Identity|Training profile is active','Timing|Enough context for a later reply']),
@@ -218,8 +218,8 @@ def diagram(kind,i):
  elif kind=='recovery':
   v=tile('bin','Deleted file',20,20,310,172,'trash')+tile('clock','Earlier version',430,20,310,172,'history')+paper(298,222,164,126,'restored')+text('Preview → restore',380,392,32,anchor='middle');note='Coordinate before replacing shared work.'
  elif kind=='document':
-  v=rect(65,17,630,396,'#e1efed')+text('Computer help',107,83,37,'#1b365d','doc-title')
-  for j,s in enumerate(['Choose a task','Visit the desk','Ask how to repeat']):
+  v=rect(65,17,630,396,'#e1efed')+text('Computer help at the library',107,83,36,'#1b365d','doc-title')
+  for j,s in enumerate(['Choose one task.','Visit the learning desk.','Ask how to repeat it at home.']):
    v+=f'<g id="doc-step-{j}">'+rect(105,117+j*77,50,50,'#0f655f')+text(str(j+1),130,152+j*77,28,anchor='middle')+text(s,181,152+j*77,31,'#1b365d')+'</g>'
   note='A clear heading. A useful sequence.'
  elif kind=='sheet':
@@ -228,8 +228,10 @@ def diagram(kind,i):
   for j,(name,value) in enumerate([('Paper','12'),('Folders','8'),('Pens','5')]):v+=text(str(j+2),43,181+j*63,27,'#1b365d')+text(name,89,181+j*63,31,'#1b365d')+text(value,370,181+j*63,34,'#1b365d','paper-cost' if j==0 else '')
   v+=rect(490,30,250,330,'#0f655f')+text('Total',615,92,34,anchor='middle')+text('25',615,234,104,'#E6C65C','total',anchor='middle')+text('=SUM(B2:B4)',380,419,38,anchor='middle');note='Change a value. Watch the formula.'
  elif kind=='export':
-  for j,(kind2,title) in enumerate([('edit','DOCX'),('file','PDF'),('grid','CSV')]):v+=tile(kind2,title,18+j*253,66,217,248,f'format-{j}')
-  note='Revise · preserve layout · move data'
+  for j,(kind2,title) in enumerate([('edit','DOCX'),('file','PDF'),('grid','CSV')]):v+=tile(kind2,title,18+j*253,10,217,228,f'format-{j}')
+  v+=f'<g id="check">'+rect(18,262,724,78,'#0f655f')+icon('check',34,270,62)+text('Review → Check Accessibility',112,314,30)+'</g>'
+  v+=f'<g id="reopen">'+rect(18,358,724,78,'#173d5c')+icon('file',34,366,62)+text('Open the PDF from the folder',112,410,30)+'</g>'
+  note='Editor: DOCX · reader: PDF · plain rows: CSV'
  elif kind=='bundle':
   v=paper(10,66,207,265,'handout')+rect(254,66,220,265,'#0f655f','workbook')+icon('grid',319,106,90)+text('28',364,280,68,'#E6C65C',anchor='middle')
   v+='<g id="slides">'+rect(514,110,182,158,'#72978f')+rect(534,87,182,158,'#c9a227')+rect(554,64,182,158,'#e1efed')+icon('slides',609,95,70,'#1b365d')+'</g>'
@@ -322,9 +324,10 @@ def diagram(kind,i):
    v+=text(t,151,135+j*101,28,anchor='end')+f'<g id="concept-{j}">'+rect(181,89+j*101,width,65,'#0f655f',radius=5)+text(value,202,133+j*101,32,'#E6C65C')+'</g>'
   note='Match the chart to the checked table.'
  elif kind=='media-edit':
+  # The same fictional 20-second clip as the Mission 3D practice page: Start 0-3, Explain 3-9, Pause 9-12, Next step 12-17, End 17-20 s.
   v=text('Keep the useful explanation',380,54,34,anchor='middle')
-  for j,(t,w) in enumerate([('Start',116),('Explain',221),('Pause',116),('Result',221)]):
-   x=[20,143,371,494][j];v+=rect(x,118,w,126,'#234b6a')+text(t,x+w/2,192,28,anchor='middle')
+  for j,(t,w) in enumerate([('Start',104),('Explain',212),('Pause',104),('Next step',176),('End',104)]):
+   x=[20,128,344,452,632][j];v+=f'<g id="seg-{j}">'+rect(x,118,w,126,'#234b6a')+text(t,x+w/2,192,26,anchor='middle')+'</g>'
   for j,(k,t) in enumerate([('undo','Preserve original'),('edit','Check the edit'),('chat','Retest captions')]):v+=f'<g id="concept-{j}">'+icon(k,75+j*247,291,61)+text(t,133+j*247,397,26,anchor='middle')+'</g>'
   note='Trim ends. Split sections. Check speech and captions.'
  elif kind=='email-fields':
@@ -362,8 +365,25 @@ def diagram(kind,i):
  elif kind=='check-ai':
   v=check_ai_svg();note='Simulation · fictional interface and fictional data.'
  elif kind=='editing':
-  v=rect(18,20,456,391,'#e1efed')+text('Computer help',45,73,34,'#1b365d')+rect(43,106,400,60,'#c9a227')+text('Visit the learning desk',56,145,28,'#1b365d')
-  v+=text('Selected passage',48,217,27,'#1b365d')+icon('undo',184,272,90,'#0f655f')+rect(495,70,245,252)+icon('chat',578,94,70)+text('Comment',617,224,29,anchor='middle')+text('Suggest a change',617,275,24,anchor='middle');note='Select carefully. Keep a route back.'
+  # Week 3: shortcut keys, then a tracked edit the owner decides (Mission 3A: Visit the learning desk -> Ask at the learning desk).
+  v='<g id="keys">'+''.join(rect(18+j*246,12,226,96,'#173d5c')+text(k,131+j*246,52,30,'#E6C65C',anchor='middle')+text(w,131+j*246,92,26,anchor='middle') for j,(k,w) in enumerate([('Ctrl+C','Copy'),('Ctrl+V','Paste'),('Ctrl+Z','Undo')]))+'</g>'
+  v+=rect(18,128,470,300,'#e1efed')+text('Steps',44,176,30,'#1b365d')+text('1.  Choose one task.',44,226,28,'#1b365d')
+  v+='<g id="tracked">'+text('2.',44,280,28,'#1b365d')+'<text x="84" y="280" fill="#B31942" font-size="28" font-weight="700" text-decoration="line-through">Visit</text>'+'<text x="150" y="280" fill="#0f655f" font-size="28" font-weight="700" text-decoration="underline">Ask at</text>'+text('the learning desk.',248,280,28,'#1b365d')+'</g>'
+  v+=text('3.  Ask how to repeat it at home.',44,334,28,'#1b365d')
+  v+='<g id="decide">'+rect(44,360,170,52,'#0f655f')+text('Accept',129,396,28,anchor='middle')+rect(232,360,170,52,'#B31942')+text('Reject',317,396,28,anchor='middle')+'</g>'
+  v+='<g id="comment">'+rect(512,128,230,300)+icon('chat',590,148,64)+text('Comment',627,252,30,anchor='middle')+text('Explains why.',627,300,26,anchor='middle')+text('Changes nothing.',627,340,26,anchor='middle')+'</g>'
+  note='Track the edit. The owner decides.'
+ elif kind=='three-slides':
+  for j,(label,line) in enumerate([('Slide 1','Need computer help?'),('Slide 2','Steps'),('Slide 3','Where to get help')]):
+   x=18+j*250;v+=f'<g id="slide-{j}">'+rect(x,40,225,250,'#e1efed')+rect(x,40,225,46,'#0f655f',radius=10)+text(label,x+112,72,26,anchor='middle')+icon(['person','edit','check'][j],x+75,104,74,'#0f655f')+text(line,x+112,226 if j else 214,24 if j==0 else 26,'#1b365d',anchor='middle')+'</g>'
+  v+=f'<g id="readable">'+rect(18,318,724,96,'#173d5c')+text('One theme · few words · large text',380,378,30,anchor='middle')+'</g>'
+  note='One job per slide. The same steps as the handout.'
+ elif kind=='crop':
+  v=rect(18,20,390,280,'#72978f')+icon('image',73,30,280,'#e1efed')+'<rect id="crop-frame" x="88" y="70" width="250" height="180" rx="4" fill="none" stroke="#E6C65C" stroke-width="6" stroke-dasharray="16 9"/>'
+  v+=f'<g id="kept">'+rect(18,318,390,96,'#B31942')+text('Edges kept until you',213,358,26,anchor='middle')+text('compress the picture',213,394,26,anchor='middle')+'</g>'
+  v+=f'<g id="alt">'+rect(432,20,310,180,'#e1efed')+text('Alt text',452,62,28,'#0f655f')+text('Two people review',452,110,26,'#1b365d')+text('a computer-help',452,146,26,'#1b365d')+text('handout.',452,182,26,'#1b365d')+'</g>'
+  v+=f'<g id="credit">'+rect(432,222,310,192,'#173d5c')+text('Credit line',452,264,28,'#E6C65C')+text('Photo: VUB',452,312,26)+text('practice photo,',452,350,26)+text('used with permission',452,388,26)+'</g>'
+  note='Crop · describe · credit'
  elif kind=='slide-design':
   for j,label in enumerate(['Purpose','Action','Result']):
    x=18+j*250;v+=rect(x,30,225,170,'#e1efed')+text(label,x+112,72,30,'#1b365d',anchor='middle')+icon(['person','edit','check'][j],x+75,99,69,'#0f655f')
@@ -487,10 +507,19 @@ def scene(n,i,b,words):
   if i==4:move('#access-1 rect',{'fill':'#0f655f'},'commenter access',.5)
  elif kind=='recovery':light('#trash','trash',.2);light('#history','version history',.5);light('#restored','preview',.7)
  elif kind=='document':
-  for j in range(3):move(f'#doc-step-{j}',{'x':10},'numbered list' if i==1 else 'next action',.28+j*.2)
+  for j in range(3):move(f'#doc-step-{j}',{'x':10},'numbered list' if i==1 else 'next step' if n==3 else 'next action',.28+j*.2)
  elif kind=='sheet' and index==4:change('#paper-cost',{'textContent':'15'},'paper to fifteen',.6);change('#total',{'textContent':'28'},'paper to fifteen',.6);light('#total','twenty-eight',.73)
  elif kind=='export':
-  for j,p in enumerate(['editable document','a pdf','a csv']):light(f'#format-{j}',p,.15+j*.24)
+  for j,p in enumerate(['gets a pdf','word document','gets a csv']):light(f'#format-{j}',p,.15+j*.12)
+  light('#check','check accessibility',.45);light('#reopen','open the pdf from your folder',.7)
+ elif kind=='editing':
+  light('#keys','control and c',.12);light('#tracked','turn on track changes',.45);light('#comment','a comment is different',.62);light('#decide','accept or reject',.78)
+ elif kind=='three-slides':
+  for j,p in enumerate(['the first slide','the second shows','the third says']):light(f'#slide-{j}',p,.15+j*.1)
+  light('#readable','keep the words few',.7)
+ elif kind=='crop':
+  move('#crop-frame',{'attr':{'x':120,'y':92,'width':190,'height':140}},'cropping trims',.12);light('#kept','a crop only hides',.4)
+  light('#alt','add alt text',.6);light('#credit','add the credit line',.85)
  elif kind=='bundle':
   for s,p,f in [('#handout','handout',.2),('#workbook','workbook',.28),('#slides','slides',.36)]:move(s,{'y':-10},p,f)
  elif kind=='roles':
@@ -526,6 +555,9 @@ def scene(n,i,b,words):
  if kind=='automation':
   for j in range(3):light(f'#detail-{j}','',.17+j*.25)
  if kind=='keyboard':move('#focus-ring',{'attr':{'x':545,'width':166}},'operate the filter',.4)
+ if kind=='media-edit' and n==3:
+  for j in (0,4):move(f'#seg-{j}',{'opacity':.25},'trimming cuts',.2)
+  move('#seg-2',{'opacity':.25},'splitting cuts',.35)
  if kind in ['connections','print','calendar','search','form','chart','media-edit','email-fields','commerce','keyboard','usb','source-trail']:
   for j in range(5 if kind=='source-trail' else 3):
    move(f'#concept-{j}',{'scale':1.025,'transformOrigin':'50% 50%'},'',.12+j*(.14 if kind=='source-trail' else .24))

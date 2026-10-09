@@ -1,569 +1,573 @@
 1
-00:00:00,450 --> 00:00:05,230
-Think about a notice, set of directions,
-or supply list that was easy to use.
+00:00:00,450 --> 00:00:03,730
+Think about a set of instructions
+that made a new task easy.
 
 2
-00:00:06,250 --> 00:00:08,063
-What helped you find the next step?
+00:00:05,130 --> 00:00:08,550
+Most likely they told you the next
+step and left nothing to guess.
 
 3
-00:00:08,930 --> 00:00:12,690
-We will apply those same practical
-standards to a small resource pack:
+00:00:09,690 --> 00:00:14,230
+Today you will make a small resource
+pack for a library computer-help session.
 
 4
-00:00:13,430 --> 00:00:16,750
-a handout, a supply workbook,
-and three slides.
+00:00:15,190 --> 00:00:16,900
+You will write a handout in Word,
 
 5
-00:00:17,730 --> 00:00:18,670
-Choose a fictional
+00:00:17,370 --> 00:00:21,430
+total a supply list in Excel,
+and build three slides in PowerPoint.
 
 6
-00:00:18,670 --> 00:00:19,610
-community activity
+00:00:22,990 --> 00:00:27,330
+Then you will save the handout as a PDF
+and check it the way your reader will.
 
 7
-00:00:19,610 --> 00:00:23,350
-such as a library computer-help
-session or a neighborhood meeting.
+00:00:28,270 --> 00:00:30,270
+Every choice starts with the reader.
 
 8
-00:00:24,250 --> 00:00:28,250
-Decide who will use the material and
-what they need to do after reading it.
+00:00:31,470 --> 00:00:35,201
+Who will pick up this handout,
+and what should they do after reading it?
 
 9
-00:00:28,250 --> 00:00:32,230
-A beautiful page that leaves
-the reader unsure is unfinished.
+00:00:36,110 --> 00:00:39,630
+Write one sentence that names
+your reader and their next step.
 
 10
-00:00:33,330 --> 00:00:36,594
-Keep that reader's task in view
-as we make choices about words,
+00:00:40,810 --> 00:00:41,810
+Pause the video now.
 
 11
-00:00:37,090 --> 00:00:41,610
-structure, calculations, pictures,
-and the final file format.
+00:00:55,917 --> 00:00:59,751
+Open a blank Word document and type
+the handout lines from your worksheet.
 
 12
-00:00:43,424 --> 00:00:46,274
-Start the handout with the
-service and the next action.
+00:00:59,957 --> 00:01:03,017
+Select the first line,
+Computer help at the library.
 
 13
-00:00:46,704 --> 00:00:47,864
-Use a real heading style
+00:01:04,037 --> 00:01:06,197
+On the Home tab, choose Heading 1.
 
 14
-00:00:47,864 --> 00:00:49,677
-for the title and section headings,
+00:01:06,837 --> 00:01:10,537
+Then make Who it helps
+and Steps into Heading 2.
 
 15
-00:00:49,804 --> 00:00:53,564
-followed by short paragraphs or a
-numbered list when order matters.
+00:01:10,537 --> 00:01:13,757
+Bold text only changes how a line looks.
 
 16
-00:00:54,664 --> 00:00:56,685
-Selecting bold text changes appearance,
+00:01:14,437 --> 00:01:18,957
+A heading style tells Word, and a screen
+reader, that a new section starts here.
 
 17
-00:00:57,424 --> 00:00:59,364
-but does not necessarily identify
+00:01:19,717 --> 00:01:23,377
+To check, open the View tab and
+turn on the Navigation Pane.
 
 18
-00:00:59,364 --> 00:01:02,724
-a heading to assistive
-technology or a navigation pane.
+00:01:23,377 --> 00:01:25,957
+Your headings appear
+in a list on the left.
 
 19
-00:01:03,564 --> 00:01:06,604
-A numbered sequence
-might say choose a task,
+00:01:27,017 --> 00:01:29,997
+Next, select the three
+steps and choose Numbering.
 
 20
-00:01:07,324 --> 00:01:11,384
-visit the learning desk,
-and ask how to repeat the skill at home.
+00:01:30,797 --> 00:01:31,547
+For the link,
 
 21
-00:01:12,104 --> 00:01:16,124
-Use link text that names the
-destination instead of click here.
+00:01:31,617 --> 00:01:36,377
+select words that name where it goes,
+such as Read the computer-help guide.
 
 22
-00:01:17,144 --> 00:01:21,244
-Read the document in order without
-relying on color or position alone.
+00:01:37,497 --> 00:01:39,837
+Press Control and K, and type the address.
 
 23
-00:01:22,204 --> 00:01:23,378
-Does it still make sense?
+00:01:41,772 --> 00:01:44,052
+A few keys save a lot of mouse work.
 
 24
-00:01:24,504 --> 00:01:26,732
-That is a useful first
-accessibility check.
+00:01:44,832 --> 00:01:47,192
+Control and C copies what you selected.
 
 25
-00:01:28,395 --> 00:01:30,882
-Select a short piece of
-text before changing it,
+00:01:47,952 --> 00:01:49,972
+Control and V pastes it.
 
 26
-00:01:30,975 --> 00:01:32,944
-and check what the selection includes.
+00:01:50,532 --> 00:01:55,772
+Control and Z undoes your last change,
+so a mistake is easy to take back.
 
 27
-00:01:33,295 --> 00:01:34,915
-Common shortcuts such as copy,
+00:01:56,972 --> 00:01:58,427
+Now trade seats with a partner.
 
 28
-00:01:35,315 --> 00:01:39,095
-paste, save,
-and undo can reduce repeated mouse work;
+00:01:59,272 --> 00:02:01,241
+In their handout, open the Review tab,
 
 29
-00:01:39,775 --> 00:01:42,469
-your instructor can show
-the keys for your computer.
+00:02:01,972 --> 00:02:06,612
+turn on Track Changes, and change
+one word to make a step clearer.
 
 30
-00:01:42,775 --> 00:01:45,417
-Practice on a copy so a
-mistake is easy to reverse.
+00:02:07,712 --> 00:02:11,752
+Word shows your edit in color instead
+of quietly replacing the text.
 
 31
-00:01:46,555 --> 00:01:49,995
-When reviewing someone else's document,
-a comment asks a question
+00:02:13,232 --> 00:02:14,332
+A comment is different.
 
 32
-00:01:49,995 --> 00:01:51,295
-or suggests an improvement.
+00:02:15,012 --> 00:02:17,572
+It explains why, and it changes nothing.
 
 33
-00:01:51,295 --> 00:01:54,775
-Tracked changes record
-proposed edits for review,
+00:02:18,532 --> 00:02:22,452
+Back at your own seat,
+choose Accept or Reject for each change.
 
 34
-00:01:55,375 --> 00:01:57,240
-where the application supports them.
+00:02:23,392 --> 00:02:25,432
+The owner always makes the final call.
 
 35
-00:01:57,755 --> 00:02:00,501
-They are not the same as
-silently replacing the text.
+00:02:26,792 --> 00:02:30,072
+Build your handout,
+then trade seats and track one edit.
 
 36
-00:02:01,215 --> 00:02:02,715
-Pause and propose one specific
+00:02:31,032 --> 00:02:32,012
+Pause the video now.
 
 37
-00:02:02,715 --> 00:02:05,975
-improvement to the handout.
-Explain the reader's problem it
+00:02:46,109 --> 00:02:50,489
+Download supplies.csv from your
+worksheet and open it in Excel.
 
 38
-00:02:05,975 --> 00:02:08,035
-solves, then let the author decide
+00:02:51,609 --> 00:02:57,169
+Columns have letters and rows have
+numbers, so B2 means column B, row 2.
 
 39
-00:02:08,035 --> 00:02:09,075
-whether to accept it.
+00:02:58,229 --> 00:03:03,609
+The list has paper at 12 dollars,
+folders at 8, and pens at 5.
 
 40
-00:02:10,742 --> 00:02:13,042
-A workbook can contain several worksheets.
+00:03:04,649 --> 00:03:07,549
+Change the heading in
+B1 to Cost in dollars,
 
 41
-00:02:13,622 --> 00:02:15,954
-Within a sheet,
-columns usually have letters,
+00:03:08,129 --> 00:03:10,202
+so a reader knows what the numbers mean.
 
 42
-00:02:16,482 --> 00:02:19,662
-rows have numbers,
-and a cell address combines both.
+00:03:10,869 --> 00:03:13,729
+Click cell B5, just below the costs.
 
 43
-00:02:20,582 --> 00:02:23,002
-B2 means column B, row two.
+00:03:14,609 --> 00:03:21,609
+Type an equals sign, then SUM, then B2
+colon B4 in parentheses, and press Enter.
 
 44
-00:02:24,002 --> 00:02:25,242
-Our fictional supply list
+00:03:23,489 --> 00:03:29,009
+The equals sign starts a formula, and the
+colon means every cell from B2 through B4.
 
 45
-00:02:25,242 --> 00:02:28,782
-puts item names in column A
-and dollar amounts in column B:
+00:03:30,129 --> 00:03:31,409
+B5 shows 25.
 
 46
-00:02:29,542 --> 00:02:33,342
-paper at twelve, folders at eight,
-and pens at five.
+00:03:32,989 --> 00:03:34,854
+Before you change anything, predict.
 
 47
-00:02:34,702 --> 00:02:39,003
-Include a heading that explains the units,
-so twelve is clearly dollars rather than
+00:03:35,829 --> 00:03:39,189
+If paper costs 15 dollars,
+what will the total be?
 
 48
-00:02:39,082 --> 00:02:39,832
-boxes.
+00:03:40,289 --> 00:03:43,501
+Enter the formula in your own
+sheet and write your prediction.
 
 49
-00:02:40,342 --> 00:02:44,643
-Enter the values in separate cells instead
-of putting the whole list into one cell.
+00:03:44,529 --> 00:03:45,468
+Pause the video now.
 
 50
-00:02:45,482 --> 00:02:50,242
-Before calculating anything, check that
-each amount sits beside the intended item.
+00:03:56,572 --> 00:03:57,746
+Now test your prediction.
 
 51
-00:02:51,282 --> 00:02:54,754
-A correct formula cannot rescue
-numbers assigned to the wrong rows.
+00:03:58,252 --> 00:04:01,592
+Click B2, type 15, and press Enter.
 
 52
-00:02:56,689 --> 00:03:02,089
-Select a total cell outside the three
-input cells and enter equals SUM,
+00:04:02,692 --> 00:04:04,612
+The total changes to 28 by itself,
 
 53
-00:03:02,629 --> 00:03:06,289
-followed by the range B2
-through B4 in parentheses.
+00:04:04,612 --> 00:04:09,272
+because the formula adds the cells,
+not a number someone typed.
 
 54
-00:03:07,449 --> 00:03:11,283
-The colon means include the cells from
-the first address through the last.
+00:04:10,612 --> 00:04:15,592
+If your total stayed at 25,
+click B5 and read the formula bar.
 
 55
-00:03:12,589 --> 00:03:14,765
-The expected total is twenty-five dollars.
+00:04:16,492 --> 00:04:20,432
+A typed number, or a range that
+skips a cell, will not update.
 
 56
-00:03:15,809 --> 00:03:18,109
-Now change paper from twelve to fifteen.
+00:04:21,212 --> 00:04:23,432
+When it works, save it the right way.
 
 57
-00:03:19,669 --> 00:03:23,659
-The total should become twenty-eight
-because the formula refers to the cells,
+00:04:24,092 --> 00:04:28,512
+Choose File, then Save As,
+and pick Excel Workbook as the type.
 
 58
-00:03:24,189 --> 00:03:25,951
-not to a permanently typed answer.
+00:04:29,512 --> 00:04:32,472
+A CSV file keeps the numbers
+but drops the formula.
 
 59
-00:03:26,469 --> 00:03:30,369
-If it stays at twenty-five,
-inspect the formula and range.
+00:04:33,812 --> 00:04:34,992
+Change paper to 15,
 
 60
-00:03:31,489 --> 00:03:33,147
-Did you type the total manually?
+00:04:35,972 --> 00:04:39,806
+check the total against your prediction,
+and save it as an Excel workbook.
 
 61
-00:03:33,709 --> 00:03:35,229
-Did the range omit a cell?
+00:04:40,832 --> 00:04:41,952
+Pause the video now.
 
 62
-00:03:36,449 --> 00:03:39,195
-Pause and predict the result
-before changing a value.
+00:04:56,103 --> 00:04:58,863
+Slides work best when
+each one does one job.
 
 63
-00:03:39,969 --> 00:03:44,010
-Then compare the observed total with
-your prediction and correct any mismatch.
+00:04:59,883 --> 00:05:02,663
+The first slide names the need:
+Need computer help?
 
 64
-00:03:45,979 --> 00:03:49,451
-A chart should help someone see a
-relationship in the checked data.
+00:05:03,643 --> 00:05:04,911
+The second shows the steps.
 
 65
-00:03:50,219 --> 00:03:52,019
-To compare the three supply costs,
+00:05:05,903 --> 00:05:07,223
+The third says where to go.
 
 66
-00:03:52,579 --> 00:03:57,719
-select the item labels and their values,
-then choose a simple bar or column chart.
+00:05:08,283 --> 00:05:10,663
+Use the same three steps
+as your handout, so
 
 67
-00:03:58,619 --> 00:04:01,676
-Give it a meaningful title and
-make the dollar units clear.
+00:05:10,663 --> 00:05:16,043
+your reader gets one message, not two.
+Start PowerPoint with a blank
 
 68
-00:04:02,499 --> 00:04:04,831
-Check that the labels
-still match their bars.
+00:05:16,043 --> 00:05:20,563
+presentation and pick one theme on the
+Design tab, so all three slides match.
 
 69
-00:04:05,379 --> 00:04:09,559
-A large bar should represent the larger
-value, not merely a brighter color.
+00:05:21,643 --> 00:05:23,463
+Keep the words few and large.
 
 70
-00:04:10,679 --> 00:04:15,219
-After changing the paper cost, confirm
-that the chart follows the updated cells.
+00:05:25,043 --> 00:05:26,823
+Then step back from your screen.
 
 71
-00:04:16,359 --> 00:04:20,339
-If a chart looks surprising,
-return to the table before decorating it.
+00:05:27,783 --> 00:05:29,191
+Can you still read every word?
 
 72
-00:04:21,039 --> 00:04:22,539
-Keep the table available so
+00:05:30,043 --> 00:05:33,283
+If you have to squint,
+cut words before you shrink the text.
 
 73
-00:04:22,539 --> 00:04:23,799
-a reader can inspect exact
+00:05:35,153 --> 00:05:37,713
+Insert the practice
+photo on the first slide.
 
 74
-00:04:23,799 --> 00:04:27,979
-amounts and understand the information
-without relying only on the graphic.
+00:05:38,573 --> 00:05:40,697
+Cropping trims the edges you do not need,
 
 75
-00:04:29,836 --> 00:04:31,291
-For a three-slide presentation,
+00:05:40,913 --> 00:05:43,452
+so the two people and the
+handout fill the frame.
 
 76
-00:04:32,136 --> 00:04:34,416
-use the first slide to
-name the useful task,
+00:05:44,273 --> 00:05:46,708
+Resizing changes the size
+of the whole picture.
 
 77
-00:04:34,916 --> 00:04:39,416
-the second to demonstrate the key steps,
-and the third to show the next action.
+00:05:47,173 --> 00:05:48,581
+They solve different problems.
 
 78
-00:04:40,476 --> 00:04:44,576
-Prefer a relevant picture or diagram
-to a paragraph copied from the handout.
+00:05:49,273 --> 00:05:50,071
+There is a catch.
 
 79
-00:04:45,556 --> 00:04:50,036
-Keep text large and explain
-unfamiliar terms aloud.
+00:05:50,973 --> 00:05:52,313
+A crop only hides the edges.
 
 80
-00:04:50,036 --> 00:04:52,886
-Cropping removes outer parts
-of an image from the view;
+00:05:52,973 --> 00:05:57,222
+They stay in the file until you compress
+the picture and delete the cropped areas.
 
 81
-00:04:53,516 --> 00:04:55,692
-resizing changes its displayed dimensions.
+00:05:58,373 --> 00:05:59,933
+Next, add alt text,
 
 82
-00:04:56,776 --> 00:04:58,797
-Those actions solve different problems.
+00:06:00,873 --> 00:06:04,759
+one sentence that says what the photo
+shows, for someone who cannot see it.
 
 83
-00:04:59,356 --> 00:05:01,843
-Preserve the original
-file before experimenting,
+00:06:05,573 --> 00:06:07,490
+PowerPoint may suggest a description.
 
 84
-00:05:02,496 --> 00:05:05,968
-and check that a crop has not
-removed information the viewer needs.
+00:06:07,993 --> 00:06:10,376
+Check it the way you
+would check an AI answer.
 
 85
-00:05:06,616 --> 00:05:08,776
-If an image carries meaning, provide
+00:06:11,053 --> 00:06:12,333
+Then add the credit line.
 
 86
-00:05:08,776 --> 00:05:10,896
-an equivalent explanation or alternative
+00:06:13,193 --> 00:06:17,353
+Make your three slides, then crop,
+describe, and credit the photo.
 
 87
-00:05:10,896 --> 00:05:12,796
-text in the format you are using.
+00:06:18,313 --> 00:06:19,252
+Pause the video now.
 
 88
-00:05:14,505 --> 00:05:17,096
-A useful instructional
-clip has a clear beginning,
+00:06:33,244 --> 00:06:35,484
+Who gets the file decides the format.
 
 89
-00:05:17,385 --> 00:05:19,820
-an understandable action,
-and a visible result.
+00:06:36,344 --> 00:06:40,924
+A neighbor who only reads it gets a PDF,
+which looks the same on any computer.
 
 90
-00:05:20,565 --> 00:05:25,445
-Trimming removes unwanted material at the
-start or end. Splitting allows you to work
+00:06:41,744 --> 00:06:44,424
+A partner who will edit
+it gets the Word document.
 
 91
-00:05:25,445 --> 00:05:28,905
-with sections inside a clip,
-such as removing a long unrelated
+00:06:45,604 --> 00:06:48,824
+A tool that needs plain
+rows of numbers gets a CSV.
 
 92
-00:05:28,905 --> 00:05:33,725
-interruption. Watch both sides of an edit:
-did it cut off the first syllable
+00:06:50,164 --> 00:06:53,884
+Before you export, choose Review,
+then Check Accessibility.
 
 93
-00:05:33,725 --> 00:05:38,605
-or remove the step that explains the
-result? Keep speech intelligible and check
+00:06:55,064 --> 00:06:56,519
+It points out missing headings,
 
 94
-00:05:38,605 --> 00:05:41,040
-captions against the
-final audio after editing.
+00:06:56,784 --> 00:06:59,844
+missing alt text,
+and links that do not say where they go.
 
 95
-00:05:41,705 --> 00:05:46,265
-Captions from an earlier version may
-drift. You do not need elaborate effects.
+00:07:00,544 --> 00:07:04,824
+Then choose File, Save As,
+and set the type to PDF.
 
 96
-00:05:47,125 --> 00:05:49,819
-The goal is for another
-person to follow the action,
+00:07:06,264 --> 00:07:07,884
+Saving is not the last step.
 
 97
-00:05:49,925 --> 00:05:52,360
-pause when needed,
-and understand what changed.
+00:07:08,744 --> 00:07:11,490
+Open the PDF from your folder
+and check the headings,
 
 98
-00:05:54,205 --> 00:05:56,278
-Decide what the next person needs to do.
+00:07:11,784 --> 00:07:16,204
+the numbered steps, and the link, because
+that file is what your reader gets.
 
 99
-00:05:56,765 --> 00:05:58,786
-An editable document supports revision.
+00:07:17,424 --> 00:07:21,844
+Save your handout as a PDF,
+open it from the folder, and check it.
 
 100
-00:05:59,245 --> 00:06:02,561
-A PDF often preserves a finished
-layout for viewing or printing.
+00:07:22,724 --> 00:07:23,964
+Pause the video now.
 
 101
-00:06:03,305 --> 00:06:05,265
-A CSV carries plain table data,
+00:07:35,139 --> 00:07:37,579
+Short how-to videos need editing too.
 
 102
-00:06:05,305 --> 00:06:09,036
-but does not preserve a workbook's
-full formatting and formula behavior.
+00:07:38,239 --> 00:07:41,499
+Trimming cuts unwanted material
+at the start or the end.
 
 103
-00:06:09,985 --> 00:06:12,524
-Keep the editable original
-as well as the export.
+00:07:42,319 --> 00:07:44,139
+Splitting cuts a clip into pieces,
 
 104
-00:06:13,485 --> 00:06:16,345
-Reopen the exported file
-and inspect the page breaks,
+00:07:44,819 --> 00:07:48,135
+so you can remove a section in the middle,
+such as a long pause.
 
 105
-00:06:16,685 --> 00:06:18,705
-labels, links, and important values.
+00:07:49,639 --> 00:07:51,339
+After every cut, play it back.
 
 106
-00:06:19,425 --> 00:06:22,045
-If you reused someone
-else's image or wording,
+00:07:52,499 --> 00:07:54,675
+Did you clip the first word of a sentence?
 
 107
-00:06:22,045 --> 00:06:25,565
-check the permission or license
-and provide the required credit.
+00:07:55,139 --> 00:07:57,522
+Did you cut the step
+that explains the result?
 
 108
-00:06:26,305 --> 00:06:27,165
-Finding an image
+00:07:58,479 --> 00:07:59,759
+If the clip has captions,
 
 109
-00:06:27,165 --> 00:06:30,999
-in a search result does not automatically
-give you permission to reuse it.
+00:07:59,979 --> 00:08:04,219
+check them against the edited sound,
+because old captions drift out of time.
 
 110
-00:06:31,525 --> 00:06:35,165
-Use original or appropriately licensed
-material for the practice pack.
+00:08:05,559 --> 00:08:08,357
+The video editor in Windows
+needs a Microsoft account,
 
 111
-00:06:36,947 --> 00:06:38,047
-Pause and ask a partner
+00:08:08,899 --> 00:08:11,219
+so today you will use a practice page.
 
 112
-00:06:38,047 --> 00:06:41,187
-to use your resource pack
-without your explanation first.
+00:08:12,079 --> 00:08:14,139
+Open the Mission 3D practice page,
 
 113
-00:06:42,247 --> 00:06:44,827
-Can they identify the next
-action on the handout?
+00:08:14,879 --> 00:08:18,059
+trim the start and end,
+then remove the pause in the middle.
 
 114
-00:06:45,567 --> 00:06:49,627
-Can they find the total and explain
-what changed when one cost changed?
+00:08:19,299 --> 00:08:20,259
+Pause the video now.
 
 115
-00:06:50,687 --> 00:06:52,927
-Can they tell what each slide contributes?
+00:08:34,368 --> 00:08:37,891
+Before you call your pack finished,
+use it the way your reader will.
 
 116
-00:06:54,307 --> 00:06:56,847
-Record one point of
-confusion and revise it.
+00:08:38,248 --> 00:08:41,808
+Open the PDF and find the next
+step without hunting for it.
 
 117
-00:06:57,667 --> 00:07:00,567
-Then reopen the export and
-repeat the affected check.
+00:08:42,428 --> 00:08:43,178
+Click the link.
 
 118
-00:07:01,307 --> 00:07:04,807
-This is useful evidence of learning:
-the document has structure,
+00:08:43,888 --> 00:08:47,568
+In the workbook, change one
+cost and watch the total follow.
 
 119
-00:07:05,607 --> 00:07:10,087
-the calculation responds correctly,
-and another reader can act on the result.
+00:08:48,468 --> 00:08:50,696
+Read the second slide
+from across the room.
 
 120
-00:07:11,247 --> 00:07:13,827
-Carry the same routine
-into a household budget,
+00:08:51,768 --> 00:08:54,208
+Each check tests one of today's skills:
 
 121
-00:07:14,287 --> 00:07:16,727
-a community notice,
-or another task you choose.
+00:08:55,028 --> 00:08:56,436
+a handout with real structure,
 
 122
-00:07:17,687 --> 00:07:22,007
-Create for a reader, test the result,
-and keep a recoverable original.
+00:08:56,928 --> 00:08:58,008
+a formula that updates,
+
+123
+00:08:58,588 --> 00:09:01,848
+slides with one message,
+and an export you opened yourself.
+
+124
+00:09:03,048 --> 00:09:06,208
+Fix the first problem you find,
+then check again.
+
+125
+00:09:07,728 --> 00:09:12,528
+The same routine works for a club notice,
+a church bulletin, or a household budget.
+
+126
+00:09:13,328 --> 00:09:16,388
+Make it for a reader, test it,
+and keep the original.

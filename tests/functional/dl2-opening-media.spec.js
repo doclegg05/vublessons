@@ -109,8 +109,8 @@ test('Old session/hash and course-home saved positions migrate once without chan
   await page.reload();expect(await page.evaluate(()=>DL2Deck.index())).toBe(0);
  }
  // Explicit links use the current numbering; invalid/stale bounds are clamped.
- await page.goto(route(3)+'#999');await expect(page.locator('.strip .count')).toHaveText('24 / 24');
- await page.goto(route(3)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 24');
+ await page.goto(route(3)+'#999');await expect(page.locator('.strip .count')).toHaveText('34 / 34'); // Week 3 has 34 slides (rounds, no break)
+ await page.goto(route(3)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 34');
 });
 test('Opening pre-test and video pass automated accessibility checks',async({page})=>{
  for(const hash of ['#1','#2']){await page.goto(route(1)+hash);const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(scan.violations).toEqual([]);}

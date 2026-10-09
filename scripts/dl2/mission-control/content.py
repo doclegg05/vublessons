@@ -2,30 +2,10 @@
 def mission(title,app,start,finish,tell,show,do,question,choices,answer,why,lab,practice):
  return dict(title=title,app=app,start=start,finish=finish,tell=tell,show=show,do=do,question=question,choices=choices,answer=answer,why=why,lab=lab,practice=practice)
 from week2 import WEEK2
+from week3 import WEEK3
 WEEKS={
 2:WEEK2,
-3:dict(title='Make a useful resource pack.',photo='resource-pack',warm='Think of instructions that helped you learn a new task. What made them easy to follow?',apply='Open the saved PDF as a neighbor would. Check its steps, link and layout; choose one improvement.',minutes=[8,5,27,22,8,20,16,7,7],missions=[
-mission('Structure, then suggest','Word','A wall of plain text','A clear handout with a reviewed edit',
- ['Use real headings and numbered steps.','Name the link destination; use Ctrl+K.','Track Changes lets the owner decide.'],
- [('Structure','Heading 1: Computer help at the library','Use Home → Styles, then Numbering for the three steps. Check View → Navigation Pane.'),('Link','Read the computer-help guide','Select descriptive text, press Ctrl+K and add the address. Copy/paste with Ctrl+C/V; undo with Ctrl+Z.'),('Review','Visit the desk → Ask at the learning desk','Turn on Review → Track Changes before editing. The owner accepts or rejects, with a reason.')],
- ['Build the supplied handout using heading styles.','Add the link; try copy, paste and undo.','Review one tracked edit; save the document.'],
- 'Bold text looks like a heading. What proves its structure?', ['A larger font','Its blue color','It appears in the Navigation Pane'],2,'A real heading style carries structure. Bold alone does not tell Word or a screen reader it is a heading.',[0,1,2,3],6),
-mission('Make the total recalculate','Excel','Paper $12 + pens $8 + folders $5','A tested formula, saved as .xlsx',
- ['Rows hold items; columns have labels and units.','In B5, enter =SUM(B2:B4).','Predict, change one cost, then check.'],
- [('Enter','=SUM(B2:B4)','Start with =. The colon means B2 through B4, including B3.'),('Predict','12 + 8 + 5 = 25','Before editing: if paper becomes $15, the total should be $28.'),('Test','15 + 8 + 5 = 28','If it stays 25, inspect the range and numeric values. Save as Excel Workbook; CSV loses the formula.')],
- ['Open supplies.csv and enter the SUM formula.','Predict, change paper to 15, and check 28.','Save as supplies.xlsx; optional: add a chart.'],
- 'Which formula includes all three cost cells?', ['=SUM(B2,B4)','=SUM(B2:B4)','SUM(B2:B4)'],1,'The colon includes the full range and = starts the formula. The comma here omits B3.',[4],9),
-mission('Show the message clearly','PowerPoint','An audience who needs computer help','Three matching slides and a useful photo',
- ['Need → steps → where to get help.','Crop edges; resize without stretching.','Add useful alt text and permission credit.'],
- [('Arrange','Need / Steps / Help','Use one theme. Keep the same steps as your Word handout.'),('Crop','Keep the people and handout in view','Picture Format → Crop trims the edges. Corner resizing changes size; check proportions.'),('Describe','Two people review a computer-help handout','Add alt text for the meaningful content. Credit the approved practice photo; keep the original.')],
- ['Make three matching slides using the starter text.','Insert the practice photo; crop and describe it.','Add the credit and save resource-slides.pptx.'],
- 'What does cropping a picture change?', ['Its outer visible edges','The original file on disk','The meaning of its license'],0,'Cropping changes the visible frame in the slide. Keep the original photo and check its reuse permission.',[5,6],13),
-mission('Export, then inspect','Word / media','A finished editable resource pack','A separately opened and checked PDF',
- ['PDF for reading; editable files for changes.','CSV keeps values, not formulas or formatting.','Trim ends; split to remove a middle section.'],
- [('Choose','Reader → PDF · Editor → DOCX','Keep the editable original. Check image permission; search results are not a license.'),('Export','Save as PDF → open from the folder','Check headings, links, page breaks and missing content in the actual exported file.'),('Edit media','Start | useful speech | middle pause | end','Trim removes ends. Split around unwanted middle footage. Recheck speech and captions after editing.')],
- ['Save the handout as PDF and reopen it.','Check its headings, numbered steps and link.','Use the local trim/split simulation; no account.'],
- 'What confirms your export is usable?', ['Word still looks correct','The PDF file exists','Open the PDF and check it'],2,'A PDF is a separate file. Reopen that file and inspect the content the reader will receive.',[7],14)
-]),
+3:WEEK3,
 4:dict(title='Work together without confusion.',photo='collaboration',warm='When has a message made your next step easy? What information did it include?',apply='Choose a real upcoming conversation. Write who needs to do what, by when, through which channel.',minutes=[8,5,23,23,8,18,20,8,7],missions=[
 mission('Send a clear request','Email simulation','A vague message with too many recipients','The right request, account and audience',
  ['Choose a channel for urgency and sensitivity.','Name the request, context and reply time.','To acts; Cc sees; Bcc hides addresses.'],

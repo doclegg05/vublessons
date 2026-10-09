@@ -1,113 +1,169 @@
 [
   {
     "chapter": 2,
-    "title": "Give the document a readable structure",
-    "startSeconds": 42.974,
-    "durationSeconds": 44.971,
+    "title": "Give the handout real structure",
+    "startSeconds": 55.467,
+    "durationSeconds": 45.855,
     "actions": [
       {
         "at": 0.0,
         "phrase": "",
         "state": 0,
-        "x": 558,
-        "y": 251,
-        "label": "Start with meaningful document structure"
+        "x": 620,
+        "y": 300,
+        "label": "Type the handout lines from the worksheet"
       },
       {
-        "at": 3.73,
-        "phrase": "Use a real heading style",
+        "at": 4.49,
+        "phrase": "Select the first line",
         "state": 1,
-        "x": 554,
-        "y": 250,
-        "label": "Select the title text"
+        "x": 520,
+        "y": 215,
+        "label": "Select the title line"
       },
       {
-        "at": 4.89,
-        "phrase": "for the title",
+        "at": 9.61,
+        "phrase": "choose Heading 1",
         "state": 2,
-        "x": 160,
-        "y": 157,
-        "label": "Open Styles \u2192 choose Heading 1"
+        "x": 530,
+        "y": 147,
+        "label": "Home \u2192 Styles \u2192 Heading 1"
       },
       {
-        "at": 5.77,
-        "phrase": "section headings",
+        "at": 11.71,
+        "phrase": "make Who it helps",
         "state": 3,
-        "x": 222,
-        "y": 284,
-        "label": "The title now appears in Navigation"
+        "x": 680,
+        "y": 147,
+        "label": "Who it helps and Steps \u2192 Heading 2"
       },
       {
-        "at": 29.13,
-        "phrase": "Use link text",
+        "at": 26.47,
+        "phrase": "turn on the Navigation Pane",
         "state": 4,
-        "x": 588,
-        "y": 450,
-        "label": "Name the destination in the link text"
+        "x": 152,
+        "y": 150,
+        "label": "View \u2192 Navigation Pane lists the headings"
+      },
+      {
+        "at": 33.67,
+        "phrase": "choose Numbering",
+        "state": 5,
+        "x": 957,
+        "y": 147,
+        "label": "Select the steps \u2192 Numbering"
+      },
+      {
+        "at": 42.03,
+        "phrase": "Press Control and K",
+        "state": 6,
+        "x": 990,
+        "y": 440,
+        "label": "Ctrl + K \u2192 type the address"
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "title": "Enter the costs, then a formula",
+    "startSeconds": 165.659,
+    "durationSeconds": 60.263,
+    "actions": [
+      {
+        "at": 0.0,
+        "phrase": "",
+        "state": 0,
+        "x": 600,
+        "y": 300,
+        "label": "supplies.csv \u2022 items in column A, costs in column B"
+      },
+      {
+        "at": 18.99,
+        "phrase": "Change the heading in B1",
+        "state": 1,
+        "x": 755,
+        "y": 265,
+        "label": "B1 \u2192 Cost in dollars"
+      },
+      {
+        "at": 25.21,
+        "phrase": "Click cell B5",
+        "state": 2,
+        "x": 755,
+        "y": 457,
+        "label": "Select B5, just below the costs"
+      },
+      {
+        "at": 28.95,
+        "phrase": "Type an equals sign",
+        "state": 3,
+        "x": 330,
+        "y": 152,
+        "label": "Type =SUM(B2:B4)"
+      },
+      {
+        "at": 36.01,
+        "phrase": "press Enter",
+        "state": 4,
+        "x": 755,
+        "y": 457,
+        "label": "Press Enter \u2022 B5 shows 25"
+      },
+      {
+        "at": 47.33,
+        "phrase": "Before you change anything",
+        "state": 5,
+        "x": 1050,
+        "y": 318,
+        "label": "Predict before you change anything"
       }
     ]
   },
   {
     "chapter": 5,
-    "title": "Build a formula and challenge it",
-    "startSeconds": 176.239,
-    "durationSeconds": 49.29,
+    "title": "Check your prediction and keep the formula",
+    "startSeconds": 236.122,
+    "durationSeconds": 46.331,
     "actions": [
       {
         "at": 0.0,
         "phrase": "",
-        "state": 0,
-        "x": 764,
-        "y": 455,
-        "label": "Select B5 \u2022 keep the total outside the input range"
-      },
-      {
-        "at": 4.35,
-        "phrase": "enter equals SUM",
-        "state": 1,
-        "x": 467,
-        "y": 160,
-        "label": "Enter =SUM(B2:B4)"
-      },
-      {
-        "at": 17.53,
-        "phrase": "twenty five dollars",
-        "state": 2,
-        "x": 771,
-        "y": 455,
-        "label": "Check the expected total: $25"
-      },
-      {
-        "at": 19.57,
-        "phrase": "Now change paper",
-        "state": 3,
-        "x": 769,
-        "y": 324,
-        "label": "Predict the new total before the change"
-      },
-      {
-        "at": 20.25,
-        "phrase": "from twelve to fifteen",
-        "state": 4,
-        "x": 769,
-        "y": 324,
-        "label": "Change B2 from 12 to 15"
-      },
-      {
-        "at": 24.41,
-        "phrase": "twenty eight",
         "state": 5,
-        "x": 769,
-        "y": 455,
-        "label": "The formula recalculates: $28"
+        "x": 1050,
+        "y": 318,
+        "label": "Your prediction is written down \u2022 the total is 25"
       },
       {
-        "at": 32.51,
-        "phrase": "inspect the formula and range",
-        "state": 6,
-        "x": 414,
-        "y": 158,
-        "label": "Check =SUM(B2:B4) if the result is wrong"
+        "at": 2.13,
+        "phrase": "Click B2",
+        "state": 7,
+        "x": 755,
+        "y": 313,
+        "label": "Select B2 \u2022 type 15 \u2022 press Enter"
+      },
+      {
+        "at": 6.89,
+        "phrase": "changes to 28",
+        "state": 8,
+        "x": 755,
+        "y": 457,
+        "label": "The formula recalculates: 28"
+      },
+      {
+        "at": 18.43,
+        "phrase": "read the formula bar",
+        "state": 9,
+        "x": 300,
+        "y": 152,
+        "label": "Read the formula bar: =SUM(B2:B4)"
+      },
+      {
+        "at": 27.97,
+        "phrase": "Choose File",
+        "state": 10,
+        "x": 685,
+        "y": 353,
+        "label": "Save As \u2192 Excel Workbook (*.xlsx)"
       }
     ]
   }
