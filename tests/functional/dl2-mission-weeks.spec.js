@@ -6,11 +6,12 @@ for(let week=2;week<=6;week++) {
  test(`Week ${week}: matched missions, guided states, checks and resources`,async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(route+'/presentation.html#1');
-  // Week 2 (AI search) has extra rounds and a capstone, and no break; Weeks 3-6 keep 24 slides and the protected break.
-  const total=week===2?36:24,stages=week===2?{tell:5,show:4,do:15,review:5}:{tell:4,show:4,do:4,review:4};
+  // Week 2 (AI search) has extra rounds and a capstone, and no break; Weeks 4-6 keep 24 slides and the protected break.
+  // Week 3 (2026-10-12) is the guided build: one program at a time, one or two clicks per slide, no break. Its own checks are in dl2-week3-guided.spec.js.
+  const total=week===2?36:week===3?71:24,stages=week===2?{tell:5,show:4,do:15,review:5}:week===3?{tell:8,show:5,do:46,review:4}:{tell:4,show:4,do:4,review:4};
   await expect(page.locator('.slide')).toHaveCount(total);
   for(const stage of ['tell','show','do','review'])await expect(page.locator(`.slide[data-stage=${stage}]`)).toHaveCount(stages[stage]);
-  await expect(page.locator('.slide').filter({hasText:'Take an 8-minute break.'})).toHaveCount(week===2?0:1);
+  await expect(page.locator('.slide').filter({hasText:'Take an 8-minute break.'})).toHaveCount(week<=3?0:1);
   await page.getByRole('button',{name:'Notes (N)'}).click();await expect(page.locator('.notes-panel')).toBeVisible();
   await page.keyboard.press('n');await expect(page.locator('.notes-panel')).toBeHidden();
   const slideIndexes=async selector=>page.evaluate(sel=>[...document.querySelectorAll('.slide')].map((slide,i)=>slide.querySelector(sel)?i:-1).filter(i=>i>=0),selector);
@@ -69,7 +70,7 @@ test('Week positions are isolated and the practice library never overwrites less
  await page.goto(`${base}/weeks/week-02/practice.html#slide-20`);
  expect(await page.evaluate(()=>localStorage.getItem('vub:progress:v1'))).toBe(before);
  await page.goto(`${base}/weeks/week-02/presentation.html`);await expect(page.locator('.strip .count')).toHaveText('9 / 36');
- await page.goto(`${base}/weeks/week-03/presentation.html`);await expect(page.locator('.strip .count')).toHaveText('5 / 24');
+ await page.goto(`${base}/weeks/week-03/presentation.html`);await expect(page.locator('.strip .count')).toHaveText('5 / 71');
 });
 test('Mission lesson and worksheet pass automated accessibility checks',async({page})=>{
  for(const path of ['/weeks/week-03/presentation.html#5','/weeks/week-06/worksheet.html']){

@@ -1,0 +1,131 @@
+/* Week 3 guided lesson: one program at a time, one or two clicks per slide.
+ * Scoped to body.guided-deck (presentation) and body.guided-paper (worksheet and instructor pages),
+ * so no other week changes. Slide text keeps the series floor of 32px at default size. */
+
+/* "Working in" banner: the program name, its letter badge and its color, on every slide. */
+.guided-deck .hud { gap:1cqw; }
+.mission-series.guided-deck .hud .app { display:inline-flex; align-items:center; gap:.7cqw; font-size:calc(1.7cqw * var(--ts-h)); padding:.35cqw 1.1cqw .35cqw .45cqw; border-radius:.45cqw; letter-spacing:0; text-transform:none; }
+.guided-deck .hud .app b { font-weight:800; }
+.guided-deck .hud .app-word { background:#185abd; color:#fff; }
+.guided-deck .hud .app-excel { background:#107c41; color:#fff; }
+.guided-deck .hud .app-powerpoint { background:#c43e1c; color:#fff; }
+.guided-deck .hud .app-edge { background:#0c7a8a; color:#fff; }
+.guided-deck .hud .app-explorer { background:#e0a106; color:#1a1a1a; }
+.guided-deck .g-kicker { font-size:calc(1.2cqw * var(--ts-h)); color:#cdf6ff; letter-spacing:.08em; white-space:nowrap; }
+
+/* Inline markup: on-screen names, keys and exact text. Bold weight carries the meaning, not color alone. */
+.guided-deck .ui-name { font-weight:800; color:#ffe38a; }
+.guided-deck kbd { display:inline-block; font:inherit; font-weight:700; line-height:1.1; padding:0 .3em; border:2px solid #9fd8e6; border-bottom-width:4px; border-radius:6px; background:#0d2340; color:#fff; }
+.guided-deck .typed { background:#e8f4ff; color:#06152b; padding:0 .22em; border-radius:.25em; font-weight:600; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+
+/* Step slides: instructions on the left, the picture of the screen on the right. */
+.mission-series.guided-deck .deck .slide:is(.g-step,.g-map) h1 { font-size:calc(2.55cqw * var(--ts-h))!important; margin:.5cqw 0 1cqw; max-width:none; }
+.guided-deck .g-row { display:grid; grid-template-columns:minmax(0,1fr) 40cqw; gap:2.2cqw; align-items:start; }
+.guided-deck .g-text { min-width:0; }
+.guided-deck .g-actions, .guided-deck .g-map { margin:0; padding-left:2.4cqw; }
+.mission-series.guided-deck .deck .slide .g-actions li, .mission-series.guided-deck .deck .slide .g-map li { margin:0 0 .8cqw; padding-left:.3cqw; }
+.guided-deck .g-actions li::marker, .guided-deck .g-map li::marker { color:var(--c-gold); font-weight:700; }
+.mission-series.guided-deck .deck .slide .g-see { margin:1cqw 0 0; padding:.6cqw 1cqw; border-left:.45cqw solid #a6ff8f; background:#0c2b2b; }
+.guided-deck .g-see > span:first-child { color:#a6ff8f; font-weight:800; }
+.guided-deck .g-draw { min-width:0; }
+.guided-deck .g-draw > .ui { width:100%; }
+
+/* Text to type, shown large on a white card. It stays at the 32px floor so all seven lines fit. */
+.guided-deck .g-card, .guided-deck .g-write { background:#f5f7fa; color:#0d1b2a; border-radius:.6cqw; padding:1cqw 1.4cqw; box-shadow:0 12px 28px #0006; }
+.mission-series.guided-deck .deck .slide .g-card p, .mission-series.guided-deck .deck .slide .g-write p { font-size:max(32px,1.8cqw)!important; line-height:1.22!important; margin:0; color:#0d1b2a; }
+.mission-series.guided-deck .deck .slide .g-card p.g-card-head, .mission-series.guided-deck .deck .slide .g-write p.g-card-head { font-size:max(24px,1.3cqw)!important; font-weight:700; color:#3a4763; margin-bottom:.5cqw; text-transform:uppercase; letter-spacing:.08em; }
+.guided-deck .g-write .g-blank { font-weight:700; letter-spacing:.1em; }
+
+/* Part opener: the big program badge beside what it does and what we will make. */
+.guided-deck .g-orient { display:grid; grid-template-columns:auto minmax(0,1fr); gap:2.4cqw; align-items:start; }
+.mission-series.guided-deck .deck .slide .g-orient p { margin:0 0 1cqw; }
+.guided-deck .g-label { color:var(--c-cyan); font-weight:800; }
+.guided-deck .g-goal { border-top:1px solid #3b617f; padding-top:1cqw; }
+
+/* Goals and plan: four cards, one per part. */
+.guided-deck .g-lead { margin:0 0 1cqw; font-weight:600; }
+.guided-deck .g-cards { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:1.2cqw; }
+.guided-deck .g-cards li { background:#10264a; border:1px solid #3d6f88; border-radius:.6cqw; padding:.9cqw 1.2cqw; }
+.mission-series.guided-deck .deck .slide .g-cards p { margin:0; }
+.mission-series.guided-deck .deck .slide .g-cards .g-card-title { display:flex; align-items:center; gap:.8cqw; margin-bottom:.4cqw; color:#cdf6ff; }
+.guided-deck .g-cards .g-card-title b { color:var(--c-gold); }
+.mission-series.guided-deck .deck .slide .g-foot, .mission-series.guided-deck .deck .slide .g-routine { margin:1.2cqw 0 0; }
+.guided-deck .g-routine > span:first-child { color:var(--c-gold); font-weight:800; }
+.guided-deck .g-ican { list-style:none; padding:0; margin:0; display:grid; gap:1cqw; }
+.guided-deck .g-ican li { display:flex; gap:1cqw; align-items:center; }
+
+/* Watch slides: a short clip that stops by itself, with what to look for beside it. */
+.guided-deck .g-watch { display:grid; grid-template-columns:52% minmax(0,1fr); gap:2cqw; align-items:center; }
+.guided-deck .g-watch video { display:block; width:100%; aspect-ratio:16/9; background:#000; border-radius:8px; box-shadow:0 16px 32px #0008; }
+.mission-series.guided-deck .deck .slide .g-watch-text p { margin:0 0 1cqw; }
+
+@media(max-width:800px) {
+ .guided-deck .g-row, .guided-deck .g-watch, .guided-deck .g-orient, .guided-deck .g-cards { grid-template-columns:1fr; gap:18px; }
+ .mission-series.guided-deck .hud .app { font-size:16px; padding:4px 10px 4px 4px; }
+ .guided-deck .g-kicker { font-size:14px; white-space:normal; }
+ .mission-series.guided-deck .deck .slide:is(.g-step,.g-map) h1 { font-size:calc(26px * var(--ts))!important; }
+ .mission-series.guided-deck .deck .slide .g-card p, .mission-series.guided-deck .deck .slide .g-write p { font-size:calc(20px * var(--ts))!important; }
+ .guided-deck .g-actions, .guided-deck .g-map { padding-left:28px; }
+}
+
+/* Worksheet and instructor pages. Uses the Week 1 worksheet parts from paper.css. */
+.visually-hidden { position:absolute!important; width:1px!important; height:1px!important; overflow:hidden!important; clip-path:inset(50%)!important; white-space:nowrap!important; }
+.guided-paper .g-intro { font-size:13pt; }
+.guided-paper .mission.g-part { margin-top:22pt; }
+.guided-paper .mission.g-part:first-of-type { break-before:auto; }
+.guided-paper .mhead h2 { font-family:"Playfair Display", Georgia, serif; font-size:20pt; color:#1b365d; line-height:1.08; margin:2pt 0 0; }
+.guided-paper .mission .mission-ab { grid-template-columns:1fr auto 1fr; background:none; padding:0; gap:8pt; }
+.guided-paper .mission .mission-steps > li { margin:0; padding:4pt 6pt; grid-template-columns:22pt 1fr 22pt; }
+.guided-paper .mission .mission-steps > li .d { line-height:1.3; }
+.guided-paper .mission .mission-steps > li .d .see { margin-top:2pt; }
+.guided-paper .mission .mission-steps > li .box { position:relative; display:block; width:20pt; height:20pt; cursor:pointer; }
+.guided-paper .box input { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer; }
+.guided-paper .box:has(input:checked)::after { content:"✓"; position:absolute; inset:0; display:grid; place-items:center; font-weight:900; font-size:14pt; color:#1b365d; }
+.guided-paper .box:has(input:focus-visible) { outline:3px solid #975f00; outline-offset:2px; }
+.guided-paper .ui-name { font-weight:700; color:#0d1b2a; }
+.guided-paper .typed { background:#eef2f9; border:1pt solid #c6d0e1; border-radius:3pt; padding:0 3pt; }
+.guided-paper .g-type-card { display:block; margin:5pt 0 3pt; padding:6pt 10pt; border:1.5pt dashed #9aa6bf; border-radius:5pt; background:#fff; font-size:12.5pt; line-height:1.45; }
+.guided-paper .g-write-label { display:block; margin-top:5pt; font-weight:700; }
+.guided-paper .mission-steps textarea { min-height:40px; margin:4px 0 2px; }
+.guided-paper .g-screen { margin:6pt 0 2pt; padding:5pt 8pt; background:#f1f4f9; border-radius:5pt; font-size:11.5pt; line-height:1.4; }
+.guided-paper .g-download { display:flex; flex-wrap:wrap; gap:8pt 12pt; align-items:center; margin:8pt 0 4pt; }
+.guided-paper .g-download-button { display:inline-block; background:#1b365d; color:#fff; font-weight:700; padding:8px 16px; border-radius:6px; text-decoration:none; }
+.guided-paper .g-download-button:hover { background:#2c4a7c; }
+.guided-paper .g-goal-box { margin:14pt 0 4pt; padding:8pt 12pt; border:1.5pt solid #c9a227; border-radius:6pt; background:#fbf6e6; }
+.guided-paper .g-goal-box h2 { margin:0 0 4pt; font-size:15pt; color:#1b365d; }
+.guided-paper .g-goal-box p { margin:0 0 4pt; }
+.guided-paper .g-ican-list { list-style:none; margin:0; padding:0; }
+.guided-paper .g-ican-list li { margin:4pt 0; }
+.guided-paper .g-ican-list label { display:flex; gap:8px; align-items:flex-start; cursor:pointer; }
+.guided-paper .g-ican-list input { width:20px; height:20px; margin:2px 0 0; flex:none; }
+.guided-paper .home { flex-wrap:wrap; }
+@media(max-width:700px) {
+ .guided-paper .mission .mission-ab { grid-template-columns:1fr; }
+ .guided-paper .mission .mission-ab .arr { display:none; }
+ .guided-paper .two { grid-template-columns:1fr; }
+}
+@media print {
+ .guided-paper .mission.g-part { break-before:page; margin-top:0; }
+ .guided-paper .mission.g-part:first-of-type { break-before:auto; }
+ .guided-paper .g-download-button { color:#1b365d; background:none; border:1pt solid #1b365d; }
+}
+
+/* Goals: one row per part, the program first. */
+.mission-series.guided-deck .deck .slide:is([data-phase=intro],[data-phase=apply],[data-stage=tell]) h1 { font-size:calc(2.9cqw * var(--ts-h))!important; }
+.guided-deck .g-goal-rows { list-style:none; margin:0; padding:0; display:grid; gap:.9cqw; }
+.guided-deck .g-goal-rows li { display:flex; gap:1cqw; align-items:center; }
+.guided-deck .g-goal-rows b { color:#cdf6ff; }
+.guided-deck .g-foot .app { display:inline-flex; vertical-align:middle; align-items:center; gap:.5cqw; padding:.15cqw .8cqw .15cqw .35cqw; border-radius:.45cqw; font-size:inherit; }
+.guided-deck .g-foot .app-word { background:#185abd; color:#fff; }
+/* Large text: tighten spacing before anything overflows. */
+.mission-series.guided-deck .deck .slide .g-actions li, .mission-series.guided-deck .deck .slide .g-map li { margin-bottom:calc(.8cqw * (2 - var(--ts))); }
+.mission-series.guided-deck .deck .slide .g-see { margin-top:calc(1cqw * (2 - var(--ts))); }
+/* The part opener's title is the anchor for the whole part: make it the biggest words on the slide. */
+.mission-series.guided-deck .deck .slide.g-orient h1 { font-size:calc(3.7cqw * var(--ts-h))!important; }
+@media(max-width:800px) { .mission-series.guided-deck .deck .slide.g-orient h1 { font-size:calc(30px * var(--ts))!important; } }
+/* Numbered points keep their sentence together even with bold words or exact text inside. */
+.guided-deck .mission-principles .g-pt { min-width:0; }
+.guided-deck .mission-principles .g-pt span { display:inline; width:auto; height:auto; border:0; place-items:normal; }
+.guided-deck .mission-principles .g-pt .typed { padding:0 .22em; }
+/* Check questions grow half as fast as body text, leaving room for the explanation at the largest size. */
+.mission-series.guided-deck .deck .slide[data-stage=review] h1 { font-size:calc(2.3cqw * var(--ts-h))!important; }

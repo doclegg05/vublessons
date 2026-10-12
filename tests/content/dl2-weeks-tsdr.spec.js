@@ -13,7 +13,9 @@ const pauses={2:['1:26','2:22','3:41','5:14','6:47'],3:['1:58','6:28'],4:['1:29'
 const asPublished=o=>o.replace('the 28-question post-test','the 20-question post-test');
 const silly=['Count the page’s colors','Delete their document','This is bad.','I dislike everything.','Only the button color','Whether the site has animations','Share your password instead','Skip testing','Add real personal records immediately'];
 
-for(const n of [2,3,4,5,6]){
+// 2026-10-12: Week 3 is the guided build (scripts/dl2/mission-control/week3.py); it no longer reads its agenda, outcomes or
+// quick card from curriculum.json. Its checks are in tests/content/dl2-week3-guided.spec.js.
+for(const n of [2,4,5,6]){
  const w=weeks[n-1],dir=`courses/digital-literacy-2/weeks/week-0${n}`;
  const plan=()=>text(read(`${dir}/lesson-plan.html`)),worksheet=()=>text(read(`${dir}/worksheet.html`));
  const actions=()=>w.agenda.map(a=>a[2]).join(' ');
