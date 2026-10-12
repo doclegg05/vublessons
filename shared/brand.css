@@ -74,7 +74,9 @@
   color: var(--ink);
   background: var(--cream);
 }
-.vub-brand :is(a,button):focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+/* Two-tone focus ring: navy outside (12:1 on cream/white), gold inside (10:1 on navy-deep).
+   Gold alone is 1.5:1 on cream, so the navy edge carries light grounds and the gold carries dark ones. */
+.vub-brand :is(a,button):focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; box-shadow: 0 0 0 3px var(--focus); border-radius: 4px; }
 .vub-brand :is(button,.btn,[role="button"]) { min-height: var(--tap-min); }
 .vub-brand h1,.vub-brand h2,.vub-brand h3 { font-family: var(--font-display); color: var(--navy); line-height: 1.15; }
 

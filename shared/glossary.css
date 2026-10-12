@@ -35,8 +35,9 @@
   box-shadow: 0 12px 32px rgba(12, 26, 53, 0.45);
 }
 .vub-help-fab:focus-visible {
-  outline: 4px solid #F5C84C;
+  outline: 4px solid #1B365D;
   outline-offset: 3px;
+  box-shadow: 0 0 0 3px #F5C84C;
 }
 .vub-help-fab-icon {
   display: inline-flex;
@@ -158,8 +159,9 @@
   color: #0C1A35;
 }
 .vub-help-close:focus-visible {
-  outline: 3px solid #F5C84C;
+  outline: 3px solid #1B365D;
   outline-offset: 2px;
+  box-shadow: 0 0 0 2px #F5C84C;
 }
 
 /* ─── Term list ────────────────────────────────────────── */
