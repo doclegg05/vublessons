@@ -39,6 +39,44 @@ pronunciation; do not change thresholds or mechanically stretch speech to pass.
 The user approved publication on September 28, 2026. See `NARRATION-REFRESH.md`
 for validation evidence and the retained pacing observations.
 
+## Week 3 guided build (2026-10-12)
+
+Britt found Week 3 unguided: terse slides, a run-on worksheet, the program only named in a small corner tag, and no
+learner-facing objectives. Definition of done: a beginner can go **slide by slide** and finish every task; anything
+critical left out is a failure. Week 3 is now its own guided build. Weeks 2 and 4–6 are unchanged (byte-identical output).
+
+- **Source:** `scripts/dl2/mission-control/week3.py` (content), `guided.py` (deck, worksheet, answer guide, lesson plan,
+  run sheet, notes), `ui.py` (original HTML/CSS drawings of the Word, Excel, PowerPoint, Edge and File Explorer screens;
+  not screenshots), `os/guided.css` and `os/ui-drawings.css` (loaded only by Week 3). `build.py` sends any week with
+  `guided=True` to `guided.build_week` and still writes that week's practice library unchanged.
+- **Class flow (Britt's choice):** the instructor projects; everyone does each step together. One or two actions per
+  slide, each with **You should see**. The worksheet repeats every step in the same order with a check box (Week 1
+  format), plus If you get stuck and Check yourself per part.
+- **Scope (Britt's choice): only what the post-test measures** — items 9 to 12: real heading styles, PDF, a SUM total
+  that updates, a licensed photo cropped and credited. Britt kept numbered steps and a PowerPoint theme. Cut: Track
+  Changes, link and copy/paste/undo practice, chart, alt text, the three-slide deck (now a one-slide flyer), video
+  trim/split, CSV. No break.
+- **Order:** goals → how tonight works → open the worksheet in Edge → Part 1 Word headings → Part 2 the PDF (still in
+  Word) → Part 3 Excel → Part 4 PowerPoint → evidence check in File Explorer, I can, take it home. Each part opens with
+  "Now working in: <program>", a why slide, a Watch clip, a "Find your way around" map, the steps and one check.
+  Every slide's corner banner names the program, with its color and letter badge.
+- **Video:** the full opening video no longer plays. Each Watch slide plays only its clip of `week-03.mp4` through a
+  `#t=start,end` fragment (stops by itself, captions on). No clip covers a cut topic, and the formula clip stops before
+  the narrator says 28 so learners predict it themselves. Times are in `week3.py`.
+- **Files learners make:** `Documents/Resource pack/` with Computer help handout (.docx and .pdf), Supply list (.xlsx)
+  and Flyer (.pptx). The supply list is typed (Paper 12, Folders 8, Pens 5, matching the video), not downloaded, so there
+  is no Protected View or CSV save trap. The practice photo downloads from the worksheet (`download` attribute).
+- **Click paths** were checked against Microsoft support pages for Microsoft 365 on Windows 10 (signed out, AutoSave
+  off): Blank Presentation is capitalised; Heading 1 turns dark blue; Save As › Browse opens the classic dialog;
+  the Designer panel can open after a picture insert; Crop is a split button. Not checked on a real lab PC.
+- **Tests:** `tests/content/dl2-week3-guided.spec.js` (goals match items 9–12, every step slide names its program and
+  has 1–2 actions plus You should see, worksheet steps match the deck one for one, no cut topics, 120-minute plan).
+  Week 3 left the curriculum.json-based `dl2-weeks-tsdr.spec.js`; `dl2-mission-weeks` and `dl2-opening-media` know its
+  71 slides and clips.
+- **Not changed:** the pre/post tests (still aligned: items 9–12), the video file, the practice library, and the
+  catalog/course-home summary ("a handout, a small workbook, and a short presentation"; the presentation is now a
+  one-slide flyer). The syllabus outcome line for Week 3 was updated to match.
+
 ## Mission Control (Sep 2026)
 
 All six main presentations now use the Mission Control deck engine. Week 1 now opens with the pre-test and video; its teaching units are preserved. Weeks 2–6 each have four Tell/Show/Do/Review missions, a protected eight-minute break, and a 120-minute plan. The older detailed interactive simulations remain available in each week's `practice.html` library; they do not change main lesson progress. Existing video/transcript pages and media are unchanged.

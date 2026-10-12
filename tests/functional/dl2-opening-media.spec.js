@@ -18,7 +18,8 @@ async function dismissPreviewDrawer(page){
  if(!await dismiss.isVisible()){await minimize.waitFor({state:'visible',timeout:10000});await minimize.click();}
  await dismiss.click();
 }
-for(let week=1;week<=6;week++)test(`Week ${week}: opening, approved playback/captions, controls and return`,async({page,context})=>{
+// Week 3 has no whole-video opening since 2026-10-12: each part plays only its own clip (tested below).
+for(const week of [1,2,4,5,6])test(`Week ${week}: opening, approved playback/captions, controls and return`,async({page,context})=>{
  const failures=[];page.on('pageerror',e=>failures.push(e.message));
  await page.goto(route(week)+'#1');
  if(week===1){
@@ -79,7 +80,7 @@ for(const width of [1366,1920])test(`All six opening slides fit ${width} at defa
 });
 test('Phone openings retain visible player, large controls, links and no horizontal overflow',async({page})=>{
  await page.setViewportSize({width:390,height:844});
- for(let n=1;n<=6;n++){
+ for(const n of [1,2,4,5,6]){
   await page.goto(route(n)+'#1');await page.evaluate(()=>document.documentElement.dataset.textSize='xxl');
   if(n===1){await expect(page.getByRole('link',{name:/Open the pre-test/})).toBeVisible();await page.getByRole('button',{name:'Next: watch the video'}).click();}
   await expect(page.locator('.slide.is-active video')).toBeVisible();
@@ -109,9 +110,37 @@ test('Old session/hash and course-home saved positions migrate once without chan
   await page.reload();expect(await page.evaluate(()=>DL2Deck.index())).toBe(0);
  }
  // Explicit links use the current numbering; invalid/stale bounds are clamped.
- await page.goto(route(3)+'#999');await expect(page.locator('.strip .count')).toHaveText('24 / 24');
- await page.goto(route(3)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 24');
+ await page.goto(route(4)+'#999');await expect(page.locator('.strip .count')).toHaveText('24 / 24');
+ await page.goto(route(4)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 24');
+ await page.goto(route(3)+'#999');await expect(page.locator('.strip .count')).toHaveText('71 / 71');
 });
 test('Opening pre-test and video pass automated accessibility checks',async({page})=>{
  for(const hash of ['#1','#2']){await page.goto(route(1)+hash);const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(scan.violations).toEqual([]);}
+});
+test('Week 3 plays only its matching clips: approved media, captions, no autoplay, stops on its own, pauses on leaving',async({page})=>{
+ const failures=[];page.on('pageerror',e=>failures.push(e.message));
+ const item=manifest.videos[2],chapters=require('../../courses/digital-literacy-2/media/week-03-chapters.json').map(c=>c.startSeconds);
+ // Chapters 2, 5, 7 and 9 hold the clips; 3 (shortcuts, tracked changes), 6 (chart) and 8 (video editing) are cut topics.
+ const allowed=[[chapters[1],chapters[2]],[chapters[3],chapters[5]],[chapters[6],chapters[7]],[chapters[8],chapters[9]]];
+ await page.goto(route(3)+'#1');
+ expect(await page.locator('.slide').first().getAttribute('data-opening')).toBeNull();
+ const clips=await page.locator('.slide video').all();expect(clips.length).toBe(5);
+ for(const video of clips){
+  const src=await video.locator('source').getAttribute('src');
+  const m=/^(.*)#t=([\d.]+),([\d.]+)$/.exec(src);expect(m,src).not.toBeNull();
+  expect(m[1]).toBe(`/${item.path}?v=${item.sha256.slice(0,12)}`);
+  const [start,end]=[Number(m[2]),Number(m[3])];expect(end).toBeGreaterThan(start);
+  expect(allowed.some(([a,b])=>start>=a-1&&end<=b+.5),`${start}-${end} stays inside a taught chapter`).toBe(true);
+  await expect(video.locator('track')).toHaveAttribute('src',`/${item.captions}?v=${version(item.captions)}`);
+  expect(await video.getAttribute('autoplay')).toBeNull();
+ }
+ const first=await page.evaluate(()=>[...document.querySelectorAll('.slide')].findIndex(s=>s.querySelector('video')));
+ await page.evaluate(i=>DL2Deck.go(i,'forward'),first);
+ const video=page.locator('.slide.is-active video');
+ await expect.poll(()=>video.evaluate(v=>v.readyState)).toBeGreaterThanOrEqual(1);
+ await video.evaluate(v=>{v.muted=true;return v.play();});
+ await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(43);
+ await page.evaluate(()=>DL2Deck.next());
+ expect(await video.evaluate(v=>v.paused)).toBe(true);
+ expect(failures).toEqual([]);
 });
