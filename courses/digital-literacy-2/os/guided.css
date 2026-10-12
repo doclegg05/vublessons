@@ -123,3 +123,9 @@
 /* The part opener's title is the anchor for the whole part: make it the biggest words on the slide. */
 .mission-series.guided-deck .deck .slide.g-orient h1 { font-size:calc(3.7cqw * var(--ts-h))!important; }
 @media(max-width:800px) { .mission-series.guided-deck .deck .slide.g-orient h1 { font-size:calc(30px * var(--ts))!important; } }
+/* Numbered points keep their sentence together even with bold words or exact text inside. */
+.guided-deck .mission-principles .g-pt { min-width:0; }
+.guided-deck .mission-principles .g-pt span { display:inline; width:auto; height:auto; border:0; place-items:normal; }
+.guided-deck .mission-principles .g-pt .typed { padding:0 .22em; }
+/* Check questions grow half as fast as body text, leaving room for the explanation at the largest size. */
+.mission-series.guided-deck .deck .slide[data-stage=review] h1 { font-size:calc(2.3cqw * var(--ts-h))!important; }

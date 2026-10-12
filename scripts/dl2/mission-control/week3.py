@@ -97,6 +97,7 @@ def save_steps(app, first_time=False):
     """File > Save As > Browse into Documents > Resource pack, the same three moves in every app."""
     name = FILES[app]
     kind = {'word': 'Word document', 'excel': 'Excel workbook', 'powerpoint': 'PowerPoint presentation'}[app]
+    stype = {'word': 'Word Document (*.docx)', 'excel': 'Excel Workbook (*.xlsx)', 'powerpoint': 'PowerPoint Presentation (*.pptx)'}[app]
     out = [step('Save: open the Save As box', ['Click [File] at the top left.', 'Click [Save As], then click [Browse].'],
                 'a box titled [Save As].', ('file_menu', dict(app=app, step='both')),
                 stuck=('Not sure you clicked File?', 'File is the first word in the row of tabs, above the buttons. Everything turns into a menu when you click it.'),
@@ -104,22 +105,20 @@ def save_steps(app, first_time=False):
     if first_time:
         out += [
             step('Make your Resource pack folder', ['On the left side of the box, click [Documents].', 'Click [New folder] near the top. Type «Resource pack» and press {Enter}.'],
-                 'a new folder named [Resource pack].', ('save_as_dialog', dict(location=['This PC', 'Documents'], items=[('Resource pack', 'folder')], targets=['documents', 'newfolder'])),
+                 'a new folder named [Resource pack].', ('save_as_dialog', dict(location=['This PC', 'Documents'], items=[('Resource pack', 'folder')], savetype=stype, app=app, targets=['documents', 'newfolder'])),
                  stuck=('The new folder is called New folder?', 'Right-click it, choose [Rename], type «Resource pack» and press {Enter}.'),
                  notes='Every file tonight goes in this folder. If someone already has a Resource pack folder from an earlier class, they open that one instead.'),
             step('Open the folder', ['Double-click [Resource pack].'],
-                 'the top of the box ends in [Resource pack]. The folder is empty.', ('save_as_dialog', dict(location=['This PC', 'Documents', 'Resource pack'], items=[], targets=[])),
+                 'the top of the box ends in [Resource pack]. The folder is empty.', ('save_as_dialog', dict(location=['This PC', 'Documents', 'Resource pack'], items=[], savetype=stype, app=app, targets=[])),
                  notes='Double-click means two quick clicks. If it does not open, try again a little faster.'),
         ]
     else:
         out += [step('Open your Resource pack folder', ['On the left side of the box, click [Documents].', 'Double-click [Resource pack].'],
-                     'the top of the box ends in [Resource pack].', ('save_as_dialog', dict(location=['This PC', 'Documents'], items=[('Resource pack', 'folder')], targets=['documents', 'folder:Resource pack'])),
+                     'the top of the box ends in [Resource pack].', ('save_as_dialog', dict(location=['This PC', 'Documents'], items=[('Resource pack', 'folder')], savetype=stype, app=app, targets=['documents', 'folder:Resource pack'])),
                      stuck=('The folder looks empty?', f'That is normal. This box only shows {kind}s, and you have not saved one here yet.'),
                      notes='This is the folder from Part 1.')]
     out += [step('Name it and save', ['Click in the [File name] box. Press {Ctrl} and {A} together to highlight the old name.', f'Type «{name}». Click [Save].'],
-                 f'«{name}» at the very top of the window.', ('save_as_dialog', dict(location=['This PC', 'Documents', 'Resource pack'], items=[], filename=name,
-                                                                                    savetype={'word': 'Word Document (*.docx)', 'excel': 'Excel Workbook (*.xlsx)', 'powerpoint': 'PowerPoint Presentation (*.pptx)'}[app],
-                                                                                    targets=['filename', 'save'])),
+                 f'«{name}» at the very top of the window.', ('save_as_dialog', dict(location=['This PC', 'Documents', 'Resource pack'], items=[], filename=name, savetype=stype, app=app, targets=['filename', 'save'])),
                  stuck=('Typed the name next to the old one?', 'Click in the box again, press {Ctrl} and {A}, and type the name again.'),
                  notes=f'Check a few screens: the window title should read {name}.')]
     return out
@@ -210,7 +209,7 @@ PARTS = [
                  stuck=('The list closed before you clicked PDF?', 'Click the [Save as type] box again. The list opens again.'),
                  notes='The list is long. PDF is about halfway down.'),
             step('Save the PDF', ['Check that [Open file after publishing] has a check mark. If not, click its box.', 'Click [Save].'],
-                 'your handout opens as a PDF in Microsoft Edge.', ('save_as_dialog', dict(location=['This PC', 'Documents', 'Resource pack'], items=[('Computer help handout', 'pdf')], filename='Computer help handout', savetype='PDF (*.pdf)', open_after=True, targets=['openafter', 'save'])),
+                 'your handout opens as a PDF in Microsoft Edge.', ('save_as_dialog', dict(location=['This PC', 'Documents', 'Resource pack'], items=[], filename='Computer help handout', savetype='PDF (*.pdf)', open_after=True, app='word', targets=['openafter', 'save'])),
                  stuck=('Nothing opened?', 'The PDF is still saved. You will see it in Resource pack at the end of class.'),
                  notes='The PDF keeps the same name as the Word document. The two are different files.'),
             step('Check your PDF', ['Look at the PDF. Find the three blue headings and the numbers 1, 2 and 3.'],
@@ -221,8 +220,8 @@ PARTS = [
         stuck=[('The Save As box is not in Resource pack?', 'Click [Documents] on the left, then double-click [Resource pack].'),
                ('Cannot find PDF in the list?', 'Click the [Save as type] box. PDF is about halfway down the list.')],
         check=dict(question='You email your handout as a PDF. What will your neighbor see?',
-                   choices=['A blank page unless they have Word', 'The same headings and layout you made', 'Only plain text, with no headings'], answer=1,
-                   why='A PDF keeps the finished layout. It looks the same on any computer or printer, even without Word.'),
+                   choices=['A blank page without Word', 'Your same headings and layout', 'Plain text, no headings'], answer=1,
+                   why='A PDF keeps your layout on any computer, even one without Word.'),
     ),
     dict(
         app='excel', title='Add costs with a total that updates', goal=2,
@@ -267,7 +266,7 @@ PARTS = [
                ('Typed in the wrong cell?', 'Click that cell and press {Delete}, then type in the right cell.')],
         check=dict(question='B5 has =SUM(B2:B4) and shows 28. You change Pens from 5 to 7. What will B5 show?',
                    choices=['28, because the total stays the same', '30', '35'], answer=1,
-                   why='The formula adds the cells again: 15 + 8 + 7 = 30. You never retype the total.'),
+                   why='The formula adds the cells again: 15 + 8 + 7 = 30.'),
     ),
     dict(
         app='powerpoint', title='Use a photo the right way', goal=3,
@@ -320,9 +319,9 @@ PARTS = [
         stuck=[('A [Designer] panel opened on the right?', 'Click the [X] at the top of that panel to close it.'),
                ('No Picture Format tab?', 'Click once on the photo. The tab appears only while the photo is selected.'),
                ('No practice-photo in Downloads?', 'In Edge, click [Download the practice photo] again.')],
-        check=dict(question=f'Why did we type “{CREDIT}” on the flyer?',
-                   choices=['To fill empty space on the slide', 'PowerPoint needs a caption under every title', 'The photo\'s permission asks us to give credit'], answer=2,
-                   why='Permission to use the photo came with a condition: give credit. Cropping is allowed; the credit is required.'),
+        check=dict(question='Why does the flyer have a photo credit line?',
+                   choices=['To fill empty space', 'PowerPoint needs a caption', 'The photo\'s permission asks for it'], answer=2,
+                   why='The photo\'s permission says: use it if you give credit.'),
     ),
 ]
 # Order inside a part: any Edge step that must come first (the photo download), then open the

@@ -4,6 +4,7 @@ Content lives in week3.py. Drawings come from ui.py. Called from build.py for we
 has guided=True; build.py still writes that week's practice library.
 """
 import html
+import inspect
 import re
 
 import ui
@@ -43,7 +44,8 @@ def drawing(spec):
     fn = getattr(ui, name, None)
     if fn is None:
         return f'<div class="ui ui-missing" role="img" aria-label="Drawing not available">{e(name)}</div>'
-    return fn(**kwargs)
+    accepted = inspect.signature(fn).parameters
+    return fn(**{k: v for k, v in kwargs.items() if k in accepted})
 
 
 def app_tag(w, key, prefix='Working in:'):
@@ -96,8 +98,8 @@ def build_week(n, w, target, letterhead):
         f'<li>{ui.app_badge(g["app"], "sm")}<span><b>Part {k + 1} · {e(w["apps"][g["app"]].replace("Microsoft ", ""))}:</b> {md(g["short"])}.</span></li>' for k, g in enumerate(w['goals'])) + '</ol>'
     add("Tonight's goals", f'<p class="g-lead">By the end of tonight, you can:</p>{goals}<p class="g-foot">These four skills are on your post-test.</p>', 'intro',
         notes='Read each goal aloud. Each part of tonight teaches one goal, in one program. Learners check the goals off on their worksheet at the end of class.')
-    add('How tonight works.', '<ol class="mission-principles"><li><span>1</span>Watch the step on the big screen.</li><li><span>2</span>Do the same step on your computer.</li>'
-        '<li><span>3</span>Check <b>You should see</b>. Not the same? Raise your hand.</li></ol>'
+    add('How tonight works.', '<ol class="mission-principles"><li><span>1</span><div class="g-pt">Watch the step on the big screen.</div></li><li><span>2</span><div class="g-pt">Do the same step on your computer.</div></li>'
+        '<li><span>3</span><div class="g-pt">Check <b>You should see</b>. Not the same? Raise your hand.</div></li></ol>'
         f'<p class="g-foot">The colored box at the top of every slide names the program you are in, like {app_tag(w, "word")}.</p>', 'intro',
         notes='Each part starts with a slide that names the program. Wait for every screen to match before you move on.')
     schedule.append((0, 8, 'Welcome, goals and plan', f'{first}–{len(slides)}'))
@@ -125,7 +127,7 @@ def build_week(n, w, target, letterhead):
             f'<p class="g-goal"><span class="g-label">Goal {p["goal"] + 1}:</span> {md(goal["short"])}</p></div></div>',
             'present', 'tell', f'Part {part_n} of 4. Say the program name out loud. {"We stay in Word for this part." if p.get("still") else "Everyone will open it in a moment."}', app, 'orient', f'Part {part_n} of 4', 'Working in:')
         t = p['tell']
-        add(t['title'], '<ol class="mission-principles">' + ''.join(f'<li><span>{i + 1}</span>{md(x)}</li>' for i, x in enumerate(t['points'])) + '</ol>', 'present', 'tell', t['notes'], app, 'tell', f'Part {part_n} · Why it matters')
+        add(t['title'], '<ol class="mission-principles">' + ''.join(f'<li><span>{i + 1}</span><div class="g-pt">{md(x)}</div></li>' for i, x in enumerate(t['points'])) + '</ol>', 'present', 'tell', t['notes'], app, 'tell', f'Part {part_n} · Why it matters')
         for clip in p['watch']:
             add(clip['title'], video(clip), 'present', 'show', clip['notes'] + ' Press Play; it never starts by itself. Captions are on.', app, 'watch', f'Part {part_n} · Watch')
         steps = [s for s in p['steps'] if s['kind'] == 'step']

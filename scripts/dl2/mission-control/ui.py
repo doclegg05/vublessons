@@ -13,8 +13,8 @@ the 16:9 .deck, so a drawing scales with the projector. Rules the markup keeps:
 - A thing to click is ringed (.u-t, a gold ring with dark edges) AND carries a numbered
   badge (.u-bd), so the meaning never rests on colour alone. Its label uses .u-big
   (at least 1.6cqw, bold). No text anywhere is smaller than 1.15cqw.
-- Long rows (ribbon tabs, ribbon groups) are cropped so every target stays visible; the
-  cropped side fades out, like a zoomed-in view of a wider window.
+- Ribbon tab rows and ribbon bands always fit the column: targets always show, and other
+  tabs / groups / buttons are left out (least useful first) when space is short.
 """
 import re
 from html import escape
@@ -74,7 +74,7 @@ def _get(marks, key, default='tr'):
 
 
 def _bd(n, pos='tr'):
-    return f'<span class="u-bd p-{pos}">{n}</span>' if n else ''
+    return f'<span class="u-bd u-p-{pos}">{n}</span>' if n else ''
 
 
 def _t(n):
@@ -123,36 +123,44 @@ def _dd():
 
 # ---------------------------------------------------------------- ribbon pieces
 
-def _tabrow(app, active, marks, extra=(), budget=35.0):
-    """Tab row in real order, cropped (with a fade) so active + target tabs fit."""
+def _tabrow(app, active, marks, extra=(), budget=38.5):
+    """Tab row in real order that always fits the column.
+
+    Active and targeted tabs always show. When space is short, other tabs are left out:
+    Draw and Help first, then the tabs farthest from a shown target (longest first), and
+    File/Home last. Tab badges sit above each tab, offset right, so neighbours never collide.
+    """
     tabs = TABS[app] + list(extra)
+    idx = {t: i for i, t in enumerate(tabs)}
 
     def wid(t):
-        n, pos = _get(marks, t)
+        n, pos = _get(marks, t, 'ta')
         if n:
-            return _tw(t, 1.6, True) + 1.6 + (3.4 if pos in ('r', 'l') else 0)
-        return _tw(t, 1.2, t == active) + 1.4
+            return _tw(t, 1.6, True) + 1.1 + 1.2 + .2 + (3.4 if pos in ('r', 'l') else 0)
+        return _tw(t, 1.15, t == active) + .9 + .2
 
-    must = [i for i, t in enumerate(tabs) if t == active or t in marks] or [0]
-    lo, hi = min(must), max(must)
-    tot = sum(wid(tabs[i]) for i in range(lo, hi + 1))
-    if hi + 1 < len(tabs) and tot + wid(tabs[hi + 1]) <= budget:
-        hi += 1
-        tot += wid(tabs[hi])
-    while lo > 0 and tot + wid(tabs[lo - 1]) <= budget:
-        lo -= 1
-        tot += wid(tabs[lo])
-    out = []
-    if lo > 0:
-        cut = tabs[lo - 1]
-        out.append(f'<span class="u-tab u-cut" style="margin-left:-{wid(cut) * .6:.1f}cqw">'
-                   f'{_e(cut)}</span>')
-    for t in tabs[lo:]:
-        n, pos = _get(marks, t)
-        cls = ('u-tab' + (' on' if t == active else '') + (' u-ctx' if t in extra else '') + _t(n))
+    must = [t for t in tabs if t == active or t in marks]
+    mi = [idx[t] for t in must] or [0]
+    keep = list(tabs)
+
+    def score(t):
+        if t in ('Draw', 'Help'):
+            return (0, 0, 0)
+        if t in ('File', 'Home'):
+            return (2, 0, 0)
+        return (1, -min(abs(idx[t] - m) for m in mi), -len(t))
+
+    for t in sorted((t for t in tabs if t not in must), key=score):
+        if sum(wid(k) for k in keep) <= budget:
+            break
+        keep.remove(t)
+    out, lane = [], ''
+    for t in keep:
+        n, pos = _get(marks, t, 'ta')
+        lane = ' u-tabs-mk' if n and pos == 'ta' else lane
+        cls = ('u-tab' + (' u-on' if t == active else '') + (' u-ctx' if t in extra else '') + _t(n))
         out.append(f'<span class="{cls}">{_lab(t, n)}{_bd(n, pos)}</span>')
-    fade = (' cl' if lo > 0 else '') + (' cr' if sum(wid(t) for t in tabs[lo:]) > budget else '')
-    return f'<div class="u-tabs{fade}">{"".join(out)}</div>'
+    return f'<div class="u-tabs{lane}">{"".join(out)}</div>'
 
 
 _GLYPHS = (('picture', 'pic'), ('album', 'pic'), ('crop', 'crop'), ('table', 'tbl'),
@@ -182,38 +190,43 @@ def _small(label, marks):
     text = _txt(label)
     box = ''
     if label[:4] in ('[x] ', '[ ] '):
-        box = f'<span class="u-cb{" on" if label[1] == "x" else ""}"></span>'
+        box = f'<span class="u-cb{" u-on" if label[1] == "x" else ""}"></span>'
     n, pos = _get(marks, text, 'r')
     cls = 'u-chk' + ('' if box else ' u-fld') + _t(n)
     return f'<span class="{cls}">{box}<span>{_lab(text, n)}</span>{_bd(n, pos)}</span>'
 
 
 def _bigbtn(label, marks, pressed=(), menus=None):
-    n, pos = _get(marks, label)
-    down = ' down' if label in pressed else ''
+    n, pos = _get(marks, label, 'tr2')
+    down = ' u-down' if label in pressed else ''
     menu = (menus or {}).get(label, '')
     return (f'<span class="u-btn{down}{_t(n)}">{_glyph(label)}<span class="u-bl">{_lab(label, n)}'
             f'</span>{_bd(n, pos)}{menu}</span>')
 
 
 def _iw(label, marks):
+    """Estimated width (cqw) of one ribbon item, including a target's ring margin."""
     text = _txt(label)
-    n, pos = _get(marks, text, 'r' if _is_small(label) else 'tr')
-    w = _tw(text, 1.6, True) if n else _tw(text, 1.2)
+    n, pos = _get(marks, text, 'r' if _is_small(label) else 'tr2')
+    w = _tw(text, 1.6, True) if n else _tw(text, 1.2 if _is_small(label) else 1.15)
     if _is_small(label):
-        return w + 2.6 + (3.4 if n and pos == 'r' else 0)
-    return max(3.4, w) + 1.2
+        return w + 2.6 + (1.2 if n else 0) + (3.4 if n and pos == 'r' else 0)
+    return max(2.6, w) + .9 + (1.2 if n else 0)
 
 
 def _gw(name, items, marks):
-    w, stack = 0.0, 0.0
+    w, stack, count = 0.0, 0.0, 0
     for it in items:
         if _is_small(it):
             stack = max(stack, _iw(it, marks))
-        else:
-            w += stack + _iw(it, marks)
-            stack = 0.0
-    return max(w + stack, _tw(name, 1.15) + 1) + 1.6
+            continue
+        if stack:
+            w, stack, count = w + stack, 0.0, count + 1
+        w, count = w + _iw(it, marks), count + 1
+    if stack:
+        w, count = w + stack, count + 1
+    w += .45 * max(0, count - 1)
+    return max(w, _tw(name, 1.15) + .4) + 1.6
 
 
 def _group(name, items, marks, pressed=(), menus=None, raw=None):
@@ -234,15 +247,37 @@ def _group(name, items, marks, pressed=(), menus=None, raw=None):
 
 
 def _band(groups, marks, pressed=(), menus=None, budget=38.5):
-    """Ribbon band; groups before the first target are dropped if the targets would not fit."""
-    ws = [_gw(g, its, marks) for g, its in groups]
-    hit = [i for i, (g, its) in enumerate(groups) if any(_txt(it) in marks for it in its)]
-    lo, hi = 0, (max(hit) if hit else 0)
-    while hit and lo < min(hit) and sum(ws[lo:hi + 1]) > budget:
-        lo += 1
-    html = ''.join(_group(g, its, marks, pressed, menus) for g, its in groups[lo:])
-    fade = (' cl' if lo else '') + (' cr' if sum(ws[lo:]) > budget else '')
-    return f'<div class="u-rb{fade}">{html}</div>'
+    """Ribbon band that always fits the column. Groups holding a target always show.
+    When space is short: groups without a target go first (farthest from a target first),
+    then buttons without a target inside target groups (farthest, then longest, first)."""
+    names = [g for g, _ in groups]
+    keep = [list(its) for _, its in groups]
+    hit = [i for i, its in enumerate(keep) if any(_txt(it) in marks for it in its)]
+    alive = [True] * len(groups)
+
+    def total():
+        return sum(_gw(names[i], keep[i], marks) for i in range(len(groups)) if alive[i])
+
+    def dist(i):
+        return min(abs(i - j) for j in hit) if hit else len(groups) - i
+
+    for i in sorted((i for i in range(len(groups)) if i not in hit), key=lambda i: (-dist(i), i)):
+        if total() <= budget:
+            break
+        alive[i] = False
+    if total() > budget:
+        cands = []
+        for i in hit:
+            ti = [k for k, it in enumerate(keep[i]) if _txt(it) in marks]
+            cands += [(-min(abs(k - t) for t in ti), -len(_txt(it)), i, it)
+                      for k, it in enumerate(keep[i]) if _txt(it) not in marks]
+        for _, _, i, it in sorted(cands):
+            if total() <= budget:
+                break
+            keep[i].remove(it)
+    html = ''.join(_group(names[i], keep[i], marks, pressed, menus)
+                   for i in range(len(groups)) if alive[i])
+    return f'<div class="u-rb">{html}</div>'
 
 
 def _doc_stub(app):
@@ -309,7 +344,7 @@ def start_search(app='word'):
            f'{_bd(2, "r")}</span></span><span class="u-tbi"></span><span class="u-tbi"></span></div>')
     label = (f'Drawing: Windows search. The Start button is marked 1, the typed word {name} is marked 2, '
              f'and the {name} app result under Best match is marked 3.')
-    return _root('start-search', label, _win('os', f'<div class="u-sp">{left}{right}</div>{bar}'))
+    return _root('start-search', label, _win('win10', f'<div class="u-sp">{left}{right}</div>{bar}'))
 
 
 # ---------------------------------------------------------------- 2. Office start screen
@@ -317,7 +352,7 @@ def start_search(app='word'):
 def office_start(app='word'):
     a = APPS[app]
     side = (f'<div class="u-os-side"><span class="u-os-nm">{_e(a["name"])}</span>'
-            + ''.join(f'<span class="u-os-i{" on" if i == 0 else ""}"><span class="u-os-g u-os-g{i}"></span>'
+            + ''.join(f'<span class="u-os-i{" u-on" if i == 0 else ""}"><span class="u-os-g u-os-g{i}"></span>'
                       f'{_e(t)}</span>' for i, t in enumerate(('Home', 'New', 'Open'))) + '</div>')
     th = f'<span class="u-th u-th-{app}"><span class="u-thi"></span></span>'
     tiles = (f'<span class="u-tile u-t">{th}<span class="u-tl"><span class="u-big">{_e(a["blank"])}</span>'
@@ -346,14 +381,14 @@ def word_styles(highlight='Heading 1'):
             '<div class="u-gn u-gnc">Styles</div></div>')
     label = ('Drawing: Word, Home tab, Styles gallery, zoomed in. It shows the styles Normal, No Spacing, '
              f'Heading 1, Heading 2 and Title. The {highlight} style is marked 1.')
-    return _root('word-styles', label, _win('mag', _cap('word', 'Home tab \u203a Styles') + body, 'word'))
+    return _root('word-styles', label, _win('zoom', _cap('word', 'Home tab \u203a Styles') + body, 'word'))
 
 
 # ---------------------------------------------------------------- 5. Word numbering
 
 def word_numbering():
     def ico(kind, marks):
-        rows = ''.join(f'<span class="lv{i if kind == "mul" else 0}">{m}<span class="u-ln2"></span></span>'
+        rows = ''.join(f'<span class="u-lv{i if kind == "mul" else 0}">{m}<span class="u-ln2"></span></span>'
                        for i, m in enumerate(marks))
         return f'<span class="u-ico u-ico-{kind}">{rows}</span>'
     dot = '<span class="u-dot"></span>'
@@ -373,7 +408,7 @@ def word_numbering():
              'Multilevel List buttons and the alignment buttons. The Numbering button is marked 1, '
              'and its tooltip reads Numbering.')
     inner = _cap('word', 'Home tab \u203a Paragraph') + f'<div class="u-mb u-nb">{group}{tip}</div>'
-    return _root('word-numbering', label, _win('mag', inner, 'word'))
+    return _root('word-numbering', label, _win('zoom', inner, 'word'))
 
 
 # ---------------------------------------------------------------- 6. Word page
@@ -386,7 +421,7 @@ def _page_lines(lines, selected, numbered, cursor=True):
         if style == 'step':
             k += 1
             num = f'<span class="u-num">{k}.</span>' if numbered else ''
-            cls = 'u-ln u-step' + (' sel' if selected else '') + (' numd' if numbered else '')
+            cls = 'u-ln u-step' + (' u-hl' if selected else '') + (' u-numd' if numbered else '')
             rows.append(f'<div class="{cls}">{num}<span class="u-lt">{_e(text)}{cur}</span></div>')
         else:
             rows.append(f'<div class="u-ln u-{style}"><span class="u-lt">{_e(text)}{cur}</span></div>')
@@ -408,8 +443,9 @@ def _page_height(lines, width, scale=1.0):
 
 def word_page(lines, selected=False, numbered=False):
     """lines: [(text, 'h1'|'h2'|'body'|'step')]. numbered prefixes steps 1. 2. 3."""
-    tight = _page_height(lines, 24.0) > 15.5
-    show_tabs = _page_height(lines, 24.0, .82 if tight else 1) <= (15.5 if tight else 13.2)
+    est = _page_height(lines, 26.0)
+    tight = est > 16.0
+    show_tabs = (_page_height(lines, 26.0, .82) if tight else est) <= 16.0
     page = (f'<div class="u-doc u-doc-page"><div class="u-page{" u-tight" if tight else ""}">'
             f'{_page_lines(lines, selected, numbered)}</div></div>')
     inner = _title('Document1 - Word') + (_tabrow('word', 'Home', {}) if show_tabs else '') + page
@@ -420,7 +456,8 @@ def word_page(lines, selected=False, numbered=False):
         label += f' Headings: {_join(heads)}.'
     if steps:
         label += (f' The steps are {"a numbered list" if numbered else "plain lines"}'
-                  f'{", and they are selected (highlighted)" if selected else ""}: {_join(steps)}')
+                  f'{", and they are selected (highlighted)" if selected else ""}: '
+                  f'{_join([s.rstrip(".") for s in steps])}')
         label += '' if label.endswith('.') else '.'
     return _root('word-page', label, _win('app', inner, 'word'))
 
@@ -434,7 +471,7 @@ def word_navpane():
               ('Zoom', ['Zoom', '100%'])]
     top = _title('Document1 - Word') + _tabrow('word', 'View', marks) + _band(groups, marks)
     nav = ('<div class="u-nav"><div class="u-navh">Navigation<span class="u-x u-xs"></span></div>'
-           '<div class="u-navt"><span class="on">Headings</span><span>Pages</span><span>Results</span></div>'
+           '<div class="u-navt"><span class="u-on">Headings</span><span>Pages</span><span>Results</span></div>'
            '<div class="u-navl"><span class="u-n1 on">Computer help at the library</span>'
            '<span class="u-n2">Who it helps</span><span class="u-n2">Steps</span></div></div>')
     page = ('<div class="u-doc u-doc-nav"><div class="u-page u-pgmini"><span class="u-bar1"></span>'
@@ -460,7 +497,7 @@ def file_menu(app='word', step=1):
             items.append('<span class="u-bsep"></span>')
             continue
         n = sa_n if it == 'Save As' else 0
-        on = ' on' if it == 'Save As' and chosen else ''
+        on = ' u-on' if it == 'Save As' and chosen else ''
         items.append(f'<span class="u-bi{on}{_t(n)}">{_lab(it, n)}{_bd(n, "ir")}</span>')
     side = f'<div class="u-bs"><span class="u-back"><span></span></span>{"".join(items)}</div>'
     if chosen:
@@ -495,7 +532,11 @@ _KIND = {'folder': 'File folder', 'word': 'Word Document', 'excel': 'Excel Works
          'powerpoint': 'PowerPoint Presentation', 'pdf': 'PDF Document', 'image': 'JPG File'}
 
 
-def _ficon(kind):
+def _ficon(kind, big=False):
+    if big and kind in ('word', 'excel', 'powerpoint'):
+        return app_badge(kind)
+    if big and kind == 'pdf':
+        return '<span class="u-pdfb" aria-hidden="true">PDF</span>'
     return f'<span class="u-fi u-fi-{kind if kind in _KIND else "file"}"></span>'
 
 
@@ -505,7 +546,7 @@ def _navpane(names, current, marks):
         key = nm.lower().replace(' ', '')
         n, pos = _get(marks, key, 'r')
         g = {'quickaccess': 'star', 'thispc': 'pc'}.get(key, 'folder')
-        on = ' on' if nm == current else ''
+        on = ' u-on' if nm == current else ''
         rows += f'<span class="u-nr{on}{_t(n)}"><span class="u-ni u-ni-{g}"></span>{_lab(nm, n)}{_bd(n, pos)}</span>'
     return f'<div class="u-np">{rows}</div>'
 
@@ -524,7 +565,7 @@ def _toolbar(marks):
 
 
 def save_as_dialog(location, items, filename='', savetype='Word Document (*.docx)', targets=(),
-                   open_after=None):
+                   open_after=None, app='word'):
     """Windows 10 Save As dialog.
 
     location: breadcrumb list, e.g. ['This PC', 'Documents'].
@@ -532,13 +573,15 @@ def save_as_dialog(location, items, filename='', savetype='Word Document (*.docx
     targets: ordered keys from documents, newfolder, folder:<name>, filename, savetype,
              openafter, save.
     open_after: None hides the PDF checkbox; True/False shows it checked/unchecked.
+    app: 'word' | 'excel' | 'powerpoint' sets the title-bar letter badge (W, X, P).
     """
     marks = _marks(targets)
     current = location[-1] if location and location[-1] in _NAV else None
+    nav = _NAV[:-1] if 'documents' in marks or 'openafter' in marks else _NAV  # room for the ring
     rows = ''
     for nm, kind in items:
         n, pos = _get(marks, f'folder:{nm}', 'r')
-        rows += (f'<div class="u-fr"><span class="u-fn{_t(n)}">{_ficon(kind)}{_lab(nm, n)}{_bd(n, pos)}</span>'
+        rows += (f'<div class="u-fr"><span class="u-fn{_t(n)}">{_ficon(kind)}<span class="u-fnt">{_lab(nm, n)}</span>{_bd(n, pos)}</span>'
                  f'<span class="u-ft">{_e(_KIND.get(kind, "File"))}</span></div>')
     if not items:
         rows = '<div class="u-empty">No items match your search.</div>'
@@ -554,13 +597,13 @@ def save_as_dialog(location, items, filename='', savetype='Word Document (*.docx
     if open_after is None:
         left = '<span class="u-hide"><span class="u-up"></span>Hide Folders</span>'
     else:
-        left = (f'<span class="u-chk u-oa{_t(oa_n)}"><span class="u-cb{" on" if open_after else ""}"></span>'
+        left = (f'<span class="u-chk u-oa{_t(oa_n)}"><span class="u-cb{" u-on" if open_after else ""}"></span>'
                 f'<span>{_lab("Open file after publishing", oa_n)}</span>{_bd(oa_n, "r")}</span>')
     btns = (f'<div class="u-brow">{left}<span class="u-btns"><span class="u-pbtn u-def{_t(sv_n)}">'
             f'{_lab("Save", sv_n)}{_bd(sv_n, "l")}</span><span class="u-pbtn">Cancel</span></span></div>')
     tall = ' u-short' if oa_n else ''
-    inner = (_title('Save As', app_badge('word')) + _addr(location) + _toolbar(marks)
-             + f'<div class="u-db{tall}">{_navpane(_NAV, current, marks)}{lst}</div>'
+    inner = (_title('Save As', app_badge(app if app in APPS else 'word')) + _addr(location) + _toolbar(marks)
+             + f'<div class="u-db{tall}">{_navpane(nav, current, marks)}{lst}</div>'
              + f'<div class="u-dbot">{fields}{btns}</div>')
     names = {'documents': 'Documents in the left pane', 'newfolder': 'the New folder button',
              'filename': 'the File name box', 'savetype': 'the Save as type list',
@@ -649,9 +692,9 @@ def excel_grid(cells, active=None, formula=None, targets=()):
     cols = 'ABCD'
     acol, arow = (active[0], active[1:]) if active else ('', '')
     grid = ['<span class="u-xc u-xh u-xcorner"></span>']
-    grid += [f'<span class="u-xc u-xh{" on" if c == acol else ""}">{c}</span>' for c in cols]
+    grid += [f'<span class="u-xc u-xh{" u-on" if c == acol else ""}">{c}</span>' for c in cols]
     for r in range(1, 7):
-        grid.append(f'<span class="u-xc u-xh u-xr{" on" if str(r) == arow else ""}">{r}</span>')
+        grid.append(f'<span class="u-xc u-xh u-xr{" u-on" if str(r) == arow else ""}">{r}</span>')
         for ci, c in enumerate(cols):
             addr = f'{c}{r}'
             v = str(cells.get(addr, ''))
@@ -659,14 +702,14 @@ def excel_grid(cells, active=None, formula=None, targets=()):
             nxt = str(cells.get(f'{cols[ci + 1]}{r}', '')) if ci < 3 else 'edge'
             n, pos = _get(marks, addr, 'tr' if ci < 2 else 'tl')
             spill = bool(v) and not isnum and not nxt and _tw(v, 1.6 if n else 1.3, bool(n)) > 8.4
-            cls = ('u-xc' + (' num' if isnum else '') + (' spill' if spill else '')
-                   + (' act' if addr == active else '') + _t(n))
+            cls = ('u-xc' + (' u-isnum' if isnum else '') + (' u-spill' if spill else '')
+                   + (' u-act' if addr == active else '') + _t(n))
             grid.append(f'<span class="{cls}"><span class="u-xv">{_lab(v, n) if v else ""}</span>{_bd(n, pos)}</span>')
     shown = formula if formula is not None else (cells.get(active, '') if active else '')
     fn, fpos = _get(marks, 'formula_bar', 'ir')
     fx = (f'<div class="u-fx"><span class="u-nbox">{_e(active or "")}{_dd()}</span><span class="u-fxs">'
           f'<span class="u-fxl">fx</span></span><span class="u-fxi{_t(fn)}">{_lab(shown, fn)}{_bd(fn, fpos)}</span></div>')
-    sheets = ('<div class="u-sheets"><span class="u-sarr">\u25c2 \u25b8</span><span class="u-sheet">Sheet1</span>'
+    sheets = ('<div class="u-sheets"><span class="u-sheet">Sheet1</span>'
               '<span class="u-plus">+</span></div>')
     inner = _title('Book1 - Excel') + fx + f'<div class="u-grid">{"".join(grid)}</div>' + sheets
     filled = [f'{k} {v}' for k, v in sorted(cells.items(), key=lambda kv: (int(kv[0][1:]), kv[0][0]))]
@@ -695,16 +738,19 @@ def _photo(state, marks):
 
 
 def _slide(title, subtitle, theme, photo, marks):
+    """Slide with title + subtitle laid out in a flow column (they can never overlap);
+    with photo='cropped' the column sits top-left and the photo on the right."""
     th = ' u-theme' if theme else ''
     parts = ''
     if photo not in ('inserted', 'cropping'):
-        side = ' u-side' if photo == 'cropped' else ''
+        boxes = ''
         for key, text, ph, pos in (('title', title, 'Click to add title', 'tl'),
                                    ('subtitle', subtitle, 'Click to add subtitle', 'bl')):
             n, p = _get(marks, key, pos)
             kind = 'u-ph' if text is None else 'u-typedt'
-            parts += (f'<span class="u-box u-box-{key} {kind}{side}{_t(n)}"><span>{_lab(ph if text is None else text, n)}'
+            boxes += (f'<span class="u-box u-box-{key} {kind}{_t(n)}"><span>{_lab(ph if text is None else text, n)}'
                       f'</span>{_bd(n, p)}</span>')
+        parts += f'<span class="u-txt{" u-side" if photo == "cropped" else ""}">{boxes}</span>'
     if photo:
         parts += _photo(photo, marks)
     return f'<div class="u-slide{th}">{parts}</div>'
@@ -763,7 +809,7 @@ def ppt_themes():
 # ---------------------------------------------------------------- 15. Insert > Pictures
 
 def ppt_insert_pictures():
-    marks = _marks([('Insert', 'tr'), ('Pictures', 'tl')])
+    marks = _marks(['Insert', 'Pictures'])
     menu = ('<span class="u-menu"><span class="u-mi u-t"><span class="u-mg u-mg-pc"></span>'
             f'<span class="u-big">This Device...</span>{_bd(3, "r")}</span>'
             '<span class="u-mi"><span class="u-mg u-mg-stock"></span>Stock Images...</span>'
@@ -801,7 +847,7 @@ def insert_picture_dialog():
 # ---------------------------------------------------------------- 17. Picture Format > Crop
 
 def ppt_crop():
-    marks = _marks([('Crop', 'tl'), ('handle', 't')])
+    marks = _marks(['Crop', ('handle', 't')])
     groups = [('Adjust', ['Corrections', 'Color']), ('Size', ['Crop', '~Height 3.2"', '~Width 5.7"'])]
     stage = ('<div class="u-pv u-pv-crop"><div class="u-stage">'
              + _slide(None, None, None, 'cropping', marks) + '</div></div>')
@@ -840,7 +886,7 @@ def edge_page_download():
     popup = ('<div class="u-dlp u-t"><div class="u-dlh">Downloads</div><div class="u-dlr">'
              '<span class="u-dlthumb"><span class="u-pclip">' + _art() + '</span></span>'
              '<span class="u-dlx"><span class="u-dln">practice-photo.jpg</span><span class="u-link">Open file</span>'
-             f'</span></div>{_bd(2, "bl")}</div>')
+             f'</span></div>{_bd(2, "l")}</div>')
     label = ('Drawing: Microsoft Edge on vublessons.com, Week 3 Worksheet page. In Part 4, the gold '
              'Download the practice photo button is marked 1. The Downloads pop-up at the top right lists '
              'practice-photo.jpg with an Open file link, and is marked 2.')
@@ -854,10 +900,10 @@ def edge_page_download():
 def explorer_resource_pack():
     files = (('Computer help handout', 'word'), ('Computer help handout', 'pdf'),
              ('Supply list', 'excel'), ('Flyer', 'powerpoint'))
-    rows = ''.join(f'<div class="u-fr"><span class="u-fn">{_ficon(k)}{_e(n)}</span>'
+    rows = ''.join(f'<div class="u-fr"><span class="u-fn">{_ficon(k, True)}{_e(n)}</span>'
                    f'<span class="u-ft">{_e(_KIND[k])}</span></div>' for n, k in files)
     inner = (_title('Resource pack', app_badge('explorer'))
-             + '<div class="u-xtabs"><span class="on">File</span><span>Home</span><span>Share</span><span>View</span></div>'
+             + '<div class="u-xtabs"><span class="u-on">File</span><span>Home</span><span>Share</span><span>View</span></div>'
              + _addr(['This PC', 'Documents', 'Resource pack'])
              + f'<div class="u-fl u-fl-x"><div class="u-fh"><span>Name</span><span>Type</span></div>{rows}</div>'
              + '<div class="u-status">4 items</div>')
@@ -880,4 +926,4 @@ def vub_course_path():
     label = ('Drawing: Microsoft Edge. The address bar with vublessons.com typed in is marked 1. The course '
              'card Digital Literacy, Level 2, has an Open course button, marked 2. The row Week 3, Create '
              'something people can use, has two links, Open week 3 and Worksheet; Worksheet is marked 3.')
-    return _root('vub-path', label, _edge('VUB Learning', 'vublessons.com', page, url_n=1, url_pos='r', typed=True))
+    return _root('vub-path', label, _edge('VUB Learning', 'vublessons.com', page, url_n=1, url_pos='ir', typed=True))
