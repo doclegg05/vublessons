@@ -136,7 +136,8 @@ test('Week 3 plays only its matching clips: approved media, captions, no autopla
  }
  const first=await page.evaluate(()=>[...document.querySelectorAll('.slide')].findIndex(s=>s.querySelector('video')));
  await page.evaluate(i=>DL2Deck.go(i,'forward'),first);
- const video=page.locator('.slide.is-active video');
+ // Pin the clip by its slide: after DL2Deck.next() it is no longer the active slide's video.
+ const video=page.locator(`#slide-${first+1} video`);
  await expect.poll(()=>video.evaluate(v=>v.readyState)).toBeGreaterThanOrEqual(1);
  await video.evaluate(v=>{v.muted=true;return v.play();});
  await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(43);
