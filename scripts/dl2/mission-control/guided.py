@@ -87,7 +87,7 @@ def build_week(n, w, target, letterhead):
         acts = '<ol class="g-actions">' + ''.join(f'<li>{md(a)}</li>' for a in s['actions']) + '</ol>'
         see = f'<p class="g-see"><span>You should see:</span> {md(s["see"])}</p>'
         if s.get('card'):
-            right = '<div class="g-card" data-visual role="group" aria-label="Lines to type"><p class="g-card-head">Type these lines:</p>' + ''.join(f'<p>{e(line)}</p>' for line in s['card']) + '</div>'
+            right = '<div class="g-card" data-visual role="group" aria-label="Lines to type"><p class="g-card-head">' + e(s.get("card_head") or "Type these lines:") + '</p>' + ''.join(f'<p>{e(line)}</p>' for line in s['card']) + '</div>'
         elif s.get('write'):
             right = f'<div class="g-write" data-visual><p class="g-card-head">{e(s.get("write_head") or "Your guess (worksheet, Part 3):")}</p><p>{md(s["write"])}</p><p class="g-blank" aria-hidden="true">______</p></div>'
         else:
@@ -229,6 +229,9 @@ def build_week(n, w, target, letterhead):
           f'{e(w["ws_note"])}</p><div class="namerow"><span>Name</span><span>Workstation</span></div>')
     ws += '<section class="g-goal-box"><h2>Tonight’s goals</h2><p>Check each one at the end of class if you can do it.</p><ul class="g-ican-list">' + ''.join(
         f'<li><label><input type="checkbox"> <span>I can {md(g["short"][0].lower() + g["short"][1:])}. <small>({e(w["apps"][g["app"]])})</small></span></label></li>' for g in w['goals']) + '</ul></section>'
+    if w.get('words'):
+        ws += ('<section class="g-words"><h2>Words we use tonight</h2><dl>'
+               + ''.join(f'<dt>{e(a)}</dt><dd>{md(b)}</dd>' for a, b in w['words']) + '</dl></section>')
     ws += (f'<section class="mission g-part" id="ready"><div class="mhead"><div><div class="k">BEFORE WE START · MICROSOFT EDGE</div><h2>{e(r["title"])}</h2></div></div>'
            f'<p>{md(r["what"])}</p>{steps_list(r["steps"])}{stuck_box([s["stuck"] for s in r["steps"] if s.get("stuck")])}</section>')
     answer = ('<p>Assess observable evidence. A spoken prompt is “With prompt”; using the worksheet alone counts as independent. '
@@ -258,8 +261,17 @@ def build_week(n, w, target, letterhead):
     ws += (f'<section class="mission g-part" id="wrap"><div class="mhead"><div><div class="k">WRAP-UP · {e(wr["label"])}</div><h2>Check your work</h2></div></div>'
            + (show + steps_list(wrap_steps(wr)) if wr.get('show_first') else steps_list(wrap_steps(wr)) + show)
            + f'<div class="home"><b>TAKE IT HOME</b>{md(wr["home"])}</div></section>')
+    res = wr.get('result')
+    if res:
+        fields = ''.join(
+            f'<label class="g-write-label" for="result-{i}">{md(lab)}</label><textarea class="worksheet-input" id="result-{i}" rows="{rows}"></textarea><span class="print-answer"></span>'
+            for i, (lab, rows) in enumerate(res['fields'], start=1))
+        ws += (f'<section class="mission g-part g-result" id="result"><div class="mhead"><div><div class="k">MY RESULT</div><h2>{e(res["title"])}</h2></div></div>'
+               f'<p>{md(res["intro"])}</p>{fields}</section>')
     answer += ('<section><h2>End-of-class check</h2><ul>' + ''.join(f'<li>{md(x)}</li>' for x in wr['show']) + '</ul>'
                '<p>Record Independent, With prompt or Needs practice for each. Re-show only the missing step.</p></section>')
+    if res:
+        answer += '<section><h2>My result page</h2><ul>' + ''.join(f'<li>{md(lab)}</li>' for lab, _ in res['fields']) + '</ul><p>Collect the page, or read it on screen. Every box should hold the learner\'s own words.</p></section>'
     (target / 'worksheet.html').write_text(page('Worksheet', ws))
     (target / 'answer-key.html').write_text(page('Answer and observation guide', answer, True))
 

@@ -1,16 +1,17 @@
-/* Week 4 guided lesson: Gmail, Word comments and a practice offer page.
+/* Week 4 guided lesson: Practice Mail, Word comments and a practice offer page.
  * Markup comes from scripts/dl2/mission-control/ui_mail.py. Original schematic drawings, not screenshots.
  * Loaded only by Week 4, after ui-drawings.css and guided.css. Sizes are cqw of the .deck. No text below 1.15cqw. */
 
-/* Gmail identity: badge letter M on red, and its banner color. */
-.app-badge-gmail { background:#c5221f; }
-.guided-deck .hud .app-gmail { background:#c5221f; color:#fff; }
-.guided-deck .g-foot .app-gmail { background:#c5221f; color:#fff; }
+/* Practice Mail identity: badge letter M on purple, and its banner color. */
+.app-badge-mail { background:#8a3ab9; }
+.guided-deck .hud .app-mail { background:#8a3ab9; color:#fff; }
+.guided-deck .g-foot .app-mail { background:#8a3ab9; color:#fff; }
 
-/* ---------------------------------------------------------------- Gmail */
+/* ---------------------------------------------------------------- Practice Mail */
 .ui .m-gm { background:#f6f8fc; white-space:normal; }
 .ui .m-top { display:flex; align-items:center; gap:1.2cqw; height:2.6cqw; padding:0 1cqw; }
-.ui .m-logo { font-size:1.5cqw; font-weight:700; color:#c5221f; }
+.ui .m-logo { font-size:1.5cqw; font-weight:700; color:#0b3d4a; }
+.ui .m-note { font-size:1.15cqw; color:#555; }
 .ui .m-search { flex:1; display:flex; align-items:center; height:1.9cqw; padding:0 .9cqw; border-radius:1cqw; background:#e9eef6; color:#444; font-size:1.15cqw; }
 .ui .m-cols { display:flex; gap:.8cqw; padding:0 .6cqw .3cqw; min-height:15cqw; }
 .ui .m-side { flex:none; width:11cqw; display:flex; flex-direction:column; gap:.5cqw; padding-top:.3cqw; }
@@ -97,4 +98,28 @@
 .ui .o-fl { font-weight:700; color:#555; }
 .ui .o-line { display:inline-block; }
 .ui .m-send.u-t { margin-right:.4cqw; }
-.ui .m-nope { padding:.2cqw .8cqw; border:.18cqw dashed #b3261e; border-radius:.3cqw; color:#b3261e; font-size:1.2cqw; font-weight:800; }
+
+.ui .m-sel { background:#c4d5ea; box-shadow:0 0 0 .08cqw #c4d5ea; }
+
+/* Sent view: the message and the Who sees what box. */
+.ui .m-pad { display:flex; flex-direction:column; gap:.5cqw; padding:.6cqw 1.2cqw .8cqw; }
+.ui .m-back { font-size:1.2cqw; color:#0b57b8; text-decoration:underline; }
+.ui .m-msg { display:flex; flex-direction:column; gap:.2cqw; padding:.6cqw .9cqw; background:#fff; border-radius:.5cqw; font-size:1.15cqw; }
+.ui .m-ml { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ui .m-ml b { display:inline-block; width:4.6cqw; color:#555; }
+.ui .m-who { position:relative; display:flex; flex-direction:column; gap:.2cqw; padding:.5cqw .9cqw .5cqw; background:#fff; border:.15cqw solid #0b3d4a; border-radius:.5cqw; }
+.ui .m-wh { font-size:1.3cqw; font-weight:700; color:#0b3d4a; }
+.ui .m-wr { position:relative; display:flex; gap:1cqw; font-size:1.15cqw; padding:0 .3cqw; }
+.ui .m-wp { flex:none; width:12.5cqw; font-weight:700; white-space:nowrap; }
+.ui .m-ws { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* The Windows taskbar. */
+.ui .m-desk { height:9cqw; padding:.8cqw 1cqw; background:linear-gradient(135deg,#1c5d99,#4a9ed8); border-radius:.6cqw .6cqw 0 0; }
+.ui .m-deskt { font-size:1.3cqw; font-weight:700; color:#fff; }
+.ui .m-tb { display:flex; align-items:center; gap:1.2cqw; height:3.6cqw; padding:0 1cqw; background:#1f1f1f; border-radius:0 0 .6cqw .6cqw; color:#fff; }
+.ui .m-start { display:grid; grid-template-columns:1fr 1fr; gap:.15cqw; width:1.7cqw; height:1.7cqw; }
+.ui .m-start span { background:#fff; }
+.ui .m-tsearch { display:flex; align-items:center; flex:0 0 17cqw; height:2.4cqw; padding:0 .9cqw; background:#e8e8e8; color:#333; font-size:1.2cqw; }
+.ui .m-ticon { position:relative; display:inline-flex; align-items:center; justify-content:center; width:3cqw; height:3cqw; }
+.ui .m-ticon.u-t { background:#333; }
+.ui .m-ticon .app-badge { width:2.2cqw; height:2.2cqw; font-size:1.3cqw; }

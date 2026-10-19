@@ -112,7 +112,7 @@ test('Old session/hash and course-home saved positions migrate once without chan
  // Explicit links use the current numbering; invalid/stale bounds are clamped.
  await page.goto(route(5)+'#999');await expect(page.locator('.strip .count')).toHaveText('24 / 24');
  await page.goto(route(5)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 24');
- await page.goto(route(4)+'#999');await expect(page.locator('.strip .count')).toHaveText('60 / 60');
+ await page.goto(route(4)+'#999');await expect(page.locator('.strip .count')).toHaveText('87 / 87');
  await page.goto(route(3)+'#999');await expect(page.locator('.strip .count')).toHaveText('71 / 71');
 });
 test('Opening pre-test and video pass automated accessibility checks',async({page})=>{

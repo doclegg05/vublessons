@@ -8,7 +8,7 @@ for(let week=2;week<=6;week++) {
   await page.goto(route+'/presentation.html#1');
   // Week 2 (AI search) has extra rounds and a capstone, and no break; Weeks 4-6 keep 24 slides and the protected break.
   // Week 3 (2026-10-12) and Week 4 (2026-10-19) are guided builds: one program at a time, one or two clicks per slide, no break. Their own checks are in dl2-week3-guided.spec.js and dl2-week4-guided.spec.js.
-  const total=week===2?36:week===3?71:week===4?60:24,stages=week===2?{tell:5,show:4,do:15,review:5}:week===3?{tell:8,show:5,do:46,review:4}:week===4?{tell:8,show:5,do:34,review:5}:{tell:4,show:4,do:4,review:4};
+  const total=week===2?36:week===3?71:week===4?87:24,stages=week===2?{tell:5,show:4,do:15,review:5}:week===3?{tell:8,show:5,do:46,review:4}:week===4?{tell:8,show:5,do:61,review:5}:{tell:4,show:4,do:4,review:4};
   await expect(page.locator('.slide')).toHaveCount(total);
   for(const stage of ['tell','show','do','review'])await expect(page.locator(`.slide[data-stage=${stage}]`)).toHaveCount(stages[stage]);
   await expect(page.locator('.slide').filter({hasText:'Take an 8-minute break.'})).toHaveCount(week<=4?0:1);

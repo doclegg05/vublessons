@@ -62,12 +62,12 @@ OUTCOMES = [
 ]
 
 
-def step(title, actions, see, draw=None, stuck=None, notes='', app=None, card=None, write=None, opener=False, write_head=None, write_rows=None):
+def step(title, actions, see, draw=None, stuck=None, notes='', app=None, card=None, write=None, opener=False, write_head=None, write_rows=None, card_head=None):
     """One projected step. actions: 1-2 short instructions. see: what success looks like.
     draw: (function name in ui.py, kwargs) for the drawing. card: lines to type, shown large.
     write: a worksheet prompt the learner answers in writing (gets a text box)."""
     assert 1 <= len(actions) <= 2, title
-    return dict(kind='step', title=title, actions=list(actions), see=see, draw=draw, stuck=stuck, notes=notes, app=app, card=card, write=write, opener=opener, write_head=write_head, write_rows=write_rows)
+    return dict(kind='step', title=title, actions=list(actions), see=see, draw=draw, stuck=stuck, notes=notes, app=app, card=card, write=write, opener=opener, write_head=write_head, write_rows=write_rows, card_head=card_head)
 
 
 def open_app(app, label):

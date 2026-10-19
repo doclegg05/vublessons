@@ -31,7 +31,7 @@ APPS = {
     'excel': {'name': 'Excel', 'doc': 'Book1', 'blank': 'Blank workbook'},
     'powerpoint': {'name': 'PowerPoint', 'doc': 'Presentation1', 'blank': 'Blank presentation'},
 }
-_LETTERS = {'word': 'W', 'excel': 'X', 'powerpoint': 'P', 'edge': 'e', 'explorer': 'F', 'gmail': 'M'}
+_LETTERS = {'word': 'W', 'excel': 'X', 'powerpoint': 'P', 'edge': 'e', 'explorer': 'F', 'mail': 'M'}
 
 TABS = {
     'word': ['File', 'Home', 'Insert', 'Draw', 'Design', 'Layout', 'References', 'Mailings',
