@@ -46,7 +46,7 @@
 .mission-demo-controls { display:flex; align-items:center; gap:1cqw; margin-top:1.1cqw; }
 .demo-count { font:18px 'DL2 JetBrains Mono',monospace; }
 .mission-series .deck .slide .demo-explanation { margin:0; }
-.mission-series a:focus-visible,.mission-series select:focus-visible { outline:3px solid var(--c-gold); outline-offset:4px; }
+.mission-series a:focus-visible,.mission-series select:focus-visible { outline: 3px solid #1B365D; outline-offset:4px; box-shadow: 0 0 0 4px var(--c-gold);}
 .mission-toolbar button:disabled,.mission-demo-controls button:disabled { opacity:.5; cursor:default; }
 .mission-series .vub-textsize-status { position:absolute!important; width:1px!important; height:1px!important; overflow:hidden!important; clip-path:inset(50%)!important; }
 @media(max-width:800px) {
