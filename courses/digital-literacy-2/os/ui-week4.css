@@ -93,7 +93,7 @@
 .ui .o-then { font-size:1.6cqw; line-height:1.2; }
 .ui .o-p { position:relative; display:inline-block; }
 .ui .o-price { font-weight:800; }
-.ui .o-btn { padding:.35cqw 1.4cqw; background:#8a949f; color:#fff; border-radius:.4cqw; font-size:1.35cqw; font-weight:700; }
+.ui .o-btn { padding:.35cqw 1.4cqw; background:#1b365d; color:#fff; border-radius:.4cqw; font-size:1.35cqw; font-weight:700; }
 .ui .o-fine { align-self:stretch; display:flex; flex-direction:column; align-items:flex-start; gap:.3cqw; margin-top:.2cqw; padding:.5cqw .9cqw 0; border-top:.12cqw solid #ccc; font-size:1.2cqw; color:#333; }
 .ui .o-fl { font-weight:700; color:#555; }
 .ui .o-line { display:inline-block; }
