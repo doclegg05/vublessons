@@ -31,6 +31,11 @@ def plain(t):
     return re.sub(r'[\[\]{}«»]', '', t)
 
 
+def end(text):
+    """A sentence ending: add a period only when the text does not already end in . ? or !"""
+    return text if text[-1:] in ('.', '?', '!') else text + '.'
+
+
 def goal_ids(p):
     g = p.get('goals', p.get('goal'))
     return list(g) if isinstance(g, (list, tuple)) else [g]
@@ -109,11 +114,11 @@ def build_week(n, w, target, letterhead):
     first = add(w['title'], f'<div class="mission-hero"><div><p>Digital Literacy Level 2 · Week {n}</p><p>{e(w["hero"])}</p></div><figure><img src="{BASE}/assets/photos/{w["photo"]}.webp" alt="Illustrative West Virginia learning scenario"><figcaption>Fictional people and setting</figcaption></figure></div>',
                 'warm-up', notes='Welcome learners by name. Tonight the class works together: you show each step on the projector and everyone does it at their own computer. F toggles fullscreen; N shows notes.')
     add('Start with what you know.', f'<p class="mission-prompt">{e(w["warm"])}</p><p>Share one example. Passing is welcome.</p>', 'warm-up',
-        notes='Two or three answers. Listen for clear titles, numbered steps and pictures that help: tonight teaches exactly those.')
+        notes=w['warm_notes'])
     goals = '<ol class="g-goal-rows">' + ''.join(
         f'<li>{ui.app_badge(g["app"], "sm")}<span><b>Part {goal_part[k] + 1} · {e(w["apps"][g["app"]].replace("Microsoft ", ""))}:</b> {md(g["short"])}.</span></li>' for k, g in enumerate(w['goals'])) + '</ol>'
     add("Tonight's goals", f'<p class="g-lead">By the end of tonight, you can:</p>{goals}<p class="g-foot">{e(w["goals_foot"])}</p>', 'intro',
-        notes='Read each goal aloud. Each part of tonight teaches one goal, in one program. Learners check the goals off on their worksheet at the end of class.')
+        notes=w['goals_notes'])
     add('How tonight works.', '<ol class="mission-principles"><li><span>1</span><div class="g-pt">Watch the step on the big screen.</div></li><li><span>2</span><div class="g-pt">Do the same step on your computer.</div></li>'
         '<li><span>3</span><div class="g-pt">Check <b>You should see</b>. Not the same? Raise your hand.</div></li></ol>'
         f'<p class="g-foot">The colored box at the top of every slide names the program you are in, like {app_tag(w, w["example_app"])}.</p>', 'intro',
@@ -160,7 +165,7 @@ def build_week(n, w, target, letterhead):
             add(c['question'], f'<div class="mission-check" data-answer="{c["answer"]}" data-why="{e(c["why"])}">' + ''.join(
                 f'<button type="button" data-choice="{j}"><b>{chr(65 + j)}</b> {e(ch)}</button>' for j, ch in enumerate(c['choices'])) +
                 '<p class="mission-feedback" role="status">Choose an answer, then explain your reason.</p><button type="button" class="check-reset">Try again</button></div>',
-                'evaluate', 'review', f'Ask everyone to choose before you select an answer. Correct answer: {c["choices"][c["answer"]]}. {c["why"]}', app, 'check', f'Part {part_n} · Check')
+                'evaluate', 'review', f'Ask everyone to choose before you select an answer. Correct answer: {end(c["choices"][c["answer"]])} {c["why"]}', app, 'check', f'Part {part_n} · Check')
         schedule.append((elapsed, elapsed + minutes[k], f'Part {part_n} · {app_name}: {p["title"]}', f'{pfirst}–{len(slides)}'))
         elapsed += minutes[k]
 
@@ -255,7 +260,7 @@ def build_week(n, w, target, letterhead):
                    f'<p>{e(c["question"])}</p><p>' + ' · '.join(f'{chr(65 + j)}. {e(ch)}' for j, ch in enumerate(c['choices'])) + '</p><p>My answer: <span class="ln"></span></p>' for c in cs) + '</div></div></section>')
         answer += (f'<section><h2>Part {k + 1} · {e(app_name)}: {e(p["title"])}</h2>' + ''.join(
                    f'<p><b>Goal {g + 1}</b> (post-test item {w["goals"][g]["item"]}): {md(w["goals"][g]["text"])}</p>' for g in gids) +
-                   f'<p><b>Evidence:</b> {e(w["outcomes"][k])}</p>' + ''.join(f'<p><b>Check:</b> {e(c["question"])} <b>{e(c["choices"][c["answer"]])}.</b> {e(c["why"])}</p>' for c in cs) +
+                   f'<p><b>Evidence:</b> {e(w["outcomes"][k])}</p>' + ''.join(f'<p><b>Check:</b> {e(c["question"])} <b>{e(end(c["choices"][c["answer"]]))}</b> {e(c["why"])}</p>' for c in cs) +
                    '<p><b>Common problems</b></p><ul>' + ''.join(f'<li><b>{md(a)}</b> {md(b)}</li>' for a, b in p['stuck']) + '</ul></section>')
     show = '<p><b>Show your instructor:</b></p><ul>' + ''.join(f'<li>{md(x)}</li>' for x in wr['show']) + '</ul>'
     ws += (f'<section class="mission g-part" id="wrap"><div class="mhead"><div><div class="k">WRAP-UP · {e(wr["label"])}</div><h2>Check your work</h2></div></div>'

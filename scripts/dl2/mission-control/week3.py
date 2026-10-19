@@ -352,6 +352,8 @@ WEEK3 = dict(
     guided=True, title='Make a useful resource pack.', photo='resource-pack', nobreak=True,
     warm='Think of a flyer or handout that was easy to follow. What made it easy?',
     goals=GOALS, outcomes=OUTCOMES, ready=READY, parts=PARTS, wrap=WRAP, apps=APPS, credit=CREDIT,
+    warm_notes='Two or three answers. Listen for clear titles, numbered steps and pictures that help: tonight teaches exactly those.',
+    goals_notes='Read each goal aloud. Each part of tonight teaches one goal, in one program. Learners check the goals off on their worksheet at the end of class.',
     video='week-03', minutes=[30, 12, 25, 28], example_app='word',
     hero='Tonight you make a handout, a PDF, a supply list and a flyer, one step at a time.',
     goals_foot='These four skills are on your post-test.',

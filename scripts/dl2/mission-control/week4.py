@@ -454,6 +454,8 @@ WEEK4 = dict(
     guided=True, title='Work together without confusion.', photo='collaboration', nobreak=True,
     warm='When has a message made your next step easy? What information did it include?',
     goals=GOALS, outcomes=OUTCOMES, ready=READY, parts=PARTS, wrap=WRAP, apps=APPS, words=WORDS,
+    warm_notes='Two or three answers. Listen for a clear subject, a day and a time, and one thing to do. Tonight teaches exactly those.',
+    goals_notes='Read each goal aloud. There are five goals in four parts: Part 1 teaches goals 1 and 2, and each later part teaches one. Learners check the goals off on their worksheet at the end of class.',
     video='week-04', minutes=[30, 17, 30, 18], example_app='mail', css=['ui-week4.css'],
     hero='Tonight you write an email, answer a comment and check an offer.',
     goals_foot='These five skills are on your post-test.',
