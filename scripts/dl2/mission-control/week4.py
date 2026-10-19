@@ -58,7 +58,7 @@ def mc(**kw):
 GOALS = [
     dict(app='mail', text='Write an email request with a subject that names what you need and when.', short='Write a request with a deadline', item=13),
     dict(app='mail', text='Use words that welcome everyone, and offer a choice instead of guessing.', short='Use words that welcome all', item=15),
-    dict(app='mail', text='Put the right people in To and in Bcc, and know what Bcc does and does not do.', short='Know what Bcc does', item=14),
+    dict(app='mail', text='Put the right people in To and in Bcc, and know what Bcc does and does not do.', short='Say what Bcc does', item=14),
     dict(app='word', text='Give feedback on one shared copy: write a specific comment, reply, then resolve it.', short='Give feedback on one shared copy', item=16),
     dict(app='edge', text='Check an offer for when it ends, what it costs, how often you pay, and how to cancel.', short='Spot a charge that repeats', item=17),
 ]

@@ -66,7 +66,7 @@ var inbox=[
  {from:'Volunteer desk',subject:'Thank you for helping last week',body:'Thank you. Your help made the sign-in line short.'},
  {from:'Computer class',subject:'Your Week 4 worksheet',body:'Keep your worksheet open beside this page.'}
 ];
-var state=load(),folder='inbox',draft=null,open=null;
+var state=load(),folder='inbox',draft=null,open=null,grabOpen=null;
 function load(){try{var s=JSON.parse(sessionStorage.getItem(KEY));if(s&&Array.isArray(s.drafts)&&Array.isArray(s.sent))return s;}catch(e){}return{drafts:[],sent:[],next:1};}
 function save(){try{sessionStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
 function el(tag,attrs,kids){var n=document.createElement(tag);Object.keys(attrs||{}).forEach(function(k){if(k==='text')n.textContent=attrs[k];else n.setAttribute(k,attrs[k]);});(kids||[]).forEach(function(c){n.append(c);});return n;}
@@ -118,10 +118,11 @@ function compose(){
  var subj=el('input',{type:'text',id:'subject',class:'one',autocomplete:'off',placeholder:'Subject','aria-label':'Subject'});subj.value=d.subject;
  var sw=el('div',{class:'fld'},[subj]);
  var body=el('textarea',{id:'body','aria-label':'Message'});body.value=d.body;
- function grab(){to.add();cc.add();bcc.add();d.subject=subj.value;d.body=body.value;}
+ function grab(){var ok=[to.add(),cc.add(),bcc.add()].every(Boolean);d.subject=subj.value;d.body=body.value;return ok;}
+ grabOpen=grab;
  var send=el('button',{type:'button',class:'send',text:'Send'}),trash=el('button',{type:'button',class:'trash','aria-label':'Discard draft',text:'🗑 Discard'});
  var x=el('button',{type:'button','aria-label':'Close. Practice Mail saves a draft.',text:'×'});
- send.addEventListener('click',function(){grab();
+ send.addEventListener('click',function(){if(!grab())return;
   if(!d.to.length&&!d.bcc.length){say('Add at least one address first.');return;}
   if(!d.subject.trim()){say('Add a subject first.');return;}
   state.sent.unshift({to:d.to,cc:d.cc,bcc:d.bcc,subject:d.subject,body:d.body});save();draft=null;folder='sent';open={kind:'sent',item:state.sent[0]};say('Sent in practice. Nothing really left this page.');render();});
@@ -129,13 +130,18 @@ function compose(){
  x.addEventListener('click',function(){grab();if(d.to.length||d.cc.length||d.bcc.length||d.subject||d.body.trim()){state.drafts.unshift(d);save();say('Closed. Practice Mail saved your message in Drafts.');}draft=null;folder='drafts';render();});
  var win=el('section',{class:'win','aria-labelledby':'nm'},[el('div',{class:'win-head'},[el('span',{id:'nm',text:'New Message'}),x]),to.wrap,cc.wrap,bcc.wrap,sw,body,el('div',{class:'foot'},[send,trash])]);
  view.append(win);}
+function stash(){
+ // Keep an open message that is not empty: leaving the compose box by any route saves it in Drafts.
+ if(!draft)return;if(grabOpen)grabOpen();var d=draft;draft=null;grabOpen=null;
+ if(d.to&&(d.to.length||d.cc.length||d.bcc.length||d.subject||d.body.trim())){state.drafts.unshift(d);save();}}
 function render(){view.textContent='';
  if(draft){compose();}
  else if(open){var back=el('button',{type:'button',text:'← Back'});back.addEventListener('click',function(){open=null;render();});view.append(back,show(open.item,open.kind));}
  else{view.append(rows(folder==='inbox'?inbox:state[folder],folder));}
  counts();}
-document.getElementById('compose').addEventListener('click',function(){draft={};open=null;say('');render();var t=document.getElementById('to');if(t)t.focus();});
-document.querySelectorAll('.folder').forEach(function(b){b.addEventListener('click',function(){folder=b.dataset.folder;draft=null;open=null;say('');render();});});
+document.getElementById('compose').addEventListener('click',function(){if(draft){var t0=document.getElementById('to');if(t0)t0.focus();return;}draft={};open=null;say('');render();var t=document.getElementById('to');if(t)t.focus();});
+document.querySelectorAll('.folder').forEach(function(b){b.addEventListener('click',function(){stash();folder=b.dataset.folder;open=null;say('');render();});});
+window.addEventListener('pagehide',stash);
 render();
 })();
 </script>
