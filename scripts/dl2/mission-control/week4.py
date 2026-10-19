@@ -251,9 +251,9 @@ PART2 = dict(
     stuck=[('Cannot find [Bcc]?', 'Look at the right end of the [To] line. Click in the [To] line first.'),
            ('The address is not allowed?', 'Practice Mail only takes addresses that end in @example.com.'),
            ('Closed the message by mistake?', 'Click [Drafts] on the left, then click your message. Everything you typed is still there.')],
-    check=dict(question='You email 12 members of a community group who do not know each other, and you put their addresses in Bcc. What does Bcc do?',
-               choices=['Each person cannot see the other addresses', 'Nobody can send the email on to someone else', 'Only those 12 people can open the email'], answer=0,
-               why='Bcc hides addresses from the other people. It does not stop someone sending the message on.'),
+    check=dict(question='You email 12 neighbors who do not know each other and put them in Bcc. What does Bcc do?',
+               choices=['Bcc people cannot see each other\u2019s addresses', 'Nobody can send the email on to someone else', 'Only those 12 people can open the email'], answer=0,
+               why='Bcc hides addresses from each other. It does not stop sending the message on.'),
 )
 
 # ---------------------------------------------------------------- Part 3: comments on one shared copy (Word)

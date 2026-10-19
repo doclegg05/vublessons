@@ -1239,7 +1239,7 @@
           "kind": "check",
           "options": [
             "Only that the first seven days cost nothing",
-            "The price after the trial, the date it starts, and how to cancel",
+            "The price after the trial, the date charges start, and how to cancel",
             "That deleting the app later will stop the charges"
           ],
           "answer": 1,
