@@ -23,10 +23,6 @@ def source_text(t):
  t=re.sub(r'[Ss]lide (\d+)',r'practice library exercise \1',t)
  t=t.replace('Print page 1 of your results or save it as a PDF, and write your score out of 20.','Submit your results to Britt, save the complete graded PDF, and write your score out of 20.')
  return t
-# Map all eight detailed task rows to the mission where they are taught.
-WEEKS[6]['missions'][1]['lab']=[2,3]
-WEEKS[6]['missions'][2]['lab']=[4,5,6]
-WEEKS[6]['missions'][3]['lab']=[7]
 def log_table(prefix):
  checks=[('New category','learning'),('Existing name','library'),('No match','zzz'),('Mixed case','LIBRARY, then Learning'),('Keyboard only','Tab through controls'),('Narrow screen','Zoom to 400%')]
  out='<div class="table-scroll" tabindex="0" role="region" aria-label="App test log"><table><thead><tr><th>Check / input</th><th>Expected</th><th>Actual</th><th>Pass or fail</th></tr></thead><tbody>'
@@ -37,7 +33,7 @@ def app_links():return '<nav class="resource-links" aria-label="Three practice v
 def rounds_worksheet(w,mid,m):
  out=''
  for ri,r in enumerate(m.get('rounds',[]),start=2):
-  out+=f'<div class="round" id="m{mid}-r{ri}"><h3>Round {ri} · {e(r["title"])}</h3><p class="app-line"><b>App:</b> {e(r["app"])}{round_practice(w,r,mid," · ")}</p>'+r['paper']+'<ol>'+''.join(f'<li>{e(t)}</li>' for t in r['tasks'])+'</ol>'+response(f'evidence-{mid}-r{ri}','What you found and how you checked it')+'</div>'
+  out+=f'<div class="round" id="m{mid}-r{ri}"><h3>Round {ri} · {e(r["title"])}</h3><p class="app-line"><b>App:</b> {e(r["app"])}{round_practice(w,r,mid," · ")}{page_links(r," · ")}</p>'+r['paper']+'<ol>'+''.join(f'<li>{e(t)}</li>' for t in r['tasks'])+'</ol>'+response(f'evidence-{mid}-r{ri}','What you found and how you checked it')+'</div>'
  return out
 def rounds_key(mid,m):
  return ''.join(f'<h3>Round {ri} · {e(r["title"])}</h3><ol>'+''.join(f'<li>{e(x)}</li>' for x in r['key'])+'</ol>' for ri,r in enumerate(m.get('rounds',[]),start=2))
@@ -47,6 +43,9 @@ def practice_link(w,m,mid):
  # A mission done in the real app has no simulation and gets no link.
  if not w.get('practice_pages'):return link(f"practice.html#slide-{m['practice']}",'Open interactive practice')
  return f'<a href="{practice_file(mid)}" target="_blank" rel="noopener">Open Mission {mid} practice (opens a new tab)</a>' if m['practice'] else ''
+def page_links(item,before=''):
+ # Real pages a mission or round uses (the Week 6 app versions), opened beside the lesson or worksheet.
+ return before+' · '.join(f'<a href="{url}" target="_blank" rel="noopener">{e(label)} (opens a new tab)</a>' for label,url in item.get('links',[])) if item.get('links') else ''
 def round_practice(w,r,mid,before=''):
  # A round can own the mission's practice page when the mission itself is done in the real app (Week 3 Mission 3D).
  return before+f'<a href="{practice_file(mid)}" target="_blank" rel="noopener">Open Mission {mid} practice (opens a new tab)</a>' if w.get('practice_pages') and r.get('practice') else ''
@@ -93,9 +92,9 @@ for n,w in WEEKS.items():
   add(m['title'], '<ol class="mission-principles">'+''.join(f'<li><span>{i+1}</span>{e(t)}</li>' for i,t in enumerate(m['tell']))+'</ol>',stage='tell',notes=f'Mission {mid}. App: {m["app"]}. Explain why this helps: {m["finish"]}. Connect to the learner’s own household or community task. Ask for a prediction before the show. Full procedural steps and expected evidence are in the worksheet and answer guide.')
   states=''.join(f'<div class="mission-state" data-state="{j}" {"hidden" if j else ""}><div class="demo-artifact artifact-{n}-{letter}"><span class="demo-app">{e(m["app"])} · fictional demonstration</span><strong>{e(heading)}</strong><div data-visual>{visual(n,letter,j)}</div><div class="artifact-path" aria-hidden="true"><span>Observe</span><i>→</i><span>Act</span><i>→</i><span>Check</span></div></div><p class="demo-explanation">{e(explanation)}</p></div>' for j,(heading,value,explanation) in enumerate(m['show']))
   add('Watch: '+m['title'].lower(),f'<div class="mission-demo" data-mission-demo>{states}<div class="mission-demo-controls"><button type="button" data-demo-back>Previous step</button><output aria-live="polite" class="demo-count">Step 1 of 3</output><button type="button" data-demo-next>Next step</button><button type="button" data-demo-reset>Replay</button></div></div>',stage='show',notes=f'App: {m["app"]}. Advance each state deliberately. Read the visible result aloud, then ask why it matters. No automatic advance. Select Next step or use the deck arrow; Replay starts again. This original diagram is a teaching model; the practice library holds the detailed interactive computer simulations.')
-  add('Your turn: Mission '+mid,f'<div class="mission-ab"><div><b>Point A</b><p>{e(m["start"])}</p></div><div><b>Point B</b><p>{e(m["finish"])}</p></div></div><ol class="mission-do">'+''.join(f'<li>{e(s)}</li>' for s in m['do'])+f'</ol><div class="mission-actions">{link(f"worksheet.html#m{mid}","Open step-by-step worksheet")}{practice_link(w,m,mid)}</div>','practice','do',f'App: {m["app"]}. {practice_note(w,m,mid)}{" Learners did these tasks at the video pause cards: check the work, then move on to the rounds." if pauses else ""} Paper fallback: narrate actions and annotate the model; record that it was simulated. Do not count a paper prediction as an observed software skill.')
+  add('Your turn: Mission '+mid,f'<div class="mission-ab"><div><b>Point A</b><p>{e(m["start"])}</p></div><div><b>Point B</b><p>{e(m["finish"])}</p></div></div><ol class="mission-do">'+''.join(f'<li>{e(s)}</li>' for s in m['do'])+f'</ol><div class="mission-actions">{link(f"worksheet.html#m{mid}","Open step-by-step worksheet")}{practice_link(w,m,mid)}{page_links(m)}</div>','practice','do',f'App: {m["app"]}. {practice_note(w,m,mid)}{" Learners did these tasks at the video pause cards: check the work, then move on to the rounds." if pauses else ""} Paper fallback: narrate actions and annotate the model; record that it was simulated. Do not count a paper prediction as an observed software skill.')
   for ri,r in enumerate(m.get('rounds',[]),start=2):
-   rbody='<ol class="mission-do">'+''.join(f'<li>{e(t)}</li>' for t in r['steps'])+'</ol><p class="mission-early">'+e(r['early'])+'</p>'+(f'<div class="mission-actions">{round_practice(w,r,mid)}</div>' if round_practice(w,r,mid) else '')
+   rbody='<ol class="mission-do">'+''.join(f'<li>{e(t)}</li>' for t in r['steps'])+'</ol><p class="mission-early">'+e(r['early'])+'</p>'+(f'<div class="mission-actions">{round_practice(w,r,mid)}{page_links(r)}</div>' if round_practice(w,r,mid) or page_links(r) else '')
    add(f'Round {ri}: {r["title"]}',rbody,'practice','do',f'App: {r["app"]}. {r["notes"]} Worksheet section {mid}-r{ri} (open worksheet.html#m{mid}-r{ri}). If the room is slow, skip the Done early lines first, then the last round.',cls='round-slide')
    slides[-1]=slides[-1].replace('<span class="app">Mission Control</span>','<span class="app">'+e(r['app'])+'</span>')
   add(m['question'],f'<div class="mission-check" data-answer="{m["answer"]}" data-why="{e(m["why"])}">'+''.join(f'<button type="button" data-choice="{j}"><b>{chr(65+j)}</b> {e(choice)}</button>' for j,choice in enumerate(m['choices']))+'<p class="mission-feedback" role="status">Choose an answer, then explain your reason.</p><button type="button" class="check-reset">Try again</button></div>','evaluate','review',f'Ask everyone to choose before selecting an answer. Correct answer: {m["choices"][m["answer"]]}. {m["why"]} Check the actual Point B evidence, not simply completion of a click. Misconception to address: the other options may look convenient but do not accomplish the stated task.')
@@ -150,7 +149,7 @@ for n,w in WEEKS.items():
  worksheet+='<div class="namerow"><span>Name</span><span>Workstation</span></div>'
  answer='<p>Assess observable evidence. A spoken prompt is “With prompt”; using the quick card alone can be independent. Mark simulated work separately from hands-on performance. These observations do not change assessment scores.</p>'
  for k,m in enumerate(w['missions']):
-  mid=f'{n}{chr(65+k)}';worksheet+=f'<section class="mission" id="m{mid}"><h2>Mission {mid} · {e(m["title"])}</h2><div class="mission-ab"><div><b>Point A</b><p>{e(m["start"])}</p></div><div><b>Point B</b><p>{e(m["finish"])}</p></div></div><p><b>App:</b> {e(m["app"])}'+(' · '+practice_link(w,m,mid) if w.get('practice_pages') and m['practice'] else '' if w.get('practice_pages') else ' · '+link(f'practice.html#slide-{m["practice"]}','Interactive practice'))+'</p><ol>'
+  mid=f'{n}{chr(65+k)}';worksheet+=f'<section class="mission" id="m{mid}"><h2>Mission {mid} · {e(m["title"])}</h2><div class="mission-ab"><div><b>Point A</b><p>{e(m["start"])}</p></div><div><b>Point B</b><p>{e(m["finish"])}</p></div></div><p><b>App:</b> {e(m["app"])}'+(' · '+practice_link(w,m,mid) if w.get('practice_pages') and m['practice'] else '' if w.get('practice_pages') else ' · '+link(f'practice.html#slide-{m["practice"]}','Interactive practice'))+page_links(m,' · ')+'</p><ol>'
   answer+=f'<section><h2>Mission {mid} · {e(m["title"])}</h2><ol>'
   for idx in m['lab']:
    worksheet+=f'<li>{e(source_text(old["lab"][idx]))}</li>'

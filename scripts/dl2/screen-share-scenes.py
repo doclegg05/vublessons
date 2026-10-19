@@ -10,7 +10,7 @@ import re
 E = lambda value: html.escape(str(value), quote=True)
 NAVY, INK, GOLD, PAPER, LINE = '#1B365D', '#18334d', '#E6C65C', '#F5F7FA', '#bacbd5'
 SELECTED = {(1, 1), (1, 6), (2, 5), (2, 6), (3, 1), (3, 3), (3, 4),
-            (4, 3), (4, 5), (5, 4), (5, 6), (6, 5), (6, 6)}
+            (4, 3), (4, 5), (5, 4), (5, 6), (6, 4), (6, 5)}
 
 
 def box(x, y, w, h, fill=PAPER, stroke=None, radius=8):
@@ -336,19 +336,22 @@ def outlined(x, y, w, h, focus):
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" fill="#fff" stroke="{stroke}" stroke-width="{width}"/>'
 
 
-def matching(query, category):
-    wanted = query.strip().lower()
-    return [r for r in RESOURCES if category in ('All categories', r[1]) and wanted in f'{r[0]} {r[2]}'.lower()]
+def matching(query, category, version=1):
+    # Version 1 searches name and description; versions 2 and 3 add the category. Version 2 lost .toLowerCase()
+    # on the typed query, so any capital letter matches nothing (activities/resource-finder-agent.html).
+    wanted = query.strip() if version == 2 else query.strip().lower()
+    fields = (lambda r: f'{r[0]} {r[2]}') if version == 1 else (lambda r: f'{r[0]} {r[1]} {r[2]}')
+    return [r for r in RESOURCES if category in ('All categories', r[1]) and wanted in fields(r).lower()]
 
 
-def resource_app(query='', category='All categories', focus=None):
+def resource_app(query='', category='All categories', focus=None, version=1):
     s = box(30, 128, 1140, 356, PAPER) + txt('Community resource finder', 56, 166, 34, NAVY, 700)
     s += txt('Search fictional resources', 56, 204, 26, weight=700) + outlined(56, 214, 560, 50, focus == 'search')
-    value = txt(query, 72, 249) if query else txt('Try library', 72, 249, 28, '#5A6A7A')
+    value = txt(query, 72, 249) if query else txt('Try library' if version == 1 else 'Try library or learning', 72, 249, 28, '#5A6A7A')
     s += value.replace('<text ', '<text data-type="true" ', 1) if focus == 'search' and query else value
     s += txt('Category', 646, 204, 26, weight=700) + outlined(646, 214, 270, 50, focus == 'category') + txt(category + ' ▾', 660, 249, 27)
     s += button('Reset filters', 944, 215, 200)
-    found = matching(query, category)
+    found = matching(query, category, version)
     status = f'{len(found)} fictional resource{"" if len(found) == 1 else "s"} found.' if found else 'No matching resources. Try a different word or reset the filters.'
     s += txt(status, 56, 306, 27, weight=700)
     if len(found) == 1:
@@ -360,23 +363,37 @@ def resource_app(query='', category='All categories', focus=None):
     return s
 
 
-def local_app(stage):
+def diff_view(stage):
+    # Week 6 chapter 5: the real changed lines between activities/resource-finder.html and resource-finder-agent.html.
     if stage >= 3:
-        return chrome('VUB Practice Browser', 'Local file: resource-finder-v1.html') + resource_app()
-    s = chrome('Practice Text Editor', 'Working copy • local file')
-    s += box(28, 133, 1146, 347, '#fff')
-    if stage==0:s += lines(['<title>Fictional community resource finder</title>', '<h1>Community resource finder</h1>', '<label for="search">Search fictional resources</label>', '<input id="search" type="search" placeholder="Try library">', '<button id="reset" type="button">Reset filters</button>'], 58, 183, 27, 58)
-    if stage in (1, 2):
-        s += box(288, 190, 852, 262, '#fff', NAVY) + txt('Save a working version', 313, 237, 33, weight=700)
-        s += field('File name', 'resource-finder-v1.html', 314, 279, 785, True, stage==1)
-        s += txt('File type: All files • UTF-8', 314, 404, 27) + button('Save', 910, 372, 189, stage == 2)
+        version = 2 if stage == 3 else 1
+        s = chrome('VUB Practice Browser', f'view-source: resource-finder{"-agent" if version == 2 else ""}.html')
+        s += box(30, 128, 1140, 352, '#fff', LINE) + box(760, 140, 390, 52, GOLD) + txt('Find: toLowerCase', 776, 175, 26, weight=700)
+        s += txt(f'{1 if version == 2 else 2} match{"" if version == 2 else "es"} · version {version}', 776, 226, 27, weight=700)
+        line = "  const query=search.value.trim();" if version == 2 else "  const query=search.value.trim().toLowerCase();"
+        return s + lines(['function render(){', line, "  const pick=category.value;"], 56, 280, 26, 46)
+    s = chrome('Change review', 'resource-finder.html → version 2 (the agent\'s change)')
+    s += box(30, 128, 1140, 352, '#fff', LINE)
+    rows = [("- placeholder=\"Try library\"", "+ placeholder=\"Try library or learning\"", None),
+            ("- const query=search.value.trim().toLowerCase();", "+ const query=search.value.trim();", 2),
+            ("- (r.name+' '+r.description)", "+ (r.name+' '+r.category+' '+r.description)", 1)]
+    for j, (old, new, mark) in enumerate(rows):
+        yy = 148 + j * 108
+        if mark == stage:
+            s += box(40, yy - 6, 1120, 100, '#d3e9df' if mark == 1 else '#f4d6dc')
+        s += txt(old, 56, yy + 34, 26, '#8d253c') + txt(new, 56, yy + 78, 26, '#1d5d3a')
+    if stage == 1:
+        s += txt('Asked for', 960, 446, 27, '#1d5d3a', 700)
+    if stage == 2:
+        s += txt('Not asked for', 930, 338, 27, '#8d253c', 700)
     return s
 
 
 def app_checks(stage):
-    query=['', 'library', 'zzz', '', 'LIBRARY', 'LIBRARY', 'LIBRARY', 'LIBRARY'][stage]
-    cat='Learning' if stage in (5, 7) else ('Community' if stage == 6 else 'All categories')
-    return chrome('VUB Practice Browser', 'Local file: resource-finder-v1.html • Test the saved file') + resource_app(query, cat, 'category' if stage in (5, 6) else 'search')
+    # Week 6 chapter 6: the agent's version 2, checked in the order the narration gives.
+    query = ['', 'learning', 'library', 'zzz', 'LIBRARY', ''][stage]
+    focus = 'category' if stage == 5 else 'search'
+    return chrome('VUB Practice Browser', 'resource-finder-agent.html • version 2, the agent\'s change') + resource_app(query, 'All categories', focus, 2)
 
 
 # Each phrase is looked up in the actual aligned narration; no estimated timing.
@@ -463,20 +480,19 @@ PLANS = {
   ('block it when it does not',4,680,384,'A page you only read → Block'),
   ('A permission can stay on',5,762,310,'Review site permissions after the call'),
   ('If you find a USB drive',7,600,300,'Unknown USB drive: give it to staff')]),
- (6, 5): (local_app, [
-  ('',0,760,420,'Start from the supplied local HTML file'),
-  ('Save the file',1,650,324,'Save a distinct working version'),
-  ('with its HTML extension',2,1003,396,'Keep .html • not .html.txt'),
-  ('open it in the browser',3,981,397,'Open the file in a browser'),
-  ('Confirm that the heading',4,550,173,'Check heading, search, category, and results')]),
- (6, 6): (app_checks, [
-  ('',0,560,240,'Test the actual saved app'),
-  ('Type library',1,560,240,'library → Community library'),
-  ('Then enter an unmatched term',2,560,240,'zzz → No matching resources'),
-  ('Clear the field',3,560,240,'Clear the search before the next check'),
-  ('try LIBRARY in uppercase',4,560,240,'LIBRARY → the same result'),
-  ('combine the search with a category filter',5,790,240,'Learning + LIBRARY → match'),
-  ('both conditions apply',6,790,240,'Community + LIBRARY → no match')])
+ (6, 4): (diff_view, [
+  ('',0,600,300,'A diff: minus removed, plus added'),
+  ('one added line puts the category',1,700,460,'Asked for: category added to the search'),
+  ('Another line lost three words',2,700,350,'Not asked for: toLowerCase removed'),
+  ('Press Control and U',3,950,170,'Ctrl+U shows the code • Ctrl+F: 1 match in version 2'),
+  ('Version 1 has two matches',4,950,226,'Version 1 has 2 matches; version 2 has 1')]),
+ (6, 5): (app_checks, [
+  ('',0,330,240,'Test the agent\'s version 2'),
+  ('Type learning',1,330,240,'Happy path: learning → 2 found'),
+  ('Type library',2,330,240,'library → 1 found'),
+  ('Type zzz',3,330,240,'zzz → the no-match message'),
+  ('Then try capital letters',4,330,240,'LIBRARY → nothing found: a regression'),
+  ('Check that Tab moves',5,780,240,'Tab: a clear outline on each control')])
 }
 
 

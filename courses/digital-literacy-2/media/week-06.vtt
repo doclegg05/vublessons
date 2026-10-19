@@ -1,472 +1,444 @@
 WEBVTT
 
-00:00:00.450 --> 00:00:02.263
-Think about a list you already use:
+00:00:00.450 --> 00:00:04.410
+An AI coding agent is a program
+that reads the files of an app,
 
-00:00:02.470 --> 00:00:04.970
-contacts, places to visit, or resources
+00:00:04.870 --> 00:00:05.690
+plans a change,
 
-00:00:04.970 --> 00:00:09.890
-for a community activity. We will turn
-a fictional resource list into a small
+00:00:06.370 --> 00:00:11.810
+edits the code, and can run checks, all
+from a request written in plain English.
 
-00:00:09.890 --> 00:00:12.222
-browser app that helps
-someone find an entry.
+00:00:12.730 --> 00:00:14.030
+That sounds like magic,
 
-00:00:12.870 --> 00:00:13.730
-Your experience
+00:00:14.530 --> 00:00:18.050
+but it is closer to hiring a fast
+helper who has never met you.
 
-00:00:13.730 --> 00:00:14.650
-with lists gives
+00:00:18.590 --> 00:00:22.710
+It does exactly what it understood,
+which is not always what you meant.
 
-00:00:14.650 --> 00:00:18.381
-you a useful starting point for
-deciding whether the result makes sense.
+00:00:23.750 --> 00:00:25.330
+Today you will direct one.
 
-00:00:19.090 --> 00:00:22.095
-You do not need to become a
-professional programmer today.
+00:00:26.010 --> 00:00:29.370
+Our app is a small,
+fictional community resource finder.
 
-00:00:22.390 --> 00:00:24.255
-You will practice directing a build,
+00:00:30.170 --> 00:00:31.485
+You will ask for one change,
 
-00:00:24.450 --> 00:00:27.670
-checking what it does,
-and making one controlled improvement.
+00:00:32.110 --> 00:00:35.770
+read what the agent changed,
+test it, and report a problem.
 
-00:00:27.670 --> 00:00:30.230
-The first version has one page,
+00:00:36.810 --> 00:00:40.630
+Then we look at what it would take to
+turn this page into a real service.
 
-00:00:30.790 --> 00:00:34.630
-a search field, a category filter,
-and readable results.
+00:00:45.543 --> 00:00:49.183
+Before you ask for any change,
+find out what works now.
 
-00:00:35.750 --> 00:00:37.170
-Keep the records fictional so
+00:00:50.723 --> 00:00:53.884
+Open version 1 of the resource
+finder and try a few searches.
 
-00:00:37.170 --> 00:00:41.315
-the work can be shared and tested without
-exposing anyone's private information.
+00:00:55.043 --> 00:00:56.383
+Library finds one resource.
 
-00:00:42.867 --> 00:00:45.613
-A website can present
-information for people to read.
+00:00:57.243 --> 00:01:02.283
+LIBRARY in capital letters also finds one,
+because the page ignores capital letters.
 
-00:00:46.107 --> 00:00:49.707
-A web app responds to input,
-such as filtering our resource list.
+00:01:03.663 --> 00:01:07.543
+But learning finds nothing, even though
+two resources are about learning.
 
-00:00:50.587 --> 00:00:51.787
-Software as a service
+00:01:08.623 --> 00:01:12.163
+Version 1 only searches names
+and descriptions, not categories.
 
-00:00:51.787 --> 00:00:55.507
-usually provides an ongoing hosted
-service and may include accounts,
+00:01:13.523 --> 00:01:15.492
+That is the one thing we want changed.
 
-00:00:56.187 --> 00:00:59.247
-stored data, subscriptions,
-and operational support.
+00:01:16.483 --> 00:01:20.763
+Writing down what works today also
+tells you what must not break tomorrow.
 
-00:01:00.367 --> 00:01:02.699
-Our one-file practice
-app is not all of that.
+00:01:22.163 --> 00:01:23.663
+Search version 1 for library,
 
-00:01:03.207 --> 00:01:04.287
-It has no real account
+00:01:24.323 --> 00:01:31.003
+LIBRARY, learning, community,
+and zzz, and write down each result.
 
-00:01:04.287 --> 00:01:09.167
-system, private database, or payment
-service. This distinction helps you ask
+00:01:32.063 --> 00:01:33.023
+Pause the video now.
 
-00:01:09.167 --> 00:01:13.327
-for an achievable first version.
-A convincing sign-in screen does
+00:01:44.164 --> 00:01:45.844
+A spec is a careful request.
 
-00:01:13.327 --> 00:01:16.107
-not prove secure authentication
-exists behind it.
+00:01:46.824 --> 00:01:51.384
+It names one change, who it helps,
+and what must stay the same.
 
-00:01:16.947 --> 00:01:20.937
-Start by describing the useful behavior
-you can actually test in the browser,
+00:01:51.384 --> 00:01:53.164
+Ours says:
 
-00:01:21.387 --> 00:01:22.279
-then treat hosting,
+00:01:54.244 --> 00:01:56.724
+let the search also find
+resources by category,
 
-00:01:22.527 --> 00:01:27.167
-security, and service operations as
-separate decisions that require more work.
+00:01:57.404 --> 00:02:00.504
+for visitors who know the
+kind of help but not the name.
 
-00:01:28.976 --> 00:01:31.336
-HTML describes the content and structure:
+00:02:01.804 --> 00:02:03.212
+Keep capital letters matching,
 
-00:01:32.056 --> 00:01:35.336
-a heading, a labeled search field,
-and a list of resources.
+00:02:03.624 --> 00:02:06.474
+and keep the message that
+appears when nothing matches.
 
-00:01:36.456 --> 00:01:39.596
-CSS controls how those parts
-are arranged and displayed.
+00:02:07.524 --> 00:02:11.104
+Then add acceptance checks,
+tests anyone can run.
 
-00:01:40.716 --> 00:01:45.416
-JavaScript responds to input, such as
-deciding which records match a search.
+00:02:11.104 --> 00:02:14.804
+I type learning, I expect two resources.
 
-00:01:46.516 --> 00:01:48.896
-Think of a familiar form: the questions
+00:02:15.944 --> 00:02:18.124
+I type LIBRARY, I expect one.
 
-00:01:48.896 --> 00:01:49.816
-and fields are
+00:02:19.684 --> 00:02:23.904
+Never put real names, passwords,
+or secret keys in a request.
 
-00:01:49.816 --> 00:01:51.116
-its structure, their
+00:02:25.344 --> 00:02:28.090
+Write your spec and three
+checks a partner could run.
 
-00:01:51.116 --> 00:01:51.996
-presentation helps
+00:02:28.924 --> 00:02:29.863
+Pause the video now.
 
-00:01:51.996 --> 00:01:55.716
-you read them, and the rules determine
-what happens when you use it.
+00:02:45.065 --> 00:02:48.165
+A good agent can show its plan
+before it touches anything.
 
-00:01:55.716 --> 00:02:00.316
-The analogy is a starting point,
-not a complete description of software.
+00:02:49.125 --> 00:02:53.485
+Ask for that. Some agents can also
+work on their own for a while,
 
-00:02:01.176 --> 00:02:02.056
-Open the supplied
+00:02:53.905 --> 00:02:55.978
+and you choose how much freedom to give.
 
-00:02:02.056 --> 00:02:04.436
-starter in the browser
-and identify a visible
+00:02:56.405 --> 00:02:59.825
+Either way, you review every
+change before you accept it.
 
-00:02:04.436 --> 00:02:07.976
-example of each part.
-Changing a heading is different
+00:03:00.945 --> 00:03:04.905
+Read the plan and make a prediction.
+Which part of the page will change?
 
-00:02:07.976 --> 00:02:10.308
-from changing the rule
-that filters the list.
+00:03:06.065 --> 00:03:07.051
+About how many lines?
 
-00:02:11.950 --> 00:02:15.070
-Define success in terms
-someone else can observe.
+00:03:08.205 --> 00:03:12.185
+What could break? Predicting first
+makes you a sharper reviewer,
 
-00:02:16.190 --> 00:02:20.690
-First, searching for library should show
-the fictional Community library entry.
+00:03:12.185 --> 00:03:14.025
+because you know what to look for.
 
-00:02:21.710 --> 00:02:26.930
-Second, searching for an unmatched term
-should show a clear no-results message.
+00:03:15.285 --> 00:03:16.318
+Write your prediction:
 
-00:02:28.310 --> 00:02:30.901
-Third, the controls should
-work with the keyboard.
+00:03:16.985 --> 00:03:21.605
+the part that will change, about how many
+lines, and one thing that could break.
 
-00:02:31.890 --> 00:02:34.947
-Add a check for different letter
-cases and a narrow screen.
+00:03:22.725 --> 00:03:23.865
+Pause the video now.
 
-00:02:35.990 --> 00:02:37.430
-These are acceptance checks:
+00:03:35.048 --> 00:03:37.608 line:0 position:50% align:center size:95%
+A diff shows exactly what changed.
 
-00:02:37.870 --> 00:02:41.808
-statements about behavior that help you
-decide whether the result is usable.
+00:03:38.788 --> 00:03:43.368 line:0 position:50% align:center size:95%
+A line with a minus sign was removed,
+and a line with a plus sign was added.
 
-00:02:42.770 --> 00:02:45.350
-Avoid a requirement
-such as make it amazing,
+00:03:44.568 --> 00:03:48.288 line:0 position:50% align:center size:95%
+Here, one added line puts
+the category into the search.
 
-00:02:45.350 --> 00:02:48.190
-because it does not explain what to test.
+00:03:49.168 --> 00:03:50.568 line:0 position:50% align:center size:95%
+That is what we asked for.
 
-00:02:49.530 --> 00:02:53.450
-Pause and write three checks for
-a small app idea of your own.
+00:03:51.968 --> 00:03:52.719 line:0 position:50% align:center size:95%
+But look closer.
 
-00:02:54.370 --> 00:02:55.350
-Ask a partner
+00:03:53.708 --> 00:03:59.288 line:0 position:50% align:center size:95%
+Another line lost three words written
+together in the code: to lower case.
 
-00:02:55.350 --> 00:02:59.090
-whether they could carry out each
-check without guessing what you meant.
+00:04:00.328 --> 00:04:02.768 line:0 position:50% align:center size:95%
+That is the step that
+ignores capital letters.
 
-00:03:00.939 --> 00:03:02.879
-A useful prompt describes the user,
+00:04:03.668 --> 00:04:04.988 line:0 position:50% align:center size:95%
+Nobody asked for that.
 
-00:03:03.439 --> 00:03:07.159
-the task, the controls,
-the data boundaries, and the checks.
+00:04:05.988 --> 00:04:07.428 line:0 position:50% align:center size:95%
+You can check it yourself.
 
-00:03:08.239 --> 00:03:08.989
-For example:
+00:04:08.228 --> 00:04:11.328 line:0 position:50% align:center size:95%
+Press Control and U to
+see the page's code,
 
-00:03:09.319 --> 00:03:10.279
-build one local
+00:04:12.168 --> 00:04:16.648 line:0 position:50% align:center size:95%
+then Control and F to
+search it for to lower case.
 
-00:03:10.279 --> 00:03:14.519
-HTML page that searches fictional
-community resources by name and category.
+00:04:17.828 --> 00:04:21.728 line:0 position:50% align:center size:95%
+Version 1 has two matches,
+and version 2 has one.
 
-00:03:15.479 --> 00:03:16.559
-Include labeled fields,
+00:04:23.168 --> 00:04:25.448 line:0 position:50% align:center size:95%
+Open the Mission 6B practice page,
 
-00:03:17.159 --> 00:03:21.439
-visible keyboard focus, a no-results
-message, and no external dependencies.
+00:04:25.908 --> 00:04:29.848 line:0 position:50% align:center size:95%
+and mark each changed
+line as asked for or not.
 
-00:03:22.779 --> 00:03:26.251
-Keep all example records fictional
-and explain how to run the file.
+00:04:30.888 --> 00:04:31.928 line:0 position:50% align:center size:95%
+Pause the video now.
 
-00:03:27.139 --> 00:03:31.159
-Ask the AI to describe the important
-parts so you can inspect its work.
+00:04:46.096 --> 00:04:48.976 line:0 position:50% align:center size:95%
+Now test the agent's version,
+called version 2.
 
-00:03:32.119 --> 00:03:36.539
-Do not put passwords or private API keys
-into the prompt or the browser code.
+00:04:50.496 --> 00:04:53.836 line:0 position:50% align:center size:95%
+Start with the happy path,
+the normal use you expect to work.
 
-00:03:37.379 --> 00:03:40.021
-People can inspect code
-delivered to their browser.
+00:04:54.656 --> 00:04:56.729 line:0 position:50% align:center size:95%
+Type learning, and two resources appear.
 
-00:03:40.299 --> 00:03:42.579
-A longer prompt is not
-automatically better;
+00:04:57.896 --> 00:04:59.556 line:0 position:50% align:center size:95%
+Type library, and one appears.
 
-00:03:43.279 --> 00:03:46.906
-each instruction should clarify
-behavior or a boundary you can verify.
+00:05:00.876 --> 00:05:03.736 line:0 position:50% align:center size:95%
+Type zzz, and the no-match message shows.
 
-00:03:48.488 --> 00:03:51.234 line:0 position:50% align:center size:95%
-Use the instructor-approved
-tool if one is available,
+00:05:05.436 --> 00:05:06.610 line:0 position:50% align:center size:95%
+Then try capital letters.
 
-00:03:51.748 --> 00:03:53.561 line:0 position:50% align:center size:95%
-or begin with the supplied starter.
+00:05:07.336 --> 00:05:09.396 line:0 position:50% align:center size:95%
+Type LIBRARY, and nothing is found.
 
-00:03:54.788 --> 00:03:58.788 line:0 position:50% align:center size:95%
-Save the file with its HTML
-extension and open it in the browser.
+00:05:10.356 --> 00:05:11.256 line:0 position:50% align:center size:95%
+Version 1 found it.
 
-00:04:00.148 --> 00:04:04.448 line:0 position:50% align:center size:95%
-Confirm that the heading, search field,
-filter, and results appear.
+00:05:12.176 --> 00:05:16.114 line:0 position:50% align:center size:95%
+Something that used to work and broke
+after a change is called a regression.
 
-00:04:05.728 --> 00:04:08.788 line:0 position:50% align:center size:95%
-Keep this first working version
-before asking for changes.
+00:05:17.236 --> 00:05:19.956 line:0 position:50% align:center size:95%
+Keep going,
+because one failure does not end a test.
 
-00:04:09.868 --> 00:04:11.908 line:0 position:50% align:center size:95%
-If no AI account is available,
+00:05:20.756 --> 00:05:23.761 line:0 position:50% align:center size:95%
+Check that Tab moves a clear
+outline through the controls,
 
-00:04:12.408 --> 00:04:15.569 line:0 position:50% align:center size:95%
-you can still complete the
-exercise with a plain-text editor:
+00:05:24.116 --> 00:05:26.655 line:0 position:50% align:center size:95%
+and that the page still
+works in a narrow window.
 
-00:04:16.148 --> 00:04:19.068 line:0 position:50% align:center size:95%
-change the heading and
-one fictional resource,
+00:05:27.576 --> 00:05:29.493 line:0 position:50% align:center size:95%
+Run the five checks in your test log.
 
-00:04:19.988 --> 00:04:22.448 line:0 position:50% align:center size:95%
-save the file, and refresh the browser.
+00:05:30.256 --> 00:05:31.296 line:0 position:50% align:center size:95%
+Pause the video now.
 
-00:04:23.608 --> 00:04:27.468 line:0 position:50% align:center size:95%
-Be careful that the editor has not
-silently added a text-file extension.
+00:05:42.396 --> 00:05:45.636
+A bug report is a request
+a stranger could follow.
 
-00:04:28.548 --> 00:04:31.088 line:0 position:50% align:center size:95%
-The goal is a working
-result you can explain,
+00:05:46.356 --> 00:05:50.076
+Give the steps:
+open version 2 and type LIBRARY.
 
-00:04:31.948 --> 00:04:35.160 line:0 position:50% align:center size:95%
-not evidence that you used a
-particular paid service or model.
+00:05:51.456 --> 00:05:55.496
+Give what you expected:
+one resource, as version 1 found.
 
-00:04:36.826 --> 00:04:37.846 line:0 position:50% align:center size:95%
-Type library into
+00:05:56.596 --> 00:05:59.176
+Give what actually happened: no matches.
 
-00:04:37.846 --> 00:04:41.628 line:0 position:50% align:center size:95%
-the search field and compare the result
-with your first acceptance check.
+00:06:00.696 --> 00:06:04.736
+Then say what must stay the same:
+keep the new category search.
 
-00:04:42.126 --> 00:04:48.306 line:0 position:50% align:center size:95%
-Then enter an unmatched term such as zzz.
-The page should explain that there
+00:06:05.716 --> 00:06:11.636
+That last part matters, because a
+careless fix can undo the work you wanted.
 
-00:04:48.306 --> 00:04:52.586 line:0 position:50% align:center size:95%
-are no matching resources rather than
-appearing broken or showing an old result.
+00:06:11.636 --> 00:06:14.796
+Saying it is broken gives
+the agent nothing to act on.
 
-00:04:53.646 --> 00:04:57.746 line:0 position:50% align:center size:95%
-Clear the field and try
-LIBRARY in uppercase.
+00:06:15.596 --> 00:06:19.056
+A clear report usually gets a small,
+careful repair.
 
-00:04:57.746 --> 00:05:00.566 line:0 position:50% align:center size:95%
-If the intended behavior is
-a case-insensitive search,
+00:06:20.176 --> 00:06:22.145
+Write a repair request with the steps,
 
-00:05:01.106 --> 00:05:02.561 line:0 position:50% align:center size:95%
-it should find the same record.
+00:06:22.856 --> 00:06:26.096
+what you expected,
+what happened, and what to keep.
 
-00:05:03.066 --> 00:05:06.846 line:0 position:50% align:center size:95%
-Next combine the search with
-a category filter and inspect
+00:06:27.200 --> 00:06:28.139
+Pause the video now.
 
-00:05:06.846 --> 00:05:12.246 line:0 position:50% align:center size:95%
-whether both conditions apply. Record
-expected and actual results separately.
+00:06:39.089 --> 00:06:41.069
+The agent sends back version 3.
 
-00:05:13.466 --> 00:05:15.386 line:0 position:50% align:center size:95%
-A confident statement from the AI is
+00:06:41.749 --> 00:06:43.949
+Do not trust it until you retest.
 
-00:05:15.386 --> 00:05:18.866 line:0 position:50% align:center size:95%
-not test evidence.
-The evidence is what happened
+00:06:45.389 --> 00:06:47.202
+First repeat the check that failed.
 
-00:05:18.866 --> 00:05:21.626 line:0 position:50% align:center size:95%
-when you carried out a named
-check on the saved file.
+00:06:47.449 --> 00:06:50.349
+Type LIBRARY,
+and one resource appears again.
 
-00:05:23.400 --> 00:05:26.923
-Set the mouse aside and move through
-the controls with the keyboard.
+00:06:51.509 --> 00:06:52.429
+Then repeat checks
 
-00:05:26.980 --> 00:05:28.845
-Can you see which control has focus?
+00:06:52.429 --> 00:06:56.089
+that passed before, because fixing
+one thing can break another.
 
-00:05:29.340 --> 00:05:31.723
-Can you enter a search
-and operate the filter?
+00:06:57.069 --> 00:07:01.489
+Learning still finds two,
+and zzz still shows the no-match message.
 
-00:05:32.720 --> 00:05:35.673
-Narrow the browser window and
-check that labels, results,
+00:07:02.489 --> 00:07:03.329
+Only when
 
-00:05:35.820 --> 00:05:39.343
-and buttons remain readable without
-important content being cut off.
+00:07:03.329 --> 00:07:07.209
+the failed check passes and nothing
+else broke do you accept the repair.
 
-00:05:40.440 --> 00:05:41.848
-Then ask where the data lives.
+00:07:08.229 --> 00:07:09.849
+This loop is the whole job:
 
-00:05:42.420 --> 00:05:45.218
-In our starter,
-fictional records are inside the file.
+00:07:10.609 --> 00:07:15.729
+ask clearly, read the change,
+test it, report it, and retest.
 
-00:05:45.940 --> 00:05:47.040
-Browser storage, if
+00:07:17.169 --> 00:07:20.769
+Run your checks on version 3 and
+decide whether to accept the repair.
 
-00:05:47.040 --> 00:05:50.520
-added later, may remain only in
-that browser and may be cleared;
+00:07:22.049 --> 00:07:23.189
+Pause the video now.
 
-00:05:50.520 --> 00:05:54.100
-it is not automatically a
-shared database or a backup.
+00:07:37.598 --> 00:07:40.378
+Our finder is one page
+with fictional data.
 
-00:05:55.020 --> 00:05:57.360
-Test persistence rather than assuming it.
+00:07:41.378 --> 00:07:43.218
+A real service needs much more.
 
-00:05:58.040 --> 00:06:00.000
-Use the course's existing text-size
+00:07:44.218 --> 00:07:47.378
+It needs an address,
+a domain name you rent every year.
 
-00:06:00.000 --> 00:06:03.109
-and accessibility habits as
-standards for the app you build.
+00:07:48.258 --> 00:07:50.018
+It needs a home: hosting
 
-00:06:04.772 --> 00:06:06.652
-Suppose the uppercase search failed.
+00:07:50.018 --> 00:07:52.194
+is a computer that keeps the site running,
 
-00:06:08.272 --> 00:06:11.018
-A useful revision request
-names the observed problem,
+00:07:52.358 --> 00:07:54.327
+so anyone with the address can use it.
 
-00:06:11.252 --> 00:06:13.169
-the expected behavior, and the check:
+00:07:54.918 --> 00:07:56.918
+To save favorites for many people,
 
-00:06:13.992 --> 00:06:15.532
-LIBRARY returns no result,
+00:07:57.358 --> 00:08:00.898
+it needs a back end,
+the part on a server that stores data.
 
-00:06:16.092 --> 00:06:18.061
-but library returns Community library;
+00:08:00.898 --> 00:08:06.778
+Sign-in must be checked on that server,
+never by a picture of a sign-in box.
 
-00:06:19.052 --> 00:06:22.834
-make both searches match the same
-entry and preserve the category filter.
+00:08:08.218 --> 00:08:09.678
+A secret API key,
 
-00:06:23.892 --> 00:06:26.327
-Save the revised version
-under a distinct name.
+00:08:10.098 --> 00:08:14.278
+the code that lets your app use a
+paid service, stays on the server too.
 
-00:06:26.992 --> 00:06:30.515
-Repeat the failed check, then repeat
-a check that previously passed.
+00:08:15.358 --> 00:08:19.598
+Plan the finder as a real service,
+one roadblock at a time.
 
-00:06:31.392 --> 00:06:35.693
-This second step can reveal a regression,
-where fixing one behavior breaks another.
+00:08:20.838 --> 00:08:21.777
+Pause the video now.
 
-00:06:37.252 --> 00:06:40.620
-If the new version is worse,
-return to the saved working version.
+00:08:36.177 --> 00:08:37.477
+Here is what you practiced.
 
-00:06:41.732 --> 00:06:44.332
-Pause and make one small
-improvement or repair.
+00:08:39.017 --> 00:08:40.379
+You started from what worked,
 
-00:06:45.332 --> 00:06:49.477
-Keep a brief test log so a partner can
-follow what changed and why you trust it.
+00:08:40.777 --> 00:08:42.757
+wrote one clear request with checks,
 
-00:06:51.113 --> 00:06:54.844
-Show a partner the saved app and carry
-out your three acceptance checks.
+00:08:43.737 --> 00:08:44.723
+predicted the change,
 
-00:06:55.513 --> 00:07:00.333
-Explain one part of the page, one change
-you made, and one limitation that remains.
+00:08:45.557 --> 00:08:51.457
+read the diff, tested, reported a
+regression, and retested the repair.
 
-00:07:01.513 --> 00:07:03.213
-A local fictional prototype can
+00:08:52.917 --> 00:08:56.337
+That loop works whether the
+helper is an AI agent or a person.
 
-00:07:03.213 --> 00:07:07.358
-be a successful learning result without
-being ready to operate a public service.
+00:08:57.237 --> 00:08:59.206
+And someone must still own the result.
 
-00:07:07.993 --> 00:07:09.393
-Hosting is a separate choice.
+00:08:59.837 --> 00:09:02.531
+A real service needs a
+caretaker who pays the bills,
 
-00:07:10.213 --> 00:07:11.923
-A real service handling accounts,
+00:09:02.697 --> 00:09:03.495
+keeps it updated,
 
-00:07:12.153 --> 00:07:12.903
-private data,
+00:09:03.937 --> 00:09:08.577
+backs up the data, helps users, and
+reviews every change before it goes live.
 
-00:07:12.993 --> 00:07:15.153
-or payments needs appropriate security,
+00:09:09.557 --> 00:09:11.215
+An agent can write code quickly.
 
-00:07:15.733 --> 00:07:19.613
-access controls, support,
-and testing beyond this exercise.
+00:09:11.777 --> 00:09:13.185
+It cannot take responsibility.
 
-00:07:20.793 --> 00:07:23.539
-Do not treat a decorative
-sign-in form as protection.
+00:09:14.157 --> 00:09:15.617
+That part stays with the people
 
-00:07:24.773 --> 00:07:28.093
-Carry forward the method you practiced:
-define a small task,
-
-00:07:28.733 --> 00:07:29.860
-give clear instructions,
-
-00:07:30.473 --> 00:07:31.365
-inspect the result,
-
-00:07:31.693 --> 00:07:35.713
-test more than the easiest path,
-and keep a way back when you revise it.
+00:09:15.617 --> 00:09:16.556
+who run the service.

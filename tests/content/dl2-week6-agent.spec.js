@@ -127,7 +127,8 @@ test('Week 6 answer guide lists the expected result of every check',()=>{
 
 test('Week 6 transcript defines the words the video uses, above the transcript',()=>{
  const html=week('video-transcript.html'),plain=text(html);
- expect(w6.glossary.map(g=>g[0])).toEqual(['Agent','Prompt','Spec','Acceptance check','Happy path','Diff','Regression','Hosting','SaaS (software as a service)','API key','Authentication']);
+ // 2026-10-08: the rewritten video also names a domain name and the back end.
+ expect(w6.glossary.map(g=>g[0])).toEqual(['Agent','Prompt','Spec','Acceptance check','Happy path','Diff','Regression','Hosting','Domain name','SaaS (software as a service)','Back end','API key','Authentication']);
  expect(plain).toContain('Words in this video');
  for(const [term,definition] of w6.glossary){expect(plain).toContain(term);expect(plain).toContain(definition);}
  expect(html.indexOf('Words in this video')).toBeLessThan(html.indexOf('id="transcript-content"'));

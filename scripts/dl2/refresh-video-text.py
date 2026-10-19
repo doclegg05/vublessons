@@ -68,6 +68,14 @@ def main() -> None:
                             lambda m: m[1] + sections(beats, cards, demos) + m[2], source, flags=re.S)
     if count != 1:
         raise SystemExit(f'{transcript}: transcript content not found')
+    # A week with a glossary (Week 6) shows it above the transcript as "Words in this video".
+    glossary = json.loads(Path('scripts/dl2/curriculum.json').read_text())['weeks'][int(week[-2:]) - 1].get('glossary')
+    if glossary:
+        words = ''.join(f'<dt>{E(term)}</dt><dd>{E(text)}</dd>' for term, text in glossary)
+        source, count = re.subn(r'(<section class="video-words"[^>]*><h2[^>]*>Words in this video</h2><dl>).*?(</dl>)',
+                                lambda m: m[1] + words + m[2], source, flags=re.S)
+        if count != 1:
+            raise SystemExit(f'{transcript}: glossary box not found')
     transcript.write_text(source)
     print(f'{week}: {len(names)} chapter labels and transcript sections refreshed')
 

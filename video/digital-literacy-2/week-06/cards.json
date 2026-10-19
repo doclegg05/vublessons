@@ -1,0 +1,111 @@
+{
+  "about": "Topic dividers and pause cards for the Week 6 video (Britt, 2026-10-08). A divider plays silently before its chapter's narration; a pause card holds 10 seconds of silence after it. Read by normalize-pace.py and build-media.py; tests/content/dl2-video-cards.spec.js checks every worksheet reference.",
+  "chapters": {
+    "beat-02": {
+      "divider": {
+        "app": "Spec",
+        "mission": "6A",
+        "title": "Specify the change"
+      },
+      "pause": {
+        "try": [
+          "Open version 1.",
+          "Search library, LIBRARY, learning, community, zzz.",
+          "Write how many each one finds."
+        ],
+        "where": "Mission 6A, Round 2"
+      }
+    },
+    "beat-03": {
+      "pause": {
+        "try": [
+          "Write the spec: one change, who it helps.",
+          "Add two things that must stay the same.",
+          "Write three checks a partner could run."
+        ],
+        "where": "Mission 6A, tasks 1 and 2"
+      }
+    },
+    "beat-04": {
+      "divider": {
+        "app": "Review",
+        "mission": "6B",
+        "title": "Review the proposed change"
+      },
+      "pause": {
+        "try": [
+          "Which part will change?",
+          "About how many lines?",
+          "One thing that could break."
+        ],
+        "where": "Mission 6B, task 1"
+      }
+    },
+    "beat-05": {
+      "pause": {
+        "try": [
+          "Open the Mission 6B practice page.",
+          "Read each changed line.",
+          "Mark it asked for, or not asked for."
+        ],
+        "where": "Mission 6B, task 2"
+      }
+    },
+    "beat-06": {
+      "divider": {
+        "app": "Test",
+        "mission": "6C",
+        "title": "Test, report, repair, retest"
+      },
+      "pause": {
+        "try": [
+          "Open the agent's version.",
+          "Run the five checks in your test log.",
+          "Write expected, actual, pass or fail."
+        ],
+        "where": "Mission 6C, task 1"
+      }
+    },
+    "beat-07": {
+      "pause": {
+        "try": [
+          "The steps: what you typed.",
+          "What you expected, and what happened.",
+          "What must stay the same."
+        ],
+        "where": "Mission 6C, task 2"
+      }
+    },
+    "beat-08": {
+      "pause": {
+        "try": [
+          "Open the repaired version.",
+          "Repeat the failed check and two that passed.",
+          "Accept the repair, or not?"
+        ],
+        "where": "Mission 6C, task 3"
+      }
+    },
+    "beat-09": {
+      "divider": {
+        "app": "Ready?",
+        "mission": "6D",
+        "title": "Know what “ready” means"
+      },
+      "pause": {
+        "try": [
+          "Address and home: domain name, hosting.",
+          "Memory, front door, keys: the server.",
+          "Caretaker: who pays and keeps it running?"
+        ],
+        "where": "Mission 6D, task 1"
+      }
+    },
+    "beat-10": {
+      "divider": {
+        "app": "Wrap-up",
+        "title": "Direct it, check it, own it"
+      }
+    }
+  }
+}

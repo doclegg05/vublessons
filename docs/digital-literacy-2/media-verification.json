@@ -66,14 +66,14 @@
   },
   {
     "week": 6,
-    "durationSeconds": 457.75,
+    "durationSeconds": 558.75,
     "fullDecode": "pass",
     "blackFrames": "none",
-    "meanVolumeDb": -22.0,
-    "peakVolumeDb": -3.8,
+    "meanVolumeDb": -23.2,
+    "peakVolumeDb": -3.4,
     "integratedLufs": -18.05,
-    "truePeakDbtp": -3.8,
-    "captionCues": 129,
+    "truePeakDbtp": -3.41,
+    "captionCues": 126,
     "fastStart": true,
     "hyperframesStrict": "pass"
   }

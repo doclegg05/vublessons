@@ -44,9 +44,14 @@ const { createHash } = require('node:crypto');
           return !v.seeking && v.paused && Math.abs(v.currentTime - time) < .15;
         }, chapters[i].startSeconds);
       }
+      // A chapter can open on a silent topic card and captions clear between sentences,
+      // so sample the middle of its first caption; state is read about .75 s after the seek.
+      const cues = [...(await fs.readFile(media.captions, 'utf8')).matchAll(/(?:(\d+):)?(\d+):([\d.]+) --> (?:(\d+):)?(\d+):([\d.]+)/g)]
+        .map(m => [1, 4].map(i => Number(m[i] || 0) * 3600 + Number(m[i + 1]) * 60 + Number(m[i + 2])));
       const playback = [];
       for (const chapter of [0, 4, 9]) {
-        const seek = chapters[chapter].startSeconds + 2;
+        const [start, end] = cues.find(([cueStart]) => cueStart >= chapters[chapter].startSeconds - .01);
+        const seek = start + Math.max(0, (end - start) / 2 - .75);
         await page.locator('video').evaluate(async (v, time) => {
           v.muted = true;
           v.textTracks[0].mode = 'showing';
@@ -62,7 +67,7 @@ const { createHash } = require('node:crypto');
           decodedVideoFrames: v.getVideoPlaybackQuality().totalVideoFrames
         }));
         assert(!state.paused && state.readyState >= 2 && state.cues >= 100);
-        assert(state.decodedVideoFrames > 0 && state.activeCaptions.length > 0);
+        assert(state.decodedVideoFrames > 0 && state.activeCaptions.length > 0, JSON.stringify({ week, chapter: chapter + 1, seek, ...state }));
         if (state.decodedAudioBytes !== null) assert(state.decodedAudioBytes > 0);
         await page.locator('video').evaluate(v => v.pause());
         playback.push({ chapter: chapter + 1, ...state });

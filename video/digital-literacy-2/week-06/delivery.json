@@ -1,0 +1,303 @@
+{
+  "about": "Delivery tags for ElevenLabs v3, inserted before the named phrase. An empty phrase tags the start. Tags never change the spoken words; scripts/dl2/tag-narration.py checks that. Calm openers and a pause at most sentences: Weeks 3 and 5 ran fast without them.",
+  "beat-01": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "That sounds like magic",
+      "[short pause]"
+    ],
+    [
+      "It does exactly",
+      "[short pause]"
+    ],
+    [
+      "Today you will direct",
+      "[short pause]"
+    ],
+    [
+      "Our app is",
+      "[short pause]"
+    ],
+    [
+      "You will ask",
+      "[short pause]"
+    ],
+    [
+      "Then we look",
+      "[short pause]"
+    ]
+  ],
+  "beat-02": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Open version 1",
+      "[short pause]"
+    ],
+    [
+      "Library finds one",
+      "[short pause]"
+    ],
+    [
+      "But learning finds nothing",
+      "[short pause]"
+    ],
+    [
+      "That is the one thing",
+      "[short pause]"
+    ],
+    [
+      "Writing down what works",
+      "[short pause]"
+    ],
+    [
+      "Search version 1 for",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-03": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Ours says:",
+      "[short pause]"
+    ],
+    [
+      "Keep capital letters",
+      "[short pause]"
+    ],
+    [
+      "Then add acceptance checks",
+      "[short pause]"
+    ],
+    [
+      "Never put real names",
+      "[short pause] [serious]"
+    ],
+    [
+      "Write your spec",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-04": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Some agents can also",
+      "[short pause]"
+    ],
+    [
+      "Either way,",
+      "[short pause]"
+    ],
+    [
+      "Read the plan",
+      "[short pause]"
+    ],
+    [
+      "Predicting first",
+      "[short pause]"
+    ],
+    [
+      "Write your prediction:",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-05": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Here, one added line",
+      "[short pause]"
+    ],
+    [
+      "But look closer.",
+      "[short pause] [curious]"
+    ],
+    [
+      "Nobody asked for that.",
+      "[short pause]"
+    ],
+    [
+      "You can check it yourself.",
+      "[short pause]"
+    ],
+    [
+      "Open the Mission 6B practice page,",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-06": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Start with the happy path",
+      "[short pause]"
+    ],
+    [
+      "Then try capital letters.",
+      "[short pause]"
+    ],
+    [
+      "Something that used to work",
+      "[short pause]"
+    ],
+    [
+      "Keep going,",
+      "[short pause]"
+    ],
+    [
+      "Run the five checks",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-07": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Give what you expected",
+      "[short pause]"
+    ],
+    [
+      "Then say what must stay",
+      "[short pause]"
+    ],
+    [
+      "Saying it is broken",
+      "[short pause]"
+    ],
+    [
+      "Write a repair request",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-08": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "First repeat the check",
+      "[short pause]"
+    ],
+    [
+      "Then repeat checks",
+      "[short pause]"
+    ],
+    [
+      "Only when the failed check",
+      "[short pause]"
+    ],
+    [
+      "This loop is the whole job",
+      "[short pause]"
+    ],
+    [
+      "Run your checks on version 3",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-09": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "It needs an address",
+      "[short pause]"
+    ],
+    [
+      "It needs a home",
+      "[short pause]"
+    ],
+    [
+      "To save favorites",
+      "[short pause]"
+    ],
+    [
+      "Sign-in must be checked",
+      "[short pause]"
+    ],
+    [
+      "A secret API key",
+      "[short pause]"
+    ],
+    [
+      "Plan the finder",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-10": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "You started from",
+      "[short pause]"
+    ],
+    [
+      "That loop works",
+      "[short pause]"
+    ],
+    [
+      "A real service needs",
+      "[short pause]"
+    ],
+    [
+      "An agent can write code",
+      "[short pause]"
+    ],
+    [
+      "That part stays",
+      "[short pause]"
+    ]
+  ]
+}
