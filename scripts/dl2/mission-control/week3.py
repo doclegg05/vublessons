@@ -19,6 +19,7 @@ Inline markup used in text (rendered by guided.py):
   {Key}     a keyboard key
   «text»    exactly what to type, or text to find on screen
 """
+import html
 
 APPS = {
     'word': 'Microsoft Word',
@@ -61,12 +62,12 @@ OUTCOMES = [
 ]
 
 
-def step(title, actions, see, draw=None, stuck=None, notes='', app=None, card=None, write=None, opener=False):
+def step(title, actions, see, draw=None, stuck=None, notes='', app=None, card=None, write=None, opener=False, write_head=None, write_rows=None):
     """One projected step. actions: 1-2 short instructions. see: what success looks like.
     draw: (function name in ui.py, kwargs) for the drawing. card: lines to type, shown large.
     write: a worksheet prompt the learner answers in writing (gets a text box)."""
     assert 1 <= len(actions) <= 2, title
-    return dict(kind='step', title=title, actions=list(actions), see=see, draw=draw, stuck=stuck, notes=notes, app=app, card=card, write=write, opener=opener)
+    return dict(kind='step', title=title, actions=list(actions), see=see, draw=draw, stuck=stuck, notes=notes, app=app, card=card, write=write, opener=opener, write_head=write_head, write_rows=write_rows)
 
 
 def open_app(app, label):
@@ -285,6 +286,8 @@ PARTS = [
         map=dict(title='Find your way around PowerPoint', draw=('ribbon', dict(app='powerpoint', active_tab='Home', groups=[('Slides', ['New Slide', 'Layout']), ('Font', ['Bold', 'Italic']), ('Paragraph', ['Bullets'])], targets=['File', 'Insert', 'Design'])),
                  items=['[File]: where you save.', '[Insert] tab: add a picture.', '[Design] tab: choose a theme.'],
                  notes='The tabs are in the same row as in Word. Design and Insert are the two we need.'),
+        worksheet_extra=(f'<p class="g-download"><a class="g-download-button" href="/courses/digital-literacy-2/assets/practice-photo.jpg" download="practice-photo.jpg">Download the practice photo</a> '
+                         f'<span>Its permission: you may use and crop it if you give this credit: <span class="typed">{html.escape(CREDIT, quote=True)}</span></span></p>'),
         steps=[
             step('Download the practice photo', ['Click [Microsoft Edge] on the taskbar. Click the [Week 3 · Worksheet] tab.', 'Scroll to [Part 4]. Click [Download the practice photo].'],
                  '«practice-photo.jpg» at the top right.', ('edge_page_download', {}), app='edge',
@@ -336,6 +339,7 @@ for _part in PARTS:
 
 
 WRAP = dict(
+    label='FILE EXPLORER',
     files=step('Check your Resource pack', ['Click [File Explorer] (the yellow folder) on the taskbar.', 'Click [Documents], then double-click [Resource pack].'],
                'four files: the handout (Word and PDF), [Supply list] and [Flyer].', ('explorer_resource_pack', {}), app='explorer',
                stuck=('A file is missing?', 'Open that program again with the {Windows} key, then use [File] › [Save As] › [Browse] into Resource pack.'),
@@ -348,5 +352,27 @@ WEEK3 = dict(
     guided=True, title='Make a useful resource pack.', photo='resource-pack', nobreak=True,
     warm='Think of a flyer or handout that was easy to follow. What made it easy?',
     goals=GOALS, outcomes=OUTCOMES, ready=READY, parts=PARTS, wrap=WRAP, apps=APPS, credit=CREDIT,
+    video='week-03', minutes=[30, 12, 25, 28], example_app='word',
+    hero='Tonight you make a handout, a PDF, a supply list and a flyer, one step at a time.',
+    goals_foot='These four skills are on your post-test.',
+    done='You made a handout, a PDF, a supply list and a flyer.',
+    show_notes='Walk the room with the roster. Mark Independent, With prompt or Needs practice for each of the four. Re-show only the missing step.',
+    home_notes='Learners may copy Resource pack to a flash drive, then delete it. Close all programs, then select Start fresh on this computer.',
+    ws_note='Nothing tonight needs an account, a payment or your own personal details.',
+    answer_note='The four parts prepare the four Week 3 post-test items (9 to 12).',
+    plan_scope='Each part opens with a slide naming the program, then why it matters, a short video clip, the steps and one check question. Week 3 teaches only the four skills on the post-test (items 9 to 12), plus numbered steps in Word and a PowerPoint theme. There is no break and no timer. Minutes below are a guide for pacing, not a clock for learners.',
+    jump_labels=['Start', 'Before we start', 'Part 1 · Word', 'Part 2 · Word → PDF', 'Part 3 · Excel', 'Part 4 · PowerPoint', 'Wrap-up'],
+    quick=[
+            ('Open a program', 'Press {Windows}, type the program name, press {Enter}, then click the [Blank] tile.'),
+            ('Make a heading', 'Click in the line. [Home] tab › [Styles] box › [Heading 1] or [Heading 2].'),
+            ('Number lines', 'Select the lines by dragging. [Home] tab › [Numbering].'),
+            ('Check headings', '[View] tab › tick [Navigation Pane].'),
+            ('Save into Resource pack', '[File] › [Save As] › [Browse] › [Documents] › double-click [Resource pack] › click in [File name], press {Ctrl}+{A}, type the name › [Save].'),
+            ('Save a PDF', 'Same as above, then [Save as type] › [PDF (*.pdf)] › tick [Open file after publishing] › [Save].'),
+            ('Add a total', 'Click the cell, type «=SUM(B2:B4)», press {Enter}. Click the cell to see the formula in the [formula bar].'),
+            ('Pick a theme', 'PowerPoint: [Design] tab › click a theme.'),
+            ('Insert a photo', '[Insert] tab › [Pictures] › [This Device] › [Downloads] › the photo › [Insert].'),
+            ('Crop a photo', 'Click the photo. [Picture Format] tab › [Crop]. Drag a black mark inward. Press {Esc}.'),
+    ],
     prep='Each station: Microsoft Word, Excel and PowerPoint that open without a sign-in, Microsoft Edge, and File Explorer on the taskbar. Before class, check that Word can save to Documents on This PC (not only OneDrive), that Edge can download the practice photo from the Week 3 worksheet, and that no old Resource pack folder is left in Documents. Check sound on the projector: play the first Watch slide. Keep a roster for the end-of-class check. After your own run-through, delete your Resource pack folder and the downloaded photo, then select Start fresh on this computer at each station.',
 )

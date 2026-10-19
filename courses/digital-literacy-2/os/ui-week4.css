@@ -1,0 +1,100 @@
+/* Week 4 guided lesson: Gmail, Word comments and a practice offer page.
+ * Markup comes from scripts/dl2/mission-control/ui_mail.py. Original schematic drawings, not screenshots.
+ * Loaded only by Week 4, after ui-drawings.css and guided.css. Sizes are cqw of the .deck. No text below 1.15cqw. */
+
+/* Gmail identity: badge letter M on red, and its banner color. */
+.app-badge-gmail { background:#c5221f; }
+.guided-deck .hud .app-gmail { background:#c5221f; color:#fff; }
+.guided-deck .g-foot .app-gmail { background:#c5221f; color:#fff; }
+
+/* ---------------------------------------------------------------- Gmail */
+.ui .m-gm { background:#f6f8fc; white-space:normal; }
+.ui .m-top { display:flex; align-items:center; gap:1.2cqw; height:2.6cqw; padding:0 1cqw; }
+.ui .m-logo { font-size:1.5cqw; font-weight:700; color:#c5221f; }
+.ui .m-search { flex:1; display:flex; align-items:center; height:1.9cqw; padding:0 .9cqw; border-radius:1cqw; background:#e9eef6; color:#444; font-size:1.15cqw; }
+.ui .m-cols { display:flex; gap:.8cqw; padding:0 .6cqw .3cqw; min-height:15cqw; }
+.ui .m-side { flex:none; width:11cqw; display:flex; flex-direction:column; gap:.5cqw; padding-top:.3cqw; }
+.ui .m-compose { position:relative; display:flex; align-items:center; gap:.5cqw; padding:.7cqw 1cqw; background:#c2e7ff; border-radius:1.2cqw; font-size:1.3cqw; font-weight:600; color:#001d35; white-space:nowrap; }
+.ui .m-compose.u-t { margin-right:.6cqw; }
+.ui .m-fold { position:relative; display:flex; align-items:center; justify-content:space-between; padding:.4cqw .9cqw; border-radius:0 1.2cqw 1.2cqw 0; font-size:1.2cqw; color:#222; }
+.ui .m-fold.m-on { background:#d3e3fd; font-weight:700; }
+.ui .m-fold.u-t { margin-right:.8cqw; }
+.ui .m-cnt { font-size:1.15cqw; font-weight:700; }
+.ui .m-ic-pen { display:inline-block; width:1.1cqw; height:1.1cqw; border-bottom:.2cqw solid #001d35; border-left:.2cqw solid #001d35; transform:skewX(-20deg); }
+.ui .m-list { flex:1; min-width:0; background:#fff; border-radius:.8cqw; padding:.4cqw .8cqw; }
+.ui .m-row { display:flex; align-items:center; gap:1.2cqw; height:3cqw; border-bottom:.1cqw solid #e7eaf0; font-size:1.25cqw; }
+.ui .m-from { flex:none; width:11cqw; overflow:hidden; text-overflow:ellipsis; font-weight:700; color:#111; }
+.ui .m-draft { color:#c5221f; }
+.ui .m-subj { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; color:#333; }
+
+/* The New Message window. */
+.ui .m-ghost { width:8cqw; opacity:.55; }
+.ui .m-ghost .m-compose { padding:.7cqw .6cqw; font-size:1.15cqw; }
+.ui .m-win { flex:1; min-width:0; align-self:flex-start; background:#fff; border:.1cqw solid #b9b9b9; border-radius:.7cqw .7cqw .3cqw .3cqw; box-shadow:0 .3cqw 1.2cqw rgba(0,0,0,.35); }
+.ui .m-head { display:flex; align-items:center; justify-content:space-between; height:2.1cqw; padding:0 .8cqw; background:#404040; color:#fff; border-radius:.6cqw .6cqw 0 0; font-size:1.25cqw; font-weight:600; }
+.ui .m-wc { display:flex; align-items:center; gap:1.2cqw; }
+.ui .m-min { display:inline-block; width:1cqw; border-top:.15cqw solid #fff; }
+.ui .m-max { display:inline-block; width:1cqw; height:.9cqw; border:.13cqw solid #fff; }
+.ui .m-x { position:relative; display:inline-block; width:1.4cqw; height:1.4cqw; color:#fff; }
+.ui .m-x .u-x { position:absolute; left:.2cqw; top:.2cqw; }
+.ui .m-fld { position:relative; display:flex; align-items:center; gap:.6cqw; min-height:2.3cqw; padding:.2cqw .9cqw; border-bottom:.1cqw solid #e3e3e3; font-size:1.2cqw; }
+.ui .m-lab { flex:none; width:2.6cqw; color:#555; font-weight:600; }
+.ui .m-in { flex:1; min-width:0; display:flex; flex-wrap:wrap; align-items:center; gap:.4cqw; }
+.ui .m-subject { display:block; flex:none; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:600; color:#111; }
+.ui .m-ph { color:#666; }
+.ui .m-chip { padding:.15cqw .8cqw; border-radius:1cqw; background:#e3e6ea; font-size:1.15cqw; color:#111; }
+.ui .m-lnks { position:relative; flex:none; display:flex; gap:1cqw; color:#444; }
+.ui .m-lnk { position:relative; }
+.ui .m-lnk.u-t { padding:0 .3cqw; background:#fff; }
+.ui .m-caret { height:1.3cqw; }
+.ui .m-body { position:relative; min-height:5cqw; max-height:9.4cqw; overflow:hidden; padding:.6cqw .9cqw; font-size:1.15cqw; line-height:1.35; color:#111; }
+.ui .m-body.u-t { overflow:visible; }
+.ui .m-bcc .m-body { min-height:4.4cqw; max-height:4.4cqw; }
+.ui .m-bl { display:block; }
+.ui .m-foot { display:flex; align-items:center; gap:1.1cqw; padding:.5cqw .9cqw .6cqw; }
+.ui .m-send { padding:.5cqw 1.6cqw; border-radius:1.2cqw; background:#0b57d0; color:#fff; font-size:1.25cqw; font-weight:700; }
+.ui .m-fi { font-size:1.3cqw; font-weight:700; color:#555; }
+.ui .m-clip { display:inline-block; width:.8cqw; height:1.4cqw; border:.15cqw solid #555; border-radius:.5cqw; }
+.ui .m-trash { position:relative; margin-left:auto; display:inline-block; width:2cqw; height:2cqw; }
+.ui .m-lid { position:absolute; top:.2cqw; left:.2cqw; right:.2cqw; border-top:.22cqw solid #444; }
+.ui .m-can { position:absolute; top:.6cqw; left:.4cqw; right:.4cqw; bottom:.1cqw; border:.17cqw solid #444; border-top:0; border-radius:0 0 .2cqw .2cqw; }
+
+/* ---------------------------------------------------------------- Word comments */
+.ui-word-review .u-rb { min-height:5.8cqw; }
+.ui .r-split { display:flex; height:12.8cqw; background:#e7e7e7; }
+.ui .r-split.r-short { height:11.4cqw; }
+.ui .r-split.r-tall { height:18.5cqw; }
+.ui .r-doc { flex:1; min-width:0; display:flex; justify-content:center; padding:.9cqw .8cqw 0; }
+.ui .r-page { width:100%; display:flex; flex-direction:column; gap:.3cqw; padding:1cqw 1.4cqw; background:#fff; box-shadow:0 0 .35cqw rgba(0,0,0,.22); white-space:normal; color:#111; }
+.ui .r-ln { display:block; font-size:1.2cqw; line-height:1.35; }
+.ui .r-h { margin-bottom:.4cqw; font-size:1.6cqw; font-weight:700; color:#1f3864; }
+.ui .r-sel { background:#c4d5ea; box-shadow:0 0 0 .08cqw #c4d5ea; }
+.ui .r-pane { position:relative; flex:none; width:15.5cqw; padding:.9cqw .6cqw 0; }
+.ui .r-card { position:relative; display:flex; flex-direction:column; gap:.4cqw; padding:.7cqw .9cqw .8cqw; background:#fff; border-left:.45cqw solid #185abd; border-radius:.5cqw; box-shadow:0 .1cqw .5cqw rgba(0,0,0,.3); font-size:1.15cqw; line-height:1.3; white-space:normal; color:#111; }
+.ui .r-card.r-res { background:#efefef; border-left-color:#777; color:#444; }
+.ui .r-who { font-weight:700; }
+.ui .r-done { font-weight:700; color:#444; }
+.ui .r-post { position:relative; align-self:flex-start; padding:.35cqw .9cqw; background:#185abd; color:#fff; border-radius:.3cqw; font-weight:700; }
+.ui .r-post.u-t { margin:.3cqw 0 .3cqw .3cqw; }
+.ui .r-reply { position:relative; padding:.35cqw .7cqw; border:.1cqw solid #777; border-radius:.3cqw; color:#555; }
+.ui .r-reply.u-t { margin:.3cqw .3cqw .3cqw 0; }
+.ui .r-typing { color:#111; border-color:#185abd; }
+.ui .r-more { position:absolute; top:.3cqw; right:.5cqw; padding:0 .5cqw; font-size:1.5cqw; font-weight:800; letter-spacing:.05em; line-height:1.2; }
+.ui .r-more.u-t { background:#fff; }
+.ui .r-menu { position:absolute; top:2.3cqw; right:.2cqw; z-index:5; display:flex; flex-direction:column; width:11.5cqw; padding:.3cqw; background:#fff; border-radius:.4cqw; box-shadow:0 .3cqw 1cqw rgba(0,0,0,.5); font-size:1.2cqw; }
+.ui .r-mi { position:relative; padding:.4cqw .7cqw; }
+
+/* ---------------------------------------------------------------- practice offer page */
+.ui .o-bar { padding:.4cqw 1cqw; background:#ffc400; color:#111; font-size:1.2cqw; font-weight:700; text-align:center; }
+.ui .o-pg { display:flex; flex-direction:column; align-items:flex-start; gap:.3cqw; padding:.6cqw 1.6cqw .8cqw; background:#fff; white-space:normal; color:#111; }
+.ui .o-brand { font-size:1.4cqw; font-weight:700; color:#0b3d4a; }
+.ui .o-big { font-size:2.4cqw; font-weight:800; line-height:1.1; }
+.ui .o-then { font-size:1.6cqw; line-height:1.2; }
+.ui .o-p { position:relative; display:inline-block; }
+.ui .o-price { font-weight:800; }
+.ui .o-btn { padding:.35cqw 1.4cqw; background:#8a949f; color:#fff; border-radius:.4cqw; font-size:1.35cqw; font-weight:700; }
+.ui .o-fine { align-self:stretch; display:flex; flex-direction:column; align-items:flex-start; gap:.3cqw; margin-top:.2cqw; padding:.5cqw .9cqw 0; border-top:.12cqw solid #ccc; font-size:1.2cqw; color:#333; }
+.ui .o-fl { font-weight:700; color:#555; }
+.ui .o-line { display:inline-block; }
+.ui .m-send.u-t { margin-right:.4cqw; }
+.ui .m-nope { padding:.2cqw .8cqw; border:.18cqw dashed #b3261e; border-radius:.3cqw; color:#b3261e; font-size:1.2cqw; font-weight:800; }
