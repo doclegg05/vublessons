@@ -61,7 +61,7 @@ test('DL2 editing timeline distinguishes trimming ends from removing a middle se
 test('DL2 email draft reviews recipient, subject and attachment without sending',async({page})=>{
  await page.goto(`${base}/week-04/practice.html#slide-4`);
  const scene=page.locator('#slide-4 [data-topic-scene]');
- await expect(scene).toContainText('Build an actionable email draft');
+ await expect(scene).toContainText('Build an email someone can act on');
  await expect(scene.locator('.scene-state:visible')).toContainText('Alex');
  await scene.getByRole('button',{name:'Subject',exact:true}).focus();await page.keyboard.press('Enter');
  await expect(scene.locator('.scene-state:visible .visual-selected')).toContainText('Review the computer-help handout');

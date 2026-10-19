@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Practice Mail</title><style>
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:#f6f8fc;color:#16243a;font:20px/1.5 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+.notice{margin:0;padding:.6rem 1rem;background:#ffc400;color:#111;font-weight:700;text-align:center}
+.top{display:flex;align-items:center;gap:1rem;padding:.6rem 1rem;background:#fff;border-bottom:1px solid #d5dbe3}
+.top h1{margin:0;font-size:1.5rem;color:#0b3d4a}
+.shell{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem;max-width:1100px;margin:0 auto;padding:1rem}
+@media(max-width:700px){.shell{grid-template-columns:1fr}}
+nav{display:flex;flex-direction:column;gap:.4rem}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #975f00;outline-offset:2px}
+.compose-btn{padding:.7rem 1rem;border:0;border-radius:1.4rem;background:#c2e7ff;color:#001d35;font-weight:700;text-align:left}
+.folder{padding:.4rem .9rem;border:0;border-radius:0 1.2rem 1.2rem 0;background:none;color:#16243a;text-align:left;display:flex;justify-content:space-between}
+.folder[aria-current=true]{background:#d3e3fd;font-weight:700}
+main{min-width:0}
+.list{margin:0;padding:0;list-style:none;background:#fff;border-radius:.6rem}
+.list li{border-bottom:1px solid #e7eaf0}
+.list button{width:100%;display:flex;gap:1rem;padding:.7rem 1rem;border:0;background:none;text-align:left;color:#16243a}
+.list .from{flex:none;width:12rem;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.list .subj{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.draft-tag{color:#b3261e;font-weight:700}
+.empty{padding:1rem;background:#fff;border-radius:.6rem}
+.win{background:#fff;border:1px solid #b9b9b9;border-radius:.6rem .6rem .3rem .3rem;box-shadow:0 4px 16px #0003;overflow:hidden}
+.win-head{display:flex;justify-content:space-between;align-items:center;padding:.4rem .8rem;background:#404040;color:#fff;font-weight:700}
+.win-head button{border:0;background:none;color:#fff;font-size:1.4rem;line-height:1;padding:.1rem .5rem}
+.fld{display:flex;align-items:center;gap:.6rem;padding:.35rem .9rem;border-bottom:1px solid #e3e3e3}
+.fld>label{flex:none;width:3.2rem;font-weight:700;color:#555}
+.chips{flex:1;min-width:0;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:.3rem;padding:.1rem .3rem .1rem .8rem;border-radius:1rem;background:#e3e6ea}
+.chip button{border:0;background:none;font-size:1.1rem;padding:0 .4rem;color:#444}
+.chips input,.fld input.one{flex:1;min-width:10rem;border:0;font:inherit;padding:.3rem 0;background:none}
+.links{flex:none;display:flex;gap:.9rem}
+.links button{border:0;background:none;color:#0b57b8;text-decoration:underline;padding:0}
+textarea{display:block;width:100%;min-height:9rem;border:0;font:inherit;padding:.7rem .9rem;resize:vertical}
+.foot{display:flex;align-items:center;gap:1rem;padding:.6rem .9rem}
+.send{padding:.5rem 1.6rem;border:0;border-radius:1.2rem;background:#0b57d0;color:#fff;font-weight:700}
+.trash{margin-left:auto;border:2px solid #555;border-radius:.4rem;background:#fff;color:#16243a;padding:.3rem .8rem}
+#status{min-height:1.6em;margin:.6rem 0;font-weight:600}
+.who{margin-top:1rem;padding:1rem;background:#fff;border:2px solid #0b3d4a;border-radius:.6rem}
+.who h2{margin:0 0 .5rem;font-size:1.15rem;color:#0b3d4a}
+.who table{border-collapse:collapse;width:100%}
+.who th,.who td{padding:.4rem .6rem;border-bottom:1px solid #d5dbe3;text-align:left;vertical-align:top}
+.msg{background:#fff;border-radius:.6rem;padding:1rem 1.2rem}
+.msg dl{margin:0 0 .8rem}.msg dt{float:left;clear:left;width:4.5rem;font-weight:700;color:#555}.msg dd{margin:0 0 .2rem 4.5rem}
+.msg pre{margin:0;font:inherit;white-space:pre-wrap}
+</style></head><body>
+<p class="notice">Practice Mail · fictional · nothing is sent outside this page</p>
+<header class="top"><h1>Practice Mail</h1></header>
+<div class="shell">
+<nav aria-label="Folders">
+<button type="button" class="compose-btn" id="compose">Compose</button>
+<button type="button" class="folder" data-folder="inbox"><span>Inbox</span></button>
+<button type="button" class="folder" data-folder="drafts"><span>Drafts</span><span id="n-drafts"></span></button>
+<button type="button" class="folder" data-folder="sent"><span>Sent</span><span id="n-sent"></span></button>
+</nav>
+<main id="main" tabindex="-1"><p id="status" role="status"></p><div id="view"></div></main>
+</div>
+<script>
+(function(){
+'use strict';
+var KEY='practice-mail:v1',OK=/^[^\s@,;]+@example\.com$/i;
+var inbox=[
+ {from:'Library newsletter',subject:'October events at the library',body:'Computer help night is Thursday at 6 p.m. in the learning room.'},
+ {from:'Volunteer desk',subject:'Thank you for helping last week',body:'Thank you. Your help made the sign-in line short.'},
+ {from:'Computer class',subject:'Your Week 4 worksheet',body:'Keep your worksheet open beside this page.'}
+];
+var state=load(),folder='inbox',draft=null,open=null,grabOpen=null;
+function load(){try{var s=JSON.parse(sessionStorage.getItem(KEY));if(s&&Array.isArray(s.drafts)&&Array.isArray(s.sent))return s;}catch(e){}return{drafts:[],sent:[],next:1};}
+function save(){try{sessionStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+function el(tag,attrs,kids){var n=document.createElement(tag);Object.keys(attrs||{}).forEach(function(k){if(k==='text')n.textContent=attrs[k];else n.setAttribute(k,attrs[k]);});(kids||[]).forEach(function(c){n.append(c);});return n;}
+var view=document.getElementById('view'),statusEl=document.getElementById('status');
+function say(t){statusEl.textContent=t;}
+function counts(){document.getElementById('n-drafts').textContent=state.drafts.length||'';document.getElementById('n-sent').textContent=state.sent.length||'';
+ document.querySelectorAll('.folder').forEach(function(b){b.setAttribute('aria-current',String(!draft&&!open&&b.dataset.folder===folder));});}
+function rows(items,kind){
+ if(!items.length)return el('p',{class:'empty',text:kind==='drafts'?'No drafts.':kind==='sent'?'Nothing sent yet.':'No messages.'});
+ var ul=el('ul',{class:'list'});
+ items.forEach(function(m,i){var b=el('button',{type:'button'},[el('span',{class:'from',text:kind==='sent'?'To: '+(m.to.concat(m.bcc)[0]||''):(m.from||'(no address yet)')}),el('span',{class:'subj',text:m.subject||'(no subject)'})]);
+  if(kind==='drafts'){b.firstChild.className='from draft-tag';b.firstChild.textContent='Draft';}
+  b.addEventListener('click',function(){if(kind==='drafts'){draft=state.drafts.splice(i,1)[0];save();render();}else{open={kind:kind,item:m};render();}});
+  ul.append(el('li',{},[b]));});
+ return ul;}
+function who(m){
+ var t=el('table',{},[el('thead',{},[el('tr',{},[el('th',{text:'Person'}),el('th',{text:'Their message shows'})])])]),tb=el('tbody');
+ var seen=m.to.concat(m.cc);
+ function line(r,role){var shows='To: '+(m.to.join(', ')||'(nobody)');if(m.cc.length)shows+='  ·  Cc: '+m.cc.join(', ');
+  if(role==='Bcc')shows+='  ·  The other Bcc addresses are hidden.';
+  tb.append(el('tr',{},[el('td',{text:r+' ('+role+')'}),el('td',{text:shows})]));}
+ m.to.forEach(function(r){line(r,'To');});m.cc.forEach(function(r){line(r,'Cc');});m.bcc.forEach(function(r){line(r,'Bcc');});
+ t.append(tb);return el('section',{class:'who','aria-labelledby':'who-h'},[el('h2',{id:'who-h',text:'Who sees what'}),el('p',{text:'This is what each person would see. Practice Mail sent nothing.'}),t]);}
+function show(m,kind){
+ var dl=el('dl',{},[el('dt',{text:'To'}),el('dd',{text:m.to.join(', ')||'(nobody)'})]);
+ if(kind==='sent'){if(m.cc.length)dl.append(el('dt',{text:'Cc'}),el('dd',{text:m.cc.join(', ')}));if(m.bcc.length)dl.append(el('dt',{text:'Bcc'}),el('dd',{text:m.bcc.join(', ')}));}
+ else dl.firstChild.textContent='From',dl.lastChild.textContent=m.from;
+ dl.append(el('dt',{text:'Subject'}),el('dd',{text:m.subject}));
+ var box=el('div',{class:'msg'},[dl,el('pre',{text:m.body})]);
+ var out=el('div',{},[box]);if(kind==='sent')out.append(who(m));return out;}
+function chipField(id,label,list,hideable){
+ var wrap=el('div',{class:'fld'}),inp=el('input',{type:'text',id:id,autocomplete:'off','aria-label':label+' address. Type an address, then press Enter.'}),chips=el('div',{class:'chips'});
+ function draw(){chips.textContent='';list.forEach(function(a,i){var rm=el('button',{type:'button','aria-label':'Remove '+a,text:'×'});rm.addEventListener('click',function(){list.splice(i,1);draw();inp.focus();});chips.append(el('span',{class:'chip'},[el('span',{text:a}),rm]));});chips.append(inp);}
+ function add(){var v=inp.value.trim().replace(/[,;]$/,'');if(!v)return true;
+  if(!OK.test(v)){say('Practice Mail only uses made-up addresses that end in @example.com. Check what you typed.');return false;}
+  list.push(v);inp.value='';say('');draw();return true;}
+ inp.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===','||e.key===';'||(e.key==='Tab'&&inp.value.trim())){if(e.key!=='Tab')e.preventDefault();if(!add()&&e.key==='Tab')e.preventDefault();}});
+ inp.addEventListener('blur',function(){if(inp.value.trim())add();});
+ draw();wrap.append(el('label',{for:id,text:label}),chips);return{wrap:wrap,add:add,input:inp};}
+function compose(){
+ var d=draft;if(!d.to){d.to=[];d.cc=[];d.bcc=[];d.subject='';d.body='';d.from='You';}
+ var to=chipField('to','To',d.to),cc=chipField('cc','Cc',d.cc),bcc=chipField('bcc','Bcc',d.bcc);
+ var links=el('div',{class:'links'}),bl=el('button',{type:'button',text:'Bcc'}),cl=el('button',{type:'button',text:'Cc'});
+ cc.wrap.hidden=!d.cc.length;bcc.wrap.hidden=!d.bcc.length;
+ cl.addEventListener('click',function(){cc.wrap.hidden=false;cl.hidden=true;cc.input.focus();});
+ bl.addEventListener('click',function(){bcc.wrap.hidden=false;bl.hidden=true;bcc.input.focus();});
+ cl.hidden=!cc.wrap.hidden;bl.hidden=!bcc.wrap.hidden;links.append(cl,bl);
+ to.wrap.append(links);
+ var subj=el('input',{type:'text',id:'subject',class:'one',autocomplete:'off',placeholder:'Subject','aria-label':'Subject'});subj.value=d.subject;
+ var sw=el('div',{class:'fld'},[subj]);
+ var body=el('textarea',{id:'body','aria-label':'Message'});body.value=d.body;
+ function grab(){var ok=[to.add(),cc.add(),bcc.add()].every(Boolean);d.subject=subj.value;d.body=body.value;return ok;}
+ grabOpen=grab;
+ var send=el('button',{type:'button',class:'send',text:'Send'}),trash=el('button',{type:'button',class:'trash','aria-label':'Discard draft',text:'🗑 Discard'});
+ var x=el('button',{type:'button','aria-label':'Close. Practice Mail saves a draft.',text:'×'});
+ send.addEventListener('click',function(){if(!grab())return;
+  if(!d.to.length&&!d.bcc.length){say('Add at least one address first.');return;}
+  if(!d.subject.trim()){say('Add a subject first.');return;}
+  state.sent.unshift({to:d.to,cc:d.cc,bcc:d.bcc,subject:d.subject,body:d.body});save();draft=null;folder='sent';open={kind:'sent',item:state.sent[0]};say('Sent in practice. Nothing really left this page.');render();});
+ trash.addEventListener('click',function(){draft=null;say('Draft discarded.');render();});
+ x.addEventListener('click',function(){grab();if(d.to.length||d.cc.length||d.bcc.length||d.subject||d.body.trim()){state.drafts.unshift(d);save();say('Closed. Practice Mail saved your message in Drafts.');}draft=null;folder='drafts';render();});
+ var win=el('section',{class:'win','aria-labelledby':'nm'},[el('div',{class:'win-head'},[el('span',{id:'nm',text:'New Message'}),x]),to.wrap,cc.wrap,bcc.wrap,sw,body,el('div',{class:'foot'},[send,trash])]);
+ view.append(win);}
+function stash(){
+ // Keep an open message that is not empty: leaving the compose box by any route saves it in Drafts.
+ if(!draft)return;if(grabOpen)grabOpen();var d=draft;draft=null;grabOpen=null;
+ if(d.to&&(d.to.length||d.cc.length||d.bcc.length||d.subject||d.body.trim())){state.drafts.unshift(d);save();}}
+function render(){view.textContent='';
+ if(draft){compose();}
+ else if(open){var back=el('button',{type:'button',text:'← Back'});back.addEventListener('click',function(){open=null;render();});view.append(back,show(open.item,open.kind));}
+ else{view.append(rows(folder==='inbox'?inbox:state[folder],folder));}
+ counts();}
+document.getElementById('compose').addEventListener('click',function(){if(draft){var t0=document.getElementById('to');if(t0)t0.focus();return;}draft={};open=null;say('');render();var t=document.getElementById('to');if(t)t.focus();});
+document.querySelectorAll('.folder').forEach(function(b){b.addEventListener('click',function(){stash();folder=b.dataset.folder;open=null;say('');render();});});
+window.addEventListener('pagehide',stash);
+render();
+})();
+</script>
+<script src="/shared/text-size.js"></script>
+</body></html>

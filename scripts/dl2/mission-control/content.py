@@ -3,31 +3,11 @@ def mission(title,app,start,finish,tell,show,do,question,choices,answer,why,lab,
  return dict(title=title,app=app,start=start,finish=finish,tell=tell,show=show,do=do,question=question,choices=choices,answer=answer,why=why,lab=lab,practice=practice)
 from week2 import WEEK2
 from week3 import WEEK3
+from week4 import WEEK4
 WEEKS={
 2:WEEK2,
 3:WEEK3,
-4:dict(title='Work together without confusion.',photo='collaboration',warm='When has a message made your next step easy? What information did it include?',apply='Choose a real upcoming conversation. Write who needs to do what, by when, through which channel.',minutes=[8,5,23,23,8,18,20,8,7],missions=[
-mission('Send a clear request','Email simulation','A vague message with too many recipients','The right request, account and audience',
- ['Choose a channel for urgency and sensitivity.','Name the request, context and reply time.','To acts; Cc sees; Bcc hides addresses.'],
- [('Compose','Subject: Please review our computer-help steps','Greet Alex, name the task and deadline, then close courteously. Check the active account.'),('Address','To: Alex · Cc: Sam · Bcc: volunteers','Bcc hides addresses, not message content. Check recipients again before Reply all.'),('Review','Attachment present · scheduled time checked','Schedule for a sensible hour. Expand abbreviations and remove assumptions about age or skill.')],
- ['Draft a request to Alex; nothing is sent.','Assign To, Cc and Bcc for the volunteers.','Check attachment, account, wording and timing.'],
- 'Sam uses Reply all. Who is normally included?', ['Sender and visible To/Cc','Everyone, including all Bcc','Only Alex'],0,'Reply all addresses the sender and visible To/Cc recipients. Always inspect the actual recipient list.',[0,1,2,3],4),
-mission('Improve one shared copy','Word comments','Two versions and vague feedback','One owner, one copy, a resolved comment',
- ['Agree on the owner, writer and reviewer.','Name the place, change and reason.','Reply, decide, then resolve the comment.'],
- [('Agree','Owner: Pat · Writer: Alex · Reviewer: Sam','Name the shared location and access. Work together now or leave comments for later.'),('Comment','After Step 2, add where the learning desk is.','Explain why: a first-time visitor needs to find it. Commenting is not replacing text.'),('Resolve','Owner replies, changes or declines, then resolves','Resolved comments are hidden, not deleted. Cloud version history can recover a lost edit.')],
- ['Choose roles and a single shared location.','In Word, add one specific comment for a partner.','Reply with a decision, then resolve it.'],
- 'Which comment helps the owner revise?', ['This is bad','Make it better','After Step 2, add the desk location'],2,'Specific feedback identifies where and what to improve. Explain why it helps the reader.',[4,5],12),
-mission('Join with care','Meeting simulation','A noisy call or unfamiliar group','Clear participation and respectful boundaries',
- ['Test sound; mute when not speaking.','Use captions, raise hand and host guidance.','Ask before recording or sharing a story.'],
- [('Prepare','Headset input tested · captions available','A meeting allows discussion; a webinar may use Q&A with host-controlled speaking.'),('Participate','Unmute → speak → mute','Use raise hand as the host requests. Live work is synchronous; later replies are asynchronous.'),('Verify','A community post is a lead, not a guarantee','Read group rules, disagree respectfully, and confirm hours or eligibility with the organization.')],
- ['Practice unmute, raise/lower hand and mute.','Try captions and test a headset if available.','Name a community detail to verify independently.'],
- 'You want to record a group’s personal stories. First?', ['Start recording quietly','Ask permission','Share them on social media'],1,'Ask before recording or sharing. Respect the group’s rules and each person’s boundaries.',[6],14),
-mission('Check before paying','Offer comparison','Two fictional streaming offers','A decision based on cost and renewal',
- ['Check seller, total, renewal and cancellation.','A wallet uses a saved payment method.','Deleting an app does not cancel a subscription.'],
- [('Compare','A: $5/month · B: $48/year paid now','A costs $15 for 3 months and $60 for 12. B costs $48 up front even if you stop early.'),('Inspect','Renewal date · refund terms · purchase approval','Streaming plays over the internet. Free apps can sell extras. Read receipts and turn on purchase approval.'),('Decide','Use payment with dispute protections','A credit card can offer dispute rights. Person-to-person payments to strangers can be difficult to recover. Do not buy anything.')],
- ['Calculate both offers for your intended use.','Write two questions before agreeing to a trial.','Choose a payment approach and explain why.'],
- 'You delete a streaming app. What about its subscription?', ['Always cancelled','Check and cancel through the provider','Automatically refunded'],1,'Deleting an app usually does not cancel billing. Follow the provider’s cancellation process and retain confirmation.',[7],16)
-]),
+4:WEEK4,
 5:dict(title='Protect your work. Show your skills.',photo='safety',warm='Name one safety habit you already use away from a computer. How could it help online?',apply='Use your results to choose one strength and one specific task to practice next.',minutes=[8,5,12,18,8,14,26,22,7],missions=[
 mission('Make your station comfortable','Workstation / browser','A hard-to-read or distracting screen','One useful adjustment you can reverse',
  ['Adjust distance, position and readable text.','Captions and keyboard access help many people.','Quiet unneeded alerts; plan a stopping point.'],

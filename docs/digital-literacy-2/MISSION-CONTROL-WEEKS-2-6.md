@@ -10,7 +10,7 @@ Each mission has a matching worksheet section (`m2A`, for example), answer/obser
 |---|---|---|---|---|
 | 2 | Search, evaluation, source trail | Required fields, privacy, confirmation | Naming, ZIP/extract, recovery | Access roles, ownership, sync/backup |
 | 3 | Guided build since 2026-10-12 (see HANDOFF.md): Word headings | PDF | Excel SUM | PowerPoint photo, crop, credit |
-| 4 | Channel, account, email, recipient roles | Shared-copy roles and comment resolution | Meeting controls, captions, community norms | Payment, total cost, renewal and cancellation |
+| 4 | Guided build since 2026-10-19 (see HANDOFF.md): Practice Mail request | Practice Mail To and Bcc | Word comment, reply, resolve | Offer facts and recurring charge |
 | 5 | Comfort, accessibility and attention | Phishing, identity and independent verification | Permissions, updates, locking and encryption | Five observed skills; post-test follows separately |
 | 6 | Bounded agent spec and predictions | Requested versus unrequested diff | Reproduce, report, repair and retest | Browser/server boundary and operating responsibilities |
 

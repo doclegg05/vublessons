@@ -31,7 +31,7 @@ APPS = {
     'excel': {'name': 'Excel', 'doc': 'Book1', 'blank': 'Blank workbook'},
     'powerpoint': {'name': 'PowerPoint', 'doc': 'Presentation1', 'blank': 'Blank presentation'},
 }
-_LETTERS = {'word': 'W', 'excel': 'X', 'powerpoint': 'P', 'edge': 'e', 'explorer': 'F'}
+_LETTERS = {'word': 'W', 'excel': 'X', 'powerpoint': 'P', 'edge': 'e', 'explorer': 'F', 'mail': 'M'}
 
 TABS = {
     'word': ['File', 'Home', 'Insert', 'Draw', 'Design', 'Layout', 'References', 'Mailings',
@@ -915,15 +915,15 @@ def explorer_resource_pack():
 
 # ---------------------------------------------------------------- 21. vublessons.com path
 
-def vub_course_path():
+def vub_course_path(week=3, week_title='Create something people can use'):
     page = ('<div class="u-vub"><span class="u-vubm">VUB Learning</span></div><div class="u-wk">'
             '<div class="u-card"><span class="u-cardt">Digital Literacy \u2014 Level 2</span>'
             '<span class="u-cards">6 weeks</span>'
             f'<span class="u-navy u-t"><span class="u-big">Open course \u2192</span>{_bd(2, "r")}</span></div>'
-            '<div class="u-week"><span class="u-weekt">Week 3 \u00b7 Create something people can use</span>'
-            '<span class="u-wl"><span class="u-link">Open week 3</span>'
+            f'<div class="u-week"><span class="u-weekt">Week {week} \u00b7 {_e(week_title)}</span>'
+            f'<span class="u-wl"><span class="u-link">Open week {week}</span>'
             f'<span class="u-link u-t"><span class="u-big">Worksheet</span>{_bd(3, "r")}</span></span></div></div>')
     label = ('Drawing: Microsoft Edge. The address bar with vublessons.com typed in is marked 1. The course '
-             'card Digital Literacy, Level 2, has an Open course button, marked 2. The row Week 3, Create '
-             'something people can use, has two links, Open week 3 and Worksheet; Worksheet is marked 3.')
+             'card Digital Literacy, Level 2, has an Open course button, marked 2. '
+             f'The row Week {week}, {week_title}, has two links, Open week {week} and Worksheet; Worksheet is marked 3.')
     return _root('vub-path', label, _edge('VUB Learning', 'vublessons.com', page, url_n=1, url_pos='ir', typed=True))
