@@ -1077,16 +1077,16 @@
       ],
       "slides": [
         {
-          "title": "Choose a channel for the task",
-          "body": "A quick status update, a detailed request and an urgent issue may need different channels. Consider the audience, sensitivity and response time.",
+          "title": "Pick the best way to send each message",
+          "body": "A quick update, a detailed request and an urgent problem each need a different way of sending. Think about who will read it, how private it is, and how fast you need an answer.",
           "kind": "discussion",
           "refs": [
             "5.1"
           ]
         },
         {
-          "title": "Personal and professional identities",
-          "body": "Use the account and tone that fit your role, and check which account is active before you post or send. Use a different password for each account. A password manager is an app that stores them safely. Multifactor authentication (MFA) adds a second check, such as a text code.",
+          "title": "Check which account you are using",
+          "body": "Use the account and the tone that fit your role. Check which account you are signed in to before you post or send. Use a different password for each account. A password manager is an app that keeps your passwords safe. Two-step sign-in asks for a second check, such as a code sent to your phone.",
           "kind": "teach",
           "refs": [
             "2.1"
@@ -1094,7 +1094,7 @@
         },
         {
           "title": "Write an email someone can act on",
-          "body": "Use a specific subject, a greeting, one clear request, needed context and a courteous close. Check the recipient and attachment before sending.",
+          "body": "Use a specific subject, a greeting, one clear request, the background the reader needs, and a polite close. Check who it goes to and the attached file before sending.",
           "kind": "teach",
           "refs": [
             "5.1"
@@ -1102,23 +1102,23 @@
         },
         {
           "title": "To, Cc, and Bcc",
-          "body": "To names the person who should act. Cc sends a copy that everyone can see. Bcc hides those addresses from the others; it does not encrypt the message or stop forwarding. Reply all goes to the sender and everyone in To and Cc, so check who needs your answer.",
+          "body": "To is the person who needs to act. Cc sends a copy that everyone can see. Bcc hides those addresses from the other people. It does not make the message secret, and someone can still send it on. Reply all answers the sender and everyone in To and Cc, so check who needs your answer.",
           "kind": "teach",
           "refs": [
             "5.1"
           ]
         },
         {
-          "title": "Timing changes how a message lands",
-          "body": "Say when you need a reply, and consider urgency and the reader\u2019s working hours. Scheduled send lets you write now and choose when the message goes out, such as 9 a.m. tomorrow. It will not fix unclear wording, so check the message and the time first.",
+          "title": "When you send a message matters",
+          "body": "Say when you need a reply. Think about how urgent it is and when the reader is at work. Scheduled send lets you write now and pick when the message goes out, such as 9 a.m. tomorrow. It will not fix unclear words, so check the message and the time first.",
           "kind": "teach",
           "refs": [
             "2.2"
           ]
         },
         {
-          "title": "Inclusive language helps people respond",
-          "body": "Use the name and form of address people prefer. Explain unfamiliar abbreviations. Avoid assumptions about age, culture, abilities or technology experience.",
+          "title": "Words that welcome everyone",
+          "body": "Use the name people prefer. Explain short forms the reader may not know. Do not guess things about age, culture, abilities or experience with computers.",
           "kind": "teach",
           "refs": [
             "2.2",
@@ -1126,41 +1126,41 @@
           ]
         },
         {
-          "title": "Participate in a community",
-          "body": "Read the group\u2019s guidelines, stay on topic and disagree with ideas respectfully. Ask permission before sharing someone else\u2019s story or image.",
+          "title": "Join an online group politely",
+          "body": "Read the group\u2019s rules, stay on topic, and disagree with ideas politely. Ask permission before sharing someone else\u2019s story or picture.",
           "kind": "teach",
           "refs": [
             "5.1"
           ]
         },
         {
-          "title": "Verify a community service",
-          "body": "Use an organization\u2019s official contact or website to confirm eligibility, availability and hours. A directory entry is a starting point; details can change.",
+          "title": "Check a service before you rely on it",
+          "body": "Use the organization\u2019s official contact or website to check who can use a service, when it is open and its hours. A listing is only a starting point. Details can change.",
           "kind": "teach",
           "refs": [
             "5.1"
           ]
         },
         {
-          "title": "Collaborate on one shared copy",
-          "body": "Working together lets each person add what they know and catch mistakes. Assign an owner, writer and reviewer. Agree where the one shared file lives, such as OneDrive or Google Drive, and what finished means. Clear roles reduce conflicting edits.",
+          "title": "Work on one shared copy",
+          "body": "Working together lets each person add what they know and catch mistakes. Give each person a job: the owner decides, the writer drafts and the reviewer suggests changes. Agree where the one shared file lives, such as OneDrive or Google Drive, and what finished means. Clear jobs stop people changing the same thing in different copies.",
           "kind": "teach",
           "refs": [
             "6.1"
           ]
         },
         {
-          "title": "Live editing or later feedback?",
-          "body": "Synchronous work happens together. Asynchronous work happens at different times. Match the method to schedules and the decision needed.",
+          "title": "Work together now, or give feedback later?",
+          "body": "Working together at the same time is called live editing. Leaving comments to read later is called feedback later. Pick the way that fits everyone\u2019s schedules and the decision you need.",
           "kind": "flip",
           "cards": [
             [
               "Write together during class",
-              "Synchronous coauthoring in one shared Word or Google Docs file: agree who edits which section."
+              "Live editing: everyone works in one shared Word or Google Docs file at the same time. Agree who edits which part."
             ],
             [
               "Review after class",
-              "Asynchronous comments in the same file, or an email: include enough context for the writer."
+              "Feedback later: leave comments in the same file, or send an email. Give the writer enough detail."
             ]
           ],
           "refs": [
@@ -1168,8 +1168,8 @@
           ]
         },
         {
-          "title": "Feedback names an improvement",
-          "body": "Try: \u201cThe contact method is hard to find. Could we put it after the steps?\u201d Be specific about the text, reason and possible change.",
+          "title": "A good comment says what to change",
+          "body": "Try: \u201cThe contact method is hard to find. Could we put it after the steps?\u201d Say which text, why, and what you would change.",
           "kind": "teach",
           "refs": [
             "6.1",
@@ -1177,53 +1177,53 @@
           ]
         },
         {
-          "title": "Acknowledge and resolve",
-          "body": "Read a comment, ask if unclear, make or decline the change with a reason, then resolve it. A resolved comment is hidden, not deleted. For a file saved online, such as in OneDrive, version history can bring back a lost edit.",
+          "title": "Answer a comment, then resolve it",
+          "body": "Read the comment. Ask if it is not clear. Make the change, or say why you will not, then resolve the comment. A resolved comment is hidden, not deleted. If the file is saved online, such as in OneDrive, version history can bring back an older copy if a change is lost.",
           "kind": "teach",
           "refs": [
             "6.1"
           ]
         },
         {
-          "title": "Meetings and webinars",
-          "body": "Test sound before you join. Mute when not speaking. Use raise hand or chat as the host asks, and turn on captions if they help. Ask before recording. In a webinar the host controls who can speak, so ask questions in Q&A or chat.",
+          "title": "Online meetings",
+          "body": "Test your sound before you join. Mute yourself when you are not speaking. Use raise hand or chat when the host asks, and turn on captions if they help. Ask before recording. In a webinar (a big online talk) the host decides who can speak, so ask questions in the question box (Q&A) or chat.",
           "kind": "teach",
           "refs": [
             "6.2"
           ]
         },
         {
-          "title": "Watch: collaborate without confusion",
-          "body": "Follow the worked examples, pause for practice, and choose a chapter to replay a skill. Connect the task to a household or community situation you know.",
+          "title": "Watch: work together without confusion",
+          "body": "Follow the examples, pause to practice, and pick a chapter to replay a skill. Connect each task to something at home or in your community that you know.",
           "kind": "video"
         },
         {
-          "title": "Goods, services, and subscriptions",
-          "body": "Goods are products; services provide work or access. Streaming plays video or music over the internet as you watch or listen: Netflix, YouTube and Spotify are examples, and hoopla is free with a West Virginia library card. A subscription can keep renewing until you cancel it.",
+          "title": "Things you buy: products, services and subscriptions",
+          "body": "Products are things you can hold. Services are work someone does for you, or access they give you. Streaming plays video or music over the internet while you watch or listen. Netflix, YouTube and Spotify are examples, and hoopla is free with a West Virginia library card. A subscription keeps charging you until you cancel it.",
           "kind": "teach",
           "refs": [
             "5.2"
           ]
         },
         {
-          "title": "Review a digital payment",
-          "body": "Know how you pay. A credit card lets you dispute a wrong charge. A digital wallet, such as Apple Pay or Google Pay, pays with a card you saved. Money sent with Zelle, Venmo or Cash App is hard to get back, so pay only people you know. Check the seller, total and refund terms first.",
+          "title": "Check a payment before you pay",
+          "body": "Know how you pay. A credit card lets you dispute a wrong charge. A digital wallet, such as Apple Pay or Google Pay, pays with a card you saved. Money sent with Zelle, Venmo or Cash App is hard to get back, so pay only people you know. Check the seller, the total and the refund rules first.",
           "kind": "teach",
           "refs": [
             "5.2"
           ]
         },
         {
-          "title": "Small in-app purchases add up",
-          "body": "A free app may sell extras, and a saved card makes each one a single tap. Turn on a password or approval for purchases, and check your receipts. Deleting an app does not cancel its subscription. Do not buy anything during this activity.",
+          "title": "Small purchases inside an app add up",
+          "body": "A free app may sell extras, and a saved card makes each one a single tap. Turn on a password or approval for purchases, and check your receipts. Deleting an app does not cancel its subscription. Do not buy anything during this practice.",
           "kind": "teach",
           "refs": [
             "5.2"
           ]
         },
         {
-          "title": "Knowledge check: useful feedback",
-          "body": "Which comment best supports revision?",
+          "title": "Check yourself: a useful comment",
+          "body": "Which comment helps the writer most?",
           "kind": "check",
           "options": [
             "Nice work! The handout looks good to me as it is.",
@@ -1234,25 +1234,25 @@
           "why": "It names the place (step 2), the change (name the room) and the reason (readers can find it). Praise alone or a vague complaint gives the writer nothing to act on."
         },
         {
-          "title": "Knowledge check: a trial offer",
+          "title": "Check yourself: a free trial",
           "body": "Before starting a free trial, what should you check?",
           "kind": "check",
           "options": [
             "Only that the first seven days cost nothing",
-            "The renewal price, renewal date and how to cancel",
+            "The price after the trial, the date it starts, and how to cancel",
             "That deleting the app later will stop the charges"
           ],
           "answer": 1,
           "why": "A free trial usually becomes a paid plan unless you cancel the way the seller says. Deleting the app does not cancel the subscription."
         },
         {
-          "title": "Lab: coordinate a small team",
-          "body": "Show your instructor three things: your To, Cc and Bcc choices, a comment you answered and resolved, and your offer comparison with a way to pay.",
+          "title": "Practice: work as a small team",
+          "body": "Show your instructor three things: who you put in To and in Bcc, a comment you answered and resolved, and the four facts about an offer.",
           "kind": "lab"
         },
         {
           "title": "Leave a clear next step",
-          "body": "A useful message says who needs to do what and when. A useful review helps the next person act.",
+          "body": "A useful message says who needs to do what, and by when. A useful comment helps the next person act.",
           "kind": "summary"
         }
       ],

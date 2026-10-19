@@ -95,6 +95,18 @@ test('Learner pages use plain words: no channel-style jargon, and the roles are 
  for(const term of ['Owner','Reviewer','Thread','Draft','Tab','Address bar'])expect(ws,term).toContain(term+' ');
 });
 
+test('The Week 4 practice library uses plain words and keeps what its scenes need',()=>{
+ const lib=read(`${dir}/practice.html`);
+ const shown=text(lib.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<style[\s\S]*?<\/style>/g,''));
+ for(const jargon of [/\bchannels?\b/i,/synchronous/i,/\bMFA\b/,/multifactor/i,/credentials?/i,/\brecipients?\b/i,/eligibility/i,/authori[sz]/i,/anchored/i,/coauthor/i,/simulation/i,/illustrative/i,/abbreviations?/i,/actionable/i])
+  expect(shown,String(jargon)).not.toMatch(jargon);
+ // The email scene keeps the controls its functional test uses.
+ expect(shown).toContain('Build an email someone can act on');
+ for(const keep of ['Subject','Attachment','computer-help-handout-v1.docx','Review the computer-help handout'])expect(shown,keep).toContain(keep);
+ expect(lib).toContain('id="slide-4"');expect(lib.match(/<section\b[^>]*id="slide-\d+"/g)).toHaveLength(23);
+ expect(lib).toContain('Open your Week 4 worksheet');
+});
+
 test('Nothing labels the learners: no skill-level wording on any Week 4 page',()=>{
  for(const f of ['presentation','worksheet','answer-key','lesson-plan','run-sheet','instructor-notes'])
   expect(text(read(`${dir}/${f}.html`)),f).not.toMatch(/\b(beginners?|non-?technical|not technical|novices?|first-time users?|low-skill|struggling)\b/i);
