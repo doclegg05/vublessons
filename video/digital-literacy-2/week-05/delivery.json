@@ -1,0 +1,283 @@
+{
+  "about": "Delivery tags for ElevenLabs v3, inserted before the named phrase. An empty phrase tags the start. Tags never change the spoken words; scripts/dl2/tag-narration.py checks that. Calm openers: [warmly] at the start ran fast in Week 3.",
+  "beat-01": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "It is a set",
+      "[short pause]"
+    ],
+    [
+      "You would not hand",
+      "[short pause]"
+    ],
+    [
+      "and you would not sign",
+      "[short pause]"
+    ],
+    [
+      "The same judgment",
+      "[short pause]"
+    ],
+    [
+      "Today you will",
+      "[short pause]"
+    ],
+    [
+      "Then you will show",
+      "[short pause]"
+    ],
+    [
+      "Each step starts",
+      "[short pause]"
+    ],
+    [
+      "Pause, look closely",
+      "[short pause]"
+    ]
+  ],
+  "beat-02": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "If the words are too small",
+      "[short pause]"
+    ],
+    [
+      "Browser zoom is different.",
+      "[short pause]"
+    ],
+    [
+      "Change one thing",
+      "[short pause]"
+    ]
+  ],
+  "beat-03": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "Captions help",
+      "[short pause]"
+    ],
+    [
+      "Keyboard access helps",
+      "[short pause]"
+    ],
+    [
+      "Press Tab,",
+      "[short pause]"
+    ],
+    [
+      "Color is another one.",
+      "[short pause]"
+    ],
+    [
+      "If a schedule shows",
+      "[short pause]"
+    ],
+    [
+      "Put a word beside",
+      "[short pause]"
+    ],
+    [
+      "Mute this week's video",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-04": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Three things should",
+      "[short pause] [serious]"
+    ],
+    [
+      "A familiar logo",
+      "[short pause]"
+    ],
+    [
+      "This kind of fake message",
+      "[short pause]"
+    ]
+  ],
+  "beat-05": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Then ask whether",
+      "[short pause]"
+    ],
+    [
+      "If you already typed",
+      "[short pause] [reassuring]"
+    ],
+    [
+      "Open the Mission 5B practice page.",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-06": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Secrecy and money",
+      "[short pause]"
+    ],
+    [
+      "Scrolling late at night",
+      "[short pause]"
+    ],
+    [
+      "If someone posts",
+      "[short pause] [reassuring]"
+    ],
+    [
+      "Write a safe next step",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-07": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Home computers still",
+      "[short pause]"
+    ],
+    [
+      "A website may ask",
+      "[short pause]"
+    ],
+    [
+      "If you find a USB drive",
+      "[short pause]"
+    ]
+  ],
+  "beat-08": [
+    [
+      "",
+      "[calmly]"
+    ],
+    [
+      "Read-only only limits",
+      "[short pause]"
+    ],
+    [
+      "None of these protect",
+      "[short pause]"
+    ],
+    [
+      "For accounts,",
+      "[short pause]"
+    ],
+    [
+      "On the Mission 5C practice page,",
+      "[short pause] [encouraging]"
+    ],
+    [
+      "Pause the video now.",
+      "[short pause]"
+    ]
+  ],
+  "beat-09": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "The skills challenge has",
+      "[short pause]"
+    ],
+    [
+      "Ask a search question",
+      "[short pause]"
+    ],
+    [
+      "Build a short Word",
+      "[short pause]"
+    ],
+    [
+      "Total four costs",
+      "[short pause]"
+    ],
+    [
+      "Delete a line,",
+      "[short pause]"
+    ],
+    [
+      "And write useful feedback",
+      "[short pause]"
+    ],
+    [
+      "The quick card is allowed.",
+      "[short pause]"
+    ],
+    [
+      "Your instructor watches",
+      "[short pause]"
+    ],
+    [
+      "This is separate",
+      "[short pause] [reassuring]"
+    ]
+  ],
+  "beat-10": [
+    [
+      "",
+      "[calmly] [slowly]"
+    ],
+    [
+      "It has twenty questions",
+      "[short pause]"
+    ],
+    [
+      "When you finish,",
+      "[short pause]"
+    ],
+    [
+      "The results show",
+      "[short pause]"
+    ],
+    [
+      "Treat them as a learning plan",
+      "[short pause] [warmly]"
+    ],
+    [
+      "Pick one strength",
+      "[short pause]"
+    ],
+    [
+      "Then compare",
+      "[short pause]"
+    ],
+    [
+      "Every row you completed",
+      "[short pause]"
+    ]
+  ]
+}

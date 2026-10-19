@@ -8,7 +8,7 @@ const heading=slide=>slide.match(/<h1[^>]*>(.*?)<\/h1>/)[1];
 const appLabel=slide=>slide.match(/<span class="app">(.*?)<\/span>/)[1];
 const plain=html=>html.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&#x27;/g,"'").replace(/\s+/g,' ');
 // Extra rounds and practice pages each rebuilt week is expected to have.
-const weeks={3:{rounds:11,pages:['practice-3d.html']},4:{rounds:10,pages:['practice-4c.html','practice-4d.html']}};
+const weeks={3:{rounds:11,pages:['practice-3d.html']},4:{rounds:10,pages:['practice-4c.html','practice-4d.html']},5:{rounds:6,pages:['practice-5b.html','practice-5c.html']}};
 
 for(const [n,expected] of Object.entries(weeks)){
  const dir=`courses/digital-literacy-2/weeks/week-0${n}/`;
@@ -50,7 +50,7 @@ for(const [n,expected] of Object.entries(weeks)){
   for(const mission of ['A','B','C','D'].map(l=>n+l)){
    const box=sheet().indexOf(`id="evidence-${mission}"`),firstRound=sheet().indexOf(`id="m${mission}-r2"`);
    expect(box,`Mission ${mission} answer box`).toBeGreaterThan(-1);
-   expect(box,`Mission ${mission}: answer box comes after Round 2`).toBeLessThan(firstRound);
+   if(firstRound>-1)expect(box,`Mission ${mission}: answer box comes after Round 2`).toBeLessThan(firstRound); // Mission 5D, the skills challenge, has no rounds
   }
  });
 

@@ -161,11 +161,11 @@ for n,w in WEEKS.items():
   cp=w['capstone'];mid=f'{n}{chr(65+len(w["missions"]))}'
   worksheet+=f'<section class="mission" id="m{mid}"><h2>Capstone {mid} · {e(cp["title"])}</h2><p><b>App:</b> {e(cp["app"])}</p><p>{e(cp["brief"])}</p><ol>'+''.join(f'<li>{e(t)}</li>' for t in cp['tasks'])+'</ol>'+response('evidence-'+mid,'What you built, what your partner found, and what you would fix')+'<p>Route used: app / simulation / paper · Support: independent / with prompt / needs practice</p></section>'
   answer+=f'<section><h2>Capstone {mid} · {e(cp["title"])}</h2><ol>'+''.join(f'<li>{e(x)}</li>' for x in cp['key'])+f'</ol><p><b>Observation:</b> {e(cp["outcome"])}</p></section>'
- if n==3:
-  worksheet+='<h2>Resource pack downloads</h2><p>'+link(BASE+'/assets/supplies.csv','Fresh supplies.csv')+' · '+link(BASE+'/assets/practice-photo.jpg','Approved practice photo')+'</p><p>Photo: VUB practice photo, used with permission. Essential: structured handout, tracked decision, recalculating workbook, three simple slides with crop/alt text/credit, checked PDF. Optional: chart, extra slide decoration and advanced video editing. The local trim/split model is the account-free media activity.</p>'
  if n==5:
   c=old['challenge'];worksheet+='<h2>Five-task observation</h2><p>'+e(c['intro'])+'</p><ol>'+''.join('<li><b>'+e(t)+'</b> '+e(materials)+response('challenge-answer-'+str(i),'Evidence for '+t)+'<fieldset><legend>Instructor rating: '+e(t)+'</legend>'+''.join(f'<label><input type="radio" name="challenge-rating-{i}" value="{e(r)}"> {e(r)}</label>' for r in c['ratings'])+'</fieldset>'+'</li>' for i,(t,materials,_) in enumerate(c['tasks']))+'</ol><p>Quick card allowed. Spoken prompt = With prompt. Keep the five observations separate from the 20-question post-test. Save the complete graded PDF and check submission status.</p>'
   answer+='<h2>Five-task observation evidence</h2>'+ul([t+': '+evidence for t,_,evidence in c['tasks']])
+ # A week's file downloads close the worksheet (the Week 5 challenge points learners to them).
+ worksheet+=w.get('downloads','')
  if n==6:
   worksheet+='<h2>Three versions, one controlled experiment</h2>'+app_links()+'<h2>Version 2 app test log</h2>'+log_table('log')+'<h2>Version 3 retest log</h2>'+log_table('retest')
   answer+=app_links()+'<h2>Expected outcomes</h2><p>Version 1: LIBRARY finds one; learning finds none. Version 2: learning finds two, library one, zzz none; LIBRARY and Learning incorrectly find none. Version 3: LIBRARY finds one, Learning and learning two, zzz none. Test keyboard and narrow layout on each.</p>'

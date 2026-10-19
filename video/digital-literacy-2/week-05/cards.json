@@ -1,0 +1,79 @@
+{
+  "about": "Topic dividers and pause cards for the Week 5 video (Britt, 2026-10-08). A divider plays silently before its chapter's narration; a pause card holds 10 seconds of silence after it. Read by normalize-pace.py and build-media.py; tests/content/dl2-video-cards.spec.js checks every worksheet reference.",
+  "chapters": {
+    "beat-02": {
+      "divider": {
+        "app": "Comfort and access",
+        "mission": "5A",
+        "title": "Make your station comfortable"
+      }
+    },
+    "beat-03": {
+      "pause": {
+        "try": [
+          "Change one thing so you can read without leaning in.",
+          "Mute this week's video and read the captions.",
+          "Press Tab and watch the outline move."
+        ],
+        "where": "Mission 5A, tasks 1 and 2"
+      }
+    },
+    "beat-04": {
+      "divider": {
+        "app": "Scams",
+        "mission": "5B",
+        "title": "Pause and verify independently"
+      }
+    },
+    "beat-05": {
+      "pause": {
+        "try": [
+          "Open the Mission 5B practice page.",
+          "Inspect the subject, the sender and the link.",
+          "Write two warning signs and your safer check."
+        ],
+        "where": "Mission 5B, task 1"
+      }
+    },
+    "beat-06": {
+      "pause": {
+        "try": [
+          "A secret money request from an online friend.",
+          "Late-night scrolling you cannot stop.",
+          "A hurtful public post. Write a safe next step for each."
+        ],
+        "where": "Mission 5B, task 2"
+      }
+    },
+    "beat-07": {
+      "divider": {
+        "app": "Devices and files",
+        "mission": "5C",
+        "title": "Protect access and recovery"
+      }
+    },
+    "beat-08": {
+      "pause": {
+        "try": [
+          "On the Mission 5C practice page, choose before you flip.",
+          "Look at Camera permissions and Windows Update.",
+          "In Word, find which protection encrypts a file."
+        ],
+        "where": "Mission 5C, tasks 1 and 2"
+      }
+    },
+    "beat-09": {
+      "divider": {
+        "app": "Skills challenge",
+        "mission": "5D",
+        "title": "Show what you can do"
+      }
+    },
+    "beat-10": {
+      "divider": {
+        "app": "Post-test",
+        "title": "Take the post-test and read your results"
+      }
+    }
+  }
+}

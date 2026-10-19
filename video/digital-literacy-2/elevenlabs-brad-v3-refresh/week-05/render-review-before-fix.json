@@ -1,0 +1,36 @@
+{
+  "tool": "render-review",
+  "version": 1,
+  "render": "/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/course-weeks-3-6-alignment-3f6555/courses/digital-literacy-2/media/week-05.mp4",
+  "sha256": "1def98309c527db4a6416658c9b1d60b532f27031d6cbe598406b302fa54b3bd",
+  "durationSeconds": 490.375,
+  "model": "google/gemini-3.5-flash",
+  "route": "openrouter",
+  "generatedAt": "2026-10-09T13:42:01.876Z",
+  "proxy": {
+    "megabytes": 4.01,
+    "segments": 1
+  },
+  "verdict": "revise",
+  "issueCounts": {
+    "blocker": 0,
+    "major": 1,
+    "minor": 0
+  },
+  "issues": [
+    {
+      "t": 350,
+      "dimension": "sync",
+      "severity": "major",
+      "confidence": 0.95,
+      "description": "The bottom caption 'Read-only • Limits edits, still readable' is severely delayed, appearing at 05:58 (358s) when the narration has already moved past read-only and device encryption to explain locking the computer (which begins at 05:57). Additionally, the device encryption point is not captioned on screen.",
+      "suggested_edit": "Display the 'Read-only' caption at 05:50 when it is spoken, add a caption for 'Device encryption' at 05:54, and clear or update the caption when the lock screen section begins at 05:57.",
+      "timestamp": "05:50"
+    }
+  ],
+  "usage": {
+    "promptTokens": 49848,
+    "completionTokens": 5187,
+    "costUsd": 0.1215
+  }
+}

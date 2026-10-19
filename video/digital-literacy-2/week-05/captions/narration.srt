@@ -1,623 +1,510 @@
 1
-00:00:00,450 --> 00:00:03,870
-Think about how you handle an
-unexpected request in everyday life.
+00:00:00,450 --> 00:00:04,050
+Online safety is not about
+being afraid of your computer.
 
 2
-00:00:04,530 --> 00:00:05,950
-You might ask who is asking,
+00:00:05,250 --> 00:00:08,950
+It is a set of small decisions
+you already know how to make.
 
 3
-00:00:06,630 --> 00:00:09,630
-why they need something,
-and how you can check the story.
+00:00:10,110 --> 00:00:13,841
+You would not hand your house key to
+a stranger who knocked on the door,
 
 4
-00:00:10,610 --> 00:00:12,527
-Those habits are valuable online too.
+00:00:13,950 --> 00:00:16,541
+and you would not sign a
+paper without reading it.
 
 5
-00:00:13,570 --> 00:00:14,320
-In this lesson,
+00:00:17,250 --> 00:00:19,270
+The same judgment works online.
 
 6
-00:00:14,690 --> 00:00:16,918
-we will examine a
-fictional urgent message,
+00:00:20,730 --> 00:00:23,730
+Today you will set up your
+station so it is comfortable,
 
 7
-00:00:17,510 --> 00:00:21,707
-compare different protections for a file,
-and choose permissions that fit a task.
+00:00:23,730 --> 00:00:29,470
+spot a scam and check it a safer way,
+and protect your devices and files.
 
 8
-00:00:22,570 --> 00:00:25,550
-You do not need to identify
-every kind of attack by name.
+00:00:30,710 --> 00:00:36,250
+Then you will show five skills from
+this course and take the post-test.
 
 9
-00:00:26,170 --> 00:00:28,191
-You need a repeatable decision process:
+00:00:36,250 --> 00:00:38,370
+Each step starts the same way.
 
 10
-00:00:28,750 --> 00:00:30,650
-pause, inspect the evidence,
+00:00:39,230 --> 00:00:43,550
+Pause, look closely,
+and check before you act.
 
 11
-00:00:31,310 --> 00:00:34,710
-verify independently,
-and choose an action that limits risk.
+00:00:48,352 --> 00:00:50,269
+Start with your body and your screen.
 
 12
-00:00:35,750 --> 00:00:39,730
-Use fictional examples throughout.
-There is no reason to open a suspicious
+00:00:51,072 --> 00:00:53,093
+Sit so you can read without leaning in.
 
 13
-00:00:39,730 --> 00:00:42,735
-link or expose a private account
-to complete the practice.
+00:00:53,892 --> 00:00:58,012
+The screen should be about an arm's
+length away, with the top near eye level.
 
 14
-00:00:44,400 --> 00:00:47,405
-A workable setup supports
-attention as well as visibility.
+00:00:59,212 --> 00:01:02,632
+If the words are too small,
+Magnifier makes everything bigger.
 
 15
-00:00:48,420 --> 00:00:49,218
-Adjust the chair,
+00:01:03,632 --> 00:01:06,812
+Press the Windows key and plus to zoom in,
+and the Windows
 
 16
-00:00:49,560 --> 00:00:50,311
-screen position,
+00:01:06,812 --> 00:01:08,652
+key and Escape to close it.
 
 17
-00:00:50,700 --> 00:00:51,450
-text size,
+00:01:09,892 --> 00:01:11,592
+Browser zoom is different.
 
 18
-00:00:51,520 --> 00:00:55,561
-and sound to suit the task and your
-comfort, following the lab's arrangements.
+00:01:12,332 --> 00:01:16,072
+It enlarges one website,
+and Control and zero puts it back.
 
 19
-00:00:56,560 --> 00:00:58,477
-Take a screen-free break when needed.
+00:01:17,492 --> 00:01:19,212
+Change one thing at a time,
 
 20
-00:00:59,500 --> 00:01:01,573
-People differ in what they find helpful;
+00:01:19,852 --> 00:01:23,512
+notice what got easier, and put
+shared settings back before you leave.
 
 21
-00:01:01,860 --> 00:01:04,620
-do not assume one text size
-or pace suits everyone.
+00:01:24,552 --> 00:01:28,852
+If alerts keep pulling you away,
+Do not disturb quiets them while you work.
 
 22
-00:01:05,680 --> 00:01:07,020
-Captions, clear labels,
+00:01:30,699 --> 00:01:34,179
+Some features help far more
+people than you might expect.
 
 23
-00:01:07,560 --> 00:01:12,020
-keyboard access, and instructions that do
-not rely on color can help many learners.
+00:01:35,419 --> 00:01:37,379
+Captions help in a noisy room,
 
 24
-00:01:12,940 --> 00:01:14,040
-These are examples
+00:01:37,959 --> 00:01:41,919
+in a quiet library, and for anyone
+who hears less than they used to.
 
 25
-00:01:14,040 --> 00:01:15,340
-of designing for a wider
+00:01:42,979 --> 00:01:45,959
+Keyboard access helps someone
+who cannot use a mouse.
 
 26
-00:01:15,340 --> 00:01:18,880
-range of users rather than
-treating access as an afterthought.
+00:01:47,299 --> 00:01:51,319
+Press Tab, and a visible outline
+moves from one control to the next.
 
 27
-00:01:20,320 --> 00:01:22,360
-Pause and choose one control in this
+00:01:52,339 --> 00:01:53,559
+Color is another one.
 
 28
-00:01:22,360 --> 00:01:27,180
-course that makes the work easier for you.
-Explain the benefit in terms of your task.
+00:01:54,319 --> 00:01:57,279
+If a schedule shows full
+shifts only in dark shading,
 
 29
-00:01:29,069 --> 00:01:30,429
-Our fictional message says
+00:01:57,279 --> 00:02:00,899
+some people will miss it,
+and so will a black and white printer.
 
 30
-00:01:30,889 --> 00:01:34,257
-your service will stop unless you
-act immediately through a link.
+00:02:02,039 --> 00:02:03,659
+Put a word beside the color.
 
 31
-00:01:35,029 --> 00:01:39,429
-The urgency is a reason to slow down,
-not proof that the request is genuine.
+00:02:04,499 --> 00:02:09,719
+Mute this week's video, read its captions,
+and press Tab to watch the outline move.
 
 32
-00:01:40,409 --> 00:01:42,482
-Look at what the sender wants you to do:
+00:02:10,659 --> 00:02:11,679
+Pause the video now.
 
 33
-00:01:42,689 --> 00:01:43,534
-reveal a password,
+00:02:25,841 --> 00:02:27,401
+Here is a fictional message.
 
 34
-00:01:44,029 --> 00:01:48,489
-provide a payment, open an attachment,
-or follow an unfamiliar link.
+00:02:28,181 --> 00:02:31,601
+The subject says Act now:
+account will close.
 
 35
-00:01:49,329 --> 00:01:50,249
-A convincing name
+00:02:32,461 --> 00:02:35,121
+It comes from support at
+account-check dot example,
 
 36
-00:01:50,249 --> 00:01:55,309
-or logo can be copied. Even a message
-from a familiar account deserves a check
+00:02:35,601 --> 00:02:38,321
+and it asks you to verify
+your password immediately.
 
 37
-00:01:55,309 --> 00:01:56,909
-when the request is unusual.
+00:02:40,141 --> 00:02:42,201
+Three things should slow you down.
 
 38
-00:01:58,029 --> 00:02:00,620
-Avoid trying to prove
-safety by clicking the link.
+00:02:43,341 --> 00:02:44,999
+The message pushes you to hurry.
 
 39
-00:02:01,129 --> 00:02:04,209
-Instead,
-describe the claim in plain language.
+00:02:45,761 --> 00:02:48,714
+The sender does not match any
+organization you deal with.
 
 40
-00:02:05,109 --> 00:02:07,909
-Someone says I must provide
-information immediately.
+00:02:49,041 --> 00:02:54,141
+And it asks for a password, which a real
+organization will not request by email.
 
 41
-00:02:08,869 --> 00:02:11,719
-That helps you separate the
-pressure from the evidence.
+00:02:55,841 --> 00:02:59,741
+A familiar logo proves nothing,
+because anyone can copy a logo.
 
 42
-00:02:13,413 --> 00:02:15,873
-Open the organization's
-known website yourself,
+00:03:00,581 --> 00:03:03,586
+Spelling can be perfect and
+the message can still be fake.
 
 43
-00:02:16,733 --> 00:02:20,853
-use a saved bookmark you trust,
-or find its contact details independently.
+00:03:04,561 --> 00:03:07,358
+This kind of fake message
+is called phishing.
 
 44
-00:02:22,113 --> 00:02:26,073
-Do not use the suspicious message's
-phone number as your independent check.
+00:03:08,908 --> 00:03:13,068
+Never use the link or the phone
+number inside a suspicious message.
 
 45
-00:02:27,053 --> 00:02:31,633
-Ask whether the claimed issue exists
-and what action, if any, is needed.
+00:03:13,808 --> 00:03:15,888
+Reach the organization another way.
 
 46
-00:02:32,613 --> 00:02:33,673
-If you already acted,
+00:03:16,688 --> 00:03:18,148
+Open a bookmark you saved,
 
 47
-00:02:34,053 --> 00:02:35,180
-stop further interaction
+00:03:18,768 --> 00:03:22,291
+type an address you know,
+or call the number on your card or letter.
 
 48
-00:02:35,533 --> 00:02:36,873
-and contact the appropriate
+00:03:23,788 --> 00:03:25,828
+Then ask whether the problem is real.
 
 49
-00:02:36,873 --> 00:02:41,573
-official support channel promptly; in the
-lab, tell the instructor what happened.
+00:03:27,128 --> 00:03:28,941
+If you already typed your password,
 
 50
-00:02:41,573 --> 00:02:45,553
-The exact recovery steps
-depend on what was shared.
+00:03:29,208 --> 00:03:30,208
+go to the real site,
 
 51
-00:02:46,433 --> 00:02:47,493
-Pause and choose
+00:03:30,688 --> 00:03:35,648
+change it, and turn on two-step
+verification, so a code is needed as well.
 
 52
-00:02:47,493 --> 00:02:48,573
-between replying
+00:03:36,868 --> 00:03:38,323
+Then tell someone who can help.
 
 53
-00:02:48,573 --> 00:02:52,093
-to the message for reassurance and
-checking through a known route.
+00:03:39,548 --> 00:03:41,348
+Open the Mission 5B practice page.
 
 54
-00:02:52,873 --> 00:02:53,673
-The known
+00:03:42,448 --> 00:03:43,387
+Inspect the subject,
 
 55
-00:02:53,673 --> 00:02:54,633
-route is stronger
+00:03:43,748 --> 00:03:48,728
+the sender, and the link, and write
+two warning signs and your safer check.
 
 56
-00:02:54,633 --> 00:02:55,413
-because it
+00:03:50,068 --> 00:03:51,048
+Pause the video now.
 
 57
-00:02:55,413 --> 00:02:59,653
-does not let the original sender supply
-all the evidence for its own claim.
+00:04:02,165 --> 00:04:03,978
+Not every risk arrives as an email.
 
 58
-00:03:01,519 --> 00:03:05,139
-Imagine a document labeled read-only.
+00:04:05,005 --> 00:04:07,803
+A new online friend may be
+warm and patient for weeks,
 
 59
-00:03:05,139 --> 00:03:09,039
-That may prevent ordinary editing,
-but the content can still be readable.
+00:04:08,505 --> 00:04:12,505
+then ask for money, often gift cards,
+and ask you to keep it secret.
 
 60
-00:03:10,259 --> 00:03:12,435
-Encryption addresses a different question:
+00:04:13,945 --> 00:04:18,142
+Secrecy and money together are a reason
+to stop and check with someone you trust.
 
 61
-00:03:13,239 --> 00:03:17,819
-can someone understand the data without
-the required key or authorized access?
+00:04:19,505 --> 00:04:23,443
+Scrolling late at night because you
+might miss something is a real pull too.
 
 62
-00:03:19,099 --> 00:03:22,726
-A password can protect different
-actions depending on the application,
+00:04:24,125 --> 00:04:26,405
+Set a stopping point,
+or quiet your alerts.
 
 63
-00:03:23,279 --> 00:03:27,039
-so do not assume every password
-prompt means the file is encrypted.
+00:04:27,785 --> 00:04:32,045
+If someone posts something hurtful
+about you, do not reply in anger.
 
 64
-00:03:27,919 --> 00:03:30,359
-Inspect what the feature
-actually promises.
+00:04:32,945 --> 00:04:37,205
+Keep a screenshot if it is safe,
+report or block, and talk to someone.
 
 65
-00:03:31,399 --> 00:03:36,459
-In our diagram, a readable file becomes
-protected data that requires a key.
+00:04:38,625 --> 00:04:41,765
+Write a safe next step for each
+situation on your worksheet.
 
 66
-00:03:37,379 --> 00:03:38,259
-That does not
+00:04:42,725 --> 00:04:43,664
+Pause the video now.
 
 67
-00:03:38,259 --> 00:03:42,319
-remove the need to manage who can
-access an unlocked device or account.
+00:04:57,632 --> 00:05:01,312
+Updates fix security holes,
+so let Windows Update do its job.
 
 68
-00:03:43,499 --> 00:03:47,059
-Pause and explain which protection
-fits preventing accidental edits,
+00:05:02,972 --> 00:05:06,772
+Home computers still on Windows
+10 need Extended Security Updates,
 
 69
-00:03:47,659 --> 00:03:50,299
-and which addresses
-readable data being exposed.
+00:05:06,772 --> 00:05:12,272
+which run through October 2027,
+or a move to a supported device.
 
 70
-00:03:52,342 --> 00:03:54,002
-A USB drive found in a parking
+00:05:13,532 --> 00:05:16,552
+A website may ask to use
+your camera or microphone.
 
 71
-00:03:54,002 --> 00:03:58,342
-lot might look like an ordinary storage
-device. You cannot determine that it
+00:05:17,612 --> 00:05:19,270
+Allow it when the task needs it,
 
 72
-00:03:58,342 --> 00:04:00,642
-is safe by its appearance or by the label
+00:05:19,292 --> 00:05:24,132
+such as a video meeting, and block it when
+it does not, such as a page you only read.
 
 73
-00:04:00,642 --> 00:04:01,392
-written on it.
+00:05:25,072 --> 00:05:27,992
+A permission can stay
+on after a call ends,
 
 74
-00:04:01,922 --> 00:04:04,824
-Do not plug it into your
-computer to discover its owner.
+00:05:28,612 --> 00:05:31,203
+so check it in your browser
+settings now and then.
 
 75
-00:04:05,382 --> 00:04:08,905
-Give it to authorized staff and
-follow the organization's procedure.
+00:05:31,512 --> 00:05:35,932
+If you find a USB drive you do
+not recognize, do not plug it in.
 
 76
-00:04:09,662 --> 00:04:11,082
-The same general habit applies
+00:05:36,632 --> 00:05:37,430
+Give it to staff.
 
 77
-00:04:11,082 --> 00:04:14,462
-to unfamiliar attachments or
-unexpected software prompts:
+00:05:40,606 --> 00:05:42,679
+Different protections do different jobs.
 
 78
-00:04:15,482 --> 00:04:18,662
-stop and verify the purpose
-before opening or installing.
+00:05:43,226 --> 00:05:44,486
+In Word, a password
 
 79
-00:04:19,482 --> 00:04:21,962
-This is not about avoiding
-every useful tool.
+00:05:44,486 --> 00:05:48,326
+to open a file encrypts it, so nobody
+can read it without that password.
 
 80
-00:04:22,802 --> 00:04:25,162
-It is about making the
-source and task clear
+00:05:48,326 --> 00:05:53,466
+Read-only only limits changes;
+anyone can still read the words.
 
 81
-00:04:25,162 --> 00:04:28,842
-before granting a device or
-file a path into your system.
+00:05:54,906 --> 00:05:58,326
+Device encryption protects a laptop
+that is lost while turned off.
 
 82
-00:04:29,782 --> 00:04:33,409
-Use only the instructor-approved
-fictional examples for this exercise.
+00:05:59,046 --> 00:06:02,146
+None of these protect a
+computer left signed in, so
 
 83
-00:04:35,409 --> 00:04:37,948
-A video meeting may need
-a camera and microphone,
+00:06:02,146 --> 00:06:05,926
+press Windows and L to lock it,
+or sign out of a shared computer.
 
 84
-00:04:38,449 --> 00:04:41,454
-but a simple text page normally
-has no reason to use them.
+00:06:06,986 --> 00:06:10,466
+For accounts,
+use a passkey when a site offers one.
 
 85
-00:04:42,549 --> 00:04:44,259
-When a permission prompt appears,
+00:06:10,466 --> 00:06:14,726
+Otherwise use a long, unique
+passphrase with two-step verification.
 
 86
-00:04:44,409 --> 00:04:48,069
-identify which app is asking and
-what task you are trying to complete.
+00:06:16,206 --> 00:06:18,006
+On the Mission 5C practice page,
 
 87
-00:04:48,989 --> 00:04:53,669
-Grant access only when the request fits
-that task and you trust the application.
+00:06:18,246 --> 00:06:22,443
+choose before you flip each card, then
+look at the settings your worksheet names.
 
 88
-00:04:54,829 --> 00:04:56,229
-Deny an unrelated request,
+00:06:23,286 --> 00:06:24,446
+Pause the video now.
 
 89
-00:04:56,909 --> 00:05:00,173
-then review the setting later if
-a legitimate feature needs it.
+00:06:38,535 --> 00:06:41,695
+Now you get to show what you can do.
 
 90
-00:05:00,429 --> 00:05:04,522
-After a meeting, check the app's state
-and review permissions when appropriate.
+00:06:42,995 --> 00:06:46,575
+The skills challenge has five tasks,
+and you work on your own.
 
 91
-00:05:05,409 --> 00:05:09,450
-A permission decision is not permanent
-approval of everything an app might do.
+00:06:47,515 --> 00:06:49,775
+Ask a search question
+that names the place,
 
 92
-00:05:10,189 --> 00:05:12,002
-Pause and compare our two examples.
+00:06:49,775 --> 00:06:52,095
+and open the organization's own page.
 
 93
-00:05:13,349 --> 00:05:16,709
-Explain why a meeting and a text
-page lead to different choices.
+00:06:53,475 --> 00:06:56,014
+Build a short Word paragraph
+with a real heading,
 
 94
-00:05:18,639 --> 00:05:19,578
-Safety also includes
+00:06:56,555 --> 00:06:58,795
+three numbered steps, and a bold warning.
 
 95
-00:05:19,578 --> 00:05:24,239
-the way an online interaction
-affects your attention and wellbeing.
+00:06:59,875 --> 00:07:02,635
+Total four costs in Excel with a formula.
 
 96
-00:05:24,239 --> 00:05:26,999
-Catfishing uses a false
-identity to build trust.
+00:07:03,735 --> 00:07:06,695
+Delete a line,
+then bring it back with Undo.
 
 97
-00:05:28,179 --> 00:05:32,179
-A friendly conversation does not by
-itself verify the person's story.
+00:07:08,075 --> 00:07:10,675
+And write useful feedback
+on a partner's flyer.
 
 98
-00:05:33,299 --> 00:05:34,319
-Fear of missing out
+00:07:12,255 --> 00:07:13,476
+The quick card is allowed.
 
 99
-00:05:34,319 --> 00:05:35,239
-can encourage
+00:07:14,715 --> 00:07:17,876
+Your instructor watches and
+records how much help you needed.
 
 100
-00:05:35,239 --> 00:05:38,979
-repeated checking of alerts even when
-you intended to do something else.
+00:07:18,275 --> 00:07:20,244
+This is separate from your test score,
 
 101
-00:05:40,079 --> 00:05:44,179
-Choose notification settings and
-breaks that support your own goals.
+00:07:20,255 --> 00:07:22,794
+and it shows what you can
+already do on your own.
 
 102
-00:05:45,379 --> 00:05:49,399
-If a post or interaction becomes harmful,
-avoid escalating it.
+00:07:27,390 --> 00:07:30,450
+Last comes the post-test.
 
 103
-00:05:50,079 --> 00:05:52,119
-Use the service's reporting or blocking
+00:07:30,450 --> 00:07:34,510
+It has twenty questions, and you take
+it on your own, with no coaching.
 
 104
-00:05:52,119 --> 00:05:53,219
-tools when appropriate,
+00:07:35,930 --> 00:07:40,850
+When you finish, submit your results to
+Britt and save the complete graded PDF.
 
 105
-00:05:53,219 --> 00:05:57,399
-and seek help from a trusted person
-or the relevant support channel.
+00:07:42,370 --> 00:07:45,990
+The results show your score
+and which areas went well.
 
 106
-00:05:58,359 --> 00:05:59,199
-You do not
+00:07:47,350 --> 00:07:49,682
+Treat them as a learning plan,
+not a verdict.
 
 107
-00:05:59,199 --> 00:06:00,279
-have to solve every
+00:07:50,830 --> 00:07:55,090
+Pick one strength to keep using
+and one skill to practice next.
 
 108
-00:06:00,279 --> 00:06:04,779
-problem alone or continue a conversation
-because someone pressures you to respond.
+00:07:56,250 --> 00:08:01,050
+Then compare where you started on
+the pre-test with where you are now.
 
 109
-00:06:06,652 --> 00:06:08,572
-Here is a new fictional scenario.
+00:08:01,850 --> 00:08:06,650
+Every row you completed in this course
+is something you can do again at home,
 
 110
-00:06:09,552 --> 00:06:11,012
-A message claiming to represent
-
-111
-00:06:11,012 --> 00:06:12,232
-a community service
-
-112
-00:06:12,232 --> 00:06:16,252
-asks for a private code before
-it will confirm an appointment.
-
-113
-00:06:17,532 --> 00:06:19,553
-Pause the video and state three things:
-
-114
-00:06:20,052 --> 00:06:24,892
-what evidence you have, what remains
-unverified, and what you would do next.
-
-115
-00:06:25,972 --> 00:06:28,672
-A strong response identifies
-the unusual request,
-
-116
-00:06:29,332 --> 00:06:30,172
-avoids sharing
-
-117
-00:06:30,172 --> 00:06:33,772
-the code, and checks the appointment
-through a known contact method.
-
-118
-00:06:33,772 --> 00:06:39,292
-It does not rely only on spelling mistakes
-or how professional the message looks.
-
-119
-00:06:39,892 --> 00:06:43,812
-Ask a partner to explain a different
-scenario using the same process.
-
-120
-00:06:44,652 --> 00:06:45,412
-If you disagree,
-
-121
-00:06:45,892 --> 00:06:48,372
-discuss the evidence
-behind each choice rather
-
-122
-00:06:48,372 --> 00:06:50,807
-than guessing what answer
-the instructor wants.
-
-123
-00:06:52,507 --> 00:06:55,616
-Before the post-test,
-review the skills you can demonstrate:
-
-124
-00:06:56,387 --> 00:06:57,795
-adjust a setting and check it,
-
-125
-00:06:58,407 --> 00:06:59,467
-justify a source,
-
-126
-00:07:00,367 --> 00:07:06,587
-choose file access, test a calculation,
-and communicate a clear next step.
-
-127
-00:07:07,727 --> 00:07:09,696
-Complete the assessment independently,
-
-128
-00:07:09,987 --> 00:07:13,307
-then use its explanations to
-identify a useful practice task.
-
-129
-00:07:14,567 --> 00:07:16,927
-A classroom score is
-one piece of evidence,
-
-130
-00:07:17,227 --> 00:07:21,061
-not a judgment about your ability to
-learn and not a certification result.
-
-131
-00:07:21,567 --> 00:07:23,795
-Keep the saved report
-if it helps you plan.
-
-132
-00:07:24,607 --> 00:07:25,527
-Choose one skill
-
-133
-00:07:25,527 --> 00:07:26,447
-to repeat with less
-
-134
-00:07:26,447 --> 00:07:30,667
-help and one situation from your own
-routine where it would be useful.
-
-135
-00:07:31,887 --> 00:07:35,825
-Confidence grows from being able to
-explain and repeat a successful process,
-
-136
-00:07:36,367 --> 00:07:38,543
-including knowing when to ask for support.
+00:08:07,110 --> 00:08:08,010
+at your own pace.

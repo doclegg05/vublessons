@@ -5,7 +5,7 @@ const read=p=>fs.readFileSync(p,'utf8');
 const weeks=JSON.parse(read('scripts/dl2/curriculum.json')).weeks;
 const text=html=>html.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&#x27;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g,' ');
 // Video pause points: the end of each practice prompt, from the narration word timings.
-const pauses={2:['1:26','2:22','3:41','5:14','6:47'],3:['0:42','2:32','3:45','4:42','6:19','7:24','8:20'],4:['1:24','2:20','3:18','4:20','5:23','6:59','8:04'],5:['1:23','2:43','3:36','4:55','6:13'],6:['2:52','6:37']};
+const pauses={2:['1:26','2:22','3:41','5:14','6:47'],3:['0:42','2:32','3:45','4:42','6:19','7:24','8:20'],4:['1:24','2:20','3:18','4:20','5:23','6:59','8:04'],5:['2:12','3:51','4:43','6:24'],6:['2:52','6:37']};
 // Throwaway knowledge-check options named in the 2026-09-26 content review.
 // 2026-09-28 (Mission Control, Task 11): the post-test now has 20 questions. The week 5 plan was corrected by hand;
 // scripts/dl2/curriculum.json still says "28-question" (the generator was off limits for that task). Remove this

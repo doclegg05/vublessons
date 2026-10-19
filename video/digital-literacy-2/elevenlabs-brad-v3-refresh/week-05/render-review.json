@@ -1,0 +1,36 @@
+{
+  "tool": "render-review",
+  "version": 1,
+  "render": "/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/course-weeks-3-6-alignment-3f6555/courses/digital-literacy-2/media/week-05.mp4",
+  "sha256": "37a5ccca5423939f6be62ad06d2f5d7af6e0fc75cf2edd03800310fc40ded9b5",
+  "durationSeconds": 490.375,
+  "model": "google/gemini-3.5-flash",
+  "route": "openrouter",
+  "generatedAt": "2026-10-09T14:21:44.106Z",
+  "proxy": {
+    "megabytes": 4.02,
+    "segments": 1
+  },
+  "verdict": "pass",
+  "issueCounts": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "issues": [
+    {
+      "t": 398,
+      "dimension": "prosody",
+      "severity": "minor",
+      "confidence": 0.9,
+      "description": "The narrator's voice on the sentence \"Now you get to show what you can do\" has a sudden drop in pitch, slow pacing, and unnatural cadence compared to the rest of the voice track.",
+      "suggested_edit": "Regenerate the text-to-speech audio for this sentence to match the standard pitch and speed used throughout the rest of the video.",
+      "timestamp": "06:38"
+    }
+  ],
+  "usage": {
+    "promptTokens": 49848,
+    "completionTokens": 5100,
+    "costUsd": 0.1207
+  }
+}

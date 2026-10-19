@@ -1,9 +1,9 @@
 [
   {
-    "chapter": 4,
-    "title": "Verify through a route you already trust",
-    "startSeconds": 132.963,
-    "durationSeconds": 48.106,
+    "chapter": 5,
+    "title": "Check it a safer way",
+    "startSeconds": 188.458,
+    "durationSeconds": 43.057,
     "actions": [
       {
         "at": 0.0,
@@ -11,87 +11,103 @@
         "state": 0,
         "x": 1049,
         "y": 173,
-        "label": "Do not follow the message\u2019s link"
+        "label": "Do not use the message's link or number"
       },
       {
         "at": 0.45,
-        "phrase": "Open the organization",
+        "phrase": "Never use the link",
         "state": 1,
         "x": 1145,
         "y": 87,
-        "label": "Leave the suspicious message"
+        "label": "Leave the suspicious message alone"
       },
       {
-        "at": 3.77,
-        "phrase": "use a saved bookmark",
+        "at": 8.23,
+        "phrase": "Open a bookmark you saved",
         "state": 2,
         "x": 442,
         "y": 245,
         "label": "Open a bookmark you already trust"
       },
       {
-        "at": 6.17,
-        "phrase": "find its contact details independently",
+        "at": 10.31,
+        "phrase": "type an address you know",
         "state": 3,
         "x": 175,
         "y": 305,
-        "label": "Use Contact on the known website"
+        "label": "Use Contact on the site you know"
       },
       {
-        "at": 14.09,
-        "phrase": "Ask whether the claimed issue exists",
+        "at": 15.33,
+        "phrase": "Then ask whether the problem is real",
         "state": 4,
         "x": 722,
         "y": 403,
-        "label": "Verify the claim through the independent contact"
+        "label": "Ask whether the problem is real"
+      },
+      {
+        "at": 18.67,
+        "phrase": "If you already typed your password",
+        "state": 5,
+        "x": 722,
+        "y": 403,
+        "label": "Typed it? Change it \u2022 two-step verification"
       }
     ]
   },
   {
     "chapter": 7,
-    "title": "Grant camera and microphone access for a reason",
-    "startSeconds": 274.959,
-    "durationSeconds": 43.23,
+    "title": "Updates and permissions",
+    "startSeconds": 297.182,
+    "durationSeconds": 42.974,
     "actions": [
       {
         "at": 0.0,
         "phrase": "",
+        "state": 6,
+        "x": 600,
+        "y": 270,
+        "label": "Windows Update closes security holes"
+      },
+      {
+        "at": 16.35,
+        "phrase": "A website may ask",
         "state": 0,
         "x": 812,
         "y": 253,
         "label": "Which site is asking, and why?"
       },
       {
-        "at": 14.03,
-        "phrase": "Grant access only",
+        "at": 20.43,
+        "phrase": "Allow it when the task needs it",
         "state": 1,
         "x": 966,
         "y": 384,
-        "label": "Trusted meeting + camera task \u2192 Allow"
+        "label": "Video meeting needs the camera \u2192 Allow"
       },
       {
-        "at": 15.67,
-        "phrase": "request fits that task",
-        "state": 2,
-        "x": 771,
-        "y": 309,
-        "label": "Check the permission that was granted"
-      },
-      {
-        "at": 19.87,
-        "phrase": "Deny an unrelated request",
+        "at": 23.91,
+        "phrase": "block it when it does not",
         "state": 4,
         "x": 680,
         "y": 384,
-        "label": "A text page does not need the camera \u2192 Block"
+        "label": "A page you only read \u2192 Block"
       },
       {
-        "at": 21.99,
-        "phrase": "review the setting later",
+        "at": 27.89,
+        "phrase": "A permission can stay on",
         "state": 5,
         "x": 762,
         "y": 310,
-        "label": "Review permissions \u2022 blocked here"
+        "label": "Review site permissions after the call"
+      },
+      {
+        "at": 34.33,
+        "phrase": "If you find a USB drive",
+        "state": 7,
+        "x": 600,
+        "y": 300,
+        "label": "Unknown USB drive: give it to staff"
       }
     ]
   }
