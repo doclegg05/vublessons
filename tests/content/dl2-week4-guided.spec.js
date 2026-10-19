@@ -87,6 +87,14 @@ test('Practice Mail is safe, accepts only example.com, and shows who sees what',
  expect(page).toContain('[hidden]{display:none!important}');
 });
 
+test('Learner pages use plain words: no channel-style jargon, and the roles are defined',()=>{
+ for(const [name,body] of [['slides',text(slides().map(s=>s.shown).join(' '))],['worksheet',text(read(`${dir}/worksheet.html`))]])
+  for(const jargon of [/\bchannels?\b/i,/synchronous/i,/\bMFA\b/,/\bASAP\b/,/forwarding|forward the/i,/\brecipients?\b/i,/\bcommenter\b/i,/\bwriter\b/i,/\bribbon\b/i,/\babbreviations?\b/i])
+   expect(body,`${name}: ${jargon}`).not.toMatch(jargon);
+ const ws=text(read(`${dir}/worksheet.html`));
+ for(const term of ['Owner','Reviewer','Thread','Draft','Tab','Address bar'])expect(ws,term).toContain(term+' ');
+});
+
 test('Nothing labels the learners: no skill-level wording on any Week 4 page',()=>{
  for(const f of ['presentation','worksheet','answer-key','lesson-plan','run-sheet','instructor-notes'])
   expect(text(read(`${dir}/${f}.html`)),f).not.toMatch(/\b(beginners?|non-?technical|not technical|novices?|first-time users?|low-skill|struggling)\b/i);
