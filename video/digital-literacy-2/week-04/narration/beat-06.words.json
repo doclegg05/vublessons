@@ -1,548 +1,563 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "5334f1f6e061e372a133da89e29e6556e9f13eee1b0e1dc81f6a15014e4f880d",
-  "textSha256": "3e2aaecd8fce82f592baf0f94306dcfa0dbd71482afc4648a9ae4e28675a2046",
-  "matchRatio": 1.0,
+  "wavSha256": "3b40cccb8e9307a507ce77e80877a69bb15cb2659ab4b8e927e0c93fec42cbb9",
+  "textSha256": "022141d4346439beb45fb0d437f918b1b0fce110b1147e3cdc3cdc4d766ecceb",
+  "matchRatio": 0.9819819819819819,
   "words": [
     {
       "word": "Compare",
       "start": 0.0,
-      "end": 0.32
+      "end": 0.44
     },
     {
       "word": "two",
-      "start": 0.32,
-      "end": 0.78
+      "start": 0.44,
+      "end": 0.84
     },
     {
       "word": "comments.",
-      "start": 0.78,
+      "start": 0.84,
       "end": 1.34
     },
     {
       "word": "This",
-      "start": 2.2,
-      "end": 2.4
+      "start": 2.36,
+      "end": 2.8
     },
     {
       "word": "is",
-      "start": 2.4,
-      "end": 2.54
+      "start": 2.8,
+      "end": 2.98
     },
     {
       "word": "confusing",
-      "start": 2.54,
-      "end": 2.84
+      "start": 2.98,
+      "end": 3.34
     },
     {
       "word": "gives",
-      "start": 3.52,
-      "end": 3.7
+      "start": 3.34,
+      "end": 3.98
     },
     {
       "word": "the",
-      "start": 3.7,
-      "end": 3.92
+      "start": 3.98,
+      "end": 4.22
     },
     {
       "word": "writer",
-      "start": 3.92,
-      "end": 4.12
+      "start": 4.22,
+      "end": 4.44
     },
     {
-      "word": "little",
-      "start": 4.12,
-      "end": 4.5
-    },
-    {
-      "word": "to",
-      "start": 4.5,
-      "end": 4.78
-    },
-    {
-      "word": "act",
-      "start": 4.78,
+      "word": "nothing",
+      "start": 4.44,
       "end": 4.96
     },
     {
-      "word": "on.",
+      "word": "to",
       "start": 4.96,
       "end": 5.26
     },
     {
-      "word": "Add",
-      "start": 6.0,
-      "end": 6.4
+      "word": "act",
+      "start": 5.26,
+      "end": 5.48
+    },
+    {
+      "word": "on.",
+      "start": 5.48,
+      "end": 5.78
+    },
+    {
+      "word": "In",
+      "start": 6.64,
+      "end": 7.06
+    },
+    {
+      "word": "step",
+      "start": 7.06,
+      "end": 7.26
+    },
+    {
+      "word": "2,",
+      "start": 7.26,
+      "end": 8.06
+    },
+    {
+      "word": "add",
+      "start": 8.06,
+      "end": 8.34
+    },
+    {
+      "word": "where",
+      "start": 8.34,
+      "end": 8.6
     },
     {
       "word": "the",
-      "start": 6.4,
-      "end": 6.54
-    },
-    {
-      "word": "contact",
-      "start": 6.54,
-      "end": 6.84
-    },
-    {
-      "word": "number",
-      "start": 6.84,
-      "end": 7.3
-    },
-    {
-      "word": "after",
-      "start": 7.3,
-      "end": 7.54
-    },
-    {
-      "word": "the",
-      "start": 7.54,
-      "end": 7.84
-    },
-    {
-      "word": "steps",
-      "start": 7.84,
-      "end": 8.1
-    },
-    {
-      "word": "so",
-      "start": 8.1,
-      "end": 8.58
-    },
-    {
-      "word": "readers",
-      "start": 8.58,
+      "start": 8.6,
       "end": 8.8
     },
     {
-      "word": "can",
+      "word": "desk",
       "start": 8.8,
-      "end": 9.1
+      "end": 9.0
     },
     {
-      "word": "find",
-      "start": 9.1,
-      "end": 9.36
+      "word": "is,",
+      "start": 9.0,
+      "end": 9.42
     },
     {
-      "word": "help",
-      "start": 9.36,
-      "end": 9.66
+      "word": "Room",
+      "start": 9.82,
+      "end": 10.02
     },
     {
-      "word": "identifies",
-      "start": 10.56,
-      "end": 11.14
-    },
-    {
-      "word": "a",
-      "start": 11.14,
-      "end": 11.28
-    },
-    {
-      "word": "location,",
-      "start": 11.28,
-      "end": 11.6
-    },
-    {
-      "word": "a",
-      "start": 12.12,
-      "end": 12.18
-    },
-    {
-      "word": "change,",
-      "start": 12.18,
-      "end": 12.48
-    },
-    {
-      "word": "and",
-      "start": 12.6,
-      "end": 12.96
-    },
-    {
-      "word": "a",
-      "start": 12.96,
-      "end": 13.02
-    },
-    {
-      "word": "reason.",
-      "start": 13.02,
-      "end": 13.36
-    },
-    {
-      "word": "The",
-      "start": 14.46,
-      "end": 14.54
-    },
-    {
-      "word": "writer",
-      "start": 14.54,
-      "end": 14.7
-    },
-    {
-      "word": "can",
-      "start": 14.7,
-      "end": 14.98
-    },
-    {
-      "word": "accept",
-      "start": 14.98,
-      "end": 15.2
-    },
-    {
-      "word": "the",
-      "start": 15.2,
-      "end": 15.46
-    },
-    {
-      "word": "idea,",
-      "start": 15.46,
-      "end": 15.84
-    },
-    {
-      "word": "ask",
-      "start": 16.26,
-      "end": 16.52
-    },
-    {
-      "word": "a",
-      "start": 16.52,
-      "end": 16.64
-    },
-    {
-      "word": "clarifying",
-      "start": 16.64,
-      "end": 17.06
-    },
-    {
-      "word": "question,",
-      "start": 17.06,
-      "end": 17.5
-    },
-    {
-      "word": "or",
-      "start": 18.08,
-      "end": 18.14
-    },
-    {
-      "word": "explain",
-      "start": 18.14,
-      "end": 18.44
-    },
-    {
-      "word": "another",
-      "start": 18.44,
-      "end": 18.82
-    },
-    {
-      "word": "choice.",
-      "start": 18.82,
-      "end": 19.24
-    },
-    {
-      "word": "Discuss",
-      "start": 20.32,
-      "end": 20.5
-    },
-    {
-      "word": "the",
-      "start": 20.5,
-      "end": 21.0
-    },
-    {
-      "word": "work",
-      "start": 21.0,
-      "end": 21.2
-    },
-    {
-      "word": "rather",
-      "start": 21.2,
-      "end": 21.6
-    },
-    {
-      "word": "than",
-      "start": 21.6,
-      "end": 21.96
-    },
-    {
-      "word": "judging",
-      "start": 21.96,
-      "end": 22.16
-    },
-    {
-      "word": "the",
-      "start": 22.16,
-      "end": 22.46
-    },
-    {
-      "word": "person.",
-      "start": 22.46,
-      "end": 22.76
-    },
-    {
-      "word": "After",
-      "start": 23.64,
-      "end": 23.88
-    },
-    {
-      "word": "making",
-      "start": 23.88,
-      "end": 24.2
-    },
-    {
-      "word": "the",
-      "start": 24.2,
-      "end": 24.44
-    },
-    {
-      "word": "edit,",
-      "start": 24.44,
-      "end": 24.64
-    },
-    {
-      "word": "acknowledge",
-      "start": 24.98,
-      "end": 25.26
-    },
-    {
-      "word": "the",
-      "start": 25.26,
-      "end": 25.6
-    },
-    {
-      "word": "feedback",
-      "start": 25.6,
-      "end": 25.86
-    },
-    {
-      "word": "and",
-      "start": 25.86,
-      "end": 26.28
-    },
-    {
-      "word": "check",
-      "start": 26.28,
-      "end": 26.44
-    },
-    {
-      "word": "the",
-      "start": 26.44,
-      "end": 26.68
-    },
-    {
-      "word": "revised",
-      "start": 26.68,
-      "end": 26.9
-    },
-    {
-      "word": "document.",
-      "start": 26.9,
-      "end": 27.48
-    },
-    {
-      "word": "Resolve",
-      "start": 28.26,
-      "end": 28.84
-    },
-    {
-      "word": "a",
-      "start": 28.84,
-      "end": 28.96
-    },
-    {
-      "word": "comment",
-      "start": 28.96,
-      "end": 29.26
-    },
-    {
-      "word": "only",
-      "start": 29.26,
-      "end": 29.56
-    },
-    {
-      "word": "when",
-      "start": 29.56,
-      "end": 29.86
-    },
-    {
-      "word": "the",
-      "start": 29.86,
-      "end": 29.98
-    },
-    {
-      "word": "issue",
-      "start": 29.98,
-      "end": 30.26
-    },
-    {
-      "word": "has",
-      "start": 30.26,
-      "end": 30.48
-    },
-    {
-      "word": "been",
-      "start": 30.48,
-      "end": 30.62
-    },
-    {
-      "word": "addressed",
-      "start": 30.62,
-      "end": 30.86
-    },
-    {
-      "word": "or",
-      "start": 30.86,
-      "end": 31.56
-    },
-    {
-      "word": "an",
-      "start": 31.56,
-      "end": 31.68
-    },
-    {
-      "word": "alternative",
-      "start": 31.68,
-      "end": 31.98
-    },
-    {
-      "word": "decision",
-      "start": 31.98,
-      "end": 32.58
-    },
-    {
-      "word": "is",
-      "start": 32.58,
-      "end": 33.0
-    },
-    {
-      "word": "clear.",
-      "start": 33.0,
-      "end": 33.3
-    },
-    {
-      "word": "Pause",
-      "start": 34.32,
-      "end": 34.8
-    },
-    {
-      "word": "and",
-      "start": 34.8,
-      "end": 34.96
-    },
-    {
-      "word": "write",
-      "start": 34.96,
-      "end": 35.1
-    },
-    {
-      "word": "one",
-      "start": 35.1,
-      "end": 35.4
-    },
-    {
-      "word": "useful",
-      "start": 35.4,
-      "end": 35.7
-    },
-    {
-      "word": "comment",
-      "start": 35.7,
-      "end": 36.22
+      "word": "A",
+      "start": 10.02,
+      "end": 10.34
     },
     {
       "word": "on",
-      "start": 36.22,
-      "end": 36.5
+      "start": 10.34,
+      "end": 10.66
     },
     {
       "word": "the",
-      "start": 36.5,
-      "end": 36.6
+      "start": 10.66,
+      "end": 10.8
     },
     {
-      "word": "fictional",
-      "start": 36.6,
-      "end": 36.88
+      "word": "first",
+      "start": 10.8,
+      "end": 11.0
     },
     {
-      "word": "handout.",
-      "start": 36.88,
-      "end": 37.46
+      "word": "floor,",
+      "start": 11.0,
+      "end": 11.32
     },
     {
-      "word": "Have",
-      "start": 38.12,
-      "end": 38.38
+      "word": "so",
+      "start": 12.08,
+      "end": 12.24
     },
     {
-      "word": "a",
-      "start": 38.38,
-      "end": 38.48
+      "word": "first-time",
+      "start": 12.24,
+      "end": 12.74
     },
     {
-      "word": "partner",
-      "start": 38.48,
-      "end": 38.76
+      "word": "visitors",
+      "start": 12.74,
+      "end": 13.0
     },
     {
-      "word": "explain",
-      "start": 38.76,
-      "end": 39.14
+      "word": "can",
+      "start": 13.0,
+      "end": 13.32
     },
     {
-      "word": "the",
-      "start": 39.14,
-      "end": 39.5
-    },
-    {
-      "word": "change",
-      "start": 39.5,
-      "end": 39.72
-    },
-    {
-      "word": "they",
-      "start": 39.72,
-      "end": 40.04
-    },
-    {
-      "word": "think",
-      "start": 40.04,
-      "end": 40.3
-    },
-    {
-      "word": "you",
-      "start": 40.3,
-      "end": 40.52
-    },
-    {
-      "word": "are",
-      "start": 40.52,
-      "end": 40.66
-    },
-    {
-      "word": "requesting",
-      "start": 40.66,
-      "end": 40.98
-    },
-    {
-      "word": "before",
-      "start": 40.98,
-      "end": 41.7
-    },
-    {
-      "word": "they",
-      "start": 41.7,
-      "end": 42.26
-    },
-    {
-      "word": "make",
-      "start": 42.26,
-      "end": 42.48
+      "word": "find",
+      "start": 13.32,
+      "end": 13.58
     },
     {
       "word": "it.",
-      "start": 42.48,
-      "end": 42.68
+      "start": 13.58,
+      "end": 13.78
+    },
+    {
+      "word": "That",
+      "start": 15.0,
+      "end": 15.18
+    },
+    {
+      "word": "comment",
+      "start": 15.18,
+      "end": 15.54
+    },
+    {
+      "word": "names",
+      "start": 15.54,
+      "end": 15.82
+    },
+    {
+      "word": "a",
+      "start": 15.82,
+      "end": 16.04
+    },
+    {
+      "word": "place,",
+      "start": 16.04,
+      "end": 16.3
+    },
+    {
+      "word": "a",
+      "start": 16.76,
+      "end": 16.96
+    },
+    {
+      "word": "change,",
+      "start": 16.96,
+      "end": 17.18
+    },
+    {
+      "word": "and",
+      "start": 17.7,
+      "end": 17.9
+    },
+    {
+      "word": "a",
+      "start": 17.9,
+      "end": 17.98
+    },
+    {
+      "word": "reason.",
+      "start": 17.98,
+      "end": 18.26
+    },
+    {
+      "word": "In",
+      "start": 19.56,
+      "end": 19.68
+    },
+    {
+      "word": "Word,",
+      "start": 19.68,
+      "end": 19.94
+    },
+    {
+      "word": "select",
+      "start": 20.28,
+      "end": 20.58
+    },
+    {
+      "word": "the",
+      "start": 20.58,
+      "end": 20.94
+    },
+    {
+      "word": "step,",
+      "start": 20.94,
+      "end": 21.18
+    },
+    {
+      "word": "choose",
+      "start": 21.7,
+      "end": 22.12
+    },
+    {
+      "word": "Review,",
+      "start": 22.12,
+      "end": 22.44
+    },
+    {
+      "word": "then",
+      "start": 23.34,
+      "end": 23.62
+    },
+    {
+      "word": "New",
+      "start": 23.62,
+      "end": 24.1
+    },
+    {
+      "word": "Comment,",
+      "start": 24.1,
+      "end": 24.42
+    },
+    {
+      "word": "and",
+      "start": 25.04,
+      "end": 25.18
+    },
+    {
+      "word": "type",
+      "start": 25.18,
+      "end": 25.38
+    },
+    {
+      "word": "it.",
+      "start": 25.56,
+      "end": 25.62
+    },
+    {
+      "word": "The",
+      "start": 26.5,
+      "end": 26.72
+    },
+    {
+      "word": "writer",
+      "start": 26.72,
+      "end": 26.92
+    },
+    {
+      "word": "replies",
+      "start": 26.92,
+      "end": 27.28
+    },
+    {
+      "word": "first,",
+      "start": 27.28,
+      "end": 27.8
+    },
+    {
+      "word": "then",
+      "start": 28.18,
+      "end": 28.34
+    },
+    {
+      "word": "makes",
+      "start": 28.34,
+      "end": 28.62
+    },
+    {
+      "word": "the",
+      "start": 28.62,
+      "end": 28.78
+    },
+    {
+      "word": "change",
+      "start": 28.78,
+      "end": 29.08
+    },
+    {
+      "word": "or",
+      "start": 29.08,
+      "end": 29.46
+    },
+    {
+      "word": "explains",
+      "start": 29.46,
+      "end": 29.8
+    },
+    {
+      "word": "why",
+      "start": 29.8,
+      "end": 30.18
+    },
+    {
+      "word": "not.",
+      "start": 30.18,
+      "end": 30.44
+    },
+    {
+      "word": "Resolve",
+      "start": 31.32,
+      "end": 31.66
+    },
+    {
+      "word": "the",
+      "start": 31.66,
+      "end": 31.86
+    },
+    {
+      "word": "comment",
+      "start": 31.86,
+      "end": 32.16
+    },
+    {
+      "word": "only",
+      "start": 32.16,
+      "end": 32.64
+    },
+    {
+      "word": "after",
+      "start": 32.64,
+      "end": 33.02
+    },
+    {
+      "word": "that",
+      "start": 33.02,
+      "end": 33.44
+    },
+    {
+      "word": "reply.",
+      "start": 33.44,
+      "end": 33.72
+    },
+    {
+      "word": "A",
+      "start": 34.94,
+      "end": 34.98
+    },
+    {
+      "word": "resolved",
+      "start": 34.98,
+      "end": 35.18
+    },
+    {
+      "word": "comment",
+      "start": 35.18,
+      "end": 35.68
+    },
+    {
+      "word": "is",
+      "start": 35.68,
+      "end": 36.0
+    },
+    {
+      "word": "hidden,",
+      "start": 36.0,
+      "end": 36.3
+    },
+    {
+      "word": "not",
+      "start": 36.84,
+      "end": 36.96
+    },
+    {
+      "word": "deleted.",
+      "start": 36.96,
+      "end": 37.34
+    },
+    {
+      "word": "Comment",
+      "start": 38.66,
+      "end": 39.22
+    },
+    {
+      "word": "on",
+      "start": 39.22,
+      "end": 39.58
+    },
+    {
+      "word": "the",
+      "start": 39.58,
+      "end": 39.74
+    },
+    {
+      "word": "work,",
+      "start": 39.74,
+      "end": 39.98
+    },
+    {
+      "word": "never",
+      "start": 40.58,
+      "end": 40.7
+    },
+    {
+      "word": "on",
+      "start": 40.7,
+      "end": 41.12
+    },
+    {
+      "word": "the",
+      "start": 41.12,
+      "end": 41.28
+    },
+    {
+      "word": "person.",
+      "start": 41.28,
+      "end": 41.64
+    },
+    {
+      "word": "Trade",
+      "start": 42.64,
+      "end": 43.22
+    },
+    {
+      "word": "seats,",
+      "start": 43.22,
+      "end": 43.46
+    },
+    {
+      "word": "add",
+      "start": 44.32,
+      "end": 44.44
+    },
+    {
+      "word": "one",
+      "start": 44.44,
+      "end": 44.7
+    },
+    {
+      "word": "useful",
+      "start": 44.7,
+      "end": 45.04
+    },
+    {
+      "word": "comment,",
+      "start": 45.04,
+      "end": 45.52
+    },
+    {
+      "word": "then",
+      "start": 46.14,
+      "end": 46.26
+    },
+    {
+      "word": "reply",
+      "start": 46.26,
+      "end": 46.44
+    },
+    {
+      "word": "to",
+      "start": 46.66,
+      "end": 46.92
+    },
+    {
+      "word": "and",
+      "start": 46.92,
+      "end": 47.24
+    },
+    {
+      "word": "resolve",
+      "start": 47.24,
+      "end": 47.5
+    },
+    {
+      "word": "the",
+      "start": 47.5,
+      "end": 47.84
+    },
+    {
+      "word": "comment",
+      "start": 47.84,
+      "end": 48.1
+    },
+    {
+      "word": "on",
+      "start": 48.1,
+      "end": 48.48
+    },
+    {
+      "word": "your",
+      "start": 48.48,
+      "end": 48.64
+    },
+    {
+      "word": "own",
+      "start": 48.64,
+      "end": 48.92
+    },
+    {
+      "word": "handout.",
+      "start": 48.92,
+      "end": 49.42
+    },
+    {
+      "word": "Pause",
+      "start": 50.34,
+      "end": 50.88
+    },
+    {
+      "word": "the",
+      "start": 50.88,
+      "end": 51.02
+    },
+    {
+      "word": "video",
+      "start": 51.02,
+      "end": 51.24
+    },
+    {
+      "word": "now.",
+      "start": 51.24,
+      "end": 51.52
     }
   ]
 }

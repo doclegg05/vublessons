@@ -1,42 +1,42 @@
 [
   {
-    "title": "Coordinate a task people recognize",
+    "title": "Plan a help session people can follow",
     "startSeconds": 0.45
   },
   {
-    "title": "Choose the channel and identity deliberately",
-    "startSeconds": 41.985
+    "title": "Choose the channel and the account",
+    "startSeconds": 43.23
   },
   {
-    "title": "Write a message someone can act on",
-    "startSeconds": 85.123
+    "title": "Write a request someone can act on",
+    "startSeconds": 95.293
   },
   {
-    "title": "Check who receives the message",
-    "startSeconds": 131.952
+    "title": "Check who receives it",
+    "startSeconds": 151.359
   },
   {
     "title": "Work from one shared copy",
-    "startSeconds": 179.803
+    "startSeconds": 208.322
   },
   {
-    "title": "Give feedback that leads to a useful change",
-    "startSeconds": 227.816
+    "title": "Give feedback the writer can use",
+    "startSeconds": 271.345
   },
   {
-    "title": "Join a meeting prepared to participate",
-    "startSeconds": 272.23
+    "title": "Join a meeting ready to take part",
+    "startSeconds": 333.602
   },
   {
-    "title": "Participate in a community thoughtfully",
-    "startSeconds": 318.339
+    "title": "Check a community post before you trust it",
+    "startSeconds": 377.077
   },
   {
-    "title": "Review a digital purchase before committing",
-    "startSeconds": 361.081
+    "title": "Check an offer before you pay",
+    "startSeconds": 429.977
   },
   {
     "title": "Leave a clear record of the next step",
-    "startSeconds": 406.215
+    "startSeconds": 494.639
   }
 ]

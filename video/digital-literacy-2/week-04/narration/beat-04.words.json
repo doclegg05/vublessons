@@ -1,568 +1,573 @@
 {
   "source": "faster-whisper base.en on final narration wav",
-  "wavSha256": "8301079fb5a4fb527d0f09014cb8ebc7b7202f90404894f5c561fb5a834c7a28",
-  "textSha256": "81d161e51902682c0333a324933c16d5ebd65c5ec149d36d594d39bfa922b0d0",
-  "matchRatio": 0.9910714285714286,
+  "wavSha256": "2f45bd5d3ed1502e4cad8aa503f35e53501d41da30a92b1615486cec12c95ebc",
+  "textSha256": "f27fb41fdb1bd250eef6b59ddbf6f0d675929dfe0f1de35b3b3d7112a7337870",
+  "matchRatio": 0.9734513274336283,
   "words": [
     {
       "word": "Before",
       "start": 0.0,
-      "end": 0.22
+      "end": 0.3
     },
     {
-      "word": "sending",
-      "start": 0.22,
-      "end": 0.62
+      "word": "you",
+      "start": 0.3,
+      "end": 0.48
     },
     {
-      "word": "a",
-      "start": 0.62,
-      "end": 0.82
+      "word": "send,",
+      "start": 0.48,
+      "end": 0.74
     },
     {
-      "word": "real",
-      "start": 0.82,
-      "end": 1.02
-    },
-    {
-      "word": "email,",
-      "start": 1.02,
-      "end": 1.46
-    },
-    {
-      "word": "inspect",
-      "start": 1.88,
-      "end": 2.2
+      "word": "read",
+      "start": 1.14,
+      "end": 1.42
     },
     {
       "word": "every",
-      "start": 2.2,
-      "end": 2.78
+      "start": 1.42,
+      "end": 1.9
     },
     {
       "word": "recipient",
-      "start": 2.78,
-      "end": 3.24
+      "start": 1.9,
+      "end": 2.52
     },
     {
-      "word": "field.",
-      "start": 3.24,
-      "end": 3.6
+      "word": "line.",
+      "start": 2.52,
+      "end": 2.98
     },
     {
-      "word": "To",
-      "start": 3.6,
-      "end": 4.76
+      "word": "Sam",
+      "start": 4.22,
+      "end": 4.4
     },
     {
-      "word": "usually",
-      "start": 4.76,
-      "end": 5.4
-    },
-    {
-      "word": "identifies",
-      "start": 5.4,
-      "end": 5.72
-    },
-    {
-      "word": "the",
-      "start": 5.72,
-      "end": 6.22
-    },
-    {
-      "word": "main",
-      "start": 6.22,
-      "end": 6.4
-    },
-    {
-      "word": "recipients.",
-      "start": 6.4,
-      "end": 6.72
-    },
-    {
-      "word": "Cc",
-      "start": 7.98,
-      "end": 7.98
-    },
-    {
-      "word": "sends",
-      "start": 7.98,
-      "end": 8.68
-    },
-    {
-      "word": "a",
-      "start": 8.68,
-      "end": 8.8
-    },
-    {
-      "word": "visible",
-      "start": 8.8,
-      "end": 9.08
-    },
-    {
-      "word": "copy",
-      "start": 9.08,
-      "end": 9.4
+      "word": "needs",
+      "start": 4.4,
+      "end": 4.68
     },
     {
       "word": "to",
-      "start": 9.4,
-      "end": 9.7
+      "start": 4.68,
+      "end": 4.82
     },
     {
-      "word": "people",
-      "start": 9.7,
-      "end": 9.92
+      "word": "act,",
+      "start": 4.82,
+      "end": 5.02
     },
     {
-      "word": "who",
-      "start": 9.92,
-      "end": 10.1
+      "word": "so",
+      "start": 5.28,
+      "end": 5.36
     },
     {
-      "word": "need",
-      "start": 10.1,
-      "end": 10.24
+      "word": "Sam",
+      "start": 5.36,
+      "end": 5.54
     },
     {
-      "word": "to",
-      "start": 10.24,
+      "word": "goes",
+      "start": 5.54,
+      "end": 5.8
+    },
+    {
+      "word": "in",
+      "start": 5.8,
+      "end": 5.98
+    },
+    {
+      "word": "To.",
+      "start": 5.98,
+      "end": 7.24
+    },
+    {
+      "word": "Pat",
+      "start": 7.24,
+      "end": 7.28
+    },
+    {
+      "word": "should",
+      "start": 7.28,
+      "end": 7.46
+    },
+    {
+      "word": "know,",
+      "start": 7.46,
+      "end": 7.72
+    },
+    {
+      "word": "so",
+      "start": 8.04,
+      "end": 8.12
+    },
+    {
+      "word": "Pat",
+      "start": 8.12,
+      "end": 8.32
+    },
+    {
+      "word": "goes",
+      "start": 8.32,
+      "end": 8.58
+    },
+    {
+      "word": "in",
+      "start": 8.58,
+      "end": 8.78
+    },
+    {
+      "word": "Cc.",
+      "start": 8.78,
+      "end": 8.98
+    },
+    {
+      "word": "The",
+      "start": 10.06,
       "end": 10.36
     },
     {
-      "word": "be",
+      "word": "volunteers",
       "start": 10.36,
-      "end": 10.46
+      "end": 10.62
     },
     {
-      "word": "informed.",
-      "start": 10.46,
-      "end": 10.7
-    },
-    {
-      "word": "Bcc",
-      "start": 11.78,
-      "end": 12.38
-    },
-    {
-      "word": "hides",
-      "start": 12.38,
-      "end": 12.98
-    },
-    {
-      "word": "those",
-      "start": 12.98,
-      "end": 13.2
-    },
-    {
-      "word": "recipients'",
-      "start": 13.2,
-      "end": 13.64
-    },
-    {
-      "word": "addresses",
-      "start": 14.04,
-      "end": 14.12
-    },
-    {
-      "word": "from",
-      "start": 14.12,
-      "end": 14.52
-    },
-    {
-      "word": "the",
-      "start": 14.52,
-      "end": 14.62
-    },
-    {
-      "word": "other",
-      "start": 14.62,
-      "end": 14.84
-    },
-    {
-      "word": "recipients,",
-      "start": 14.84,
-      "end": 15.12
-    },
-    {
-      "word": "but",
-      "start": 15.96,
-      "end": 16.08
-    },
-    {
-      "word": "it",
-      "start": 16.08,
-      "end": 16.18
-    },
-    {
-      "word": "does",
-      "start": 16.18,
-      "end": 16.28
+      "word": "do",
+      "start": 10.62,
+      "end": 10.98
     },
     {
       "word": "not",
+      "start": 10.98,
+      "end": 11.26
+    },
+    {
+      "word": "need",
+      "start": 11.26,
+      "end": 11.5
+    },
+    {
+      "word": "a",
+      "start": 11.5,
+      "end": 11.6
+    },
+    {
+      "word": "review",
+      "start": 11.6,
+      "end": 11.8
+    },
+    {
+      "word": "request,",
+      "start": 11.8,
+      "end": 12.2
+    },
+    {
+      "word": "so",
+      "start": 12.36,
+      "end": 12.54
+    },
+    {
+      "word": "take",
+      "start": 12.54,
+      "end": 12.72
+    },
+    {
+      "word": "them",
+      "start": 12.72,
+      "end": 12.9
+    },
+    {
+      "word": "off.",
+      "start": 12.9,
+      "end": 13.1
+    },
+    {
+      "word": "The",
+      "start": 14.6,
+      "end": 14.7
+    },
+    {
+      "word": "notice",
+      "start": 14.7,
+      "end": 14.92
+    },
+    {
+      "word": "to",
+      "start": 14.92,
+      "end": 15.1
+    },
+    {
+      "word": "the",
+      "start": 15.1,
+      "end": 15.18
+    },
+    {
+      "word": "volunteers",
+      "start": 15.18,
+      "end": 15.44
+    },
+    {
+      "word": "is",
+      "start": 15.44,
+      "end": 15.94
+    },
+    {
+      "word": "a",
+      "start": 15.94,
+      "end": 16.04
+    },
+    {
+      "word": "different",
+      "start": 16.04,
+      "end": 16.28
+    },
+    {
+      "word": "email.",
       "start": 16.28,
       "end": 16.54
     },
     {
-      "word": "make",
-      "start": 16.54,
-      "end": 16.78
+      "word": "There,",
+      "start": 17.5,
+      "end": 17.66
+    },
+    {
+      "word": "Alex",
+      "start": 17.86,
+      "end": 18.0
+    },
+    {
+      "word": "goes",
+      "start": 18.0,
+      "end": 18.32
+    },
+    {
+      "word": "in",
+      "start": 18.32,
+      "end": 18.48
+    },
+    {
+      "word": "To,",
+      "start": 18.48,
+      "end": 19.38
+    },
+    {
+      "word": "Pat",
+      "start": 19.38,
+      "end": 19.52
+    },
+    {
+      "word": "in",
+      "start": 19.52,
+      "end": 19.78
+    },
+    {
+      "word": "Cc,",
+      "start": 19.78,
+      "end": 20.08
+    },
+    {
+      "word": "and",
+      "start": 20.74,
+      "end": 20.94
     },
     {
       "word": "the",
-      "start": 16.78,
-      "end": 16.94
+      "start": 20.94,
+      "end": 21.02
     },
     {
-      "word": "message",
-      "start": 16.94,
-      "end": 17.22
+      "word": "twenty",
+      "start": 21.02,
+      "end": 21.24
     },
     {
-      "word": "confidential",
-      "start": 17.22,
-      "end": 17.7
+      "word": "volunteers",
+      "start": 21.24,
+      "end": 21.58
     },
     {
-      "word": "or",
-      "start": 18.1,
-      "end": 18.4
+      "word": "in",
+      "start": 21.58,
+      "end": 22.24
+    },
+    {
+      "word": "Bcc,",
+      "start": 22.24,
+      "end": 22.48
+    },
+    {
+      "word": "so",
+      "start": 23.2,
+      "end": 23.44
+    },
+    {
+      "word": "they",
+      "start": 23.44,
+      "end": 23.56
+    },
+    {
+      "word": "cannot",
+      "start": 23.56,
+      "end": 23.72
+    },
+    {
+      "word": "see",
+      "start": 23.72,
+      "end": 24.1
+    },
+    {
+      "word": "one",
+      "start": 24.1,
+      "end": 24.32
+    },
+    {
+      "word": "another's",
+      "start": 24.32,
+      "end": 24.52
+    },
+    {
+      "word": "addresses.",
+      "start": 24.52,
+      "end": 25.04
+    },
+    {
+      "word": "Bcc",
+      "start": 26.34,
+      "end": 27.0
+    },
+    {
+      "word": "does",
+      "start": 27.0,
+      "end": 27.42
+    },
+    {
+      "word": "not",
+      "start": 27.42,
+      "end": 27.7
     },
     {
       "word": "stop",
-      "start": 18.4,
-      "end": 18.68
-    },
-    {
-      "word": "someone",
-      "start": 18.68,
-      "end": 19.06
-    },
-    {
-      "word": "from",
-      "start": 19.06,
-      "end": 19.22
-    },
-    {
-      "word": "forwarding",
-      "start": 19.22,
-      "end": 19.56
-    },
-    {
-      "word": "it.",
-      "start": 19.56,
-      "end": 19.82
-    },
-    {
-      "word": "Reply",
-      "start": 20.72,
-      "end": 21.1
-    },
-    {
-      "word": "all",
-      "start": 21.1,
-      "end": 21.48
-    },
-    {
-      "word": "can",
-      "start": 21.48,
-      "end": 21.78
-    },
-    {
-      "word": "send",
-      "start": 21.78,
-      "end": 22.0
-    },
-    {
-      "word": "your",
-      "start": 22.0,
-      "end": 22.18
-    },
-    {
-      "word": "response",
-      "start": 22.18,
-      "end": 22.5
-    },
-    {
-      "word": "to",
-      "start": 22.5,
-      "end": 22.8
-    },
-    {
-      "word": "more",
-      "start": 22.8,
-      "end": 23.02
-    },
-    {
-      "word": "people",
-      "start": 23.02,
-      "end": 23.32
-    },
-    {
-      "word": "than",
-      "start": 23.32,
-      "end": 23.58
-    },
-    {
-      "word": "you",
-      "start": 23.58,
-      "end": 23.68
-    },
-    {
-      "word": "intended.",
-      "start": 23.68,
-      "end": 24.0
-    },
-    {
-      "word": "Check",
-      "start": 24.8,
-      "end": 24.94
-    },
-    {
-      "word": "whether",
-      "start": 24.94,
-      "end": 25.22
-    },
-    {
-      "word": "everyone",
-      "start": 25.22,
-      "end": 25.68
-    },
-    {
-      "word": "needs",
-      "start": 25.68,
-      "end": 25.92
-    },
-    {
-      "word": "that",
-      "start": 25.92,
-      "end": 26.18
-    },
-    {
-      "word": "response.",
-      "start": 26.18,
-      "end": 26.5
-    },
-    {
-      "word": "Timing",
-      "start": 27.78,
+      "start": 27.7,
       "end": 28.1
     },
     {
-      "word": "also",
+      "word": "anyone",
       "start": 28.1,
-      "end": 28.3
+      "end": 28.44
     },
     {
-      "word": "matters:",
-      "start": 28.3,
-      "end": 28.7
+      "word": "from",
+      "start": 28.44,
+      "end": 28.8
     },
     {
-      "word": "a",
-      "start": 29.54,
-      "end": 29.56
+      "word": "forwarding",
+      "start": 28.8,
+      "end": 29.26
     },
     {
-      "word": "late",
-      "start": 29.56,
-      "end": 29.72
+      "word": "it.",
+      "start": 29.26,
+      "end": 29.48
     },
     {
-      "word": "message",
-      "start": 29.72,
-      "end": 30.06
+      "word": "If",
+      "start": 30.76,
+      "end": 30.92
     },
     {
-      "word": "with",
-      "start": 30.06,
-      "end": 30.3
+      "word": "Pat",
+      "start": 30.92,
+      "end": 31.1
     },
     {
-      "word": "an",
-      "start": 30.3,
-      "end": 30.4
+      "word": "chooses",
+      "start": 31.1,
+      "end": 31.54
     },
     {
-      "word": "immediate",
-      "start": 30.4,
-      "end": 30.64
+      "word": "Reply",
+      "start": 31.54,
+      "end": 31.82
     },
     {
-      "word": "deadline",
-      "start": 30.64,
-      "end": 31.18
+      "word": "all,",
+      "start": 31.82,
+      "end": 32.28
     },
     {
-      "word": "may",
-      "start": 31.18,
-      "end": 31.64
+      "word": "it",
+      "start": 32.78,
+      "end": 32.82
     },
     {
-      "word": "be",
-      "start": 31.64,
-      "end": 31.78
-    },
-    {
-      "word": "difficult",
-      "start": 31.78,
-      "end": 32.12
-    },
-    {
-      "word": "for",
-      "start": 32.12,
-      "end": 32.34
-    },
-    {
-      "word": "others",
-      "start": 32.34,
-      "end": 32.54
+      "word": "goes",
+      "start": 32.82,
+      "end": 32.98
     },
     {
       "word": "to",
-      "start": 32.54,
-      "end": 32.72
+      "start": 32.98,
+      "end": 33.2
     },
     {
-      "word": "act",
-      "start": 32.72,
-      "end": 32.9
-    },
-    {
-      "word": "on.",
-      "start": 32.9,
-      "end": 33.18
-    },
-    {
-      "word": "Pause",
-      "start": 34.38,
-      "end": 34.88
+      "word": "you",
+      "start": 33.2,
+      "end": 33.46
     },
     {
       "word": "and",
-      "start": 34.88,
-      "end": 35.1
+      "start": 33.46,
+      "end": 33.78
     },
     {
-      "word": "review",
-      "start": 35.1,
-      "end": 35.34
+      "word": "Alex,",
+      "start": 33.78,
+      "end": 34.06
     },
     {
-      "word": "your",
-      "start": 35.34,
-      "end": 35.64
+      "word": "never",
+      "start": 34.48,
+      "end": 34.58
     },
     {
-      "word": "fictional",
-      "start": 35.64,
-      "end": 35.96
-    },
-    {
-      "word": "draft.",
-      "start": 35.96,
-      "end": 36.28
-    },
-    {
-      "word": "Remove",
-      "start": 37.44,
-      "end": 37.44
-    },
-    {
-      "word": "unnecessary",
-      "start": 37.44,
-      "end": 37.9
-    },
-    {
-      "word": "recipients",
-      "start": 37.9,
-      "end": 38.76
-    },
-    {
-      "word": "and",
-      "start": 38.76,
-      "end": 39.38
-    },
-    {
-      "word": "give",
-      "start": 39.38,
-      "end": 39.52
+      "word": "to",
+      "start": 34.58,
+      "end": 34.86
     },
     {
       "word": "the",
-      "start": 39.52,
-      "end": 39.66
+      "start": 34.86,
+      "end": 34.96
     },
     {
-      "word": "partner",
-      "start": 39.66,
-      "end": 39.92
+      "word": "Bcc",
+      "start": 34.96,
+      "end": 35.22
+    },
+    {
+      "word": "names.",
+      "start": 35.22,
+      "end": 35.76
+    },
+    {
+      "word": "Use",
+      "start": 36.72,
+      "end": 37.28
+    },
+    {
+      "word": "Schedule",
+      "start": 37.28,
+      "end": 37.68
+    },
+    {
+      "word": "send",
+      "start": 37.68,
+      "end": 38.1
+    },
+    {
+      "word": "so",
+      "start": 38.1,
+      "end": 38.5
+    },
+    {
+      "word": "an",
+      "start": 38.5,
+      "end": 38.62
+    },
+    {
+      "word": "early",
+      "start": 38.62,
+      "end": 38.88
+    },
+    {
+      "word": "draft",
+      "start": 38.88,
+      "end": 39.18
+    },
+    {
+      "word": "arrives",
+      "start": 39.18,
+      "end": 39.58
+    },
+    {
+      "word": "at",
+      "start": 39.58,
+      "end": 40.12
     },
     {
       "word": "a",
-      "start": 39.92,
-      "end": 40.22
+      "start": 40.12,
+      "end": 40.16
     },
     {
-      "word": "reasonable",
-      "start": 40.22,
-      "end": 40.54
+      "word": "sensible",
+      "start": 40.16,
+      "end": 40.42
     },
     {
-      "word": "response",
-      "start": 40.54,
+      "word": "hour.",
+      "start": 40.42,
       "end": 41.02
     },
     {
-      "word": "window.",
-      "start": 41.02,
-      "end": 41.52
-    },
-    {
-      "word": "Clear",
-      "start": 42.52,
-      "end": 42.96
-    },
-    {
-      "word": "communication",
-      "start": 42.96,
-      "end": 43.32
-    },
-    {
-      "word": "includes",
-      "start": 43.32,
-      "end": 43.96
-    },
-    {
-      "word": "both",
-      "start": 43.96,
-      "end": 44.4
+      "word": "Address",
+      "start": 42.7,
+      "end": 42.7
     },
     {
       "word": "the",
-      "start": 44.4,
-      "end": 44.56
+      "start": 42.7,
+      "end": 42.94
     },
     {
-      "word": "content",
-      "start": 44.56,
-      "end": 44.92
+      "word": "volunteer",
+      "start": 42.94,
+      "end": 43.2
     },
     {
-      "word": "and",
-      "start": 44.92,
-      "end": 45.36
+      "word": "notice",
+      "start": 43.2,
+      "end": 43.62
     },
     {
-      "word": "its",
-      "start": 45.36,
-      "end": 45.54
+      "word": "on",
+      "start": 43.62,
+      "end": 43.88
     },
     {
-      "word": "destination.",
-      "start": 45.54,
-      "end": 45.9
+      "word": "your",
+      "start": 43.88,
+      "end": 44.02
+    },
+    {
+      "word": "worksheet.",
+      "start": 44.02,
+      "end": 44.44
+    },
+    {
+      "word": "Pause",
+      "start": 45.14,
+      "end": 45.58
+    },
+    {
+      "word": "the",
+      "start": 45.58,
+      "end": 45.76
+    },
+    {
+      "word": "video",
+      "start": 45.76,
+      "end": 45.98
+    },
+    {
+      "word": "now.",
+      "start": 45.98,
+      "end": 46.28
     }
   ]
 }

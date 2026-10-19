@@ -1,597 +1,572 @@
 1
 00:00:00,450 --> 00:00:02,885
 Think of a group task
-you have helped organize:
+you have helped organize,
 
 2
-00:00:03,010 --> 00:00:06,310
-a family gathering,
-a volunteer activity, or a meeting.
+00:00:02,890 --> 00:00:05,273
+such as a family gathering
+or a volunteer day.
 
 3
-00:00:07,210 --> 00:00:10,990
-Confusion often begins when people
+00:00:06,610 --> 00:00:10,670
+Confusion usually starts when people
 assume someone else knows what to do.
 
 4
-00:00:11,710 --> 00:00:15,350
-We will coordinate a fictional
-community computer-help session using
+00:00:11,750 --> 00:00:14,830
+Today we plan a fictional
+Saturday computer-help session.
 
 5
-00:00:15,350 --> 00:00:16,330
-a clear message,
+00:00:15,770 --> 00:00:16,803
+You wrote the handout.
 
 6
-00:00:16,830 --> 00:00:19,870
-one shared handout,
-and an agreed review process.
+00:00:17,090 --> 00:00:18,150
+Sam will review it.
 
 7
-00:00:20,550 --> 00:00:21,510
-You can connect
+00:00:18,910 --> 00:00:21,604
+Pat organizes the session
+and keeps the shared copy.
 
 8
-00:00:21,510 --> 00:00:25,448
-the example to a group you know, without
-entering real members' information.
+00:00:22,190 --> 00:00:26,410
+Alex runs the session on the day, and
+twenty volunteers need to hear about it.
 
 9
-00:00:26,010 --> 00:00:28,050
-The goal is not to send more messages.
+00:00:27,610 --> 00:00:29,250
+You will send a clear request,
 
 10
-00:00:28,830 --> 00:00:32,010
-It is to help the right person
-take the right next action.
+00:00:29,770 --> 00:00:31,390
+improve one shared copy,
 
 11
-00:00:32,850 --> 00:00:33,600
-By the end,
+00:00:32,250 --> 00:00:35,750
+take part in a meeting,
+and check an offer before you pay.
 
 12
-00:00:33,930 --> 00:00:35,951
-you should be able to choose a channel,
+00:00:37,030 --> 00:00:38,610
+The goal is not more messages.
 
 13
-00:00:36,030 --> 00:00:40,190
-request useful feedback, and verify
-the decision everyone will follow.
+00:00:39,290 --> 00:00:41,990
+It is the right person
+taking the right next step.
 
 14
-00:00:41,985 --> 00:00:45,301
-A live conversation can help
-resolve an urgent misunderstanding,
+00:00:46,680 --> 00:00:48,701
+Start by choosing how to reach someone.
 
 15
-00:00:45,605 --> 00:00:49,543
-while a written message can preserve
-details for someone who responds later.
+00:00:49,300 --> 00:00:52,564
+A detailed request that can wait
+until tomorrow suits an email,
 
 16
-00:00:49,825 --> 00:00:53,866
-A shared document is useful when several
-people must work on the same content.
+00:00:52,860 --> 00:00:54,725
+because the details stay in writing.
 
 17
-00:00:54,365 --> 00:00:58,905
-Choose the channel by the task, timing,
-and audience. Check which account you are
+00:00:55,720 --> 00:00:59,520
+An urgent problem in this room
+needs a word in person, right now.
 
 18
-00:00:58,905 --> 00:01:03,005
-using before posting or sending.
-A personal account and an organization
+00:01:00,940 --> 00:01:03,842
+A shared document suits work
+that several people change.
 
 19
-00:01:03,005 --> 00:01:06,585
-account may have different audiences,
-permissions, and expectations.
+00:01:05,140 --> 00:01:07,523
+Then check which account
+you are sending from.
 
 20
-00:01:07,725 --> 00:01:12,026
-Do not assume that a private-looking group
-makes every detail appropriate to share.
+00:01:08,340 --> 00:01:10,600
+In a new email, the From line shows it.
 
 21
-00:01:13,185 --> 00:01:14,605
-Pause and choose a channel
+00:01:11,240 --> 00:01:12,120
+A personal account
 
 22
-00:01:14,605 --> 00:01:18,491
-for a partner who cannot meet today
-but needs to review tomorrow's handout.
+00:01:12,120 --> 00:01:12,940
+and a volunteer
 
 23
-00:01:19,185 --> 00:01:20,345
-A clear written request
+00:01:12,940 --> 00:01:16,660
+group account reach different people
+and carry different expectations.
 
 24
-00:01:20,345 --> 00:01:23,454
-with the shared document gives
-them a useful starting point.
+00:01:18,160 --> 00:01:22,150
+Choose a channel for each of the two
+messages on your worksheet, and say why.
 
 25
-00:01:25,123 --> 00:01:28,803
-Our subject line is Review
-the computer-help handout.
+00:01:23,000 --> 00:01:24,200
+Pause the video now.
 
 26
-00:01:29,523 --> 00:01:31,958
-The message says which
-section needs attention,
+00:01:35,293 --> 00:01:37,413
+A useful email answers three questions.
 
 27
-00:01:32,323 --> 00:01:35,639
-what kind of feedback would help,
-and when a response is useful.
+00:01:38,293 --> 00:01:41,453
+What should I do,
+with which file, and by when?
 
 28
-00:01:36,563 --> 00:01:37,983
-For example: please
+00:01:42,743 --> 00:01:43,853
+A subject such
 
 29
-00:01:37,983 --> 00:01:38,883
-comment on whether
+00:01:43,853 --> 00:01:44,793
+as Please
 
 30
-00:01:38,883 --> 00:01:42,423
-the contact section is clear
-before our next practice session.
+00:01:44,793 --> 00:01:46,033
+review the computer-help
 
 31
-00:01:43,383 --> 00:01:45,922
-That is more actionable
-than please look at this.
+00:01:46,033 --> 00:01:50,653
+handout by Thursday tells Sam the
+job before the email is even opened.
 
 32
-00:01:47,063 --> 00:01:47,813
-Use respectful,
+00:01:52,033 --> 00:01:52,783
+In the body,
 
 33
-00:01:48,143 --> 00:01:51,843
-direct language and explain
-abbreviations the reader may not know.
+00:01:53,053 --> 00:01:58,553
+greet Sam, name the part to check, say
+when you need a reply, and close politely.
 
 34
-00:01:52,923 --> 00:01:57,123
-Attach or link the intended file,
-then check that it is the correct version.
+00:02:00,253 --> 00:02:04,253
+Spell out abbreviations, and drop
+guesses about anyone's age or skill.
 
 35
-00:01:57,923 --> 00:02:00,876
-Read the message once from
-the recipient's point of view.
+00:02:05,333 --> 00:02:07,153
+Then read it as Sam would.
 
 36
-00:02:01,743 --> 00:02:04,075
-Could they act without
-asking what you meant?
+00:02:08,233 --> 00:02:10,513
+Could Sam act without
+asking you a question?
 
 37
-00:02:04,883 --> 00:02:08,063
-In this course, draft the message
-with fictional information;
+00:02:11,953 --> 00:02:13,127
+Write the request to Sam,
 
 38
-00:02:08,763 --> 00:02:10,183
-you do not need to send it.
+00:02:13,873 --> 00:02:18,053
+then rewrite the unclear message on your
+worksheet so anyone could follow it.
 
 39
-00:02:11,952 --> 00:02:15,552
-Before sending a real email,
-inspect every recipient field.
+00:02:19,313 --> 00:02:20,253
+Pause the video now.
 
 40
-00:02:15,552 --> 00:02:18,672
-To usually identifies the main recipients.
+00:02:31,359 --> 00:02:34,339
+Before you send,
+read every recipient line.
 
 41
-00:02:19,932 --> 00:02:22,937
-Cc sends a visible copy to
-people who need to be informed.
+00:02:35,579 --> 00:02:38,599
+Sam needs to act, so Sam goes in To.
 
 42
-00:02:23,732 --> 00:02:26,072
-Bcc hides those recipients' addresses
+00:02:38,599 --> 00:02:40,412
+Pat should know, so Pat goes in Cc.
 
 43
-00:02:26,072 --> 00:02:30,632
-from the other recipients, but it does
-not make the message confidential or stop
+00:02:41,419 --> 00:02:44,631
+The volunteers do not need a
+review request, so take them off.
 
 44
-00:02:30,632 --> 00:02:31,900
-someone from forwarding it.
+00:02:45,959 --> 00:02:48,550
+The notice to the volunteers
+is a different email.
 
 45
-00:02:32,672 --> 00:02:36,092
-Reply all can send your response
-to more people than you intended.
+00:02:48,859 --> 00:02:50,879
+There, Alex goes in To, Pat
 
 46
-00:02:36,752 --> 00:02:38,980
-Check whether everyone
-needs that response.
+00:02:50,879 --> 00:02:51,629
+in Cc,
 
 47
-00:02:39,732 --> 00:02:40,671
-Timing also matters:
+00:02:52,099 --> 00:02:56,399
+and the twenty volunteers in Bcc, so
+they cannot see one another's addresses.
 
 48
-00:02:41,492 --> 00:02:45,637
-a late message with an immediate deadline
-may be difficult for others to act on.
+00:02:57,699 --> 00:03:00,839
+Bcc does not stop anyone
+from forwarding it.
 
 49
-00:02:46,332 --> 00:02:48,301
-Pause and review your fictional draft.
+00:03:02,119 --> 00:03:07,119
+If Pat chooses Reply all, it goes to
+you and Alex, never to the Bcc names.
 
 50
-00:02:49,392 --> 00:02:53,537
-Remove unnecessary recipients and give
-the partner a reasonable response window.
+00:03:08,079 --> 00:03:12,379
+Use Schedule send so an early
+draft arrives at a sensible hour.
 
 51
-00:02:54,472 --> 00:02:57,892
-Clear communication includes both
-the content and its destination.
+00:03:14,059 --> 00:03:16,494
+Address the volunteer
+notice on your worksheet.
 
 52
-00:02:59,803 --> 00:03:00,963
-Imagine three people
+00:03:16,499 --> 00:03:17,639
+Pause the video now.
 
 53
-00:03:00,963 --> 00:03:04,383
-editing three separate handouts
-and calling each one final.
+00:03:31,772 --> 00:03:36,532
+Imagine three people editing three copies
+of the handout and calling each one final.
 
 54
-00:03:05,583 --> 00:03:08,433
-It becomes difficult to know
-which instructions to use.
+00:03:37,512 --> 00:03:39,712
+Nobody knows which instructions to follow.
 
 55
-00:03:09,023 --> 00:03:14,523
-Instead, agree where the common copy lives
-and what each person is responsible for.
+00:03:41,512 --> 00:03:45,412
+Instead, agree on one shared
+copy and one place to keep it.
 
 56
-00:03:15,343 --> 00:03:17,467
-The owner coordinates the final decision,
+00:03:46,312 --> 00:03:48,229
+Pat, the owner, makes the final call.
 
 57
-00:03:18,023 --> 00:03:21,028
-the writer drafts,
-and the reviewer suggests improvements.
+00:03:49,052 --> 00:03:49,802
+You write.
 
 58
-00:03:22,083 --> 00:03:24,903
-Give each person access
-appropriate to that task,
+00:03:49,872 --> 00:03:50,622
+Sam reviews.
 
 59
-00:03:24,903 --> 00:03:27,523
-and verify that the link opens for them.
+00:03:51,392 --> 00:03:53,827
+Give each person only
+the access the job needs.
 
 60
-00:03:28,403 --> 00:03:31,667
-Working together at the same time
-is synchronous collaboration.
+00:03:54,852 --> 00:03:57,392
+Sam can comment, and you and Pat can edit.
 
 61
-00:03:32,543 --> 00:03:35,496
-Leaving comments for later is
-asynchronous collaboration.
+00:03:58,712 --> 00:04:01,352
+Working at the same time
+is called synchronous.
 
 62
-00:03:36,723 --> 00:03:38,381
-Neither is automatically better.
+00:04:01,352 --> 00:04:04,252
+Leaving comments for later
+is called asynchronous.
 
 63
-00:03:38,963 --> 00:03:42,901
-Choose the arrangement that fits people's
-schedules and the decision needed,
+00:04:04,252 --> 00:04:06,232
+Neither is better.
 
 64
-00:03:43,203 --> 00:03:45,943
-then record the agreed
-outcome in the shared place.
+00:04:06,232 --> 00:04:11,312
+Pick the one that fits people's schedules,
+and write the decision in the shared copy.
 
 65
-00:03:47,816 --> 00:03:49,156
-Compare two comments.
+00:04:11,312 --> 00:04:17,752
+With a partner, choose your roles,
+your shared place, and how you will work.
 
 66
-00:03:50,016 --> 00:03:53,076
-This is confusing gives the
-writer little to act on.
+00:04:17,752 --> 00:04:20,092
+Pause the video now.
 
 67
-00:03:53,816 --> 00:03:54,656
-Add the contact
+00:04:31,345 --> 00:04:32,685
+Compare two comments.
 
 68
-00:03:54,656 --> 00:03:59,416
-number after the steps so readers
-can find help identifies a location,
+00:04:33,705 --> 00:04:37,125
+This is confusing gives the
+writer nothing to act on.
 
 69
-00:03:59,936 --> 00:04:01,176
-a change, and a reason.
+00:04:37,985 --> 00:04:39,405
+In step 2,
 
 70
-00:04:02,276 --> 00:04:03,731
-The writer can accept the idea,
+00:04:39,405 --> 00:04:45,125
+add where the desk is, Room A on the first
+floor, so first-time visitors can find it.
 
 71
-00:04:04,076 --> 00:04:07,056
-ask a clarifying question,
-or explain another choice.
+00:04:46,345 --> 00:04:49,605
+That comment names a place,
+a change, and a reason.
 
 72
-00:04:08,136 --> 00:04:10,623
-Discuss the work rather
-than judging the person.
+00:04:50,905 --> 00:04:56,965
+In Word, select the step, choose Review,
+then New Comment, and type it.
 
 73
-00:04:11,456 --> 00:04:15,549
-After making the edit, acknowledge the
-feedback and check the revised document.
+00:04:57,845 --> 00:05:01,785
+The writer replies first,
+then makes the change or explains why not.
 
 74
-00:04:16,076 --> 00:04:17,076
-Resolve a comment
+00:05:02,665 --> 00:05:05,065
+Resolve the comment only after that reply.
 
 75
-00:04:17,076 --> 00:04:21,116
-only when the issue has been addressed
-or an alternative decision is clear.
+00:05:06,285 --> 00:05:08,685
+A resolved comment is hidden, not deleted.
 
 76
-00:04:22,136 --> 00:04:22,916
-Pause and write
+00:05:10,005 --> 00:05:12,985
+Comment on the work, never on the person.
 
 77
-00:04:22,916 --> 00:04:27,536
-one useful comment on the fictional
-handout. Have a partner explain the change
+00:05:13,985 --> 00:05:14,805
+Trade seats,
 
 78
-00:04:27,536 --> 00:04:30,496
-they think you are requesting
-before they make it.
+00:05:15,665 --> 00:05:20,765
+add one useful comment, then reply to and
+resolve the comment on your own handout.
 
 79
-00:04:32,230 --> 00:04:36,323
-Before a practice meeting, select and
-test the intended speaker and microphone.
+00:05:21,685 --> 00:05:22,865
+Pause the video now.
 
 80
-00:04:37,230 --> 00:04:37,990
-Check the app's
+00:05:37,052 --> 00:05:38,917
+Before a meeting, test your headset.
 
 81
-00:04:37,990 --> 00:04:38,830
-controls rather
+00:05:39,572 --> 00:05:40,511
+In Windows Settings,
 
 82
-00:04:38,830 --> 00:04:42,302
-than assuming the computer's general
-settings tell the whole story.
+00:05:40,732 --> 00:05:44,992
+under Sound, choose the headset as
+the input and speak during the test.
 
 83
-00:04:42,810 --> 00:04:47,470
-Mute when appropriate, and use the agreed
-chat or raise-hand control to contribute.
+00:05:46,532 --> 00:05:47,282
+In the meeting,
 
 84
-00:04:48,430 --> 00:04:49,230
-A webinar
+00:05:47,412 --> 00:05:51,752
+stay muted unless you are speaking, and
+raise your hand when the host asks for it.
 
 85
-00:04:49,230 --> 00:04:53,190
-may give the host more control over who
-can speak than a small meeting does.
+00:05:52,432 --> 00:05:53,852
+Turn on captions if they help.
 
 86
-00:04:54,150 --> 00:04:57,290
-Follow the event's instructions
-and ask before recording.
+00:05:55,652 --> 00:05:56,732
+A webinar is different.
 
 87
-00:04:58,030 --> 00:05:02,250
-If captions are available and helpful,
-turn them on; ask
+00:05:57,252 --> 00:05:58,910
+The host controls who can speak,
 
 88
-00:05:02,250 --> 00:05:04,530
-for clarification when
-a term is unfamiliar.
+00:05:59,152 --> 00:06:02,052
+so questions go in the
+Q and A box or the chat.
 
 89
-00:05:05,730 --> 00:05:06,857
-If the connection fails,
+00:06:03,192 --> 00:06:07,812
+Ask before you record anyone, especially
+a group sharing personal stories.
 
 90
-00:05:07,270 --> 00:05:11,150
-use the agreed backup plan, such as
-reading the shared notes afterward.
+00:06:08,972 --> 00:06:10,837
+If your sound fails partway through,
 
 91
-00:05:12,750 --> 00:05:16,740
-Preparation reduces the amount of meeting
-time spent guessing about controls.
+00:06:11,172 --> 00:06:15,212
+use the backup the host gave you,
+such as the chat or the shared notes.
 
 92
-00:05:18,339 --> 00:05:22,121
-A community page can be useful for
-finding an event or asking a question,
+00:06:17,077 --> 00:06:21,417
+A community page can point you to
+a pantry, a class, or an event.
 
 93
-00:05:22,279 --> 00:05:25,906
-but members' posts are not automatically
-verified service information.
+00:06:22,757 --> 00:06:24,837
+A member's post is a lead, not a fact.
 
 94
-00:05:26,139 --> 00:05:28,160
-Read the community's purpose and rules,
+00:06:25,637 --> 00:06:28,697
+It might be old,
+about a different place, or simply wrong.
 
 95
-00:05:28,319 --> 00:05:31,480
-observe how people ask for help,
-and contribute respectfully.
+00:06:29,917 --> 00:06:33,699
+Read the group's rules, and keep
+private details out of public questions.
 
 96
-00:05:32,499 --> 00:05:33,250
-For eligibility,
+00:06:34,577 --> 00:06:35,497
+For hours,
 
 97
-00:05:33,359 --> 00:05:37,799
-opening hours, or official requirements,
-check the responsible organization through
+00:06:35,977 --> 00:06:37,437
+eligibility, or what to bring,
 
 98
-00:05:37,799 --> 00:05:42,879
-its known website or contact method. Keep
-private details out of a public question.
+00:06:37,897 --> 00:06:41,617
+check the organization's own
+page or call its listed number.
 
 99
-00:05:42,879 --> 00:05:45,859
-If someone suggests an unfamiliar service,
+00:06:42,497 --> 00:06:46,097
+That is the same habit you
+used with AI answers in Week 2.
 
 100
-00:05:46,299 --> 00:05:48,631
-record what needs
-confirmation before acting.
+00:06:46,937 --> 00:06:51,197
+Open the Mission 4C practice page
+and practice the meeting controls.
 
 101
-00:05:49,639 --> 00:05:52,592
-You already use judgment when
-accepting advice in person.
+00:06:52,437 --> 00:06:56,837
+Then list your meeting habits and one
+community claim you would check yourself.
 
 102
-00:05:52,859 --> 00:05:53,939
-Bring that same habit
+00:06:58,277 --> 00:06:59,337
+Pause the video now.
 
 103
-00:05:53,939 --> 00:05:58,170
-online: consider who is speaking,
-what they can know, and where the claim
+00:07:13,427 --> 00:07:15,587
+Here are two fictional streaming offers.
 
 104
-00:05:58,170 --> 00:05:59,531
-can be checked independently.
+00:07:16,647 --> 00:07:20,827
+Offer A is free for 30 days,
+then 6 dollars a month until you cancel.
 
 105
-00:06:01,081 --> 00:06:04,812
-A fictional offer says free trial today,
-then twelve dollars each month.
+00:07:21,687 --> 00:07:24,887
+Offer B is 60 dollars a year, paid now.
 
 106
-00:06:05,521 --> 00:06:08,163
-Before accepting,
-identify what is being purchased:
+00:07:26,227 --> 00:07:28,387
+Free does not mean free forever.
 
 107
-00:06:08,741 --> 00:06:12,321
-a physical good, a one-time service,
-or a continuing subscription.
+00:07:29,327 --> 00:07:30,360
+After the first month,
 
 108
-00:06:13,521 --> 00:06:19,041
-Check the amount due now, future charges,
-renewal timing, cancellation conditions,
+00:07:30,687 --> 00:07:36,047
+A charges you every month,
+so a full year of A costs 66 dollars.
 
 109
-00:06:19,701 --> 00:06:24,421
-and the seller's identity. A small in-app
-purchase can still cost real money,
+00:07:37,227 --> 00:07:38,025
+Before you agree,
 
 110
-00:06:24,801 --> 00:06:26,901
-and several small purchases can add up.
+00:07:38,407 --> 00:07:39,187
+find the seller,
 
 111
-00:06:26,901 --> 00:06:32,561
-A familiar logo or a professional page is
-not proof that every offer is suitable.
+00:07:39,667 --> 00:07:43,407
+the price now, the price later,
+the renewal date, and how to cancel.
 
 112
-00:06:33,821 --> 00:06:36,821
-Our practice ends with
-explaining the decision; no
+00:07:45,327 --> 00:07:47,147
+Deleting the app does not cancel
 
 113
-00:06:36,821 --> 00:06:41,741
-purchase or payment details are required.
-Pause and name the fact you would need
+00:07:47,147 --> 00:07:51,747
+the subscription. Pay with a credit card,
+which lets you dispute a wrong charge.
 
 114
-00:06:41,741 --> 00:06:44,643
-if the future price or
-cancellation method were missing.
+00:07:51,747 --> 00:07:55,587
+Person-to-person apps
+are for people you know.
 
 115
-00:06:46,215 --> 00:06:49,117
-Complete the fictional
-coordination task with a partner.
+00:07:56,587 --> 00:08:01,947
+Work out both offers for 3 months and
+for 12, and write two questions to ask.
 
 116
-00:06:49,535 --> 00:06:50,380
-Draft the request,
+00:08:03,127 --> 00:08:04,066
+Pause the video now.
 
 117
-00:06:50,915 --> 00:06:52,884
-choose the recipients and access role,
+00:08:18,089 --> 00:08:21,249
+Good coordination leaves
+a trail anyone can follow.
 
 118
-00:06:53,415 --> 00:06:57,815
-propose a useful comment, and record
-the final decision in one shared place.
+00:08:22,569 --> 00:08:23,589
+By the end of today,
 
 119
-00:06:58,695 --> 00:07:01,955
-Switch roles so both people
-practice explaining and checking.
+00:08:23,989 --> 00:08:27,369
+Sam knows what to review and by when.
+Pat can see the notice
 
 120
-00:07:03,235 --> 00:07:05,715
-Then review the subscription
-example and state
+00:08:27,369 --> 00:08:29,545
+without the volunteers seeing one another.
 
 121
-00:07:05,715 --> 00:07:08,098
-what you would verify
-before committing money.
+00:08:29,689 --> 00:08:30,829
+Everyone works from one
 
 122
-00:07:08,735 --> 00:07:10,855
-Judge success by observable results:
+00:08:30,829 --> 00:08:34,649
+shared copy, and every comment
+ends with a reply and a decision.
 
 123
-00:07:11,915 --> 00:07:13,277
-the partner knows what to do,
+00:08:36,009 --> 00:08:40,309
+In meetings, you test first,
+take turns, and ask before recording.
 
 124
-00:07:13,595 --> 00:07:16,875
-can open the right file,
-and understands the agreed outcome.
+00:08:41,309 --> 00:08:45,729
+Before you pay for anything, you know what
+it will cost in a year and how to stop it.
 
 125
-00:07:18,535 --> 00:07:22,175
-For a group task from your own life,
-choose one habit to transfer.
+00:08:46,389 --> 00:08:48,469
+Pick one habit to use this week:
 
 126
-00:07:23,215 --> 00:07:24,623
-It might be a clearer subject,
+00:08:48,949 --> 00:08:50,329
+a clearer subject line,
 
 127
-00:07:25,215 --> 00:07:26,013
-fewer recipients,
-
-128
-00:07:26,955 --> 00:07:31,152
-one common copy, or a written decision
-that prevents the next round of confusion.
+00:08:50,829 --> 00:08:55,349
+fewer recipients, one shared copy,
+or a check before you pay.

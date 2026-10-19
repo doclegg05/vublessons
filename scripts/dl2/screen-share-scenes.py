@@ -221,40 +221,52 @@ def sheet(stage):
 
 
 def email(stage):
-    s = chrome('Practice Mail', 'Training account • Draft only — nothing is sent')
-    s += box(27, 133, 1145, 347, '#fff', LINE)
-    trimmed = stage >= 4
-    cc = 'organizer@example.invalid' + ('' if trimmed else ', class-list@example.invalid')
-    bcc = 'volunteers@example.invalid' if 2 <= stage < 4 else ''
-    rows=[('To', 'partner@example.invalid'), ('Cc', cc), ('Bcc', bcc)]
-    for j, (name, value) in enumerate(rows):
-        yy=172+j*56
-        s += txt(name, 53, yy, 28, weight=700) + txt(value, 162, yy, 28)
-        s += f'<path d="M46 {yy+14}H1144" stroke="{LINE}" stroke-width="2"/>'
-    s += txt('Subject', 53, 342, 27, weight=700) + txt('Review the computer-help handout', 189, 342, 28)
-    if stage == 5:
-        s += box(45, 409, 648, 38, '#fbeec2')
-        s += lines(['Please comment on the contact section', 'by Thursday at 3 PM, before Friday’s session.'], 53, 397, 28, 38)
+    # Week 4 chapter 4: one cast (week4.py). A review request to Sam, then a separate volunteer notice using Bcc.
+    notice = stage >= 4
+    s = chrome('Practice Mail', 'Volunteer group account • Draft only — nothing is sent')
+    s += box(27, 128, 1145, 352, '#fff', LINE)
+    if notice:
+        rows = [('From', 'volunteers@example.invalid'), ('To', 'Alex'), ('Cc', 'Pat'), ('Bcc', '20 volunteers')]
+        subject, body = 'Saturday computer help: what to know', ['Computer help runs Saturday, 10 a.m. to noon,', 'in Room A. Please arrive by 9:45.']
     else:
-        s += lines(['Please comment on the contact section', 'before our next practice session.'], 53, 397, 28, 38)
-    if stage == 3:
-        s += box(640, 352, 508, 120, GOLD) + lines(['If the partner clicks Reply all,', 'it reaches you, the organizer and', 'the class list, but not Bcc.'], 656, 384, 26, 34)
+        rows = [('From', 'volunteers@example.invalid'), ('To', 'Sam'), ('Cc', 'Pat' if stage >= 3 else 'Pat, 20 volunteers'), ('Bcc', '')]
+        subject, body = 'Please review the computer-help handout by Thursday', ['Hi Sam, could you check step 2? Please reply', 'by Thursday at 3 p.m. Thank you!']
+    on = {1: 'To', 2: 'Cc', 3: 'Cc', 4: 'Bcc'}.get(stage)
+    for j, (name, value) in enumerate(rows):
+        yy = 168 + j * 50
+        if name == on:
+            s += box(40, yy - 34, 1118, 46, '#d3e9df')
+        s += txt(name, 53, yy, 27, weight=700) + txt(value, 162, yy, 27)
+        s += f'<path d="M46 {yy+12}H1144" stroke="{LINE}" stroke-width="2"/>'
+    s += txt('Subject', 53, 380, 27, weight=700) + txt(subject, 175, 380, 27)
+    s += lines(body, 53, 424, 27, 36)
     if stage == 5:
-        s += box(758, 408, 390, 58, '#d3e9df') + txt('Saved as a practice draft', 774, 446, 27)
+        s += box(700, 268, 450, 120, GOLD) + lines(["Pat's Reply all reaches", 'you and Alex. Bcc names', 'never receive it.'], 716, 300, 26, 34)
+    if stage == 6:
+        s += box(700, 268, 450, 120, '#d3e9df') + lines(['Schedule send', 'Tuesday, 9:00 a.m.', 'not 6:40 a.m.'], 716, 300, 26, 34)
     return s
 
 
 def feedback(stage):
-    s = chrome('Practice Writer', 'Shared handout • Reviewer view' if stage < 3 else 'Shared handout • Author view')
-    s += box(29, 131, 644, 351, '#fff', LINE) + txt('Computer help', 56, 182, 35, weight=700)
-    s += lines(['1. Choose a task.', '2. Visit the learning desk.', '3. Ask how to repeat it at home.'], 56, 243, 29, 54)
-    if stage >= 3: s += box(49, 390, 600, 61, '#d3e9df') + txt('Help desk: 304-555-0142', 64, 431, 29)
-    s += box(696, 132, 477, 350, '#fff', NAVY) + txt('Comment on selected steps', 719, 179, 28, weight=700)
-    s += lines(['This is confusing.'] if stage == 0 else ['Add the contact number', 'after the steps so readers', 'can find help.'], 719, 238, 28, 42)
-    if stage in (1, 2): s += button('Add comment', 903, 407, 244, stage == 2)
-    if stage >= 3:
-        s += txt('Author: Added — thank you.', 719, 376, 28)
-        s += button('Resolved ✓' if stage == 5 else 'Resolve', 928, 410, 220, stage >= 4)
+    # Week 4 chapter 6: the worksheet's two-step handout and one feedback example (week4.py, Mission 4B).
+    author = stage >= 4
+    s = chrome('Practice Writer', 'How to get computer help.docx • ' + ('your view' if author else "Sam's view"))
+    s += box(25, 122, 1150, 46, '#c8d9e5') + txt('Home', 40, 154, 26) + txt('Review', 130, 154, 26, NAVY if stage == 3 else INK, 700 if stage == 3 else 400)
+    s += button('New Comment', 250, 121, 220, stage == 3)
+    s += box(29, 180, 640, 300, '#fff', LINE) + txt('How to get computer help', 52, 228, 32, weight=700)
+    if stage in (2, 3):
+        s += box(44, 290, 590, 44, '#b9d8f1')
+    s += txt('1. Choose a task.', 52, 280, 28) + txt('2. Visit the learning desk' + (', Room A, first floor.' if author else '.'), 52, 322, 28)
+    s += box(690, 180, 483, 300, '#fff', NAVY) + txt('Comments', 712, 218, 28, weight=700)
+    if stage == 1:
+        s += lines(['This is confusing.'], 712, 268, 28) + box(712, 300, 140, 40, '#f4d6dc') + txt('Vague', 726, 330, 26, weight=700)
+    if stage >= 2:
+        s += lines(['In step 2, add where the desk', 'is: Room A, first floor, so', 'first-time visitors can find it.'], 712, 262, 26, 36)
+    if stage == 2:
+        s += box(712, 380, 160, 40, '#d3e9df') + txt('Useful', 726, 410, 26, weight=700)
+    if stage >= 4:
+        s += txt('You: Added. Thank you.', 712, 400, 26)
+        s += button('Resolved ✓' if stage == 5 else 'Resolve', 940, 420, 210, stage == 5)
     return s
 
 
@@ -411,19 +423,20 @@ PLANS = {
   ('read the formula bar',9,300,152,'Read the formula bar: =SUM(B2:B4)'),
   ('Choose File',10,685,353,'Save As → Excel Workbook (*.xlsx)')]),
  (4, 3): (email, [
-  ('',0,438,165,'Inspect every recipient before sending'),
-  ('Cc sends a visible copy',1,472,220,'Cc is visible to the recipients'),
-  ('Bcc hides those recipients',2,468,274,'Bcc hides addresses • it is not confidentiality'),
-  ('Reply all can send',3,1105,372,'Reply all: check the entire recipient list'),
-  ('Remove unnecessary recipients',4,700,220,'Remove the class list and the Bcc list'),
-  ('reasonable response window',5,712,424,'Add a reasonable response window • draft only')]),
+  ('',0,600,300,'Review request • read every recipient line'),
+  ('Sam goes in To',1,300,168,'To: Sam, who must act'),
+  ('Pat goes in Cc',2,300,218,'Cc: Pat, who should know'),
+  ('take them off',3,420,218,'Take the volunteers off the review request'),
+  ('The notice to the volunteers',4,300,268,'Volunteer notice: To Alex • Cc Pat • Bcc volunteers'),
+  ('If Pat chooses Reply all',5,920,330,"Pat's Reply all reaches you and Alex only"),
+  ('Use Schedule send',6,920,330,'Schedule send for a sensible hour')]),
  (4, 5): (feedback, [
-  ('',0,914,234,'Review the steps in one shared handout'),
-  ('Add the contact number',1,915,272,'Suggest a location, change, and reason'),
-  ('identifies a location',2,1006,429,'Add the specific comment'),
-  ('After making the edit',3,356,426,'Author adds the fictional help number'),
-  ('acknowledge the feedback',4,946,378,'Acknowledge the change and check it'),
-  ('Resolve a comment only',5,1021,434,'Resolve after the request has been addressed')]),
+  ('',0,300,300,'A two-step handout in Word'),
+  ('This is confusing gives',1,780,268,'Vague: the writer has nothing to act on'),
+  ('In step 2, add where',2,780,300,'Useful: a place, a change and a reason'),
+  ('choose Review',3,360,145,'Review → New Comment'),
+  ('The writer replies first',4,800,400,'The writer replies and makes the change'),
+  ('Resolve the comment only',5,1040,440,'Resolve after the reply')]),
  (5, 3): (trusted, [
   ('',0,1049,173,'Do not follow the message’s link'),
   ('Open the organization',1,1145,87,'Leave the suspicious message'),

@@ -1,5 +1,5 @@
 {
-  "states": 79,
+  "states": 80,
   "minimumStructuralSimilarity": 0.95,
   "failures": [],
   "checks": [
@@ -366,97 +366,105 @@
     {
       "week": 4,
       "chapter": 4,
+      "action": 6,
+      "seconds": 188.779,
+      "structuralSimilarity": 0.979838,
+      "passCheck": true
+    },
+    {
+      "week": 4,
+      "chapter": 4,
       "action": 5,
-      "seconds": 172.872,
-      "structuralSimilarity": 0.977657,
+      "seconds": 182.819,
+      "structuralSimilarity": 0.977067,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 4,
       "action": 4,
-      "seconds": 170.092,
-      "structuralSimilarity": 0.981674,
+      "seconds": 166.659,
+      "structuralSimilarity": 0.979275,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 4,
       "action": 3,
-      "seconds": 153.372,
-      "structuralSimilarity": 0.974507,
+      "seconds": 164.599,
+      "structuralSimilarity": 0.980475,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 4,
       "action": 2,
-      "seconds": 144.432,
-      "structuralSimilarity": 0.980087,
+      "seconds": 160.179,
+      "structuralSimilarity": 0.979617,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 4,
       "action": 1,
-      "seconds": 140.632,
-      "structuralSimilarity": 0.981369,
+      "seconds": 157.419,
+      "structuralSimilarity": 0.97961,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 4,
       "action": 0,
-      "seconds": 132.202,
-      "structuralSimilarity": 0.981445,
+      "seconds": 151.609,
+      "structuralSimilarity": 0.979474,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 6,
       "action": 5,
-      "seconds": 256.776,
-      "structuralSimilarity": 0.979944,
+      "seconds": 303.365,
+      "structuralSimilarity": 0.979482,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 6,
       "action": 4,
-      "seconds": 253.496,
-      "structuralSimilarity": 0.980063,
+      "seconds": 298.545,
+      "structuralSimilarity": 0.978915,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 6,
       "action": 3,
-      "seconds": 252.126,
-      "structuralSimilarity": 0.980046,
+      "seconds": 293.745,
+      "structuralSimilarity": 0.98206,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 6,
       "action": 2,
-      "seconds": 239.076,
-      "structuralSimilarity": 0.981409,
+      "seconds": 278.685,
+      "structuralSimilarity": 0.982182,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 6,
       "action": 1,
-      "seconds": 234.516,
-      "structuralSimilarity": 0.981821,
+      "seconds": 274.405,
+      "structuralSimilarity": 0.984233,
       "passCheck": true
     },
     {
       "week": 4,
       "chapter": 6,
       "action": 0,
-      "seconds": 228.066,
-      "structuralSimilarity": 0.985398,
+      "seconds": 271.595,
+      "structuralSimilarity": 0.985456,
       "passCheck": true
     },
     {

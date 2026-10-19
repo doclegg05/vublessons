@@ -13,11 +13,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "665b1607d7238141ee43c614a03f6ebbb83a16a9c21df62d42c3f99f39043736",
+    "textSha256": "2b2c562413345f546730c18df8c9919057f12f9d43c02897b3ba96fd49372ace",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "09677dfb3416680ec391732313cae835a66fb1e31891e8f43b750b8dfb0f6bb2",
-    "sourceSha256": "1ee54b1a9806467622b4a318dd19776fa89f51f486fb5a38afa26409e250f659",
-    "sha256": "1ee54b1a9806467622b4a318dd19776fa89f51f486fb5a38afa26409e250f659"
+    "originalSha256": "f9edfa3bd0b5669a653e2acfe5e972f25410c1c45fd386f4dbbb7074d9777412",
+    "sourceSha256": "d523cc8eedc0edb0b8b27ccefa6b586d85ce40fbd13d562250d53aa36007076a",
+    "sha256": "d523cc8eedc0edb0b8b27ccefa6b586d85ce40fbd13d562250d53aa36007076a"
   },
   "beat-02": {
     "engine": "ElevenLabs",
@@ -33,11 +33,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "23034d85f3d619455d8ca6450154c5f0c4056b1a81285725fe1332535d57e6f3",
+    "textSha256": "110c731cf125f33a7ec155e7ce6fedda11f14734333007cd85eed4ff62189fe7",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "eda0cffef5a7bd761e2ad076040fcabce7b23367961ec8b38c67c7283b84dde4",
-    "sourceSha256": "2dec45a493ad636d3cb03a340f7b873ba755b0886f2ff86db783803e86dfc647",
-    "sha256": "2dec45a493ad636d3cb03a340f7b873ba755b0886f2ff86db783803e86dfc647"
+    "originalSha256": "86a1426a3cf71bd6efccd1432c6bf1749eeea1bbefa2202f683a6e402af1acdb",
+    "sourceSha256": "24638d9df236baf0daf9de0fe2baca05a4c31f8b2d7d2b798d2cefb6aab73b9a",
+    "sha256": "24638d9df236baf0daf9de0fe2baca05a4c31f8b2d7d2b798d2cefb6aab73b9a"
   },
   "beat-03": {
     "engine": "ElevenLabs",
@@ -53,11 +53,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "e9cde9e7bb5d7f3bbf23613ede693aa01c5b240fde33e203e10d23df71209095",
+    "textSha256": "d78b2c08731a7b13c82ea94cbf974948fc2075ca279f2280854b9233babb3fd7",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "270fe3011fbe2496843104586ecb191efb8efc890acd2d7514d405391f69f564",
-    "sourceSha256": "cfe55646226a790a85d5494f5fedeec8b62a21e4d4ab9b8f06a51aa271871c80",
-    "sha256": "cfe55646226a790a85d5494f5fedeec8b62a21e4d4ab9b8f06a51aa271871c80"
+    "originalSha256": "7267e89a1b44b8817af2ae054b4b2e9154ce7b162dc7dd99ce52b44951709a3e",
+    "sourceSha256": "d5c800df4fde04940fe182fff83c23c2d2bbe44a9e4ad21905ba39ce69b2f722",
+    "sha256": "d5c800df4fde04940fe182fff83c23c2d2bbe44a9e4ad21905ba39ce69b2f722"
   },
   "beat-04": {
     "engine": "ElevenLabs",
@@ -73,11 +73,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "81d161e51902682c0333a324933c16d5ebd65c5ec149d36d594d39bfa922b0d0",
+    "textSha256": "f27fb41fdb1bd250eef6b59ddbf6f0d675929dfe0f1de35b3b3d7112a7337870",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "e1488f97e0e452a2463bdf98a24060c8334f6b10fd53ed97967464c951c7ed98",
-    "sourceSha256": "cc703feac8a47a4b147dad37b9e2a84fc25e0b00dfcff6306813deb489057784",
-    "sha256": "cc703feac8a47a4b147dad37b9e2a84fc25e0b00dfcff6306813deb489057784"
+    "originalSha256": "82e5d58f9818d21ad5e8f376c82534bbec19949717b7666907187fed70667b71",
+    "sourceSha256": "cd08a7153f37432ac1b83cc693abed8659d70aadcaeead9e21b83670062a8623",
+    "sha256": "cd08a7153f37432ac1b83cc693abed8659d70aadcaeead9e21b83670062a8623"
   },
   "beat-05": {
     "engine": "ElevenLabs",
@@ -93,11 +93,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "0217f629dfaf0493cb46c5a1bdf48331e98a4e8d9a1e5a29c033203a15761b57",
+    "textSha256": "b1e34bb2d9ef577fee4a7d4c1c0aed3a8d2b2c971497c6190afd14e896acd4a0",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "12938934badd72add817c4ec2e8ff343fbbf673035aebabbd64b859271a2a8cf",
-    "sourceSha256": "2176b3e550ed6d78fe18d0a047aa0a7a0d1fefa7c75bda1134b7db63c5cdb15e",
-    "sha256": "2176b3e550ed6d78fe18d0a047aa0a7a0d1fefa7c75bda1134b7db63c5cdb15e"
+    "originalSha256": "8fd988de118a044d6e2bd2d6ac219c02ad73a93dbf9477ccf1fae169911e3abf",
+    "sourceSha256": "38a325e9fd1146900bed97c5447751f6fc6838ce00944dd9a43284635396a555",
+    "sha256": "38a325e9fd1146900bed97c5447751f6fc6838ce00944dd9a43284635396a555"
   },
   "beat-06": {
     "engine": "ElevenLabs",
@@ -113,11 +113,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "3e2aaecd8fce82f592baf0f94306dcfa0dbd71482afc4648a9ae4e28675a2046",
+    "textSha256": "022141d4346439beb45fb0d437f918b1b0fce110b1147e3cdc3cdc4d766ecceb",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "9eee74780c3291ee4f52d985c76363bf9fd238ba13038950d0dbfb052debc0b3",
-    "sourceSha256": "caeb7d011611a32b0bbe5bd0c2545f6cdcb72288e57c8805b65545ed488ef92b",
-    "sha256": "caeb7d011611a32b0bbe5bd0c2545f6cdcb72288e57c8805b65545ed488ef92b"
+    "originalSha256": "f7c4da3a7a38ed0770a81504b02573aa7da50febbcd919bd477226e472f3d0eb",
+    "sourceSha256": "0a6afbd0c06727008eb45f8919e5cb35861203eb3205b1fbf390c29c6387325f",
+    "sha256": "0a6afbd0c06727008eb45f8919e5cb35861203eb3205b1fbf390c29c6387325f"
   },
   "beat-07": {
     "engine": "ElevenLabs",
@@ -133,11 +133,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "ecda9d5e15434c264049b552312433a2dc515ad16f1260da2ed4184854867d64",
+    "textSha256": "c57dea5864f7f9df2d24db813222e08ce15d549c4e2f7945c21399a6ecd4f235",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "100c0b9cd032d97d4b16b763b5e79dd48f8b75e02638acacdbac4c2adcce0571",
-    "sourceSha256": "c827e412128dd827e7ef9ef3d7cf5fdffa12e4ecf1f911d2e33caec717e6feac",
-    "sha256": "c827e412128dd827e7ef9ef3d7cf5fdffa12e4ecf1f911d2e33caec717e6feac"
+    "originalSha256": "12805d89fb40ede40585313efc33363809f2578094393e6ced82a12a911a9b0c",
+    "sourceSha256": "cc3d6c8a0617d4ad6937b58bb9f5a20d0309fb4b73973f8eb75438fd78b81fa4",
+    "sha256": "cc3d6c8a0617d4ad6937b58bb9f5a20d0309fb4b73973f8eb75438fd78b81fa4"
   },
   "beat-08": {
     "engine": "ElevenLabs",
@@ -153,11 +153,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "687467f7795eb3fd0f98bbe6ab977204d9cbc5c9bca9eb4510fb56cf203656b0",
+    "textSha256": "62da16e2ccb4bf1b5a5642bd62208bf703c86c65ab14762d4ea3b4bd5810843a",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "37611bbddb3c80777a90393625938a4740d985af6d941cc64573388b406ebb85",
-    "sourceSha256": "9f3e997d2b5744437df5691d32eb267d733791063eab638ec930971df0562357",
-    "sha256": "9f3e997d2b5744437df5691d32eb267d733791063eab638ec930971df0562357"
+    "originalSha256": "f6a0f1f4c39ba3e01b9514944eaefc47d14ea0d34056b0c5aaa8f247754879e9",
+    "sourceSha256": "91f35da15e69f84606189f5efd99c9d6db0c6b73542c006387ccdb800a80cfe2",
+    "sha256": "91f35da15e69f84606189f5efd99c9d6db0c6b73542c006387ccdb800a80cfe2"
   },
   "beat-09": {
     "engine": "ElevenLabs",
@@ -173,11 +173,11 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "12e3d48e46998dab5c2fea9e24a13ec931f2ccef0c030e1354daab70000a3788",
+    "textSha256": "818be0b8422adde8e659266b1e8834665c8677269130f31fe2a41ff4aa270e2a",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "fbe2edc5dab156901c28370fe7836f4440b9135837752a3465d415efa5e2fa82",
-    "sourceSha256": "b9d9afa21045f6533fb3112ed8121eca1c8af89b912e8bf13526f28cbc247cd5",
-    "sha256": "b9d9afa21045f6533fb3112ed8121eca1c8af89b912e8bf13526f28cbc247cd5"
+    "originalSha256": "e303e2af9fb73f565ecb7b4a44b734010b5bd0d2c8a2d511ddcf22b3de03b2a5",
+    "sourceSha256": "2ade26fc6079f9c4c3016276f5e952096448623d95b44b97789c5f236e09b6d9",
+    "sha256": "2ade26fc6079f9c4c3016276f5e952096448623d95b44b97789c5f236e09b6d9"
   },
   "beat-10": {
     "engine": "ElevenLabs",
@@ -193,10 +193,10 @@
     "outputFormat": "mp3_44100_128",
     "draft": false,
     "performanceProfile": "brad-refresh",
-    "textSha256": "644a6a491394108eaf1fe315883197c0193469700f32b9c6c3b2ad718893f500",
+    "textSha256": "3f1851f93444a9841348a8d8f6a612aa76cb7fa87588bea00fbe3d0914e2e604",
     "cleanup": "ElevenLabs Voice Isolator",
-    "originalSha256": "9e0084fd0a3b39f1af7fb1d028a1b195dd3e348d71af4a7fdde0429f4ed2d863",
-    "sourceSha256": "0be40fa12bb1d918d0848aaf45d86f7fee917afa6b53a3200732984026f69b7a",
-    "sha256": "0be40fa12bb1d918d0848aaf45d86f7fee917afa6b53a3200732984026f69b7a"
+    "originalSha256": "29ac1a8c3d22043ecb769a094f87ad5346d83e0df017e9e21ba9c7cf1cb175cf",
+    "sourceSha256": "36e8f20426f1c23d7895306260f62f1122378ed3a3c7f84521d555cc9da444d1",
+    "sha256": "36e8f20426f1c23d7895306260f62f1122378ed3a3c7f84521d555cc9da444d1"
   }
 }
