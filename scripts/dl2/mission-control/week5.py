@@ -355,7 +355,7 @@ PART3 = dict(
              stuck=('Cannot find them?', 'They are in the second and third lines of the message.'),
              notes='A real company gives you time and a way to ask questions. Pressure is the clue. It is not proof by itself.'),
         step('Read the From line', ['Read the [From] line.'],
-             'the name «Maple Valley Health Plan» and an address ending in example.com.', ('mail5_message', dict(targets=['from'])), app='mail',
+             'the name «Maple Valley Health Plan». Anyone can type that name, so it proves nothing by itself.', ('mail5_message', dict(targets=['from'])), app='mail',
              notes='Anyone can type a name that looks right. Do not trust it by itself. The next checks matter more.'),
         step('Point at the link', ['Move the mouse pointer onto the blue link. Do not click it.'],
              'a line at the bottom left of Edge that shows the real address.', ('mail5_message', dict(targets=['link'], status=True)), app='mail',
