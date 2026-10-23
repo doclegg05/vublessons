@@ -6,13 +6,13 @@ for(let week=2;week<=6;week++) {
  test(`Week ${week}: matched missions, guided states, checks and resources`,async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(route+'/presentation.html#1');
-  // Week 2 (AI search) has extra rounds and a capstone, and no break; Weeks 4-6 keep 24 slides and the protected break.
-  // Week 3 (2026-10-12) and Week 4 (2026-10-19) are guided builds: one program at a time, one or two clicks per slide, no break. Their own checks are in dl2-week3-guided.spec.js and dl2-week4-guided.spec.js.
-  // 2026-10-23: Week 5 is a guided build too (week5.py): three parts, no break, no post-test slide; its checks are in dl2-week5-guided.spec.js.
-  const total=week===2?36:week===3?71:week===4?87:week===5?80:24,stages=week===2?{tell:5,show:4,do:15,review:5}:week===3?{tell:8,show:5,do:46,review:4}:week===4?{tell:8,show:5,do:61,review:5}:week===5?{tell:6,show:3,do:58,review:5}:{tell:4,show:4,do:4,review:4};
+  // Week 2 (AI search) is a mission week with extra rounds and a capstone. Weeks 3 to 6 are guided builds (2026-10-12 to 2026-10-23):
+  // one program at a time, one or two clicks per slide, no break; Week 6 ends with the course review (20 checks) and the post-test.
+  // Each guided week's own checks are in dl2-weekN-guided.spec.js. No week has a break slide any more.
+  const total=week===2?36:week===3?71:week===4?87:week===5?80:120,stages=week===2?{tell:5,show:4,do:15,review:5}:week===3?{tell:8,show:5,do:46,review:4}:week===4?{tell:8,show:5,do:61,review:5}:week===5?{tell:6,show:3,do:58,review:5}:{tell:17,show:4,do:67,review:24};
   await expect(page.locator('.slide')).toHaveCount(total);
   for(const stage of ['tell','show','do','review'])await expect(page.locator(`.slide[data-stage=${stage}]`)).toHaveCount(stages[stage]);
-  await expect(page.locator('.slide').filter({hasText:'Take an 8-minute break.'})).toHaveCount(week<=5?0:1);
+  await expect(page.locator('.slide').filter({hasText:'Take an 8-minute break.'})).toHaveCount(0);
   await page.getByRole('button',{name:'Notes (N)'}).click();await expect(page.locator('.notes-panel')).toBeVisible();
   await page.keyboard.press('n');await expect(page.locator('.notes-panel')).toBeHidden();
   const slideIndexes=async selector=>page.evaluate(sel=>[...document.querySelectorAll('.slide')].map((slide,i)=>slide.querySelector(sel)?i:-1).filter(i=>i>=0),selector);
