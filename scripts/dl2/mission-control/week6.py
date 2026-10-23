@@ -471,7 +471,7 @@ REVIEW_WEEKS = [
          ]),
     dict(week=5, app='excel', heading='Protect your work, show your skills', title='Week 5: protect your work, show your skills.',
          points=['In [Microsoft Excel], add words to a sign-in sheet so color is not the only clue.',
-                 'On a practice sign-up page in [Microsoft Edge], use a long passphrase and two-step verification.',
+                 'On a practice sign-up page in [Microsoft Edge], use a long passphrase for that one site, plus two-step verification.',
                  'In [Practice Mail], check a suspicious message through a number you already trust.'],
          notes='Two minutes. Ask what the class made in Week 5: a sign-in sheet that does not rely on color, a protected practice sign-up, and a checked message. Then the three questions.',
          questions=[
