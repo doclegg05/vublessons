@@ -10,7 +10,7 @@ def render(weeks):
     )
     rows = []
     for w, date in zip(weeks, dates):
-        evidence = {1: 'Pre-test.', 5: 'Post-test and skills challenge.', 6: 'Spec, change review and test log.'}.get(w['n'], '')
+        evidence = {1: 'Pre-test.', 6: 'Bug report, course review and post-test.'}.get(w['n'], '')
         alignment = 'VUB web app extension' if w['n'] == 6 else 'GS6 objective groups: ' + ', '.join(w['refs'])
         rows.append(f'''<tr>
           <th scope="row">Week {w['n']}<br><span>{date}</span></th>
@@ -79,7 +79,7 @@ def render(weeks):
     </section>
     <section aria-labelledby="assessment">
       <h2 id="assessment">Assessment &amp; Materials</h2>
-      <p>The <strong>Pre-Test (Week 1)</strong> occurs before instruction; the <strong>Post-Test (Week 5)</strong> follows the GS6 lessons. Each has 20 questions across the seven IC3 domains, with the same counts on both forms, and produces a graded results PDF and submits a copy for the instructor through Netlify. The tests use different questions covering the same skills. The Week 6 prototype uses a separate 8-point rubric. Scores guide practice; they are not certification results.</p>
+      <p>The <strong>Pre-Test (Week 1)</strong> occurs before instruction; the <strong>Post-Test (Week 6)</strong> follows the GS6 lessons and the course review. Each has 20 questions across the seven IC3 domains, with the same counts on both forms, and produces a graded results PDF and submits a copy for the instructor through Netlify. The tests use different questions covering the same skills. The Week 6 prototype uses a separate 8-point rubric. Scores guide practice; they are not certification results.</p>
       <p><strong>Materials:</strong> A workstation, browser, headphones, word processor, spreadsheet app and plain-text editor support the activities. Captions, transcripts, keyboard navigation, text sizing and print copies are available. The calendar task can use an instructor demonstration account or a paper simulation. No real purchases, private records or paid AI account are needed.</p>
     </section>
     <section aria-labelledby="practice">
