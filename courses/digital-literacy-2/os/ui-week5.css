@@ -1,0 +1,71 @@
+/* Week 5 guided lesson: the sign-in sheet in Excel, the practice sign-up page, and Practice Mail's Week 5 message.
+ * Markup comes from scripts/dl2/mission-control/ui_week5.py. Original schematic drawings, not screenshots.
+ * Loaded only by Week 5, after ui-drawings.css, guided.css and ui-week4.css. Sizes are cqw of the .deck. No text below 1.15cqw. */
+
+/* ---------------------------------------------------------------- Excel sign-in sheet */
+.ui-excel-signin .u-rb { min-height:5.8cqw; }
+.ui .w5-grid { grid-auto-rows:2.25cqw; }
+.ui .u-xc.w5-green { background:#00b050; }
+.ui .u-xc.w5-red { background:#ff0000; }
+.ui .u-xc.w5-sel { box-shadow:inset 0 0 0 .2cqw #107c41; background-image:linear-gradient(rgba(0,0,0,.14), rgba(0,0,0,.14)); }
+.ui .u-xc.w5-sel.u-t { box-shadow:inset 0 0 0 .2cqw #107c41, 0 0 0 .65cqw #111 !important; }
+.ui .w5-pal { position:absolute; left:-4cqw; top:100%; z-index:8; display:flex; flex-direction:column; gap:.4cqw; width:22cqw; margin-top:.5cqw; padding:.7cqw .8cqw .8cqw; background:#fff; border:.1cqw solid #b9b9b9; box-shadow:0 .3cqw 1cqw rgba(0,0,0,.45); text-align:left; white-space:normal; }
+.ui .w5-pt { font-size:1.2cqw; font-weight:700; color:#222; }
+.ui .w5-swrow { display:flex; gap:.35cqw; padding-top:1.4cqw; }
+.ui .w5-sw { position:relative; flex:none; width:1.7cqw; height:1.7cqw; border:.1cqw solid #555; }
+.ui .w5-sw.u-t { margin:0 .3cqw; }
+.ui .w5-pc { font-size:1.15cqw; color:#222; }
+
+/* ---------------------------------------------------------------- practice sign-up page */
+.ui .s-h { font-size:1.9cqw; font-weight:800; line-height:1.15; color:#111; }
+.ui .s-p { font-size:1.25cqw; color:#333; }
+.ui .s-row { display:flex; align-items:center; gap:1cqw; align-self:stretch; padding-right:2cqw; }
+.ui .s-lab { flex:none; width:6cqw; font-size:1.3cqw; font-weight:700; }
+.ui .s-in { position:relative; flex:1; display:flex; align-items:center; min-height:2.6cqw; padding:0 .8cqw; background:#fff; border:.15cqw solid #5a6a7a; border-radius:.4cqw; font-size:1.3cqw; color:#111; }
+.ui .s-in.u-t { background:#fff; }
+.ui .s-btns { display:flex; gap:1cqw; align-items:center; }
+.ui .s-btn { position:relative; padding:.4cqw 1.5cqw; background:#1b365d; color:#fff; border-radius:.4cqw; font-size:1.35cqw; font-weight:700; }
+.ui .s-btn.u-t { margin:.3cqw 1.2cqw .3cqw .3cqw; }
+.ui .s-plain { background:#fff; color:#1b365d; border:.15cqw solid #1b365d; }
+.ui .s-msg { align-self:stretch; font-size:1.25cqw; font-weight:700; color:#1e6b34; }
+.ui .s-msg.s-bad { color:#b3261e; }
+.ui .s-keep { align-self:stretch; padding:.4cqw .8cqw; border-left:.5cqw solid #1e6b34; background:#e8f4ec; font-size:1.2cqw; color:#111; }
+.ui .s-split { flex-direction:row; align-items:flex-start; gap:2cqw; }
+.ui .s-left { flex:1; display:flex; flex-direction:column; gap:.5cqw; align-items:flex-start; padding-right:1cqw; }
+.ui .s-phone { flex:none; width:15cqw; padding:.8cqw .6cqw 1cqw; background:#f1f1f1; border:.3cqw solid #222; border-radius:1.4cqw; }
+.ui .s-pbar { display:block; width:3cqw; height:.4cqw; margin:0 auto .6cqw; background:#222; border-radius:.4cqw; }
+.ui .s-bub { padding:.5cqw .7cqw; background:#fff; border:.15cqw solid #c6d0e1; border-radius:.8cqw; font-size:1.15cqw; line-height:1.3; }
+.ui .s-from { display:block; font-weight:700; color:#3a4763; }
+.ui .s-num { position:relative; display:block; font-size:1.8cqw; font-weight:800; letter-spacing:.05em; white-space:nowrap; color:#111; }
+.ui .s-num.u-t { margin:.4cqw 1.4cqw .4cqw 0; }
+.ui .s-done { align-self:stretch; padding:.8cqw 1.2cqw; background:#fff; border:.25cqw solid #1e6b34; border-radius:.6cqw; }
+.ui .s-ok { color:#1e6b34; }
+
+/* ---------------------------------------------------------------- Practice Mail, Week 5 message */
+.ui .w5-msg { display:flex; flex-direction:column; gap:.8cqw; padding:.6cqw 1.2cqw .8cqw; background:#fff; margin:0 .6cqw; border-radius:.5cqw; font-size:1.15cqw; }
+.ui .w5-msg .m-ml { overflow:visible; white-space:normal; }
+.ui .w5-f { position:relative; display:inline-block; vertical-align:top; font-weight:700; }
+.ui .w5-addr { display:block; font-weight:400; }
+.ui .w5-p { position:relative; display:inline-block; font-weight:700; }
+.ui .w5-p.u-t { margin:0 .5cqw; }
+.ui .w5-body { display:flex; flex-direction:column; gap:.9cqw; padding-top:.2cqw; }
+.ui .w5-l { display:block; font-size:1.25cqw; line-height:1.35; color:#111; }
+.ui .w5-link { position:relative; display:inline-block; color:#0b57b8; text-decoration:underline; font-weight:700; }
+.ui .w5-link.u-t { margin:0 .5cqw; }
+.ui .w5-rep { position:relative; align-self:flex-start; margin-top:.4cqw; padding:.3cqw 1.2cqw; border:.15cqw solid #b3261e; border-radius:1.2cqw; font-size:1.2cqw; font-weight:700; color:#b3261e; }
+.ui .w5-rep.u-t { margin:.4cqw 1.2cqw .4cqw .3cqw; }
+.ui .w5-rep.w5-done { border-color:#555; color:#333; background:#e7eaf0; }
+.ui .w5-warn { font-size:1.2cqw; font-weight:700; color:#8a5a00; }
+.ui .w5-status { position:absolute; left:0; bottom:0; z-index:7; max-width:80%; padding:.25cqw .9cqw; background:#f3f3f3; border:.1cqw solid #bbb; border-left:0; border-bottom:0; font-size:1.2cqw; color:#111; white-space:nowrap; }
+
+/* ---------------------------------------------------------------- two phone numbers */
+.ui-phone-compare { max-height:none; }
+.ui .w5-pair { display:flex; align-items:center; justify-content:center; gap:1cqw; padding:3cqw .6cqw; background:#e9eef6; border-radius:.6cqw; }
+.ui .w5-card { display:flex; flex-direction:column; gap:.6cqw; width:16.5cqw; padding:1cqw 1cqw 1.2cqw; background:#fff; border:.2cqw solid #5a6a7a; border-radius:.6cqw; }
+.ui .w5-letter { border-color:#1e6b34; }
+.ui .w5-ch { font-size:1.4cqw; font-weight:800; color:#111; }
+.ui .w5-cl { font-size:1.2cqw; line-height:1.3; color:#333; }
+.ui .w5-num { font-size:1.75cqw; font-weight:800; letter-spacing:.03em; color:#111; white-space:nowrap; }
+.ui .w5-d { position:relative; display:inline-block; }
+.ui .w5-d.u-t { margin-right:1.2cqw; }
+.ui .w5-ne { flex:none; font-size:1.3cqw; font-weight:800; color:#b3261e; }

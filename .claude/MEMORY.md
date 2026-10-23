@@ -8,18 +8,22 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-DL2 "Mission Control" (Week 1 with 20-question pre/post tests, plus Weeks 2 to 6 decks) is on `main` (PRs #28 and #31; Netlify builds `main`). Week 2 teaches AI-assisted search as of PR #31. On 2026-10-05 vublessons.com matched `main` for the eight Week 2 pages, the video, captions and deck assets (hash and text compare). Five Week 2 review fixes merged as PR #33 on 2026-10-05 and were confirmed on vublessons.com the same day. PR #34 (practice button opens a new tab) merged and was confirmed live the same day. Weeks 3 to 6 still use the original Mission Control content and still carry the 8-minute break slide.
+DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `main` (PRs #42 and #43). Weeks 5 and 6 are on branch `claude/dl2-weeks-5-6-guided` (worktree `.claude/worktrees/dl2-weeks-5-6-guided`), not pushed yet. On that branch the post-test moves from Week 5 to Week 6, after a course review of Weeks 1 to 5. Week 2 is still a four-mission week with a capstone.
 
 ## Last Session
-- **Date**: 2026-10-20 (revision of the Week 4 guided build)
-- **What we worked on**: Britt asked for more detailed steps, and one student has no email account. Replaced Gmail with Practice Mail (`activities/practice-mail.html`, example.com addresses only, no account), split Week 4 into 87 one-action slides, added a glossary and a My result page to the worksheet. Same worktree and branch as before: `.claude/worktrees/dl2-week-4-guided`, `claude/dl2-week-4-guided`, PR #43.
-- **What we decided (Britt)**: the lesson never mentions skill level; everyone is taught as if at the same level. The worksheet should lead the class to one finished result (the My result page).
-- **Where we left off**: changes made after the first push are uncommitted until pushed to PR #43. Content specs pass. The fit check was run in the in-app browser with the shared spec's measurement at 1366x768 and 1920x1080, default and largest text: no overflow. Needs: the browser specs on a normal terminal (the sandbox cannot launch Chromium), a lab-PC check of the Word comment steps, then merge.
+- **Date**: 2026-10-23
+- **What we worked on**: Rebuilt DL2 Week 5 and Week 6 in the Week 3/4 guided format, with three parallel subagents (Week 5, Week 6, post-test move) merged into `claude/dl2-weeks-5-6-guided`. Week 5 (80 slides) teaches post-test items 18 to 20: Excel color alone, a new practice sign-up page (passphrase plus two-step code), and a suspicious message in a Week 5 Practice Mail inbox. Week 6 (120 slides) tests the three resource-finder versions, then reviews Weeks 1 to 5 with 20 new questions (one per item), then opens the post-test. The syllabus, course home, sources page and `courses.json` now put the post-test in Week 6. Details are in `docs/digital-literacy-2/HANDOFF.md`.
+- **What we decided (Britt)**: Week 5 is not post-test night; Week 6 is. Nobody works alone in either week, so the Week 5 skills challenge is cut. Week 6 ends with a review of the whole course before the test. Britt may teach Weeks 5 and 6 in one night but wants the decks kept separate. Same scope rule as Weeks 3 and 4: Week 5 teaches only its post-test items.
+- **Where we left off**: All work is committed on the branch, not pushed. Tests, each run alone in this sandbox: 261 pass; the 2 failures (Week 3 slide 53 fit, the post-test outbox test) fail the same way on `main`; every crash-only test that covers Weeks 5 or 6 passes when run by name. Needs: push and a PR, then a lab-PC check of the Excel Fill Color, sign-up and Practice Mail steps, and a check that Netlify keeps the `?inbox=week-5` link working.
 
 ## Open Items
 - [ ] **DL2 Mission Control go-live checks (Week 1 was taught 2026-09-28; these were not re-verified):** enable Netlify form detection → push `feat/dl2-mission-control`, PR, merge → confirm forms `dl2-pretest`/`dl2-posttest` listed + email notifications on → one test submission → test print.
 - [x] ~~DL2 Week 2~~ rebuilt for AI-assisted search and merged 2026-10-05 (PR #31).
-- [ ] DL2 Weeks 3 to 6 (weekly); Week 6 needs its own brainstorm (agent-built app + domains/hosting/back-end roadblocks). Review each week's search or tool content for out-of-date techniques before teaching, as Week 2 needed.
+- [x] ~~DL2 Weeks 3 to 6 guided rebuilds~~ Weeks 3 and 4 merged (PRs #42, #43); Weeks 5 and 6 built 2026-10-23 on `claude/dl2-weeks-5-6-guided`, PR pending.
+- [ ] Week 3 slide 53 ("Open PowerPoint") spills its You should see line at the largest text size on a 1366x768 screen. Already on `main`; reported to Britt, not fixed.
+- [ ] Week 5 syllabus row still lists GS6 objective groups 7.1, 7.2, 7.3, 7.4, 2.1, 4.2 from the old lesson. Britt to confirm which groups the three new skills cover.
+- [ ] `weeks/week-06/practice.html` (old practice library) still teaches the cut Week 6 topics; nothing links to it. Decide whether to keep it.
+- [ ] `scripts/dl2/syllabus.py` is stale (nothing calls it; `syllabus.html` was hand-edited). Regenerate or retire it.
 - [x] ~~Merge PR #33 (Week 2 review fixes)~~ merged and confirmed live 2026-10-05.
 - [x] ~~Ship `claude/week-2-practice-new-tab`~~ merged as PR #34 and confirmed live 2026-10-05.
 - [ ] Ship `claude/week-2-mission-practice-pages` (Week 2 per-mission practice pages). Weeks 3 to 6 still link each mission to a numbered slide in their practice library, in the same tab; they need the same treatment before they are taught. At 1366x768 the Week 2 practice form still needs a short scroll to reach its buttons; at 1920x1080 it fits.
@@ -81,6 +85,8 @@ Britt asked to be reminded of both (2026-07-28).
 | 2026-07-28 | Defer repo rename | Only step with real deploy risk; no functional benefit today |
 | 2026-07-28 | **Reversed the above — renamed to `vublessons`** | Britt asked for it. Preflight showed the risk was low: Netlify links via the GitHub App (repo ID, not name) and the repo had no classic webhooks. Confirmed after by a fresh deploy building from `doclegg05/vublessons` |
 | 2026-07-28 | Fix the DL1 sidebar *tests*, not the page | The feature works — verified by scrolling the real container and by a real mouse wheel. The tests drove `.sidebar`, which never overflows, so the scroll was a no-op. Wrong expectation in the test |
+| 2026-10-23 | DL2 post-test moves from Week 5 to Week 6, after a 20-question course review | Britt: Week 6 is post-test night and should review the whole course first |
+| 2026-10-23 | DL2 Weeks 5 and 6 follow-the-leader, no independent work; Week 5 skills challenge cut | Britt: the class learns by doing together; Weeks 3 and 4 "work very well" |
 
 ## Architecture Notes
 - `courses.json` is the **catalog source of truth** — drives the homepage and course consoles. It is *not* generated from the course trees; adding a lesson means editing both.
@@ -96,6 +102,8 @@ Britt asked to be reminded of both (2026-07-28).
 - **Per-mission practice pages (Week 2).** A week dict with `practice_pages=True` gets one page per mission simulation (`practice-2b.html` and so on), cut by `activity_page()` in `build.py` from that week's practice library. A mission whose `practice` is `None` gets no practice link. `assets/lesson.js` throws if the deck controls are missing, so the pages keep them in the markup and `os/mission-practice.css` hides them under `.mission-activity`. The practice library is the pre-Mission Control lesson deck kept whole, which is why a link into it reads as a second lesson.
 
 ## Known Issues
+- **Lesson format.** New or reworked VUB lessons are follow-the-leader: the class repeats each projected step together, no solo work except tests. Auto-memory `follow-the-leader-lessons` holds the detail.
+- **Sandbox test runs.** The full Playwright suite crashes Chromium in the sandbox even at one worker; run tests one at a time on port 3939. Auto-memory `sandbox-chromium-flags` holds the detail.
 - **`build.py` drops the second field of every Show tuple, in every week.** The demo picture comes from `visuals.py`, so editing a mission's Show values changes nothing on screen. This left Week 2 Mission A picturing the retired keyword search after PR #31. Week 2 Mission A now reads its three values from `week2.py`; Missions B to D and Weeks 3 to 6 still carry unused values.
 - **Three Playwright specs hard-code `http://localhost:3939` as the site's own origin** (`dl2-os-week1-deck`, `dl2-os-sound-test`, `dl2-os-test`). Running the suite against another port fails them for that reason only.
 - **The DL2 practice library scrolls at 1366x768** (pages are 1525 to 2390 px tall). The slide-fit work is on the unmerged branch `claude/slide-redesign-presentation-b1ed80`, which predates Mission Control.

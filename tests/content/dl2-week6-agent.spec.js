@@ -80,50 +80,13 @@ test('Version 1’s script has one statement per line, so an agent’s diff is s
  for(const line of lines)expect(line.length,line).toBeLessThanOrEqual(170);
 });
 
-test('Week 6 worksheet opens all three versions and gives the procedures before the tasks',()=>{
- const ws=week('worksheet.html');
- for(const f of ['resource-finder.html','resource-finder-agent.html','resource-finder-agent-fixed.html'])expect(ws).toContain(`href="/courses/digital-literacy-2/activities/${f}"`);
- expect(ws).toContain('href="/courses/digital-literacy-2/activities/resource-finder.html" download="resource-finder-v1.html"');
- expect(ws).toContain('href="/courses/digital-literacy-2/activities/resource-finder-agent.html" download="resource-finder-v2.html"');
- for(const label of ['Open version 1','Open the agent’s version','Open the repaired version'])expect(ws).toContain(`>${label}</a>`);
- const firstTask=ws.indexOf('<section class="mission"');
- for(const [title,steps] of w6.procedures){
-  expect(ws.indexOf(esc(title))).toBeGreaterThan(0);expect(ws.indexOf(esc(title))).toBeLessThan(firstTask);
-  for(const step of steps)expect(ws).toContain(esc(step.replace(/[Ss]lide (\d+)/g,'practice library exercise $1')));
- }
- expect(w6.procedures.map(p=>p[0])).toEqual(['Open the three versions (no account needed)','Check the change yourself (no AI account needed)','Optional: repair version 2 by hand']);
- expect(text(ws)).not.toMatch(/Community Skills Desk|resource-finder-ai\.html|approved AI tool/);
-});
-
-test('Week 6 worksheet logs the five checks and the retest, with a typed box for each result',()=>{
- const ws=week('worksheet.html'),plain=text(ws);
- expect(plain).toContain('Version 2 app test log Check / input Expected Actual Pass or fail');
- expect(plain).toContain('Version 3 retest log Check / input Expected Actual Pass or fail');
- for(const [check,todo] of [['New category','learning'],['Existing name','library'],['No match','zzz'],['Mixed case','LIBRARY, then Learning'],['Keyboard only','Tab through controls'],['Narrow screen','Zoom to 400%']])expect(plain).toContain(`${check} ${todo}`);
- expect(plain).toContain('Version 3 retest log');
- for(const row of ['Mixed case','New category','No match'])expect(plain).toContain(row);
- expect(ws.match(/<textarea class="worksheet-input" id="log-\d+-\d"/g)).toHaveLength(18);
- expect(ws.match(/<textarea class="worksheet-input" id="retest-\d+-\d"/g)).toHaveLength(18);
- expect(ws.indexOf('<h2>Version 2 app test log</h2>')).toBeGreaterThan(ws.indexOf('id="m6C"'));
-});
-
-test('Week 6 rubric scores four criteria 0, 1 or 2 with descriptors, on the worksheet and the answer guide',()=>{
- expect(w6.rubric).toHaveLength(4);
- for(const row of w6.rubric){expect(row).toHaveLength(4);for(const cell of row)expect(cell.length).toBeGreaterThan(8);}
- expect(w6.rubric.map(r=>r[0])).toEqual(['Spec and checks','Prediction and review','Testing and retest','SaaS trade-offs']);
- expect(w6.rubric[0][3]).toBe('One clear change, what must stay the same, and three checks a partner can run');
- for(const page of [week('worksheet.html'),week('answer-key.html')]){
-  const plain=text(page);
-  expect(plain).toContain('Criterion 0 1 2 Score');
-  for(const [criterion,...levels] of w6.rubric){expect(plain).toContain(criterion);for(const level of levels)expect(plain).toContain(level);}
-  expect(plain).toContain('Total __ / 8');
- }
-});
-
-test('Week 6 answer guide lists the expected result of every check',()=>{
- const plain=text(week('answer-key.html'));
- for(const expected of ['learning, 2 fictional resources found (Community library, Practice Workbook Workshop), pass','zzz, No matching resources. Try a different word or reset the filters., pass','LIBRARY and Learning, No matching resources instead of 1 and 2 found, fail','LIBRARY: 1 found (Community library), pass','Learning: 2 found, pass'])expect(plain).toContain(expected);
-});
+// Retired 2026-10-23 with the Week 6 guided rebuild (week6.py, guided.py): the old worksheet structure is gone. These four tests asserted it:
+//  - 'worksheet opens all three versions and gives the procedures before the tasks' (download links, hand-repair procedures);
+//  - 'worksheet logs the five checks and the retest' (6-row log tables);
+//  - 'rubric scores four criteria 0, 1 or 2' (the separate 8-point extension rubric is cut; the My result page replaces it);
+//  - 'answer guide lists the expected result of every check' (old wording).
+// The same facts are now checked against the new deck and worksheet in tests/content/dl2-week6-guided.spec.js (three open buttons, test tables,
+// real results for library, learning, zzz and LIBRARY in each version, the real code lines). The behavior of the three pages stays tested below.
 
 test('Week 6 transcript defines the words the video uses, above the transcript',()=>{
  const html=week('video-transcript.html'),plain=text(html);
@@ -134,13 +97,15 @@ test('Week 6 transcript defines the words the video uses, above the transcript',
  for(let n=1;n<=5;n++)expect(read(`${course}/weeks/week-0${n}/video-transcript.html`)).not.toContain('Words in this video');
 });
 
-test('Week 6 plan, syllabus and instructor guide describe the instructor-led agent demo',()=>{
+// Rewritten 2026-10-23: the old plan wording ("An instructor-led live AI run is optional") is gone with the old lesson. The syllabus and guide claims are unchanged.
+test('Week 6 plan, syllabus and instructor guide describe the agent work with no AI account',()=>{
  const plan=text(week('lesson-plan.html'));
- expect(plan).toContain('An instructor-led live AI run is optional; the prepared versions provide the complete account-free route.');
+ expect(plan).toContain('nobody needs an AI account');
  expect(plan).not.toMatch(/approved AI tool/);
  const syllabus=text(read(`${course}/syllabus.html`));
  expect(syllabus).toContain('IC3 Digital Literacy GS6 Level 2 + AI Agent and SaaS Basics');
- expect(syllabus).toContain('Spec, change review and test log.');
+ // 2026-10-23: Week 6 now ends with a course review and the post-test, so the syllabus evidence line changed.
+ expect(syllabus).toContain('Bug report, course review and post-test.');
  expect(syllabus).toContain('In the final week the instructor demonstrates an AI coding agent; learners write the request, review the change and test it, with no account or AI access of their own.');
  expect(syllabus).not.toMatch(/approved AI tool|Web App Building|Prototype and test log/);
  const guide=text(read(`${course}/instructor-guide.html`));

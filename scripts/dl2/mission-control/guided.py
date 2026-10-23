@@ -1,4 +1,9 @@
-"""Render a guided week (Weeks 3 and 4): deck, worksheet, answer guide, lesson plan, run sheet and notes.
+"""Render a guided week (Weeks 3 to 6): deck, worksheet, answer guide, lesson plan, run sheet and notes.
+
+Optional week-dict keys, off unless present (Weeks 3 to 5 do not use them, so their output is unchanged):
+  review      course-review segment after the wrap-up: a recap slide and check questions per earlier week (Week 6)
+  post_test   guided steps to open the post-test, a "you answer alone" slide, then take-it-home and mission complete (Week 6)
+  part["closing"]   one extra why slide at the end of a part, before its check question
 
 Content lives in week3.py / week4.py. Drawings come from ui.py and ui_mail.py. Called from build.py for weeks whose dict
 has guided=True; build.py still writes that week's practice library.
@@ -9,7 +14,12 @@ import re
 
 import ui
 import ui_mail
+import ui_week5
+import ui_week6
 from opening import media_url
+
+# Drawing modules, searched in order. Each guided week after Week 4 keeps its new drawings in its own module.
+DRAWINGS = (ui, ui_mail, ui_week5, ui_week6)
 
 BASE = '/courses/digital-literacy-2'
 
@@ -29,6 +39,11 @@ def md(t):
 
 def plain(t):
     return re.sub(r'[\[\]{}«»]', '', t)
+
+
+def item_label(g):
+    """'post-test item 13', or a plain note for a goal with no post-test item."""
+    return f'post-test item {g["item"]}' if g.get('item') is not None else 'practice only, not on the post-test'
 
 
 def end(text):
@@ -59,7 +74,7 @@ def drawing(spec):
     if not spec:
         return ''
     name, kwargs = spec
-    fn = getattr(ui, name, None) or getattr(ui_mail, name, None)
+    fn = next((getattr(m, name) for m in DRAWINGS if hasattr(m, name)), None)
     if fn is None:
         return f'<div class="ui ui-missing" role="img" aria-label="Drawing not available">{e(name)}</div>'
     accepted = inspect.signature(fn).parameters
@@ -161,6 +176,9 @@ def build_week(n, w, target, letterhead):
                 continue
             numbered += 1
             step_slide(s, app, f'Part {part_n} · Step {numbered} of {len(steps)}')
+        if p.get('closing'):
+            cl = p['closing']
+            add(cl['title'], '<ol class="mission-principles">' + ''.join(f'<li><span>{i + 1}</span><div class="g-pt">{md(x)}</div></li>' for i, x in enumerate(cl['points'])) + '</ol>', 'present', 'tell', cl['notes'], app, 'tell', f'Part {part_n} · Why it matters')
         for c in checks_of(p):
             add(c['question'], f'<div class="mission-check" data-answer="{c["answer"]}" data-why="{e(c["why"])}">' + ''.join(
                 f'<button type="button" data-choice="{j}"><b>{chr(65 + j)}</b> {e(ch)}</button>' for j, ch in enumerate(c['choices'])) +
@@ -184,12 +202,50 @@ def build_week(n, w, target, letterhead):
         show_slide()
     add('I can…', '<ul class="g-goals g-ican">' + ''.join(f'<li>{ui.app_badge(g["app"], "sm")}<span>{md(g["short"])}.</span></li>' for g in w['goals']) + '</ul><p class="g-foot">Check each box on your worksheet that you can do now.</p>', 'apply', '',
         'Celebrate one concrete result per learner. Anything unchecked is the first thing to practice next week.', None, 'ican', 'Wrap-up')
-    add('Take it home.', f'<p class="mission-prompt">{md(wr["home"])}</p><div class="mission-actions"><a href="worksheet.html">Keep your worksheet</a><a href="video-transcript.html">Replay the video</a></div>', 'apply', '',
-        w['home_notes'], None, 'home', 'Wrap-up')
-    add('Mission complete.', f'<p>{e(w["done"])}</p><div class="mission-actions"><a href="{BASE}/index.html">Return to course home</a></div>', 'apply', '',
-        'Collect evidence, not just confidence. Restore shared settings.', None, 'done')
-    schedule.append((elapsed, 120, 'Wrap-up: check, I can, take it home', f'{wfirst}–{len(slides)}'))
-    assert 120 - elapsed == 12, elapsed  # wrap-up: evidence check, I can, take it home
+    review, post = w.get('review'), w.get('post_test')
+
+    def take_home_and_done():
+        add('Take it home.', f'<p class="mission-prompt">{md(wr["home"])}</p><div class="mission-actions"><a href="worksheet.html">Keep your worksheet</a><a href="video-transcript.html">Replay the video</a></div>', 'apply', '',
+            w['home_notes'], None, 'home', 'Wrap-up')
+        add('Mission complete.', f'<p>{e(w["done"])}</p><div class="mission-actions"><a href="{BASE}/index.html">Return to course home</a></div>', 'apply', '',
+            'Collect evidence, not just confidence. Restore shared settings.', None, 'done')
+
+    if not (review or post):
+        take_home_and_done()
+        schedule.append((elapsed, 120, 'Wrap-up: check, I can, take it home', f'{wfirst}–{len(slides)}'))
+        assert 120 - elapsed == 12, elapsed  # wrap-up: evidence check, I can, take it home
+    else:
+        schedule.append((elapsed, elapsed + 12, 'Wrap-up: check, I can', f'{wfirst}–{len(slides)}'))
+        elapsed += 12
+        if review:
+            starts.append(len(slides))
+            rfirst = len(slides) + 1
+            for rw in review['weeks']:
+                add(rw['title'], '<ol class="mission-principles">' + ''.join(f'<li><span>{i + 1}</span><div class="g-pt">{md(x)}</div></li>' for i, x in enumerate(rw['points'])) + '</ol>', 'present', 'tell', rw['notes'], rw['app'], 'tell', f'Course review · Week {rw["week"]}')
+                for q in rw['questions']:
+                    add(q['question'], f'<div class="mission-check" data-answer="{q["answer"]}" data-why="{e(q["why"])}">' + ''.join(
+                        f'<button type="button" data-choice="{j}"><b>{chr(65 + j)}</b> {e(ch)}</button>' for j, ch in enumerate(q['choices'])) +
+                        '<p class="mission-feedback" role="status">Choose an answer, then explain your reason.</p><button type="button" class="check-reset">Try again</button></div>',
+                        'evaluate', 'review', f'Ask everyone to choose before you select an answer. Correct answer: {end(q["choices"][q["answer"]])} {q["why"]}', q['app'], 'check', f'Review · Week {rw["week"]} · Question {q["n"]} of 20')
+            schedule.append((elapsed, elapsed + review['minutes'], 'Course review: weeks 1 to 5', f'{rfirst}–{len(slides)}'))
+            elapsed += review['minutes']
+        if post:
+            starts.append(len(slides))
+            qfirst = len(slides) + 1
+            papp = post['app']
+            add(f'Now working in: {w["apps"][papp]}',
+                f'<div class="g-orient">{ui.app_badge(papp, "lg")}<div><p class="g-what">{md(post["what"])}</p><p><span class="g-label">You will do:</span> {md(post["make"])}</p></div></div>',
+                'present', 'tell', post['open_note'], papp, 'orient', 'Post-test', 'Working in:')
+            for k, s in enumerate(post['steps']):
+                step_slide(s, papp, f'Post-test · Step {k + 1} of {len(post["steps"])}')
+            for key in ('alone', 'finish'):
+                t = post[key]
+                add(t['title'], '<ol class="mission-principles">' + ''.join(f'<li><span>{i + 1}</span><div class="g-pt">{md(x)}</div></li>' for i, x in enumerate(t['points'])) + '</ol>', 'evaluate', 'tell', t['notes'], papp, 'tell', 'Post-test')
+            take_home_and_done()
+            schedule.append((elapsed, 120, 'Post-test: open it together, then answer alone', f'{qfirst}–{len(slides)}'))
+            assert elapsed + post['minutes'] == 120, elapsed
+            elapsed += post['minutes']
+        assert elapsed == 120, elapsed
 
     # Deck page.
     jump_labels = w['jump_labels']
@@ -222,7 +278,7 @@ def build_week(n, w, target, letterhead):
                 extra = '<span class="g-type-card">' + '<br>'.join(e(x) for x in s['card']) + '</span>'
             if s.get('write'):
                 fid = 'predict-' + re.sub(r'[^a-z0-9]+', '-', s['title'].lower()).strip('-')
-                extra = f'<label class="g-write-label" for="{fid}">{md(s["write"])}</label><textarea class="worksheet-input" id="{fid}" rows="{s.get("write_rows") or 1}"></textarea><span class="print-answer"></span>'
+                extra = (extra if s.get('card') else '') + f'<label class="g-write-label" for="{fid}">{md(s["write"])}</label><textarea class="worksheet-input" id="{fid}" rows="{s.get("write_rows") or 1}"></textarea><span class="print-answer"></span>'
             out += (f'<li><span class="n">{k}</span><div class="d"><b class="act">{md(s["title"])}.</b> {detail}{extra}<span class="see">{md(s["see"])}</span></div>'
                     f'<label class="box"><input type="checkbox"><span class="visually-hidden">Done: {e(plain(s["title"]))}</span></label></li>')
         return out + '</ol>'
@@ -259,7 +315,7 @@ def build_week(n, w, target, letterhead):
                f'<div class="check"><h4>CHECK YOURSELF</h4>' + ''.join(
                    f'<p>{e(c["question"])}</p><p>' + ' · '.join(f'{chr(65 + j)}. {e(ch)}' for j, ch in enumerate(c['choices'])) + '</p><p>My answer: <span class="ln"></span></p>' for c in cs) + '</div></div></section>')
         answer += (f'<section><h2>Part {k + 1} · {e(app_name)}: {e(p["title"])}</h2>' + ''.join(
-                   f'<p><b>Goal {g + 1}</b> (post-test item {w["goals"][g]["item"]}): {md(w["goals"][g]["text"])}</p>' for g in gids) +
+                   f'<p><b>Goal {g + 1}</b> ({item_label(w["goals"][g])}): {md(w["goals"][g]["text"])}</p>' for g in gids) +
                    f'<p><b>Evidence:</b> {e(w["outcomes"][k])}</p>' + ''.join(f'<p><b>Check:</b> {e(c["question"])} <b>{e(end(c["choices"][c["answer"]]))}</b> {e(c["why"])}</p>' for c in cs) +
                    '<p><b>Common problems</b></p><ul>' + ''.join(f'<li><b>{md(a)}</b> {md(b)}</li>' for a, b in p['stuck']) + '</ul></section>')
     show = '<p><b>Show your instructor:</b></p><ul>' + ''.join(f'<li>{md(x)}</li>' for x in wr['show']) + '</ul>'
@@ -277,6 +333,25 @@ def build_week(n, w, target, letterhead):
                '<p>Record Independent, With prompt or Needs practice for each. Re-show only the missing step.</p></section>')
     if res:
         answer += '<section><h2>My result page</h2><ul>' + ''.join(f'<li>{md(lab)}</li>' for lab, _ in res['fields']) + '</ul><p>Collect the page, or read it on screen. Every box should hold the learner\'s own words.</p></section>'
+    # Course review page and post-test steps (Week 6 only): behind the 'review' and 'post_test' keys.
+    review, post = w.get('review'), w.get('post_test')
+    if review:
+        qs = ''
+        for rw in review['weeks']:
+            qs += f'<h3 class="g-rweek">Week {rw["week"]} · {e(rw["heading"])}</h3>'
+            for q in rw['questions']:
+                qs += (f'<div class="g-rq"><p><b>{q["n"]}.</b> <span class="g-rapp">{e(w["apps"][q["app"]])}.</span> {e(q["question"])}</p><p>'
+                       + ' · '.join(f'{chr(65 + j)}. {e(ch)}' for j, ch in enumerate(q['choices'])) + '</p><p>My answer: <span class="ln"></span></p></div>')
+        ws += (f'<section class="mission g-part g-review" id="review"><div class="mhead"><div><div class="k">COURSE REVIEW · WEEKS 1 TO 5</div><h2>{e(review["title"])}</h2></div></div>'
+               f'<p>{md(review["intro"])}</p>{qs}</section>')
+        answer += '<section><h2>Course review answers</h2><p>' + e(review['answer_note']) + '</p><ol class="g-rkey">' + ''.join(
+            f'<li value="{q["n"]}"><b>Week {rw["week"]}, post-test item {q["item"]} ({e(q["skill"])}), {e(w["apps"][q["app"]])}:</b> {chr(65 + q["answer"])}. {e(q["choices"][q["answer"]])} {e(q["why"])}</li>'
+            for rw in review['weeks'] for q in rw['questions']) + '</ol></section>'
+    if post:
+        ws += (f'<section class="mission g-part" id="posttest"><div class="mhead"><div><div class="k">POST-TEST · {e(w["apps"][post["app"]].upper())}</div><h2>{e(post["title"])}</h2></div></div>'
+               f'<p>{md(post["what"])}</p>{steps_list(post["steps"])}{stuck_box([s["stuck"] for s in post["steps"] if s.get("stuck")])}'
+               f'<div class="home"><b>THEN ON YOUR OWN</b>{md(post["worksheet_alone"])}</div></section>')
+        answer += f'<section><h2>Post-test</h2><p>{e(post["answer_note"])}</p></section>'
     (target / 'worksheet.html').write_text(page('Worksheet', ws))
     (target / 'answer-key.html').write_text(page('Answer and observation guide', answer, True))
 
@@ -284,7 +359,7 @@ def build_week(n, w, target, letterhead):
         f'<tr><td>{a}–{b} ({b - a} min)</td><td>{s}</td><td>{e(t)}</td></tr>' for a, b, t, s in schedule) + '</tbody></table>'
     clips = '<ul>' + ''.join(f'<li>Part {k + 1}: {e(c["title"].replace("Watch: ", ""))}, {mmss(c["start"])} to {mmss(c["end"])} of the Week {n} video.</li>' for k, p in enumerate(w['parts']) for c in p['watch']) + '</ul>'
     quick = '<h2>Quick card</h2><dl class="quick-card">' + ''.join(f'<dt>{e(a)}</dt><dd>{md(b)}</dd>' for a, b in w['quick']) + '</dl>'
-    plan_html = ('<h2>Objectives</h2><ul>' + ''.join(f'<li>{md(g["text"])} ({e(w["apps"][g["app"]])}; post-test item {g["item"]})</li>' for g in w['goals']) + '</ul>'
+    plan_html = ('<h2>Objectives</h2><ul>' + ''.join(f'<li>{md(g["text"])} ({e(w["apps"][g["app"]])}; {item_label(g)})</li>' for g in w['goals']) + '</ul>'
                  '<h2>Observable outcomes</h2><ul>' + ''.join(f'<li>{e(o)}</li>' for o in w['outcomes']) + '</ul>'
                  '<h2>How this lesson runs</h2><p>You project the deck and the class does each step together, one or two clicks per slide. Every step slide names the program in its top corner, gives the clicks, and says what learners should see. The worksheet repeats every step with a check box, so anyone who falls behind can catch up, and adds an If you get stuck box for each part. Wait for every screen to match before moving on.</p>'
                  f'<p>{e(w["plan_scope"])}</p>'

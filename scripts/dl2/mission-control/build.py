@@ -24,10 +24,11 @@ def source_text(t):
  t=re.sub(r'[Ss]lide (\d+)',r'practice library exercise \1',t)
  t=t.replace('Print page 1 of your results or save it as a PDF, and write your score out of 20.','Submit your results to Britt, save the complete graded PDF, and write your score out of 20.')
  return t
-# Map all eight detailed task rows to the mission where they are taught.
-WEEKS[6]['missions'][1]['lab']=[2,3]
-WEEKS[6]['missions'][2]['lab']=[4,5,6]
-WEEKS[6]['missions'][3]['lab']=[7]
+# Map all eight detailed task rows to the mission where they are taught (old four-mission Week 6 only).
+if not WEEKS[6].get('guided'):
+ WEEKS[6]['missions'][1]['lab']=[2,3]
+ WEEKS[6]['missions'][2]['lab']=[4,5,6]
+ WEEKS[6]['missions'][3]['lab']=[7]
 def log_table(prefix):
  checks=[('New category','learning'),('Existing name','library'),('No match','zzz'),('Mixed case','LIBRARY, then Learning'),('Keyboard only','Tab through controls'),('Narrow screen','Zoom to 400%')]
  out='<div class="table-scroll" tabindex="0" role="region" aria-label="App test log"><table><thead><tr><th>Check / input</th><th>Expected</th><th>Actual</th><th>Pass or fail</th></tr></thead><tbody>'
