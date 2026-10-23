@@ -23,7 +23,9 @@ test('DL2 teaching text is visible on every slide, not only inside a collapsed n
 // Retired 2026-09-26 with the week 6 redesign: 'DL2 week 6 v2 acceptance check searches for the resource
 // the learner renamed'. The rename is gone; slide 10 is now the agent's diff (tests/content/dl2-week6-agent.spec.js).
 
-test('DL2 week 6 worksheet teaches the hand-repair mechanics for version 2',()=>{
+// Retired 2026-10-23 with the Week 6 guided rebuild: hand repair in Notepad or TextEdit is cut (Britt). The worksheet no longer downloads editable HTML.
+// The three practice pages still behave as described: tests/content/dl2-week6-agent.spec.js and tests/functional/dl2-week6-agent.spec.js.
+test.skip('DL2 week 6 worksheet teaches the hand-repair mechanics for version 2',()=>{
  const ws=worksheet(6);
  expect(ws).toContain('download="resource-finder-v1.html"');
  expect(ws).toContain('download="resource-finder-v2.html"');

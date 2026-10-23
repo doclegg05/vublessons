@@ -2,6 +2,7 @@
 // Week 6 redesign (2026-09-26): the three practice pages behave as the lesson says, in a browser.
 // Version 1 is the starter, version 2 is the agent's result with one planted defect (the typed search
 // is no longer lowered, so capital letters stop matching) and version 3 is the repair.
+// 2026-10-23: the worksheet tests at the end moved to the guided Week 6 worksheet (week6.py); the three page tests are unchanged.
 const {test,expect}=require('@playwright/test');
 const base='/courses/digital-literacy-2';
 
@@ -64,7 +65,7 @@ test('Week 6 slide 10 shows the diff when a learner chooses what the agent chang
  await expect(slide.locator('.scene-state:visible del').first()).toBeVisible();
 });
 
-test('Week 6 worksheet and answer guide fit a phone screen; the log tables scroll inside their box',async({page})=>{
+test('Week 6 worksheet and answer guide fit a phone screen; the test tables scroll inside their box',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  for(const f of ['worksheet.html','answer-key.html']){
   await page.goto(`${base}/weeks/week-06/${f}`);
@@ -72,11 +73,13 @@ test('Week 6 worksheet and answer guide fit a phone screen; the log tables scrol
  }
 });
 
-test('Week 6 worksheet test log takes typed results and prints them',async({page})=>{
+// Rewritten 2026-10-23 with the Week 6 guided rebuild: the old 18-box log tables are gone. The Part 1 test table keeps one typed box per
+// search (library, learning, zzz, LIBRARY) and each box still prints.
+test('Week 6 worksheet test table takes typed results and prints them',async({page})=>{
  await page.goto(`${base}/weeks/week-06/worksheet.html`);
- const actual=page.getByLabel('Actual result: Mixed case', {exact:true}).first();
- await actual.fill('No matching resources for LIBRARY');
+ const saw=page.getByLabel('What I saw in version 1, search LIBRARY',{exact:true});
+ await saw.fill('1 found: Community library');
  await page.emulateMedia({media:'print'});
- await expect(page.locator('#log-3-1 + .print-answer')).toHaveText('No matching resources for LIBRARY');
- await expect(actual).toBeHidden();
+ await expect(page.locator('#t1-3 + .print-answer')).toHaveText('1 found: Community library');
+ await expect(saw).toBeHidden();
 });

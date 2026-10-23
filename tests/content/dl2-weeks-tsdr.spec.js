@@ -16,6 +16,8 @@ const silly=['Count the page’s colors','Delete their document','This is bad.',
 // 2026-10-12: Week 3 is the guided build (scripts/dl2/mission-control/week3.py); it no longer reads its agenda, outcomes or
 // quick card from curriculum.json. Its checks are in tests/content/dl2-week3-guided.spec.js.
 // 2026-10-19: Week 4 is the guided build too (week4.py); its checks are in tests/content/dl2-week4-guided.spec.js.
+// 2026-10-23: Week 6 is the guided build too (week6.py). Its outcomes and prep come from week6.py, not curriculum.json, and it has no
+// Windows 11 quick card on the worksheet; its checks are in tests/content/dl2-week6-guided.spec.js. The two tests below skip Week 6.
 for(const n of [2,5,6]){
  const w=weeks[n-1],dir=`courses/digital-literacy-2/weeks/week-0${n}`;
  const plan=()=>text(read(`${dir}/lesson-plan.html`)),worksheet=()=>text(read(`${dir}/worksheet.html`));
@@ -40,12 +42,14 @@ for(const n of [2,5,6]){
  });
 
  test(`Week ${n} lesson plan states measurable outcomes for every goal`,()=>{
+  test.skip(n===6,'Week 6 is the guided build (2026-10-23): see dl2-week6-guided.spec.js');
   expect(w.outcomes.length).toBe(w.objectives.length);
   expect(w.outcomes.length).toBeGreaterThanOrEqual(3);
   const p=plan();for(const o of w.outcomes){expect(o).toMatch(/^[A-Z][^:]{1,40}: /);expect(p).toContain(asPublished(o));}
  });
 
  test(`Week ${n} has a week-specific prep list and a Windows 11 quick card`,()=>{
+  test.skip(n===6,'Week 6 is the guided build (2026-10-23): see dl2-week6-guided.spec.js');
   expect(typeof w.prep).toBe('string');expect(w.prep).toMatch(/Start fresh on this computer/);
   expect(w.lab_paths.length).toBeGreaterThanOrEqual(6);
   for(const row of w.lab_paths)expect(row).toHaveLength(2);
