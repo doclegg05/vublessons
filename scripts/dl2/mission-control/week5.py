@@ -313,7 +313,7 @@ P3_MAP = dict(title='Find your way around the message', draw=('mail5_message', d
 
 LETTER_HTML = (
     '<div style="border:2px solid #333;padding:.6em 1em;margin:.8em 0;max-width:30em"><p style="margin:0"><b>A letter you already have</b></p>'
-    '<p style="margin:.3em 0 0"><b>Maple Valley Health Plan</b> · Member letter<br>Questions? Call Member Services: <b>' + REAL_NUMBER + '</b><br>Website: maplevalleyhealth.org</p></div>')
+    '<p style="margin:.3em 0 0"><b>Maple Valley Health Plan</b> · Member letter<br>Questions? Call Member Services: <b>' + REAL_NUMBER + '</b><br>Website: maplevalleyhealth.example.com</p></div>')
 
 PART3 = dict(
     app='mail', title='Check a message that rushes you', goals=[2],
@@ -362,7 +362,7 @@ PART3 = dict(
              stuck=('Nothing shows at the bottom left?', 'Hold the pointer still on the blue words for a second. Practice Mail also shows the address under the link.'),
              notes='Edge shows where a link really goes at the bottom left of the window. Practice Mail also writes it under the link. Never click to find out.'),
         step('Read where it really goes', ['Read the address at the bottom left of Edge.'],
-             f'«{LINK_DEST}». It is not «maplevalleyhealth.org».', ('mail5_message', dict(targets=[], status=True)), app='mail',
+             f'«{LINK_DEST}». It is not «maplevalleyhealth.example.com».', ('mail5_message', dict(targets=[], status=True)), app='mail',
              notes='The words on the link said one site. The real address is another. Anyone can write one thing and link to another.'),
         step('Find the phone number in the message', ['Find the phone number near the bottom of the message.'],
              f'«{MESSAGE_NUMBER}».', ('mail5_message', dict(targets=['phone'])), app='mail',

@@ -132,7 +132,7 @@ test('Practice Mail has a Week 5 inbox behind a URL parameter and still behaves 
  await expect(page.locator('.list li')).toHaveCount(1);
  await page.locator('.list button').click();
  const link=page.locator('.bad-link');
- await expect(link).toHaveText('maplevalleyhealth.org/confirm');
+ await expect(link).toHaveText('maplevalleyhealth.example.com/confirm');
  expect(await link.getAttribute('href')).toContain('maple-valley-confirm.example.net/login');
  await link.hover();await expect(page.locator('.where')).toContainText('maple-valley-confirm.example.net/login');
  const before=page.url();await link.click();
@@ -146,7 +146,7 @@ test('Practice Mail has a Week 5 inbox behind a URL parameter and still behaves 
 
 test('The Week 5 message has pressure words, a lookalike link and a number that differs from the letter',()=>{
  const html=read(`${act}/practice-mail.html`);
- for(const s of ['stops today','act now','within 1 hour','maplevalleyhealth.org/confirm','maple-valley-confirm.example.net/login','304-555-0199'])expect(html).toContain(s);
+ for(const s of ['stops today','act now','within 1 hour','maplevalleyhealth.example.com/confirm','maple-valley-confirm.example.net/login','304-555-0199'])expect(html).toContain(s);
  const t=learnerText();
  for(const s of ['stops today','act now','within 1 hour','maple-valley-confirm.example.net/login','304-555-0199','304-555-0188','bottom left'])expect(t,s).toContain(s);
  const everything=t+' '+text(html);

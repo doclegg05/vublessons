@@ -159,7 +159,7 @@ def mail5_message(targets=(), status=False, reported=False, warn=False):
     frm = (f'<span class="m-ml"><b>From</b><span class="w5-f{_t(fn)}">{_lab("Maple Valley Health Plan", fn)}<span class="w5-addr">&lt;mvhp-memberhelp@example.com&gt;</span>{_bd(fn, fp)}</span></span>')
     subj = f'<span class="m-ml"><b>Subject</b>{piece("act", "ACT NOW")}: your coverage {piece("today", "stops today")}</span>'
     ln, lp = _get(marks, 'link', 'r')
-    link = f'<span class="w5-link{_t(ln)}">{_lab("maplevalleyhealth.org/confirm", ln)}{_bd(ln, lp)}</span>'
+    link = f'<span class="w5-link{_t(ln)}">{_lab("maplevalleyhealth.example.com/confirm", ln)}{_bd(ln, lp)}</span>'
     body = (f'<span class="w5-l">Your coverage {piece("today2", "stops today")} unless you {piece("act2", "act now")}.</span>'
             f'<span class="w5-l">Confirm your account {piece("hour", "within 1 hour")}: {link}</span>'
             f'<span class="w5-l">Or call us now at {piece("phone", "304-555-0199")} to keep your coverage.</span>')
@@ -172,7 +172,7 @@ def mail5_message(targets=(), status=False, reported=False, warn=False):
     names = {'act': 'ACT NOW in the subject', 'today': 'stops today in the subject', 'today2': 'stops today in the message', 'act2': 'act now in the message',
              'hour': 'within 1 hour', 'from': 'the From line', 'link': 'the blue link', 'phone': 'the phone number in the message', 'report': 'the Report button'}
     label = ('Drawing: Practice Mail with one message open. From: Maple Valley Health Plan, mvhp-memberhelp@example.com. Subject: ACT NOW: your coverage stops today. '
-             'The message says: Your coverage stops today unless you act now. Confirm your account within 1 hour: maplevalleyhealth.org/confirm. '
+             'The message says: Your coverage stops today unless you act now. Confirm your account within 1 hour: maplevalleyhealth.example.com/confirm. '
              'Or call us now at 304-555-0199 to keep your coverage. A Report this message button is at the bottom.'
              + (f' At the bottom left, Edge shows the real address of the link: {LINK_DEST}.' if status else '')
              + (' The button now says Reported.' if reported else '') + (' A note says the practice link did not open.' if warn else '')

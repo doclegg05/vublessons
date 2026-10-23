@@ -71,7 +71,7 @@ var KEY='practice-mail:v1',OK=/^[^\s@,;]+@example\.com$/i;
 var WEEK5=/(?:^|[?&#])inbox=week-5(?:&|$)/.test(location.search+location.hash); // the link carries it twice, in ? and #, so a redirect that drops one keeps the other
 var inbox=WEEK5?[
  {week5:true,from:'Maple Valley Health Plan',address:'mvhp-memberhelp@example.com',subject:'ACT NOW: your coverage stops today',
-  linkText:'maplevalleyhealth.org/confirm',dest:'https:'+'//maple-valley-confirm.example.net/login',phone:'304-555-0199'}
+  linkText:'maplevalleyhealth.example.com/confirm',dest:'https:'+'//maple-valley-confirm.example.net/login',phone:'304-555-0199'}
 ]:[
  {from:'Library newsletter',subject:'October events at the library',body:'Computer help night is Thursday at 6 p.m. in the learning room.'},
  {from:'Volunteer desk',subject:'Thank you for helping last week',body:'Thank you. Your help made the sign-in line short.'},
