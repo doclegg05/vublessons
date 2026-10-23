@@ -140,7 +140,8 @@ test('Week 6 plan, syllabus and instructor guide describe the instructor-led age
  expect(plan).not.toMatch(/approved AI tool/);
  const syllabus=text(read(`${course}/syllabus.html`));
  expect(syllabus).toContain('IC3 Digital Literacy GS6 Level 2 + AI Agent and SaaS Basics');
- expect(syllabus).toContain('Spec, change review and test log.');
+ // 2026-10-23: Week 6 now ends with a course review and the post-test, so the syllabus evidence line changed.
+ expect(syllabus).toContain('Bug report, course review and post-test.');
  expect(syllabus).toContain('In the final week the instructor demonstrates an AI coding agent; learners write the request, review the change and test it, with no account or AI access of their own.');
  expect(syllabus).not.toMatch(/approved AI tool|Web App Building|Prototype and test log/);
  const guide=text(read(`${course}/instructor-guide.html`));
