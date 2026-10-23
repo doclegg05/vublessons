@@ -16,7 +16,8 @@ const silly=['Count the page’s colors','Delete their document','This is bad.',
 // 2026-10-12: Week 3 is the guided build (scripts/dl2/mission-control/week3.py); it no longer reads its agenda, outcomes or
 // quick card from curriculum.json. Its checks are in tests/content/dl2-week3-guided.spec.js.
 // 2026-10-19: Week 4 is the guided build too (week4.py); its checks are in tests/content/dl2-week4-guided.spec.js.
-for(const n of [2,5,6]){
+// 2026-10-23: Week 5 is the guided build too (week5.py); its checks are in tests/content/dl2-week5-guided.spec.js.
+for(const n of [2,6]){
  const w=weeks[n-1],dir=`courses/digital-literacy-2/weeks/week-0${n}`;
  const plan=()=>text(read(`${dir}/lesson-plan.html`)),worksheet=()=>text(read(`${dir}/worksheet.html`));
  const actions=()=>w.agenda.map(a=>a[2]).join(' ');
