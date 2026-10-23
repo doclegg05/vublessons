@@ -9,7 +9,12 @@ import re
 
 import ui
 import ui_mail
+import ui_week5
+import ui_week6
 from opening import media_url
+
+# Drawing modules, searched in order. Each guided week after Week 4 keeps its new drawings in its own module.
+DRAWINGS = (ui, ui_mail, ui_week5, ui_week6)
 
 BASE = '/courses/digital-literacy-2'
 
@@ -59,7 +64,7 @@ def drawing(spec):
     if not spec:
         return ''
     name, kwargs = spec
-    fn = getattr(ui, name, None) or getattr(ui_mail, name, None)
+    fn = next((getattr(m, name) for m in DRAWINGS if hasattr(m, name)), None)
     if fn is None:
         return f'<div class="ui ui-missing" role="img" aria-label="Drawing not available">{e(name)}</div>'
     accepted = inspect.signature(fn).parameters
