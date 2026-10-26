@@ -22,8 +22,8 @@ _RESOURCES = (
     ('Practice Workbook Workshop', 'Learning', 'Fictional guided practice with tables, formulas and charts.'),
 )
 _URL = {1: 'resource-finder', 2: 'resource-finder-agent', 3: 'resource-finder-agent-fixed'}
-_TAB = {1: 'Fictional community resource finder', 2: 'Fictional community resource finder · version 2 (agent result)',
-        3: 'Fictional community resource finder · version 3 (after the repair)'}
+_TAB = {1: 'Version 1 · Fictional resource finder', 2: 'Version 2 · Fictional resource finder (agent result)',
+        3: 'Version 3 · Fictional resource finder (after the repair)'}
 
 # The exact lines the pages differ in (see the three activity pages). Each pair is (before, after).
 CODE = {
@@ -73,7 +73,7 @@ def finder_page(version=1, query='', targets=(), focus='', zoom=False):
             3: '<div class="f-ver">Version 3. The agent repaired the capital-letter search. Retest it before you trust it.</div>'}[version]
     link_cls = ' f-focus' if focus == 'link' else ''
     page = (f'<div class="f-pg{" f-zoom" if zoom else ""}">'
-            f'<div class="f-link{link_cls}">Return to VUB week 6 (when hosted)</div>'
+            f'<div class="f-link{link_cls}">Back to the Week 6 lesson</div>'
             '<div class="f-h">Community resource finder</div>'
             '<div class="f-lab">Search fictional resources</div>'
             + box('search', 'f-in', typed, 'ir')

@@ -215,8 +215,9 @@ def build_week(n, w, target, letterhead):
         schedule.append((elapsed, 120, 'Wrap-up: check, I can, take it home', f'{wfirst}–{len(slides)}'))
         assert 120 - elapsed == 12, elapsed  # wrap-up: evidence check, I can, take it home
     else:
-        schedule.append((elapsed, elapsed + 12, 'Wrap-up: check, I can', f'{wfirst}–{len(slides)}'))
-        elapsed += 12
+        wrap = w.get('wrap_minutes', 12)  # Week 6's wrap-up is three slides; its spare minutes go to Part 4
+        schedule.append((elapsed, elapsed + wrap, 'Wrap-up: check, I can', f'{wfirst}–{len(slides)}'))
+        elapsed += wrap
         if review:
             starts.append(len(slides))
             rfirst = len(slides) + 1

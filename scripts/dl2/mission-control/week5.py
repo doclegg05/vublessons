@@ -27,7 +27,7 @@ APPS = {
     'explorer': 'File Explorer',
 }
 
-COURSE_TITLE = 'Protect your work and show your skills'  # the catalog title (courses.json) for the course path drawing
+COURSE_TITLE = 'Keep your accounts and messages safe'  # the catalog title (courses.json) for the course path drawing
 SIGNUP_LINK = 'Open the practice sign-up page'
 MAIL_LINK = 'Open Practice Mail'
 SIGNUP_URL = '/courses/digital-literacy-2/activities/practice-signup.html'
@@ -151,7 +151,7 @@ PART1 = dict(
                       'The same goes for charts: add [labels] or [patterns] to the bars, so the meaning does not depend on color alone.'],
               notes='Ask: has anyone had trouble reading something because of its colors? About one man in twelve cannot tell red from green. A printed copy loses color too. Tonight we color a sheet, then fix it. The same fix works on charts.'),
     watch=[dict(title='Watch: instructions that do not rely on color', start=65.68, end=78.88, look='the idea that meaning should not depend on color alone.',
-                notes='Plays 1:05 to 1:19 of the Week 5 video and stops on its own. It ends before the Pause and choose prompt.')],
+                notes='Plays 1:06 to 1:19 of the Week 5 video and stops on its own. It ends before the Pause and choose prompt.')],
     steps=[
         dict(kind='map', **P1_MAP),
         step('Type the headings', ['Click cell [A1]. Type «Name» and press {Tab}.', 'Type «Done?» and press {Enter}.'],
@@ -166,24 +166,24 @@ PART1 = dict(
              'a heading row and four names, with nothing in column B yet.', sheet(BASE, active='A6', targets=['A1', 'A5']),
              notes='Everyone should have the same sheet before the colors start.'),
         step('Select the two done cells', ['Click cell [B2]. Hold the left mouse button down and drag to [B3]. Let go.'],
-             '[B2] and [B3] shaded gray. They sit beside Ana and Ben.', sheet(BASE, selected=['B2', 'B3'], active='B2', targets=['B2', 'B3']),
+             'a green border around [B2] and [B3], beside Ana and Ben. [B2] stays white.', sheet(BASE, selected=['B2', 'B3'], active='B2', targets=['B2', 'B3']),
              stuck=('Lost the shading?', 'Click anywhere else and try the drag again, slowly.'),
              notes='Ana and Ben are done, so their cells will be green. Dragging was practiced in Weeks 3 and 4.'),
         step('Open the Fill Color list', ['On the [Home] tab, click the small arrow next to [Fill Color].'],
-             'a list of colors under the button, with the heading [Standard Colors].', sheet(BASE, selected=['B2', 'B3'], tab='Home', targets=['Fill Color'], pick='green'),
+             'a list of colors under the button. The big block at the top is [Theme Colors]. Below it is one row named [Standard Colors].', sheet(BASE, selected=['B2', 'B3'], tab='Home', targets=['Fill Color'], pick='green'),
              stuck=('Painted the cells yellow right away?', 'You clicked the bucket, not the arrow. Press {Ctrl} and {Z}, then click the small arrow beside the bucket.'),
              notes='The bucket paints the last color used. The small arrow beside it opens the list.'),
-        step('Choose green', ['In [Standard Colors], click the green square: the sixth from the left.'],
+        step('Choose green', ['Look at the single row under [Standard Colors], below the big block. Click its green square: the sixth from the left.'],
              '[B2] and [B3] turn green.', sheet(BASE, fills=GREEN, selected=['B2', 'B3'], active='B2', targets=['B2', 'B3']),
-             stuck=('Picked the wrong color?', 'Press {Ctrl} and {Z}, then open the list and choose the sixth square again.'),
+             stuck=('Picked the wrong color?', 'Press {Ctrl} and {Z}, then open the list and choose the sixth square in the [Standard Colors] row, not the big block above it.'),
              notes='Green is the sixth square, between light green and light blue. Name the color aloud as you click it.'),
         step('Select the two not-done cells', ['Click cell [B4]. Hold the left mouse button down and drag to [B5]. Let go.'],
-             '[B4] and [B5] shaded gray. They sit beside Cal and Dee.', sheet(BASE, fills=GREEN, selected=['B4', 'B5'], active='B4', targets=['B4', 'B5']),
+             'a green border around [B4] and [B5], beside Cal and Dee. [B4] stays white.', sheet(BASE, fills=GREEN, selected=['B4', 'B5'], active='B4', targets=['B4', 'B5']),
              notes='Cal and Dee are not done yet, so their cells will be red.'),
         step('Open the Fill Color list again', ['Click the small arrow next to [Fill Color].'],
              'the list of colors.', sheet(BASE, fills=GREEN, selected=['B4', 'B5'], tab='Home', targets=['Fill Color'], pick='red'),
              notes='Same list as before.'),
-        step('Choose red', ['In [Standard Colors], click the red square: the second from the left.'],
+        step('Choose red', ['In the single [Standard Colors] row, click the red square: the second from the left.'],
              '[B4] and [B5] turn red.', sheet(BASE, fills=BOTH, selected=['B4', 'B5'], active='B4', targets=['B4', 'B5']),
              stuck=('The cells are dark red?', 'You picked the first square. Press {Ctrl} and {Z}, then choose the second.'),
              notes='Red is the second square. Dark red is the first.'),
@@ -329,9 +329,9 @@ PART3 = dict(
                       'A [link] can say one thing and go somewhere else. Point at it, without clicking, and read the real address.',
                       'Check through a [route you already trust]: a number on a letter or card you already have, or a website you saved. Never the message’s own link or number.'],
               notes='Ask: has anyone had a message or call that said hurry? Pressure is the clue, not proof. The same habit works for a phone call: hang up, then call the number you already trust.'),
-    watch=[dict(title='Watch: recognize the pressure', start=89.069, end=131.719, look='the urgent words, and why urgency is a reason to slow down.',
+    watch=[dict(title='Watch: recognize the pressure', start=89.069, end=132.0, look='the urgent words, and why urgency is a reason to slow down.',
                 notes='Plays 1:29 to 2:12 of the Week 5 video and stops on its own.'),
-           dict(title='Watch: check a safer way', start=133.413, end=165.553, look='checking through a website or number you found yourself, not the message’s own.',
+           dict(title='Watch: check a safer way', start=133.413, end=165.9, look='checking through a website or number you found yourself, not the message’s own.',
                 notes='Plays 2:13 to 2:46 and stops on its own, before the Pause and choose prompt.')],
     steps=[
         step('Find Part 3 on your worksheet', ['Click the [Week 5 · Worksheet] tab at the top of Edge.', 'Roll the mouse wheel toward you until you see [Part 3].'],
@@ -352,7 +352,7 @@ PART3 = dict(
              notes='Capital letters and a deadline: both are pressure.'),
         step('Find the rush words in the message', ['Read the message. Find [act now], [stops today] and [within 1 hour].'],
              'three rush phrases in the message.', ('mail5_message', dict(targets=['today2', 'act2', 'hour'])), app='mail',
-             stuck=('Cannot find them?', 'They are in the second and third lines of the message.'),
+             stuck=('Cannot find them?', 'They are in the first two lines under the Subject: act now and stops today in the first, within 1 hour in the second.'),
              notes='A real company gives you time and a way to ask questions. Pressure is the clue. It is not proof by itself.'),
         step('Read the From line', ['Read the [From] line.'],
              'the name «Maple Valley Health Plan». Anyone can type that name, so it proves nothing by itself.', ('mail5_message', dict(targets=['from'])), app='mail',

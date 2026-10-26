@@ -175,12 +175,14 @@ test('Every review question names its program, and the answer guide explains eac
 
 test('The post-test is the last segment: opened together, then everyone answers alone, then take it home and mission complete',()=>{
  const all=slides().map(title);
- const iReview=all.indexOf('Week 5: protect your work, show your skills.');
+ const iReview=all.indexOf('Week 5: keep your accounts and messages safe.');
  const iOpen=all.findIndex((t,i)=>i>iReview&&/^Now working in: Microsoft Edge$/.test(t));
  expect(iOpen).toBeGreaterThan(iReview+3);
  expect(all.slice(iOpen)).toEqual(['Now working in: Microsoft Edge','Go to the course home','Open the post-test','Click the name box','Type your name','Start the post-test','Now you answer on your own.','When you finish.','Take it home.','Mission complete.']);
  const t=text(slides().map(s=>s.shown).join(' '));
- for(const phrase of ['No help with answers','raise your hand','Submit my test','Submit to instructor','Download graded PDF'])expect(t).toContain(phrase);
+ // 2026-10-26: the result page sends the copy to Britt by itself, so the slide says to wait for the sent line, then follow the page's flash drive steps.
+ for(const phrase of ['No help with answers','raise your hand','Submit my test','Yes, submit','Your results were submitted','flash drive'])expect(t).toContain(phrase);
+ expect(t).not.toContain('Click Submit to instructor');
  // The words on the slides are the words the post-test pages use. The clip titled with the video's own chapter name (happy path) is Britt's wording.
  const home=read('courses/digital-literacy-2/index.html'),testJs=read('courses/digital-literacy-2/os/test.js');
  expect(home).toContain('href="/courses/digital-literacy-2/assessments/post-test.html">Take the post-test</a>');
@@ -257,7 +259,7 @@ test('The 120-minute plan adds up, and the post-test is the last 20 minutes',()=
  const names=rows.map(r=>r[4]);
  for(const p of ['Part 1 · Microsoft Edge','Part 2 · Microsoft Edge','Part 3 · Microsoft Edge','Part 4 · Microsoft Edge','Wrap-up','Course review','Post-test'])expect(names.join('|')).toContain(p);
  expect(rows.at(-1)[4]).toMatch(/^Post-test/);expect(Number(rows.at(-1)[3])).toBe(20);
- expect(Number(rows.find(r=>/^Wrap-up/.test(r[4]))[3])).toBe(12);
+ expect(Number(rows.find(r=>/^Wrap-up/.test(r[4]))[3])).toBe(6); // 2026-10-26: three wrap-up slides; the other 6 minutes went to Part 4 (24 slides)
  expect(Number(rows.find(r=>/^Course review/.test(r[4]))[3])).toBe(20);
  expect(plan).toContain('<meta name="robots" content="noindex">');
 });

@@ -59,9 +59,9 @@ test('The three practice pages: version 2 keeps its planted defect and version 3
  expect(count(v2(),'trim()')).toBe(1);
  const repair=changed(v2(),v3());
  expect(repair).toEqual([['  const query=search.value.trim();','  const query=search.value.trim().toLowerCase();']]);
- expect(v1()).toContain('<title>Fictional community resource finder</title>');
- expect(v2()).toContain('<title>Fictional community resource finder · version 2 (agent result)</title>');
- expect(v3()).toContain('<title>Fictional community resource finder · version 3 (after the repair)</title>');
+ expect(v1()).toContain('<title>Version 1 · Fictional resource finder</title>'); // 2026-10-26: titles start with the version so Edge's short tabs tell the three apart
+ expect(v2()).toContain('<title>Version 2 · Fictional resource finder (agent result)</title>');
+ expect(v3()).toContain('<title>Version 3 · Fictional resource finder (after the repair)</title>');
  const about='A real service would need verified resources and a plan for updates.</p>';
  expect(v2()).toContain(about+'<p><strong>Version 2.</strong> Changed by an AI coding agent. Review and test it before you trust it.</p>');
  expect(v3()).toContain(about+'<p><strong>Version 3.</strong> The agent repaired the capital-letter search. Retest it before you trust it.</p>');
