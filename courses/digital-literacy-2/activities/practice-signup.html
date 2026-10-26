@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Riverbend Reading Club · Practice sign-up</title><style>
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:#f5f7fa;color:#16243a;font:20px/1.6 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+.notice{margin:0;padding:.6rem 1rem;background:#ffc400;color:#111;font-weight:700;text-align:center}
+main{max-width:760px;margin:0 auto;padding:1.5rem 1rem 3rem}
+.brand{margin:0;font-size:1.1rem;font-weight:700;color:#0b3d4a;letter-spacing:.02em}
+h1,h2{margin:.3rem 0 .6rem;line-height:1.15;color:#111}
+h1{font-size:2.3rem}
+h2{font-size:1.8rem}
+.row{display:flex;align-items:center;gap:1rem;margin:.6rem 0}
+.row label{flex:none;width:6.5rem;font-weight:700}
+input{flex:1;min-width:0;font:inherit;padding:.5rem .7rem;border:2px solid #5a6a7a;border-radius:.4rem;background:#fff;color:#111}
+input:focus-visible,button:focus-visible{outline:3px solid #975f00;outline-offset:3px}
+button{font:inherit;font-weight:700;padding:.7rem 1.6rem;border:0;border-radius:.4rem;background:#1b365d;color:#fff;cursor:pointer;margin:.4rem .6rem .4rem 0}
+button:hover{background:#2c4a7c}
+button.plain{background:#fff;color:#1b365d;border:2px solid #1b365d}
+.hint{margin:.2rem 0 .8rem;color:#3a4763;font-size:1rem}
+.msg{min-height:1.6em;margin:.8rem 0 0;font-weight:700}
+.msg.bad{color:#b3261e}
+.msg.good{color:#1e6b34}
+.keep{margin:0 0 1rem;padding:.8rem 1rem;border-left:6px solid #1e6b34;background:#e8f4ec}
+.phone{width:15rem;margin:1rem 0;padding:1.4rem .9rem 1.8rem;border:4px solid #222;border-radius:1.6rem;background:#f1f1f1}
+.phone .bar{display:block;width:4rem;height:.5rem;margin:0 auto 1rem;border-radius:1rem;background:#222}
+.phone .bubble{padding:.7rem .9rem;border-radius:.9rem;background:#fff;border:2px solid #c6d0e1;font-size:1.1rem;line-height:1.4}
+.phone .from{display:block;font-size:.95rem;font-weight:700;color:#3a4763}
+.phone .num{display:block;font-size:1.9rem;font-weight:800;letter-spacing:.12em;color:#111}
+.done-box{margin:1rem 0;padding:1rem 1.2rem;border:3px solid #1e6b34;border-radius:.6rem;background:#fff}
+.done-box h2{margin:0 0 .3rem;color:#1e6b34}
+</style></head><body>
+<p class="notice">Practice sign-up · fictional · nothing here is saved or sent anywhere</p>
+<main id="main">
+<p class="brand">Riverbend Reading Club</p>
+
+<section id="s-account" aria-labelledby="h-account">
+<h1 id="h-account">Create your account</h1>
+<div class="row"><label for="email">Email</label><input id="email" type="text" inputmode="email" autocomplete="off" spellcheck="false"></div>
+<div class="row"><label for="pw">Password</label><input id="pw" type="text" autocomplete="off" spellcheck="false"></div>
+<p class="hint">Practice page: your password shows as you type, so you can check it. A real site shows dots.</p>
+<button type="button" id="create">Create account</button>
+<p id="msg-account" class="msg" role="status"></p>
+</section>
+
+<section id="s-step" aria-labelledby="h-step" hidden>
+<p class="keep" id="keep">Password accepted. It is long. Use it on this one site only. A password used in two places can open both.</p>
+<h2 id="h-step" tabindex="-1">Turn on two-step verification</h2>
+<p>A second lock: after your password, the site sends a code to your phone.</p>
+<button type="button" id="text-code">Text me a code</button><button type="button" id="skip" class="plain">Skip for now</button>
+<p id="msg-step" class="msg" role="status"></p>
+</section>
+
+<section id="s-code" aria-labelledby="h-code" hidden>
+<h2 id="h-code" tabindex="-1">Check your phone</h2>
+<div class="phone" role="img" aria-label="Drawing of a phone. A text message from Riverbend Reading Club says: your code is 4 8 2 9 1 3.">
+<span class="bar"></span><div class="bubble"><span class="from">Riverbend Reading Club</span>Your code is<span class="num">482913</span>Do not share it.</div></div>
+<div class="row"><label for="code">Code</label><input id="code" type="text" inputmode="numeric" autocomplete="off" maxlength="12"></div>
+<button type="button" id="verify">Verify</button>
+<p id="msg-code" class="msg" role="status"></p>
+</section>
+
+<section id="s-done" aria-labelledby="h-done" hidden>
+<div class="done-box"><h2 id="h-done" tabindex="-1">Two-step verification is on</h2>
+<p>Your practice account has a long password used nowhere else, and a code sent to your phone. Leave this tab open and go back to your worksheet.</p></div>
+</section>
+</main>
+<script>
+(function(){
+'use strict';
+// Practice only: this page keeps nothing. The password is never stored, sent or put in the address.
+var CODE='482913',MIN=12,OK=/^[^\s@,;]+@example\.com$/i;
+function $(id){return document.getElementById(id);}
+function say(id,text,kind){var m=$(id);m.textContent=text;m.className='msg'+(kind?' '+kind:'');}
+function show(id){['s-account','s-step','s-code','s-done'].forEach(function(s){$(s).hidden=s!==id;});var h=$(id).querySelector('[tabindex="-1"]');if(h)h.focus();}
+$('create').addEventListener('click',function(){
+ var email=$('email').value.trim(),pw=$('pw').value;
+ if(!OK.test(email)){say('msg-account','Use a made-up email that ends in @example.com, like learner@example.com.','bad');$('email').focus();return;}
+ if(pw.length<MIN){say('msg-account','That password is too short. It has '+pw.length+' characters. Use at least '+MIN+': four words in a row works well.','bad');$('pw').focus();return;}
+ $('pw').value='';
+ say('msg-account','','');
+ show('s-step');
+});
+$('text-code').addEventListener('click',function(){say('msg-step','','');show('s-code');});
+$('skip').addEventListener('click',function(){say('msg-step','You skipped. Your account has only one lock. Choose Text me a code to add the second.','bad');});
+$('verify').addEventListener('click',function(){
+ var v=$('code').value.replace(/\s+/g,'');
+ if(v!==CODE){say('msg-code','That code does not match. Look at the phone: the code is six digits.','bad');$('code').focus();return;}
+ $('code').value='';
+ show('s-done');
+});
+window.addEventListener('pagehide',function(){$('pw').value='';$('code').value='';});
+})();
+</script>
+<script src="/shared/text-size.js"></script>
+</body></html>

@@ -82,6 +82,7 @@ test('Week 1 prep list is specific to week 1',()=>{
  const plain=text(plan);
  expect(plain).not.toMatch(/For week 6/);expect(plain).not.toMatch(/spreadsheet app/);
  for(const item of ['headset','supplied flyer','Start fresh on this computer'])expect(plain).toContain(item);
- expect(text(read('courses/digital-literacy-2/weeks/week-06/lesson-plan.html'))).toMatch(/plain-text editor/);
+ // 2026-10-23: Week 6 is the guided build; hand repair in a plain-text editor is cut. Its prep names the three practice pages instead.
+ expect(text(read('courses/digital-literacy-2/weeks/week-06/lesson-plan.html'))).toMatch(/resource-finder-agent-fixed\.html/);
  expect(w6.prep===undefined||typeof w6.prep==='string').toBe(true);
 });

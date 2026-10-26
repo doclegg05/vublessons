@@ -39,6 +39,104 @@ pronunciation; do not change thresholds or mechanically stretch speech to pass.
 The user approved publication on September 28, 2026. See `NARRATION-REFRESH.md`
 for validation evidence and the retained pacing observations.
 
+## Week 3 guided build (2026-10-12)
+
+Britt found Week 3 unguided: terse slides, a run-on worksheet, the program only named in a small corner tag, and no
+learner-facing objectives. Definition of done: a beginner can go **slide by slide** and finish every task; anything
+critical left out is a failure. Week 3 is now its own guided build. Weeks 2 and 4–6 are unchanged (byte-identical output).
+
+- **Source:** `scripts/dl2/mission-control/week3.py` (content), `guided.py` (deck, worksheet, answer guide, lesson plan,
+  run sheet, notes), `ui.py` (original HTML/CSS drawings of the Word, Excel, PowerPoint, Edge and File Explorer screens;
+  not screenshots), `os/guided.css` and `os/ui-drawings.css` (loaded only by Week 3). `build.py` sends any week with
+  `guided=True` to `guided.build_week` and still writes that week's practice library unchanged.
+- **Class flow (Britt's choice):** the instructor projects; everyone does each step together. One or two actions per
+  slide, each with **You should see**. The worksheet repeats every step in the same order with a check box (Week 1
+  format), plus If you get stuck and Check yourself per part.
+- **Scope (Britt's choice): only what the post-test measures** — items 9 to 12: real heading styles, PDF, a SUM total
+  that updates, a licensed photo cropped and credited. Britt kept numbered steps and a PowerPoint theme. Cut: Track
+  Changes, link and copy/paste/undo practice, chart, alt text, the three-slide deck (now a one-slide flyer), video
+  trim/split, CSV. No break.
+- **Order:** goals → how tonight works → open the worksheet in Edge → Part 1 Word headings → Part 2 the PDF (still in
+  Word) → Part 3 Excel → Part 4 PowerPoint → evidence check in File Explorer, I can, take it home. Each part opens with
+  "Now working in: <program>", a why slide, a Watch clip, a "Find your way around" map, the steps and one check.
+  Every slide's corner banner names the program, with its color and letter badge.
+- **Video:** the full opening video no longer plays. Each Watch slide plays only its clip of `week-03.mp4` through a
+  `#t=start,end` fragment (stops by itself, captions on). No clip covers a cut topic, and the formula clip stops before
+  the narrator says 28 so learners predict it themselves. Times are in `week3.py`.
+- **Files learners make:** `Documents/Resource pack/` with Computer help handout (.docx and .pdf), Supply list (.xlsx)
+  and Flyer (.pptx). The supply list is typed (Paper 12, Folders 8, Pens 5, matching the video), not downloaded, so there
+  is no Protected View or CSV save trap. The practice photo downloads from the worksheet (`download` attribute).
+- **Click paths** were checked against Microsoft support pages for Microsoft 365 on Windows 10 (signed out, AutoSave
+  off): Blank Presentation is capitalised; Heading 1 turns dark blue; Save As › Browse opens the classic dialog;
+  the Designer panel can open after a picture insert; Crop is a split button. Not checked on a real lab PC.
+- **Tests:** `tests/content/dl2-week3-guided.spec.js` (goals match items 9–12, every step slide names its program and
+  has 1–2 actions plus You should see, worksheet steps match the deck one for one, no cut topics, 120-minute plan).
+  Week 3 left the curriculum.json-based `dl2-weeks-tsdr.spec.js`; `dl2-mission-weeks` and `dl2-opening-media` know its
+  71 slides and clips.
+- **Not changed:** the pre/post tests (still aligned: items 9–12), the video file, the practice library, and the
+  catalog/course-home summary ("a handout, a small workbook, and a short presentation"; the presentation is now a
+  one-slide flyer). The syllabus outcome line for Week 3 was updated to match.
+
+## Week 4 guided build (2026-10-19, revised 2026-10-20)
+
+Week 4 uses the same guided format as Week 3. Weeks 2, 5 and 6 are unchanged (byte-identical output). Week 3's output is also byte-identical: `guided.py` was generalized, and Week 3's strings moved into `week3.py` data.
+
+- **Source:** `scripts/dl2/mission-control/week4.py` (content), `ui_mail.py` (drawings of Practice Mail, the taskbar, Word comments, the worksheet link and the offer page), `os/ui-week4.css` (loaded only by Week 4 through the week dict's `css` list). `guided.py` reads everything week-specific from the week dict: video name, minutes, hero line, goals footer, glossary (`words`), quick card, plan paragraph, jump labels, and per-part `goals`, `open_note`, `worksheet_extra` and list-valued `check`. A wrap-up can list `steps` and carry a `result` page.
+- **Scope (Britt's choices, same rule as Week 3):** only the five skills the tests measure (items 13 to 17): a request with a deadline, welcoming wording, what Bcc does, comments on one shared copy, and a charge that repeats. Cut: choosing a channel, the meeting mission, community posts, Cc and Reply all as practice. No break.
+- **Revision 2026-10-20 (Britt):** the instructions needed more detail, and one student has no email account. Gmail was replaced by Practice Mail (below), the parts were split into smaller steps (87 slides, nearly all one action each), and the worksheet gained a glossary and a My result page. The lesson text never mentions skill level; a test fails if it does.
+- **Parts:** Before we start (find the taskbar, open Edge, reach the worksheet); 1 Practice Mail, the request (items 13 and 15); 2 Practice Mail, To and Bcc in the same message, then Send and read Who sees what (item 14); 3 Word, comment then reply then resolve, saved in Documents (item 16); 4 Edge, the practice offer and four facts (item 17). Wrap-up: fill in the My result page, then the instructor check. 120 minutes (8, 5, 30, 17, 30, 18, 12).
+- **My result page:** the last page of the worksheet, eight boxes: subject, To, Bcc, what Bcc does, the comment, the reply, the four offer facts, one habit. It is the written evidence for the instructor check, and it survives printing.
+- **Practice Mail:** `courses/digital-literacy-2/activities/practice-mail.html`. No account, no network calls. It accepts only addresses ending in `example.com`, so nothing can be delivered. Compose, To and Bcc chips, Cc and Bcc links, drafts on close, Send, and a Who sees what table that shows each Bcc person seeing only the To line. State lives in `sessionStorage`, so closing the tab clears it. Tested by driving it in the in-app browser, not by Playwright.
+- **Word comments:** the click path follows Microsoft's modern-comments page: Review, New Comment, Post comment, Reply, three dots, Resolve thread. A lab copy with classic comments shows a Resolve button instead; the stuck notes say so. Not checked on a lab PC. Learners play both roles on one file, because the lab has no shared location.
+- **Offer page:** `courses/digital-literacy-2/activities/free-trial-offer.html` is a fictional MapleStream page (Free for 7 days, then $12 each month, first charge on day 8, cancel at Account > Billing > Cancel plan). No form, no network calls.
+- **Video:** the full opening video no longer plays. Five clips of `week-04.mp4` play through `#t=start,end`: 1:25 to 2:10 (request), 2:12 to 2:32 (Bcc, stops before Reply all), 2:59 to 3:15 and 3:48 to 4:21 (shared copy, comment), 6:01 to 6:27 (offer). The last clip includes one aside about small in-app purchases. The video's own demo is called Practice Mail, so the name matches.
+- **Tests:** `tests/content/dl2-week4-guided.spec.js` (goals match items 13 to 17, program named on every slide, one or two actions per step, worksheet matches deck, no cut topics, every address is example.com and no Gmail or password wording, Practice Mail and the offer page make no network calls, no skill-level wording anywhere, the My result page, clips start and end on caption cues and skip cut topics, 120-minute plan). `dl2-mission-weeks.spec.js` and `dl2-opening-media.spec.js` know Week 4's 87 slides and five clips; `dl2-weeks-tsdr.spec.js` no longer covers Week 4.
+- **Not changed:** the pre and post tests, the video file, the catalog and course-home summary ("Choose the right channel, give useful feedback, and make safe online choices"), and the syllabus table row. The syllabus outcome line was updated.
+- **Practice library rewritten in plain words (2026-10-20):** the optional 23-slide library (`practice.html`, source `scripts/dl2/mission-control/practice/week-04.html`) no longer uses words such as channel, synchronous, MFA, recipient, credentials or simulation. The same wording is in the Week 4 slide records of `scripts/dl2/curriculum.json`, because `dl2-review-fixes.spec.js` checks the library against them. Its topics are unchanged (it still covers channels, meetings, community posts and payments), the video chapter labels in it are reworded but the video itself is not, and the email scene keeps the controls `dl2-slide-scenes.spec.js` uses. The old Week 4 `lab`, `agenda` and `outcomes` records in `curriculum.json` are no longer rendered anywhere; the guided worksheet replaced them.
+- **PR #38** (`claude/week-4-alignment`: one cast, pause cards, a new video) is a different Week 4 rebuild and was left alone. Merging it after this one will conflict on the Week 4 pages. Decide whether to close it.
+
+## Week 5 guided build (2026-10-23)
+
+Week 5 now uses the guided format from Weeks 3 and 4. Britt projects each step and the class does it together. It teaches only the three Week 5 post-test skills (items.js 18, 19 and 20). It no longer covers comfort setup, camera and microphone permissions, encryption and read-only files, unknown USB drives, catfishing, the five-task skills challenge or the post-test, which moved to Week 6. There is no break and no timer.
+
+- **Source.** `week5.py` (content), `ui_week5.py` (drawings) and `os/ui-week5.css`. Week 5 also loads `os/ui-week4.css` for the Practice Mail drawings. It needed no change to `guided.py`.
+- **Part 1, Microsoft Excel (item 18).** Learners type a four-name sign-in sheet, color the Done cells green and red with Fill Color, add the words Complete and Not yet, and save Sign-in sheet in Documents. The why slide and the check question carry the same fix to charts with labels or patterns, because the post-test asks about a chart. Clip 1:06 to 1:19.
+- **Part 2, a practice sign-up page in Edge (item 19).** `activities/practice-signup.html` is a fictional Riverbend Reading Club page. It refuses the short password Maple9, accepts the practice passphrase «kettle orbit meadow quilt» with a reminder to use it on one site only, then turns on two-step verification with the fixed code 482913 shown on a drawn phone. It makes no network calls and keeps nothing. It shows the typed password as plain text so learners can check what they typed. No clip, because the video never covers passwords.
+- **Part 3, Practice Mail (item 20).** The worksheet opens `practice-mail.html?inbox=week-5#inbox=week-5`. That inbox holds one fictional Maple Valley Health Plan message with rush wording, a link that reads maplevalleyhealth.example.com/confirm but goes to maple-valley-confirm.example.net/login, and the number 304-555-0199. The worksheet prints "a letter you already have" with 304-555-0188. The link never navigates, and a Report button marks the message. Without the parameter, Practice Mail shows Week 4's inbox as before. The parameter sits in both the query and the hash because the local `serve` drops the query when it redirects `.html`. Netlify's behavior was not checked. Clips 1:29 to 2:12 and 2:13 to 2:46.
+- **Wrap-up.** A seven-box My result page that never asks for the passphrase, then Show your instructor, I can and Take it home.
+- **Plan.** 80 slides. 13 + 32 + 30 + 33 + 12 = 120 minutes.
+- **Tests.** `tests/content/dl2-week5-guided.spec.js`. Week 5 branches changed in `dl2-mission-weeks`, `dl2-weeks-tsdr` and `dl2-review-fixes`.
+- **Not checked on a lab PC.** Excel's Fill Color list (the steps name green as the sixth Standard Colors square and red as the second) and Edge's bottom-left address strip on hover.
+
+## Week 6 guided build (2026-10-23)
+
+Week 6 uses the guided format too. Everything happens in Microsoft Edge, and the class works together until the post-test. The AI agent's work is the three pre-built pages in `activities/`: `resource-finder.html` is version 1, `resource-finder-agent.html` version 2 and `resource-finder-agent-fixed.html` version 3. Nobody needs an AI account.
+
+- **Source.** `week6.py`, `ui_week6.py` and `os/ui-week6.css`. `ui.py` gained two badge letters for the review slides (settings S, outlook O). `guided.py` gained three optional keys, `review` and `post_test` on the week and `closing` on a part. A week without them renders exactly as before.
+- **Parts.** Part 1 tests version 1 with four searches (library, learning, zzz, LIBRARY) and writes each result in a test table. Part 2 types a four-line request and guesses the new results. Part 3 shows the change that was asked for (category search) and the one nobody asked for (the dropped lowercase step), searches version 2 and writes a bug report. Part 4 reruns every check on version 3, tabs through the controls and zooms in. It closes with one slide saying a practice page is not a real service and a sign-in picture is not security.
+- **Real results.** library finds 1 in every version. learning finds none in version 1 and 2 in versions 2 and 3. zzz finds none. LIBRARY finds 1 in versions 1 and 3 and none in version 2.
+- **Cut.** The website, web app and SaaS lecture, the HTML, CSS and JavaScript lecture, where data lives, secrets in browser code, the editable HTML download and hand repair, and the separate 8-point rubric. The My result page replaces the rubric, and the syllabus and instructor guide now say so.
+- **Course review.** After the wrap-up comes a recap slide for each of Weeks 1 to 5 and one question per post-test item, 20 in all, each naming its program. They are new scenarios. The spec fails if a question shares any four-word run with a pre-test or post-test stem or option. The worksheet repeats them with answer lines, and the answer guide gives each one's item, skill and reason.
+- **Post-test.** Five guided steps go from the worksheet's Course home link to Question 1 of 20. The next slide tells everyone to answer alone. Take it home and Mission complete come last.
+- **Plan.** 120 slides. 13 + 55 (16, 10, 17, 12) + 12 wrap-up + 20 review + 20 post-test = 120 minutes. Week 6 teaches no post-test item, so its goals say "practice only".
+- **Tests.** `tests/content/dl2-week6-guided.spec.js`. Week 6 branches changed in `dl2-mission-weeks`, `dl2-opening-media`, `dl2-weeks-tsdr`, `dl2-week1-tsdr`, `dl2-review-fixes` and both `dl2-week6-agent` specs, each with a dated comment.
+- **Still published.** `weeks/week-06/practice.html`, the old practice library, still builds and still teaches the cut topics. The new deck and worksheet do not link to it.
+
+## Week 5 and 6 readiness fixes (2026-10-26)
+
+A review before teaching found these, all fixed in the generators and rebuilt with `python3 scripts/dl2/mission-control/build.py`:
+
+- **Week 5.** Fill Color steps now point at the single Standard Colors row under the Theme Colors block. Selection steps say B2 (or B4) stays white. The rush-words tip names the first two lines. Clips 2 and 3 end at 132.0 and 165.9 (the old ends cut the last word; speech runs to 131.86 and 165.75). The sign-up page's last screen says to leave the tab open. The week title is now "Keep your accounts and messages safe" in `courses.json`, the course home, instructor guide, sources page, syllabus, deck drawings and the Week 6 review.
+- **Week 6.** The three finder pages are titled Version 1, 2 and 3 first, so Edge's short tabs tell them apart; search steps say "Click the Version N tab". The first Tab step says to click the empty space right of the top link (measured in Chromium: a click on the heading skips the link, a click near the bottom lands on the text-size control). The top link reads "Back to the Week 6 lesson". The post-test steps scroll to Take the post-test and warn off the gold pre-test button, add Yes, submit, and say the page sends results by itself (it does: `os/test.js` calls `sendResult()`). Clips 3 and 4 end at 5:03 and 6:36, before the category filter and "return to the saved working version". Clip 2 keeps Britt's range. Part 4 has 18 minutes and the wrap-up 6 (`wrap_minutes` in the week dict; default 12).
+- **Shared.** An empty Documents folder in the Save As drawing says "This folder is empty." (Weeks 3 and 4 decks changed only there.)
+- **Left as is.** `weeks/week-05/practice.html` and `week-06/practice.html` still build with the old content; nothing links to them. The take-home "Replay the video" link plays the full video.
+
+## Post-test moved to Week 6 (2026-10-23)
+
+The syllabus, the course home and its generator `learning.py`, `sources.html` and `courses.json` now put the post-test in Week 6, after the course review. The Week 5 and Week 6 topic lines and syllabus outcomes describe the guided lessons. Lesson titles did not change, so Week 5 is still "Protect your work and show your skills". `os/items.js` did not change. Its `W` map records the week that teaches each item, and items 18 to 20 still belong to Week 5.
+
+`scripts/dl2/syllabus.py` is stale. Nothing calls it and its output no longer matches `syllabus.html`, so the changed lines were edited in both by hand. `curriculum.json` and `author-content.py` still hold the old Week 5 and 6 text. They feed only the retired `build-pages.py`.
+
 ## Mission Control (Sep 2026)
 
 All six main presentations now use the Mission Control deck engine. Week 1 now opens with the pre-test and video; its teaching units are preserved. Weeks 2–6 each have four Tell/Show/Do/Review missions, a protected eight-minute break, and a 120-minute plan. The older detailed interactive simulations remain available in each week's `practice.html` library; they do not change main lesson progress. Existing video/transcript pages and media are unchanged.

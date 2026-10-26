@@ -41,7 +41,7 @@ test('DL2 spreadsheet shows referenced range and recalculates, export explains l
  const out=await open(page,3,17);await out.getByRole('button',{name:'CSV',exact:true}).click();await expect(out.locator('[data-export-copy]')).toContainText('formulas are not preserved');
 });
 test('DL2 collaboration model turns vague feedback into an actionable change',async({page})=>{
- const root=await open(page,4,12);await root.getByRole('button',{name:'Specific suggestion',exact:true}).click();await expect(root.locator('[data-comment]')).toContainText('After step 2');await root.getByRole('button',{name:'Writer responds',exact:true}).click();await expect(root.locator('[data-comment]')).toContainText('I added the contact number');
+ const root=await open(page,4,12);await root.getByRole('button',{name:'Specific suggestion',exact:true}).click();await expect(root.locator('[data-comment]')).toContainText('After step 2');await root.getByRole('button',{name:'The writer answers',exact:true}).click();await expect(root.locator('[data-comment]')).toContainText('I added the contact number');
  const meet=await open(page,4,14);await meet.getByRole('button',{name:'Raise hand',exact:true}).click();await expect(meet.locator('[role=status]')).toContainText('Wait for the host');await meet.getByRole('button',{name:'Unmute microphone',exact:true}).click();await expect(meet.locator('[data-mic-state]')).toContainText('on (model)');
 });
 test('DL2 safety scenarios explain independent verification and distinct protections',async({page})=>{

@@ -7,6 +7,7 @@ from pathlib import Path
 from content import WEEKS
 from visuals import visual
 from opening import video_slide, media_url
+from guided import build_week
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 BASE='/courses/digital-literacy-2'
@@ -23,10 +24,11 @@ def source_text(t):
  t=re.sub(r'[Ss]lide (\d+)',r'practice library exercise \1',t)
  t=t.replace('Print page 1 of your results or save it as a PDF, and write your score out of 20.','Submit your results to Britt, save the complete graded PDF, and write your score out of 20.')
  return t
-# Map all eight detailed task rows to the mission where they are taught.
-WEEKS[6]['missions'][1]['lab']=[2,3]
-WEEKS[6]['missions'][2]['lab']=[4,5,6]
-WEEKS[6]['missions'][3]['lab']=[7]
+# Map all eight detailed task rows to the mission where they are taught (old four-mission Week 6 only).
+if not WEEKS[6].get('guided'):
+ WEEKS[6]['missions'][1]['lab']=[2,3]
+ WEEKS[6]['missions'][2]['lab']=[4,5,6]
+ WEEKS[6]['missions'][3]['lab']=[7]
 def log_table(prefix):
  checks=[('New category','learning'),('Existing name','library'),('No match','zzz'),('Mixed case','LIBRARY, then Learning'),('Keyboard only','Tab through controls'),('Narrow screen','Zoom to 400%')]
  out='<div class="table-scroll" tabindex="0" role="region" aria-label="App test log"><table><thead><tr><th>Check / input</th><th>Expected</th><th>Actual</th><th>Pass or fail</th></tr></thead><tbody>'
@@ -67,9 +69,30 @@ def activity_page(library,exercise,mid,n):
   page,found=re.subn(pattern,lambda _:new,page,flags=re.S)
   assert found==1,(mid,pattern,found)
  return page
+def write_practice(n,w,target,pages):
+ """Keep existing interactive simulations and their stable exercise numbers available as a companion library."""
+ practice=(HERE/f'practice/week-{n:02}.html').read_text().replace('</head>',f'<link rel="stylesheet" href="{BASE}/os/mission-practice.css"></head>')
+ # Derive media URL versions and chapter times from approved artifacts on every build.
+ for suffix in ('mp4','vtt'):
+  path=f'courses/digital-literacy-2/media/week-{n:02}.{suffix}'
+  practice=re.sub(re.escape('/'+path)+r'(?:\?[^"\s]*)?',lambda _:media_url(path),practice)
+ chapter_times=iter(json.loads((OUT/f'media/week-{n:02}-chapters.json').read_text()))
+ def chapter_time(match):
+  seconds=next(chapter_times)['startSeconds']
+  return f'{match[1]}{seconds:.3f}{match[2]}{seconds:.3f}{match[3]}{int(seconds)//60}:{int(seconds)%60:02}{match[4]}'
+ practice=re.sub(r'(data-video-seek=")[\d.]+("><time datetime="PT)[\d.]+(S">)\d+:\d+(</time>)',chapter_time,practice)
+ practice=practice.replace('<body class="lesson"', '<body class="lesson mission-library"')
+ for exercise,mid in pages.items():(target/practice_file(mid)).write_text(activity_page(practice,exercise,mid,n))
+ practice=practice.replace('<title>', '<title>Practice library · ',1)
+ practice=practice.replace('<div class="deck-toolbar">', '<div class="deck-toolbar">'+link('presentation.html' if w.get('practice_pages') else 'presentation.html#1','Return to Mission Control'))
+ (target/'practice.html').write_text(practice)
 def slide(n,i,title,body,phase='present',stage='',notes='',cls=''):
  return f'<section class="slide {cls}" id="slide-{i}" data-phase="{phase}" data-stage="{stage}" data-scene="deck" aria-labelledby="s{i}"><div class="panel full"><div class="hud"><img src="/assets/vub-seal-white.png" alt=""><span>Week {n}</span><span class="app">Mission Control</span></div><h1 id="s{i}" tabindex="-1">{e(title)}</h1>{body}</div><aside class="notes"><h2>{e(title)}</h2><p>{e(notes)}</p></aside></section>'
 for n,w in WEEKS.items():
+ if w.get('guided'):
+  # Week 3: one program at a time, one or two clicks per slide (guided.py, content in week3.py).
+  target=OUT/f'weeks/week-{n:02}';count=build_week(n,w,target,letterhead);write_practice(n,w,target,{})
+  print(f'Week {n}: {count} slides, guided step by step, 120 minutes');continue
  target=OUT/f'weeks/week-{n:02}';old=OLD[n-1];slides=[video_slide(n,1,w.get('video_note',''))];schedule=[]
  def add(title,body,phase='present',stage='',notes='',cls=''):
   slides.append(slide(n,len(slides)+1,title,body,phase,stage,notes,cls));return len(slides)
@@ -119,22 +142,7 @@ for n,w in WEEKS.items():
  head=f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week {n} · {e(w["title"])} · VUB</title><link rel="stylesheet" href="{BASE}/os/fonts.css"><link rel="stylesheet" href="{BASE}/os/deck.css"><link rel="stylesheet" href="{BASE}/os/missions.css"><link rel="stylesheet" href="{BASE}/os/opening.css"></head>'
  nav='<nav class="mission-toolbar" aria-label="Presentation controls">'+link(BASE+'/index.html','Course home')+'<button type="button" data-deck-prev>Back</button><button type="button" data-deck-next>Next</button><button type="button" data-deck-notes aria-expanded="false">Notes (N)</button><button type="button" data-deck-full>Fullscreen (F)</button><label>Mission <select data-mission-jump><option value="0">Start</option>'+''.join(f'<option value="{starts[k]}">{chr(65+k)} · {e(t)}</option>' for k,t in enumerate([m['title'] for m in w['missions']]+([w['capstone']['title']] if w.get('capstone') else [])))+'</select></label></nav>'
  (target/'presentation.html').write_text(head+f'<body class="dl2-os mission-series"><a class="mission-skip" href="#main">Skip to lesson</a>{nav}<main id="main" tabindex="-1" data-deck-version="opening-v1" class="deck" aria-label="Week {n} presentation">'+''.join(slides)+f'</main><script src="{BASE}/os/deck.js"></script><script src="{BASE}/os/missions.js"></script><script src="/shared/text-size.js"></script></body></html>')
- # Keep existing interactive simulations and their stable exercise numbers available as a companion library.
- practice=(HERE/f'practice/week-{n:02}.html').read_text().replace('</head>',f'<link rel="stylesheet" href="{BASE}/os/mission-practice.css"></head>')
- # Derive media URL versions and chapter times from approved artifacts on every build.
- for suffix in ('mp4','vtt'):
-  path=f'courses/digital-literacy-2/media/week-{n:02}.{suffix}'
-  practice=re.sub(re.escape('/'+path)+r'(?:\?[^"\s]*)?',lambda _:media_url(path),practice)
- chapter_times=iter(json.loads((OUT/f'media/week-{n:02}-chapters.json').read_text()))
- def chapter_time(match):
-  seconds=next(chapter_times)['startSeconds']
-  return f'{match[1]}{seconds:.3f}{match[2]}{seconds:.3f}{match[3]}{int(seconds)//60}:{int(seconds)%60:02}{match[4]}'
- practice=re.sub(r'(data-video-seek=")[\d.]+("><time datetime="PT)[\d.]+(S">)\d+:\d+(</time>)',chapter_time,practice)
- practice=practice.replace('<body class="lesson"', '<body class="lesson mission-library"')
- for exercise,mid in pages.items():(target/practice_file(mid)).write_text(activity_page(practice,exercise,mid,n))
- practice=practice.replace('<title>', '<title>Practice library · ',1)
- practice=practice.replace('<div class="deck-toolbar">', '<div class="deck-toolbar">'+link('presentation.html' if w.get('practice_pages') else 'presentation.html#1','Return to Mission Control'))
- (target/'practice.html').write_text(practice)
+ write_practice(n,w,target,pages)
  # Aligned paper materials: each detailed task appears under its teaching mission.
  worksheet='<p>Use fictional details. No new account, payment or real message is required. Work in the app when available; otherwise use '+('the practice page for that mission' if w.get('practice_pages') else 'the practice library')+' or annotate the paper model. Tell your instructor which route you used.</p>'
  if n==6:

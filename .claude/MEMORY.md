@@ -8,28 +8,34 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-DL2 "Mission Control" (Week 1 with 20-question pre/post tests, plus Weeks 2 to 6 decks) is on `main` (PRs #28 and #31; Netlify builds `main`). Week 2 teaches AI-assisted search as of PR #31. On 2026-10-05 vublessons.com matched `main` for the eight Week 2 pages, the video, captions and deck assets (hash and text compare). Five Week 2 review fixes merged as PR #33 on 2026-10-05 and were confirmed on vublessons.com the same day. PR #34 (practice button opens a new tab) and PR #35 (one practice page per Week 2 mission) merged and were confirmed live the same day. Weeks 3 to 6 still use the original Mission Control content and still carry the 8-minute break slide.
+DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `main` (PRs #42 and #43). Weeks 5 and 6 merged 2026-10-26 (PR #45). The post-test moves from Week 5 to Week 6, after a course review of Weeks 1 to 5. Week 2 is still a four-mission week with a capstone.
 
 ## Last Session
-- **Date**: 2026-10-05 (second session of the day: review before Britt taught Week 2)
-- **What we worked on**: Reviewed the Week 2 deck, worksheet, practice library and video. Fixed five things Britt picked, in `scripts/dl2/mission-control/` (`week2.py`, `visuals.py`, `build.py`) plus one scoped line in `os/missions.css`, then rebuilt Week 2: slide 6 demo now shows question, AI answer (until 9 p.m.) and library page (until 8 p.m.); slide 11 asks about "open until"; six paper rounds are labelled Worksheet; slide 21 names its folders and has a doable Done early line; each mission answer box now sits before its rounds. New `tests/content/dl2-week2-consistency.spec.js` (5 tests, watched fail first); full suite 334 passed.
-- **What we decided**: Fix only what Britt named; report the rest. Britt objected to design and UI changes the earlier session made without being asked (auto-memory `no-unrequested-design-changes` holds the rule).
-- **Where we left off**: PRs #33 and #34 merged and confirmed live. The new tab did not fix Britt's real complaint: "Open interactive practice" led into the practice library, which is the older 23-slide Week 2 lesson kept whole, so it read as a second lesson. Britt said the class works through the worksheet, with little projector demonstration, and approved one practice page per mission. Branch `claude/week-2-mission-practice-pages` builds `practice-2b.html`, `practice-2c.html` and `practice-2d.html` for Week 2, repoints the worksheet and slide links, removes the Mission 2A practice link and removes Mission 2D's copy of the ZIP task. Merged as PR #35 and confirmed live. Last change of the session: the lesson plan's video pause point 3:41 became 3:47, where the form prompt ends, on branch `claude/week-2-pause-point`.
+- **Date**: 2026-10-26
+- **What we worked on**: Readiness review of DL2 Weeks 5 and 6 before teaching them tonight (content, walk-through, video clips, layout, security, tests), then fixed every finding on PR #45 (`claude/dl2-weeks-5-6-guided`). List in `docs/digital-literacy-2/HANDOFF.md` "Week 5 and 6 readiness fixes".
+- **What we decided (Britt)**: fix all review findings and merge before class. Week 5 is renamed "Keep your accounts and messages safe". Week 6 clip 2 keeps Britt's range.
+- **Where we left off**: fixes committed and pushed to PR #45; merge after CI. Then check the live Week 5 and 6 worksheets on vublessons.com. Lab-PC checks still open: Excel Fill Color list, the Tab start point in Edge, Edge tab titles.
 
 ## Open Items
 - [ ] **DL2 Mission Control go-live checks (Week 1 was taught 2026-09-28; these were not re-verified):** enable Netlify form detection → push `feat/dl2-mission-control`, PR, merge → confirm forms `dl2-pretest`/`dl2-posttest` listed + email notifications on → one test submission → test print.
 - [x] ~~DL2 Week 2~~ rebuilt for AI-assisted search and merged 2026-10-05 (PR #31).
-- [ ] DL2 Weeks 3 to 6 (weekly); Week 6 needs its own brainstorm (agent-built app + domains/hosting/back-end roadblocks). Review each week's search or tool content for out-of-date techniques before teaching, as Week 2 needed.
+- [x] ~~DL2 Weeks 3 to 6 guided rebuilds~~ Weeks 3 and 4 merged (PRs #42, #43); Weeks 5 and 6 built 2026-10-23, readiness fixes 2026-10-26, PR #45.
+- [ ] Week 3 slide 53 ("Open PowerPoint") spills its You should see line at the largest text size on a 1366x768 screen. Already on `main`; reported to Britt, not fixed.
+- [ ] Week 5 syllabus row still lists GS6 objective groups 7.1, 7.2, 7.3, 7.4, 2.1, 4.2 from the old lesson. Britt to confirm which groups the three new skills cover.
+- [ ] `weeks/week-06/practice.html` (old practice library) still teaches the cut Week 6 topics; nothing links to it. Decide whether to keep it.
+- [ ] `scripts/dl2/syllabus.py` is stale (nothing calls it; `syllabus.html` was hand-edited). Regenerate or retire it.
 - [x] ~~Merge PR #33 (Week 2 review fixes)~~ merged and confirmed live 2026-10-05.
 - [x] ~~Ship `claude/week-2-practice-new-tab`~~ merged as PR #34 and confirmed live 2026-10-05.
-- [x] ~~Ship `claude/week-2-mission-practice-pages`~~ merged as PR #35 and confirmed live 2026-10-05.
-- [ ] Weeks 3 to 6 still link each mission to a numbered slide in their practice library, in the same tab. They need the Week 2 treatment (`practice_pages=True`) before they are taught. At 1366x768 the Week 2 practice form still needs a short scroll to reach its buttons; at 1920x1080 it fits.
+- [ ] Ship `claude/week-2-mission-practice-pages` (Week 2 per-mission practice pages). Weeks 3 to 6 still link each mission to a numbered slide in their practice library, in the same tab; they need the same treatment before they are taught. At 1366x768 the Week 2 practice form still needs a short scroll to reach its buttons; at 1920x1080 it fits.
 - [ ] Decide whether `claude/practice-form-purpose` ships.
 - [ ] Week 2 video, found 2026-10-05 (read-only review; nobody listened by ear). Needs a re-render: chapter 1 search box shows "computer help + library + town" from 0:07 to 0:49 while the narrator says to ask in full sentences (`scripts/dl2/video-scenes.py:458`); chapter 4 card rows (Title / address merged, fifth row Interpretation) differ from the five facts spoken. Needs a retake: chapter 4 runs 179 WPM. The doubled "and" near 0:29 was cleared by transcription (8 of 8 decodes). Retake with `scripts/dl2/elevenlabs-takes.py` (Week 2 only until generalized).
-- [x] ~~Lesson plan pause point 3:41~~ changed to 3:47 on 2026-10-05, in both the week 2 `agenda` and `prep` text of `scripts/dl2/curriculum.json`.
+- [x] ~~Lesson plan pause point 3:41~~ changed to 3:47 (PR #36), in both the week 2 `agenda` and `prep` text of `scripts/dl2/curriculum.json`.
 - [ ] Week 2 deck and worksheet items reported to Britt but not fixed: slide 32 "five-field source note" is never defined on a slide; worksheet Round 3 loophole (library open until 9 p.m. versus learning desk until 8 p.m.) and its "partly right" key; "four missions" on slides 2 and 4 versus five listed; rounds start at Round 2; round tables cannot be typed into and print with 9 mm rows; Mission 2D repeats Mission 2C's ZIP task; Show slides 19 and 26 highlight a row their caption does not describe.
 - [ ] Revoke the ElevenLabs key at elevenlabs.io once re-recording is done. It lives in the gitignored file `/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/digital-literacy-week-2-expand-d3d789/.env`.
-- [ ] Decide whether Weeks 3 to 6 drop the break slide (Week 2 did; Britt's standing rule is no breaks). Generator flag: `nobreak` in the week dict.
+- [ ] Decide whether Weeks 5 and 6 drop the break slide (Weeks 2, 3 and 4 did; Britt's standing rule is no breaks). Generator flag: `nobreak` in the week dict.
+- [ ] Week 3 guided build: confirm on a lab PC that the Designer panel, Save As dialog and Crop steps look as the drawings show. The course-home and catalog summary still say "a short presentation" (now a one-slide flyer).
+- [x] ~~Guided format for Week 4~~ built 2026-10-19 (see HANDOFF.md). Weeks 5 and 6 are still open if Britt likes it.
+- [ ] Week 4 guided: confirm on a lab PC that Word shows modern comments (Post comment, Resolve thread) and that Practice Mail and the offer page open from the worksheet. Decide on PR #38 (older Week 4 rebuild); it will conflict. Catalog, course-home and syllabus-row summaries for Week 4 still say "Choose the right channel".
 - [ ] Don't run `scripts/dl2/build-pages.py` — it would overwrite the new Week 1 and test files (see HANDOFF.md).
 - [x] ~~DL2 video review fixes~~ done 2026-09-24: all visual and caption findings fixed in the generators and re-rendered (see HANDOFF.md "Video review fixes"). Still open, need a re-record: pause-prompt timing, fast chapters, week 3 formula cause, week 6 undefined terms, week 5 challenge setup.
 - [x] ~~Merge PR #17 then PR #18~~ both merged to main 2026-09-24; Netlify deployed the DL2 course and the review fixes to vublessons.com.
@@ -79,6 +85,8 @@ Britt asked to be reminded of both (2026-07-28).
 | 2026-07-28 | Defer repo rename | Only step with real deploy risk; no functional benefit today |
 | 2026-07-28 | **Reversed the above — renamed to `vublessons`** | Britt asked for it. Preflight showed the risk was low: Netlify links via the GitHub App (repo ID, not name) and the repo had no classic webhooks. Confirmed after by a fresh deploy building from `doclegg05/vublessons` |
 | 2026-07-28 | Fix the DL1 sidebar *tests*, not the page | The feature works — verified by scrolling the real container and by a real mouse wheel. The tests drove `.sidebar`, which never overflows, so the scroll was a no-op. Wrong expectation in the test |
+| 2026-10-23 | DL2 post-test moves from Week 5 to Week 6, after a 20-question course review | Britt: Week 6 is post-test night and should review the whole course first |
+| 2026-10-23 | DL2 Weeks 5 and 6 follow-the-leader, no independent work; Week 5 skills challenge cut | Britt: the class learns by doing together; Weeks 3 and 4 "work very well" |
 
 ## Architecture Notes
 - `courses.json` is the **catalog source of truth** — drives the homepage and course consoles. It is *not* generated from the course trees; adding a lesson means editing both.
@@ -94,6 +102,8 @@ Britt asked to be reminded of both (2026-07-28).
 - **Per-mission practice pages (Week 2).** A week dict with `practice_pages=True` gets one page per mission simulation (`practice-2b.html` and so on), cut by `activity_page()` in `build.py` from that week's practice library. A mission whose `practice` is `None` gets no practice link. `assets/lesson.js` throws if the deck controls are missing, so the pages keep them in the markup and `os/mission-practice.css` hides them under `.mission-activity`. The practice library is the pre-Mission Control lesson deck kept whole, which is why a link into it reads as a second lesson.
 
 ## Known Issues
+- **Lesson format.** New or reworked VUB lessons are follow-the-leader: the class repeats each projected step together, no solo work except tests. Auto-memory `follow-the-leader-lessons` holds the detail.
+- **Sandbox test runs.** The full Playwright suite crashes Chromium in the sandbox even at one worker; run tests one at a time on port 3939. Auto-memory `sandbox-chromium-flags` holds the detail.
 - **`build.py` drops the second field of every Show tuple, in every week.** The demo picture comes from `visuals.py`, so editing a mission's Show values changes nothing on screen. This left Week 2 Mission A picturing the retired keyword search after PR #31. Week 2 Mission A now reads its three values from `week2.py`; Missions B to D and Weeks 3 to 6 still carry unused values.
 - **Three Playwright specs hard-code `http://localhost:3939` as the site's own origin** (`dl2-os-week1-deck`, `dl2-os-sound-test`, `dl2-os-test`). Running the suite against another port fails them for that reason only.
 - **The DL2 practice library scrolls at 1366x768** (pages are 1525 to 2390 px tall). The slide-fit work is on the unmerged branch `claude/slide-redesign-presentation-b1ed80`, which predates Mission Control.

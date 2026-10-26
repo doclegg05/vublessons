@@ -23,7 +23,9 @@ test('DL2 teaching text is visible on every slide, not only inside a collapsed n
 // Retired 2026-09-26 with the week 6 redesign: 'DL2 week 6 v2 acceptance check searches for the resource
 // the learner renamed'. The rename is gone; slide 10 is now the agent's diff (tests/content/dl2-week6-agent.spec.js).
 
-test('DL2 week 6 worksheet teaches the hand-repair mechanics for version 2',()=>{
+// Retired 2026-10-23 with the Week 6 guided rebuild: hand repair in Notepad or TextEdit is cut (Britt). The worksheet no longer downloads editable HTML.
+// The three practice pages still behave as described: tests/content/dl2-week6-agent.spec.js and tests/functional/dl2-week6-agent.spec.js.
+test.skip('DL2 week 6 worksheet teaches the hand-repair mechanics for version 2',()=>{
  const ws=worksheet(6);
  expect(ws).toContain('download="resource-finder-v1.html"');
  expect(ws).toContain('download="resource-finder-v2.html"');
@@ -36,16 +38,9 @@ test('DL2 week 6 worksheet teaches the hand-repair mechanics for version 2',()=>
  expect(ws).not.toMatch(/Make Plain Text/);
 });
 
-test('DL2 week 5 skills challenge gives every task its inputs, a response box and a rating',()=>{
- const w5=curriculum.weeks[4];
- expect(w5.challenge.item).toBe(6);
- expect(w5.challenge.tasks).toHaveLength(5);
- for(const t of w5.challenge.tasks){expect(t).toHaveLength(3);for(const part of t)expect(typeof part==='string'&&part.length>10,JSON.stringify(t)).toBe(true);}
- const ws=worksheet(5);
- for(const [task,materials] of w5.challenge.tasks){expect(ws).toContain(esc(task));expect(ws).toContain(esc(materials));}
- expect(ws.match(/id="challenge-answer-\d"/g)).toHaveLength(5);
- for(let i=0;i<5;i++){const radios=ws.match(new RegExp(`name="challenge-rating-${i}"`,'g'));expect(radios,`task ${i+1} rating radios`).toHaveLength(3);}
- for(const label of ['Independent','With prompt','Needs practice'])expect(ws).toContain(label);
- const key=answerKey(5);
- for(const [task,,evidence] of w5.challenge.tasks){expect(key).toContain(esc(task));expect(key).toContain(esc(evidence));}
+// 2026-10-23: the Week 5 skills challenge was cut when Week 5 became a guided build (week5.py). It was the old "skills challenge
+// gives every task its inputs, a response box and a rating" check; now the worksheet and answer guide must not carry it.
+test('DL2 week 5 no longer has the five-task skills challenge',()=>{
+ expect(worksheet(5)).not.toMatch(/challenge-answer-|challenge-rating-|Five-task observation/);
+ expect(answerKey(5)).not.toMatch(/Five-task observation/);
 });

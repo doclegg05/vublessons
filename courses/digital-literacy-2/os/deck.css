@@ -68,13 +68,13 @@ body[data-scene="deck"] .scene-deck, body[data-scene="gorge"] .scene-gorge { opa
 .seg { border:1px solid rgba(0,229,255,.35); display:flex; align-items:center; justify-content:center; color:var(--c-soft); background:rgba(4,10,26,.75); text-transform:uppercase; padding:0 1cqw; }
 .strip button.seg { appearance:none; min-width:0; font:inherit; letter-spacing:inherit; line-height:1.2; cursor:pointer; }
 .strip button.seg:not(:disabled):hover { border-color:var(--c-cyan); background:rgba(0,229,255,.24); text-decoration:underline; text-underline-offset:.25em; }
-.strip button.seg:focus-visible { outline:3px solid var(--c-gold); outline-offset:2px; }
+.strip button.seg:focus-visible { outline: 3px solid #1B365D; outline-offset:2px; box-shadow: 0 0 0 2px var(--c-gold);}
 .strip button.seg:disabled { opacity:.45; cursor:default; }
 .seg.done { background:rgba(0,229,255,.2); color:#d4fbff; }
 .seg.now { background:linear-gradient(90deg,rgba(255,60,172,.55),rgba(255,196,0,.45)); color:#fff; border-color:#ff6fc1; box-shadow:0 0 1.6cqw rgba(255,60,172,.6); }
 .strip .seg[data-phase].done::before { content:"✓ "; } .strip .seg[data-phase].now::before { content:"▸ "; }
 .seg.vub-appbar button { font:inherit; color:var(--c-ink); background:none; border:0; padding:0 .4cqw; cursor:pointer; }
-.seg.vub-appbar button:focus-visible, .dl2-os button:focus-visible { outline:3px solid var(--c-gold); outline-offset:2px; }
+.seg.vub-appbar button:focus-visible, .dl2-os button:focus-visible { outline: 3px solid #1B365D; outline-offset:2px; box-shadow: 0 0 0 2px var(--c-gold);}
 @keyframes dl2-blink { 50% { opacity:.5; } }
 
 /* notes, blackout */
