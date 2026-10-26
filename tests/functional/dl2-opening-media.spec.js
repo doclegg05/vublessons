@@ -18,8 +18,8 @@ async function dismissPreviewDrawer(page){
  if(!await dismiss.isVisible()){await minimize.waitFor({state:'visible',timeout:10000});await minimize.click();}
  await dismiss.click();
 }
-// Weeks 3 and 4 have no whole-video opening (since 2026-10-12 and 2026-10-19): each part plays only its own clip (tested below).
-for(const week of [1,2,5,6])test(`Week ${week}: opening, approved playback/captions, controls and return`,async({page,context})=>{
+// Weeks 3 to 6 have no whole-video opening (since 2026-10-12, 2026-10-19 and 2026-10-23): each part plays only its own clip (tested below and in the weeks' own specs).
+for(const week of [1,2])test(`Week ${week}: opening, approved playback/captions, controls and return`,async({page,context})=>{
  const failures=[];page.on('pageerror',e=>failures.push(e.message));
  await page.goto(route(week)+'#1');
  if(week===1){
@@ -80,7 +80,7 @@ for(const width of [1366,1920])test(`All six opening slides fit ${width} at defa
 });
 test('Phone openings retain visible player, large controls, links and no horizontal overflow',async({page})=>{
  await page.setViewportSize({width:390,height:844});
- for(const n of [1,2,5,6]){
+ for(const n of [1,2]){ // Weeks 5 and 6 have no opening video (2026-10-23)
   await page.goto(route(n)+'#1');await page.evaluate(()=>document.documentElement.dataset.textSize='xxl');
   if(n===1){await expect(page.getByRole('link',{name:/Open the pre-test/})).toBeVisible();await page.getByRole('button',{name:'Next: watch the video'}).click();}
   await expect(page.locator('.slide.is-active video')).toBeVisible();
@@ -90,7 +90,7 @@ test('Phone openings retain visible player, large controls, links and no horizon
  }
 });
 test('Old session/hash and course-home saved positions migrate once without changing assessments',async({page})=>{
- for(const [week,old,current] of [[1,0,2],[1,1,0],[1,9,10],[2,0,1],[6,22,23]]){
+ for(const [week,old,current] of [[1,0,2],[1,1,0],[1,9,10],[2,0,1]]){
   await page.goto(route(week));
   const savedPath=new URL(page.url()).pathname; // local server and Netlify normalize .html differently
   await page.goto(base+'/index.html');
@@ -110,8 +110,8 @@ test('Old session/hash and course-home saved positions migrate once without chan
   await page.reload();expect(await page.evaluate(()=>DL2Deck.index())).toBe(0);
  }
  // Explicit links use the current numbering; invalid/stale bounds are clamped.
- await page.goto(route(5)+'#999');await expect(page.locator('.strip .count')).toHaveText('24 / 24');
- await page.goto(route(5)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 24');
+ await page.goto(route(5)+'#999');await expect(page.locator('.strip .count')).toHaveText('80 / 80'); // Week 5 is guided since 2026-10-23
+ await page.goto(route(5)+'#1');await expect(page.locator('.strip .count')).toHaveText('1 / 80');
  await page.goto(route(4)+'#999');await expect(page.locator('.strip .count')).toHaveText('87 / 87');
  await page.goto(route(3)+'#999');await expect(page.locator('.strip .count')).toHaveText('71 / 71');
 });

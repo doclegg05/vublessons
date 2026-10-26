@@ -31,7 +31,7 @@ APPS = {
     'excel': {'name': 'Excel', 'doc': 'Book1', 'blank': 'Blank workbook'},
     'powerpoint': {'name': 'PowerPoint', 'doc': 'Presentation1', 'blank': 'Blank presentation'},
 }
-_LETTERS = {'word': 'W', 'excel': 'X', 'powerpoint': 'P', 'edge': 'e', 'explorer': 'F', 'mail': 'M'}
+_LETTERS = {'word': 'W', 'excel': 'X', 'powerpoint': 'P', 'edge': 'e', 'explorer': 'F', 'mail': 'M', 'settings': 'S', 'outlook': 'O'}
 
 TABS = {
     'word': ['File', 'Home', 'Insert', 'Draw', 'Design', 'Layout', 'References', 'Mailings',
@@ -584,7 +584,7 @@ def save_as_dialog(location, items, filename='', savetype='Word Document (*.docx
         rows += (f'<div class="u-fr"><span class="u-fn{_t(n)}">{_ficon(kind)}<span class="u-fnt">{_lab(nm, n)}</span>{_bd(n, pos)}</span>'
                  f'<span class="u-ft">{_e(_KIND.get(kind, "File"))}</span></div>')
     if not items:
-        rows = '<div class="u-empty">No items match your search.</div>'
+        rows = '<div class="u-empty">This folder is empty.</div>'
     lst = f'<div class="u-fl"><div class="u-fh"><span>Name</span><span>Type</span></div>{rows}</div>'
     fn_n, _ = _get(marks, 'filename')
     st_n, _ = _get(marks, 'savetype')

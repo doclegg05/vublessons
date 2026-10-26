@@ -45,6 +45,12 @@ textarea{display:block;width:100%;min-height:9rem;border:0;font:inherit;padding:
 .msg{background:#fff;border-radius:.6rem;padding:1rem 1.2rem}
 .msg dl{margin:0 0 .8rem}.msg dt{float:left;clear:left;width:4.5rem;font-weight:700;color:#555}.msg dd{margin:0 0 .2rem 4.5rem}
 .msg pre{margin:0;font:inherit;white-space:pre-wrap}
+.msg p{margin:.5rem 0}
+.bad-link{color:#0b57b8;text-decoration:underline;font-weight:700}
+.where{min-height:1.6em;margin:.3rem 0 .8rem;padding:.3rem .6rem;border-left:5px solid #0b3d4a;background:#eef3f8;font-weight:600}
+.where:empty{visibility:hidden}
+.report{margin-top:.8rem;padding:.5rem 1.4rem;border:2px solid #b3261e;border-radius:1.2rem;background:#fff;color:#b3261e;font-weight:700}
+.report[disabled]{border-color:#555;color:#333;background:#e7eaf0;cursor:default}
 </style></head><body>
 <p class="notice">Practice Mail · fictional · nothing is sent outside this page</p>
 <header class="top"><h1>Practice Mail</h1></header>
@@ -61,7 +67,12 @@ textarea{display:block;width:100%;min-height:9rem;border:0;font:inherit;padding:
 (function(){
 'use strict';
 var KEY='practice-mail:v1',OK=/^[^\s@,;]+@example\.com$/i;
-var inbox=[
+// Week 5 inbox (practice-mail.html?inbox=week-5): one made-up suspicious message. With no parameter, Week 4's inbox shows.
+var WEEK5=/(?:^|[?&#])inbox=week-5(?:&|$)/.test(location.search+location.hash); // the link carries it twice, in ? and #, so a redirect that drops one keeps the other
+var inbox=WEEK5?[
+ {week5:true,from:'Maple Valley Health Plan',address:'mvhp-memberhelp@example.com',subject:'ACT NOW: your coverage stops today',
+  linkText:'maplevalleyhealth.example.com/confirm',dest:'https:'+'//maple-valley-confirm.example.net/login',phone:'304-555-0199'}
+]:[
  {from:'Library newsletter',subject:'October events at the library',body:'Computer help night is Thursday at 6 p.m. in the learning room.'},
  {from:'Volunteer desk',subject:'Thank you for helping last week',body:'Thank you. Your help made the sign-in line short.'},
  {from:'Computer class',subject:'Your Week 4 worksheet',body:'Keep your worksheet open beside this page.'}
@@ -90,7 +101,23 @@ function who(m){
   tb.append(el('tr',{},[el('td',{text:r+' ('+role+')'}),el('td',{text:shows})]));}
  m.to.forEach(function(r){line(r,'To');});m.cc.forEach(function(r){line(r,'Cc');});m.bcc.forEach(function(r){line(r,'Bcc');});
  t.append(tb);return el('section',{class:'who','aria-labelledby':'who-h'},[el('h2',{id:'who-h',text:'Who sees what'}),el('p',{text:'This is what each person would see. Practice Mail sent nothing.'}),t]);}
+function suspicious(m){
+ var dl=el('dl',{},[el('dt',{text:'From'}),el('dd',{text:m.from+' <'+m.address+'>'}),el('dt',{text:'Subject'}),el('dd',{text:m.subject})]);
+ var link=el('a',{class:'bad-link',text:m.linkText,rel:'noopener noreferrer'}),where=el('p',{class:'where','aria-live':'polite'});
+ link.setAttribute('href',m.dest);
+ function tell(){where.textContent='This link really goes to: '+m.dest.replace(/^https?:\/\//,'');}
+ function clear(){where.textContent='';}
+ link.addEventListener('mouseenter',tell);link.addEventListener('focus',tell);link.addEventListener('mouseleave',clear);link.addEventListener('blur',clear);
+ function stop(e){e.preventDefault();say('Practice warning: the link did not open. In real life it could lead to a copy of a real site, made to steal your password.');}
+ link.addEventListener('click',stop);link.addEventListener('auxclick',stop);
+ var report=el('button',{type:'button',class:'report',text:'Report this message'});
+ report.addEventListener('click',function(){report.textContent='Reported';report.disabled=true;say('Reported in practice. Nothing was sent. Good catch.');});
+ var box=el('div',{class:'msg'},[dl,el('p',{text:'Your coverage stops today unless you act now.'}),
+  el('p',{},[document.createTextNode('Confirm your account within 1 hour: '),link]),where,
+  el('p',{text:'Or call us now at '+m.phone+' to keep your coverage.'}),el('p',{text:'Maple Valley Health Plan'}),report]);
+ return box;}
 function show(m,kind){
+ if(m.week5)return suspicious(m);
  var dl=el('dl',{},[el('dt',{text:'To'}),el('dd',{text:m.to.join(', ')||'(nobody)'})]);
  if(kind==='sent'){if(m.cc.length)dl.append(el('dt',{text:'Cc'}),el('dd',{text:m.cc.join(', ')}));if(m.bcc.length)dl.append(el('dt',{text:'Bcc'}),el('dd',{text:m.bcc.join(', ')}));}
  else dl.firstChild.textContent='From',dl.lastChild.textContent=m.from;
