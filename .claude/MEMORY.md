@@ -8,7 +8,7 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `main` (PRs #42 and #43). Weeks 5 and 6 are on PR #45 (`claude/dl2-weeks-5-6-guided`, worktree `.claude/worktrees/dl2-weeks-5-6-guided`). On that branch the post-test moves from Week 5 to Week 6, after a course review of Weeks 1 to 5. Week 2 is still a four-mission week with a capstone.
+DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `main` (PRs #42 and #43). Weeks 5 and 6 merged 2026-10-26 (PR #45). The post-test moves from Week 5 to Week 6, after a course review of Weeks 1 to 5. Week 2 is still a four-mission week with a capstone.
 
 ## Last Session
 - **Date**: 2026-10-26
@@ -29,7 +29,7 @@ DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `ma
 - [ ] Ship `claude/week-2-mission-practice-pages` (Week 2 per-mission practice pages). Weeks 3 to 6 still link each mission to a numbered slide in their practice library, in the same tab; they need the same treatment before they are taught. At 1366x768 the Week 2 practice form still needs a short scroll to reach its buttons; at 1920x1080 it fits.
 - [ ] Decide whether `claude/practice-form-purpose` ships.
 - [ ] Week 2 video, found 2026-10-05 (read-only review; nobody listened by ear). Needs a re-render: chapter 1 search box shows "computer help + library + town" from 0:07 to 0:49 while the narrator says to ask in full sentences (`scripts/dl2/video-scenes.py:458`); chapter 4 card rows (Title / address merged, fifth row Interpretation) differ from the five facts spoken. Needs a retake: chapter 4 runs 179 WPM. The doubled "and" near 0:29 was cleared by transcription (8 of 8 decodes). Retake with `scripts/dl2/elevenlabs-takes.py` (Week 2 only until generalized).
-- [ ] Lesson plan pause point 3:41 is early; the form prompt ends at 3:47 (`scripts/dl2/curriculum.json`, week 2 `agenda`).
+- [x] ~~Lesson plan pause point 3:41~~ changed to 3:47 (PR #36), in both the week 2 `agenda` and `prep` text of `scripts/dl2/curriculum.json`.
 - [ ] Week 2 deck and worksheet items reported to Britt but not fixed: slide 32 "five-field source note" is never defined on a slide; worksheet Round 3 loophole (library open until 9 p.m. versus learning desk until 8 p.m.) and its "partly right" key; "four missions" on slides 2 and 4 versus five listed; rounds start at Round 2; round tables cannot be typed into and print with 9 mm rows; Mission 2D repeats Mission 2C's ZIP task; Show slides 19 and 26 highlight a row their caption does not describe.
 - [ ] Revoke the ElevenLabs key at elevenlabs.io once re-recording is done. It lives in the gitignored file `/Users/brittlegg/MacDev/companies/education/vublessons/.claude/worktrees/digital-literacy-week-2-expand-d3d789/.env`.
 - [ ] Decide whether Weeks 5 and 6 drop the break slide (Weeks 2, 3 and 4 did; Britt's standing rule is no breaks). Generator flag: `nobreak` in the week dict.
