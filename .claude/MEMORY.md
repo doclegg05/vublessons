@@ -8,18 +8,18 @@
 - **Live**: https://vublessons.com (Netlify project `vubcourse`, builds `main` → `dist/site`)
 
 ## Current Status
-DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `main` (PRs #42 and #43). Weeks 5 and 6 are on branch `claude/dl2-weeks-5-6-guided` (worktree `.claude/worktrees/dl2-weeks-5-6-guided`), not pushed yet. On that branch the post-test moves from Week 5 to Week 6, after a course review of Weeks 1 to 5. Week 2 is still a four-mission week with a capstone.
+DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `main` (PRs #42 and #43). Weeks 5 and 6 are on PR #45 (`claude/dl2-weeks-5-6-guided`, worktree `.claude/worktrees/dl2-weeks-5-6-guided`). On that branch the post-test moves from Week 5 to Week 6, after a course review of Weeks 1 to 5. Week 2 is still a four-mission week with a capstone.
 
 ## Last Session
-- **Date**: 2026-10-23
-- **What we worked on**: Rebuilt DL2 Week 5 and Week 6 in the Week 3/4 guided format, with three parallel subagents (Week 5, Week 6, post-test move) merged into `claude/dl2-weeks-5-6-guided`. Week 5 (80 slides) teaches post-test items 18 to 20: Excel color alone, a new practice sign-up page (passphrase plus two-step code), and a suspicious message in a Week 5 Practice Mail inbox. Week 6 (120 slides) tests the three resource-finder versions, then reviews Weeks 1 to 5 with 20 new questions (one per item), then opens the post-test. The syllabus, course home, sources page and `courses.json` now put the post-test in Week 6. Details are in `docs/digital-literacy-2/HANDOFF.md`.
-- **What we decided (Britt)**: Week 5 is not post-test night; Week 6 is. Nobody works alone in either week, so the Week 5 skills challenge is cut. Week 6 ends with a review of the whole course before the test. Britt may teach Weeks 5 and 6 in one night but wants the decks kept separate. Same scope rule as Weeks 3 and 4: Week 5 teaches only its post-test items.
-- **Where we left off**: All work is committed on the branch, not pushed. Tests, each run alone in this sandbox: 261 pass; the 2 failures (Week 3 slide 53 fit, the post-test outbox test) fail the same way on `main`; every crash-only test that covers Weeks 5 or 6 passes when run by name. Needs: push and a PR, then a lab-PC check of the Excel Fill Color, sign-up and Practice Mail steps, and a check that Netlify keeps the `?inbox=week-5` link working.
+- **Date**: 2026-10-26
+- **What we worked on**: Readiness review of DL2 Weeks 5 and 6 before teaching them tonight (content, walk-through, video clips, layout, security, tests), then fixed every finding on PR #45 (`claude/dl2-weeks-5-6-guided`). List in `docs/digital-literacy-2/HANDOFF.md` "Week 5 and 6 readiness fixes".
+- **What we decided (Britt)**: fix all review findings and merge before class. Week 5 is renamed "Keep your accounts and messages safe". Week 6 clip 2 keeps Britt's range.
+- **Where we left off**: fixes committed and pushed to PR #45; merge after CI. Then check the live Week 5 and 6 worksheets on vublessons.com. Lab-PC checks still open: Excel Fill Color list, the Tab start point in Edge, Edge tab titles.
 
 ## Open Items
 - [ ] **DL2 Mission Control go-live checks (Week 1 was taught 2026-09-28; these were not re-verified):** enable Netlify form detection → push `feat/dl2-mission-control`, PR, merge → confirm forms `dl2-pretest`/`dl2-posttest` listed + email notifications on → one test submission → test print.
 - [x] ~~DL2 Week 2~~ rebuilt for AI-assisted search and merged 2026-10-05 (PR #31).
-- [x] ~~DL2 Weeks 3 to 6 guided rebuilds~~ Weeks 3 and 4 merged (PRs #42, #43); Weeks 5 and 6 built 2026-10-23 on `claude/dl2-weeks-5-6-guided`, PR pending.
+- [x] ~~DL2 Weeks 3 to 6 guided rebuilds~~ Weeks 3 and 4 merged (PRs #42, #43); Weeks 5 and 6 built 2026-10-23, readiness fixes 2026-10-26, PR #45.
 - [ ] Week 3 slide 53 ("Open PowerPoint") spills its You should see line at the largest text size on a 1366x768 screen. Already on `main`; reported to Britt, not fixed.
 - [ ] Week 5 syllabus row still lists GS6 objective groups 7.1, 7.2, 7.3, 7.4, 2.1, 4.2 from the old lesson. Britt to confirm which groups the three new skills cover.
 - [ ] `weeks/week-06/practice.html` (old practice library) still teaches the cut Week 6 topics; nothing links to it. Decide whether to keep it.
