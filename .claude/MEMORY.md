@@ -11,10 +11,10 @@
 DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `main` (PRs #42 and #43). Weeks 5 and 6 merged 2026-10-26 (PR #45). The post-test moves from Week 5 to Week 6, after a course review of Weeks 1 to 5. Week 2 is still a four-mission week with a capstone.
 
 ## Last Session
-- **Date**: 2026-10-26
-- **What we worked on**: Readiness review of DL2 Weeks 5 and 6 before teaching them tonight (content, walk-through, video clips, layout, security, tests), then fixed every finding on PR #45 (`claude/dl2-weeks-5-6-guided`). List in `docs/digital-literacy-2/HANDOFF.md` "Week 5 and 6 readiness fixes".
-- **What we decided (Britt)**: fix all review findings and merge before class. Week 5 is renamed "Keep your accounts and messages safe". Week 6 clip 2 keeps Britt's range.
-- **Where we left off**: fixes committed and pushed to PR #45; merge after CI. Then check the live Week 5 and 6 worksheets on vublessons.com. Lab-PC checks still open: Excel Fill Color list, the Tab start point in Edge, Edge tab titles.
+- **Date**: 2026-11-02
+- **What we worked on**: Post-test v2 for the last night of the DL2 cohort. Items 5, 6, 7, 9 and 11 rewritten to match the lessons as taught; the Week 6 review question 7 and Week 2 recap updated. No Week 6 material on the test. Details in `docs/digital-literacy-2/HANDOFF.md` "Post-test v2".
+- **What we decided**: pre-test stays on v1 (already taken); each form has its own version; item 7 is the one post item whose skill differs from the pre-test.
+- **Where we left off**: PR open; merge to publish to vublessons.com before class, then run one test submission on the live site.
 
 ## Open Items
 - [ ] **DL2 Mission Control go-live checks (Week 1 was taught 2026-09-28; these were not re-verified):** enable Netlify form detection → push `feat/dl2-mission-control`, PR, merge → confirm forms `dl2-pretest`/`dl2-posttest` listed + email notifications on → one test submission → test print.
@@ -77,6 +77,7 @@ Britt asked to be reminded of both (2026-07-28).
 ## Key Decisions Log
 | Date | Decision | Rationale |
 |------|----------|-----------|
+| 2026-11-02 | DL2 post-test v2 aligned to lessons as taught; pre-test left at v1 | The pre-test was already taken, and rewriting it would break those records |
 | 2026-09-27 | DL2 rebuilt fresh as "Mission Control" (hand-written HTML + small os/ engine), not the old scripts/dl2 generators | Britt disliked the generated version; hand-authored slides allow build steps, OS transitions and coded Windows demos |
 | 2026-09-27 | DL2 pre/post = 20 parallel items (item N same skill), one item bank feeds test, keys, printables, PDF | Britt asked for 20; single source keeps pre/post aligned |
 | 2026-07-28 | Keep Windows Tips as Week 2; rewrite the 6 Video Conferencing test questions | Windows was the deployed canonical curriculum; the tests were the thing out of sync, not the lesson |

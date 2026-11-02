@@ -15,7 +15,7 @@ test('clean() makes every PDF string encodable in the WinAnsi fallback fonts', a
     for (const form of ['pre', 'post']) {
       const label = form === 'pre' ? 'Pre-Test' : 'Post-Test';
       strings.push(label + ' · Graded Results', M.org + ' · ' + label + ' · Graded Results (continued)',
-        'Form: ' + form + ' ' + I.version + ' · 20 items');
+        'Form: ' + form + ' ' + I.versions[form] + ' · 20 items');
       for (const it of I[form]) {
         strings.push(it.skill, it.stem, it.why);
         it.options.forEach((o, k) => strings.push(LETTERS[k] + ' · ' + o));

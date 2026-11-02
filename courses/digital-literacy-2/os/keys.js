@@ -9,7 +9,7 @@
   var head = global.DL2Paper.letterhead({ dateText: 'Class meeting · ' + global.DL2Paper.META.classTime });
   if (root.dataset.dl2Doc === 'key') {
     root.innerHTML = head + '<h1 class="doc-h1">' + label + ' · Answer Key <small>(instructor)</small></h1>' +
-      '<p class="doc-sub">Form ' + form + ' ' + global.DL2Items.version + '. Item N checks the same skill on both forms.</p>' +
+      '<p class="doc-sub">Form ' + form + ' ' + global.DL2Items.versions[form] + '. Item N checks the same week and domain on both forms.</p>' +
       '<table class="key"><thead><tr><th>#</th><th>Skill · domain</th><th>Answer</th><th>Why</th></tr></thead><tbody>' +
       items.map(function (it) {
         return '<tr><td>' + it.n + '</td><td>' + esc(it.skill) + '<br><small>' + dom[it.domain] + ' · Week ' + it.week + '</small></td><td><strong>' + it.answer + ' · ' + esc(it.options[L.indexOf(it.answer)]) + '</strong></td><td>' + esc(it.why) + '</td></tr>';

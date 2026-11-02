@@ -389,7 +389,7 @@ WRAP = dict(
 
 # ---------------------------------------------------------------- Course review (weeks 1 to 5)
 SKILLS = {1: 'Make text bigger in every app', 2: 'Fix a page that spills onto a second sheet', 3: 'Fix a repeating calendar event', 4: 'Write a help request that can be answered',
-          5: 'Narrow a web search', 6: 'Judge whether a source fits', 7: 'Act on a wrong confirmation', 8: 'Share with the right permissions', 9: 'Use real heading styles',
+          5: 'Narrow a web search', 6: 'Judge whether a source fits', 7: 'Give only what a form needs', 8: 'Share with the right permissions', 9: 'Use real heading styles',
           10: 'Check that a SUM total updates', 11: 'Use a licensed photo properly', 12: 'Share a file that looks the same everywhere', 13: 'Write a clear request with a deadline',
           14: 'Know what Bcc does', 15: 'Use respectful, inclusive wording', 16: 'Give and answer feedback on one shared copy', 17: 'Spot a recurring charge',
           18: "Don't rely on color alone", 19: 'Secure a new account', 20: 'Check a suspicious contact a safer way'}
@@ -423,7 +423,7 @@ REVIEW_WEEKS = [
          ]),
     dict(week=2, app='edge', heading='Find it, check it, keep it', title='Week 2: find it, check it, keep it.',
          points=['In [Microsoft Edge], ask a full question with a place and a detail, then check the source.',
-                 'On a practice form, read the confirmation and fix a wrong detail its way. In [File Explorer], use clear names.',
+                 'On a form, give only what it needs, and ask why before you share a private detail. In [File Explorer], use clear names.',
                  'Share a file with the least access the job needs: Viewer, Commenter or Editor.'],
          notes='Two minutes. Ask what the class made in Week 2: a checked answer with a source note, a clearly named file, and sharing roles. Then the four questions.',
          questions=[
@@ -431,9 +431,9 @@ REVIEW_WEEKS = [
                'Which Lewisburg, WV markets open weekends and take SNAP?', ['markets', 'food, then scroll for a while'], 2, 'A place and details narrow the answer.'),
              q(6, 'edge', 'A page about heating help shows no date and no author. What should that make you do?',
                'Check it against a source that names its owner and date', ['Rely on it, since it is neatly laid out', 'Ignore every page like it'], 0, 'A page with no author or date is hard to judge.'),
-             q(7, 'edge', 'You signed up for a class, but the confirmation lists the wrong time. What do you do?',
-               'Fix it the way the confirmation says, and keep a record', ['Sign up a second time with the right time', 'Just come at the time you wanted'], 2,
-               'Use the route the confirmation gives, and keep proof.'),
+             q(7, 'edge', 'A sign-up form for a library class asks for your bank account number. What do you do?',
+               'Leave it out and ask why they want it', ['Fill it in, since a library asked', 'Give your card number instead'], 2,
+               'A class sign-up has no need for bank details. Ask why first.'),
              q(8, 'edge', 'You gave a friend Editor access to a file, but he only needs to read it. What do you do?',
                'Change his access to Viewer', ['Leave it, since he probably will not change anything', 'Delete the file for everyone'], 1, 'Give people the least access the job needs.'),
          ]),

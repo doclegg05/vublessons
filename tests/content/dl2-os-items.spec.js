@@ -11,9 +11,37 @@ test('20 items per form, parallel by number', () => {
   Items.pre.forEach((p, i) => {
     const q = Items.post[i];
     expect(p.n).toBe(i + 1); expect(q.n).toBe(i + 1);
-    expect(q.domain).toBe(p.domain); expect(q.week).toBe(p.week); expect(q.skill).toBe(p.skill);
+    expect(q.domain).toBe(p.domain); expect(q.week).toBe(p.week);
+    // Post item 7 is the one deliberate exception: Week 2 taught giving only what a form needs, never fixing a wrong confirmation.
+    if (q.n !== 7) expect(q.skill).toBe(p.skill);
     expect(q.stem).not.toBe(p.stem);
   });
+});
+
+// Post-test v2 (2026-11-02): rewritten at the end of the fall cohort to test what the rebuilt lessons really taught.
+test('post-test items 5, 6, 7, 9 and 11 match what Weeks 2 and 3 taught', () => {
+  const post = n => Items.post[n - 1], key = it => it.options[['A', 'B', 'C', 'D'].indexOf(it.answer)];
+  expect(key(post(5))).toMatch(/^Which .*\?$/);                 // Week 2: ask a full question with a service, a place and a detail.
+  expect(post(6).stem).toMatch(/AI answer/);                    // Week 2: an AI answer is a lead; the organization's page outranks it.
+  expect(key(post(6))).toMatch(/own page.*phone/);
+  expect(post(7).skill).toBe('Give only what a form needs');    // Week 2 Mission 2B.
+  expect(post(7).stem).toMatch(/Social Security number/);
+  expect(post(9).stem).toMatch(/Navigation Pane/);              // Week 3 checks headings there; it never built a table of contents.
+  expect(post(9).stem).not.toMatch(/table of contents/i);
+  expect(post(11).stem).toMatch(/give credit/);                 // Week 3 used a photo with stated permission and a credit line.
+  expect(post(11).stem).not.toMatch(/can.t find/);
+  expect(key(post(11))).toMatch(/credit line/i);
+});
+
+test('nothing from Week 6 is on the post-test', () => {
+  for (const it of Items.post) {
+    expect(it.week).toBeLessThanOrEqual(5);
+    expect([it.stem, ...it.options, it.why].join(' ')).not.toMatch(/\bagent\b|bug report|retest|test table|Resource Finder/i);
+  }
+});
+
+test('each form has its own version, so a pre-test record stays valid after the post-test changes', () => {
+  expect(Items.versions).toEqual({ pre: 'v1-2026-09', post: 'v2-2026-11' });
 });
 
 test('domain counts match the blueprint', () => {

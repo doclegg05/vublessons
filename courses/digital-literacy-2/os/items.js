@@ -1,5 +1,6 @@
-/* DL2 pre-test and post-test item bank (v1, Sept 2026). Item N on each form checks the same
- * skill, domain and week with a different real-life scenario. Answers are balanced A–D (5 each).
+/* DL2 pre-test (v1, Sept 2026) and post-test (v2, Nov 2026) item bank. Item N on each form checks the same
+ * domain and week, and the same skill except item 7, with a different real-life scenario. Answers are balanced A–D (5 each).
+ * Post v2 follows the lessons as taught. The pre-test was taken on v1, so it stays as it is.
  * Length never gives the answer away: distractors are real, specific mistakes about as long as the key. */
 (function (global) {
   'use strict';
@@ -19,7 +20,7 @@
   };
   var W = { 1: 1, 2: 1, 3: 1, 4: 1, 5: 2, 6: 2, 7: 2, 8: 2, 9: 3, 10: 3, 11: 3, 12: 3, 13: 4, 14: 4, 15: 4, 16: 4, 17: 4, 18: 5, 19: 5, 20: 5 };
   var D = { 1: 'tb', 2: 'tb', 3: 'tb', 4: 'com', 5: 'im', 6: 'im', 7: 'im', 8: 'col', 9: 'cc', 10: 'cc', 11: 'dc', 12: 'cc', 13: 'com', 14: 'com', 15: 'dc', 16: 'col', 17: 'ss', 18: 'dc', 19: 'ss', 20: 'ss' };
-  function it(n, stem, options, answer, why) { return { n: n, week: W[n], domain: D[n], skill: S[n], stem: stem, options: options, answer: answer, why: why }; }
+  function it(n, stem, options, answer, why, skill) { return { n: n, week: W[n], domain: D[n], skill: skill || S[n], stem: stem, options: options, answer: answer, why: why }; }
 
   var pre = [
     it(1, 'Text is too small in every app you use. Zooming in the web browser only fixed one website. What should you change?',
@@ -97,27 +98,28 @@
     it(4, 'You need to ask the help desk about a printing problem. Which details matter most?',
       ['Your password, so they can log in to your computer and check it themselves', 'The app and version, what you were doing, what you tried, and the exact message', 'How upset you are, how long it has been broken, and how soon you need it working again', 'Your computer’s serial number and the date you bought the printer'], 'B',
       'Those four details let a helper reproduce the problem. Never share your password.'),
-    it(5, 'You want a food pantry that is open on Saturdays in Summers County, WV. Which search is best?',
-      ['food, then scroll until you find a pantry', 'pantry recipes for Saturday in Summers County WV', 'food pantry, then click the first ad you see', 'food pantry open Saturday Summers County WV'], 'D',
-      'Name the thing, the time and the place to get results that fit.'),
-    it(6, 'You find a page listing free tax help, but it was last updated three years ago. What should you do?',
-      ['Use it as it is, since free tax help programs stay the same every year', 'Print the page and drive to the address on it, without calling first', 'Call or check a current official source to confirm it still runs this year', 'Skip free tax help, because an old page means the program must be a scam'], 'C',
-      'Old information may be out of date, so confirm it with a current source before you rely on it.'),
-    it(7, 'A confirmation email for your appointment shows the wrong location. What is the best next step?',
-      ['Use the confirmation’s change or contact option, give your confirmation number, and save the reply', 'Reply to the email with just the word “wrong,” then wait to see if anyone answers', 'Show up at both locations that day, just in case one of them is right', 'Book a second appointment at the right location, and keep the first one just in case'], 'A',
-      'Use the official route with your confirmation number, and keep the reply as proof.'),
+    it(5, 'You want a food pantry that is open on Saturdays in Summers County, WV. What is the best question to ask Google?',
+      ['food, then scroll down the page until a pantry shows up', 'What are some good pantry recipes to make on a Saturday?', 'food pantry, then click the first link you see at the top', 'Which food pantries in Summers County, WV are open on Saturdays?'], 'D',
+      'Ask a full question, the way you would ask a librarian: the service, the place and one detail that matters.'),
+    it(6, 'An AI answer at the top of Google says a tax help office is open on Saturdays. The office’s own page says weekdays only. What should you do next?',
+      ['Trust the AI answer, since it pulled together many different pages', 'Keep asking the AI until it gives you the same answer as the page', 'Trust the office’s own page, then phone to confirm before you go', 'Drive over on Saturday, since one of the two is probably right'], 'C',
+      'An AI answer is a lead, not a source. The organization’s own page outranks it, and a phone call confirms the hours.'),
+    it(7, 'An online form for free computer help asks for your name, the topic and your Social Security number. What should you do?',
+      ['Don’t give the number. Call the group and ask why the form wants it.', 'Type it in, since the form looks official and the help is free', 'Type it in, then print a copy of the form to keep for your records', 'Make up a number so that the form lets you keep going'], 'A',
+      'Computer help doesn’t need a Social Security number. Looking official doesn’t make a form safe, so ask why first.',
+      'Give only what a form needs'),
     it(8, 'You want a friend to suggest changes to your résumé without changing it directly. Which permission fits best?',
       ['Editor', 'Commenter', 'Owner', 'Anyone with the link can edit'], 'B',
       'Commenter lets someone suggest without changing your document.'),
-    it(9, 'You want Word to build a table of contents from your section titles. What must the titles use?',
+    it(9, 'You want every section title in your Word handout to show in the Navigation Pane. What must the titles use?',
       ['Bold text, so Word can tell that they are titles', 'A different font color from the rest of the text', 'A bigger font size, such as 20 point', 'Heading styles, such as Heading 1 and Heading 2'], 'D',
-      'Tables of contents and navigation come from heading styles.'),
+      'The Navigation Pane lists heading styles. Bold, size and color only change how text looks.'),
     it(10, 'Your grocery total uses =SUM(C2:C5) and shows $40. You change one item from $6 to $10. What should the total show?',
       ['$44', '$40', '$10', '$46'], 'A',
       'The total goes up by the $4 difference: $40 + $4 = $44.'),
-    it(11, 'You find a great photo online but can’t find any license or permission. What is the safest choice?',
-      ['Use it, since anything that shows up in a web search is free to use', 'Choose a photo with a clear license and follow its credit rules', 'Use it and write “Found on Google” under it as the credit', 'Take a screenshot of it, so the copy on your computer belongs to you'], 'B',
-      'No license means no permission. Use a photo whose license you can follow.'),
+    it(11, 'A neighbor took a photo and says you may use it on your flyer if you give credit. You crop it to fit. What must the flyer show?',
+      ['No credit at all, since cropping made the photo your own', 'A credit line for the photo, just as the permission asks', 'The words “Found online” in small print under the photo', 'A note saying that you took the photo yourself last week'], 'B',
+      'Follow the permission: cropping is fine, and the credit line stays.'),
     it(12, 'A form must look exactly the same when anyone prints it. Which file should you send?',
       ['A Word document, so people can change it if they need to', 'A plain text file, since every computer can open one', 'A PDF, after opening it once to check it', 'A screenshot of the form pasted into an email'], 'C',
       'PDFs keep their layout everywhere; check it before sending.'),
@@ -147,6 +149,6 @@
       'Go to the bank through a route you already trust, never through the message’s link.')
   ];
 
-  var api = { version: 'v1-2026-09', domains: domains, pre: pre, post: post };
+  var api = { versions: { pre: 'v1-2026-09', post: 'v2-2026-11' }, domains: domains, pre: pre, post: post };
   if (typeof module === 'object' && module.exports) module.exports = api; else global.DL2Items = api;
 })(typeof window !== 'undefined' ? window : globalThis);
