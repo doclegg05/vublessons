@@ -125,3 +125,9 @@ for (const form of ['pre', 'post']) {
     expect(long).toEqual([]);
   });
 }
+
+test('post items use the words the lessons used (2026-11-02)', () => {
+  expect(Items.post[4].skill).toBe('Ask a specific search question');
+  expect(Items.pre[4].skill).toBe('Ask a specific search question');
+  expect(Items.post.map(it => it.why).join(' ')).not.toMatch(/\bMFA\b/);
+});

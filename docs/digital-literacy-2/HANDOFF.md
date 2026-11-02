@@ -141,7 +141,8 @@ The post-test now follows the lessons as taught. The pre-test stays on v1 becaus
 - **Item 9:** the Navigation Pane, not a table of contents (Week 3).
 - **Item 11:** a photo with stated permission, cropped and credited, not a photo with no license (Week 3).
 - **Unchanged:** the other 15 items. Answer letters did not move, so A to D stay balanced at 5 each. No item covers Week 6.
-- **Week 6 review:** question 7, the Week 2 recap line and `SKILLS[7]` in `week6.py` changed to match.
+- **Week 6 review:** question 7, the Week 2 recap line and `SKILLS[7]` in `week6.py` changed to match. Question 6 now practices an AI answer against the organization's own page, like post item 6.
+- **Labels and feedback:** item 5's skill is now "Ask a specific search question" on both forms and in `SKILLS[5]`. This is display text, so `versions` did not change. Post item 19's feedback no longer says MFA, a term no lesson uses. The pre-test feedback keeps it.
 
 ## Post-test moved to Week 6 (2026-10-23)
 

@@ -14,7 +14,7 @@ DL2 Weeks 3 to 6 are guided, follow-the-leader lessons. Weeks 3 and 4 are on `ma
 - **Date**: 2026-11-02
 - **What we worked on**: Post-test v2 for the last night of the DL2 cohort. Items 5, 6, 7, 9 and 11 rewritten to match the lessons as taught; the Week 6 review question 7 and Week 2 recap updated. No Week 6 material on the test. Details in `docs/digital-literacy-2/HANDOFF.md` "Post-test v2".
 - **What we decided**: pre-test stays on v1 (already taken); each form has its own version; item 7 is the one post item whose skill differs from the pre-test.
-- **Where we left off**: PR open; merge to publish to vublessons.com before class, then run one test submission on the live site.
+- **Where we left off**: PR #46 merged and live (repo and vublessons.com `os/items.js` hashes match). All 20 post items audited against the Weeks 1 to 5 decks and worksheets: aligned, no item changes needed. Then fixed Week 6 review question 6 (now an AI answer against the organization's page), the item 5 skill label and the MFA wording in post item 19's feedback. Not yet done: Britt's test submission on the live site.
 
 ## Open Items
 - [ ] **DL2 Mission Control go-live checks (Week 1 was taught 2026-09-28; these were not re-verified):** enable Netlify form detection → push `feat/dl2-mission-control`, PR, merge → confirm forms `dl2-pretest`/`dl2-posttest` listed + email notifications on → one test submission → test print.
