@@ -276,3 +276,9 @@ test('Learner pages link only learner pages',()=>{
   expect(hrefs.filter(h=>/answer-key|lesson-plan|instructor/.test(h)),page).toEqual([]);
  }
 });
+
+test('Review question 6 practices what post-test item 6 tests: an AI answer against the organization’s own page (2026-11-02)',()=>{
+ const sheet=text(read(`${dir}/worksheet.html`));
+ expect(sheet).toContain('An AI answer says the senior center serves lunch on Sundays.');
+ expect(sheet).not.toContain('shows no date and no author');
+});

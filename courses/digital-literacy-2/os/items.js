@@ -11,7 +11,7 @@
   ];
   var S = {
     1: 'Make text bigger in every app', 2: 'Fix a page that spills onto a second sheet', 3: 'Fix a repeating calendar event',
-    4: 'Write a help request that can be answered', 5: 'Narrow a web search', 6: 'Judge whether a source fits',
+    4: 'Write a help request that can be answered', 5: 'Ask a specific search question', 6: 'Judge whether a source fits',
     7: 'Act on a wrong confirmation', 8: 'Share with the right permissions', 9: 'Use real heading styles',
     10: 'Check that a SUM total updates', 11: 'Use a licensed photo properly', 12: 'Share a file that looks the same everywhere',
     13: 'Write a clear request with a deadline', 14: 'Know what Bcc does', 15: 'Use respectful, inclusive wording',
@@ -143,7 +143,7 @@
       'Labels or patterns carry the meaning for people who can’t see the colors.'),
     it(19, 'A website asks you to create a password. Which choice is strongest?',
       ['Your pet’s name with your birth year added to the end', 'The same long password you already use for your email', 'A long passphrase you use nowhere else, plus two-step verification', 'A common word with symbols swapped in for letters, such as “P@ssw0rd!”'], 'C',
-      'Long, unique and backed by two-step verification (MFA) is the strongest combination.'),
+      'Long, unique and backed by two-step verification is the strongest combination.'),
     it(20, 'An email says your bank account is locked and gives a link to “unlock it now.” What is the safest move?',
       ['Click the link, but only sign in if the page looks real', 'Don’t click. Open your bank’s app or call the number on your card.', 'Reply to the email and ask whether it’s real before you act', 'Call the phone number listed in the email to check if it’s real'], 'B',
       'Go to the bank through a route you already trust, never through the message’s link.')

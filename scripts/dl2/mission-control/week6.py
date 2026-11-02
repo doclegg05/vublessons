@@ -389,7 +389,7 @@ WRAP = dict(
 
 # ---------------------------------------------------------------- Course review (weeks 1 to 5)
 SKILLS = {1: 'Make text bigger in every app', 2: 'Fix a page that spills onto a second sheet', 3: 'Fix a repeating calendar event', 4: 'Write a help request that can be answered',
-          5: 'Narrow a web search', 6: 'Judge whether a source fits', 7: 'Give only what a form needs', 8: 'Share with the right permissions', 9: 'Use real heading styles',
+          5: 'Ask a specific search question', 6: 'Judge whether a source fits', 7: 'Give only what a form needs', 8: 'Share with the right permissions', 9: 'Use real heading styles',
           10: 'Check that a SUM total updates', 11: 'Use a licensed photo properly', 12: 'Share a file that looks the same everywhere', 13: 'Write a clear request with a deadline',
           14: 'Know what Bcc does', 15: 'Use respectful, inclusive wording', 16: 'Give and answer feedback on one shared copy', 17: 'Spot a recurring charge',
           18: "Don't rely on color alone", 19: 'Secure a new account', 20: 'Check a suspicious contact a safer way'}
@@ -429,8 +429,8 @@ REVIEW_WEEKS = [
          questions=[
              q(5, 'edge', 'You want a weekend farmers market in Lewisburg, WV that takes SNAP. Which question works best?',
                'Which Lewisburg, WV markets open weekends and take SNAP?', ['markets', 'food, then scroll for a while'], 2, 'A place and details narrow the answer.'),
-             q(6, 'edge', 'A page about heating help shows no date and no author. What should that make you do?',
-               'Check it against a source that names its owner and date', ['Rely on it, since it is neatly laid out', 'Ignore every page like it'], 0, 'A page with no author or date is hard to judge.'),
+             q(6, 'edge', 'An AI answer says the senior center serves lunch on Sundays. The center’s website lists Monday to Friday. What is your next step?',
+               'Go by the center’s page, then call before you go', ['Believe what the AI said, since it came up first', 'Ask the AI again until it matches the page'], 0, 'An AI answer is a lead. The center’s own page outranks it, and a call confirms it.'),
              q(7, 'edge', 'A sign-up form for a library class asks for your bank account number. What do you do?',
                'Leave it out and ask why they want it', ['Fill it in, since a library asked', 'Give your card number instead'], 2,
                'A class sign-up has no need for bank details. Ask why first.'),
