@@ -7,7 +7,9 @@
   var FORM = root.dataset.form === 'post' ? 'post' : 'pre';
   var LABEL = FORM === 'pre' ? 'Pre-Test' : 'Post-Test';
   var ITEMS = global.DL2Items[FORM];
-  var KEY = 'dl2os:test:' + FORM, OUTBOX = 'dl2os:outbox';
+  var VERSION = global.DL2Items.versions[FORM];
+  /* The post key carries its version, so a test left open on an older form never lands on new questions. */
+  var KEY = 'dl2os:test:' + (FORM === 'post' ? 'post:' + VERSION : FORM), OUTBOX = 'dl2os:outbox';
   var LETTERS = ['A', 'B', 'C', 'D'];
   var esc = global.DL2Paper.esc;
   var st = load() || fresh();
@@ -121,7 +123,7 @@
     var result = global.DL2Grade.grade(ITEMS, st.answers);
     var rid = global.DL2Grade.recordId(FORM, submitted, st.name) + '-' + global.crypto.randomUUID().slice(0, 8);
     var payload = {
-      'form-name': 'dl2-' + FORM + 'test', 'bot-field': '', 'record-id': rid, student: st.name, form: FORM + ' ' + global.DL2Items.version,
+      'form-name': 'dl2-' + FORM + 'test', 'bot-field': '', 'record-id': rid, student: st.name, form: FORM + ' ' + VERSION,
       started: started.toISOString(), submitted: submitted.toISOString(), score: result.correct + '/' + result.total,
       domains: result.byDomain.map(function (d) { return d.id + ':' + d.correct + '/' + d.total; }).join(' '),
       answers: st.answers.map(function (a) { return a || '-'; }).join(',')

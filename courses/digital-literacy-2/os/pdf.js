@@ -117,7 +117,7 @@
         letterhead(p1);
         text(p1, report.label + ' · Graded Results', M, PH - 164, 17, f.serif, NAVY);
         right(p1, 'Record ' + report.recordId, PW - M, PH - 156, 7.5, f.mono, MUTED);
-        right(p1, 'Form: ' + report.form + ' ' + global.DL2Items.version + ' · 20 items', PW - M, PH - 166, 7.5, f.mono, MUTED);
+        right(p1, 'Form: ' + report.form + ' ' + global.DL2Items.versions[report.form] + ' · 20 items', PW - M, PH - 166, 7.5, f.mono, MUTED);
         var by = PH - 222, t = function (d) { return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }); };
         var mins = Math.max(1, Math.round((report.submitted - report.started) / 60000));
         box(p1, M, by, 190, 42, null, RULE); text(p1, 'STUDENT', M + 9, by + 28, 6.8, f.bold, MUTED);

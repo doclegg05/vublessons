@@ -20,7 +20,7 @@ export function reportFromFields(data: Record<string, unknown>) {
   if (data['bot-field']) throw Error('Honeypot');
   const formVersion = field('form', 40);
   const form = formVersion.split(' ')[0] as 'pre' | 'post';
-  if (!['pre', 'post'].includes(form) || formVersion !== form + ' ' + Items.version) throw Error('Unsupported assessment version');
+  if (!['pre', 'post'].includes(form) || formVersion !== form + ' ' + Items.versions[form]) throw Error('Unsupported assessment version');
   if (data['form-name'] && data['form-name'] !== 'dl2-' + form + 'test') throw Error('Form mismatch');
   const name = field('student', 120).trim();
   if (name.length < 2) throw Error('Invalid name');

@@ -11,7 +11,7 @@ function fields(form = 'pre') {
   const answers = Items[form].map(i => i.answer);
   if (form === 'post') answers[0] = Items.post[0].answer === 'A' ? 'B' : 'A';
   const r = Grade.grade(Items[form], answers);
-  return { 'form-name': 'dl2-' + form + 'test', 'bot-field': '', 'record-id': 'DL2-' + form.toUpperCase() + '-20260928-1057-ST-1234abcd', student: 'SYNTHETIC Attachment Test', form: form + ' ' + Items.version, started: '2026-09-28T14:30:00.000Z', submitted: '2026-09-28T14:57:00.000Z', score: r.correct + '/20', domains: r.byDomain.map(d => d.id + ':' + d.correct + '/' + d.total).join(' '), answers: answers.join(',') };
+  return { 'form-name': 'dl2-' + form + 'test', 'bot-field': '', 'record-id': 'DL2-' + form.toUpperCase() + '-20260928-1057-ST-1234abcd', student: 'SYNTHETIC Attachment Test', form: form + ' ' + Items.versions[form], started: '2026-09-28T14:30:00.000Z', submitted: '2026-09-28T14:57:00.000Z', score: r.correct + '/20', domains: r.byDomain.map(d => d.id + ':' + d.correct + '/' + d.total).join(' '), answers: answers.join(',') };
 }
 function memoryStore() {
   const map = new Map(); let revision = 0;

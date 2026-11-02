@@ -131,6 +131,18 @@ A review before teaching found these, all fixed in the generators and rebuilt wi
 - **Shared.** An empty Documents folder in the Save As drawing says "This folder is empty." (Weeks 3 and 4 decks changed only there.)
 - **Left as is.** `weeks/week-05/practice.html` and `week-06/practice.html` still build with the old content; nothing links to them. The take-home "Replay the video" link plays the full video.
 
+## Post-test v2 (2026-11-02)
+
+The post-test now follows the lessons as taught. The pre-test stays on v1 because the cohort took it on September 28. `os/items.js` has a version per form (`versions.pre`, `versions.post`), so saved and queued pre-test records keep passing the server's version check. Saved post-test answers use a versioned storage key.
+
+- **Item 5:** a full question with a service, a place and a detail, not keywords (Week 2).
+- **Item 6:** an AI answer against the organization's own page, then phone to confirm (Week 2).
+- **Item 7:** new skill, "Give only what a form needs" (Week 2, Mission 2B). No lesson taught fixing a wrong confirmation. This is the one item whose skill differs from the pre-test. Week and domain still match.
+- **Item 9:** the Navigation Pane, not a table of contents (Week 3).
+- **Item 11:** a photo with stated permission, cropped and credited, not a photo with no license (Week 3).
+- **Unchanged:** the other 15 items. Answer letters did not move, so A to D stay balanced at 5 each. No item covers Week 6.
+- **Week 6 review:** question 7, the Week 2 recap line and `SKILLS[7]` in `week6.py` changed to match.
+
 ## Post-test moved to Week 6 (2026-10-23)
 
 The syllabus, the course home and its generator `learning.py`, `sources.html` and `courses.json` now put the post-test in Week 6, after the course review. The Week 5 and Week 6 topic lines and syllabus outcomes describe the guided lessons. Lesson titles did not change, so Week 5 is still "Protect your work and show your skills". `os/items.js` did not change. Its `W` map records the week that teaches each item, and items 18 to 20 still belong to Week 5.
